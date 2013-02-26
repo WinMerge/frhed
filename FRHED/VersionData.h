@@ -1,4 +1,4 @@
-/* VersionData.h
+/*/VersionData.h
 This code has been released into the public domain and may be used
 for any purposes whatsoever without acknowledgment.
 */
@@ -18,7 +18,7 @@ public:
 		if (this)
 		{
 			const WCHAR *p = szKey + lstrlenW(szKey) + 1;
-			return (const WCHAR *)((UINT_PTR) p + 3U & ~3U);
+			return (const WCHAR *)((INT_PTR)p + 3 & ~3);
 		}
 		return 0;
 	}
@@ -26,7 +26,7 @@ public:
 	{
 		if (this)
 		{
-			return (const CVersionData *)((UINT_PTR)Data() + wValueLength + 3U & ~3U);
+			return (const CVersionData *)((INT_PTR)Data() + wValueLength + 3 & ~3);
 		}
 		return 0;
 	}
@@ -34,7 +34,7 @@ public:
 	{
 		if (this)
 		{
-			return (const CVersionData *)((UINT_PTR)this + wLength + 3U & ~3U);
+			return (const CVersionData *)((INT_PTR)this + wLength + 3 & ~3);
 		}
 		return 0;
 	}
