@@ -45,7 +45,6 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="1"
-				TypeLibraryName=".\..\Build\Debug/heksedit.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
@@ -54,7 +53,7 @@
 				AdditionalIncludeDirectories="$(ProgramFiles)\Microsoft SDK\include"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE"
 				ExceptionHandling="0"
-				RuntimeLibrary="3"
+				RuntimeLibrary="1"
 				UsePrecompiledHeader="2"
 				PrecompiledHeaderThrough="precomp.h"
 				WarningLevel="3"
@@ -135,7 +134,6 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="3"
-				TypeLibraryName=".\..\Build\Debug/heksedit.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
@@ -144,7 +142,7 @@
 				AdditionalIncludeDirectories="$(ProgramFiles)\Microsoft SDK\include"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE"
 				ExceptionHandling="0"
-				RuntimeLibrary="3"
+				RuntimeLibrary="1"
 				UsePrecompiledHeader="2"
 				PrecompiledHeaderThrough="precomp.h"
 				WarningLevel="3"
@@ -225,7 +223,6 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="1"
-				TypeLibraryName=".\..\Build\Release/heksedit.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
@@ -262,7 +259,6 @@
 				SuppressStartupBanner="true"
 				AdditionalLibraryDirectories=""
 				ModuleDefinitionFile="heksedit.def"
-				ProgramDatabaseFile=".\..\Build\Release/heksedit.pdb"
 				SubSystem="2"
 				TargetMachine="1"
 			/>
@@ -316,7 +312,6 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="3"
-				TypeLibraryName=".\..\Build\Release/heksedit.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
@@ -353,7 +348,6 @@
 				SuppressStartupBanner="true"
 				AdditionalLibraryDirectories=""
 				ModuleDefinitionFile="heksedit.def"
-				ProgramDatabaseFile=".\..\Build\Release/heksedit.pdb"
 				SubSystem="2"
 				TargetMachine="17"
 			/>
@@ -408,7 +402,6 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="1"
-				TypeLibraryName=".\..\Build\Debug/heksedit.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
@@ -417,7 +410,7 @@
 				AdditionalIncludeDirectories="$(ProgramFiles)\Microsoft SDK\include"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE"
 				ExceptionHandling="0"
-				RuntimeLibrary="3"
+				RuntimeLibrary="1"
 				UsePrecompiledHeader="2"
 				PrecompiledHeaderThrough="precomp.h"
 				WarningLevel="3"
@@ -446,7 +439,6 @@
 				AdditionalLibraryDirectories=""
 				ModuleDefinitionFile="heksedit.def"
 				GenerateDebugInformation="true"
-				ProgramDatabaseFile=".\..\Build\UnicodeDebug/heksedit.pdb"
 				SubSystem="2"
 				TargetMachine="1"
 			/>
@@ -501,7 +493,6 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="3"
-				TypeLibraryName=".\..\Build\Debug/heksedit.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
@@ -510,7 +501,7 @@
 				AdditionalIncludeDirectories="$(ProgramFiles)\Microsoft SDK\include"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE"
 				ExceptionHandling="0"
-				RuntimeLibrary="3"
+				RuntimeLibrary="1"
 				UsePrecompiledHeader="2"
 				PrecompiledHeaderThrough="precomp.h"
 				WarningLevel="3"
@@ -539,7 +530,6 @@
 				AdditionalLibraryDirectories=""
 				ModuleDefinitionFile="heksedit.def"
 				GenerateDebugInformation="true"
-				ProgramDatabaseFile=".\..\Build\UnicodeDebug/heksedit.pdb"
 				SubSystem="2"
 				TargetMachine="17"
 			/>
@@ -594,7 +584,6 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="1"
-				TypeLibraryName=".\..\Build\Release/heksedit.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
@@ -630,7 +619,6 @@
 				SuppressStartupBanner="true"
 				AdditionalLibraryDirectories=""
 				ModuleDefinitionFile="heksedit.def"
-				ProgramDatabaseFile=".\..\Build\UnicodeRelease/heksedit.pdb"
 				SubSystem="2"
 				TargetMachine="1"
 			/>
@@ -685,7 +673,6 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="3"
-				TypeLibraryName=".\..\Build\Release/heksedit.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
@@ -721,7 +708,6 @@
 				SuppressStartupBanner="true"
 				AdditionalLibraryDirectories=""
 				ModuleDefinitionFile="heksedit.def"
-				ProgramDatabaseFile=".\..\Build\UnicodeRelease/heksedit.pdb"
 				SubSystem="2"
 				TargetMachine="17"
 			/>
