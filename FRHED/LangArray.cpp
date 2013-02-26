@@ -16,9 +16,9 @@ along with this program; see the file COPYING.  If not, write to the Free
 Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 02111-1307, USA.
 
-Last change: 2013-02-24 by Jochen Neubeck
+Last change: 2013-02-26 by Jochen Neubeck
 */
-/** 
+/**
  * @file  LangArray.cpp
  *
  * @brief Implementation for translated text array class.
@@ -169,8 +169,12 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 	int unresolved = 0;
 	int mismatched = 0;
 	FILE *f = 0;
-	if (langid && langid != DefLangId)
+	switch (langid)
 	{
+	case 0:
+	case DefLangId:
+		break;
+	default:
 		TCHAR path[MAX_PATH];
 		GetModuleFileName(hMainInstance, path, MAX_PATH);
 		PathRemoveFileSpec(path);
@@ -180,19 +184,19 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 		{
 			m_hLangDll = LoadLibraryEx(path, NULL, LOAD_LIBRARY_AS_DATAFILE);
 			if (m_hLangDll == 0)
-				return FALSE;
+				break;
 		}
 		const CVersionData *pvdMain = CVersionData::Load(hMainInstance);
 		if (pvdMain == 0)
-			return FALSE;
+			break;
 		const CVersionData *pvdLang = CVersionData::Load(m_hLangDll);
 		if (pvdLang == 0)
-			return FALSE;
+			break;
 		if (memcmp(pvdMain->Data(), pvdLang->Data(), FIELD_OFFSET(VS_FIXEDFILEINFO, dwProductVersionMS)))
-			return FALSE;
+			break;
 		HRSRC potfile = FindResource(m_hLangDll, _T("en-US.pot"), RT_RCDATA);
 		if (potfile == 0)
-			return FALSE;
+			break;
 		size_t size = SizeofResource(m_hLangDll, potfile);
 		const char *data = (const char *)LoadResource(m_hLangDll, potfile);
 		while (const char *eol = (const char *)memchr(data, '\n', size))
