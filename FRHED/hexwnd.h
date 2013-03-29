@@ -80,7 +80,7 @@ class hexfile_stream;
 class load_hexfile_0;
 class load_hexfile_1;
 
-interface CDropTarget;
+class CDropTarget;
 
 /**
  * @brief Hex editor window.

@@ -23,7 +23,7 @@ Last change: 2013-02-24 by Jochen Neubeck
 
 class HexEditorWindow;
 
-interface CDropTarget : public IDropTarget
+class CDropTarget : public IDropTarget
 {
 private:
 	ULONG m_cRefCount;
@@ -33,9 +33,12 @@ private:
 	bool hdrop_present;
 	IDataObject* pDataObj;
 	HexEditorWindow &hexwnd;
+
+	int PopupDropMenu(POINTL pt);
+
 public:
 	//Members
-	CDropTarget(HexEditorWindow &hexwnd);
+	CDropTarget(HexEditorWindow &);
 	~CDropTarget();
 
 	//IUnknown members

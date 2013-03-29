@@ -18,7 +18,7 @@ Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 
 Last change: 2013-02-24 by Jochen Neubeck
 */
-/** 
+/**
  * @file  precomp.h
  *
  * @brief Precompiled header files listing.
@@ -46,6 +46,7 @@ using H2O::HGdiObj;
 using H2O::HFont;
 using H2O::HBrush;
 using H2O::HPen;
+using H2O::HMenu;
 
 #include <windows.h>
 #include <windowsx.h>

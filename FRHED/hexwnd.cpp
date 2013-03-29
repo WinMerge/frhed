@@ -4534,23 +4534,23 @@ void HexEditorWindow::OnContextMenu(LPARAM lParam)
 			resize_window();
 		}
 	}
-	else if (HMENU hMenu = LoadMenu(hInstance, MAKEINTRESOURCE(IDR_CONTEXTMENU)))
+	else if (HMenu *pMenu = HMenu::LoadMenu(hInstance, MAKEINTRESOURCE(IDR_CONTEXTMENU)))
 	{
 		// You could use other menu indices based on context... if you like
-		if (HMENU h = GetSubMenu(hMenu, Drive ? 1 : 0))
+		if (HMenu *pSubMenu = pMenu->GetSubMenu(Drive ? 1 : 0))
 		{
-			int i = GetMenuItemCount(h);
+			int i = pSubMenu->GetMenuItemCount();
 			while (i)
 			{
-				if (UINT id = GetMenuItemID(h, --i))
+				if (UINT id = pSubMenu->GetMenuItemID(--i))
 				{
-					EnableMenuItem(h, i, queryCommandEnabled(id) ?
+					pSubMenu->EnableMenuItem(i, queryCommandEnabled(id) ?
 						MF_ENABLED | MF_BYPOSITION : MF_GRAYED | MF_BYPOSITION);
 				}
 			}
-			TrackPopupMenu(h, TPM_LEFTALIGN | TPM_RIGHTBUTTON, p.x, p.y, 0, pwnd->m_hWnd, NULL);
+			pSubMenu->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, p.x, p.y, pwnd);
 		}
-		DestroyMenu(hMenu);
+		pMenu->DestroyMenu();
 	}
 }
 

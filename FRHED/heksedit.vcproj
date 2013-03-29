@@ -1092,6 +1092,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\H2O.h"
+				>
+			</File>
+			<File
 				RelativePath="heksedit.h"
 				>
 			</File>

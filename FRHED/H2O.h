@@ -730,6 +730,11 @@ namespace H2O
 			assert(::IsMenu(m_hMenu));
 			return ::TrackPopupMenu(m_hMenu, nFlags, x, y, NULL, pWnd->m_hWnd, lpRect);
 		}
+		BOOL TrackPopupMenuEx(UINT nFlags, int x, int y, HWindow *pWnd, TPMPARAMS *pParams = NULL)
+		{
+			assert(::IsMenu(m_hMenu));
+			return ::TrackPopupMenuEx(m_hMenu, nFlags, x, y, pWnd->m_hWnd, pParams);
+		}
 		BOOL GetMenuInfo(LPMENUINFO pmi)
 		{
 			assert(pmi->cbSize == sizeof *pmi);
@@ -849,6 +854,10 @@ namespace H2O
 		static HMenu *CreatePopupMenu()
 		{
 			return reinterpret_cast<HMenu *>(::CreatePopupMenu());
+		}
+		static HMenu *LoadMenu(HINSTANCE hinst, LPCTSTR name)
+		{
+			return reinterpret_cast<HMenu *>(::LoadMenu(hinst, name));
 		}
 	};
 

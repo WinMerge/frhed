@@ -192,6 +192,18 @@ STDMETHODIMP CDropTarget::DragLeave(void)
 	return S_OK;
 }
 
+int CDropTarget::PopupDropMenu(POINTL pt)
+{
+	HMenu *pMenu = HMenu::CreatePopupMenu();
+	pMenu->InsertMenu(0, MF_BYPOSITION | MF_STRING, 1, GetLangString(IDS_DD_MENU_MOVE));
+	pMenu->InsertMenu(1, MF_BYPOSITION | MF_STRING, 2, GetLangString(IDS_DD_MENU_COPY));
+	pMenu->InsertMenu(2, MF_BYPOSITION | MF_SEPARATOR, 0, 0);
+	pMenu->InsertMenu(3, MF_BYPOSITION | MF_STRING, 0, GetLangString(IDS_DD_MENU_CANCEL));
+	int choice = pMenu->TrackPopupMenuEx(TPM_NONOTIFY|TPM_RIGHTBUTTON|TPM_RETURNCMD, pt.x, pt.y, hexwnd.pwnd);
+	pMenu->DestroyMenu();
+	return choice;
+}
+
 STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POINTL pt, DWORD* pdwEffect)
 {
 #ifdef _DEBUG
@@ -231,20 +243,14 @@ STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POIN
 		hexwnd.dragging = FALSE;
 		if (NeedToChooseMoveorCopy)
 		{
-			HMENU hm = CreatePopupMenu();
-			InsertMenu(hm, 0, MF_BYPOSITION | MF_STRING, 1, GetLangString(IDS_DD_MENU_MOVE));
-			InsertMenu(hm, 1, MF_BYPOSITION | MF_STRING, 2, GetLangString(IDS_DD_MENU_COPY));
-			InsertMenu(hm, 2, MF_BYPOSITION | MF_SEPARATOR, 0, 0);
-			InsertMenu(hm, 3, MF_BYPOSITION | MF_STRING, 0, GetLangString(IDS_DD_MENU_CANCEL));
-			BOOL mi = TrackPopupMenuEx(hm, TPM_NONOTIFY|TPM_RIGHTBUTTON|TPM_RETURNCMD, pt.x, pt.y, hexwnd.pwnd->m_hWnd, NULL);
-			DestroyMenu(hm);
-			if (mi == 0)
+			int choice = PopupDropMenu(pt);
+			if (choice == 0)
 			{
 				pDataObject->Release();
 				*pdwEffect = DROPEFFECT_NONE;
 				return S_OK;
 			}
-			copying = mi != 1;
+			copying = choice != 1;
 		}
 		int iMove1stEnd = hexwnd.iGetStartOfSelection();
 		int iMove2ndEndorLen = hexwnd.iGetEndOfSelection();
@@ -412,20 +418,14 @@ STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POIN
 		}
 		else if (NeedToChooseMoveorCopy)
 		{
-			HMENU hm = CreatePopupMenu();
-			InsertMenu(hm, 0, MF_BYPOSITION | MF_STRING, 1, GetLangString(IDS_DD_MENU_MOVE));
-			InsertMenu(hm, 1, MF_BYPOSITION | MF_STRING, 2, GetLangString(IDS_DD_MENU_COPY));
-			InsertMenu(hm, 2, MF_BYPOSITION | MF_SEPARATOR, 0, 0);
-			InsertMenu(hm, 3, MF_BYPOSITION | MF_STRING, 0, GetLangString(IDS_DD_MENU_CANCEL));
-			BOOL mi = TrackPopupMenuEx(hm, TPM_NONOTIFY|TPM_RIGHTBUTTON|TPM_RETURNCMD, pt.x, pt.y, hexwnd.pwnd->m_hWnd, NULL);
-			DestroyMenu(hm);
-			if (mi == 0)
+			int choice = PopupDropMenu(pt);
+			if (choice == 0)
 			{
 				err = S_OK;
 				*pdwEffect = DROPEFFECT_NONE;
 				goto ERR_ENUM;
 			}
-			copying = mi != 1;
+			copying = choice != 1;
 		}
 
 		if (IndexOfDataToInsert >= 0 && formats == NULL)
