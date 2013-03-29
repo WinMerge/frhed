@@ -226,7 +226,9 @@ LRESULT CALLBACK MainWndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 		hwndToolBar = CreateTBar(hwndHex, hMainInstance);
 		SetParent(hwndToolBar, hwnd);
 		hwndStatusBar = CreateStatusWindow(
-			CCS_BOTTOM | WS_CHILD | WS_VISIBLE | SBARS_SIZEGRIP, 0, hwndHex, 2);
+			CCS_BOTTOM | WS_CHILD | WS_VISIBLE | SBARS_SIZEGRIP, 0, hwnd, 2);
+		SetParent(hwndStatusBar, hwndHex);
+		SendMessage(hwndHex, WM_PARENTNOTIFY, MAKEWPARAM(WM_CREATE, 2), (LPARAM)hwndStatusBar);
 		SetParent(hwndStatusBar, hwnd);
 		pHexWnd->hwndMain = hwnd;
 		pHexWnd->bSaveIni = TRUE;
@@ -242,6 +244,8 @@ LRESULT CALLBACK MainWndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 		else
 			pHexWnd->command(LOWORD(wParam));
 		break;
+	case WM_NOTIFY:
+		return SendMessage(hwndHex, WM_NOTIFY, wParam, lParam);
 	case WM_SETFOCUS:
 		SetFocus(hwndHex);
 		break;
