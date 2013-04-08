@@ -3616,14 +3616,14 @@ void HexEditorWindow::read_ini_data(TCHAR *key)
 		res = RegQueryValueEx(key1, _T("locale"), NULL, NULL, (BYTE*) &lcid, &datasize);
 		load_lang((LANGID)lcid);
 
-		datasize = sizeof TexteditorName;
-		res = SHGetValue(key1, 0, _T("TexteditorName"), 0, TexteditorName, &datasize);
-
 		res = RegQueryValueEx(key1, _T("iWindowShowCmd"), NULL, NULL, (BYTE*) &iWindowShowCmd, &datasize);
 		res = RegQueryValueEx(key1, _T("iWindowX"), NULL, NULL, (BYTE*) &iWindowX, &datasize);
 		res = RegQueryValueEx(key1, _T("iWindowY"), NULL, NULL, (BYTE*) &iWindowY, &datasize);
 		res = RegQueryValueEx(key1, _T("iWindowWidth"), NULL, NULL, (BYTE*) &iWindowWidth, &datasize);
 		res = RegQueryValueEx(key1, _T("iWindowHeight"), NULL, NULL, (BYTE*) &iWindowHeight, &datasize);
+
+		datasize = sizeof TexteditorName;
+		res = SHGetValue(key1, 0, _T("TexteditorName"), 0, TexteditorName, &datasize);
 
 		res = RegQueryValueEx(key1, _T("iMRU_count"), NULL, NULL, (BYTE*) &iMRU_count, &datasize);
 		int i;
