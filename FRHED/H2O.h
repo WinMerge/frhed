@@ -5,7 +5,7 @@
 // Both H2O and H2O2 share a common set of decorator templates.
 //
 // Copyright (c) 2005-2010  David Nash (as of Win32++ v7.0.2)
-// Copyright (c) 2011-2012  Jochen Neubeck
+// Copyright (c) 2011-2013  Jochen Neubeck
 //
 // Permission is hereby granted, free of charge, to
 // any person obtaining a copy of this software and
@@ -44,7 +44,13 @@ typedef struct _IMAGELIST { int unused; } IMAGELIST__;
 
 #define maPanic FatalAppExitA
 #define MAASSERT _ASSERT
-#define ASSERT_MSG(expr, expr_str) _ASSERT_EXPR(expr, L##expr_str)
+
+#ifdef _DEBUG
+#define ASSERT_MSG(cond, msg) \
+	(cond) ? (void)0 : _RPT_BASE((_CRT_ASSERT, __FILE__, __LINE__, NULL, msg))
+#else
+#define ASSERT_MSG(cond, msg)
+#endif
 
 #include "MAUtil/String.h"
 

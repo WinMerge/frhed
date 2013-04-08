@@ -51,6 +51,7 @@ using H2O::HMenu;
 #include <windows.h>
 #include <windowsx.h>
 #include <crtdbg.h>
+#include <crtdefs.h>
 #include <assert.h>
 #include <tchar.h>
 #include <io.h>
