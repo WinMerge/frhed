@@ -43,7 +43,7 @@ LRESULT CALLBACK MainWndProc(HWND, UINT, WPARAM, LPARAM);
 static BOOL NTAPI IsNT()
 {
 	OSVERSIONINFO osvi;
-	ZeroMemory(&osvi, sizeof osvi);
+	SecureZeroMemory(&osvi, sizeof osvi);
 	osvi.dwOSVersionInfoSize = sizeof osvi;
 	if (!GetVersionEx(&osvi))
 		osvi.dwPlatformId = 0;
@@ -69,13 +69,11 @@ static BOOL bIsNT = FALSE;
 /**
  * @brief The application starting point.
  */
-int WINAPI WinMain(HINSTANCE hIconInstance, HINSTANCE, char *, int)
+
+int WINAPI wWinMain(HINSTANCE hIconInstance, HINSTANCE, LPWSTR szCmdLine, int)
 {
 	OleInitialize(NULL);
 	InitCommonControls();
-
-	LPWSTR szExePath = GetCommandLineW();
-	LPWSTR szCmdLine = PathGetArgsW(szExePath);
 
 	bIsNT = IsNT();
 
@@ -94,7 +92,7 @@ int WINAPI WinMain(HINSTANCE hIconInstance, HINSTANCE, char *, int)
 	MSG msg;
 
 	WNDCLASS wndclass;
-	ZeroMemory(&wndclass, sizeof wndclass);
+	SecureZeroMemory(&wndclass, sizeof wndclass);
 
 	//Register the main window class
 	wndclass.style = CS_HREDRAW | CS_VREDRAW;
@@ -143,52 +141,58 @@ int WINAPI WinMain(HINSTANCE hIconInstance, HINSTANCE, char *, int)
 
 	if (*szCmdLine != '\0')
 	{
+		bool opting = false;
 		bool quoting = false;
 		// Command line not empty: open a file on startup.
 		LPWSTR p = szCmdLine;
 		LPWSTR q = szCmdLine;
-		DWORD dwStart = 0, dwLength = 0, dwEnd = 0; // MF cmd line parms
+		int iSelStart = 0, iSelLength = 0, iSelEnd = 0; // MF cmd line parms
 		while ((*p = *q) != '\0')
 		{
 			switch (*q++)
 			{
 			case '/': // switch coming up
+				opting = true;
 				switch (*q)
 				{
 				case 'S': // Start offset
 				case 's':
-					dwStart = wcstoul(++q, &q, 0);
+					StrToIntExW(++q, STIF_SUPPORT_HEX, &iSelStart);
 					break;
 				case 'L': // Length of selection
 				case 'l':
-					dwLength = wcstoul(++q, &q, 0);
+					StrToIntExW(++q, STIF_SUPPORT_HEX, &iSelLength);
 					break;
 				case 'E': // End of selection
 				case 'e':
-					dwEnd = wcstoul(++q, &q, 0);
+					StrToIntExW(++q, STIF_SUPPORT_HEX, &iSelEnd);
 					break;
 				}
 				break;
 			case '"':
+				opting = false;
 				quoting = !quoting;
 				break;
 			case ' ':
 			case '\t':
 			case '\r':
 			case '\n':
+				opting = false;
 				if (!quoting)
 					break;
 				// fall through
 			default:
+				if (opting)
+					break;
 				++p;
 				break;
 			}
 		}
-		if (dwLength)
-			dwEnd = dwStart + dwLength - 1;
+		if (iSelLength)
+			iSelEnd = iSelStart + iSelLength - 1;
 		pHexWnd->open_file(szCmdLine);
-		if (dwEnd)
-			pHexWnd->CMD_setselection(dwStart, dwEnd);
+		if (iSelEnd)
+			pHexWnd->CMD_setselection(iSelStart, iSelEnd);
 	}
 
 	while (GetMessage(&msg, NULL, 0, 0))
@@ -208,6 +212,16 @@ int WINAPI WinMain(HINSTANCE hIconInstance, HINSTANCE, char *, int)
 	OleUninitialize();
 	return static_cast<int>(msg.wParam);
 }
+
+#ifndef _DEBUG
+void WINAPI wWinMainCRTStartup()
+{
+	HINSTANCE hIconInstance = GetModuleHandle(NULL);
+	LPWSTR szExePath = GetCommandLineW();
+	LPWSTR szCmdLine = PathGetArgsW(szExePath);
+	ExitProcess(wWinMain(hIconInstance, NULL, szCmdLine, SW_SHOWNORMAL));
+}
+#endif
 
 //--------------------------------------------------------------------------------------------
 // The main window procedure.
@@ -234,7 +248,7 @@ LRESULT CALLBACK MainWndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 		pHexWnd->bSaveIni = TRUE;
 		pHexWnd->bCenterCaret = TRUE;
 		pHexWnd->load_lang((LANGID)GetThreadLocale());
-		pHexWnd->set_wnd_title();
+		pHexWnd->resize_window();
 		return 0;
 	case WM_COMMAND:
 		// Exit command must be handled in Frhed executable,
@@ -297,8 +311,8 @@ LRESULT CALLBACK MainWndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 			pHexWnd->iWindowHeight = wndpl.rcNormalPosition.bottom - pHexWnd->iWindowY;
 			pHexWnd->save_ini_data();
 			pHexWnd = 0;
-			PostQuitMessage(0);
 		}
+		PostQuitMessage(0);
 		break;
 	}
 	return DefWindowProc(hwnd, iMsg, wParam, lParam );
