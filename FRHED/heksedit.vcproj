@@ -30,7 +30,6 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="$(ProgramFiles)\Microsoft SDK\include"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE"
 				ExceptionHandling="0"
 				RuntimeLibrary="3"
@@ -59,6 +58,10 @@
 				SubSystem="2"
 				TargetMachine="1"
 			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="editbin.exe /OSVERSION:4.0 /SUBSYSTEM:WINDOWS,4.0 &quot;$(TargetPath)&quot;"
+			/>
 		</Configuration>
 		<Configuration
 			Name="Debug|x64"
@@ -72,7 +75,6 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="$(ProgramFiles)\Microsoft SDK\include"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE"
 				ExceptionHandling="0"
 				RuntimeLibrary="3"
@@ -114,7 +116,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="1"
-				AdditionalIncludeDirectories="$(ProgramFiles)\Microsoft SDK\include"
+				AdditionalIncludeDirectories="&quot;$(VCToolkitInstallDir)include&quot;"
 				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE"
 				ExceptionHandling="0"
 				RuntimeLibrary="0"
@@ -136,11 +138,16 @@
 			<Tool
 				Name="VCLinkerTool"
 				IgnoreImportLibrary="true"
-				AdditionalDependencies="EncodePointer.lib version.lib comctl32.lib wininet.lib shlwapi.lib htmlhelp.lib"
+				AdditionalDependencies="version.lib comctl32.lib wininet.lib shlwapi.lib htmlhelp.lib"
 				LinkIncremental="1"
+				AdditionalLibraryDirectories="&quot;$(VCToolkitInstallDir)lib&quot;"
 				ModuleDefinitionFile="heksedit.def"
 				SubSystem="2"
 				TargetMachine="1"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="editbin.exe /OSVERSION:4.0 /SUBSYSTEM:WINDOWS,4.0 &quot;$(TargetPath)&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -155,7 +162,6 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="1"
-				AdditionalIncludeDirectories="$(ProgramFiles)\Microsoft SDK\include"
 				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE"
 				ExceptionHandling="0"
 				RuntimeLibrary="0"
@@ -197,7 +203,6 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="$(ProgramFiles)\Microsoft SDK\include"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE"
 				ExceptionHandling="0"
 				RuntimeLibrary="3"
@@ -227,6 +232,10 @@
 				SubSystem="2"
 				TargetMachine="1"
 			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="editbin.exe /OSVERSION:4.0 /SUBSYSTEM:WINDOWS,4.0 &quot;$(TargetPath)&quot;"
+			/>
 		</Configuration>
 		<Configuration
 			Name="UnicodeDebug|x64"
@@ -241,7 +250,6 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="$(ProgramFiles)\Microsoft SDK\include"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE"
 				ExceptionHandling="0"
 				RuntimeLibrary="3"
@@ -285,7 +293,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="1"
-				AdditionalIncludeDirectories="$(ProgramFiles)\Microsoft SDK\include"
+				AdditionalIncludeDirectories="&quot;$(VCToolkitInstallDir)include&quot;"
 				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE"
 				ExceptionHandling="0"
 				RuntimeLibrary="0"
@@ -310,9 +318,14 @@
 				AdditionalDependencies="version.lib comctl32.lib wininet.lib shlwapi.lib htmlhelp.lib"
 				OutputFile="$(OutDir)\$(ProjectName)U.dll"
 				LinkIncremental="1"
+				AdditionalLibraryDirectories="&quot;$(VCToolkitInstallDir)lib&quot;"
 				ModuleDefinitionFile="heksedit.def"
 				SubSystem="2"
 				TargetMachine="1"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="editbin.exe /OSVERSION:4.0 /SUBSYSTEM:WINDOWS,4.0 &quot;$(TargetPath)&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -328,7 +341,6 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="1"
-				AdditionalIncludeDirectories="$(ProgramFiles)\Microsoft SDK\include"
 				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE"
 				ExceptionHandling="0"
 				RuntimeLibrary="0"

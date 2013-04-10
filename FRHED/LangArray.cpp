@@ -182,7 +182,7 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 		PathAppend(path, _T("heksedit.lng"));
 		if (m_hLangDll == 0)
 		{
-			m_hLangDll = LoadLibraryEx(path, NULL, LOAD_LIBRARY_AS_DATAFILE);
+			m_hLangDll = LoadLibrary(path);
 			if (m_hLangDll == 0)
 				break;
 		}

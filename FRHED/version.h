@@ -16,7 +16,7 @@ along with this program; see the file COPYING.  If not, write to the Free
 Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 02111-1307, USA.
 
-Last change: 2013-02-24 by Jochen Neubeck
+Last change: 2013-04-10 by Jochen Neubeck
 */
 /** 
  * @file  version.h
@@ -28,7 +28,7 @@ Last change: 2013-02-24 by Jochen Neubeck
 // Note that for releases, these values are read from
 // versions.ini file and set here by the SetVersions.py script
 #define FRHED_MAJOR_VERSION 0
-#define FRHED_MINOR_VERSION 10901
+#define FRHED_MINOR_VERSION 10902
 #define FRHED_SUB_RELEASE_NO 2013
 #define FRHED_BUILD_NO 0
 

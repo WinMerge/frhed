@@ -56,6 +56,10 @@
 				DataExecutionPrevention="0"
 				TargetMachine="1"
 			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="editbin.exe /OSVERSION:4.0 /SUBSYSTEM:WINDOWS,4.0 &quot;$(TargetPath)&quot;"
+			/>
 		</Configuration>
 		<Configuration
 			Name="Release|x64"
@@ -129,6 +133,10 @@
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
 				TargetMachine="1"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="editbin.exe /OSVERSION:4.0 /SUBSYSTEM:WINDOWS,4.0 &quot;$(TargetPath)&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -205,6 +213,10 @@
 				DataExecutionPrevention="0"
 				TargetMachine="1"
 			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="editbin.exe /OSVERSION:4.0 /SUBSYSTEM:WINDOWS,4.0 &quot;$(TargetPath)&quot;"
+			/>
 		</Configuration>
 		<Configuration
 			Name="UnicodeDebug|x64"
@@ -279,6 +291,10 @@
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="1"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="editbin.exe /OSVERSION:4.0 /SUBSYSTEM:WINDOWS,4.0 &quot;$(TargetPath)&quot;"
 			/>
 		</Configuration>
 		<Configuration
