@@ -16,7 +16,7 @@ along with this program; see the file COPYING.  If not, write to the Free
 Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 02111-1307, USA.
 
-Last change: 2013-02-24 by Jochen Neubeck
+Last change: 2013-04-10 by Jochen Neubeck
 */
 /**
  * @file  precomp.h
@@ -48,7 +48,19 @@ using H2O::HBrush;
 using H2O::HPen;
 using H2O::HMenu;
 
-#include <windows.h>
+namespace NT4
+{
+	struct OPENFILENAME : public OPENFILENAME_NT4
+	{
+	};
+	extern "C" BOOL APIENTRY GetOpenFileName(OPENFILENAME *);
+	extern "C" BOOL APIENTRY GetSaveFileName(OPENFILENAME *);
+}
+
+using NT4::OPENFILENAME;
+using NT4::GetOpenFileName;
+using NT4::GetSaveFileName;
+
 #include <windowsx.h>
 #include <crtdbg.h>
 #include <crtdefs.h>
