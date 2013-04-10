@@ -16,7 +16,7 @@ along with this program; see the file COPYING.  If not, write to the Free
 Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 02111-1307, USA.
 
-Last change: 2013-02-24 by Jochen Neubeck
+Last change: 2013-04-10 by Jochen Neubeck
 */
 /** 
  * @file  hexwnd.cpp
@@ -37,6 +37,7 @@ Last change: 2013-02-24 by Jochen Neubeck
 #include "hexwdlg.h"
 #include "shtools.h"
 #include "gktools.h"
+#include "OSTools.h"
 #include "hgstream.h"
 #include "InvokeHtmlHelp.h"
 #include "clipboard.h"
@@ -2964,6 +2965,27 @@ void HexEditorWindow::kill_scroll_timers()
 
 //end
 
+void HexEditorWindow::reset()
+{
+	bFileNeverSaved = true;
+	bSelected = false;
+	bSelecting = false;
+	iFileChanged = FALSE;
+	bFilestatusChanged = true;
+	iVscrollMax = 0;
+	iVscrollPos = 0;
+	iHscrollMax = 0;
+	iHscrollPos = 0;
+	iCurByte = 0;
+	iCurNibble = 0;
+	bPartialStats = false;
+	bPartialOpen = false;
+	// Delete old data.
+	m_dataArray.ClearAll();
+	_tcscpy(filename, GetLangString(IDS_UNTITLED));
+	resize_window();
+}
+
 //-------------------------------------------------------------------
 // On find command.
 void HexEditorWindow::CMD_find()
@@ -3246,24 +3268,7 @@ int HexEditorWindow::CMD_new()
 {
 	if (!close())
 		return 0;
-
-	bFileNeverSaved = true;
-	bSelected = false;
-	bSelecting = false;
-	iFileChanged = FALSE;
-	bFilestatusChanged = true;
-	iVscrollMax = 0;
-	iVscrollPos = 0;
-	iHscrollMax = 0;
-	iHscrollPos = 0;
-	iCurByte = 0;
-	iCurNibble = 0;
-	bPartialStats = false;
-	bPartialOpen = false;
-	// Delete old data.
-	m_dataArray.ClearAll();
-	_tcscpy(filename, GetLangString(IDS_UNTITLED));
-	resize_window();
+	reset();
 	return 1;
 }
 
@@ -4625,6 +4630,21 @@ void HexEditorWindow::CMD_OpenDrive()
 {
 	if (!close())
 		return;
+	if (!ostools_HaveAdminAccess())
+	{
+		//MessageBox(pwnd, GetLangString(IDS_DRIVES_NEED_ADMIN), MB_ICONSTOP);
+		TCHAR path[MAX_PATH];
+		GetModuleFileName(NULL, path, MAX_PATH);
+		TCHAR params[32];
+		wsprintf(params, _T("/i%d /c%d"), iInstCount, ID_DISK_OPEN_DRIVE);
+		HINSTANCE hi = ShellExecute(NULL, _T("runas"), path, params, NULL, SW_SHOWNORMAL);
+		if ((int) hi > HINSTANCE_ERROR)
+		{
+			reset();
+			PostMessage(hwndMain, WM_CLOSE, 0, 0);
+		}
+		return;
+	}
 	static_cast<dialog<OpenDriveDialog>*>(this)->DoModal(pwnd);
 }
 
@@ -5023,8 +5043,7 @@ void HexEditorWindow::CMD_revert()
 {
 	if (bFileNeverSaved)
 	{
-		iFileChanged = FALSE;
-		CMD_new();
+		reset();
 		return;
 	}
 	if (bPartialOpen)
@@ -5080,8 +5099,7 @@ void HexEditorWindow::CMD_deletefile()
 	for ( ; i < iMRU_count ; i++)
 		_tcscpy(strMRU[i], strMRU[i + 1]);
 	save_ini_data();
-	iFileChanged = FALSE;
-	CMD_new();//tricky-tricky
+	reset();
 }
 
 void HexEditorWindow::CMD_insertfile()

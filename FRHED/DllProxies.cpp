@@ -21,7 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Last change: 2013-02-24 by Jochen Neubeck
+Last change: 2013-04-09 by Jochen Neubeck
 */
 #include "precomp.h"
 #include "DllProxies.h"
@@ -101,6 +101,18 @@ void DllProxy::FormatMessage(LPTSTR buf)
 	buf[cch++] = '\n';
 	::FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM, 0, error, 0, buf + cch, MAX_PATH, 0);
 }
+
+/**
+ * @brief ADVAPI32 dll proxy
+ */
+DllProxy::Instance<struct ADVAPI32> ADVAPI32 =
+{
+	"ADVAPI32.DLL",
+	"AllocateAndInitializeSid",
+	"CheckTokenMembership",
+	"FreeSid",
+	(HMODULE)0
+};
 
 /**
  * @brief RAWIO32 dll proxy

@@ -72,6 +72,74 @@ static BOOL bIsNT = FALSE;
 
 int WINAPI wWinMain(HINSTANCE hIconInstance, HINSTANCE, LPWSTR szCmdLine, int)
 {
+	int iSelStart = 0;
+	int iSelLength = 0;
+	int iSelEnd = 0;
+	int iCmd = 0;
+	int iInstCount = 0;
+
+	EnumWindows(WndEnumProcCountInstances, (LPARAM)&iInstCount);
+
+	if (*szCmdLine != '\0')
+	{
+		bool opting = false;
+		bool quoting = false;
+		// Command line not empty: open a file on startup.
+		LPWSTR p = szCmdLine;
+		LPWSTR q = szCmdLine;
+		while ((*p = *q) != '\0')
+		{
+			switch (*q++)
+			{
+			case '/': // switch coming up
+				opting = true;
+				switch (*q)
+				{
+				case 'S': // Start offset
+				case 's':
+					StrToIntExW(++q, STIF_SUPPORT_HEX, &iSelStart);
+					break;
+				case 'L': // Length of selection
+				case 'l':
+					StrToIntExW(++q, STIF_SUPPORT_HEX, &iSelLength);
+					break;
+				case 'E': // End of selection
+				case 'e':
+					StrToIntExW(++q, STIF_SUPPORT_HEX, &iSelEnd);
+					break;
+				case 'I':
+				case 'i':
+					StrToIntExW(++q, STIF_SUPPORT_HEX, &iInstCount);
+					break;
+				case 'C':
+				case 'c':
+					StrToIntExW(++q, STIF_SUPPORT_HEX, &iCmd);
+					break;
+				}
+				break;
+			case '"':
+				opting = false;
+				quoting = !quoting;
+				break;
+			case ' ':
+			case '\t':
+			case '\r':
+			case '\n':
+				opting = false;
+				if (!quoting)
+					break;
+				// fall through
+			default:
+				if (opting)
+					break;
+				++p;
+				break;
+			}
+		}
+		if (iSelLength)
+			iSelEnd = iSelStart + iSelLength - 1;
+	}
+
 	OleInitialize(NULL);
 	InitCommonControls();
 
@@ -104,9 +172,6 @@ int WINAPI wWinMain(HINSTANCE hIconInstance, HINSTANCE, LPWSTR szCmdLine, int)
 	wndclass.lpszClassName = szMainClass;
 
 	RegisterClass(&wndclass);
-
-	int iInstCount = 0;
-	EnumWindows(WndEnumProcCountInstances, (LPARAM)&iInstCount);
 
 	CreateWindow(szMainClass, 0, WS_OVERLAPPEDWINDOW | WS_CLIPCHILDREN,
 		CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
@@ -141,59 +206,13 @@ int WINAPI wWinMain(HINSTANCE hIconInstance, HINSTANCE, LPWSTR szCmdLine, int)
 
 	if (*szCmdLine != '\0')
 	{
-		bool opting = false;
-		bool quoting = false;
-		// Command line not empty: open a file on startup.
-		LPWSTR p = szCmdLine;
-		LPWSTR q = szCmdLine;
-		int iSelStart = 0, iSelLength = 0, iSelEnd = 0; // MF cmd line parms
-		while ((*p = *q) != '\0')
-		{
-			switch (*q++)
-			{
-			case '/': // switch coming up
-				opting = true;
-				switch (*q)
-				{
-				case 'S': // Start offset
-				case 's':
-					StrToIntExW(++q, STIF_SUPPORT_HEX, &iSelStart);
-					break;
-				case 'L': // Length of selection
-				case 'l':
-					StrToIntExW(++q, STIF_SUPPORT_HEX, &iSelLength);
-					break;
-				case 'E': // End of selection
-				case 'e':
-					StrToIntExW(++q, STIF_SUPPORT_HEX, &iSelEnd);
-					break;
-				}
-				break;
-			case '"':
-				opting = false;
-				quoting = !quoting;
-				break;
-			case ' ':
-			case '\t':
-			case '\r':
-			case '\n':
-				opting = false;
-				if (!quoting)
-					break;
-				// fall through
-			default:
-				if (opting)
-					break;
-				++p;
-				break;
-			}
-		}
-		if (iSelLength)
-			iSelEnd = iSelStart + iSelLength - 1;
 		pHexWnd->open_file(szCmdLine);
-		if (iSelEnd)
+		if (iSelEnd != 0)
 			pHexWnd->CMD_setselection(iSelStart, iSelEnd);
 	}
+
+	if (iCmd != 0)
+		PostMessage(hwndMain, WM_COMMAND, iCmd, 0);
 
 	while (GetMessage(&msg, NULL, 0, 0))
 	{

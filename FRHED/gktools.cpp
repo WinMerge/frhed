@@ -16,7 +16,7 @@ along with this program; see the file COPYING.  If not, write to the Free
 Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 02111-1307, USA.
 
-Last change: 2013-02-24 by Jochen Neubeck
+Last change: 2013-04-10 by Jochen Neubeck
 */
 #include "precomp.h"
 #include "DllProxies.h"
@@ -27,7 +27,6 @@ Last change: 2013-02-24 by Jochen Neubeck
 #include "hexwdlg.h"
 #include "gktools.h"
 #include "simparr.h"
-#include "OSTools.h"
 #include "StringTable.h"
 #include "AnsiConvert.h"
 
@@ -242,13 +241,6 @@ INT_PTR OpenDriveDialog::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPARAM
 	{
 	case WM_INITDIALOG:
 		{
-			BOOL admin = ostools_HaveAdminAccess();
-			if (!admin)
-			{
-				MessageBox(pDlg, GetLangString(IDS_DRIVES_NEED_ADMIN), MB_ICONSTOP);
-				pDlg->EndDialog(IDCANCEL);
-				return TRUE;
-			}
 			pDlg->ShowWindow(SW_SHOW);
 			if (PartitionInfoList.IsEmpty())
 			{

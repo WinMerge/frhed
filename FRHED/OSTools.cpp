@@ -16,7 +16,7 @@ along with this program; see the file COPYING.  If not, write to the Free
 Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 02111-1307, USA.
 
-Last change: 2013-02-24 by Jochen Neubeck
+Last change: 2013-04-09 by Jochen Neubeck
 */
 /** 
  * @file  OSTools.cpp
@@ -26,6 +26,7 @@ Last change: 2013-02-24 by Jochen Neubeck
  */
 #include "precomp.h"
 #include "OSTools.h"
+#include "DllProxies.h"
 
 /**
  * @brief Check if current user has Administrator privileges.
@@ -35,32 +36,21 @@ Last change: 2013-02-24 by Jochen Neubeck
  */
 BOOL ostools_HaveAdminAccess()
 {
-	OSVERSIONINFO ver = {0};
-	ver.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
-
-	// if this fails, we want to default to being enabled
-	if (!(GetVersionEx(&ver) && ver.dwPlatformId == VER_PLATFORM_WIN32_NT))
+	BOOL isadmin = TRUE;
+	if (struct ADVAPI32 *ADVAPI32 = ::ADVAPI32)
 	{
-		return TRUE;
+		SID_IDENTIFIER_AUTHORITY ntauth = SECURITY_NT_AUTHORITY;
+		PSID admgroup = NULL;
+		if (ADVAPI32->AllocateAndInitializeSid(&ntauth, 2,
+			SECURITY_BUILTIN_DOMAIN_RID, DOMAIN_ALIAS_RID_ADMINS,
+			0, 0, 0, 0, 0, 0, &admgroup))
+		{
+			if (!ADVAPI32->CheckTokenMembership(NULL, admgroup, &isadmin))
+			{
+				isadmin = FALSE;
+			}
+			ADVAPI32->FreeSid(admgroup);
+		}
 	}
-
-	SID_IDENTIFIER_AUTHORITY NtAuthority = SECURITY_NT_AUTHORITY;
-	PSID AdministratorsGroup;
-	// Initialize SID.
-	if (!AllocateAndInitializeSid(&NtAuthority,	2,SECURITY_BUILTIN_DOMAIN_RID,
-			DOMAIN_ALIAS_RID_ADMINS, 0, 0, 0, 0, 0, 0, &AdministratorsGroup))
-	{
-		// Initializing SID Failed.
-		return false;
-	}
-	// Check whether the token is present in admin group.
-	BOOL IsInAdminGroup = FALSE;
-	if (!CheckTokenMembership(NULL,	AdministratorsGroup, &IsInAdminGroup))
-	{
-		// Error occurred.
-		IsInAdminGroup = FALSE;
-	}
-	// Free SID and return.
-	FreeSid(AdministratorsGroup);
-	return IsInAdminGroup;
+	return isadmin;
 }

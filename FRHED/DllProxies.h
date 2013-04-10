@@ -11,10 +11,7 @@ template<class T> struct DllProxy::Instance
 {
 	union
 	{
-		struct
-		{
-			LPCSTR Names[sizeof(T) / sizeof(LPCSTR)];
-		} Names;
+		LPCSTR Names[sizeof(T) / sizeof(LPCSTR)];
 		DllProxy Proxy;
 	};
 	HMODULE H;
@@ -27,6 +24,20 @@ template<class T> struct DllProxy::Instance
 		return (T *)Proxy.EnsureLoad();
 	}
 };
+
+/**
+ * @brief ADVAPI32 dll proxy
+ */
+struct ADVAPI32
+{
+	BOOL(WINAPI*AllocateAndInitializeSid)(PSID_IDENTIFIER_AUTHORITY, BYTE,
+		DWORD, DWORD, DWORD, DWORD, DWORD, DWORD, DWORD, DWORD, PSID);
+	BOOL(WINAPI*CheckTokenMembership)(HANDLE, PSID, PBOOL);
+	PVOID(WINAPI*FreeSid)(PSID);
+	HMODULE H;
+};
+
+extern DllProxy::Instance<struct ADVAPI32> ADVAPI32;
 
 /**
  * @brief RAWIO32 dll proxy

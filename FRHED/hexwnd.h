@@ -16,7 +16,7 @@ along with this program; see the file COPYING.  If not, write to the Free
 Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 02111-1307, USA.
 
-Last change: 2013-02-24 by Jochen Neubeck
+Last change: 2013-04-10 by Jochen Neubeck
 */
 /** 
  * @file  hexwnd.h
@@ -157,6 +157,7 @@ public:
 	void set_drag_caret(long x, long y, bool Copying, bool Overwrite );
 	void fix_scroll_timers(long x, long y);
 	void kill_scroll_timers();
+	void reset();
 	int lbd_pos;
 	int nibblenum, bytenum, column, line, new_pos, old_pos, old_col, old_row;
 	int bMouseOpDelayTimerSet;
