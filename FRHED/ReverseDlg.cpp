@@ -58,6 +58,7 @@ INT_PTR ReverseDlg::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPARAM lPar
 		switch (wParam)
 		{
 		case IDOK:
+		{
 			if (pDlg->GetDlgItemText(IDC_REVERSE_OFFSET, buf, RTL_NUMBER_OF(buf)) &&
 				!offset_parse(buf, iStartOfSelSetting))
 			{
@@ -90,7 +91,9 @@ INT_PTR ReverseDlg::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPARAM lPar
 				iStartOfSelSetting = 0;
 			if (iEndOfSelSetting > maxb)
 				iEndOfSelSetting = maxb;
+			SimpleArray<BYTE> olddata(iEndOfSelSetting - iStartOfSelSetting + 1, &m_dataArray[iStartOfSelSetting]);
 			reverse_bytes(&m_dataArray[iStartOfSelSetting], &m_dataArray[iEndOfSelSetting]);
+			push_undorecord(iStartOfSelSetting, olddata, olddata.GetLength(), &m_dataArray[iStartOfSelSetting], iEndOfSelSetting - iStartOfSelSetting + 1);
 			if (bSelected)
 			{
 				//If the selection was inside the bit that was reversed, then reverse it too
@@ -115,10 +118,10 @@ INT_PTR ReverseDlg::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPARAM lPar
 				iCurNibble = !iCurNibble;
 			}
 			SetCursor (LoadCursor (NULL, IDC_ARROW));
-			iFileChanged = TRUE;
 			bFilestatusChanged = true;
 			repaint();
 			// fall through
+		}
 		case IDCANCEL:
 			pDlg->EndDialog(wParam);
 			return TRUE;

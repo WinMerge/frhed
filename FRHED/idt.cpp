@@ -254,18 +254,21 @@ STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POIN
 		}
 		int iMove1stEnd = hexwnd.iGetStartOfSelection();
 		int iMove2ndEndorLen = hexwnd.iGetEndOfSelection();
+		int iMovePosOrg = hexwnd.new_pos;
 		if (!copying && hexwnd.new_pos > iMove2ndEndorLen)
 			hexwnd.new_pos += iMove1stEnd - iMove2ndEndorLen - 1;
 		iMovePos = hexwnd.new_pos;
 		iMoveOpTyp = copying ? OPTYP_COPY : OPTYP_MOVE;
+		SimpleArray<BYTE> olddata;
+		const int len = iMove2ndEndorLen - iMove1stEnd + 1;
 		if (grfKeyState & MK_SHIFT) // Overwrite
 		{
-			const int len = iMove2ndEndorLen - iMove1stEnd + 1;
 			if (copying)
 			{
 				//Just [realloc &] memmove
 				if (iMovePos + len > hexwnd.m_dataArray.GetLength()) // Need more space
 				{
+					olddata.AppendArray(&hexwnd.m_dataArray[iMovePos], hexwnd.m_dataArray.GetLength() - iMovePos);
 					if (hexwnd.m_dataArray.SetSize(iMovePos + len))
 					{
 						hexwnd.m_dataArray.ExpandToSize();
@@ -274,25 +277,40 @@ STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POIN
 				}
 				else // Enough space
 				{
+					olddata.AppendArray(&hexwnd.m_dataArray[iMovePos], len);
 					memmove(&hexwnd.m_dataArray[iMovePos], &hexwnd.m_dataArray[iMove1stEnd], len);
 				}
+				hexwnd.push_undorecord(iMovePos, olddata, olddata.GetLength(), &hexwnd.m_dataArray[iMovePos], len);
 			}
 			else //Moving
 			{
 				if (iMovePos > iMove1stEnd) //Forward
 				{
-					hexwnd.CMD_move_copy(iMove1stEnd, iMove2ndEndorLen, 0);
+					olddata.AppendArray(&hexwnd.m_dataArray[iMove1stEnd], iMovePosOrg + len - iMove1stEnd);
+					hexwnd.move_copy_sub(iMove1stEnd, iMove2ndEndorLen, 0);
 					hexwnd.m_dataArray.RemoveAt(iMovePos+len,len);
+					hexwnd.push_undorecord(iMove1stEnd, olddata, olddata.GetLength(), &hexwnd.m_dataArray[iMove1stEnd], iMovePosOrg - iMove1stEnd);
 				}
 				else //Backward
 				{
-					memmove(&hexwnd.m_dataArray[iMovePos],&hexwnd.m_dataArray[iMove1stEnd],len);
-					hexwnd.m_dataArray.RemoveAt((iMovePos-iMove1stEnd>=len?iMove1stEnd:iMovePos+len),len);
+					if (iMove1stEnd-iMovePos>=len)
+					{
+						olddata.AppendArray(&hexwnd.m_dataArray[iMovePos], iMove1stEnd + len - iMovePos);
+						memmove(&hexwnd.m_dataArray[iMovePos],&hexwnd.m_dataArray[iMove1stEnd],len);
+						hexwnd.m_dataArray.RemoveAt(iMove1stEnd,len);
+					}
+					else
+					{
+						olddata.AppendArray(&hexwnd.m_dataArray[iMovePos], iMove1stEnd + len - (iMovePos + len - iMove1stEnd) - iMovePos);
+						memmove(&hexwnd.m_dataArray[iMovePos],&hexwnd.m_dataArray[iMove1stEnd],len);
+						hexwnd.m_dataArray.RemoveAt(iMovePos+len,len-(iMovePos + len - iMove1stEnd));
+					}
+					hexwnd.push_undorecord(iMovePos, olddata, olddata.GetLength(), &hexwnd.m_dataArray[iMovePos], iMove1stEnd - iMovePos);
 				}
 			}
 			hexwnd.iStartOfSelection = iMovePos;
 			hexwnd.iEndOfSelection = iMovePos+len-1;
-			hexwnd.iFileChanged = hexwnd.bFilestatusChanged = true;
+			hexwnd.bFilestatusChanged = true;
 			hexwnd.bSelected = true;
 			hexwnd.resize_window();
 		}
@@ -656,15 +674,18 @@ STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POIN
 					if (grfKeyState&MK_SHIFT)
 					{
 						/* Overwite */
+						SimpleArray<BYTE> olddata;
 						DWORD upper = 1 + hexwnd.m_dataArray.GetUpperBound();
 						if (hexwnd.new_pos+len > upper)
 						{
+							olddata.AppendArray(&hexwnd.m_dataArray[hexwnd.new_pos + (int)totallen], upper - hexwnd.new_pos + (int)totallen);
 							/* Need more space */
 							if (hexwnd.m_dataArray.SetSize(hexwnd.new_pos + totallen + len))
 							{
 								hexwnd.m_dataArray.ExpandToSize();
 								memcpy(&hexwnd.m_dataArray[hexwnd.new_pos +
 										(int)totallen], DataToInsert, len);
+								hexwnd.push_undorecord(hexwnd.new_pos + totallen, olddata, olddata.GetLength(), DataToInsert, len);
 								gotdata = true;
 								totallen += len;
 							}
@@ -672,8 +693,10 @@ STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POIN
 						else
 						{
 							/* Enough space */
+							olddata.AppendArray(&hexwnd.m_dataArray[hexwnd.new_pos + (int)totallen], len);
 							memcpy(&hexwnd.m_dataArray[hexwnd.new_pos +
 									(int)totallen], DataToInsert, len);
+							hexwnd.push_undorecord(hexwnd.new_pos + totallen, olddata, olddata.GetLength(), DataToInsert, len);
 							gotdata = true;
 							totallen += len;
 						}
@@ -681,6 +704,7 @@ STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POIN
 					else if (hexwnd.m_dataArray.InsertAtGrow(hexwnd.new_pos + totallen, DataToInsert, 0, len))
 					{
 						/* Insert */
+						hexwnd.push_undorecord(hexwnd.new_pos + totallen, NULL, 0, DataToInsert, len);
 						gotdata = true;
 						totallen += len;
 					}
@@ -702,7 +726,7 @@ STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POIN
 		{
 			hexwnd.iStartOfSelection = hexwnd.new_pos;
 			hexwnd.iEndOfSelection = hexwnd.new_pos + totallen - 1;
-			hexwnd.iFileChanged = hexwnd.bFilestatusChanged = true;
+			hexwnd.bFilestatusChanged = true;
 			hexwnd.bSelected = true;
 			hexwnd.resize_window();
 			hexwnd.synch_sibling();

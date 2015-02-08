@@ -220,8 +220,9 @@ INT_PTR EncodeDecodeDialog::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPA
 				}
 				mc.lpbMemory = &m_dataArray[lower];
 				mc.dwSize = upper - lower + 1;
+				SimpleArray<BYTE> olddata(mc.dwSize, mc.lpbMemory);
 				mc.fpMcd->fpEncodeFunc(&mc);
-				iFileChanged = TRUE;
+				push_undorecord(lower, olddata, olddata.GetLength(), mc.lpbMemory, mc.dwSize);
 				bFilestatusChanged = true;
 				repaint();
 			}

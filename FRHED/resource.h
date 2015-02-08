@@ -318,6 +318,8 @@
 #define IDC_DELETE_NUMBEROFBYTES        422
 #define IDC_DELETE_ENDOFFSET            423
 #define IDC_DELETE_NUMBYTES             424
+#define IDM_EDIT_UNDO                   425
+#define IDM_EDIT_REDO                   426
 #define IDC_ENABLE_DRAG                 1074
 #define IDC_ALWAYS_CHOOSE               1075
 #define IDC_DROP_BIN_DATA               1076

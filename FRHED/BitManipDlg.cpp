@@ -87,8 +87,9 @@ BOOL BitManipDlg::Apply(HWindow *pDlg, WPARAM wParam)
 		cBitValue |= 1;
 	if (wParam == IDOK)
 	{
+		BYTE ch = m_dataArray[iCurByte];
 		m_dataArray[iCurByte] = cBitValue;
-		iFileChanged = TRUE;
+		push_undorecord(iCurByte, &ch, 1, &m_dataArray[iCurByte], 1);
 		bFilestatusChanged = true;
 		repaint();
 		return TRUE;
