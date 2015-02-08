@@ -313,6 +313,7 @@ INT_PTR FillWithDialog::DlgProc(HWindow *pDlg, UINT iMsg, WPARAM wParam, LPARAM 
 					iEndOfSelSetting = m_dataArray.GetUpperBound();
 				}
 
+				SimpleArray<BYTE> olddata(iEndOfSelSetting - iStartOfSelSetting + 1, &m_dataArray[iStartOfSelSetting]);
 				int i = iStartOfSelSetting;
 				int ii = 0;
 				switch (asstyp)
@@ -346,10 +347,10 @@ INT_PTR FillWithDialog::DlgProc(HWindow *pDlg, UINT iMsg, WPARAM wParam, LPARAM 
 					}
 					break;
 				}
+				push_undorecord(iStartOfSelSetting, olddata, olddata.GetLength(), &m_dataArray[iStartOfSelSetting], olddata.GetLength());
 				if (curtyp)
 					_close(FWFile);//close file
 				SetCursor(LoadCursor(NULL, IDC_ARROW));
-				iFileChanged = TRUE;//mark as changed
 				bFilestatusChanged = true;
 				repaint();//you tell me
 			}

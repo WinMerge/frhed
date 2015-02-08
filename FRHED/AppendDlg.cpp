@@ -56,7 +56,7 @@ BOOL AppendDlg::Apply(HWindow *pDlg)
 	WaitCursor wc;
 	for (int i = 0 ; i < iAppendbytes ; i++)
 		m_dataArray[oldupbound + i] = 0;
-	iFileChanged = TRUE;
+	push_undorecord(oldupbound, NULL, 0, &m_dataArray[oldupbound], iAppendbytes);
 	bFilestatusChanged = true;
 	resize_window();
 	return TRUE;

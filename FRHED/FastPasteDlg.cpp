@@ -148,6 +148,7 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 		return FALSE;
 	}
 	WaitCursor wc1;
+	SimpleArray<BYTE> olddata;
 	if (bSelected || pDlg->IsDlgButtonChecked(IDC_FPASTE_INSERT))
 	{
 		// Insert at iCurByte. Bytes there will be pushed up.
@@ -155,8 +156,13 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 		{
 			iCurByte = iGetStartOfSelection();
 			int iEndByte = iGetEndOfSelection();
+			olddata.AppendArray(&m_dataArray[iCurByte], iEndByte - iCurByte + 1 + (iPasteTimes - 1) * iPasteSkip);
 			m_dataArray.RemoveAt(iCurByte, iEndByte - iCurByte + 1);//Remove extraneous data
 			bSelected = false; // Deselect
+		}
+		else
+		{
+			olddata.AppendArray(&m_dataArray[iCurByte], (iPasteTimes - 1) * iPasteSkip);
 		}
 		int i = iCurByte;
 		for (int k = 0 ; k < iPasteTimes ; k++)
@@ -168,7 +174,6 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 			}
 			i += destlen + iPasteSkip;
 		}
-		iFileChanged = TRUE;
 		bFilestatusChanged = true;
 		resize_window();
 	}
@@ -182,6 +187,7 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 			delete [] pcPastestring;
 			return TRUE;
 		}
+		olddata.AppendArray(&m_dataArray[iCurByte], (iPasteTimes - 1) * (iPasteSkip + destlen) + destlen);
 		// Overwrite data.
 		for (int k = 0 ; k < iPasteTimes ; k++)
 		{
@@ -190,10 +196,10 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 				m_dataArray[iCurByte + k * (iPasteSkip + destlen) + i] = pcPastestring[i];
 			}
 		}
-		iFileChanged = TRUE;
 		bFilestatusChanged = true;
 		repaint();
 	}
+	push_undorecord(iCurByte, olddata, olddata.GetLength(), &m_dataArray[iCurByte], (iPasteTimes - 1) * (iPasteSkip + destlen) + destlen);
 	delete [] pcPastestring;
 	return TRUE;
 }
