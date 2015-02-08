@@ -114,6 +114,8 @@ BOOL EnterDecimalValueDlg::Apply(HWindow *pDlg)
 		return FALSE;
 	}
 	WaitCursor wc;
+	int iDecValDlgOffsetOrg = iDecValDlgOffset;
+	SimpleArray<BYTE> olddata(iDecValDlgSize * iDecValDlgTimes, &m_dataArray[iDecValDlgOffset]);
 	while (iDecValDlgTimes)
 	{
 		if (iBinaryMode == ENDIAN_LITTLE)
@@ -160,7 +162,7 @@ BOOL EnterDecimalValueDlg::Apply(HWindow *pDlg)
 		}
 		--iDecValDlgTimes;
 	}
-	iFileChanged = TRUE;
+	push_undorecord(iDecValDlgOffsetOrg, olddata, olddata.GetLength(), &m_dataArray[iDecValDlgOffsetOrg], olddata.GetLength());
 	bFilestatusChanged = true;
 	repaint();
 	return TRUE;

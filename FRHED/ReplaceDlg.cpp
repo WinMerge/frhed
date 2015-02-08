@@ -121,6 +121,7 @@ bool ReplaceDlg::replace_selected_data(HWindow *pDlg)
 	}
 	int i = iGetStartOfSelection();
 	int n = iGetEndOfSelection() - i + 1;
+	SimpleArray<BYTE> olddata(n, &m_dataArray[i]);
 	if (strReplaceWithData.IsEmpty())
 	{
 		// Selected data is to be deleted, since replace-with data is empty string.
@@ -129,6 +130,7 @@ bool ReplaceDlg::replace_selected_data(HWindow *pDlg)
 			MessageBox(pDlg, GetLangString(IDS_REPL_CANT_DELETE), MB_ICONERROR);
 			return FALSE;
 		}
+		push_undorecord(i, olddata, olddata.GetLength(), NULL, 0);
 		bSelected = false;
 		iCurByte = iStartOfSelection;
 	}
@@ -140,6 +142,7 @@ bool ReplaceDlg::replace_selected_data(HWindow *pDlg)
 			MessageBox(pDlg, GetLangString(IDS_REPL_FAILED), MB_ICONERROR);
 			return false;
 		}
+		push_undorecord(i, olddata, olddata.GetLength(), (const BYTE *)(const char *)strReplaceWithData, strReplaceWithData.StrLen());
 		iEndOfSelection = iStartOfSelection + strReplaceWithData.StrLen() - 1;
 	}
 	else
@@ -156,10 +159,10 @@ bool ReplaceDlg::replace_selected_data(HWindow *pDlg)
 			MessageBox(pDlg, GetLangString(IDS_REPL_FAILED), MB_ICONERROR);
 			return false;
 		}
+		push_undorecord(i, olddata, olddata.GetLength(), out, out.GetLength());
 		iEndOfSelection = iStartOfSelection + out.GetLength() - 1;
 	}
 	bFilestatusChanged = true;
-	iFileChanged = TRUE;
 	return true;
 }
 

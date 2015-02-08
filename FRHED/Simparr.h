@@ -39,6 +39,7 @@ template<class T> class SimpleArray
 public:
 	SimpleArray();
 	SimpleArray(const T* ptArray, int upbound, int size);
+	SimpleArray(int size, const T* ptArray);
 	SimpleArray(int nNewSize, int nGrowBy = 1);
 	SimpleArray(const SimpleArray& spaArg);
 	virtual ~SimpleArray();
@@ -71,7 +72,7 @@ public:
 	bool SetSize(int nNewSize, int nGrowBy = 0);
 	void SetGrowBy(int nGrowBy);
 	T& operator[](int nIndex) {return m_pT[nIndex];}
-	SimpleArray<T>& operator=(SimpleArray<T>& spa);
+	SimpleArray<T>& operator=(const SimpleArray<T>& spa);
 	void ClearAll();
 	bool blContainsRef(const T& argT);
 	bool blContains(T argT);

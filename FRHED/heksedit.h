@@ -28,7 +28,7 @@ Last change: 2013-02-24 by Jochen Neubeck
 #define _HEKSEDIT_H_
 
 #ifndef HEKSEDIT_INTERFACE_VERSION
-#define HEKSEDIT_INTERFACE_VERSION 1
+#define HEKSEDIT_INTERFACE_VERSION 2
 #endif
 
 /**
@@ -74,7 +74,6 @@ public:
 
 	struct Status
 	{
-		int iFileChanged;
 		int iEnteringMode;
 		int iCurByte;
 		int iCurNibble;
@@ -113,6 +112,16 @@ public:
 	virtual void STDMETHODCALLTYPE CMD_zoom(int) = 0;
 	virtual void STDMETHODCALLTYPE CMD_select_all() = 0;
 	virtual void STDMETHODCALLTYPE set_sibling2(IHexEditorWindow *, IHexEditorWindow *) = 0;
+	virtual void STDMETHODCALLTYPE copy_sel_from(IHexEditorWindow *) = 0;
+	virtual void STDMETHODCALLTYPE copy_all_from(IHexEditorWindow *) = 0;
+	virtual void STDMETHODCALLTYPE CMD_edit_undo() = 0;
+	virtual void STDMETHODCALLTYPE CMD_edit_redo() = 0;
+	virtual bool STDMETHODCALLTYPE can_undo() const = 0;
+	virtual bool STDMETHODCALLTYPE can_redo() const = 0;
+	virtual void STDMETHODCALLTYPE set_savepoint() = 0;
+	virtual bool STDMETHODCALLTYPE get_modified() const = 0;
+	virtual void STDMETHODCALLTYPE clear_undorecords() = 0;
+	virtual void STDMETHODCALLTYPE share_undorecords(IHexEditorWindow *) = 0;
 };
 
 #endif // _HEKSEDIT_H_

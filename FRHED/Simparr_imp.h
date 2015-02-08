@@ -59,6 +59,20 @@ template<class T> SimpleArray<T>::SimpleArray(const T* ptArray, int upbound, int
 }
 
 //-------------------------------------------------------------------
+template<class T> SimpleArray<T>::SimpleArray(int size, const T* ptArray)
+	: m_nGrowBy(1)
+	, m_pT(new T[size])
+	, m_nUpperBound(size - 1)
+	, m_nSize(size)
+{
+	if (ptArray)
+	{
+		for (int k = 0; k <= m_nUpperBound; k++)
+			m_pT[k] = ptArray[k];
+	}
+}
+
+//-------------------------------------------------------------------
 template<class T> SimpleArray<T>::SimpleArray(const SimpleArray& spaArg)
 	: m_nSize(spaArg.m_nSize)
 	, m_nUpperBound(spaArg.m_nUpperBound)
@@ -452,7 +466,7 @@ template<class T> int SimpleArray<T>::nContainsAt(T argT)
 
 //-------------------------------------------------------------------
 // Make a copy of the other SimpleArray.
-template<class T> SimpleArray<T>& SimpleArray<T>::operator=(SimpleArray<T>& spa)
+template<class T> SimpleArray<T>& SimpleArray<T>::operator=(const SimpleArray<T>& spa)
 {
 	// Can't assign to itself: "sa1 = sa1;" not allowed.
 	if (&spa != this)

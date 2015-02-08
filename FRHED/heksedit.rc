@@ -54,6 +54,9 @@ BEGIN
     END
     POPUP "&Edit"
     BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               IDM_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               IDM_EDIT_REDO
+        MENUITEM SEPARATOR
         MENUITEM "Cu&t...\tCtrl+X",             IDM_EDIT_CUT
         MENUITEM "&Copy...\tCtrl+C",            IDM_EDIT_COPY
         MENUITEM "&Paste...\tCtrl+V",           IDM_EDIT_PASTE
@@ -86,7 +89,7 @@ BEGIN
         MENUITEM "C&ompare from current offset...\tCtrl+M", IDM_COMPARE
         MENUITEM SEPARATOR
         MENUITEM "Get f&loating point value...\tCtrl+L", IDM_READFLOAT
-        MENUITEM "File p&roperties...\tAlt+Enter", IDM_PROPERTIES
+        MENUITEM "File properties...\tAlt+Enter", IDM_PROPERTIES
         MENUITEM "Appl&y template...\tAlt+T",   IDM_APPLYTEMPLATE
         MENUITEM "Open in text editor\tF5",     IDM_OPEN_TEXT
     END
@@ -123,7 +126,7 @@ BEGIN
                                                     IDM_ADOPT_COLOURS
         END
         MENUITEM "C&haracter set...\tCtrl+R",   IDM_CHARACTER_SET
-        MENUITEM "B&inary mode...\tCtrl+Y",     IDM_BINARYMODE
+        MENUITEM "B&inary mode...\tCtrl+Shift+Y", IDM_BINARYMODE
         MENUITEM "&OLE Drag-drop...\tCtrl+Alt+O", IDM_OLE_DRAG_DROP
         MENUITEM "Make backups\tCtrl+Shift+M",  IDM_MAKE_BACKUPS, CHECKED
     END
@@ -276,7 +279,11 @@ BEGIN
     "X",            IDM_EDIT_CUT,           VIRTKEY, CONTROL, NOINVERT
     "X",            IDM_NEW,                VIRTKEY, SHIFT, CONTROL, 
                                                     NOINVERT
-    "Y",            IDM_BINARYMODE,         VIRTKEY, CONTROL, NOINVERT
+    "Y",            IDM_EDIT_REDO,          VIRTKEY, CONTROL, NOINVERT
+    "Y",            IDM_BINARYMODE,         VIRTKEY, SHIFT, CONTROL, NOINVERT
+
+    "Z",            IDM_EDIT_UNDO,          VIRTKEY, CONTROL, NOINVERT
+
     VK_ADD,         IDM_ZOOMIN,             VIRTKEY, CONTROL, NOINVERT
     VK_SUBTRACT,    IDM_ZOOMOUT,            VIRTKEY, CONTROL, NOINVERT
     VK_MULTIPLY,    IDM_ZOOMNORMAL,         VIRTKEY, CONTROL, NOINVERT
@@ -327,7 +334,7 @@ BEGIN
     LTEXT           "Frhed - Free hex editor",IDC_STATIC,
                     37,7,167,8
     LTEXT           "",IDC_ABOUT_VER,37,17,167,8
-    LTEXT           "© Raihan Kibria 2000",IDC_STATIC,37,27,167,8
+    LTEXT           "(c) Raihan Kibria 2000",IDC_STATIC,37,27,167,8
     LTEXT           "All rights reserved.",IDC_STATIC,37,37,167,8
     LTEXT           "Contributors are listed in Contributors.txt.",IDC_STATIC,
                     37,55,167,8
