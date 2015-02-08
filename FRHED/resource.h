@@ -42,7 +42,6 @@
 #define IDD_OPEN_DRIVE_DIALOG           136
 #define IDD_GOTO_TRACK_DIALOG           137
 #define IDD_SHORTCUTS                   138
-#define IDD_UPGRADE                     139
 #define IDD_CHANGEINST                  140
 #define IDB_TOOLBAR                     141
 #define IDC_REPLACEWITH_EDIT            142
