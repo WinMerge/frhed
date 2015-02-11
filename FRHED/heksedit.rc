@@ -1254,8 +1254,6 @@ END
 STRINGTABLE
 BEGIN
     IDS_HEXF_NO_MEM        "Not enough memory to import data.\nCannot continue!\nDo you want to keep what has been found so far?"
-    IDS_HEXF_ILLEGAL_CHAR  "Illegal character found.\nIgnore further illegal characters?"
-    IDS_HEXF_ILLEGAL_OFFS  "Illegal character in offset.\nIgnore further invalid offsets?"
     IDS_HEXF_NONZERO_START "The first offset found was 0x%x, which is greater than zero.\nDo you want to insert %d null bytes at the start of the data?"
     IDS_HEXF_INV_OFFSET    "Invalid offset found.\nIgnore further invalid offsets?"
     IDS_HEXF_CHAR_HEX_NO_MATCH "Character data does not agree with hex data.\nIgnore further mismatched data?\nNB: Hex data will be used when ignoring."
@@ -1278,17 +1276,6 @@ BEGIN
     IDS_REPL_BAD_SELECT    "Could not use selection as replace target."
 END
 
-// Update-dialog
-STRINGTABLE
-BEGIN
-    IDS_UPDLG_OPTION       "Option"
-    IDS_UPDLG_VALUE        "Value"
-    IDS_UPDLG_LINKS        "Links"
-    IDS_UPDLG_MRUFILES     "MRU Files"
-    IDS_UPDLG_CANT_COPY_CURR "You can't copy the registry data of the selected version nto the current one because it is the current one!"
-    IDS_CANT_OPEN_VER      "Could not open the selected version key"
-END
-
 // Status bar
 STRINGTABLE 
 BEGIN
@@ -1302,7 +1289,6 @@ BEGIN
     IDS_SBAR_LONG_SHORT    "L"
     IDS_SBAR_SIGNED        "Signed"
     IDS_SBAR_SIZE          "Size"
-    IDS_SBAR_NO_FILE       "No file loaded"
 END
 
 // Template

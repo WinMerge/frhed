@@ -619,7 +619,7 @@ msgstr "OK"
 #: heksedit.rc:946
 #: heksedit.rc:959
 #: heksedit.rc:977
-#: heksedit.rc:1345
+#: heksedit.rc:1331
 #, c-format
 msgid "Cancel"
 msgstr "Annuler"
@@ -871,7 +871,7 @@ msgstr "Nombre d'octets à découper:"
 #: heksedit.rc:864
 #: heksedit.rc:895
 #: heksedit.rc:996
-#: heksedit.rc:1344
+#: heksedit.rc:1330
 #, c-format
 msgid "Copy"
 msgstr "Copier"
@@ -1291,7 +1291,7 @@ msgid "Fill from:"
 msgstr "Fichier de:"
 
 #: heksedit.rc:725
-#: heksedit.rc:1311
+#: heksedit.rc:1297
 #, c-format
 msgid "File:"
 msgstr "Fichier:"
@@ -1546,7 +1546,7 @@ msgstr "Démarrer avec (-) pour une longueur négative ou des mouvements en arrièr
 
 #: heksedit.rc:863
 #: heksedit.rc:893
-#: heksedit.rc:1343
+#: heksedit.rc:1329
 #, c-format
 msgid "Move"
 msgstr "Déplacer"
@@ -1812,13 +1812,13 @@ msgid "INS"
 msgstr "INS"
 
 #: heksedit.rc:1028
-#: heksedit.rc:1302
+#: heksedit.rc:1289
 #, c-format
 msgid "L"
 msgstr "L"
 
 #: heksedit.rc:1029
-#: heksedit.rc:1299
+#: heksedit.rc:1286
 #, c-format
 msgid "B"
 msgstr "B"
@@ -2459,31 +2459,13 @@ msgstr ""
 #: heksedit.rc:1257
 #, c-format
 msgid ""
-"Illegal character found.\n"
-"Ignore further illegal characters?"
-msgstr ""
-"Caractère illégal trouvé.\n"
-"Ignorer les autres caractères illégaux?"
-
-#: heksedit.rc:1258
-#, c-format
-msgid ""
-"Illegal character in offset.\n"
-"Ignore further invalid offsets?"
-msgstr ""
-"Caractère illégal dans l'offset.\n"
-"Ignorer les autres offsets invalides?"
-
-#: heksedit.rc:1259
-#, c-format
-msgid ""
 "The first offset found was 0x%x, which is greater than zero.\n"
 "Do you want to insert %d null bytes at the start of the data?"
 msgstr ""
 "Le premier offset trouvé était 0x%x, qui est plus grand que zéro.\n"
 "Voulez-vous insérer %d octets nuls au début de la donnée?"
 
-#: heksedit.rc:1260
+#: heksedit.rc:1258
 #, c-format
 msgid ""
 "Invalid offset found.\n"
@@ -2492,7 +2474,7 @@ msgstr ""
 "Offset invalide trouvé.\n"
 "Ignorer les autres offsets invalides?"
 
-#: heksedit.rc:1261
+#: heksedit.rc:1259
 #, c-format
 msgid ""
 "Character data does not agree with hex data.\n"
@@ -2503,7 +2485,7 @@ msgstr ""
 "Ignorer les autres données discordantes?\n"
 "NB: la donnée hex sera utilisée si vous l'ignorez."
 
-#: heksedit.rc:1262
+#: heksedit.rc:1260
 #, c-format
 msgid ""
 "Illegal character in hex data.\n"
@@ -2514,7 +2496,7 @@ msgstr ""
 "Impossible de continuer!\n"
 "Voulez-vous garder ce qui a été trouvé jusqu'ici?"
 
-#: heksedit.rc:1263
+#: heksedit.rc:1261
 #, c-format
 msgid ""
 "Unexpected end of data found\n"
@@ -2525,7 +2507,7 @@ msgstr ""
 "Impossible de continuer!\n"
 "Voulez-vous garder ce qui a été déjà trouvé?"
 
-#: heksedit.rc:1264
+#: heksedit.rc:1262
 #, c-format
 msgid ""
 "Does this data have the same format as the Frhed display?\n"
@@ -2534,234 +2516,199 @@ msgstr ""
 "Les données ont-elles un format identique à celui affiché dans Frhed?\n"
 "Cette donnée contient "
 
-#: heksedit.rc:1265
+#: heksedit.rc:1263
 #, c-format
 msgid "characters other than whitespace and hexdigits. (like Frhed display)"
 msgstr "les caractères autres que les espaces blancs et les chiffres hex. (comme Frhed l'affiche)"
 
-#: heksedit.rc:1266
+#: heksedit.rc:1264
 #, c-format
 msgid "only whitespace and hexdigits. (unlike Frhed display)"
 msgstr "seulement les espaces blancs et les chiffres hex. (différent de l'affichage dans Frhed)"
 
-#: heksedit.rc:1272
+#: heksedit.rc:1270
 #, c-format
 msgid "Data to replace must be selected."
 msgstr "La donnée à remplacer doit être choisie."
 
-#: heksedit.rc:1273
+#: heksedit.rc:1271
 #, c-format
 msgid "Could not delete selected data."
 msgstr "Impossible de supprimer la donnée choisie."
 
-#: heksedit.rc:1274
+#: heksedit.rc:1272
 #, c-format
 msgid "Replacing failed."
 msgstr "Echec du remplacement."
 
-#: heksedit.rc:1275
+#: heksedit.rc:1273
 #, c-format
 msgid "Could not translate text to binary."
 msgstr "Echec de la traduction binaire du texte."
 
-#: heksedit.rc:1276
+#: heksedit.rc:1274
 #, c-format
 msgid "To-replace and replace-with data are same."
 msgstr "Les donnée à-remplacer et remplacer-avec sont identiques."
 
-#: heksedit.rc:1277
+#: heksedit.rc:1275
 #, c-format
 msgid "%d occurences replaced."
 msgstr "%d occurences remplacées."
 
-#: heksedit.rc:1278
+#: heksedit.rc:1276
 #, c-format
 msgid "Could not use selection as replace target."
 msgstr "Impossible d'utiliser le choix comme cible du remplacement."
 
-#: heksedit.rc:1284
-#, c-format
-msgid "Option"
-msgstr "Option"
-
-#: heksedit.rc:1285
-#, c-format
-msgid "Value"
-msgstr "Valeur"
-
-#: heksedit.rc:1286
-#, c-format
-msgid "Links"
-msgstr "Liens"
-
-#: heksedit.rc:1287
-#, c-format
-msgid "MRU Files"
-msgstr "Fichiers MRU"
-
-#: heksedit.rc:1288
-#, c-format
-msgid "You can't copy the registry data of the selected version nto the current one because it is the current one!"
-msgstr "Impossble de copier la donnée registre de la version sélectionnée vers l'actuelle car elle est l'actuelle!"
-
-#: heksedit.rc:1289
-#, c-format
-msgid "Could not open the selected version key"
-msgstr "Echec de l'ouverture de la clé de la version choisie"
-
-#: heksedit.rc:1295
+#: heksedit.rc:1282
 #, c-format
 msgid "Selected: Offset %d=0x%x to %d=0x%x (%d byte(s))"
 msgstr "Choisi: Offset %d=0x%x vers %d=0x%x (%d octet(s))"
 
-#: heksedit.rc:1296
+#: heksedit.rc:1283
 #, c-format
 msgid "Offset %d=0x%x"
 msgstr "Offset %d=0x%x"
 
-#: heksedit.rc:1297
+#: heksedit.rc:1284
 #, c-format
 msgid "Bits"
 msgstr "Bits"
 
-#: heksedit.rc:1298
+#: heksedit.rc:1285
 #, c-format
 msgid "Unsigned"
 msgstr "Non signé"
 
-#: heksedit.rc:1300
+#: heksedit.rc:1287
 #, c-format
 msgid "END"
 msgstr "FIN"
 
-#: heksedit.rc:1301
+#: heksedit.rc:1288
 #, c-format
 msgid "W"
 msgstr "W"
 
-#: heksedit.rc:1303
+#: heksedit.rc:1290
 #, c-format
 msgid "Signed"
 msgstr "Signé"
 
-#: heksedit.rc:1304
+#: heksedit.rc:1291
 #, c-format
 msgid "Size"
 msgstr "Taille"
 
-#: heksedit.rc:1305
-#, c-format
-msgid "No file loaded"
-msgstr "Aucun fichier chargé"
-
-#: heksedit.rc:1312
+#: heksedit.rc:1298
 #, c-format
 msgid "Template file:"
 msgstr "Fichier modèle:"
 
-#: heksedit.rc:1313
+#: heksedit.rc:1299
 #, c-format
 msgid "Applied at offset:"
 msgstr "Appliqué à l'offset:"
 
-#: heksedit.rc:1314
+#: heksedit.rc:1300
 #, c-format
 msgid "= %d (signed) = %u (unsigned) = 0x%x = '%c'"
 msgstr "= %d (signé) = %u (non signé) = 0x%x = '%c'"
 
-#: heksedit.rc:1315
-#: heksedit.rc:1318
-#: heksedit.rc:1320
+#: heksedit.rc:1301
+#: heksedit.rc:1304
+#: heksedit.rc:1306
 #, c-format
 msgid "= %d (signed) = %u (unsigned) = 0x%x"
 msgstr "= %d (signé) = %u (non signé) = 0x%x"
 
-#: heksedit.rc:1316
+#: heksedit.rc:1302
 #, c-format
 msgid "ERROR: not enough space for byte-size data."
 msgstr "ERREUR: espace insuffisant pour la taille octale de la donnée."
 
-#: heksedit.rc:1317
+#: heksedit.rc:1303
 #, c-format
 msgid "ERROR: missing variable name."
 msgstr "ERREUR: nom de variable manquant"
 
-#: heksedit.rc:1319
+#: heksedit.rc:1305
 #, c-format
 msgid "ERROR: not enough space for WORD-size data."
 msgstr "ERREUR: esapce insuffisant pour la taille de la donnée MOT"
 
-#: heksedit.rc:1321
+#: heksedit.rc:1307
 #, c-format
 msgid "ERROR: not enough space for DWORD-size data."
 msgstr "ERREUR: esapce insuffisant pour la taille de la donnée DOUBLEMOT."
 
-#: heksedit.rc:1322
+#: heksedit.rc:1308
 #, c-format
 msgid "= %f = 0x%x"
 msgstr "= %f = 0x%x"
 
-#: heksedit.rc:1323
+#: heksedit.rc:1309
 #, c-format
 msgid "ERROR: not enough space for float-size data."
 msgstr "ERREUR: espace insuffisant pour la taille de la donnée flottante."
 
-#: heksedit.rc:1324
+#: heksedit.rc:1310
 #, c-format
 msgid "= %g"
 msgstr "= %g"
 
-#: heksedit.rc:1325
+#: heksedit.rc:1311
 #, c-format
 msgid "ERROR: not enough space for double-size data."
 msgstr "ERREUR: espace insuffisant pour la donnée taille-double."
 
-#: heksedit.rc:1326
+#: heksedit.rc:1312
 #, c-format
 msgid "ERROR: Unknown variable type:"
 msgstr "ERREUR: type de variable inconnue:"
 
-#: heksedit.rc:1332
+#: heksedit.rc:1318
 #, c-format
 msgid "-> Length of template = %d bytes."
 msgstr "-> Longueur du modèle = %d octets."
 
-#: heksedit.rc:1333
+#: heksedit.rc:1319
 #, c-format
 msgid "Template files (*.tpl)\0*.tpl\0\0"
 msgstr "Fichiers modèles (*.tpl)\0*.tpl\0\0"
 
-#: heksedit.rc:1334
+#: heksedit.rc:1320
 #, c-format
 msgid "Choose template file"
 msgstr "Choisir un fichier modèle"
 
-#: heksedit.rc:1335
+#: heksedit.rc:1321
 #, c-format
 msgid "Could not open template file %s."
 msgstr "Ouverture impossible du fichier modèle %s."
 
-#: heksedit.rc:1336
+#: heksedit.rc:1322
 #, c-format
 msgid "Could not load template from file %s."
 msgstr "Modèle non chargé du fichier %s."
 
-#: heksedit.rc:1342
+#: heksedit.rc:1328
 #, c-format
 msgid "Select an item to move."
 msgstr "Choisir un objet à déplacer."
 
-#: heksedit.rc:1346
+#: heksedit.rc:1332
 #, c-format
 msgid "No data to insert"
 msgstr "Aucune donnée à insérer"
 
-#: heksedit.rc:1347
+#: heksedit.rc:1333
 #, c-format
 msgid "TYMED_ISTORAGE is not supported for drag-drop."
 msgstr "TYMED_ISTORAGE non supporté pour le glisser-déposer."
 
-#: heksedit.rc:1353
+#: heksedit.rc:1339
 #, c-format
 msgid ""
 "float size value:\n"
@@ -2770,12 +2717,12 @@ msgstr ""
 "taille de la valeur flottante:\n"
 "%g\n"
 
-#: heksedit.rc:1354
+#: heksedit.rc:1340
 #, c-format
 msgid "Not enough space for float size value.\n"
 msgstr "Espace insuffisant pour la taille de la valeur flottante.\n"
 
-#: heksedit.rc:1355
+#: heksedit.rc:1341
 #, c-format
 msgid ""
 "\n"
@@ -2786,7 +2733,7 @@ msgstr ""
 "valeur de la taille double:\n"
 "%g\n"
 
-#: heksedit.rc:1356
+#: heksedit.rc:1342
 #, c-format
 msgid ""
 "\n"
@@ -2795,12 +2742,12 @@ msgstr ""
 "\n"
 "Espace insuffisant pour la valeur de taille double.\n"
 
-#: heksedit.rc:1357
+#: heksedit.rc:1343
 #, c-format
 msgid "File name and path: "
 msgstr "Nom de fichier et emplacement:"
 
-#: heksedit.rc:1358
+#: heksedit.rc:1344
 #, c-format
 msgid ""
 "\n"
@@ -2811,7 +2758,7 @@ msgstr ""
 "Ouvert partiellement à l'offset 0x%x = %d.\n"
 "Nombre d'octets lus: %d = %d kilo-octets.\n"
 
-#: heksedit.rc:1359
+#: heksedit.rc:1345
 #, c-format
 msgid ""
 "\n"
@@ -2820,7 +2767,7 @@ msgstr ""
 "\n"
 "Taille fichier: %d octets = %d kilo-octets.\n"
 
-#: heksedit.rc:1360
+#: heksedit.rc:1346
 #, c-format
 msgid ""
 "\n"
@@ -2829,57 +2776,57 @@ msgstr ""
 "\n"
 "Nombre d'hexdump par lignes: %d.\n"
 
-#: heksedit.rc:1361
+#: heksedit.rc:1347
 #, c-format
 msgid "This file could not be accessed and will be removed from the MRU list."
 msgstr "Accès au fichier impossble et donc retrait de la liste des MRU."
 
-#: heksedit.rc:1362
+#: heksedit.rc:1348
 #, c-format
 msgid "Really reset colors to default values?"
 msgstr "Vraiment réinitialiser les valeurs de couleurs par défaut ?"
 
-#: heksedit.rc:1363
+#: heksedit.rc:1349
 #, c-format
 msgid "Are you sure you want to delete this file?"
 msgstr "Êtes vous sur de vouloir supprimer ce fichier ?"
 
-#: heksedit.rc:1364
+#: heksedit.rc:1350
 #, c-format
 msgid "Could not delete file."
 msgstr "Impossible de supprimer le fichier."
 
-#: heksedit.rc:1365
+#: heksedit.rc:1351
 #, c-format
 msgid "Really adopt the operating system colour scheme?"
 msgstr "Vraiment, adopter les couleurs du système d'exploitation ?"
 
-#: heksedit.rc:1371
+#: heksedit.rc:1357
 #, c-format
 msgid "Do you want to save your changes?"
 msgstr "Voulez-vous sauver les changements ?"
 
-#: heksedit.rc:1377
+#: heksedit.rc:1363
 #, c-format
 msgid "Hexdump saved."
 msgstr "Hexdump sauvé."
 
-#: heksedit.rc:1378
+#: heksedit.rc:1364
 #, c-format
 msgid "Could not save Hexdump."
 msgstr "Hexdump non sauvé."
 
-#: heksedit.rc:1379
+#: heksedit.rc:1365
 #, c-format
 msgid "Not enough memory for copying hexdump to clipboard."
 msgstr "Mémoire insuffisante pour la copie de l'hexdump vers le presse-papier."
 
-#: heksedit.rc:1380
+#: heksedit.rc:1366
 #, c-format
 msgid "Could not copy hexdump to clipboard."
 msgstr "Copie impossible de l'hexdump vers le presse-papier."
 
-#: heksedit.rc:1381
+#: heksedit.rc:1367
 #, c-format
 msgid "Hex Dump files(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
 msgstr ""

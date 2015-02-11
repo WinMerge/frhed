@@ -80,11 +80,7 @@
 #define IDC_STS                         181
 #define IDC_TO_REPLACE_EDIT             182
 #define IDC_USETRANSLATION_CHECK        183
-#define IDC_INSTS                       184
 #define IDCOPY                          185
-#define IDC_LINKS                       186
-#define IDC_INSTDATA                    187
-#define IDC_MRU                         188
 #define IDC_OTHEREND                    189
 #define IDC_FPOS                        190
 #define IDC_HEX                         191
@@ -94,7 +90,6 @@
 #define IDC_OR                          195
 #define IDC_EXPORTDISPLAY               196
 #define IDC_LINST                       197
-#define IDC_EDIT0                       198
 #define IDC_SINST                       199
 #define IDC_ADD                         200
 #define IDC_DELETE                      201
@@ -106,14 +101,10 @@
 #define IDC_START                       207
 #define IDC_RELOAD                      208
 #define IDC_PROGRAMS                    209
-#define IDC_DISPLAY                     211
-#define IDC_VERS                        212
-#define IDC_READ                        213
 #define IDC_COPY                        214
 #define IDC_1STOFFSET                   215
 #define IDC_2NDDELIM                    216
 #define IDC_MOVEMENT                    217
-#define IDC_REFRESH                     218
 #define IDM_OPEN                        219
 #define IDM_NEW                         220
 #define IDM_SCROLL_LEFT                 221
@@ -196,9 +187,7 @@
 #define IDM_DELETEFILE                  298
 #define ID_MISC_GOTO_DLL_EXPORTS        299
 #define ID_MISC_GOTO_DLL_IMPORTS        300
-#define ID_PE_SHOW_DEPENDENCIES         301
 #define ID_MISC_ENCODEDECODE            302
-#define ID_MISC_XOR1                    303
 #define ID_DISK_OPEN_DRIVE              304
 #define ID_DISK_GOTONEXTTRACK           305
 #define ID_DISK_GOTOPREVIOUSTRACK       306
@@ -328,7 +317,6 @@
 #define IDC_ENABLE_DROP                 1080
 #define IDC_EXPORTDIGITS                1081
 #define IDC_APPICON                     1082
-#define IDC_COMBO1                      1083
 #define IDS_APPNAME                     10000
 #define IDS_DIFFLISTITEMFORMAT          10001
 #define IDS_ABOUTFRHEDVER               10002
@@ -458,8 +446,6 @@
 #define IDS_DRIVES_DRIVE_PART           10473
 #define IDS_DRIVES_DRIVE_ONLY           10474
 #define IDS_HEXF_NO_MEM                 10480
-#define IDS_HEXF_ILLEGAL_CHAR           10481
-#define IDS_HEXF_ILLEGAL_OFFS           10482
 #define IDS_HEXF_NONZERO_START          10483
 #define IDS_HEXF_INV_OFFSET             10484
 #define IDS_HEXF_CHAR_HEX_NO_MATCH      10485
@@ -475,12 +461,6 @@
 #define IDS_REPL_SAME_STRS              10500
 #define IDS_REPL_COUNT                  10501
 #define IDS_REPL_BAD_SELECT             10502
-#define IDS_UPDLG_OPTION                10512
-#define IDS_UPDLG_VALUE                 10513
-#define IDS_UPDLG_LINKS                 10514
-#define IDS_UPDLG_MRUFILES              10515
-#define IDS_UPDLG_CANT_COPY_CURR        10516
-#define IDS_CANT_OPEN_VER               10517
 #define IDS_SBAR_SELECTED_OFFSET        11008
 #define IDS_SBAR_NSEL_OFFSET            11009
 #define IDS_SBAR_BITS                   11010
@@ -491,7 +471,6 @@
 #define IDS_SBAR_LONG_SHORT             11015
 #define IDS_SBAR_SIGNED                 11016
 #define IDS_SBAR_SIZE                   11017
-#define IDS_SBAR_NO_FILE                11018
 #define IDS_TPL_FILENAME                12000
 #define IDS_TPL_TEMPLATE_FILE           12001
 #define IDS_TPL_APPLIED_AT              12002
