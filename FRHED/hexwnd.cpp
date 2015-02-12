@@ -4646,7 +4646,7 @@ void HexEditorWindow::OnContextMenu(LPARAM lParam)
 			resize_window();
 		}
 	}
-	else if (HMenu *pMenu = HMenu::LoadMenu(hInstance, MAKEINTRESOURCE(IDR_CONTEXTMENU)))
+	else if (HMenu *pMenu = reinterpret_cast<HMenu *>(load_menu(IDR_CONTEXTMENU)))
 	{
 		// You could use other menu indices based on context... if you like
 		if (HMenu *pSubMenu = pMenu->GetSubMenu(Drive ? 1 : 0))
