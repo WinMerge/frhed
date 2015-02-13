@@ -43,6 +43,7 @@ INT_PTR BinaryModeDlg::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPARAM l
 		case IDOK:
 			iBinaryMode = pDlg->IsDlgButtonChecked(IDC_BINMODE_LITTLEEND) ?
 					ENDIAN_LITTLE : ENDIAN_BIG;
+			save_ini_data();
 			// fall through
 		case IDCANCEL:
 			pDlg->EndDialog(wParam);

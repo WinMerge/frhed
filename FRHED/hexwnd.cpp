@@ -3702,6 +3702,7 @@ void HexEditorWindow::read_ini_data(TCHAR *key)
 		res = RegQueryValueEx(key1, _T("iAutomaticBPL"), NULL, NULL, (BYTE*) &iAutomaticBPL, &datasize);
 		res = RegQueryValueEx(key1, _T("iBytesPerLine"), NULL, NULL, (BYTE*) &iBytesPerLine, &datasize);
 		res = RegQueryValueEx(key1, _T("iOffsetLen"), NULL, NULL, (BYTE*) &iMinOffsetLen, &datasize);//Pabs replaced "iOffsetLen" with "iMinOffsetLen"
+		res = RegQueryValueEx(key1, _T("iBinaryMode"), NULL, NULL, (BYTE*) &iBinaryMode, &datasize);
 		res = RegQueryValueEx(key1, _T("iCharacterSet"), NULL, NULL, (BYTE*) &iCharacterSet, &datasize);
 		res = RegQueryValueEx(key1, _T("iFontSize"), NULL, NULL, (BYTE*) &iFontSize, &datasize);
 		res = RegQueryValueEx(key1, _T("bOpenReadOnly"), NULL, NULL, (BYTE*) &bOpenReadOnly, &datasize);
@@ -3782,6 +3783,7 @@ void HexEditorWindow::save_ini_data()
 		RegSetValueEx(key1, _T("iAutomaticBPL"), 0, REG_DWORD, (CONST BYTE*) &iAutomaticBPL, sizeof(int));
 		RegSetValueEx(key1, _T("iBytesPerLine"), 0, REG_DWORD, (CONST BYTE*) &iBytesPerLine, sizeof(int));
 		RegSetValueEx(key1, _T("iOffsetLen"), 0, REG_DWORD, (CONST BYTE*) &iMinOffsetLen, sizeof(int));//Pabs replaced "iOffsetLen" with "iMinOffsetLen"
+		RegSetValueEx(key1, _T("iBinaryMode"), 0, REG_DWORD, (CONST BYTE*) &iBinaryMode, sizeof(int));
 		RegSetValueEx(key1, _T("iCharacterSet"), 0, REG_DWORD, (CONST BYTE*) &iCharacterSet, sizeof(int));
 		RegSetValueEx(key1, _T("iFontSize"), 0, REG_DWORD, (CONST BYTE*) &iFontSize, sizeof(int));
 		RegSetValueEx(key1, _T("bOpenReadOnly"), 0, REG_DWORD, (CONST BYTE*) &bOpenReadOnly, sizeof(int));
