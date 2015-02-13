@@ -1663,12 +1663,12 @@ void HexEditorWindow::notify(NMHDR *pNMHDR)
 {
 	HWND hwndFrom = pNMHDR->hwndFrom;
 	UINT code = pNMHDR->code;
-	if (hwndFrom == pwndStatusBar->m_hWnd)
+	if (pwndStatusBar && hwndFrom == pwndStatusBar->m_hWnd)
 	{
 		if (code == NM_CLICK || code == NM_RCLICK)
 			status_bar_click(code == NM_CLICK);
 	}
-	else if (hwndFrom == pwndToolBar->m_hWnd)
+	else if (pwndToolBar && hwndFrom == pwndToolBar->m_hWnd)
 	{
 		if (code == TBN_GETINFOTIP)
 		{
@@ -1728,6 +1728,9 @@ void HexEditorWindow::format_bit_string(TCHAR* buf, BYTE by)
  */
 void HexEditorWindow::statusbar_chset_and_editmode()
 {
+	if (!pwndStatusBar)
+		return;
+
 	TCHAR buf[20];
 	buf[0] = _T('\t');
 	buf[1] = _T('\0');
@@ -1780,6 +1783,10 @@ void HexEditorWindow::set_wnd_title()
 		set_and_format_title();
 		bFilestatusChanged = false;
 	}
+
+	if (!pwndStatusBar)
+		return;
+	
 	// Selection going on.
 	if (bSelected)
 	{
@@ -6590,6 +6597,8 @@ HGLOBAL HexEditorWindow::RTF_hexdump(int start, int end, SIZE_T *plen)
  */
 static void EnableToolbarButton(HToolBar *toolbar, int ID, BOOL bEnable)
 {
+	if (!toolbar)
+		return;
 	UINT uCurrentFlags = toolbar->GetButtonState(ID);
 	if (bEnable)
 		uCurrentFlags |= TBSTATE_ENABLED;
