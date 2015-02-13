@@ -193,13 +193,13 @@ public:
 	void update_MRU();
 	void CMD_select_block();
 	void timer(WPARAM, LPARAM);
-	void CMD_binarymode();
+	void STDMETHODCALLTYPE CMD_binarymode();
 	void CMD_compare();
 	void CMD_properties();
 	void make_font();
 	void CMD_on_backspace ();
 	void CMD_toggle_insertmode();
-	void CMD_character_set();
+	void STDMETHODCALLTYPE CMD_character_set();
 	void CMD_manipulate_bits();
 	void CMD_edit_append();
 	virtual void STDMETHODCALLTYPE save_ini_data();
@@ -207,7 +207,7 @@ public:
 	virtual void STDMETHODCALLTYPE read_ini_data(TCHAR *key = 0);
 //end
 	void CMD_color_settings(COLORREF* pColor);
-	void CMD_view_settings();
+	void STDMETHODCALLTYPE CMD_view_settings();
 	void adjust_view_for_selection ();
 	int CMD_select_with_arrowkeys (int key);
 	void CMD_open();
