@@ -1810,6 +1810,7 @@ void HexEditorWindow::set_wnd_title()
 		int wordval = 0;
 		int longval = 0;
 		TCHAR buf2[80];
+		size_t pos_bits = _tcslen(buf);
 		if (m_dataArray.GetLength() - iCurByte > 0)
 		{//if we are not looking at the End byte
 			_tcscat(buf, _T("   "));
@@ -1951,6 +1952,27 @@ void HexEditorWindow::set_wnd_title()
 				}
 			}
 		}
+		RECT rc;
+		pwndStatusBar->GetPartRect(0, &rc);
+
+		SIZE sa;
+		HSurface *pdc = pwndStatusBar->GetDC();
+		HGdiObj *fontold = pdc->SelectObject(pwndStatusBar->GetFont());
+		pdc->GetTextExtent(buf, _tcslen(buf), &sa);
+
+		if (rc.right - rc.left < sa.cx)
+		{
+			SIZE s0;
+			pdc->GetTextExtent(buf, pos_bits, &s0);
+			if (rc.right - rc.left < sa.cx - s0.cx)
+				_tcscpy(buf, _tcschr(buf, '\t'));
+			else
+				_tcscpy(buf + pos_bits, _tcschr(buf, '\t'));
+		}
+
+		pdc->SelectObject(fontold);
+		pwndStatusBar->ReleaseDC(pdc);
+		
 		pwndStatusBar->SetPartText(0, buf);
 	}
 
