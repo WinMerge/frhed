@@ -3781,6 +3781,7 @@ void HexEditorWindow::read_ini_data(TCHAR *key)
 	}
 	else
 	{
+		load_lang((LANGID)GetThreadLocale());
 		// There is no data. Write with default values.
 		save_ini_data();//end
 	}

@@ -266,7 +266,6 @@ LRESULT CALLBACK MainWndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 		pHexWnd->hwndMain = hwnd;
 		pHexWnd->bSaveIni = TRUE;
 		pHexWnd->bCenterCaret = TRUE;
-		pHexWnd->load_lang((LANGID)GetThreadLocale());
 		pHexWnd->resize_window();
 		return 0;
 	case WM_COMMAND:
