@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?"
 "group_id=13216&atid=113216\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-02-11 13:04+0900\n"
+"PO-Revision-Date: 2015-02-15 11:14+0900\n"
 "Last-Translator: Takashi Sawanaka <sawanaka@d1.dion.ne.jp>\n"
 "Language-Team: German <frhed-devel@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -54,7 +54,7 @@ msgstr "開く(&O)...\tCtrl+O"
 #: heksedit.rc:16
 #, c-format
 msgid "Open pa&rtially...\tAlt+P"
-msgstr "部分的に開く(&P)...\tAlt+P"
+msgstr "部分的に開く(&R)...\tAlt+P"
 
 #: heksedit.rc:18
 #, c-format
@@ -221,7 +221,7 @@ msgstr "選択範囲(&B)...\tCtrl+E"
 #: heksedit.rc:70
 #, c-format
 msgid "&Fill selection...\tCtrl+Shift+F"
-msgstr "選択領域を指定した値で埋める...\tCtrl+Shift+F"
+msgstr "選択領域を指定した値で埋める(&F)...\tCtrl+Shift+F"
 
 #: heksedit.rc:72
 #, c-format
@@ -273,7 +273,7 @@ msgstr "移動(&G)...\tCtrl+G"
 #: heksedit.rc:86
 #, c-format
 msgid "Enter decimal &value...\tCtrl+D"
-msgstr "10進数で入力(&V)...\tCtrl+D"
+msgstr "10進数入力(&V)...\tCtrl+D"
 
 #: heksedit.rc:88
 #, c-format
@@ -288,7 +288,7 @@ msgstr "現在のオフセットから比較(&O)...\tCtrl+M"
 #: heksedit.rc:91
 #, c-format
 msgid "Get f&loating point value...\tCtrl+L"
-msgstr "浮動小数点数の取得...\tCtrl+L"
+msgstr "浮動小数点数の取得(&L)...\tCtrl+L"
 
 #: heksedit.rc:92
 #, c-format
@@ -413,7 +413,7 @@ msgstr "OSのカラースキーマを適用する(&A)...\tCtrl+Shift+A"
 #: heksedit.rc:128
 #, c-format
 msgid "C&haracter set...\tCtrl+R"
-msgstr "キャラクタセット...\tCtrl+R"
+msgstr "キャラクタセット(&H)...\tCtrl+R"
 
 #: heksedit.rc:129
 #, c-format
@@ -423,7 +423,7 @@ msgstr "バイナリモード(&I)...\tCtrl+Shift+Y"
 #: heksedit.rc:130
 #, c-format
 msgid "&OLE Drag-drop...\tCtrl+Alt+O"
-msgstr "&OLE ドラッグ＆ドロップ...\tCtrl+Alt+O"
+msgstr "OLE ドラッグ＆ドロップ(&O)...\tCtrl+Alt+O"
 
 #: heksedit.rc:131
 #, c-format
@@ -448,7 +448,7 @@ msgstr "未登録ファイル種別のコンテキストメニューに追加(&U)"
 #: heksedit.rc:137
 #, c-format
 msgid "Is &default in unknown context"
-msgstr "未登録ファイル種別のコンテキストメニューのデフォルトとする"
+msgstr "未登録ファイル種別のコンテキストメニューのデフォルトとする(&D)"
 
 #: heksedit.rc:138
 #, c-format
@@ -498,7 +498,7 @@ msgstr "DLL のエクスポート名格納位置に移動(&X)..."
 #: heksedit.rc:161
 #, c-format
 msgid "Goto DLL import names..."
-msgstr "DLL のインポート名格納位置に移動(&X)..."
+msgstr "DLL のインポート名格納位置に移動..."
 
 #: heksedit.rc:163
 #, c-format
@@ -558,7 +558,7 @@ msgstr "先頭に  \"+\" または \"-\" (マイナス) を入力すると相対移動"
 #: heksedit.rc:302
 #, c-format
 msgid "Prefix offset with \"x\" to indicate hex notation."
-msgstr "接頭辞として \"x\" を指定すると16進数とみなされる"
+msgstr "16進数で指定したい場合、接頭辞として \"x\" を指定"
 
 #: heksedit.rc:305
 #: heksedit.rc:346
@@ -834,7 +834,7 @@ msgstr "挿入"
 #: heksedit.rc:664
 #, c-format
 msgid "Paste data how many times:"
-msgstr "データ貼り付け回数"
+msgstr "データ貼り付け回数:"
 
 #: heksedit.rc:406
 #: heksedit.rc:668
@@ -910,7 +910,7 @@ msgstr "表示設定"
 #: heksedit.rc:457
 #, c-format
 msgid "Number of bytes to display per line:"
-msgstr "1行あたりの表示バイト数"
+msgstr "1行あたりの表示バイト数:"
 
 #: heksedit.rc:460
 #, c-format
@@ -974,7 +974,7 @@ msgstr "追加"
 #: heksedit.rc:495
 #, c-format
 msgid "Bytes to append to the end of the file:"
-msgstr "ファイルの最後に追加するバイト数"
+msgstr "ファイルの最後に追加するバイト数:"
 
 #: heksedit.rc:503
 #, c-format
@@ -1205,7 +1205,7 @@ msgstr "貼り付け"
 #: heksedit.rc:666
 #, c-format
 msgid "Bytes to skip between inserts/overwrites:"
-msgstr "貼り付けの繰り返し毎にスキップするバイト数"
+msgstr "貼り付けの繰り返し毎にスキップするバイト数:"
 
 #: heksedit.rc:670
 #, c-format
@@ -1279,17 +1279,17 @@ msgstr "すべて置換..."
 #: heksedit.rc:708
 #, c-format
 msgid "... following occurances"
-msgstr ""
+msgstr "... 次の出現箇所から"
 
 #: heksedit.rc:710
 #, c-format
 msgid "... previous occurances"
-msgstr ""
+msgstr "... 前の出現箇所から"
 
 #: heksedit.rc:712
 #, c-format
 msgid "Use special syntax"
-msgstr "特殊記法を使用(<bh:...>等)"
+msgstr "特殊記法を使用"
 
 #: heksedit.rc:720
 #, c-format
@@ -1391,12 +1391,12 @@ msgstr "保存先/読込元インスタンス番号の変更"
 #: heksedit.rc:759
 #, c-format
 msgid "Load the following instance data:"
-msgstr ""
+msgstr "読み込むインスタンスデータの番号:"
 
 #: heksedit.rc:765
 #, c-format
 msgid "and save (when quiting) to this instance data:"
-msgstr ""
+msgstr "インスタンスデータの(終了時)保存先番号:"
 
 #: heksedit.rc:773
 #, c-format
@@ -1406,6 +1406,9 @@ msgid ""
 "Unless, that is, that the option to save ini data to the registry on exit is "
 "disabled)"
 msgstr ""
+"もしある Frhed のインスタンスが別のインスタンスと同じインスタンスデータを参照"
+"している場合、最後に終了したもののデータで上書きされることに注意してくださ"
+"い。(「必要時に保存する」を無効していない限り)"
 
 #: heksedit.rc:780
 #, c-format
@@ -1486,7 +1489,7 @@ msgstr "Frhed へのリンク"
 #: heksedit.rc:832
 #, c-format
 msgid "&Find links to any Frhed.exe, fix them and list them here."
-msgstr "Frhed.exe へのリンクを検索し、リンクの更新を行う。"
+msgstr "Frhed.exe へのリンクを検索し、リンクの更新を行う。(&F)"
 
 #: heksedit.rc:835
 #, c-format
@@ -1642,53 +1645,53 @@ msgstr "データ:"
 #: heksedit.rc:904
 #, c-format
 msgid "OLE Drag-drop options"
-msgstr ""
+msgstr "OLE ドラッグ＆ドロップオプション"
 
 #: heksedit.rc:907
 #, c-format
 msgid "General"
-msgstr ""
+msgstr "全般"
 
 #: heksedit.rc:908
 #, c-format
 msgid "Enable drop input"
-msgstr ""
+msgstr "ドロップ入力を有効にする"
 
 #: heksedit.rc:910
 #, c-format
 msgid "Enable drag output"
-msgstr ""
+msgstr "ドラッグ出力を有効にする"
 
 #: heksedit.rc:912
 #, c-format
 msgid "Enable scroll-delaying for drag-drop"
-msgstr ""
+msgstr "ドラッグ＆ドロップ用にスクロール遅延を有効にする"
 
 #: heksedit.rc:914
 #, c-format
 msgid "Enable scroll-delaying for selecting"
-msgstr ""
+msgstr "選択用にスクロール遅延を有効にする"
 
 #: heksedit.rc:916
 #, c-format
 msgid ""
 "Always give the opportunity to change between move and copy after a drop."
-msgstr ""
+msgstr "ドロップ後毎度移動するかコピーするかを選ばせる。"
 
 #: heksedit.rc:920
 #, c-format
 msgid "CF_HDROP opens the files dropped."
-msgstr ""
+msgstr "CF_HDROPでドロップされたファイルを開く。"
 
 #: heksedit.rc:922
 #, c-format
 msgid "Drop \"BinaryData\" if present"
-msgstr ""
+msgstr "存在すれば \"BinaryData\" をドロップする"
 
 #: heksedit.rc:925
 #, c-format
 msgid "Drop CF_TEXT if present"
-msgstr ""
+msgstr "存在すれば CF_TEXT をドロップする"
 
 #: heksedit.rc:928
 #, c-format
@@ -1698,12 +1701,12 @@ msgstr "出力"
 #: heksedit.rc:929
 #, c-format
 msgid "Drag \"BinaryData\""
-msgstr ""
+msgstr "\"BinaryData\" をドラッグする"
 
 #: heksedit.rc:932
 #, c-format
 msgid "Drag CF_TEXT as:"
-msgstr ""
+msgstr "CF_TEXT を以下のものとしてドラッグする:"
 
 #: heksedit.rc:935
 #, c-format
@@ -1718,12 +1721,12 @@ msgstr "特殊記法 (<bh:ff>...)"
 #: heksedit.rc:939
 #, c-format
 msgid "display (else digits)"
-msgstr ""
+msgstr "表示内容のまま"
 
 #: heksedit.rc:942
 #, c-format
 msgid "Drag \"Rich Text Format\" (as hexdump)"
-msgstr ""
+msgstr "\"Rich Text Format\" でドラッグする(16進ダンプの様に)"
 
 #: heksedit.rc:952
 #, c-format
@@ -1855,6 +1858,10 @@ msgid ""
 "or click on No if you want to open the link file itself.\n"
 "Choose Cancel if you want to abort opening."
 msgstr ""
+"リンクファイルを開こうとしています。\n"
+"リンク先のファイルを開きたい場合は「はい」を\n"
+"リンクファイル自体を開きたい場合は「いいえ」をクリックしてください。\n"
+"どちらも開きたくない場合は「キャンセル」を選択してください。"
 
 #: heksedit.rc:1036
 #, c-format
@@ -1899,7 +1906,7 @@ msgstr "ファイルをロードするのに十分なメモリがありません"
 #: heksedit.rc:1049
 #, c-format
 msgid "Could not save the file."
-msgstr "ファイルの保存ができませんでした。"
+msgstr "ファイルを保存することができませんでした。"
 
 #: heksedit.rc:1050
 #, c-format
@@ -1907,6 +1914,8 @@ msgid ""
 "Could not backup file!\n"
 "Backup aborted, Save continuing."
 msgstr ""
+"ファイルのバックアップをすることができませんでした!\n"
+"バックアップを中止しました。保存を継続します。"
 
 #: heksedit.rc:1051
 #, c-format
@@ -1916,7 +1925,7 @@ msgstr "部分的に開いたファイルを保存することができませんでした。"
 #: heksedit.rc:1052
 #, c-format
 msgid "Could not move data in the file."
-msgstr ""
+msgstr "ファイル内のデータを移動することができませんでした。"
 
 #: heksedit.rc:1053
 #, c-format
@@ -1926,7 +1935,7 @@ msgstr "ファイルをリサイズすることができませんでした。"
 #: heksedit.rc:1054
 #, c-format
 msgid "Could not seek in file."
-msgstr "ファイルのシークをすることができませんでした。"
+msgstr "ファイルをシークすることができませんでした。"
 
 #: heksedit.rc:1055
 #, c-format
@@ -1967,7 +1976,7 @@ msgstr "テキストエディタ起動時にエラーが発生しました。"
 #: heksedit.rc:1061
 #, c-format
 msgid "Could not insert data"
-msgstr "データの挿入ができませんでした。"
+msgstr "データを挿入することができませんでした。"
 
 #: heksedit.rc:1062
 #, c-format
@@ -2077,7 +2086,7 @@ msgstr "オフセット: 0x%x = %d"
 #: heksedit.rc:1106
 #, c-format
 msgid "Value: 0x%02x, %d signed, %u unsigned."
-msgstr "値: 0x%02x, %d signed, %u unsigned."
+msgstr "値: 0x%02x, %d signed, %u unsigned"
 
 #: heksedit.rc:1112
 #, c-format
@@ -2087,7 +2096,7 @@ msgstr "比較するファイルの選択"
 #: heksedit.rc:1113
 #, c-format
 msgid "Error while opening file."
-msgstr ""
+msgstr "ファイルのオープンでエラーが発生しました。"
 
 #: heksedit.rc:1114
 #, c-format
@@ -2097,7 +2106,7 @@ msgstr "%d 箇所差異があります。"
 #: heksedit.rc:1115
 #, c-format
 msgid "Remaining loaded data size: %d, size of file on disk: %d."
-msgstr ""
+msgstr "読み込まれたデータサイズ: %d, ディスク上のファイルサイズ: %d"
 
 #: heksedit.rc:1116
 #, c-format
@@ -2132,7 +2141,7 @@ msgstr ""
 #: heksedit.rc:1126
 #, c-format
 msgid "You need to select a clipboard format to use."
-msgstr ""
+msgstr "使用するクリップボードフォーマットを選択する必要があります。"
 
 #: heksedit.rc:1127
 #, c-format
@@ -2140,6 +2149,8 @@ msgid ""
 "Could not get text from the clipboard.\n"
 "Cannot continue!"
 msgstr ""
+"クリップボードからテキストを取得することができませんでした。\n"
+"継続できません!"
 
 #: heksedit.rc:1128
 #, c-format
@@ -2164,12 +2175,12 @@ msgstr "存在するより多くのデータを切り取ることはできません。"
 #: heksedit.rc:1142
 #, c-format
 msgid "Not enough memory for cutting to clipboard."
-msgstr "クリップボードへ切り取りデータを格納する十分なメモリがありません。"
+msgstr "クリップボードへ切り取りデータを格納するのに十分なメモリがありません。"
 
 #: heksedit.rc:1143
 #, c-format
 msgid "Could not cut the data."
-msgstr "データの切り取りができませんでした。"
+msgstr "データを切り取ることができませんでした。"
 
 #: heksedit.rc:1149
 #, c-format
@@ -2179,7 +2190,7 @@ msgstr "存在するより多くのデータを削除することはできません。"
 #: heksedit.rc:1150
 #, c-format
 msgid "Could not delete data."
-msgstr "データを削除できませんでした。"
+msgstr "データを削除することができませんでした。"
 
 #: heksedit.rc:1156
 #, c-format
@@ -2194,22 +2205,22 @@ msgstr "回数が認識できません。"
 #: heksedit.rc:1158
 #, c-format
 msgid "Invalid start offset."
-msgstr ""
+msgstr "無効な開始オフセットです。"
 
 #: heksedit.rc:1159
 #, c-format
 msgid "Not enough space for writing decimal values."
-msgstr ""
+msgstr "10進数データを書き込むのに十分なスペースがありません。"
 
 #: heksedit.rc:1165
 #, c-format
 msgid "Number of times to paste must be at least 1."
-msgstr ""
+msgstr "貼り付け回数は少なくとも1である必要があります。"
 
 #: heksedit.rc:1166
 #, c-format
 msgid "Tried to paste zero-length array."
-msgstr ""
+msgstr "0バイト長の配列を貼り付けようとしました。"
 
 #: heksedit.rc:1167
 #, c-format
@@ -2219,52 +2230,53 @@ msgstr "挿入するのに十分なメモリがありません。"
 #: heksedit.rc:1168
 #, c-format
 msgid "Not enough space for overwriting."
-msgstr ""
+msgstr "上書きするのに十分なスペースがありません。"
 
 #: heksedit.rc:1174
 #, c-format
 msgid "Can't fill a selection with a file of zero size."
-msgstr ""
+msgstr "0バイト長のファイルで選択範囲にデータを埋め込むことはできません。"
 
 #: heksedit.rc:1175
 #, c-format
 msgid "Can't fill a selection with a string of zero size."
-msgstr ""
+msgstr "0バイト長の文字列で選択範囲にデータを埋め込むことはできません。"
 
 #: heksedit.rc:1176
 #, c-format
 msgid "Too many bytes to fill with or some other error."
-msgstr ""
+msgstr "データが多すぎまたはその他のエラーです"
 
 #: heksedit.rc:1182
 #, c-format
 msgid "You have chosen an offset but it is negative, which is invalid."
-msgstr ""
+msgstr "負のオフセットを指定しましたがここでは無効です。"
 
 #: heksedit.rc:1183
 #, c-format
 msgid "The target value is invalid."
-msgstr ""
+msgstr "移動/コピー先が不正なオフセットです。"
 
 #: heksedit.rc:1184
 #, c-format
 msgid "Cannot move/copy a block of zero length"
-msgstr ""
+msgstr "0バイト長のブロックを移動/コピーすることはできません"
 
 #: heksedit.rc:1185
 #, c-format
 msgid "The chosen block extends into non-existant data."
 msgstr ""
+"指定されたブロックの範囲が存在しないデータの領域にまで拡張されています。"
 
 #: heksedit.rc:1186
 #, c-format
 msgid "The block was not moved!"
-msgstr ""
+msgstr "ブロックは移動されませんでした!"
 
 #: heksedit.rc:1187
 #, c-format
 msgid "Cannot move/copy the block outside the data"
-msgstr ""
+msgstr "ブロックをデータの外側に移動/コピーすることはできません。"
 
 #: heksedit.rc:1193
 #, c-format
@@ -2279,7 +2291,7 @@ msgstr "2GB以上のデータは開けません。"
 #: heksedit.rc:1195
 #, c-format
 msgid "Specified number of bytes to load greater than file size."
-msgstr ""
+msgstr "ファイルサイズよりも大きな読み込みバイト数が指定されました。"
 
 #: heksedit.rc:1196
 #, c-format
@@ -2297,6 +2309,8 @@ msgid ""
 "The chosen block extends into non-existant data. The offsets will be shifted "
 "to correct positions."
 msgstr ""
+"指定されたブロックの範囲が存在しないデータの領域にまで拡張されています。オフ"
+"セットは正しい位置にシフトされます。"
 
 #: heksedit.rc:1209
 #, c-format
@@ -2306,37 +2320,37 @@ msgstr "リンク名は \"Frhed.lnk\""
 #: heksedit.rc:1210
 #, c-format
 msgid "This folder already contains a file called \"Frhed.lnk\""
-msgstr ""
+msgstr "このフォルダには既にファイル \"Frhed.lnk\" が存在しています。"
 
 #: heksedit.rc:1211
 #, c-format
 msgid "\"Frhed.lnk\" can be added to this folder"
-msgstr ""
+msgstr "このフォルダには \"Frhed.lnk\"  を追加することができます。"
 
 #: heksedit.rc:1212
 #, c-format
 msgid "\"Frhed.lnk\" cannot be added to this folder"
-msgstr ""
+msgstr "\"Frhed.lnk\" はこのフォルダに追加できません"
 
 #: heksedit.rc:1213
 #, c-format
 msgid "Frhed can start searching here"
-msgstr ""
+msgstr "Frhed はここから検索できます。"
 
 #: heksedit.rc:1214
 #, c-format
 msgid "Frhed cannot start the search from here"
-msgstr ""
+msgstr "Frhed はここから検索を開始できません"
 
 #: heksedit.rc:1215
 #, c-format
 msgid "Could not Save shortcut entries"
-msgstr ""
+msgstr "ショートカットリストをレジストリに保存することができませんでした。"
 
 #: heksedit.rc:1216
 #, c-format
 msgid "Cannot move more than 1 link at a time"
-msgstr ""
+msgstr "一度に1つより多くのリンクを移動することはできません"
 
 #: heksedit.rc:1217
 #, c-format
@@ -2351,17 +2365,17 @@ msgstr "選択項目を見つけることができませんでした。"
 #: heksedit.rc:1219
 #, c-format
 msgid "Place a link to Frhed in..."
-msgstr ""
+msgstr "Frhed へのリンクの配置..."
 
 #: heksedit.rc:1220
 #, c-format
 msgid "Move the link to Frhed to..."
-msgstr "Frhed へのリンクの移動"
+msgstr "Frhed へのリンクの移動..."
 
 #: heksedit.rc:1221
 #, c-format
 msgid "There is already a link in that folder"
-msgstr ""
+msgstr "既にそのフォルダにはリンクが存在します。"
 
 #: heksedit.rc:1222
 #, c-format
@@ -2369,11 +2383,13 @@ msgid ""
 "Existing links to old versions of Frhed will be updated to this version\n"
 "Are you sure you want to continue"
 msgstr ""
+"Frhed の旧バージョンへのリンクが存在していれば、このバージョンに更新されま"
+"す。続けてよろしいですか?"
 
 #: heksedit.rc:1223
 #, c-format
 msgid "Pick a folder to start searching in."
-msgstr ""
+msgstr "検索を開始するフォルダを指定してください。"
 
 #: heksedit.rc:1224
 #, c-format
@@ -2388,7 +2404,7 @@ msgstr "選択範囲が広すぎます。"
 #: heksedit.rc:1231
 #, c-format
 msgid "Could not find data."
-msgstr "データは見つかりませんでした。"
+msgstr "データを見つけることができませんでした。"
 
 #: heksedit.rc:1232
 #, c-format
@@ -2398,7 +2414,7 @@ msgstr "検索文字列が0バイト長です。"
 #: heksedit.rc:1233
 #, c-format
 msgid "Could not find any more occurances."
-msgstr ""
+msgstr "これ以上の出現箇所を見つけることはできませんでした。"
 
 #: heksedit.rc:1234
 #, c-format
@@ -2408,7 +2424,7 @@ msgstr "検索文字列が指定されていません。"
 #: heksedit.rc:1240
 #, c-format
 msgid "You need to have Administrator privileges for getting list of drives."
-msgstr ""
+msgstr "ドライブのリストを取得するには管理者権限が必要です。"
 
 #: heksedit.rc:1241
 #, c-format
@@ -2469,7 +2485,7 @@ msgid ""
 msgstr ""
 "データをインポートするのに十分なメモリがありません。\n"
 "継続できません!\n"
-"ここまで見つかったものをそのままにしておきますか?"
+"ここまで読み取ったデータをそのままにしておきますか?"
 
 #: heksedit.rc:1257
 #, c-format
@@ -2477,6 +2493,8 @@ msgid ""
 "The first offset found was 0x%x, which is greater than zero.\n"
 "Do you want to insert %d null bytes at the start of the data?"
 msgstr ""
+"最初のオフセットが 0 ではなく、0x%x です。\n"
+"%d 個のNULバイトをデータの先頭に挿入しますか？"
 
 #: heksedit.rc:1258
 #, c-format
@@ -2484,6 +2502,8 @@ msgid ""
 "Invalid offset found.\n"
 "Ignore further invalid offsets?"
 msgstr ""
+"不正なオフセットが見つかりました。\n"
+"以後不正なオフセットを無視しますか?"
 
 #: heksedit.rc:1259
 #, c-format
@@ -2492,6 +2512,9 @@ msgid ""
 "Ignore further mismatched data?\n"
 "NB: Hex data will be used when ignoring."
 msgstr ""
+"文字データが16進データと一致していません。\n"
+"以後、データの不一致を無視しますか？\n"
+"注意: 無視するときは、16進データが使用されます。"
 
 #: heksedit.rc:1260
 #, c-format
@@ -2500,6 +2523,9 @@ msgid ""
 "Cannot continue!\n"
 "Do you want to keep what has been found so far?"
 msgstr ""
+"16進データ内に不正な文字が含まれています。\n"
+"継続できません!\n"
+"これまで読み取ったデータをそのままにしておきますか?"
 
 #: heksedit.rc:1261
 #, c-format
@@ -2508,6 +2534,9 @@ msgid ""
 "Cannot continue!\n"
 "Do you want to keep what has been found so far?"
 msgstr ""
+"予期していないデータの終端が検出されました\n"
+"継続できません!\n"
+"これまで読み取ったデータをそのままにしておきますか?"
 
 #: heksedit.rc:1262
 #, c-format
@@ -2515,26 +2544,28 @@ msgid ""
 "Does this data have the same format as the Frhed display?\n"
 "This data contains "
 msgstr ""
+"このデータは Frhed の画面表示と同じフォーマットですか?\n"
+"このデータには次のものが含まれています: "
 
 #: heksedit.rc:1263
 #, c-format
 msgid "characters other than whitespace and hexdigits. (like Frhed display)"
-msgstr ""
+msgstr "空白や16進数以外の文字 (Frhed の表示形式)"
 
 #: heksedit.rc:1264
 #, c-format
 msgid "only whitespace and hexdigits. (unlike Frhed display)"
-msgstr ""
+msgstr "空白と16進数のみ (Frhed の表示形式ではない)"
 
 #: heksedit.rc:1270
 #, c-format
 msgid "Data to replace must be selected."
-msgstr "置換するデータが選択されていなければなりません"
+msgstr "置換するデータが選択されていなければなりません。"
 
 #: heksedit.rc:1271
 #, c-format
 msgid "Could not delete selected data."
-msgstr "選択したデータを削除できませんでした。"
+msgstr "選択したデータを削除することができませんでした。"
 
 #: heksedit.rc:1272
 #, c-format
@@ -2544,7 +2575,7 @@ msgstr "置換に失敗しました。"
 #: heksedit.rc:1273
 #, c-format
 msgid "Could not translate text to binary."
-msgstr "テキストからバイナリに変換できませんでした。"
+msgstr "テキストからバイナリに変換することができませんでした。"
 
 #: heksedit.rc:1274
 #, c-format
@@ -2554,12 +2585,12 @@ msgstr "置換対象データと置換後のデータが一致しています。"
 #: heksedit.rc:1275
 #, c-format
 msgid "%d occurences replaced."
-msgstr ""
+msgstr "%d 個の出現箇所を置換しました。"
 
 #: heksedit.rc:1276
 #, c-format
 msgid "Could not use selection as replace target."
-msgstr ""
+msgstr "置換対象として選択範囲の内容を使用することができませんでした。"
 
 #: heksedit.rc:1282
 #, c-format
@@ -2686,12 +2717,12 @@ msgstr "テンプレートファイルの選択"
 #: heksedit.rc:1321
 #, c-format
 msgid "Could not open template file %s."
-msgstr "テンプレートファイル %s がオープンできませんでした。"
+msgstr "テンプレートファイル %s を開くことができませんでした。"
 
 #: heksedit.rc:1322
 #, c-format
 msgid "Could not load template from file %s."
-msgstr "ファイル %s から テンプレートをロードできませんでした。"
+msgstr "ファイル %s から テンプレートをロードすることができませんでした。"
 
 #: heksedit.rc:1328
 #, c-format
@@ -2706,7 +2737,7 @@ msgstr "挿入するデータがありません"
 #: heksedit.rc:1333
 #, c-format
 msgid "TYMED_ISTORAGE is not supported for drag-drop."
-msgstr ""
+msgstr "TYMED_ISTORAGE のドラッグ＆ドロップはサポートされていません。"
 
 #: heksedit.rc:1339
 #, c-format
@@ -2754,6 +2785,9 @@ msgid ""
 "Partially opened at offset 0x%x = %d.\n"
 "Number of bytes read: %d = %d kilobytes.\n"
 msgstr ""
+"\n"
+"部分的にオフセット 0x%x = %d を開きました。\n"
+"読み込みバイト数: %d = %d KB \n"
 
 #: heksedit.rc:1345
 #, c-format
@@ -2777,8 +2811,8 @@ msgstr ""
 #, c-format
 msgid "This file could not be accessed and will be removed from the MRU list."
 msgstr ""
-"このファイルにアクセスできませんでした。このファイルはMRUリストから削除されま"
-"す。"
+"このファイルにアクセスすることができませんでした。このファイルはMRUリストから"
+"削除されます。"
 
 #: heksedit.rc:1348
 #, c-format
@@ -2793,7 +2827,7 @@ msgstr "本当にこのファイルを削除しますか?"
 #: heksedit.rc:1350
 #, c-format
 msgid "Could not delete file."
-msgstr "ファイルの削除ができませんでした。"
+msgstr "ファイルを削除することができませんでした。"
 
 #: heksedit.rc:1351
 #, c-format
@@ -2813,7 +2847,7 @@ msgstr "16進ダンプが保存されました。"
 #: heksedit.rc:1364
 #, c-format
 msgid "Could not save Hexdump."
-msgstr "16進ダンプの保存に失敗しました。"
+msgstr "16進ダンプを保存することができませんでした。"
 
 #: heksedit.rc:1365
 #, c-format
@@ -2824,7 +2858,7 @@ msgstr ""
 #: heksedit.rc:1366
 #, c-format
 msgid "Could not copy hexdump to clipboard."
-msgstr "16進ダンプのクリップボードへのコピーが失敗しました。"
+msgstr "クリップボードへ16進ダンプをコピーすることができませんでした。"
 
 #: heksedit.rc:1367
 #, c-format
