@@ -393,7 +393,7 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
 CAPTION "Paste with dialogue"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    LTEXT           "Clipboard content (text):",IDC_STATIC,7,7,76,8
+    LTEXT           "Clipboard content (text):",IDC_STATIC,7,7,96,8
     EDITTEXT        IDC_PASTE_CLIPBOARD,7,18,277,65,ES_MULTILINE | WS_VSCROLL,
                     WS_EX_TRANSPARENT
     GROUPBOX        "Paste mode",IDC_STATIC,7,86,64,40
@@ -404,7 +404,7 @@ BEGIN
     LTEXT           "Paste data how many times:",IDC_STATIC,80,86,89,8
     EDITTEXT        IDC_PASTE_TIMES,79,96,67,12,ES_AUTOHSCROLL
     CONTROL         "Paste coded binary values as text",IDC_PASTE_BINARY,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,80,115,122,10
+                    BS_AUTOCHECKBOX | WS_TABSTOP,80,115,132,10
     LTEXT           " Skip how many bytes between inserts/overwrites",
                     IDC_STATIC,7,129,160,8
     EDITTEXT        IDC_PASTE_SKIPBYTES,168,126,60,12,ES_AUTOHSCROLL
@@ -577,18 +577,18 @@ BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,90,46,50,14
 END
 
-IDD_SELECT_BLOCK_DIALOG DIALOGEX 0, 0, 156, 87
+IDD_SELECT_BLOCK_DIALOG DIALOGEX 0, 0, 176, 87
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
     WS_SYSMENU
 CAPTION "Select Block"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT           "Start of selection: (prefix x for hex)",
-                    IDC_STATIC,7,7,142,8
-    EDITTEXT        IDC_BLOCKSEL_OFFSET,7,17,142,12,ES_AUTOHSCROLL
+                    IDC_STATIC,7,7,162,8
+    EDITTEXT        IDC_BLOCKSEL_OFFSET,7,17,162,12,ES_AUTOHSCROLL
     LTEXT           "End of selection: (prefix x for hex)",
-                    IDC_STATIC,7,34,142,8
-    EDITTEXT        IDC_BLOCKSEL_OFFSETEND,7,44,142,12,ES_AUTOHSCROLL
+                    IDC_STATIC,7,34,162,8
+    EDITTEXT        IDC_BLOCKSEL_OFFSETEND,7,44,162,12,ES_AUTOHSCROLL
     DEFPUSHBUTTON   "OK",IDOK,44,66,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,99,66,50,14
 END
@@ -695,14 +695,14 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
 CAPTION "Replace"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    LTEXT           "Find what:",IDC_STATIC,7,7,34,8
+    LTEXT           "Find what:",IDC_STATIC,7,7,194,8
     EDITTEXT        IDC_TO_REPLACE_EDIT,7,16,194,62,ES_MULTILINE | 
                     ES_AUTOVSCROLL | WS_VSCROLL
     PUSHBUTTON      "Find next",IDC_FINDNEXT_BUTTON,7,81,39,14
     PUSHBUTTON      "Find previous",IDC_FINDPREVIOUS_BUTTON,51,81,54,14
     CONTROL         "Match case",IDC_MATCHCASE_CHECK,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,146,81,53,10
-    LTEXT           "Replace with:",IDC_STATIC,7,98,44,8
+                    BS_AUTOCHECKBOX | WS_TABSTOP,112,81,93,10
+    LTEXT           "Replace with:",IDC_STATIC,7,98,194,8
     EDITTEXT        IDC_REPLACEWITH_EDIT,7,108,194,58,ES_AUTOHSCROLL
     GROUPBOX        "Replace all...",IDC_STATIC,7,169,105,50
     PUSHBUTTON      "... following occurances",IDC_FOLLOCC_BUTTON,13,180,90,
@@ -825,7 +825,7 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
 CAPTION "Shortcuts"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    LTEXT           "Paths of shortcuts to Frhed:",IDC_STATIC,5,5,86,8
+    LTEXT           "Paths of shortcuts to Frhed:",IDC_STATIC,5,5,100,8
     CONTROL         "Links to Frhed",IDC_SHORTCUT_LINKS,"SysListView32",
                     LVS_REPORT | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER |
                     WS_TABSTOP,5,15,105,120,WS_EX_CLIENTEDGE
@@ -898,42 +898,42 @@ BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,145,122,50,15
 END
 
-IDD_DRAG_DROP_OPTIONS DIALOGEX 0, 0, 312, 116
+IDD_DRAG_DROP_OPTIONS DIALOGEX 0, 0, 332, 116
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
     WS_SYSMENU
 CAPTION "OLE Drag-drop options"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    GROUPBOX        "General",IDC_STATIC,5,0,145,75
+    GROUPBOX        "General",IDC_STATIC,5,0,150,75
     CONTROL         "Enable drop input",IDC_ENABLE_DROP,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,10,10,71,10
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,10,140,10
     CONTROL         "Enable drag output",IDC_ENABLE_DRAG,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,10,20,76,10
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,20,140,10
     CONTROL         "Enable scroll-delaying for drag-drop",IDC_EN_SD_DD,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,30,126,10
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,30,140,10
     CONTROL         "Enable scroll-delaying for selecting",IDC_EN_SD_SEL,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,40,124,10
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,40,140,10
     CONTROL         "Always give the opportunity to change between move and copy after a drop.",
                     IDC_ALWAYS_CHOOSE,"Button",BS_AUTOCHECKBOX | BS_LEFT | 
-                    BS_VCENTER | BS_MULTILINE | WS_TABSTOP,10,50,135,20
-    GROUPBOX        "Input",IDC_STATIC,155,0,150,45
+                    BS_VCENTER | BS_MULTILINE | WS_TABSTOP,10,50,140,20
+    GROUPBOX        "Input",IDC_STATIC,160,0,165,45
     CONTROL         "CF_HDROP opens the files dropped.",IDC_DROP_CF_HDROP,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,165,10,132,10
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,165,10,140,10
     CONTROL         "Drop ""BinaryData"" if present",IDC_DROP_BIN_DATA,
                     "Button",BS_AUTOCHECKBOX | BS_LEFT | BS_VCENTER | 
-                    WS_TABSTOP,165,20,105,10
+                    WS_TABSTOP,165,20,140,10
     CONTROL         "Drop CF_TEXT if present",IDC_DROP_CF_TEXT,"Button",
                     BS_AUTOCHECKBOX | BS_LEFT | BS_VCENTER | WS_TABSTOP,165,
-                    30,95,10
-    GROUPBOX        "Output",IDC_STATIC,155,45,150,65
+                    30,140,10
+    GROUPBOX        "Output",IDC_STATIC,160,45,165,65
     CONTROL         "Drag ""BinaryData""",IDC_DRAG_BIN_DATA,"Button",
                     BS_AUTOCHECKBOX | BS_LEFT | BS_VCENTER | WS_GROUP | 
-                    WS_TABSTOP,165,55,75,10
+                    WS_TABSTOP,165,55,155,10
     CONTROL         "Drag CF_TEXT as:",IDC_DRAG_CF_TEXT,"Button",
                     BS_AUTOCHECKBOX | BS_LEFT | BS_VCENTER | WS_GROUP | 
-                    WS_TABSTOP,165,65,76,10
+                    WS_TABSTOP,165,65,155,10
     CONTROL         "Hexdump",IDC_TEXT_HEXDUMP,"Button",BS_AUTORADIOBUTTON | 
-                    BS_LEFT | BS_VCENTER | WS_GROUP,175,75,46,10
+                    BS_LEFT | BS_VCENTER | WS_GROUP,175,75,155,10
     CONTROL         "Special syntax (<bh:ff>...)",IDC_TEXT_SPECIAL,"Button",
                     BS_AUTORADIOBUTTON | BS_LEFT | BS_VCENTER,175,85,95,10
     CONTROL         "display (else digits)",IDC_TEXT_DISPLAY,"Button",
@@ -941,7 +941,7 @@ BEGIN
                     WS_TABSTOP,225,75,74,10
     CONTROL         "Drag ""Rich Text Format"" (as hexdump)",IDC_DRAG_RTF,
                     "Button",BS_AUTOCHECKBOX | BS_LEFT | BS_VCENTER | 
-                    WS_GROUP | WS_TABSTOP,165,95,138,10
+                    WS_GROUP | WS_TABSTOP,165,95,155,10
     DEFPUSHBUTTON   "OK",IDOK,15,85,55,20
     PUSHBUTTON      "Cancel",IDCANCEL,85,85,55,20
 END
