@@ -78,8 +78,8 @@ BEGIN
         BEGIN
             MENUITEM "&Find...\tCtrl+F",            IDM_FIND
             MENUITEM "&Replace...\tCtrl+H",         IDM_REPLACE
-            MENUITEM "Find &previous\tF3",          IDM_FINDPREV
-            MENUITEM "Find &next\tF4",              IDM_FINDNEXT
+            MENUITEM "Find &previous\tShift+F3",    IDM_FINDPREV
+            MENUITEM "Find &next\tF3",              IDM_FINDNEXT
         END
         MENUITEM "&Go To...\tCtrl+G",           IDM_GO_TO
         MENUITEM SEPARATOR
@@ -182,7 +182,7 @@ BEGIN
         MENUITEM "&Find...\tCtrl+F",            IDM_FIND
         MENUITEM "Replace...\tCtrl+H",          IDM_REPLACE
         MENUITEM "Find next\tF3",               IDM_FINDNEXT
-        MENUITEM "Find previous\tF4",           IDM_FINDPREV
+        MENUITEM "Find previous\tShift+F3",     IDM_FINDPREV
         MENUITEM "&Go To...\tCtrl+G",           IDM_GO_TO
     END
     POPUP "1"
@@ -258,8 +258,9 @@ BEGIN
     VK_DOWN,        IDM_SCROLL_DOWN,        VIRTKEY, CONTROL, NOINVERT
     VK_F1,          IDM_HELP_TOPICS,        VIRTKEY, NOINVERT
     VK_F2,          IDM_INTERNALSTATUS,     VIRTKEY, NOINVERT
-    VK_F3,          IDM_FINDPREV,           VIRTKEY, NOINVERT
-    VK_F4,          IDM_FINDNEXT,           VIRTKEY, NOINVERT
+    VK_F2,          IDM_ADDBOOKMARK,        VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          IDM_FINDPREV,           VIRTKEY, SHIFT, NOINVERT
+    VK_F3,          IDM_FINDNEXT,           VIRTKEY, NOINVERT
     VK_F5,          IDM_OPEN_TEXT,          VIRTKEY, NOINVERT
     VK_INSERT,      IDA_INSERTMODETOGGLE,   VIRTKEY, NOINVERT
     VK_LEFT,        IDM_SCROLL_LEFT,        VIRTKEY, CONTROL, NOINVERT
@@ -318,7 +319,7 @@ BEGIN
     GROUPBOX        "Direction",IDC_STATIC,7,96,61,36
     CONTROL         "&Up",IDC_FIND_UP,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,106,49,10
     CONTROL         "&Down",IDC_FIND_DOWN,"Button",BS_AUTORADIOBUTTON,14,117,49,10
-    CONTROL         "Match &case",IDC_FIND_MATCHCASE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,74,100,79,10
+    CONTROL         "Match &case",IDC_FIND_MATCHCASE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,74,100,119,10
     CONTROL         "U&nicode",IDC_FIND_UNICODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,74,112,79,8
     DEFPUSHBUTTON   "Find",IDOK,169,118,50,14,WS_GROUP
     PUSHBUTTON      "Cancel",IDCANCEL,222,118,50,14
