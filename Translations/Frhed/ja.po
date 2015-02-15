@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?"
 "group_id=13216&atid=113216\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-02-15 11:14+0900\n"
+"PO-Revision-Date: 2015-02-15 11:45+0900\n"
 "Last-Translator: Takashi Sawanaka <sawanaka@d1.dion.ne.jp>\n"
 "Language-Team: German <frhed-devel@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -423,7 +423,7 @@ msgstr "バイナリモード(&I)...\tCtrl+Shift+Y"
 #: heksedit.rc:130
 #, c-format
 msgid "&OLE Drag-drop...\tCtrl+Alt+O"
-msgstr "OLE ドラッグ＆ドロップ(&O)...\tCtrl+Alt+O"
+msgstr "OLE ドラッグ&&ドロップ(&O)...\tCtrl+Alt+O"
 
 #: heksedit.rc:131
 #, c-format
@@ -1620,7 +1620,7 @@ msgstr "最終バイトからのオフセット"
 #: heksedit.rc:883
 #, c-format
 msgid "Drag-drop"
-msgstr "ドラッグ＆ドロップ"
+msgstr "ドラッグ&&ドロップ"
 
 #: heksedit.rc:886
 #, c-format
@@ -1645,7 +1645,7 @@ msgstr "データ:"
 #: heksedit.rc:904
 #, c-format
 msgid "OLE Drag-drop options"
-msgstr "OLE ドラッグ＆ドロップオプション"
+msgstr "OLE ドラッグ&&ドロップオプション"
 
 #: heksedit.rc:907
 #, c-format
@@ -1665,7 +1665,7 @@ msgstr "ドラッグ出力を有効にする"
 #: heksedit.rc:912
 #, c-format
 msgid "Enable scroll-delaying for drag-drop"
-msgstr "ドラッグ＆ドロップ用にスクロール遅延を有効にする"
+msgstr "ﾄﾞﾗｯｸﾞ&&ﾄﾞﾛｯﾌﾟ用にスクロール遅延を有効"
 
 #: heksedit.rc:914
 #, c-format
@@ -1681,7 +1681,7 @@ msgstr "ドロップ後毎度移動するかコピーするかを選ばせる。"
 #: heksedit.rc:920
 #, c-format
 msgid "CF_HDROP opens the files dropped."
-msgstr "CF_HDROPでドロップされたファイルを開く。"
+msgstr "CF_HDROPでドロップされたファイルを開く"
 
 #: heksedit.rc:922
 #, c-format
@@ -1726,7 +1726,7 @@ msgstr "表示内容のまま"
 #: heksedit.rc:942
 #, c-format
 msgid "Drag \"Rich Text Format\" (as hexdump)"
-msgstr "\"Rich Text Format\" でドラッグする(16進ダンプの様に)"
+msgstr "\"Rich Text Format\" でドラッグする(16進ダンプ)"
 
 #: heksedit.rc:952
 #, c-format
@@ -2737,7 +2737,7 @@ msgstr "挿入するデータがありません"
 #: heksedit.rc:1333
 #, c-format
 msgid "TYMED_ISTORAGE is not supported for drag-drop."
-msgstr "TYMED_ISTORAGE のドラッグ＆ドロップはサポートされていません。"
+msgstr "TYMED_ISTORAGE のドラッグ&&ドロップはサポートされていません。"
 
 #: heksedit.rc:1339
 #, c-format
