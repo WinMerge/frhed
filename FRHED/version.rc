@@ -18,8 +18,8 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "Comments", "Homepage: http://frhed.sourceforge.net\0"
-            VALUE "CompanyName", "(c) Raihan Kibria 2000"
-            VALUE "FileDescription", "Frhed - Free hex editor " SHARPEN(FRHED_VERSION_4)
+            VALUE "CompanyName", "(c) Raihan Kibria 2000-2015"
+            VALUE "FileDescription", "Frhed - Free hex editor (modified version for WinMerge)" SHARPEN(FRHED_VERSION_4)
             VALUE "FileVersion", SHARPEN(FRHED_VERSION_4)
             VALUE "InternalName", "frhed\0"
             VALUE "LegalCopyright", "GNU General Public License v2.0"
