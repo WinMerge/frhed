@@ -92,6 +92,7 @@ OPTYP iMoveOpTyp;
  */
 HexEditorWindow::HexEditorWindow()
 {
+	iInstCount = 0;
 	Drive = 0;
 	SelectedPartitionInfo = 0;
 	CurrentSectorNumber = 0;
