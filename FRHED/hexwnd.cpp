@@ -6286,7 +6286,7 @@ HGLOBAL HexEditorWindow::RTF_hexdump(int start, int end, SIZE_T *plen)
 		"}\n" // \colortbl
 
 		//This is new for RTF 1.7, but it should be ignored by older readers so who cares (older than M$ Word XP = Word 2002??)
-		"{\\*\\generator frhed v" _CRT_STRINGIZE(FRHED_VERSION_3) ";}\n"
+		"{\\*\\generator frhed v"_CRT_STRINGIZE(FRHED_VERSION_3)";}\n"
 
 		//Metadata here too?
 		"{\\info\n"
