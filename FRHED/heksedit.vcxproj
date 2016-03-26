@@ -450,7 +450,6 @@
     <ClCompile Include="OpenPartiallyDlg.cpp" />
     <ClCompile Include="OSTools.cpp" />
     <ClCompile Include="PasteDlg.cpp" />
-    <ClCompile Include="PDrive95.cpp" />
     <ClCompile Include="PDriveNT.cpp" />
     <ClCompile Include="PhysicalDrive.cpp" />
     <ClCompile Include="PMemoryBlock.cpp" />
@@ -505,7 +504,6 @@
     <ClInclude Include="LoadHexFile.h" />
     <ClInclude Include="offset.h" />
     <ClInclude Include="OSTools.h" />
-    <ClInclude Include="PDrive95.h" />
     <ClInclude Include="PDriveNT.h" />
     <ClInclude Include="PhysicalDrive.h" />
     <ClInclude Include="PMemoryBlock.h" />

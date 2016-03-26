@@ -151,9 +151,6 @@
     <ClCompile Include="PasteDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PDrive95.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="PDriveNT.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -283,9 +280,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="OSTools.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PDrive95.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PDriveNT.h">
