@@ -40,16 +40,6 @@ HINSTANCE hMainInstance;
 
 LRESULT CALLBACK MainWndProc(HWND, UINT, WPARAM, LPARAM);
 
-static BOOL NTAPI IsNT()
-{
-	OSVERSIONINFO osvi;
-	SecureZeroMemory(&osvi, sizeof osvi);
-	osvi.dwOSVersionInfoSize = sizeof osvi;
-	if (!GetVersionEx(&osvi))
-		osvi.dwPlatformId = 0;
-	return osvi.dwPlatformId == VER_PLATFORM_WIN32_NT;
-}
-
 static BOOL CALLBACK WndEnumProcCountInstances(HWND hwnd, LPARAM lParam)
 {
 	TCHAR buf[64];
@@ -64,7 +54,6 @@ static HWND hwndHex = 0;
 static HWND hwndToolBar = 0;
 static HWND hwndStatusBar = 0;
 static HexEditorWindow *pHexWnd = 0;
-static BOOL bIsNT = FALSE;
 
 /**
  * @brief The application starting point.
@@ -143,10 +132,8 @@ int WINAPI wWinMain(HINSTANCE hIconInstance, HINSTANCE, LPWSTR szCmdLine, int)
 	OleInitialize(NULL);
 	InitCommonControls();
 
-	bIsNT = IsNT();
-
 	// Load the heksedit component.
-	LPCTSTR pe_heksedit = bIsNT ? _T("hekseditU.dll") : _T("heksedit.dll");
+	LPCTSTR pe_heksedit = _T("hekseditU.dll");
 	hMainInstance = LoadLibrary(pe_heksedit);
 	if (hMainInstance == NULL)
 	{

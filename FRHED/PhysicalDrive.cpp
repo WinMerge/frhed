@@ -27,26 +27,13 @@ Last change: 2013-02-24 by Jochen Neubeck
 #include "precomp.h"
 #include "resource.h"
 #include "physicaldrive.h"
-#include "pdrive95.h"
 #include "pdrivent.h"
 #include "LangArray.h"
 #include "StringTable.h"
 
 IPhysicalDrive *CreatePhysicalDriveInstance()
 {
-	OSVERSIONINFO osvi;
-	ZeroMemory(&osvi, sizeof osvi);
-	osvi.dwOSVersionInfoSize = sizeof osvi;
-	if (!GetVersionEx(&osvi))
-		osvi.dwPlatformId = 0;
-	switch (osvi.dwPlatformId)
-	{
-	case VER_PLATFORM_WIN32_NT:
-		return new PNtPhysicalDrive;
-	case VER_PLATFORM_WIN32_WINDOWS:
-		return new P9xPhysicalDrive;
-	}
-	return 0;
+	return new PNtPhysicalDrive;
 }
 
 LPTSTR PartitionInfo::GetNameAsString(PFormat *pFormat)
