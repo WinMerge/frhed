@@ -98,7 +98,7 @@ void HexDump::Write(int startInd, int endInd)
 	{
 		// Write offset.
 		int m = sprintf(buf2, "%*.*x", m_offsetMinLen, m_offsetMinLen,
-				m_partialStats ? a + m_partialOffset : a);
+				m_partialStats ? a + static_cast<int>(m_partialOffset) : a);
 
 		for (int i = m; i < m_offsetMaxLen + m_byteSpace - m; i++)
 			buf2[i] = ' ';

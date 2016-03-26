@@ -131,7 +131,7 @@ void FillWithDialog::hexstring2charstring()
 		buf[ii]=a;//store it
 		*/
 		// Replaced with this line:
-		_stscanf(pcFWText + i, _T("%2x"), buf + ii);//get byte from the hexstring
+		_stscanf(pcFWText + i, _T("%2hhx"), buf + ii);//get byte from the hexstring
 		ii++;
 	}//for
 	buflen = ii;//store length

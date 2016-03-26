@@ -3191,7 +3191,7 @@ int HexEditorWindow::CMD_copy_hexdump(int iCopyHexdumpMode, int iCopyHexdumpType
 		for (int k = 0, a = iCopyHexdumpDlgStart; a <= iCopyHexdumpDlgEnd; a += iBytesPerLine, k += iCharsPerLine + 2)
 		{
 			// Write offset.
-			int m = sprintf(buf2, "%*.*x", iMinOffsetLen, iMinOffsetLen, bPartialStats ? a + iPartialOffset : a);
+			int m = sprintf(buf2, "%*.*x", iMinOffsetLen, iMinOffsetLen, bPartialStats ? a + static_cast<int>(iPartialOffset) : a);
 
 			memset(buf2 + m, ' ', iMaxOffsetLen + iByteSpace - m);
 			buf2[iMaxOffsetLen + iByteSpace] = '\0';

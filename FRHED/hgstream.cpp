@@ -56,7 +56,7 @@ HGlobalStream& HGlobalStream::operator << (BYTE c)
 {
 	if (_hex)
 	{
-		BYTE nib[2] = { c >> 4 & 0xf, c & 0xf };
+		BYTE nib[2] = { static_cast<BYTE>(c >> 4 & 0xf), static_cast<BYTE>(c & 0xf) };
 		nib[0] += nib[0] >= 0xa ? 'a' - 0xa : '0';
 		nib[1] += nib[1] >= 0xa ? 'a' - 0xa : '0';
 		Realloc(sizeof nib, nib);
