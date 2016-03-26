@@ -4,7 +4,7 @@ del /s Build\*.exe
 del /s BuildTmp\*.res
 
 setlocal
-call "%VS120COMNTOOLS%vsvars32.bat"
+call "%VS140COMNTOOLS%vsvars32.bat"
 MSBuild FRHED_vc10.sln /t:build /p:Configuration=UnicodeRelease /p:Platform="Win32" || pause
 MSBuild FRHED_vc10.sln /t:build /p:Configuration=UnicodeRelease /p:Platform="x64" || pause
 
