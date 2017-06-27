@@ -25,18 +25,6 @@ Last change: 2013-02-24 by Jochen Neubeck
 #include "hexwdlg.h"
 #include "StringTable.h"
 
-void GetWindowText(HWindow *pwnd, SimpleString &str)
-{
-	int len = pwnd->GetWindowTextLength() + 1;
-	str.SetSize(len);
-	pwnd->GetWindowTextA(str, len);
-}
-
-void GetDlgItemText(HWindow *pwnd, int id, SimpleString &str)
-{
-	GetWindowText(pwnd->GetDlgItem(id), str);
-}
-
 BOOL EnableDlgItem(HWindow *pwnd, int id, BOOL enable)
 {
 	return pwnd->GetDlgItem(id)->EnableWindow(enable);

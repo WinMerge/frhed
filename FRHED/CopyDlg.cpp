@@ -96,7 +96,7 @@ BOOL CopyDlg::Apply(HWindow *pDlg)
 	}
 	// Can requested number be cut?
 	// DataArray.GetLength ()-iCutOffset = number of bytes from current pos. to end.
-	if (m_dataArray.GetLength() - iOffset < iNumberOfBytes)
+	if (m_dataArray.size() - iOffset < iNumberOfBytes)
 	{
 		MessageBox(pDlg, GetLangString(IDS_COPY_TOO_MANY), MB_ICONERROR);
 		return FALSE;

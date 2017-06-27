@@ -34,9 +34,9 @@ Last change: 2013-02-24 by Jochen Neubeck
 #include "StringTable.h"
 
 // String containing data to replace.
-SimpleString ReplaceDlg::strToReplaceData;
+String ReplaceDlg::strToReplaceData(0); // Don't let default ctor cause SIOF
 // String containing data to replace with.
-SimpleString ReplaceDlg::strReplaceWithData;
+String ReplaceDlg::strReplaceWithData(0); // Don't let default ctor cause SIOF
 
 //-------------------------------------------------------------------
 // Translate the text in the string to binary data and store in the array.
@@ -44,25 +44,24 @@ int ReplaceDlg::transl_text_to_binary(SimpleArray<BYTE> &out)
 {
 	BYTE *pcOut;
 	int destlen = create_bc_translation(&pcOut,
-		strReplaceWithData, strReplaceWithData.StrLen(),
+		strReplaceWithData.c_str(), strReplaceWithData.length(),
 		iCharacterSet, iBinaryMode);
 	if (destlen)
-		out.Adopt(pcOut, destlen - 1, destlen);
+		out.Adopt(pcOut, destlen, destlen);
 	return destlen;
 }
 
 //-------------------------------------------------------------------
 // Create a text representation of an array of bytes and save it in
-// a SimpleString object.
+// a String object.
 int	ReplaceDlg::transl_binary_to_text(const BYTE *src, int len)
 {
 	// How long will the text representation of array of bytes be?
 	int destlen = Text2BinTranslator::iBytes2BytecodeDestLen(src, len);
-	strToReplaceData.SetSize(destlen);
-	strToReplaceData.ExpandToSize();
-	if (char *pd = strToReplaceData)
+	strToReplaceData.resize(destlen);
+	if (char *pd = strToReplaceData.pointer())
 	{
-		Text2BinTranslator::iTranslateBytesToBC(pd, (unsigned char*) src, len);
+		Text2BinTranslator::iTranslateBytesToBC(pd, src, len);
 		return TRUE;
 	}
 	return FALSE;
@@ -73,8 +72,8 @@ bool ReplaceDlg::find_and_select_data(int finddir, bool case_sensitive)
 {
 	BYTE *tofind;
 	// Create a translation from bytecode to char array of finddata.
-	int destlen = create_bc_translation(&tofind, strToReplaceData,
-		strToReplaceData.StrLen(), iCharacterSet, iBinaryMode);
+	int destlen = create_bc_translation(&tofind, strToReplaceData.c_str(),
+		strToReplaceData.length(), iCharacterSet, iBinaryMode);
 	int i = iGetStartOfSelection();
 	int n = iGetEndOfSelection() - i + 1;
 	int j;
@@ -83,7 +82,7 @@ bool ReplaceDlg::find_and_select_data(int finddir, bool case_sensitive)
 		i += finddir * n;
 		// Find forward.
 		j = findutils_FindBytes(&m_dataArray[i],
-			m_dataArray.GetLength() - i - 1,
+			m_dataArray.size() - i - 1,
 			tofind,	destlen, 1, case_sensitive);
 		if (j != -1)
 			i += j;
@@ -92,7 +91,7 @@ bool ReplaceDlg::find_and_select_data(int finddir, bool case_sensitive)
 	{
 		// Find backward.
 		j = findutils_FindBytes(&m_dataArray[0],
-			min(iCurByte + (destlen - 1), m_dataArray.GetLength()),
+			min(iCurByte + (destlen - 1), m_dataArray.size()),
 			tofind, destlen, -1, case_sensitive);
 		if (j != -1)
 			i = j;
@@ -111,7 +110,7 @@ bool ReplaceDlg::find_and_select_data(int finddir, bool case_sensitive)
 }
 
 //-------------------------------------------------------------------
-// SimpleString replacedata contains data to replace with.
+// String strReplaceWithData contains data to replace with.
 bool ReplaceDlg::replace_selected_data(HWindow *pDlg)
 {
 	if (!bSelected)
@@ -121,29 +120,31 @@ bool ReplaceDlg::replace_selected_data(HWindow *pDlg)
 	}
 	int i = iGetStartOfSelection();
 	int n = iGetEndOfSelection() - i + 1;
-	SimpleArray<BYTE> olddata(n, &m_dataArray[i]);
-	if (strReplaceWithData.IsEmpty())
+	UndoRecord::Data *olddata = UndoRecord::alloc(&m_dataArray[i], n);
+	if (strReplaceWithData.length() == 0)
 	{
 		// Selected data is to be deleted, since replace-with data is empty string.
 		if (!m_dataArray.Replace(i, n, 0, 0))
 		{
+			UndoRecord::free(olddata);
 			MessageBox(pDlg, GetLangString(IDS_REPL_CANT_DELETE), MB_ICONERROR);
 			return FALSE;
 		}
-		push_undorecord(i, olddata, olddata.GetLength(), NULL, 0);
+		push_undorecord(i, 0, olddata);
 		bSelected = false;
 		iCurByte = iStartOfSelection;
 	}
 	else if (bPasteAsText)
 	{
 		// Replace with non-zero-length data.
-		if (!m_dataArray.Replace(i, n, (const BYTE *)(const char *)strReplaceWithData, strReplaceWithData.StrLen()))
+		if (!m_dataArray.Replace(i, n, reinterpret_cast<const BYTE *>(strReplaceWithData.c_str()), strReplaceWithData.length()))
 		{
+			UndoRecord::free(olddata);
 			MessageBox(pDlg, GetLangString(IDS_REPL_FAILED), MB_ICONERROR);
 			return false;
 		}
-		push_undorecord(i, olddata, olddata.GetLength(), (const BYTE *)(const char *)strReplaceWithData, strReplaceWithData.StrLen());
-		iEndOfSelection = iStartOfSelection + strReplaceWithData.StrLen() - 1;
+		push_undorecord(i, strReplaceWithData.length(), olddata);
+		iEndOfSelection = iStartOfSelection + strReplaceWithData.length() - 1;
 	}
 	else
 	{
@@ -151,16 +152,18 @@ bool ReplaceDlg::replace_selected_data(HWindow *pDlg)
 		SimpleArray<BYTE> out;
 		if (!transl_text_to_binary(out))
 		{
+			UndoRecord::free(olddata);
 			MessageBox(pDlg, GetLangString(IDS_REPL_CANNOT_CONVERT), MB_ICONERROR);
 			return false;
 		}
-		if (!m_dataArray.Replace(i, n, out, out.GetLength()))
+		if (!m_dataArray.Replace(i, n, out.pointer(), out.size()))
 		{
+			UndoRecord::free(olddata);
 			MessageBox(pDlg, GetLangString(IDS_REPL_FAILED), MB_ICONERROR);
 			return false;
 		}
-		push_undorecord(i, olddata, olddata.GetLength(), out, out.GetLength());
-		iEndOfSelection = iStartOfSelection + out.GetLength() - 1;
+		push_undorecord(i, out.size(), olddata);
+		iEndOfSelection = iStartOfSelection + out.size() - 1;
 	}
 	bFilestatusChanged = true;
 	return true;
@@ -168,7 +171,7 @@ bool ReplaceDlg::replace_selected_data(HWindow *pDlg)
 
 void ReplaceDlg::find_directed(HWindow *pDlg, int finddir)
 {
-	GetDlgItemText(pDlg, IDC_TO_REPLACE_EDIT, strToReplaceData);
+	pDlg->GetDlgItemTextA(IDC_TO_REPLACE_EDIT, strToReplaceData);
 	bool case_sensitive = pDlg->IsDlgButtonChecked(IDC_MATCHCASE_CHECK) == BST_CHECKED;
 	if (find_and_select_data(finddir, case_sensitive))
 	{
@@ -186,12 +189,12 @@ void ReplaceDlg::find_directed(HWindow *pDlg, int finddir)
 void ReplaceDlg::replace_directed(HWindow *pDlg, int finddir, bool showCount)
 {
 	bool case_sensitive = pDlg->IsDlgButtonChecked(IDC_MATCHCASE_CHECK) == BST_CHECKED;
-	GetDlgItemText(pDlg, IDC_TO_REPLACE_EDIT, strToReplaceData);
-	GetDlgItemText(pDlg, IDC_REPLACEWITH_EDIT, strReplaceWithData);
+	pDlg->GetDlgItemTextA(IDC_TO_REPLACE_EDIT, strToReplaceData);
+	pDlg->GetDlgItemTextA(IDC_REPLACEWITH_EDIT, strReplaceWithData);
 	bPasteAsText = pDlg->IsDlgButtonChecked(IDC_USETRANSLATION_CHECK) == BST_UNCHECKED;
 	//------------------
 	// Don't do anything if to-replace and replace-with data are same.
-	Text2BinTranslator tr_find(strToReplaceData), tr_replace(strReplaceWithData);
+	Text2BinTranslator tr_find(strToReplaceData.c_str()), tr_replace(strReplaceWithData.c_str());
 	if (tr_find.bCompareBin(tr_replace, iCharacterSet, iBinaryMode))
 	{
 		MessageBox(pDlg, GetLangString(IDS_REPL_SAME_STRS), MB_ICONERROR);
@@ -261,9 +264,9 @@ INT_PTR ReplaceDlg::DlgProc(HWindow *pDlg, UINT iMsg, WPARAM wParam, LPARAM lPar
 			pDlg->CheckDlgButton(IDC_USETRANSLATION_CHECK, BST_UNCHECKED);
 		else
 			pDlg->CheckDlgButton(IDC_USETRANSLATION_CHECK, BST_CHECKED);
-		if (char *pstr = strToReplaceData)
+		if (char const *pstr = strToReplaceData.c_str())
 			pDlg->SetDlgItemTextA(IDC_TO_REPLACE_EDIT, pstr);
-		if (char *pstr = strReplaceWithData)
+		if (char const *pstr = strReplaceWithData.c_str())
 			pDlg->SetDlgItemTextA(IDC_REPLACEWITH_EDIT, pstr);
 		return TRUE;
 

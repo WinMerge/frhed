@@ -259,53 +259,52 @@ STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POIN
 			hexwnd.new_pos += iMove1stEnd - iMove2ndEndorLen - 1;
 		iMovePos = hexwnd.new_pos;
 		iMoveOpTyp = copying ? OPTYP_COPY : OPTYP_MOVE;
-		SimpleArray<BYTE> olddata;
+		UndoRecord::Data *olddata = NULL;
 		const int len = iMove2ndEndorLen - iMove1stEnd + 1;
 		if (grfKeyState & MK_SHIFT) // Overwrite
 		{
 			if (copying)
 			{
 				//Just [realloc &] memmove
-				if (iMovePos + len > hexwnd.m_dataArray.GetLength()) // Need more space
+				if (iMovePos + len > hexwnd.m_dataArray.size()) // Need more space
 				{
-					olddata.AppendArray(&hexwnd.m_dataArray[iMovePos], hexwnd.m_dataArray.GetLength() - iMovePos);
-					if (hexwnd.m_dataArray.SetSize(iMovePos + len))
+					olddata = UndoRecord::alloc(&hexwnd.m_dataArray[iMovePos], hexwnd.m_dataArray.size() - iMovePos);
+					if (hexwnd.m_dataArray.resize(iMovePos + len))
 					{
-						hexwnd.m_dataArray.ExpandToSize();
 						memmove(&hexwnd.m_dataArray[iMovePos], &hexwnd.m_dataArray[iMove1stEnd], len);
 					}
 				}
 				else // Enough space
 				{
-					olddata.AppendArray(&hexwnd.m_dataArray[iMovePos], len);
+					olddata = UndoRecord::alloc(&hexwnd.m_dataArray[iMovePos], len);
 					memmove(&hexwnd.m_dataArray[iMovePos], &hexwnd.m_dataArray[iMove1stEnd], len);
 				}
-				hexwnd.push_undorecord(iMovePos, olddata, olddata.GetLength(), &hexwnd.m_dataArray[iMovePos], len);
+				hexwnd.push_undorecord(iMovePos, len, olddata);
 			}
 			else //Moving
 			{
 				if (iMovePos > iMove1stEnd) //Forward
 				{
-					olddata.AppendArray(&hexwnd.m_dataArray[iMove1stEnd], iMovePosOrg + len - iMove1stEnd);
+					olddata = UndoRecord::alloc(&hexwnd.m_dataArray[iMove1stEnd], iMovePosOrg + len - iMove1stEnd);
 					hexwnd.move_copy_sub(iMove1stEnd, iMove2ndEndorLen, 0);
 					hexwnd.m_dataArray.RemoveAt(iMovePos+len,len);
-					hexwnd.push_undorecord(iMove1stEnd, olddata, olddata.GetLength(), &hexwnd.m_dataArray[iMove1stEnd], iMovePosOrg - iMove1stEnd);
+					hexwnd.push_undorecord(iMove1stEnd, iMovePosOrg - iMove1stEnd, olddata);
 				}
 				else //Backward
 				{
 					if (iMove1stEnd-iMovePos>=len)
 					{
-						olddata.AppendArray(&hexwnd.m_dataArray[iMovePos], iMove1stEnd + len - iMovePos);
+						olddata = UndoRecord::alloc(&hexwnd.m_dataArray[iMovePos], iMove1stEnd + len - iMovePos);
 						memmove(&hexwnd.m_dataArray[iMovePos],&hexwnd.m_dataArray[iMove1stEnd],len);
 						hexwnd.m_dataArray.RemoveAt(iMove1stEnd,len);
 					}
 					else
 					{
-						olddata.AppendArray(&hexwnd.m_dataArray[iMovePos], iMove1stEnd + len - (iMovePos + len - iMove1stEnd) - iMovePos);
+						olddata = UndoRecord::alloc(&hexwnd.m_dataArray[iMovePos], iMove1stEnd + len - (iMovePos + len - iMove1stEnd) - iMovePos);
 						memmove(&hexwnd.m_dataArray[iMovePos],&hexwnd.m_dataArray[iMove1stEnd],len);
 						hexwnd.m_dataArray.RemoveAt(iMovePos+len,len-(iMovePos + len - iMove1stEnd));
 					}
-					hexwnd.push_undorecord(iMovePos, olddata, olddata.GetLength(), &hexwnd.m_dataArray[iMovePos], iMove1stEnd - iMovePos);
+					hexwnd.push_undorecord(iMovePos, iMove1stEnd - iMovePos, olddata);
 				}
 			}
 			hexwnd.iStartOfSelection = iMovePos;
@@ -674,18 +673,15 @@ STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POIN
 					if (grfKeyState&MK_SHIFT)
 					{
 						/* Overwite */
-						SimpleArray<BYTE> olddata;
-						DWORD upper = 1 + hexwnd.m_dataArray.GetUpperBound();
+						DWORD upper = hexwnd.m_dataArray.size();
 						if (hexwnd.new_pos+len > upper)
 						{
-							olddata.AppendArray(&hexwnd.m_dataArray[hexwnd.new_pos + (int)totallen], upper - hexwnd.new_pos + (int)totallen);
+							UndoRecord::Data *olddata = UndoRecord::alloc(&hexwnd.m_dataArray[hexwnd.new_pos + (int)totallen], upper - hexwnd.new_pos + (int)totallen);
 							/* Need more space */
-							if (hexwnd.m_dataArray.SetSize(hexwnd.new_pos + totallen + len))
+							if (hexwnd.m_dataArray.resize(hexwnd.new_pos + totallen + len))
 							{
-								hexwnd.m_dataArray.ExpandToSize();
-								memcpy(&hexwnd.m_dataArray[hexwnd.new_pos +
-										(int)totallen], DataToInsert, len);
-								hexwnd.push_undorecord(hexwnd.new_pos + totallen, olddata, olddata.GetLength(), DataToInsert, len);
+								memcpy(&hexwnd.m_dataArray[hexwnd.new_pos + (int)totallen], DataToInsert, len);
+								hexwnd.push_undorecord(hexwnd.new_pos + totallen, len, olddata);
 								gotdata = true;
 								totallen += len;
 							}
@@ -693,18 +689,17 @@ STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POIN
 						else
 						{
 							/* Enough space */
-							olddata.AppendArray(&hexwnd.m_dataArray[hexwnd.new_pos + (int)totallen], len);
-							memcpy(&hexwnd.m_dataArray[hexwnd.new_pos +
-									(int)totallen], DataToInsert, len);
-							hexwnd.push_undorecord(hexwnd.new_pos + totallen, olddata, olddata.GetLength(), DataToInsert, len);
+							UndoRecord::Data *olddata = UndoRecord::alloc(&hexwnd.m_dataArray[hexwnd.new_pos + (int)totallen], len);
+							memcpy(&hexwnd.m_dataArray[hexwnd.new_pos + (int)totallen], DataToInsert, len);
+							hexwnd.push_undorecord(hexwnd.new_pos + totallen, len, olddata);
 							gotdata = true;
 							totallen += len;
 						}
 					}
-					else if (hexwnd.m_dataArray.InsertAtGrow(hexwnd.new_pos + totallen, DataToInsert, 0, len))
+					else if (hexwnd.m_dataArray.InsertAtGrow(hexwnd.new_pos + totallen, DataToInsert, len))
 					{
 						/* Insert */
-						hexwnd.push_undorecord(hexwnd.new_pos + totallen, NULL, 0, DataToInsert, len);
+						hexwnd.push_undorecord(hexwnd.new_pos + totallen, len, NULL);
 						gotdata = true;
 						totallen += len;
 					}

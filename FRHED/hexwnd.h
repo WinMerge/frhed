@@ -58,16 +58,13 @@ INT_PTR CALLBACK TmplDisplayDlgProc(HWND, UINT, WPARAM, LPARAM);
 #define BMKMAX 9
 #define BMKTEXTMAX 256
 
-struct UndoRecords;
-struct SharedUndoRecords;
-
 /**
  * @brief Bookmark.
  */
 typedef struct
 {
 	int offset; /**< Offset of the bookmark in bookmarks list. */
-	String name; /**< Name of the bookmark. */
+	TString name; /**< Name of the bookmark. */
 } bookmark;
 
 //--------------------------------------------------------------------------------------------
@@ -85,6 +82,38 @@ class load_hexfile_1;
 
 class CDropTarget;
 
+struct UndoRecord
+{
+	struct Data;
+	UndoRecord();
+	UndoRecord(unsigned offset, unsigned length, Data *data);
+	static Data *alloc(const BYTE *, unsigned);
+	static void free(Data *);
+	static unsigned len(Data *);
+	unsigned reclen() const;
+	BYTE const *recptr() const;
+	void clear();
+	unsigned offset;
+	unsigned length;
+	Data *data;
+};
+
+struct UndoRecords
+{
+	UndoRecords();
+	bool push_back(unsigned offset, unsigned length, UndoRecord::Data *data);
+	void clear();
+	UndoRecord *undo();
+	UndoRecord *redo();
+	bool can_undo() const;
+	bool can_redo() const;
+	bool get_modified() const;
+	void save();
+	int pos;
+	int save_pos;
+	Vector<UndoRecord> recs;
+};
+
 /**
  * @brief Hex editor window.
  * This class is the class handling the hex editor window. Dialogs are also
@@ -97,6 +126,7 @@ class HexEditorWindow
 , public IHexEditorWindow::Status
 {
 	friend CDropTarget;
+	friend SharedUndoRecords;
 	friend load_hexfile_0;
 	friend load_hexfile_1;
 
@@ -265,12 +295,12 @@ public:
 	void STDMETHODCALLTYPE copy_sel_from(IHexEditorWindow *);
 	void STDMETHODCALLTYPE copy_all_from(IHexEditorWindow *);
 	void STDMETHODCALLTYPE set_savepoint();
-	bool STDMETHODCALLTYPE get_modified() const;
-	bool STDMETHODCALLTYPE can_undo() const;
-	bool STDMETHODCALLTYPE can_redo() const;
+	BOOL STDMETHODCALLTYPE can_undo() const;
+	BOOL STDMETHODCALLTYPE can_redo() const;
 	void STDMETHODCALLTYPE clear_undorecords();
-	void STDMETHODCALLTYPE share_undorecords(IHexEditorWindow *p);
-	void push_undorecord(size_t offset, const BYTE *oldptr, size_t oldlen, const BYTE *newptr, size_t newlen);
+	SharedUndoRecords *STDMETHODCALLTYPE share_undorecords(SharedUndoRecords *);
+	void push_undorecord(unsigned offset, unsigned length, UndoRecord::Data *data);
+	void apply_undorecord(UndoRecord *);
 
 	int load_file(LPCTSTR);
 	virtual int STDMETHODCALLTYPE open_file(LPCWSTR);
@@ -306,9 +336,6 @@ public:
 	HToolBar *pwndToolBar; /**< Handle to main window's toolbar. */
 	HStatusBar *pwndStatusBar; /**< Handle to main window's statusbar. */
 	HACCEL hAccel; /**< Handle to accelerator keys list. */
-	UndoRecords *m_pUndoRecords;
-	SharedUndoRecords *m_pSharedUndoRecords;
-
 protected:
 //Pabs inserted
 	int bMakeBackups; /**< Backup the file when saving. */
@@ -340,7 +367,9 @@ protected:
 	HFont *pFont;
 	bool bInsertMode; /**< Editing mode is in insert-mode? */
 	bool bFileNeverSaved;
-	SimpleArray<BYTE> m_dataArray;
+	SimpleArray<BYTE, 100> m_dataArray;
+	UndoRecords m_undoStack;
+	SharedUndoRecords *m_pSharedUndoRecords;
 	int bSelecting; /**< Is user selecting bytes/text? */
 	int iLBDownX, iLBDownY;
 	int cxChar, cxCaps, cyChar, cxClient, cyClient, cxBuffer, cyBuffer, iNumlines;
@@ -407,46 +436,20 @@ template<class T> inline void swap(T& x, T& y)
 	y = temp;
 }
 
-struct UndoRecord
-{
-	UndoRecord();
-	UndoRecord(HexEditorWindow *pwnd, size_t offset, const BYTE *oldptr, size_t oldlen, const BYTE *newptr, size_t newlen);
-	UndoRecord(const UndoRecord& rec);
-	HexEditorWindow *pwnd;
-	size_t offset;
-	SimpleArray<BYTE> olddata;
-	SimpleArray<BYTE> newdata;
-};
-
-struct UndoRecords
-{
-	UndoRecords();
-	void push_back(HexEditorWindow *pwnd, size_t offset, const BYTE *oldptr, size_t oldlen, const BYTE *newptr, size_t newlen);
-	void clear();
-	const UndoRecord& undo();
-	const UndoRecord& redo();
-	bool can_undo() const;
-	bool can_redo() const;
-	bool get_modified() const;
-	void save();
-	int pos;
-	int save_pos;
-	SimpleArray<UndoRecord> recs;
-};
-
-struct SharedUndoRecords
+struct IHexEditorWindow::SharedUndoRecords
 {
 	SharedUndoRecords();
-	void push_back(HexEditorWindow *pwnd, size_t offset, const BYTE *oldptr, size_t oldlen, const BYTE *newptr, size_t newlen);
+	~SharedUndoRecords();
+	bool push_back(HexEditorWindow *pwnd);
 	void clear(HexEditorWindow *pwnd = NULL);
-	const UndoRecord& undo();
-	const UndoRecord& redo();
+	HexEditorWindow *undo();
+	HexEditorWindow *redo();
 	bool can_undo() const;
 	bool can_redo() const;
 	void add_target(HexEditorWindow *pwnd);
 	int pos;
-	SimpleArray<HexEditorWindow *> recs;
-	SimpleArray<HexEditorWindow *> targets;
+	Vector<HexEditorWindow *> recs;
+	Vector<HexEditorWindow *> targets;
 };
 
 extern HINSTANCE hMainInstance;

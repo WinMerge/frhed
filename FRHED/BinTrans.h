@@ -16,7 +16,7 @@ along with this program; see the file COPYING.  If not, write to the Free
 Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 02111-1307, USA.
 
-Last change: 2013-02-24 by Jochen Neubeck
+Last change: 2017-06-21 by Jochen Neubeck
 */
 /** 
  * @file  BinTrans.h
@@ -27,14 +27,12 @@ Last change: 2013-02-24 by Jochen Neubeck
 #ifndef BinTrans_h
 #define BinTrans_h
 
-#include "Simparr.h"
-
 int create_bc_translation(BYTE** ppd, const char* src, int srclen, int charset, int binarymode);
 
 /**
  * @brief A class translating between text export and binary data.
  */
-class Text2BinTranslator : public SimpleString
+class Text2BinTranslator : public String
 {
 public:
 	int bCompareBin(Text2BinTranslator& tr2, int charmode, int binmode);
@@ -48,7 +46,7 @@ public:
 	static int iTranslateBytesToBC(char* pd, const BYTE* src, int srclen);
 
 private:
-	int GetTrans2Bin(SimpleArray<BYTE>& sa, int charmode, int binmode);
+	int GetTrans2Bin(Vector<BYTE>& sa, int charmode, int binmode);
 };
 
 #endif // BinTrans_h

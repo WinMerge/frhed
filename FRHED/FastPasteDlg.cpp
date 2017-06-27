@@ -92,7 +92,7 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 		MessageBox(pDlg, GetLangString(IDS_CLIPBOARD_SELECT_FORMAT), MB_ICONERROR);
 		return FALSE;
 	}
-	UINT uFormat = list->GetItemData(i);
+	UINT uFormat = static_cast<UINT>(list->GetItemData(i));
 	char *pcPastestring = 0;
 	int destlen = 0;
 	BOOL bPasteBinary = FALSE;
@@ -130,13 +130,13 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 	{
 		if (bPasteAsText)
 		{
-			destlen = bPasteUnicode ? 2 * wcslen((WCHAR *)pcPastestring) : strlen(pcPastestring);
+			destlen = static_cast<int>(bPasteUnicode ? 2 * wcslen((WCHAR *)pcPastestring) : strlen(pcPastestring));
 		}
 		else
 		{
 			BYTE *pc = 0;
 			destlen = create_bc_translation(&pc, pcPastestring,
-				strlen(pcPastestring), iCharacterSet, iBinaryMode);
+				static_cast<int>(strlen(pcPastestring)), iCharacterSet, iBinaryMode);
 			delete [] pcPastestring;
 			pcPastestring = (char *)pc;
 		}
@@ -148,7 +148,7 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 		return FALSE;
 	}
 	WaitCursor wc1;
-	SimpleArray<BYTE> olddata;
+	UndoRecord::Data *olddata = NULL;
 	if (bSelected || pDlg->IsDlgButtonChecked(IDC_FPASTE_INSERT))
 	{
 		// Insert at iCurByte. Bytes there will be pushed up.
@@ -156,18 +156,18 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 		{
 			iCurByte = iGetStartOfSelection();
 			int iEndByte = iGetEndOfSelection();
-			olddata.AppendArray(&m_dataArray[iCurByte], iEndByte - iCurByte + 1 + (iPasteTimes - 1) * iPasteSkip);
+			olddata = UndoRecord::alloc(&m_dataArray[iCurByte], iEndByte - iCurByte + 1 + (iPasteTimes - 1) * iPasteSkip);
 			m_dataArray.RemoveAt(iCurByte, iEndByte - iCurByte + 1);//Remove extraneous data
 			bSelected = false; // Deselect
 		}
 		else
 		{
-			olddata.AppendArray(&m_dataArray[iCurByte], (iPasteTimes - 1) * iPasteSkip);
+			olddata = UndoRecord::alloc(&m_dataArray[iCurByte], (iPasteTimes - 1) * iPasteSkip);
 		}
 		int i = iCurByte;
 		for (int k = 0 ; k < iPasteTimes ; k++)
 		{
-			if (!m_dataArray.InsertAtGrow(i, (BYTE*)pcPastestring, 0, destlen))
+			if (!m_dataArray.InsertAtGrow(i, (BYTE*)pcPastestring, destlen))
 			{
 				MessageBox(pDlg, GetLangString(IDS_PASTE_NO_MEM), MB_ICONERROR);
 				break;
@@ -181,13 +181,13 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 	{
 		// Overwrite.
 		// Enough space for writing?
-		if (m_dataArray.GetLength() - iCurByte < (iPasteSkip + destlen) * iPasteTimes)
+		if (m_dataArray.size() - iCurByte < (iPasteSkip + destlen) * iPasteTimes)
 		{
 			MessageBox(pDlg, GetLangString(IDS_PASTE_NO_SPACE), MB_ICONERROR);
 			delete [] pcPastestring;
 			return TRUE;
 		}
-		olddata.AppendArray(&m_dataArray[iCurByte], (iPasteTimes - 1) * (iPasteSkip + destlen) + destlen);
+		olddata = UndoRecord::alloc(&m_dataArray[iCurByte], (iPasteTimes - 1) * (iPasteSkip + destlen) + destlen);
 		// Overwrite data.
 		for (int k = 0 ; k < iPasteTimes ; k++)
 		{
@@ -199,7 +199,7 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 		bFilestatusChanged = true;
 		repaint();
 	}
-	push_undorecord(iCurByte, olddata, olddata.GetLength(), &m_dataArray[iCurByte], (iPasteTimes - 1) * (iPasteSkip + destlen) + destlen);
+	push_undorecord(iCurByte, (iPasteTimes - 1) * (iPasteSkip + destlen) + destlen, olddata);
 	delete [] pcPastestring;
 	return TRUE;
 }
@@ -316,7 +316,7 @@ BOOL FastPasteDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM)
 		{
 			HListBox *const list = static_cast<HListBox *>(pDlg->GetDlgItem(IDC_FPASTE_CFORMAT));
 			int i = list->GetCurSel();
-			UINT f = list->GetItemData(i);
+			UINT f = static_cast<UINT>(list->GetItemData(i));
 			if (f == CF_UNICODETEXT)
 				pDlg->CheckDlgButton(IDC_FPASTE_TXT, BST_CHECKED);
 		}

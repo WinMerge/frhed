@@ -70,7 +70,7 @@ BOOL AddBmkDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM lParam)
 			MessageBox(pDlg, GetLangString(IDS_OFFSET_START_ERROR), MB_ICONERROR);
 			return TRUE;
 		}
-		if (offset < 0 || offset > m_dataArray.GetLength())
+		if (offset < 0 || offset > m_dataArray.size())
 		{
 			MessageBox(pDlg, GetLangString(IDS_BMK_INVALID_POSITION), MB_ICONERROR);
 			return TRUE;

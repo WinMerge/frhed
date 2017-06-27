@@ -46,17 +46,16 @@ BOOL AppendDlg::Apply(HWindow *pDlg)
 		MessageBox(pDlg, GetLangString(IDS_APPEND_UNKNOWN_AMOUNT), MB_ICONERROR);
 		return FALSE;
 	}
-	int oldupbound = m_dataArray.GetLength();
-	if (!m_dataArray.SetSize(m_dataArray.GetSize() + iAppendbytes))
+	int oldsize = m_dataArray.size();
+	if (!m_dataArray.resize(oldsize + iAppendbytes))
 	{
 		MessageBox(pDlg, GetLangString(IDS_APPEND_NO_MEM), MB_ICONERROR);
 		return FALSE;
 	}
-	m_dataArray.ExpandToSize();
 	WaitCursor wc;
 	for (int i = 0 ; i < iAppendbytes ; i++)
-		m_dataArray[oldupbound + i] = 0;
-	push_undorecord(oldupbound, NULL, 0, &m_dataArray[oldupbound], iAppendbytes);
+		m_dataArray[oldsize + i] = 0;
+	push_undorecord(oldsize, iAppendbytes, NULL);
 	bFilestatusChanged = true;
 	resize_window();
 	return TRUE;

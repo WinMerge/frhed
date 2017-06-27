@@ -106,9 +106,8 @@ BOOL OpenPartiallyDlg::Apply(HWindow *pDlg)
 	}
 
 	BOOL done = FALSE;
-	if (m_dataArray.SetSize(numBytesPl))
+	if (m_dataArray.resize(numBytesPl))
 	{
-		m_dataArray.ExpandToSize();
 		_lseeki64(filehandle, iStartPL, 0);
 		iPartialOffset = iStartPL;
 		iPartialOpenLen = (int) numBytesPl;
@@ -116,13 +115,13 @@ BOOL OpenPartiallyDlg::Apply(HWindow *pDlg)
 		bPartialStats = bShowFileStatsPL;
 
 		// m_dataArray restricts max size to 2 GB.
-		if (_read(filehandle, m_dataArray, numBytesPl) != -1)
+		if (_read(filehandle, m_dataArray.pointer(), numBytesPl) != -1)
 		{
 			done = TRUE;
 		}
 		else
 		{
-			m_dataArray.ClearAll();
+			m_dataArray.clear();
 			MessageBox(pDlg, GetLangString(IDS_ERR_READING_FILE), MB_ICONERROR);
 		}
 	}

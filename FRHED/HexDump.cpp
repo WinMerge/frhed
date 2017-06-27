@@ -111,7 +111,7 @@ void HexDump::Write(int startInd, int endInd)
 		// Write bytes and chars.
 		for (int j = 0 ; j < m_bytesPerLine ; j++)
 		{
-			if (a + j > m_pData->GetUpperBound())
+			if (a + j >= m_pData->size())
 			{
 				// Nonexistant byte.
 				m_pBuffer[k + l + j * 3    ] = ' ';

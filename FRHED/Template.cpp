@@ -33,11 +33,12 @@ Last change: 2013-02-24 by Jochen Neubeck
 /**
  * @brief Constructor.
  */
-Template::Template(const SimpleArray<BYTE> &dataArray)
+Template::Template(BYTE const *data, int size)
 : m_filehandle(-1)
 , m_tmplBuf(NULL)
 , m_filelen(0)
-, m_dataArray(dataArray)
+, m_data(data)
+, m_size(size)
 {
 }
 
@@ -158,7 +159,7 @@ void Template::ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, int curByt
 					if (ignore_non_code(m_tmplBuf, m_filelen, index))
 					{
 						// Enough space for a byte?
-						if (m_dataArray.GetLength() - fpos >= 1)
+						if (m_size - fpos >= 1)
 						{
 							// Read var name.
 							TCHAR name[TPL_NAME_MAXLEN];
@@ -171,17 +172,17 @@ void Template::ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, int curByt
 							m_resultString += name;
 							// Write value to output.
 							TCHAR buf[TPL_NAME_MAXLEN + 200];
-							if (m_dataArray[fpos] != 0)
+							if (m_data[fpos] != 0)
 							{
 								_stprintf(buf, GetLangString(IDS_TPL_FMT_BYTE_0),
-									(int) (signed char) m_dataArray[fpos], m_dataArray[fpos],
-									m_dataArray[fpos], m_dataArray[fpos]);
+									(int) (signed char) m_data[fpos], m_data[fpos],
+									m_data[fpos], m_data[fpos]);
 							}
 							else
 							{
 								_stprintf(buf, GetLangString(IDS_TPL_FMT_BYTE),
-									(int) (signed char) m_dataArray[fpos], m_dataArray[fpos],
-									m_dataArray[fpos]);
+									(int) (signed char) m_data[fpos], m_data[fpos],
+									m_data[fpos]);
 							}
 							m_resultString += _T(" ");
 							m_resultString += buf;
@@ -209,7 +210,7 @@ void Template::ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, int curByt
 					if (ignore_non_code(m_tmplBuf, m_filelen, index))
 					{
 						// Enough space for a word?
-						if (m_dataArray.GetLength() - fpos >= 2)
+						if (m_size - fpos >= 2)
 						{
 							// Read var name.
 							TCHAR name[TPL_NAME_MAXLEN];
@@ -223,14 +224,14 @@ void Template::ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, int curByt
 							// Get value depending on binary mode.
 							if (binaryMode == HexEditorWindow::ENDIAN_LITTLE)
 							{
-								wd = *((WORD*)&m_dataArray[fpos]);
+								wd = *((WORD*)&m_data[fpos]);
 							}
 							else // BIGENDIAN_MODE
 							{
 								int i;
 								for (i = 0; i < 2; i++)
 								{
-									((TCHAR*)&wd)[i] = m_dataArray[fpos + 1 - i];
+									((TCHAR*)&wd)[i] = m_data[fpos + 1 - i];
 								}
 							}
 							TCHAR buf[TPL_NAME_MAXLEN + 200];
@@ -260,7 +261,7 @@ void Template::ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, int curByt
 					if (ignore_non_code(m_tmplBuf, m_filelen, index))
 					{
 						// Enough space for a longword?
-						if (m_dataArray.GetLength() - fpos >= 4)
+						if (m_size - fpos >= 4)
 						{
 							// Read var name.
 							TCHAR name[TPL_NAME_MAXLEN];
@@ -274,13 +275,13 @@ void Template::ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, int curByt
 							// Get value depending on binary mode.
 							if (binaryMode == HexEditorWindow::ENDIAN_LITTLE)
 							{
-								dw = *((DWORD*)&m_dataArray[fpos]);
+								dw = *((DWORD*)&m_data[fpos]);
 							}
 							else // BIGENDIAN_MODE
 							{
 								int i;
 								for (i = 0; i < 4; i++)
-									((char*)&dw)[i] = m_dataArray[fpos + 3 - i];
+									((char*)&dw)[i] = m_data[fpos + 3 - i];
 							}
 							TCHAR buf[TPL_NAME_MAXLEN + 200];
 							_stprintf(buf, GetLangString(IDS_TPL_FTM_DWORD),
@@ -308,7 +309,7 @@ void Template::ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, int curByt
 					if (ignore_non_code(m_tmplBuf, m_filelen, index))
 					{
 						// Enough space for a float?
-						if (m_dataArray.GetLength() - fpos >= 4)
+						if (m_size - fpos >= 4)
 						{
 							// Read var name.
 							TCHAR name[TPL_NAME_MAXLEN];
@@ -322,13 +323,13 @@ void Template::ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, int curByt
 							// Get value depending on binary mode.
 							if (binaryMode == HexEditorWindow::ENDIAN_LITTLE)
 							{
-								f = *((float*)&m_dataArray[fpos]);
+								f = *((float*)&m_data[fpos]);
 							}
 							else // BIGENDIAN_MODE
 							{
 								int i;
 								for (i = 0; i < 4; i++)
-									((char*)&f)[i] = m_dataArray[fpos + 3 - i];
+									((char*)&f)[i] = m_data[fpos + 3 - i];
 							}
 							TCHAR buf[TPL_NAME_MAXLEN + 200];
 							_stprintf(buf, GetLangString(IDS_TPL_FMT_FLOAT),
@@ -356,7 +357,7 @@ void Template::ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, int curByt
 					if (ignore_non_code(m_tmplBuf, m_filelen, index))
 					{
 						// Enough space for a double?
-						if (m_dataArray.GetLength() - fpos >= 8)
+						if (m_size - fpos >= 8)
 						{
 							// Read var name.
 							TCHAR name[TPL_NAME_MAXLEN];
@@ -370,13 +371,13 @@ void Template::ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, int curByt
 							// Get value depending on binary mode.
 							if (binaryMode == HexEditorWindow::ENDIAN_LITTLE)
 							{
-								d = *((double*)&m_dataArray[fpos]);
+								d = *((double*)&m_data[fpos]);
 							}
 							else // BIGENDIAN_MODE
 							{
 								int i;
 								for (i = 0; i < 8; i++)
-									((char*)&d)[i] = m_dataArray[fpos + 7 - i];
+									((char*)&d)[i] = m_data[fpos + 7 - i];
 							}
 							TCHAR buf[TPL_NAME_MAXLEN + 200];
 							_stprintf(buf, GetLangString(IDS_TPL_FMT_DOUBLE), d);

@@ -16,7 +16,7 @@ along with this program; see the file COPYING.  If not, write to the Free
 Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 02111-1307, USA.
 
-Last change: 2013-02-24 by Jochen Neubeck
+Last change: 2017-06-24 by Jochen Neubeck
 */
 /** 
  * @file  Simparr.h
@@ -27,104 +27,51 @@ Last change: 2013-02-24 by Jochen Neubeck
 #ifndef simplearr_h
 #define simplearr_h
 
-#define ARR_EMPTY -1
-
 /**
  * A simple array class template.
  * This template offers basic array class methods.
  * @note This class is limited in 32-bit space for item count.
  */
-template<class T> class SimpleArray
+template<typename Type, int mGrowBy = 1>
+class SimpleArray : public Vector<Type, mGrowBy>
 {
 public:
-	SimpleArray();
-	SimpleArray(const T* ptArray, int upbound, int size);
-	SimpleArray(int size, const T* ptArray);
-	SimpleArray(int nNewSize, int nGrowBy = 1);
-	SimpleArray(const SimpleArray& spaArg);
-	virtual ~SimpleArray();
-
-	operator T*()
+	SimpleArray() { }
+	bool InsertAtGrow(int index, Type val, int number = 1)
 	{
-		return m_pT;
+		if (index < 0 || index > mSize || number <= 0)
+			return false;
+		return Vector::insert(index, val, number);
 	}
-	operator const T*() const
+	bool InsertAtGrow(int index, Type const *ptr, int number)
 	{
-		return m_pT;
+		if (index < 0 || index > mSize || number <= 0)
+			return false;
+		return Vector::insert(index, ptr, number);
 	}
-
-	bool InsertAt(int nIndex, T argT, int nCount = 1);
-	void InsertAtRef(int nIndex, const T& argT, int nCount = 1);
-	bool InsertAtGrow(int nIndex, T argT, int nCount = 1);
-	bool InsertAtGrow (int nIndex, const T* pT, int nSrcIndex, int nCount);
-	void InsertAtGrowRef(int nIndex, const T& argT, int nCount = 1);
-	bool RemoveAt(int nIndex, int nCount = 1);
-	void SetAtGrow(int nIndex, T argT);
-	bool SetAtGrowRef(int nIndex, const T& argT);
-	void SetAt(int nIndex, T argT);
-	void SetAtRef(int nIndex, const T& argT);
-	T GetAt(int nIndex) const;
-	T& GetRefAt(int nIndex) const;
-	int GetSize() const;
-	int GetUpperBound() const;
-	int GetLength() const;
-	int GetGrowBy() const;
-	bool SetSize(int nNewSize, int nGrowBy = 0);
-	void SetGrowBy(int nGrowBy);
-	T& operator[](int nIndex) {return m_pT[nIndex];}
-	SimpleArray<T>& operator=(const SimpleArray<T>& spa);
-	void ClearAll();
-	bool blContainsRef(const T& argT);
-	bool blContains(T argT);
-	int nContainsAt(T argT);
-	bool blIsEmpty() const;
-	void AppendRef(const T& argT);
-	void Append(T argT);
-	void Exchange(int nIndex1, int nIndex2);
-	bool blCompare(SimpleArray<T>& spa) const;
-	int operator==(SimpleArray<T>& spa);
-	int operator!=(SimpleArray<T>& spa);
-	bool Adopt(T* ptArray, int upbound, int size);
-	void SetUpperBound(int upbnd);
-	bool AppendArray( T* pSrc, int srclen );
-	void ExpandToSize();
-	bool CopyFrom(int index, const T* pSrc, int srclen);
-	bool Replace(int ToReplaceIndex, int ToReplaceLength, const T* pReplaceWith, int ReplaceWithLength);
-
-protected:
-	bool AddSpace(int nExtend);
-	T* m_pT;
-	int m_nSize;
-	int m_nUpperBound;
-	int m_nGrowBy;
+	bool RemoveAt(int index, int number = 1)
+	{
+		if (index < 0 || index >= mSize || number <= 0)
+			return false;
+		Vector::remove(index, number);
+		return true;
+	}
+	void Adopt(Type *data, int size, int capacity)
+	{
+		delete [] mData;
+		mData = data;
+		mCapacity = capacity;
+		mSize = size;
+	}
+	bool Replace(int index, int length, Type const *ptr, int number)
+	{
+		if (index < 0 || length <= 0 || index + length > mSize)
+			return false;
+		return replace(index, length, ptr, number);
+	}
+private:
+	SimpleArray(const SimpleArray &); // disallow copy construction
+	SimpleArray &operator=(const SimpleArray &); // disallow assignment
 };
-
-// The template implementation methods must be included to the header file.
-// Otherwise there will be link errors.
-#include "Simparr_imp.h"
-
-/**
- * @brief A string class.
- */
-class SimpleString : public SimpleArray<CHAR>
-{
-public:
-	SimpleString operator+(const SimpleString& str1);
-	SimpleString();
-	SimpleString(LPCSTR ps);
-
-	bool IsEmpty() const;
-	int StrLen() const;
-	int AppendString(LPCSTR ps);
-	int SetToString(LPCSTR ps);
-	void Clear();
-
-	SimpleString& operator=(LPCSTR ps);
-	SimpleString& operator=(const SimpleString &str);
-	SimpleString& operator+=(LPCSTR ps);
-};
-
-SimpleString operator+(const SimpleString &ps1, LPCSTR ps2);
-SimpleString operator+(LPCSTR ps1, const SimpleString &ps2);
 
 #endif // simplearr_h

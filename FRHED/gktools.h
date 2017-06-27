@@ -23,8 +23,8 @@ Last change: 2013-02-24 by Jochen Neubeck
 
 #include "EncoderLib.h"
 
-BOOL WINAPI GetDllExportNames(LPCTSTR pszFilename, ULONG* lpulOffset, ULONG* lpulSize);
-BOOL WINAPI GetDllImportNames(LPCTSTR pszFilename, ULONG* lpulOffset, ULONG* lpulSize);
+BOOL WINAPI GetDllExportNames(LPCTSTR pszFilename, ULONG_PTR* lpulOffset, ULONG_PTR* lpulSize);
+BOOL WINAPI GetDllImportNames(LPCTSTR pszFilename, ULONG_PTR* lpulOffset, ULONG_PTR* lpulSize);
 
 extern PartitionInfo* SelectedPartitionInfo;
 

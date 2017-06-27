@@ -16,7 +16,7 @@ along with this program; see the file COPYING.  If not, write to the Free
 Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 02111-1307, USA.
 
-Last change: 2013-02-24 by Jochen Neubeck
+Last change: 2017-06-21 by Jochen Neubeck
 */
 /** 
  * @file  BinTrans.cpp
@@ -25,7 +25,6 @@ Last change: 2013-02-24 by Jochen Neubeck
  *
  */
 #include "precomp.h"
-#include "Simparr.h"
 #include "hexwnd.h"
 #include "BinTrans.h"
 
@@ -72,25 +71,11 @@ int Text2BinTranslator::iFindBytePos(const char* src, char c)
  * @param [in] binmode BIG/LITTLE endian.
  * @return TRUE if translation succeeded, FALSE otherwise.
  */
-int Text2BinTranslator::GetTrans2Bin(SimpleArray<BYTE>& sa, int charmode, int binmode)
+int Text2BinTranslator::GetTrans2Bin(Vector<BYTE> &sa, int charmode, int binmode)
 {
-	sa.ClearAll();
-
-	int destlen = iLengthOfTransToBin(m_pT, m_nUpperBound);
-	if (destlen > 0)
-	{
-		sa.SetSize(destlen);
-		sa.ExpandToSize();
-		iCreateBcTranslation(sa, m_pT, m_nUpperBound, charmode, binmode);
-		return TRUE;
-	}
-	else
-	{
-		// Empty input string => don't allocate anything and return 0.
-		return FALSE;
-	}
-
-	return TRUE;
+	int destlen = iLengthOfTransToBin(c_str(), length());
+	sa.resize(destlen);
+	return iCreateBcTranslation(sa.pointer(), c_str(), length(), charmode, binmode);
 }
 
 /**
@@ -417,22 +402,21 @@ int Text2BinTranslator::iCreateBcTranslation(BYTE* dest, const char* src, int sr
 	return di;
 }
 
-//-------------------------------------------------------------------
+/**
+ * @brief Create a Text2BinTranslator from a normal char array-string.
+ */
 Text2BinTranslator::Text2BinTranslator(const char* ps)
+	: String(ps)
 {
-	// Create a Text2BinTranslator from a normal char array-string.
-	m_nGrowBy = 64;
-	Clear();
-	SetToString(ps);
 }
 
 //-------------------------------------------------------------------
-int Text2BinTranslator::bCompareBin( Text2BinTranslator& tr2, int charmode, int binmode )
+int Text2BinTranslator::bCompareBin(Text2BinTranslator& tr2, int charmode, int binmode)
 {
-	SimpleArray<BYTE> sa1, sa2;
-	GetTrans2Bin(sa1, charmode, binmode);
-	tr2.GetTrans2Bin(sa2, charmode, binmode);
-	return (sa1 == sa2);
+	Vector<BYTE> sa1, sa2;
+	int const n = GetTrans2Bin(sa1, charmode, binmode);
+	int const m = tr2.GetTrans2Bin(sa2, charmode, binmode);
+	return n == m && memcmp(sa1.pointer(), sa2.pointer(), n) == 0;
 }
 
 /**

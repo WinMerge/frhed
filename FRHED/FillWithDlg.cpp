@@ -56,7 +56,7 @@ void FillWithDialog::inittxt(HWindow *pDlg)
 	else
 	{
 		iStartOfSelSetting = 0;
-		iEndOfSelSetting = m_dataArray.GetUpperBound();
+		iEndOfSelSetting = m_dataArray.size() - 1;
 	}
 	//init all the readonly boxes down below
 	TCHAR bufff[250];
@@ -310,10 +310,10 @@ INT_PTR FillWithDialog::DlgProc(HWindow *pDlg, UINT iMsg, WPARAM wParam, LPARAM 
 				else
 				{
 					iStartOfSelSetting = 0;
-					iEndOfSelSetting = m_dataArray.GetUpperBound();
+					iEndOfSelSetting = m_dataArray.size() - 1;
 				}
 
-				SimpleArray<BYTE> olddata(iEndOfSelSetting - iStartOfSelSetting + 1, &m_dataArray[iStartOfSelSetting]);
+				UndoRecord::Data *olddata = UndoRecord::alloc(&m_dataArray[iStartOfSelSetting], iEndOfSelSetting - iStartOfSelSetting + 1);
 				int i = iStartOfSelSetting;
 				int ii = 0;
 				switch (asstyp)
@@ -347,7 +347,7 @@ INT_PTR FillWithDialog::DlgProc(HWindow *pDlg, UINT iMsg, WPARAM wParam, LPARAM 
 					}
 					break;
 				}
-				push_undorecord(iStartOfSelSetting, olddata, olddata.GetLength(), &m_dataArray[iStartOfSelSetting], olddata.GetLength());
+				push_undorecord(iStartOfSelSetting, UndoRecord::len(olddata), olddata);
 				if (curtyp)
 					_close(FWFile);//close file
 				SetCursor(LoadCursor(NULL, IDC_ARROW));

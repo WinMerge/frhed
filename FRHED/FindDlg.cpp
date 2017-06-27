@@ -123,7 +123,7 @@ BOOL FindDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM lParam)
 				if (m_pFindCtxt->m_iDirection == 1)
 				{
 					i = findutils_FindBytes(&m_dataArray[iCurByte + 1],
-							m_dataArray.GetLength() - iCurByte - 1,
+							m_dataArray.size() - iCurByte - 1,
 							pcFindstring, destlen, 1, m_pFindCtxt->m_bMatchCase);
 					if (i != -1)
 						iCurByte += i + 1;
@@ -132,7 +132,7 @@ BOOL FindDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM lParam)
 				else
 				{
 					i = findutils_FindBytes(&m_dataArray[0],
-						min(iCurByte + (destlen - 1), m_dataArray.GetLength()),
+						min(iCurByte + (destlen - 1), m_dataArray.size()),
 						pcFindstring, destlen, -1, m_pFindCtxt->m_bMatchCase);
 					if (i != -1)
 						iCurByte = i;
