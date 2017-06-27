@@ -25,7 +25,6 @@ Last change: 2013-02-26 by Jochen Neubeck
  *
  */
 #include "precomp.h"
-#include "Simparr.h"
 #include "LangArray.h"
 #include "VersionData.h"
 
@@ -86,16 +85,16 @@ LangArray::~LangArray()
 
 void LangArray::ExpandToSize()
 {
-	while (m_nUpperBound < m_nSize - 1)
-		m_pT[++m_nUpperBound] = 0;
+	while (mSize < mCapacity)
+		mData[mSize++] = NULL;
 }
 
 void LangArray::ClearAll()
 {
-	while (m_nSize)
-		if (char *data = m_pT[--m_nSize])
+	while (mSize)
+		if (char *data = mData[--mSize])
 			StringData::Unshare(data);
-	SimpleArray<char *>::ClearAll();
+	Vector::clear();
 }
 
 /**
@@ -103,8 +102,9 @@ void LangArray::ClearAll()
  * @param [in] codepage Codepage to use in conversion.
  * @param [in,out] s String to convert.
  */
-static void unslash(unsigned codepage, char *p)
+static int unslash(unsigned codepage, char *s)
 {
+	char *p = s;
 	char *q = p;
 	char c;
 	do
@@ -148,12 +148,13 @@ static void unslash(unsigned codepage, char *p)
 			// fall through
 		default:
 			*p = c;
-			if ((*p & 0x80) && IsDBCSLeadByteEx(codepage, *p))
+			if ((c & 0x80) && IsDBCSLeadByteEx(codepage, c))
 				*++p = *r++;
 			q = r;
 		}
 		++p;
 	} while (c != '\0');
+	return static_cast<int>(p - s - 1);
 }
 
 BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
@@ -163,9 +164,9 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 	m_langid = langid;
 	ClearAll();
 	char buf[1024];
-	SimpleString *ps = 0;
-	SimpleString msgid;
-	SimpleArray<int> lines;
+	String *ps = 0;
+	String msgid;
+	Vector<int> lines;
 	int unresolved = 0;
 	int mismatched = 0;
 	FILE *f = 0;
@@ -216,7 +217,7 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 				if (char *q = strchr(p, ':'))
 				{
 					int line = strtol(q + 1, &q, 10);
-					lines.Append(line);
+					lines.add(line);
 					++unresolved;
 				}
 			}
@@ -231,27 +232,27 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 				if (q > p)
 				{
 					*q = '\0';
-					ps->AppendString(p + 1);
+					ps->append(p + 1, static_cast<int>(q - p - 1));
 				}
 				else
 				{
 					ps = 0;
-					if (int i = lines.GetLength())
+					if (int i = lines.size())
 					{
-						StringData *psd = StringData::Create(msgid, msgid.StrLen());
+						StringData *psd = StringData::Create(msgid.c_str(), msgid.length());
 						do
 						{
 							int line = lines[--i];
-							if (GetLength() <= line)
+							if (mSize <= line)
 							{
-								SetSize(line + 1);
+								reserve(line + 1);
 								ExpandToSize();
 							}
-							SetAt(line, psd->Share());
+							mData[line] = psd->Share();
 						} while (i);
 					}
-					lines.ClearAll();
-					msgid.Clear();
+					lines.clear();
+					msgid.clear();
 				}
 			}
 		}
@@ -290,11 +291,11 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 		return FALSE;
 	}
 	ps = 0;
-	msgid.ClearAll();
-	lines.ClearAll();
-	SimpleString msgstr;
-	SimpleString format;
-	SimpleString directive;
+	msgid.clear();
+	lines.clear();
+	String msgstr;
+	String format;
+	String directive;
 	while (fgets(buf, sizeof buf, f))
 	{
 		if (char *p = EatPrefix(buf, "#:"))
@@ -304,7 +305,7 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 				int line = strtol(q + 1, &q, 10);
 				if (line == 367)
 					line = line;
-				lines.Append(line);
+				lines.add(line);
 				--unresolved;
 			}
 		}
@@ -333,30 +334,30 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 			if (q > p)
 			{
 				*q = '\0';
-				ps->AppendString(p + 1);
+				ps->append(p + 1, static_cast<int>(q - p - 1));
 			}
 			else
 			{
 				ps = 0;
-				if (msgstr.IsEmpty())
-					msgstr = msgid;
-				unslash(m_codepage, msgstr);
-				if (int i = lines.GetLength())
+				if (msgstr.length() == 0)
+					msgstr.append(msgid.c_str(), msgid.length());
+				msgstr.resize(unslash(m_codepage, msgstr.pointer()));
+				if (int i = lines.size())
 				{
-					StringData *psd = StringData::Create(msgstr, msgstr.StrLen());
+					StringData *psd = StringData::Create(msgstr.c_str(), msgstr.length());
 					do
 					{
 						int line = lines[--i];
-						if (GetLength() <= line)
+						if (mSize <= line)
 						{
-							SetSize(line + 1);
+							reserve(line + 1);
 							ExpandToSize();
 						}
-						char *data = GetAt(line);
-						if (data && strcmp(data, msgid) == 0)
+						char *data = mData[line];
+						if (data && strcmp(data, msgid.c_str()) == 0)
 						{
 							StringData::Unshare(data);
-							SetAt(line, psd->Share());
+							mData[line] = psd->Share();
 						}
 						else
 						{
@@ -364,14 +365,14 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 						}
 					} while (i);
 				}
-				lines.ClearAll();
-				if (strcmp(directive, "Codepage") == 0)
+				lines.clear();
+				if (strcmp(directive.c_str(), "Codepage") == 0)
 				{
-					m_codepage = strtol(msgstr, &p, 10);
-					directive.Clear();
+					m_codepage = strtol(msgstr.c_str(), &p, 10);
+					directive.clear();
 				}
-				msgid.Clear();
-				msgstr.Clear();
+				msgid.clear();
+				msgstr.clear();
 			}
 		}
 	}
@@ -391,9 +392,9 @@ PTSTR LangArray::TranslateString(int line)
 {
 #ifdef UNICODE
 	BSTR ws = 0;
-	if (line > 0 && line < GetLength())
+	if (line > 0 && line < mSize)
 	{
-		if (char *s = GetAt(line))
+		if (char *s = mData[line])
 		{
 			if (UINT len = static_cast<UINT>(strlen(s)))
 			{
@@ -406,11 +407,11 @@ PTSTR LangArray::TranslateString(int line)
 	return ws;
 #else
 	PTSTR t = 0;
-	if (line > 0 && line < GetLength())
+	if (line > 0 && line < mSize)
 	{
-		if (char *s = GetAt(line))
+		if (char *s = mData[line])
 		{
-			if (int len = strlen(s))
+			if (UINT len = static_cast<UINT>(strlen(s)))
 			{
 				unsigned codepage = GetACP();
 				if (m_codepage != codepage)
