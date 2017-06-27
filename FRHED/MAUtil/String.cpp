@@ -17,7 +17,7 @@ Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 This is an edited version of code obtained from:
 https://github.com/MoSync/MoSync/blob/master/libs/MAUtil
 
-Last change: 2013-02-24 by Jochen Neubeck
+Last change: 2017-06-27 by Jochen Neubeck
 */
 
 #include "precomp.h"
@@ -30,37 +30,38 @@ namespace MAUtil {
 #endif
 
 	template<class Tchar> StringData<Tchar>::StringData(const Tchar* text, int len)
-		: Vector<Tchar>(len + 1), RefCounted(1)
+		: RefCounted(1)
 	{
-		this->resize(len);
-		this->mData[len] = 0;
-		memcpy(this->mData, text, len * sizeof(Tchar));
+		reserve(len + 1);
+		resize(len);
+		mData[len] = 0;
+		memcpy(mData, text, len * sizeof(Tchar));
 	}
-
 
 	template<class Tchar> StringData<Tchar>::StringData(const Tchar* text)
-		: Vector<Tchar>(tstrlen(text) + 1), RefCounted(1)
+		: RefCounted(1)
 	{
-		int len = this->capacity() - 1;
-		this->resize(len);
-		memcpy(this->mData, text, this->capacity() * sizeof(Tchar));
+		int len = tstrlen(text);
+		reserve(len + 1);
+		resize(len);
+		memcpy(mData, text, capacity() * sizeof(Tchar));
 	}
-
 
 	template<class Tchar> StringData<Tchar>::StringData(int len)
-		: Vector<Tchar>(len+1), RefCounted(1)
+		: RefCounted(1)
 	{
-		this->resize(len);
-		this->mData[len] = 0;
+		reserve(len + 1);
+		resize(len);
+		mData[len] = 0;
 	}
 
-
-
 	template<class Tchar> StringData<Tchar>::StringData(const StringData& other)
-		: Vector<Tchar>(other.mSize+1), RefCounted(1)
+		: RefCounted(1)
 	{
-		this->mSize = other.mSize;
-		memcpy(this->mData, other.mData, (this->mSize+1) * sizeof(Tchar));
+		int len = other.mSize;
+		reserve(len + 1);
+		resize(len);
+		memcpy(mData, other.mData, capacity() * sizeof(Tchar));
 	}
 
 #ifdef HAVE_EMPTY_STRING
