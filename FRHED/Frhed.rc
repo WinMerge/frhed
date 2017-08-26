@@ -8,11 +8,12 @@
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
 
-/////////////////////////////////////////////////////////////////////////////
-//
 // Icon
-//
 
 IDI_FRHED               ICON "res/Frhed.ico"
+
+// Manifest
+
+1 RT_MANIFEST "res/Frhed.exe.manifest"
 
 #include "version.rc"
