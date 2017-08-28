@@ -268,10 +268,15 @@ namespace H2O
 			assert(::IsWindow(m_hWnd));
 			return ::EndDialog(m_hWnd, nResult);
 		}
-		BOOL IsDialogMessage(MSG *pMsg)
+		BOOL IsDialogMessageA(MSG *pMsg)
 		{
 			assert(::IsWindow(m_hWnd));
-			return ::IsDialogMessage(m_hWnd, pMsg);
+			return ::IsDialogMessageA(m_hWnd, pMsg);
+		}
+		BOOL IsDialogMessageW(MSG *pMsg)
+		{
+			assert(::IsWindow(m_hWnd));
+			return ::IsDialogMessageW(m_hWnd, pMsg);
 		}
 		BOOL OpenClipboard()
 		{
@@ -314,10 +319,15 @@ namespace H2O
 			assert(pwp->cbSize == sizeof *pfwi);
 			return ::FlashWindowEx(m_hWnd, pfwi);
 		}
-		HWindow *FindWindowEx(HWindow *pwndChildAfter, LPCTSTR lpszClass, LPCTSTR lpszWindow = NULL)
+		HWindow *FindWindowExA(HWindow *pwndChildAfter, LPCSTR lpszClass, LPCSTR lpszWindow = NULL)
 		{
 			assert(::IsWindow(m_hWnd));
-			return reinterpret_cast<HWindow *>(::FindWindowEx(m_hWnd, pwndChildAfter->m_hWnd, lpszClass, lpszWindow));
+			return reinterpret_cast<HWindow *>(::FindWindowExA(m_hWnd, pwndChildAfter->m_hWnd, lpszClass, lpszWindow));
+		}
+		HWindow *FindWindowExW(HWindow *pwndChildAfter, LPCWSTR lpszClass, LPCWSTR lpszWindow = NULL)
+		{
+			assert(::IsWindow(m_hWnd));
+			return reinterpret_cast<HWindow *>(::FindWindowExW(m_hWnd, pwndChildAfter->m_hWnd, lpszClass, lpszWindow));
 		}
 		HWindow *ChildWindowFromPoint(POINT pt)
 		{
@@ -734,11 +744,20 @@ namespace H2O
 	public:
 		using Window<Handle>::m_hWnd;
 		static HWindow *CreateEx(DWORD exStyle,
-			LPCTSTR className, LPCTSTR windowName, DWORD style,
+			LPCSTR className, LPCSTR windowName, DWORD style,
 			int x, int y, int cx, int cy, HWindow *parent, UINT id,
 			HINSTANCE hinst = NULL, void *param = NULL)
 		{
-			HWND hWnd = ::CreateWindowEx(exStyle, className, windowName, style,
+			HWND hWnd = ::CreateWindowExA(exStyle, className, windowName, style,
+				x, y, cx, cy, parent->m_hWnd, reinterpret_cast<HMENU>(id), hinst, param);
+			return reinterpret_cast<HWindow *>(hWnd);
+		}
+		static HWindow *CreateEx(DWORD exStyle,
+			LPCWSTR className, LPCWSTR windowName, DWORD style,
+			int x, int y, int cx, int cy, HWindow *parent, UINT id,
+			HINSTANCE hinst = NULL, void *param = NULL)
+		{
+			HWND hWnd = ::CreateWindowExW(exStyle, className, windowName, style,
 				x, y, cx, cy, parent->m_hWnd, reinterpret_cast<HMENU>(id), hinst, param);
 			return reinterpret_cast<HWindow *>(hWnd);
 		}
@@ -766,9 +785,13 @@ namespace H2O
 		{
 			return reinterpret_cast<HWindow *>(::GetCapture());
 		}
-		static HWindow *FindWindow(LPCTSTR lpszClass, LPCTSTR lpszWindow = NULL)
+		static HWindow *FindWindowA(LPCSTR lpszClass, LPCSTR lpszWindow = NULL)
 		{
-			return reinterpret_cast<HWindow *>(::FindWindow(lpszClass, lpszWindow));
+			return reinterpret_cast<HWindow *>(::FindWindowA(lpszClass, lpszWindow));
+		}
+		static HWindow *FindWindowW(LPCWSTR lpszClass, LPCWSTR lpszWindow = NULL)
+		{
+			return reinterpret_cast<HWindow *>(::FindWindowW(lpszClass, lpszWindow));
 		}
 		static HWindow *WindowFromPoint(POINT pt)
 		{
@@ -835,20 +858,35 @@ namespace H2O
 			assert(::IsMenu(m_hMenu));
 			return ::InsertMenuItem(m_hMenu, id, byPos, pmii);
 		}
-		BOOL AppendMenu(UINT flags, UINT_PTR id = 0, LPCTSTR text = NULL)
+		BOOL AppendMenuA(UINT flags, UINT_PTR id = 0, LPCSTR text = NULL)
 		{
 			assert(::IsMenu(m_hMenu));
-			return ::AppendMenu(m_hMenu, flags, id, text);
+			return ::AppendMenuA(m_hMenu, flags, id, text);
 		}
-		BOOL ModifyMenu(UINT index, UINT flags, UINT_PTR id = 0, LPCTSTR text = NULL)
+		BOOL AppendMenuW(UINT flags, UINT_PTR id = 0, LPCWSTR text = NULL)
 		{
 			assert(::IsMenu(m_hMenu));
-			return ::ModifyMenu(m_hMenu, index, flags, id, text);
+			return ::AppendMenuW(m_hMenu, flags, id, text);
 		}
-		BOOL InsertMenu(UINT index, UINT flags, UINT_PTR id = 0, LPCTSTR text = NULL)
+		BOOL ModifyMenuA(UINT index, UINT flags, UINT_PTR id = 0, LPCSTR text = NULL)
 		{
 			assert(::IsMenu(m_hMenu));
-			return ::InsertMenu(m_hMenu, index, flags, id, text);
+			return ::ModifyMenuA(m_hMenu, index, flags, id, text);
+		}
+		BOOL ModifyMenuW(UINT index, UINT flags, UINT_PTR id = 0, LPCWSTR text = NULL)
+		{
+			assert(::IsMenu(m_hMenu));
+			return ::ModifyMenuW(m_hMenu, index, flags, id, text);
+		}
+		BOOL InsertMenuA(UINT index, UINT flags, UINT_PTR id = 0, LPCSTR text = NULL)
+		{
+			assert(::IsMenu(m_hMenu));
+			return ::InsertMenuA(m_hMenu, index, flags, id, text);
+		}
+		BOOL InsertMenuW(UINT index, UINT flags, UINT_PTR id = 0, LPCWSTR text = NULL)
+		{
+			assert(::IsMenu(m_hMenu));
+			return ::InsertMenuW(m_hMenu, index, flags, id, text);
 		}
 		BOOL SetMenuItemBitmaps(UINT id, UINT flags, HBITMAP hbmUnchecked, HBITMAP hbmChecked)
 		{
@@ -967,16 +1005,30 @@ namespace H2O
 		static HFont *Create(
 			int cHeight, int cWidth, int cEscapement, int cOrientation, int cWeight,
 			DWORD bItalic, DWORD bUnderline, DWORD bStrikeOut, DWORD iCharSet, DWORD iOutPrecision,
-			DWORD iClipPrecision, DWORD iQuality, DWORD iPitchAndFamily, LPCTSTR pszFaceName)
+			DWORD iClipPrecision, DWORD iQuality, DWORD iPitchAndFamily, LPCSTR pszFaceName)
 		{
-			return reinterpret_cast<HFont *>(CreateFont(
+			return reinterpret_cast<HFont *>(CreateFontA(
 				cHeight, cWidth, cEscapement, cOrientation, cWeight,
 				bItalic, bUnderline, bStrikeOut, iCharSet, iOutPrecision,
 				iClipPrecision, iQuality, iPitchAndFamily, pszFaceName));
 		}
-		static HFont *CreateIndirect(const LOGFONT *plf)
+		static HFont *Create(
+			int cHeight, int cWidth, int cEscapement, int cOrientation, int cWeight,
+			DWORD bItalic, DWORD bUnderline, DWORD bStrikeOut, DWORD iCharSet, DWORD iOutPrecision,
+			DWORD iClipPrecision, DWORD iQuality, DWORD iPitchAndFamily, LPCWSTR pszFaceName)
 		{
-			return reinterpret_cast<HFont *>(::CreateFontIndirect(plf));
+			return reinterpret_cast<HFont *>(CreateFontW(
+				cHeight, cWidth, cEscapement, cOrientation, cWeight,
+				bItalic, bUnderline, bStrikeOut, iCharSet, iOutPrecision,
+				iClipPrecision, iQuality, iPitchAndFamily, pszFaceName));
+		}
+		static HFont *CreateIndirect(const LOGFONTA *plf)
+		{
+			return reinterpret_cast<HFont *>(::CreateFontIndirectA(plf));
+		}
+		static HFont *CreateIndirect(const LOGFONTW *plf)
+		{
+			return reinterpret_cast<HFont *>(::CreateFontIndirectW(plf));
 		}
 	};
 
@@ -1083,9 +1135,13 @@ namespace H2O
 	public:
 		using ImageList<Handle>::m_hImageList;
 		// Creation
-		static HImageList *LoadImage(HINSTANCE hinst, LPCTSTR name, int cx, int grow, COLORREF mask, UINT type, UINT flags)
+		static HImageList *LoadImage(HINSTANCE hinst, LPCSTR name, int cx, int grow, COLORREF mask, UINT type, UINT flags)
 		{
-			return reinterpret_cast<HImageList *>(::ImageList_LoadImage(hinst, name, cx, grow, mask, type, flags));
+			return reinterpret_cast<HImageList *>(::ImageList_LoadImageA(hinst, name, cx, grow, mask, type, flags));
+		}
+		static HImageList *LoadImage(HINSTANCE hinst, LPCWSTR name, int cx, int grow, COLORREF mask, UINT type, UINT flags)
+		{
+			return reinterpret_cast<HImageList *>(::ImageList_LoadImageW(hinst, name, cx, grow, mask, type, flags));
 		}
 		static HImageList *Create(int cx, int cy, UINT flags, int cInitial, int cGrow)
 		{
@@ -1141,14 +1197,23 @@ namespace H2O
 		{
 			return ::SetTextAlign(m_hDC, mode);
 		}
-		BOOL TextOut(int x, int y, LPCTSTR pch, int cch)
+		BOOL TextOutA(int x, int y, LPCSTR pch, int cch)
 		{
-			return ::TextOut(m_hDC, x, y, pch, cch);
+			return ::TextOutA(m_hDC, x, y, pch, cch);
 		}
-		BOOL ExtTextOut(int x, int y, UINT options, const RECT *prc,
-			LPCTSTR pch, int cch, const INT *pdx = NULL)
+		BOOL TextOutW(int x, int y, LPCWSTR pch, int cch)
 		{
-			return ::ExtTextOut(m_hDC, x, y, options, prc, pch, cch, pdx);
+			return ::TextOutW(m_hDC, x, y, pch, cch);
+		}
+		BOOL ExtTextOutA(int x, int y, UINT options, const RECT *prc,
+			LPCSTR pch, int cch, const INT *pdx = NULL)
+		{
+			return ::ExtTextOutA(m_hDC, x, y, options, prc, pch, cch, pdx);
+		}
+		BOOL ExtTextOutW(int x, int y, UINT options, const RECT *prc,
+			LPCWSTR pch, int cch, const INT *pdx = NULL)
+		{
+			return ::ExtTextOutW(m_hDC, x, y, options, prc, pch, cch, pdx);
 		}
 		int DrawTextA(LPCSTR pch, int cch, RECT *prc, UINT format)
 		{
@@ -1274,17 +1339,29 @@ namespace H2O
 		{
 			return ::ScaleWindowExtEx(m_hDC, xn, xd, yn, yd, size);
 		}
-		BOOL GetTextExtent(LPCTSTR pch, int cch, SIZE *size)
+		BOOL GetTextExtent(LPCSTR pch, int cch, SIZE *size)
 		{
-			return ::GetTextExtentPoint32(m_hDC, pch, cch, size);
+			return ::GetTextExtentPoint32A(m_hDC, pch, cch, size);
 		}
-		DWORD GetTabbedTextExtent(LPCTSTR pch, int cch, int nTabStops = 0, const INT *rgTabStops = NULL)
+		BOOL GetTextExtent(LPCWSTR pch, int cch, SIZE *size)
 		{
-			return ::GetTabbedTextExtent(m_hDC, pch, cch, nTabStops, rgTabStops);
+			return ::GetTextExtentPoint32W(m_hDC, pch, cch, size);
 		}
-		BOOL GetTextExtentExPoint(LPCTSTR pch, int cch, int maxExtent, LPINT fit, LPINT dx, SIZE *size)
+		DWORD GetTabbedTextExtentA(LPCSTR pch, int cch, int nTabStops = 0, const INT *rgTabStops = NULL)
 		{
-			return ::GetTextExtentExPoint(m_hDC, pch, cch, maxExtent, fit, dx, size);
+			return ::GetTabbedTextExtentA(m_hDC, pch, cch, nTabStops, rgTabStops);
+		}
+		DWORD GetTabbedTextExtentW(LPCWSTR pch, int cch, int nTabStops = 0, const INT *rgTabStops = NULL)
+		{
+			return ::GetTabbedTextExtentW(m_hDC, pch, cch, nTabStops, rgTabStops);
+		}
+		BOOL GetTextExtentExPointA(LPCSTR pch, int cch, int maxExtent, LPINT fit, LPINT dx, SIZE *size)
+		{
+			return ::GetTextExtentExPointA(m_hDC, pch, cch, maxExtent, fit, dx, size);
+		}
+		BOOL GetTextExtentExPointW(LPCWSTR pch, int cch, int maxExtent, LPINT fit, LPINT dx, SIZE *size)
+		{
+			return ::GetTextExtentExPointW(m_hDC, pch, cch, maxExtent, fit, dx, size);
 		}
 		BOOL GetCharWidth(UINT firstChar, UINT lastChar, INT *buffer)
 		{
@@ -1353,9 +1430,13 @@ namespace H2O
 	public:
 		using Surface<Handle>::m_hDC;
 		// Creation
-		static HSurface *CreateDC(LPCTSTR driver, LPCTSTR device = NULL, const DEVMODE *devmode = NULL)
+		static HSurface *CreateDCA(LPCSTR driver, LPCSTR device = NULL, const DEVMODEA *devmode = NULL)
 		{
-			return reinterpret_cast<HSurface *>(::CreateDC(driver, device, NULL, devmode));
+			return reinterpret_cast<HSurface *>(::CreateDCA(driver, device, NULL, devmode));
+		}
+		static HSurface *CreateDCW(LPCWSTR driver, LPCWSTR device = NULL, const DEVMODEW *devmode = NULL)
+		{
+			return reinterpret_cast<HSurface *>(::CreateDCW(driver, device, NULL, devmode));
 		}
 	};
 
@@ -1798,6 +1879,18 @@ namespace H2O
 			return (int)::SendMessage(m_hWnd, CB_GETLBTEXTLEN, (WPARAM)nIndex, 0);
 		}
 
+		int GetLBText(int nIndex, TString &s)
+		{
+			int ret = GetLBTextLen(nIndex);
+			if (ret != CB_ERR)
+			{
+				s.resize(ret);
+				ret = GetLBText(nIndex, s.pointer());
+				s.resize(ret);
+			}
+			return ret;
+		}
+
 		LCID GetLocale()
 		// Retrieves the current locale of the combo box.
 		{
@@ -1927,18 +2020,6 @@ namespace H2O
 		{
 			assert(::IsWindow(m_hWnd));
 			::SendMessage(m_hWnd, CB_SHOWDROPDOWN, (WPARAM)bShow, 0);
-		}
-
-		int GetLBText(int i, TString &s)
-		{
-			int ret = GetLBTextLen(i);
-			if (ret != CB_ERR)
-			{
-				s.resize(ret);
-				ret = GetLBText(i, s.pointer());
-				s.resize(ret);
-			}
-			return ret;
 		}
 	};
 
@@ -3381,7 +3462,7 @@ namespace H2O
 			return TreeView_GetItemRect(m_hWnd, hItem, prc, bTextOnly);
 		}
 
-		TString GetItemText(HTREEITEM hItem, UINT cchTextMax = 260)
+		BOOL GetItemText(HTREEITEM hItem, LPTSTR pszText, UINT cchTextMax)
 		// Retrieves the text for a tree-view item.
 		// Note: Although the tree-view control allows any length string to be stored 
 		//       as item text, only the first 260 characters are displayed.
@@ -3392,10 +3473,19 @@ namespace H2O
 			tvi.hItem = hItem;
 			tvi.mask = TVIF_TEXT;
 			tvi.cchTextMax = cchTextMax;
-			tvi.pszText = (LPTSTR)_alloca(cchTextMax * sizeof(TCHAR));
-			if (!TreeView_GetItem(m_hWnd, &tvi))
-				tvi.pszText[0] = _T('\0');
-			return tvi.pszText;
+			tvi.pszText = pszText;
+			return TreeView_GetItem(m_hWnd, &tvi);
+		}
+
+		TString GetItemText(HTREEITEM hItem, UINT cchTextMax = 260)
+		// Retrieves the text for a tree-view item.
+		// Note: Although the tree-view control allows any length string to be stored 
+		//       as item text, only the first 260 characters are displayed.
+		{
+			LPTSTR pszText = (LPTSTR)_alloca(cchTextMax * sizeof(TCHAR));
+			if (!GetItemText(hItem, pszText, cchTextMax))
+				pszText[0] = _T('\0');
+			return pszText;
 		}
 
 		HTREEITEM GetLastVisibleItem()
