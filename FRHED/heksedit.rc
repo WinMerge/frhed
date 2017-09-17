@@ -1254,8 +1254,6 @@ END
 STRINGTABLE
 BEGIN
     IDS_HEXF_NO_MEM        "Not enough memory to import data.\nCannot continue!\nDo you want to keep what has been found so far?"
-    IDS_HEXF_ILLEGAL_CHAR  "Illegal character found.\nIgnore further illegal characters?"
-    IDS_HEXF_ILLEGAL_OFFS  "Illegal character in offset.\nIgnore further invalid offsets?"
     IDS_HEXF_NONZERO_START "The first offset found was 0x%x, which is greater than zero.\nDo you want to insert %d null bytes at the start of the data?"
     IDS_HEXF_INV_OFFSET    "Invalid offset found.\nIgnore further invalid offsets?"
     IDS_HEXF_CHAR_HEX_NO_MATCH "Character data does not agree with hex data.\nIgnore further mismatched data?\nNB: Hex data will be used when ignoring."
@@ -1291,7 +1289,6 @@ BEGIN
     IDS_SBAR_LONG_SHORT    "L"
     IDS_SBAR_SIGNED        "Signed"
     IDS_SBAR_SIZE          "Size"
-    IDS_SBAR_NO_FILE       "No file loaded"
 END
 
 // Template

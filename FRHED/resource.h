@@ -457,8 +457,6 @@
 #define IDS_DRIVES_DRIVE_PART           10473
 #define IDS_DRIVES_DRIVE_ONLY           10474
 #define IDS_HEXF_NO_MEM                 10480
-#define IDS_HEXF_ILLEGAL_CHAR           10481
-#define IDS_HEXF_ILLEGAL_OFFS           10482
 #define IDS_HEXF_NONZERO_START          10483
 #define IDS_HEXF_INV_OFFSET             10484
 #define IDS_HEXF_CHAR_HEX_NO_MATCH      10485
@@ -484,7 +482,6 @@
 #define IDS_SBAR_LONG_SHORT             11015
 #define IDS_SBAR_SIGNED                 11016
 #define IDS_SBAR_SIZE                   11017
-#define IDS_SBAR_NO_FILE                11018
 #define IDS_TPL_FILENAME                12000
 #define IDS_TPL_TEMPLATE_FILE           12001
 #define IDS_TPL_APPLIED_AT              12002
