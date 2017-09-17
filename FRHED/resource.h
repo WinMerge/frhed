@@ -35,14 +35,12 @@
 #define IDD_TMPL_RESULT_DIALOG          130
 #define IDD_MOVE_COPY                   131
 #define IDD_REPLACEDIALOG               132
-#define IDD_DRAGDROP                    133
 #define IDD_DRAG_DROP                   133
 #define IDD_FILL_WITH                   134
 #define IDD_ENCODE_DECODE_DIALOG        135
 #define IDD_OPEN_DRIVE_DIALOG           136
 #define IDD_GOTO_TRACK_DIALOG           137
 #define IDD_SHORTCUTS                   138
-#define IDD_UPGRADE                     139
 #define IDD_CHANGEINST                  140
 #define IDB_TOOLBAR                     141
 #define IDC_REPLACEWITH_EDIT            142
@@ -476,12 +474,6 @@
 #define IDS_REPL_SAME_STRS              10500
 #define IDS_REPL_COUNT                  10501
 #define IDS_REPL_BAD_SELECT             10502
-#define IDS_UPDLG_OPTION                10512
-#define IDS_UPDLG_VALUE                 10513
-#define IDS_UPDLG_LINKS                 10514
-#define IDS_UPDLG_MRUFILES              10515
-#define IDS_UPDLG_CANT_COPY_CURR        10516
-#define IDS_CANT_OPEN_VER               10517
 #define IDS_SBAR_SELECTED_OFFSET        11008
 #define IDS_SBAR_NSEL_OFFSET            11009
 #define IDS_SBAR_BITS                   11010
