@@ -1,0 +1,9 @@
+syntax: glob
+.vs
+*.db
+*.sdf
+Dist
+BuildTmp
+Build
+ipch
+Translations/Frhed/heksedit.rc
