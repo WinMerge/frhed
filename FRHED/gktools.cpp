@@ -32,7 +32,7 @@ Last change: 2013-04-10 by Jochen Neubeck
 
 static PList PartitionInfoList;
 
-BOOL WINAPI GetDllExportNames(LPCTSTR pszFilename, ULONG* lpulOffset, ULONG* lpulSize)
+BOOL WINAPI GetDllExportNames(LPCTSTR pszFilename, ULONG_PTR* lpulOffset, ULONG_PTR* lpulSize)
 {
 	struct IMAGEHLP *IMAGEHLP = ::IMAGEHLP;
 	if (IMAGEHLP == 0)
@@ -77,7 +77,7 @@ BOOL WINAPI GetDllExportNames(LPCTSTR pszFilename, ULONG* lpulOffset, ULONG* lpu
 	return bDone;
 }
 
-BOOL WINAPI GetDllImportNames(LPCTSTR pszFilename, ULONG* lpulOffset, ULONG* lpulSize)
+BOOL WINAPI GetDllImportNames(LPCTSTR pszFilename, ULONG_PTR* lpulOffset, ULONG_PTR* lpulSize)
 {
 	struct IMAGEHLP *IMAGEHLP = ::IMAGEHLP;
 	if (IMAGEHLP == 0)
@@ -113,7 +113,7 @@ BOOL WINAPI GetDllImportNames(LPCTSTR pszFilename, ULONG* lpulOffset, ULONG* lpu
 					while (pThunk->u1.AddressOfData)
 					{
 						IMAGE_IMPORT_BY_NAME *pImport = static_cast<IMAGE_IMPORT_BY_NAME *>(
-							IMAGEHLP->ImageRvaToVa(li.FileHeader, li.MappedAddress, pThunk->u1.AddressOfData, 0));
+							IMAGEHLP->ImageRvaToVa(li.FileHeader, li.MappedAddress, static_cast<ULONG>(pThunk->u1.AddressOfData), 0));
 						if (pImport)
 						{
 							char *name = reinterpret_cast<char *>(pImport->Name);
@@ -140,19 +140,19 @@ BOOL WINAPI GetDllImportNames(LPCTSTR pszFilename, ULONG* lpulOffset, ULONG* lpu
 	return bDone;
 }
 
-static const MEMORY_CODING_DESCRIPTION BuiltinEncoders[] =
+static MEMORY_CODING_DESCRIPTION const BuiltinEncoders[] =
 {
 	{ "ROT-13", Rot13Encoder },
 	{ "XOR -1", XorEncoder },
 	{ 0, 0 }
 };
 
-static void AddEncoders(HListBox *pListbox, const MEMORY_CODING_DESCRIPTION *lpEncoders)
+static void AddEncoders(HListBox *pListbox, MEMORY_CODING_DESCRIPTION const *lpEncoders)
 {
 	for ( ; lpEncoders->lpszDescription ; ++lpEncoders)
 	{
 		int i = pListbox->AddString(static_cast<A2T>(lpEncoders->lpszDescription));
-		pListbox->SetItemDataPtr(i, const_cast<MEMORY_CODING_DESCRIPTION *>(lpEncoders));
+		pListbox->SetItemData(i, reinterpret_cast<DWORD_PTR>(lpEncoders));
 	}
 }
 
@@ -202,7 +202,7 @@ INT_PTR EncodeDecodeDialog::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPA
 		case IDOK:
 			{
 				MEMORY_CODING mc;
-				String sBuffer;
+				TString sBuffer;
 				pDlg->GetDlgItemText(IDC_ENCODE_ARGS, sBuffer);
 				mc.bEncode = pDlg->IsDlgButtonChecked(IDC_ENCODE_ENC);
 				mc.lpszArguments = sBuffer.c_str();
@@ -210,9 +210,9 @@ INT_PTR EncodeDecodeDialog::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPA
 				int nCurSel = pListbox->GetCurSel();
 				if (nCurSel < 0)
 					return TRUE;
-				mc.fpMcd = static_cast<const MEMORY_CODING_DESCRIPTION *>(pListbox->GetItemDataPtr(nCurSel));
+				mc.fpMcd = reinterpret_cast<MEMORY_CODING_DESCRIPTION const *>(pListbox->GetItemData(nCurSel));
 				int lower = 0;
-				int upper = m_dataArray.GetUpperBound();
+				int upper = m_dataArray.size() - 1;
 				if (bSelected)
 				{
 					lower = iGetStartOfSelection();
@@ -220,9 +220,9 @@ INT_PTR EncodeDecodeDialog::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPA
 				}
 				mc.lpbMemory = &m_dataArray[lower];
 				mc.dwSize = upper - lower + 1;
-				SimpleArray<BYTE> olddata(mc.dwSize, mc.lpbMemory);
+				UndoRecord::Data *olddata = UndoRecord::alloc(mc.lpbMemory, mc.dwSize);
 				mc.fpMcd->fpEncodeFunc(&mc);
-				push_undorecord(lower, olddata, olddata.GetLength(), mc.lpbMemory, mc.dwSize);
+				push_undorecord(lower, mc.dwSize, olddata);
 				bFilestatusChanged = true;
 				repaint();
 			}
@@ -257,7 +257,7 @@ INT_PTR OpenDriveDialog::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPARAM
 			{
 				PartitionInfo *pi = static_cast<PartitionInfo *>(Flink);
 				int i = list->AddString(pi->GetNameAsString());
-				list->SetItemDataPtr(i, pi);
+				list->SetItemData(i, reinterpret_cast<DWORD_PTR>(pi));
 			}
 			list->SetCurSel(0);
 		}
@@ -273,7 +273,7 @@ INT_PTR OpenDriveDialog::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPARAM
 				if (nCurSel < 0)
 					return TRUE;
 				PartitionInfo *SelectedPartitionInfo =
-					static_cast<PartitionInfo *>(list->GetItemDataPtr(nCurSel));
+					reinterpret_cast<PartitionInfo *>(list->GetItemData(nCurSel));
 
 				IPhysicalDrive *Drive = CreatePhysicalDriveInstance();
 				if (Drive == 0 || !Drive->Open(SelectedPartitionInfo->m_dwDrive))

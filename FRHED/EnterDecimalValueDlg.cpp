@@ -44,9 +44,9 @@ BOOL EnterDecimalValueDlg::OnInitDialog(HWindow *pDlg)
 	// Handle value as unsigned, convert to signed (if needed) when sending
 	// the value to GUI.
 	UINT iDecValDlgValue = 0;
-	if (iCurByte >= 0 && iCurByte < m_dataArray.GetLength())
+	if (iCurByte >= 0 && iCurByte < m_dataArray.size())
 	{
-		int t = m_dataArray.GetLength() - iCurByte;
+		int t = m_dataArray.size() - iCurByte;
 		//Set the size down a bit if someone called this func with a size thats too large
 		while (iDecValDlgSize > t)
 			iDecValDlgSize /= 2;
@@ -103,19 +103,19 @@ BOOL EnterDecimalValueDlg::Apply(HWindow *pDlg)
 		MessageBox(pDlg, GetLangString(IDS_DECI_UNKNOWN_TIMES), MB_ICONERROR);
 		return FALSE;
 	}
-	if (iDecValDlgOffset < 0 || iDecValDlgOffset > m_dataArray.GetUpperBound())
+	if (iDecValDlgOffset < 0 || iDecValDlgOffset >= m_dataArray.size())
 	{
 		MessageBox(pDlg, GetLangString(IDS_DECI_INVALID_START), MB_ICONERROR);
 		return FALSE;
 	}
-	if (iDecValDlgOffset + iDecValDlgSize * iDecValDlgTimes > m_dataArray.GetLength())
+	if (iDecValDlgOffset + iDecValDlgSize * iDecValDlgTimes > m_dataArray.size())
 	{
 		MessageBox(pDlg, GetLangString(IDS_DECI_NO_SPACE), MB_ICONERROR);
 		return FALSE;
 	}
 	WaitCursor wc;
 	int iDecValDlgOffsetOrg = iDecValDlgOffset;
-	SimpleArray<BYTE> olddata(iDecValDlgSize * iDecValDlgTimes, &m_dataArray[iDecValDlgOffset]);
+	UndoRecord::Data *olddata = UndoRecord::alloc(&m_dataArray[iDecValDlgOffset], iDecValDlgSize * iDecValDlgTimes);
 	while (iDecValDlgTimes)
 	{
 		if (iBinaryMode == ENDIAN_LITTLE)
@@ -162,7 +162,7 @@ BOOL EnterDecimalValueDlg::Apply(HWindow *pDlg)
 		}
 		--iDecValDlgTimes;
 	}
-	push_undorecord(iDecValDlgOffsetOrg, olddata, olddata.GetLength(), &m_dataArray[iDecValDlgOffsetOrg], olddata.GetLength());
+	push_undorecord(iDecValDlgOffsetOrg, UndoRecord::len(olddata), olddata);
 	bFilestatusChanged = true;
 	repaint();
 	return TRUE;

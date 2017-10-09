@@ -113,14 +113,14 @@ BOOL ChooseDiffDlg::OnInitDialog(HWindow *pDlg)
 	if (int filelen = _filelength(filehandle))
 	{
 		int iDestFileLen = filelen;
-		int iSrcFileLen = m_dataArray.GetLength() - iCurByte;
+		int iSrcFileLen = m_dataArray.size() - iCurByte;
 		if (BYTE *cmpdata = new BYTE[filelen])
 		{
 			// Read data.
 			if (_read(filehandle, cmpdata, filelen) != -1)
 			{
 				HListBox *list = static_cast<HListBox *>(pDlg->GetDlgItem(IDC_CHOOSEDIFF_DIFFLIST));
-				if (int diff = get_diffs(list, &m_dataArray[iCurByte], m_dataArray.GetLength() - iCurByte, cmpdata, filelen))
+				if (int diff = get_diffs(list, &m_dataArray[iCurByte], m_dataArray.size() - iCurByte, cmpdata, filelen))
 				{
 					TCHAR buf[100];
 					_stprintf(buf, GetLangString(IDS_DIFF_AREAS_FOUND), diff);
@@ -178,7 +178,7 @@ BOOL ChooseDiffDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM)
 				int num = list->GetCount();
 				for (int i = 0 ; i < num ; i++)
 				{
-					String s;
+					TString s;
 					list->GetText(i, s);
 					piStream->Write(s.c_str(), s.length() * sizeof(TCHAR), NULL);
 					//add '\r\n' to the end of each line - this is '\r\n' rather than '\n' so that it can be pasted into notepad & dos programs
@@ -202,7 +202,7 @@ BOOL ChooseDiffDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM)
 			int i = pLb->GetCurSel();
 			if (i != -1)
 			{
-				String s;
+				TString s;
 				pLb->GetText(i, s);
 				i = _stscanf(s.c_str(),
 					// "%d) 0x%x=%u to 0x%x=%u (%d bytes)"

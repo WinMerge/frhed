@@ -48,6 +48,9 @@ using H2O::HBrush;
 using H2O::HPen;
 using H2O::HMenu;
 
+using MAUtil::Vector;
+using MAUtil::String;
+
 namespace NT4
 {
 	struct OPENFILENAME : public OPENFILENAME_NT4

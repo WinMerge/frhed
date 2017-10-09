@@ -42,9 +42,6 @@ Last change: 2013-02-24 by Jochen Neubeck
 INT_PTR ReverseDlg::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	TCHAR buf[32];
-	int iStartOfSelSetting = 0;
-	int iEndOfSelSetting = 0;
-	int maxb;
 	switch (uMsg)
 	{
 	case WM_INITDIALOG:
@@ -59,6 +56,8 @@ INT_PTR ReverseDlg::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPARAM lPar
 		{
 		case IDOK:
 		{
+			int iStartOfSelSetting = 0;
+			int iEndOfSelSetting = 0;
 			if (pDlg->GetDlgItemText(IDC_REVERSE_OFFSET, buf, RTL_NUMBER_OF(buf)) &&
 				!offset_parse(buf, iStartOfSelSetting))
 			{
@@ -81,7 +80,7 @@ INT_PTR ReverseDlg::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPARAM lPar
 			if (iEndOfSelSetting < iStartOfSelSetting)
 				swap(iEndOfSelSetting, iStartOfSelSetting);
 
-			maxb = m_dataArray.GetUpperBound();
+			int const maxb = m_dataArray.size() - 1;
 			if (iStartOfSelSetting < 0 || iEndOfSelSetting > maxb)
 			{
 				MessageBox(pDlg, GetLangString(IDS_REVERSE_BLOCK_EXTEND), MB_ICONERROR);
@@ -91,9 +90,9 @@ INT_PTR ReverseDlg::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPARAM lPar
 				iStartOfSelSetting = 0;
 			if (iEndOfSelSetting > maxb)
 				iEndOfSelSetting = maxb;
-			SimpleArray<BYTE> olddata(iEndOfSelSetting - iStartOfSelSetting + 1, &m_dataArray[iStartOfSelSetting]);
+			UndoRecord::Data *olddata = UndoRecord::alloc(&m_dataArray[iStartOfSelSetting], iEndOfSelSetting - iStartOfSelSetting + 1);
 			reverse_bytes(&m_dataArray[iStartOfSelSetting], &m_dataArray[iEndOfSelSetting]);
-			push_undorecord(iStartOfSelSetting, olddata, olddata.GetLength(), &m_dataArray[iStartOfSelSetting], iEndOfSelSetting - iStartOfSelSetting + 1);
+			push_undorecord(iStartOfSelSetting, iEndOfSelSetting - iStartOfSelSetting + 1, olddata);
 			if (bSelected)
 			{
 				//If the selection was inside the bit that was reversed, then reverse it too

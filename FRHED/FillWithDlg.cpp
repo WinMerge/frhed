@@ -56,7 +56,7 @@ void FillWithDialog::inittxt(HWindow *pDlg)
 	else
 	{
 		iStartOfSelSetting = 0;
-		iEndOfSelSetting = m_dataArray.GetUpperBound();
+		iEndOfSelSetting = m_dataArray.size() - 1;
 	}
 	//init all the readonly boxes down below
 	TCHAR bufff[250];
@@ -114,27 +114,17 @@ BYTE FillWithDialog::file(int index)
 //convert a string of hex digits to a string of chars
 void FillWithDialog::hexstring2charstring()
 {
-	// RK: removed definition of variable "a".
-	int i, ii = static_cast<int>(_tcslen(pcFWText));
-	if (ii % 2)//if number of hex digits is odd
+	buflen = 0;
+	for (LPCTSTR pc = pcFWText; *pc; ++pc)
 	{
-		//concatenate them
-		for (i = 0 ; i < ii ; i++)
-			pcFWText[ii + i] = pcFWText[i];
-		pcFWText[ii * 2] = 0;
+		int hi = 0, lo = 0;
+		_stscanf(pc, _T("%1x"), &hi);
+		// rewind pc at end of odd-length string
+		if (*++pc == _T('\0'))
+			pc = pcFWText;
+		_stscanf(pc, _T("%1x"), &lo);
+		buf[buflen++] = static_cast<BYTE>((hi << 4) | lo);
 	}
-	for (i = ii = 0 ; pcFWText[i] != '\0' ; i += 2)
-	{
-		// RK: next two lines changed, would crash when compiled with VC++ 4.0.
-		/*
-		sscanf(pcTemp,"%2x",&a);//get byte from the hexstring
-		buf[ii]=a;//store it
-		*/
-		// Replaced with this line:
-		_stscanf(pcFWText + i, _T("%2hhx"), buf + ii);//get byte from the hexstring
-		ii++;
-	}//for
-	buflen = ii;//store length
 }//func
 
 //used to delete non-hex chars after the user pastes into the hexbox
@@ -310,10 +300,10 @@ INT_PTR FillWithDialog::DlgProc(HWindow *pDlg, UINT iMsg, WPARAM wParam, LPARAM 
 				else
 				{
 					iStartOfSelSetting = 0;
-					iEndOfSelSetting = m_dataArray.GetUpperBound();
+					iEndOfSelSetting = m_dataArray.size() - 1;
 				}
 
-				SimpleArray<BYTE> olddata(iEndOfSelSetting - iStartOfSelSetting + 1, &m_dataArray[iStartOfSelSetting]);
+				UndoRecord::Data *olddata = UndoRecord::alloc(&m_dataArray[iStartOfSelSetting], iEndOfSelSetting - iStartOfSelSetting + 1);
 				int i = iStartOfSelSetting;
 				int ii = 0;
 				switch (asstyp)
@@ -347,7 +337,7 @@ INT_PTR FillWithDialog::DlgProc(HWindow *pDlg, UINT iMsg, WPARAM wParam, LPARAM 
 					}
 					break;
 				}
-				push_undorecord(iStartOfSelSetting, olddata, olddata.GetLength(), &m_dataArray[iStartOfSelSetting], olddata.GetLength());
+				push_undorecord(iStartOfSelSetting, UndoRecord::len(olddata), olddata);
 				if (curtyp)
 					_close(FWFile);//close file
 				SetCursor(LoadCursor(NULL, IDC_ARROW));

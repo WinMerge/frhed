@@ -17,7 +17,7 @@ Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 This is an edited version of code obtained from:
 https://github.com/MoSync/MoSync/blob/master/libs/MAUtil
 
-Last change: 2013-02-24 by Jochen Neubeck
+Last change: 2017-06-27 by Jochen Neubeck
 */
 
 #include "precomp.h"
@@ -29,38 +29,14 @@ namespace MAUtil {
 	int nV = 0;
 #endif
 
-	template<class Tchar> StringData<Tchar>::StringData(const Tchar* text, int len)
-		: Vector<Tchar>(len + 1), RefCounted(1)
+	template<class Tchar> StringData<Tchar>::StringData(int len, const Tchar* text)
+		: RefCounted(1)
 	{
-		this->resize(len);
-		this->mData[len] = 0;
-		memcpy(this->mData, text, len * sizeof(Tchar));
-	}
-
-
-	template<class Tchar> StringData<Tchar>::StringData(const Tchar* text)
-		: Vector<Tchar>(tstrlen(text) + 1), RefCounted(1)
-	{
-		int len = this->capacity() - 1;
-		this->resize(len);
-		memcpy(this->mData, text, this->capacity() * sizeof(Tchar));
-	}
-
-
-	template<class Tchar> StringData<Tchar>::StringData(int len)
-		: Vector<Tchar>(len+1), RefCounted(1)
-	{
-		this->resize(len);
-		this->mData[len] = 0;
-	}
-
-
-
-	template<class Tchar> StringData<Tchar>::StringData(const StringData& other)
-		: Vector<Tchar>(other.mSize+1), RefCounted(1)
-	{
-		this->mSize = other.mSize;
-		memcpy(this->mData, other.mData, (this->mSize+1) * sizeof(Tchar));
+		if (!resize(len + 1))
+			return;
+		mData[--mSize] = 0;
+		if (text != NULL)
+			memcpy(mData, text, mSize * sizeof(Tchar));
 	}
 
 #ifdef HAVE_EMPTY_STRING
@@ -102,7 +78,7 @@ namespace MAUtil {
 		if(text == NULL || *text == 0 || len == 0) {
 			sd = getEmptyData<Tchar>();
 		} else {
-			sd = new StringData<Tchar>(text, len);
+			sd = new StringData<Tchar>(len, text);
 			MAASSERT(sd);
 		}		
 	}
@@ -123,7 +99,7 @@ namespace MAUtil {
 	}
 
 	template<class Tchar> const Tchar* BasicString<Tchar>::c_str() const {
-		return (const Tchar*) sd->mData;
+		return sd->pointer();
 	}
 
 	template<class Tchar> BasicString<Tchar>& BasicString<Tchar>::operator=(const BasicString& s) {
@@ -135,19 +111,13 @@ namespace MAUtil {
 	}
 
 	template<class Tchar> bool BasicString<Tchar>::operator==(const BasicString& other) const {
-		if(this->length() != other.length())
-			return false;
-
-		if(this->sd == other.sd)
-			return true;
-
-		return tstrcmp(this->sd->mData, other.sd->mData)==0;
+		return sd == other.sd ||
+			length() == other.length() && tstrcmp(c_str(), other.c_str()) == 0;
 	}
 
 	template<class Tchar> bool BasicString<Tchar>::operator!=(const BasicString& other) const {
 		return !((*this)==other);
 	}
-
 
 	template<class Tchar> bool BasicString<Tchar>::operator<(const BasicString& other) const {
 		return tstrcmp(c_str(), other.c_str()) < 0;
@@ -163,49 +133,30 @@ namespace MAUtil {
 		return tstrcmp(c_str(), other.c_str()) <= 0;
 	}
 
-
 	template<class Tchar> bool BasicString<Tchar>::operator>=(const BasicString& other) const {
 		return tstrcmp(c_str(), other.c_str()) >= 0;
 	}
-
 
 	template<class Tchar> Tchar& BasicString<Tchar>::operator[](int index) {
 		//if memory is shared, do copy on write
 
 		if(sd->getRefCount() > 1) {
-			StringData<Tchar>* newSd = new StringData<Tchar>(*sd);
+			StringData<Tchar>* newSd = new StringData<Tchar>(sd->size(), sd->pointer());
 			MAASSERT(newSd);
 			sd->release();
 			sd = newSd;
 		}
 
-		return sd->mData[index];
+		return sd->pointer()[index];
 	}
 
 #ifndef NEW_OPERATORS
 	template<class Tchar>
 	BasicString<Tchar> BasicString<Tchar>::operator+(const BasicString<Tchar>& other) const {
-#if 0
-		BasicString ret = *this;
-		//MAASSERT(sd->getRefCount() > 1);
-
-		StringData* newSd = new StringData(&((*sd)[0]));
-		MAASSERT(newSd);
-		sd->release();
-		ret.sd = newSd;
-		for(int i = 0; i < other.size(); i++) {
-			ret.sd->add(other[i]);
-		}
-		ret.sd->reserve(ret.size()+1);
-		ret[ret.size()] = '\0';
-		return ret;
-#else
 		BasicString<Tchar> s = *this;
 		s += other;
 		return s;
-#endif
 	}
-
 
 	template<class Tchar> void BasicString<Tchar>::append(const Tchar* other, int len) {
 		//order of operations is important here.
@@ -231,7 +182,6 @@ namespace MAUtil {
 		return *this;
 	}
 
-#if 1
 	template<class Tchar> BasicString<Tchar> BasicString<Tchar>::operator+(Tchar c) const {
 		BasicString s = *this;
 		s += c;
@@ -242,29 +192,24 @@ namespace MAUtil {
 		append(&c, 1);
 		return *this;
 	}
-#endif
 #endif	//NEW_OPERATORS
 
 	template<class Tchar>
-	int BasicString<Tchar>::find(const BasicString<Tchar>& s, unsigned int offset) const {
-		if (s.length()+offset <= (unsigned int)sd->size()) {
-			if (!s.length())
-				return ((int) offset);	// Empty string is always found
-			const Tchar *str = (const Tchar*) sd->mData + offset;
-			const Tchar *search = s.c_str();
-			const Tchar *end = sd->mData + sd->size() - s.length() + 1;
-			const Tchar *search_end = s.c_str() + s.length();
-skipp:
-			while (str != end) {
-				if (*str++ == *search) {
-					register Tchar *i,*j;
-					i=(Tchar*) str;
-					j=(Tchar*) search+1;
-					while (j != search_end)
-						if (*i++ != *j++) goto skipp;
-					return (int) (str - sd->mData) - 1;
-				}
-			}
+	int BasicString<Tchar>::find(BasicString<Tchar> const &s, int offset) const {
+		if (s.length() + offset <= length()) {
+			if (s.length() == 0)
+				return offset;	// Empty string is always found
+			Tchar const *str = c_str() + offset;
+			Tchar const *search = s.c_str();
+			Tchar const *const end = c_str() + length() - s.length();
+			Tchar const *const search_end = s.c_str() + s.length() - 1;
+			do if (*str == *search) {
+				Tchar const *i = str;
+				Tchar const *j = search;
+				do if (j == search_end) {
+					return static_cast<int>(str - sd->pointer());
+				} while (*++i == *++j);
+			} while (str++ != end);
 		}
 		return npos;
 	}
@@ -346,28 +291,14 @@ skipp:
 	BasicString<Tchar> BasicString<Tchar>::substr(int startIndex, int len) const {
 		ASSERT_MSG(startIndex >= 0 && startIndex <= this->length(), "invalid index");
 		if(len == npos)
-			len = this->length() - startIndex;
-		ASSERT_MSG(len >= 0 && (startIndex+len) <= this->length(), "invalid length");
+			len = length() - startIndex;
+		ASSERT_MSG(len >= 0 && startIndex + len <= length(), "invalid length");
 
-		BasicString retString;
-#if 0
-		for(int i = startIndex; i < startIndex + len; i++) {
-			retString += (*this)[i];
-		}
-#else
-		if(len > 0) {
-			retString.sd->release();
-			retString.sd = new StringData<Tchar>(len);
-			memcpy(retString.sd->pointer(), sd->pointer() + startIndex, len * sizeof(Tchar));
-			retString[len] = 0;
-		}
-#endif
-		return retString;
+		return BasicString(c_str() + startIndex, len);
 	}
 
-
 	template<class Tchar> const Tchar& BasicString<Tchar>::operator[](int index) const {
-		return sd->mData[index];
+		return sd->pointer()[index];
 	}
 
 	template<class Tchar> int BasicString<Tchar>::size() const {

@@ -98,7 +98,7 @@ BOOL CutDlg::Apply(HWindow *pDlg)
 
 	// Can requested number be cut?
 	// DataArray.GetLength ()-iCutOffset = number of bytes from current pos. to end.
-	if (m_dataArray.GetLength() - iOffset < iNumberOfBytes)
+	if (m_dataArray.size() - iOffset < iNumberOfBytes)
 	{
 		MessageBox(pDlg, GetLangString(IDS_CUT_TOO_MANY), MB_ICONERROR);
 		return FALSE;
@@ -123,16 +123,17 @@ BOOL CutDlg::Apply(HWindow *pDlg)
 	CloseClipboard();
 
 	// Delete data.
-	SimpleArray<BYTE> olddata(iNumberOfBytes, &m_dataArray[iOffset]);
+	UndoRecord::Data *olddata = UndoRecord::alloc(&m_dataArray[iOffset], iNumberOfBytes);
 	if (!m_dataArray.RemoveAt(iOffset, iNumberOfBytes))
 	{
+		UndoRecord::free(olddata);
 		MessageBox(pDlg, GetLangString(IDS_CUT_FAILED), MB_ICONERROR);
 		return FALSE;
 	}
-	push_undorecord(iOffset, olddata, olddata.GetLength(), NULL, 0);
+	push_undorecord(iOffset, 0, olddata);
 	iCurByte = iOffset;
-	if (iCurByte > m_dataArray.GetUpperBound())
-		iCurByte = m_dataArray.GetUpperBound();
+	if (iCurByte >= m_dataArray.size())
+		iCurByte = m_dataArray.size() - 1;
 	if (iCurByte < 0)
 		iCurByte = 0;
 	bFilestatusChanged = true;

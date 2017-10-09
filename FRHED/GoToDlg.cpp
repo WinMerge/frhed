@@ -82,8 +82,8 @@ BOOL GoToDlg::Apply(HWindow *pDlg)
 	// Check limits and jump to begin/end if out of limits
 	if (offset < 0)
 		offset = 0;
-	if (offset >= m_dataArray.GetLength())
-		offset = m_dataArray.GetLength() - 1;
+	if (offset >= m_dataArray.size())
+		offset = m_dataArray.size() - 1;
 
 	iCurByte = offset;
 	snap_caret();

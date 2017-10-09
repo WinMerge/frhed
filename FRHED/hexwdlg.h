@@ -30,8 +30,6 @@ Last change: 2013-02-24 by Jochen Neubeck
 #include "Simparr.h"
 #include "Resource.h"
 
-void GetWindowText(HWindow *, SimpleString &);
-void GetDlgItemText(HWindow *, int, SimpleString &);
 BOOL EnableDlgItem(HWindow *, int, BOOL);
 BOOL IsDlgItemEnabled(HWindow *, int);
 int MessageBox(HWindow *, LPCTSTR, UINT);
@@ -181,8 +179,8 @@ public:
 	bool replace_selected_data(HWindow *);
 	void find_directed(HWindow *, int finddir);
 	void replace_directed(HWindow *, int finddir, bool showCount);
-	static SimpleString strToReplaceData;
-	static SimpleString strReplaceWithData;
+	static String strToReplaceData;
+	static String strReplaceWithData;
 };
 
 /**

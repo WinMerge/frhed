@@ -35,7 +35,6 @@
 #define IDD_TMPL_RESULT_DIALOG          130
 #define IDD_MOVE_COPY                   131
 #define IDD_REPLACEDIALOG               132
-#define IDD_DRAGDROP                    133
 #define IDD_DRAG_DROP                   133
 #define IDD_FILL_WITH                   134
 #define IDD_ENCODE_DECODE_DIALOG        135

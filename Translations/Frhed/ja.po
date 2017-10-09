@@ -256,13 +256,13 @@ msgstr "置換(&R)...\tCtrl+H"
 
 #: heksedit.rc:81
 #, c-format
-msgid "Find &previous\tShift+F3"
-msgstr "前を検索(&P)\tShift+F3"
+msgid "Find &next\tF3"
+msgstr "次を検索(&N)\tF3"
 
 #: heksedit.rc:82
 #, c-format
-msgid "Find &next\tF3"
-msgstr "次を検索(&N)\tF3"
+msgid "Find &previous\tShift+F3"
+msgstr "前を検索(&P)\tShift+F3"
 
 #: heksedit.rc:84
 #: heksedit.rc:186
@@ -1278,12 +1278,12 @@ msgstr "すべて置換..."
 
 #: heksedit.rc:709
 #, c-format
-msgid "... following occurances"
+msgid "... following occurrences"
 msgstr "... 次の出現箇所から"
 
 #: heksedit.rc:711
 #, c-format
-msgid "... previous occurances"
+msgid "... previous occurrences"
 msgstr "... 前の出現箇所から"
 
 #: heksedit.rc:713

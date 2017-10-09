@@ -78,8 +78,8 @@ BEGIN
         BEGIN
             MENUITEM "&Find...\tCtrl+F",            IDM_FIND
             MENUITEM "&Replace...\tCtrl+H",         IDM_REPLACE
-            MENUITEM "Find &previous\tShift+F3",    IDM_FINDPREV
             MENUITEM "Find &next\tF3",              IDM_FINDNEXT
+            MENUITEM "Find &previous\tShift+F3",    IDM_FINDPREV
         END
         MENUITEM "&Go To...\tCtrl+G",           IDM_GO_TO
         MENUITEM SEPARATOR
@@ -690,30 +690,30 @@ BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,154,154,50,14
 END
 
-IDD_REPLACEDIALOG DIALOGEX 0, 0, 208, 226
+IDD_REPLACEDIALOG DIALOGEX 0, 0, 278, 226
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
     WS_SYSMENU
 CAPTION "Replace"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    LTEXT           "Find what:",IDC_STATIC,7,7,194,8
-    EDITTEXT        IDC_TO_REPLACE_EDIT,7,16,194,62,ES_MULTILINE | 
+    LTEXT           "Find what:",IDC_STATIC,7,7,264,8
+    EDITTEXT        IDC_TO_REPLACE_EDIT,7,17,264,60,ES_MULTILINE | 
                     ES_AUTOVSCROLL | WS_VSCROLL
-    PUSHBUTTON      "Find next",IDC_FINDNEXT_BUTTON,7,81,39,14
-    PUSHBUTTON      "Find previous",IDC_FINDPREVIOUS_BUTTON,51,81,54,14
+    PUSHBUTTON      "Find next",IDC_FINDNEXT_BUTTON,7,81,70,14
+    PUSHBUTTON      "Find previous",IDC_FINDPREVIOUS_BUTTON,82,81,70,14
     CONTROL         "Match case",IDC_MATCHCASE_CHECK,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,112,81,93,10
-    LTEXT           "Replace with:",IDC_STATIC,7,98,194,8
-    EDITTEXT        IDC_REPLACEWITH_EDIT,7,108,194,58,ES_AUTOHSCROLL
-    GROUPBOX        "Replace all...",IDC_STATIC,7,169,105,50
-    PUSHBUTTON      "... following occurances",IDC_FOLLOCC_BUTTON,13,180,90,
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,81,115,10
+    LTEXT           "Replace with:",IDC_STATIC,7,98,264,8
+    EDITTEXT        IDC_REPLACEWITH_EDIT,7,108,264,60,ES_AUTOHSCROLL
+    GROUPBOX        "Replace all...",IDC_STATIC,7,172,122,47
+    PUSHBUTTON      "... following occurrences",IDC_FOLLOCC_BUTTON,13,183,110,
                     14
-    PUSHBUTTON      "... previous occurances",IDC_PREVOCC_BUTTON,14,196,89,
+    PUSHBUTTON      "... previous occurrences",IDC_PREVOCC_BUTTON,13,199,110,
                     14
     CONTROL         "Use special syntax",IDC_USETRANSLATION_CHECK,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,126,172,75,10
-    PUSHBUTTON      "Replace",IDC_REPLACE_BUTTON,148,186,53,14
-    PUSHBUTTON      "Cancel",IDCANCEL,147,205,54,14
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,172,115,10
+    PUSHBUTTON      "Replace",IDC_REPLACE_BUTTON,216,186,55,14
+    PUSHBUTTON      "Cancel",IDCANCEL,216,205,55,14
 END
 
 IDD_FILL_WITH DIALOGEX 0, 0, 374, 134

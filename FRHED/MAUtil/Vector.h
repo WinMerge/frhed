@@ -13,6 +13,11 @@ You should have received a copy of the GNU General Public License
 along with this program; see the file COPYING.  If not, write to the Free
 Software Foundation, 59 Temple Place - Suite 330, Boston, MA
 02111-1307, USA.
+
+This is an edited version of code obtained from:
+https://github.com/MoSync/MoSync/blob/master/libs/MAUtil
+
+Last change: 2017-06-27 by Jochen Neubeck
 */
 
 /** \file Vector.h
@@ -92,51 +97,22 @@ namespace MAUtil {
 	* but even indices are invalidated by insert() and remove(), as well as
 	* shrinking resize().
 	*/
-	template<typename Type> class Vector {
+	template<typename Type, int mGrowBy = 1> class Vector {
 
 	public:
 		/// Defines a typesafe iterator for the template instance.
 		typedef Type* iterator;
 		typedef const Type* const_iterator;
 
-		/** \brief Constructs the Vector and sets its capacity to \a initialCapacity.
-		 *  \param initialCapacity The initial capacity of the Vector.
+		/** \brief Constructs the Vector with an initial capacity of 0.
 		 */
-		Vector(int initialCapacity=4) {
+		Vector() {
 #if defined(MAUTIL_VECTOR_DEBUGGING)
 			nV++;
 #endif
-			MAUTIL_VECTOR_LOG("Vector<%lu>(0x%08X, %i)", sizeof(Type), (int)this, initialCapacity);
-			mData = new Type[initialCapacity];
-			MAUTIL_VECTOR_LOG("Vector 2 0x%08X", mData);
-			mCapacity = initialCapacity;
-			MAUTIL_VECTOR_LOG("Vector 4");
+			mData = 0;
+			mCapacity = 0;
 			mSize = 0;
-			MAUTIL_VECTOR_LOG("Vector done");
-		}
-
-		Vector(const Type* array, int _size) {
-			mCapacity = _size;
-			mData = new Type[mCapacity];
-			mSize = 0;
-			add(array, _size);
-		}
-
-		/**
-		* Copies the \a other vector.
-		*/
-		Vector(const Vector& other) {
-#if defined(MAUTIL_VECTOR_DEBUGGING)
-			nV++;
-#endif
-			MAUTIL_VECTOR_LOG("oVector<%lu>(0x%08X, %i)", sizeof(Type), (uint)this, other.mCapacity);
-			mCapacity = other.mCapacity;
-			mSize = other.mSize;
-			mData = new Type[mCapacity];
-			for(int i=0; i<mSize; i++) {
-				mData[i] = other.mData[i];
-			}
-			MAUTIL_VECTOR_LOG("oVector done");
 		}
 
 		/// Destructor
@@ -147,83 +123,45 @@ namespace MAUtil {
 #endif
 		}
 
-		/**
-		* Copies the \a other vector.
-		* \returns A reference to this vector.
-		*/
-		Vector& operator=(const Vector& other) {
-			delete[] mData;
-			mCapacity = other.mCapacity;
-			mSize = other.mSize;
-			mData = new Type[mCapacity];
-			for(int i=0; i<mSize; i++) {
-				mData[i] = other.mData[i];
-			}
-			return *this;
-		}
-
 		/** \brief Adds an element to the end of the Vector.
 		 *  \param val The element to be added.
 		 */
-		void add(const Type& val) {
-			if(mSize >= mCapacity-1) {
-				if(mCapacity != 0)
-					reserve(mCapacity*2);
-				else
-					reserve(4);
+		bool add(const Type& val) {
+			if(mSize >= mCapacity) {
+				if (!reserve(mCapacity ? mCapacity * 2 : 4))
+					return false;
 			}
 			mData[mSize++] = val;
+			return true;
 		}
 
 		/** \brief Adds several elements to the end of the Vector.
 		 *  \param ptr A pointer to the elements.
 		 *  \param num The number of elements.
 		 */
-		void add(const Type* ptr, int num) {
+		bool add(const Type* ptr, int num) {
 			int neededCapacity = mSize + num;
 			if(mCapacity < neededCapacity) {
 				int newCapacity = mCapacity;
-				do {
+				if (newCapacity == 0) {
+					newCapacity = neededCapacity;
+				} else do {
 					newCapacity *= 2;
 				} while(newCapacity < neededCapacity);
-				reserve(newCapacity);
+				if (!reserve(newCapacity))
+					return false;
 			}
 			for(int i=0; i<num; i++) {
 				mData[mSize++] = *(ptr++);
 			}
-		}
-
-		/** \brief Removes the element pointed to by iterator \a i.
-		 * \param i An iterator pointing to the element that should be removed.
-		 */
-		void remove(iterator i) {
-			iterator e = end();
-
-#ifdef MOSYNCDEBUG
-			ASSERT_MSG(i>=begin() && i<=e, "Remove iterator out of bounds");
-#endif
-
-			while(i != (e-1)) {
-				*i = *(i+1);
-				i++;
-			}
-
-			//mSize--;
-			resize(mSize-1);
-		}
-
-		/** \brief Removes the element at \a index.
-		 *  \param index The index of the element that should be removed.
-		 */
-		void remove(int index) {
-			remove(mData + index);
+			return true;
 		}
 
 		/** \brief Removes several elements, starting at \a index.
-		* \param index The index of the element that should be removed.
-		* \param number The number of elements to remove.
-		*/
-		void remove(int index, int number) {
+		 *  \param index The index of the element that should be removed.
+		 *  \param number The number of elements to remove.
+		 */
+		bool remove(int index, int number = 1) {
 #ifdef MOSYNCDEBUG
 			ASSERT_MSG(index >= 0 && index < mSize, "Remove index out of bounds");
 			ASSERT_MSG(number > 0 && (index + number) < mSize, "Remove number out of bounds");
@@ -235,35 +173,72 @@ namespace MAUtil {
 				base++;
 				next++;
 			}
-			resize(mSize - number);
+			return resize(mSize - number);
 		}
 
-		/** \brief Inserts the element at \a index, moving all existing elements beginning at 'index' one step forward.
-		 *  \param index The index of the newly inserted element.
+		/** \brief Inserts several identical elements at \a index, moving all existing elements beginning at 'index' forward accordingly.
+		 *  \param index The index where to start inserting elements.
 		 *  \param t The element itself.
+		 *  \param number The number of copies to insert.
 		 */
-		void insert(int index, Type t) {
-			resize(mSize+1);
-			iterator e = end()-1;
-			iterator i = &(begin()[index]);
-
+		bool insert(int index, Type val, int number) {
 #ifdef MOSYNCDEBUG
-			ASSERT_MSG(i>=begin() && i<=e, "Insert iterator out of bounds");
+			ASSERT_MSG(index >= 0 && index <= mSize, "Insert index out of bounds");
+			ASSERT_MSG(number > 0, "Insert number out of bounds");
 #endif
+			int base = mSize;
+			if (!resize(mSize + number))
+				return false;
+			int next = mSize;
+			while(base > index)
+				mData[--next] = mData[--base];
+			while(index < next)
+				mData[index++] = val;
+			return true;
+		}
 
-			while(e != i)
-			{
-				*(e) = *(e-1);
-				e--;
-			}
-			*i = t;
+		/** \brief Inserts several elements at \a index, moving all existing elements beginning at 'index' forward accordingly.
+		 *  \param index The index where to start inserting elements.
+		 *  \param ptr A pointer to the elements.
+		 *  \param number The number of elements to insert.
+		 */
+		bool insert(int index, const Type *ptr, int number) {
+#ifdef MOSYNCDEBUG
+			ASSERT_MSG(index >= 0 && index <= mSize, "Insert index out of bounds");
+			ASSERT_MSG(number > 0, "Insert number out of bounds");
+#endif
+			int base = mSize;
+			if (!resize(mSize + number))
+				return false;
+			int next = mSize;
+			while(base > index)
+				mData[--next] = mData[--base];
+			while(index < next)
+				mData[index++] = *ptr++;
+			return true;
+		}
+
+		/** \brief replaces a range of elements at \a index with other elements.
+		 *  \param index The index where to start replacing elements.
+		 *  \param length The length of the range of elements to be replaced.
+		 *  \param ptr A pointer to the replacement elements.
+		 *  \param number The number of replacement elements.
+		 */
+		bool replace(int index, int length, const Type* ptr, int number) {
+			int const next = index + number;
+			if (length > number)
+				remove(next, length - number);
+			else if (length < number && !insert(index, Type(), number - length))
+				return false;
+			while(index < next)
+				mData[index++] = *ptr++;
+			return true;
 		}
 
 		/** \brief Returns the number of elements.
 		 *  \return Returns the number of elements currently in the Vector.
 		 *  \see capacity
 		 */
-
 		int size() const {
 			return mSize;
 		}
@@ -271,13 +246,14 @@ namespace MAUtil {
 		/** \brief Resizes the Vector to contain \a size elements.
 		 *  \param newSize The desired size of the Vector.
 		 */
-		void resize(int newSize) {
+		bool resize(int newSize) {
 #ifdef MOSYNCDEBUG
 			ASSERT_MSG(newSize>=0, "Resize negative");
 #endif
 
-			MAUTIL_VECTOR_LOG("resize 0x%08X %i", (uint)this, newSize);
-			reserve(newSize);
+			MAUTIL_VECTOR_LOG("resize %p %i", this, newSize);
+			if (!reserve(newSize))
+				return false;
 			MAUTIL_VECTOR_LOG("resize 2");
 
 			for(int i = newSize; i < mSize; i++) {
@@ -286,18 +262,22 @@ namespace MAUtil {
 
 			mSize = newSize;
 			MAUTIL_VECTOR_LOG("resize done");
+			return true;
 		}
 
 		/** \brief Reserves space in the Vector.
 		 *  \param newCapacity The desired capacity of the Vector.
 		 *  \note If \a newCapacity is less than the current capacity of the Vector, nothing will happen.
 		 */
-		void reserve(int newCapacity) {
-			MAUTIL_VECTOR_LOG("reserve 0x%08X %i", (int)this, newCapacity);
+		bool reserve(int newCapacity) {
+			MAUTIL_VECTOR_LOG("reserve %p %i", this, newCapacity);
 			if(newCapacity <= mCapacity)
-				return;
+				return true;
+			newCapacity = (newCapacity + mGrowBy - 1) / mGrowBy * mGrowBy;
 			MAUTIL_VECTOR_LOG("reserve 2");
 			Type* newData = new Type[newCapacity];
+			if (newData == 0)
+				return false;
 			MAUTIL_VECTOR_LOG("reserve 4");
 			for(int i=0; i < mSize; i++) {
 				newData[i] = mData[i];
@@ -308,13 +288,16 @@ namespace MAUtil {
 			MAUTIL_VECTOR_LOG("reserve 6");
 			mData = newData;
 			MAUTIL_VECTOR_LOG("reserve done");
+			return true;
 		}
 
-		/** \brief Clears the Vector, setting its size to 0 but not altering its capacity
+		/** \brief Clears the Vector
 		 */
 		void clear() {
-			//mSize = 0;
-			resize(0);
+			delete[] mData;
+			mData = 0;
+			mCapacity = 0;
+			mSize = 0;
 		}
 
 		/** \brief Returns true iff the Vector is empty().
@@ -396,6 +379,10 @@ namespace MAUtil {
 		int mSize;
 		int mCapacity;
 		Type* mData;
+
+	private:
+		Vector(const Vector &); // disallow copy construction
+		Vector& operator=(const Vector &); // disallow assignment
 	};
 
 }

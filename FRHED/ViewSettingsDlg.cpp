@@ -281,7 +281,7 @@ BOOL ViewSettingsDlg::Apply(HWindow *pDlg)
 	int i = pCbLang->GetCurSel();
 	if (i != -1)
 	{
-		DWORD itemData = pCbLang->GetItemData(i);
+		DWORD_PTR itemData = pCbLang->GetItemData(i);
 		load_lang((LANGID)itemData);
 	}
 	save_ini_data();

@@ -41,7 +41,7 @@ const int TPL_NAME_MAXLEN = 128;
 class Template
 {
 public:
-	Template(const SimpleArray<BYTE> &);
+	Template(BYTE const *data, int size);
 	~Template();
 
 	void SetOriginalFilename(LPCTSTR filename);
@@ -61,8 +61,10 @@ private:
 	TCHAR m_filename[MAX_PATH]; /**< Template file name. */
 	int m_filelen; /**< Template file size. */
 	char *m_tmplBuf; /**< Template file data buffer (read from file). */
-	String m_resultString; /**< Resulting string for applied template. */
-	const SimpleArray<BYTE> &m_dataArray; /**< Original data. */
+	TString m_resultString; /**< Resulting string for applied template. */
+	//const SimpleArray<BYTE, 100> &m_dataArray; /**< Original data. */
+	BYTE const *const m_data;
+	int const m_size;
 };
 
 #endif // _TEMPLATE_H_

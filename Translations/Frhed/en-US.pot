@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Frhed\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
-"POT-Creation-Date: 2015-02-15 14:43+0000\n"
+"POT-Creation-Date: 2017-10-08 22:17+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: English <frhed-devel@lists.sourceforge.net>\n"
@@ -251,12 +251,12 @@ msgstr ""
 
 #: heksedit.rc:81
 #, c-format
-msgid "Find &previous\tShift+F3"
+msgid "Find &next\tF3"
 msgstr ""
 
 #: heksedit.rc:82
 #, c-format
-msgid "Find &next\tF3"
+msgid "Find &previous\tShift+F3"
 msgstr ""
 
 #: heksedit.rc:84
@@ -1258,12 +1258,12 @@ msgstr ""
 
 #: heksedit.rc:709
 #, c-format
-msgid "... following occurances"
+msgid "... following occurrences"
 msgstr ""
 
 #: heksedit.rc:711
 #, c-format
-msgid "... previous occurances"
+msgid "... previous occurrences"
 msgstr ""
 
 #: heksedit.rc:713

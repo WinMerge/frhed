@@ -100,7 +100,7 @@ BOOL PasteDlg::Apply(HWindow *pDlg)
 		return FALSE;
 	}
 	WaitCursor wc1;
-	SimpleArray<BYTE> olddata;
+	UndoRecord::Data *olddata = NULL;
 	if (bSelected || pDlg->IsDlgButtonChecked(IDC_PASTE_INSERT))
 	{
 		// Insert at iCurByte. Bytes there will be pushed up.
@@ -108,18 +108,18 @@ BOOL PasteDlg::Apply(HWindow *pDlg)
 		{
 			iCurByte = iGetStartOfSelection();
 			int iEndByte = iGetEndOfSelection();
-			olddata.AppendArray(&m_dataArray[iCurByte], iEndByte - iCurByte + 1 + (iPasteTimes - 1) * iPasteSkip);
+			olddata = UndoRecord::alloc(&m_dataArray[iCurByte], iEndByte - iCurByte + 1 + (iPasteTimes - 1) * iPasteSkip);
 			m_dataArray.RemoveAt(iCurByte, iEndByte - iCurByte + 1);//Remove extraneous data
 			bSelected = false; // Deselect
 		}
 		else
 		{
-			olddata.AppendArray(&m_dataArray[iCurByte], (iPasteTimes - 1) * iPasteSkip);
+			olddata = UndoRecord::alloc(&m_dataArray[iCurByte], (iPasteTimes - 1) * iPasteSkip);
 		}
 		int i = iCurByte;
 		for (int k = 0 ; k < iPasteTimes ; k++)
 		{
-			if (!m_dataArray.InsertAtGrow(i, (BYTE*)pcPastestring, 0, destlen))
+			if (!m_dataArray.InsertAtGrow(i, (BYTE*)pcPastestring, destlen))
 			{
 				MessageBox(pDlg, GetLangString(IDS_PASTE_NO_MEM), MB_ICONERROR);
 				break;
@@ -134,13 +134,13 @@ BOOL PasteDlg::Apply(HWindow *pDlg)
 		// Overwrite.
 		// Enough space for writing?
 		// m_dataArray.GetLength()-iCurByte = number of bytes from including curbyte to end.
-		if (m_dataArray.GetLength() - iCurByte < (iPasteSkip + destlen) * iPasteTimes)
+		if (m_dataArray.size() - iCurByte < (iPasteSkip + destlen) * iPasteTimes)
 		{
 			MessageBox(pDlg, GetLangString(IDS_PASTE_NO_SPACE), MB_ICONERROR);
 			delete [] pcPastestring;
 			return TRUE;
 		}
-		olddata.AppendArray(&m_dataArray[iCurByte], (iPasteTimes - 1) * (iPasteSkip + destlen) + destlen);
+		olddata = UndoRecord::alloc(&m_dataArray[iCurByte], (iPasteTimes - 1) * (iPasteSkip + destlen) + destlen);
 		// Overwrite data.
 		for (int k = 0 ; k < iPasteTimes ; k++)
 		{
@@ -152,7 +152,7 @@ BOOL PasteDlg::Apply(HWindow *pDlg)
 		bFilestatusChanged = true;
 		repaint();
 	}
-	push_undorecord(iCurByte, olddata, olddata.GetLength(), &m_dataArray[iCurByte], (iPasteTimes - 1) * (iPasteSkip + destlen) + destlen);
+	push_undorecord(iCurByte, (iPasteTimes - 1) * (iPasteSkip + destlen) + destlen, olddata);
 	delete [] pcPastestring;
 	return TRUE;
 }

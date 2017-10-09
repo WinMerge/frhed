@@ -86,12 +86,10 @@ namespace MAUtil {
 	*/
 	template<class Tchar> class StringData : public Vector<Tchar>, public RefCounted {
 	public:
-		StringData(const Tchar* text);
-		StringData(const Tchar* text, int len);
-		StringData(int len);
-		StringData(const StringData& other);
-		template<class T> friend class BasicString;
+		StringData(int len, const Tchar* text = NULL);
 		virtual ~StringData() {}
+	private:
+		StringData(const StringData& other);
 	};
 
 	/**
@@ -192,7 +190,7 @@ namespace MAUtil {
 		* Returns the index of the first instance of the given string inside this string,
 		* starting at the given position. Returns npos if not found.
 		*/
-		int find(const BasicString& s, unsigned int offset = 0) const;
+		int find(BasicString const &s, int offset = 0) const;
 
 		/** Returns the last index of the given character. Returns npos if not found. */
 		int findLastOf(const Tchar findThis) const;

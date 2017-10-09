@@ -24,9 +24,7 @@ Last change: 2013-02-24 by Jochen Neubeck
  * @brief Declaration of translated text array class.
  *
  */
-#include "Simparr.h"
-
-class LangArray : public SimpleArray<char *>
+class LangArray : protected Vector<char *>
 {
 public:
 	static const LANGID DefLangId;

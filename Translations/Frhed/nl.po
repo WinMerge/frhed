@@ -255,13 +255,13 @@ msgstr "Vervangen...\tCtrl+H"
 
 #: heksedit.rc:81
 #, c-format
-msgid "Find &previous\tShift+F3"
-msgstr "V&orige zoeken\tShift+F3"
+msgid "Find &next\tF3"
+msgstr "Volge&nde zoeken\tF3"
 
 #: heksedit.rc:82
 #, c-format
-msgid "Find &next\tF3"
-msgstr "Volge&nde zoeken\tF3"
+msgid "Find &previous\tShift+F3"
+msgstr "V&orige zoeken\tShift+F3"
 
 #: heksedit.rc:84
 #: heksedit.rc:186
@@ -1270,12 +1270,12 @@ msgstr "Alles vervangen..."
 
 #: heksedit.rc:709
 #, c-format
-msgid "... following occurances"
+msgid "... following occurrences"
 msgstr "... volgende gevallen"
 
 #: heksedit.rc:711
 #, c-format
-msgid "... previous occurances"
+msgid "... previous occurrences"
 msgstr "... vorige gevallen"
 
 #: heksedit.rc:713

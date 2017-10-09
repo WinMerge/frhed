@@ -254,12 +254,12 @@ msgstr ""
 
 #: heksedit.rc:81
 #, c-format
-msgid "Find &previous\tShift+F3"
+msgid "Find &next\tF3"
 msgstr ""
 
 #: heksedit.rc:82
 #, c-format
-msgid "Find &next\tF3"
+msgid "Find &previous\tShift+F3"
 msgstr ""
 
 #: heksedit.rc:84
@@ -1232,47 +1232,47 @@ msgstr "Ersetzen"
 #: heksedit.rc:699
 #, c-format
 msgid "Find what:"
-msgstr ""
+msgstr "Suchen nach:"
 
 #: heksedit.rc:702
 #, c-format
 msgid "Find next"
-msgstr ""
+msgstr "Vorwärts suchen"
 
 #: heksedit.rc:703
 #, c-format
 msgid "Find previous"
-msgstr ""
+msgstr "Rückwärts suchen"
 
 #: heksedit.rc:704
 #, c-format
 msgid "Match case"
-msgstr ""
+msgstr "Groß-/Kleinschreibung beachten"
 
 #: heksedit.rc:706
 #, c-format
 msgid "Replace with:"
-msgstr ""
+msgstr "Ersetzen durch:"
 
 #: heksedit.rc:708
 #, c-format
 msgid "Replace all..."
-msgstr ""
+msgstr "Ersetzen aller..."
 
 #: heksedit.rc:709
 #, c-format
-msgid "... following occurances"
-msgstr ""
+msgid "... following occurrences"
+msgstr "... nachfolgenden Vorkommen"
 
 #: heksedit.rc:711
 #, c-format
-msgid "... previous occurances"
-msgstr ""
+msgid "... previous occurrences"
+msgstr "... vorangehenden Vorkommen"
 
 #: heksedit.rc:713
 #, c-format
 msgid "Use special syntax"
-msgstr ""
+msgstr "Spezielle Syntax verwenden"
 
 #: heksedit.rc:721
 #, c-format

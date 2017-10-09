@@ -32,6 +32,7 @@ Last change: 2013-02-24 by Jochen Neubeck
 #include "Constants.h"
 #include "hexwnd.h"
 #include "toolbar.h"
+#include <process.h>
 
 static const char szMainClass[] = "frhed wndclass";
 static const char szHexClass[] = "heksedit";
@@ -222,6 +223,7 @@ int WINAPI wWinMain(HINSTANCE hIconInstance, HINSTANCE, LPWSTR szCmdLine, int)
 #ifndef _DEBUG
 void WINAPI wWinMainCRTStartup()
 {
+	__security_init_cookie();
 	HINSTANCE hIconInstance = GetModuleHandle(NULL);
 	LPWSTR szExePath = GetCommandLineW();
 	LPWSTR szCmdLine = PathGetArgsW(szExePath);

@@ -39,8 +39,8 @@ bool load_hexfile_0::StreamIn(HexEditorWindow &hexwnd, hexfile_stream &hexin)
 	load_hexfile_0 instance(hexwnd);
 	if (!instance.StreamIn(hexin))
 		return false;
-	hexwnd.m_dataArray.Adopt(instance.m_pT, instance.m_nUpperBound, instance.m_nSize);
-	instance.m_pT = 0;
+	hexwnd.m_dataArray.Adopt(instance.mData, instance.mSize, instance.mCapacity);
+	instance.mData = 0;
 	return true;
 }
 
@@ -58,16 +58,15 @@ bool load_hexfile_0::StreamIn(hexfile_stream &hexin)
 		{
 			if (!flnd)
 			{
-				if (!SetSize(ii + 1))
+				if (!resize(ii + 1))
 					return IDYES == MessageBox(pwnd, GetLangString(IDS_HEXF_NO_MEM), MB_YESNO | MB_ICONERROR);
-				ExpandToSize();
-				m_pT[ii] = 0;
+				mData[ii] = 0;
 			}
-			m_pT[ii] |= hex2nibble((BYTE)temp[0]) ;
+			mData[ii] |= hex2nibble((BYTE)temp[0]) ;
 			if (flnd)
 				ii++;
 			else
-				m_pT[ii] <<= 4;
+				mData[ii] <<= 4;
 			flnd = !flnd;
 		}
 		else if (!isspace(temp[0]) && diio)
@@ -139,10 +138,9 @@ bool load_hexfile_1::StreamIn(hexfile_stream &hexin)
 				if (IDYES == MessageBox(pwnd, msg, MB_YESNO | MB_ICONWARNING))
 				{
 					ii = tmp;
-					if (!SetSize(ii))
+					if (!resize(ii))
 						goto OutOfMemory;
-					ExpandToSize();
-					memset(m_pT, 0, ii);
+					memset(mData, 0, ii);
 				}
 				else
 				{
@@ -186,14 +184,13 @@ bool load_hexfile_1::StreamIn(hexfile_stream &hexin)
 				goto IllegalCharacter;
 			//yes we are fine
 			//store the value no matter what
-			if (!SetSize(ii + 1))
+			if (!resize(ii + 1))
 				goto OutOfMemory;
-			ExpandToSize();
 			//do this so that we don't overwrite memory outside the DataArray
 			// - because sscanf requires an int for storage
 			int tmp = 0;
 			sscanf((char*)c, "%x", &tmp);//save it to tmp
-			m_pT[ii] = (BYTE)tmp;
+			mData[ii] = (BYTE)tmp;
 			ii++;//next byte
 
 			for (i = 0 ; i < 3 ; i++)
@@ -269,7 +266,7 @@ bool load_hexfile_1::StreamIn(hexfile_stream &hexin)
 			if (temp[0] == EOF)
 				goto UnexpectedEndOfData;
 			c[0] = (BYTE)temp[0];
-			BYTE ct = m_pT[ls];
+			BYTE ct = mData[ls];
 			//Get translated character - '.' for non-printables c[0] else
 
 			c[1] = ct >= 32 && ct <= 126 || ct >= 160 && ct <= 255 || ct >= 145 && ct <= 146 ? ct : '.';
@@ -339,7 +336,7 @@ bool load_hexfile_1::StreamIn(HexEditorWindow &hexwnd, hexfile_stream &hexin)
 		hexwnd.bPartialStats = instance.bPartialStats;
 		hexwnd.iPartialOffset = instance.iPartialOffset;
 	}*/
-	hexwnd.m_dataArray.Adopt(instance.m_pT, instance.m_nUpperBound, instance.m_nSize);
-	instance.m_pT = 0;
+	hexwnd.m_dataArray.Adopt(instance.mData, instance.mSize, instance.mCapacity);
+	instance.mData = 0;
 	return true;
 }
