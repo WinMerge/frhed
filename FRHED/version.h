@@ -28,7 +28,7 @@ Last change: 2013-04-10 by Jochen Neubeck
 // Note that for releases, these values are read from
 // versions.ini file and set here by the SetVersions.py script
 #define FRHED_MAJOR_VERSION 0
-#define FRHED_MINOR_VERSION 10903
+#define FRHED_MINOR_VERSION 10904
 #define FRHED_SUB_RELEASE_NO 2017
 #define FRHED_BUILD_NO 0
 
