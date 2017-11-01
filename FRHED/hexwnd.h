@@ -133,7 +133,7 @@ class HexEditorWindow
 public:
 	int iGetCharsPerLine();
 	int iGetStartOfSelection();
-	int iGetEndOfSelection();
+	int iGetEndOfSelection(int iInclusive = 0);
 	virtual int STDMETHODCALLTYPE CMD_setselection(int iSelStart, int iSelEnd);// MF new function
 
 	//GK20AUG2K
