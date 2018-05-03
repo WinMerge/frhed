@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?"
 "group_id=13216&atid=113216\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-02-15 11:45+0900\n"
+"PO-Revision-Date: 2018-05-03 00:00+0900\n"
 "Last-Translator: Takashi Sawanaka <sawanaka@d1.dion.ne.jp>\n"
 "Language-Team: German <frhed-devel@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-SourceCharset: CP932\n"
 "X-Poedit-Basepath: ../../FRHED\n"
 "Language: ja\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 2.0.7\n"
 
 #. LANGUAGE, SUBLANGUAGE
 #: heksedit.rc:5
@@ -94,12 +94,12 @@ msgstr "ファイルを閉じる\tCtrl+Shift+X"
 #: heksedit.rc:27
 #, c-format
 msgid "&Export as hexdump..."
-msgstr "16進ダンプ形式でエクスポート(&E)..."
+msgstr "16 進ダンプ形式でエクスポート(&E)..."
 
 #: heksedit.rc:28
 #, c-format
 msgid "I&mport from hexdump...\tCtrl+Shift+H"
-msgstr "16進ダンプ形式でインポート(&I)...\tCtrl+Shift+H"
+msgstr "16 進ダンプ形式でインポート(&M)...\tCtrl+Shift+H"
 
 #: heksedit.rc:40
 #, c-format
@@ -226,7 +226,7 @@ msgstr "選択領域を指定した値で埋める(&F)...\tCtrl+Shift+F"
 #: heksedit.rc:72
 #, c-format
 msgid "Toggle h&ex/character editing\tTAB"
-msgstr "16進/文字編集の切り替え(&E)\tTAB"
+msgstr "16 進/文字編集の切り替え(&E)\tTAB"
 
 #: heksedit.rc:73
 #, c-format
@@ -256,13 +256,13 @@ msgstr "置換(&R)...\tCtrl+H"
 
 #: heksedit.rc:81
 #, c-format
-msgid "Find &next\tF3"
-msgstr "次を検索(&N)\tF3"
+msgid "Find &previous\tShift+F3"
+msgstr "前を検索(&P)\tShift+F3"
 
 #: heksedit.rc:82
 #, c-format
-msgid "Find &previous\tShift+F3"
-msgstr "前を検索(&P)\tShift+F3"
+msgid "Find &next\tF3"
+msgstr "次を検索(&N)\tF3"
 
 #: heksedit.rc:84
 #: heksedit.rc:186
@@ -273,7 +273,7 @@ msgstr "移動(&G)...\tCtrl+G"
 #: heksedit.rc:86
 #, c-format
 msgid "Enter decimal &value...\tCtrl+D"
-msgstr "10進数入力(&V)...\tCtrl+D"
+msgstr "10 進数入力(&V)...\tCtrl+D"
 
 #: heksedit.rc:88
 #, c-format
@@ -293,7 +293,7 @@ msgstr "浮動小数点数の取得(&L)...\tCtrl+L"
 #: heksedit.rc:92
 #, c-format
 msgid "File properties...\tAlt+Enter"
-msgstr "ファイルプロパティ...\tAlt+Enter"
+msgstr "ファイル プロパティ...\tAlt+Enter"
 
 #: heksedit.rc:93
 #, c-format
@@ -303,7 +303,7 @@ msgstr "テンプレートの適用(&Y)...\tAlt+T"
 #: heksedit.rc:94
 #, c-format
 msgid "Open in text editor\tF5"
-msgstr "テキストエディタで開く\tF5"
+msgstr "テキスト エディタで開く\tF5"
 
 #: heksedit.rc:96
 #, c-format
@@ -333,12 +333,12 @@ msgstr "下へスクロール(&D)\tCtrl+Arrow Down"
 #: heksedit.rc:102
 #, c-format
 msgid "Scroll up a page\tCtrl+Page Up"
-msgstr "1ページ上へスクロール\tCtrl+Page Up"
+msgstr "1 ページ上へスクロール\tCtrl+Page Up"
 
 #: heksedit.rc:103
 #, c-format
 msgid "Scroll down a page\tCtrl+Page Down"
-msgstr "1ページ下へスクロール\tCtrl+Page Down"
+msgstr "1 ページ下へスクロール\tCtrl+Page Down"
 
 #: heksedit.rc:105
 #, c-format
@@ -408,12 +408,12 @@ msgstr "色設定を標準に戻す...\tCtrl+Shift+S"
 #: heksedit.rc:125
 #, c-format
 msgid "&Adopt OS colour scheme...\tCtrl+Shift+A"
-msgstr "OSのカラースキーマを適用する(&A)...\tCtrl+Shift+A"
+msgstr "OS のカラー スキーマを適用する(&A)...\tCtrl+Shift+A"
 
 #: heksedit.rc:128
 #, c-format
 msgid "C&haracter set...\tCtrl+R"
-msgstr "キャラクタセット(&H)...\tCtrl+R"
+msgstr "文字セット(&H)...\tCtrl+R"
 
 #: heksedit.rc:129
 #, c-format
@@ -463,7 +463,7 @@ msgstr "保存先/読込元インスタンス番号の変更(&I)..."
 #: heksedit.rc:140
 #, c-format
 msgid "S&hortcuts to Frhed..."
-msgstr "Frhed へのショートカット(&S)..."
+msgstr "Frhed へのショートカット(&H)..."
 
 #: heksedit.rc:142
 #, c-format
@@ -483,7 +483,7 @@ msgstr "ブックマークを削除(&R)...\tAlt+W"
 #: heksedit.rc:146
 #, c-format
 msgid "&Clear all bookmarks\tCtrl+Shift+W"
-msgstr "全てのブックマークをクリア(&C)\tCtrl+Shift+W"
+msgstr "すべてのブックマークをクリア(&C)\tCtrl+Shift+W"
 
 #: heksedit.rc:158
 #, c-format
@@ -558,7 +558,7 @@ msgstr "先頭に  \"+\" または \"-\" (マイナス) を入力すると相対移動"
 #: heksedit.rc:303
 #, c-format
 msgid "Prefix offset with \"x\" to indicate hex notation."
-msgstr "16進数で指定したい場合、接頭辞として \"x\" を指定"
+msgstr "16 進数で指定したい場合、接頭辞として \"x\" を指定"
 
 #: heksedit.rc:306
 #: heksedit.rc:347
@@ -636,7 +636,7 @@ msgstr "検索"
 #: heksedit.rc:316
 #, c-format
 msgid "&Find what:"
-msgstr "検索文字列(&F):"
+msgstr "検索する文字列(&F):"
 
 #: heksedit.rc:318
 #, c-format
@@ -644,8 +644,8 @@ msgid ""
 "Please refer to the online help's Using the Special Syntax section for "
 "searching for binary values."
 msgstr ""
-"バイナリデータの検索についてはオンラインヘルプ「Using the Special Syntax」セ"
-"クションを参照してください。"
+"バイナリ データの検索についてはオンライン ヘルプ「Using the Special Syntax」"
+"セクションを参照してください。"
 
 #: heksedit.rc:319
 #, c-format
@@ -665,7 +665,7 @@ msgstr "下へ(&D)"
 #: heksedit.rc:322
 #, c-format
 msgid "Match &case"
-msgstr "大文字小文字を区別する(&C)"
+msgstr "大文字と小文字を区別する(&C)"
 
 #: heksedit.rc:323
 #, c-format
@@ -710,12 +710,12 @@ msgstr "ホームページ"
 #: heksedit.rc:345
 #, c-format
 msgid "Open Frhed's homepage in browser"
-msgstr "Frhedのホームページをブラウザで開く"
+msgstr "Frhed のホームページをブラウザで開く"
 
 #: heksedit.rc:353
 #, c-format
 msgid "Export Hexdump"
-msgstr "16進ダンプ形式でエクスポート"
+msgstr "16 進ダンプ形式でエクスポート"
 
 #: heksedit.rc:356
 #, c-format
@@ -755,7 +755,7 @@ msgstr "Frhed の表示形式でテキスト化"
 #: heksedit.rc:365
 #, c-format
 msgid "Just hex digits on a line"
-msgstr "16進数データの羅列(改行なし)"
+msgstr "16 進数データの羅列(改行なし)"
 
 #: heksedit.rc:366
 #, c-format
@@ -765,12 +765,12 @@ msgstr "Frhed の表示形式でRTF化"
 #: heksedit.rc:374
 #, c-format
 msgid "Enter Decimal Value"
-msgstr "10進数データの入力"
+msgstr "10 進数データの入力"
 
 #: heksedit.rc:377
 #, c-format
 msgid "Enter decimal value:"
-msgstr "10進数データの入力:"
+msgstr "10 進数データの入力:"
 
 #: heksedit.rc:379
 #, c-format
@@ -910,7 +910,7 @@ msgstr "表示設定"
 #: heksedit.rc:458
 #, c-format
 msgid "Number of bytes to display per line:"
-msgstr "1行あたりの表示バイト数:"
+msgstr "1 行あたりの表示バイト数:"
 
 #: heksedit.rc:461
 #, c-format
@@ -918,8 +918,8 @@ msgid ""
 "Automatically adjust number of bytes per line (uncheck this if you want "
 "Frhed to use your own choice for bytes per line)"
 msgstr ""
-"自動的に1行あたりのバイト数を調整する (1行あたりのバイト数を指定したい場合、"
-"チェックを外してください)"
+"自動的に 1 行あたりのバイト数を調整する\n"
+"(1 行あたりのバイト数を指定したい場合、チェックを外してください)"
 
 #: heksedit.rc:464
 #, c-format
@@ -929,7 +929,7 @@ msgstr "オフセットの表示桁数:"
 #: heksedit.rc:467
 #, c-format
 msgid "Adjust offset len to that of the max offset"
-msgstr "最大オフセットに合わせて表示桁数を調整"
+msgstr "最大オフセットに合わせて表示桁数を調整する"
 
 #: heksedit.rc:470
 #, c-format
@@ -949,12 +949,12 @@ msgstr "signed"
 #: heksedit.rc:476
 #, c-format
 msgid "Set read-only mode on opening files"
-msgstr "ファイルオープン後読取専用にする"
+msgstr "ファイル オープン後読取専用にする"
 
 #: heksedit.rc:479
 #, c-format
 msgid "Path and filename of the text editor to call:"
-msgstr "テキストエディタのパス:"
+msgstr "テキスト エディタのパス:"
 
 #: heksedit.rc:482
 #, c-format
@@ -1042,12 +1042,12 @@ msgstr "16"
 #: heksedit.rc:540
 #, c-format
 msgid "Character Set"
-msgstr "キャラクタセット"
+msgstr "文字セット"
 
 #: heksedit.rc:543
 #, c-format
 msgid "Choose character set"
-msgstr "キャラクタセットの選択"
+msgstr "文字セットの選択"
 
 #: heksedit.rc:544
 #: heksedit.rc:1024
@@ -1064,7 +1064,7 @@ msgstr "OEM"
 #: heksedit.rc:547
 #, c-format
 msgid "Font size in points:"
-msgstr "フォントサイズ(ポイント単位):"
+msgstr "フォント サイズ (pt):"
 
 #: heksedit.rc:556
 #, c-format
@@ -1114,12 +1114,12 @@ msgstr "選択範囲"
 #: heksedit.rc:587
 #, c-format
 msgid "Start of selection: (prefix x for hex)"
-msgstr "選択範囲の開始: (接頭辞 x は16進数を表す)"
+msgstr "選択範囲の開始: (接頭辞 x は 16 進数を表す)"
 
 #: heksedit.rc:590
 #, c-format
 msgid "End of selection: (prefix x for hex)"
-msgstr "選択範囲の終了: (接頭辞 x は16進数を表す)"
+msgstr "選択範囲の終了: (接頭辞 x は 16 進数を表す)"
 
 #: heksedit.rc:599
 #, c-format
@@ -1144,7 +1144,7 @@ msgstr "ブックマークの追加"
 #: heksedit.rc:616
 #, c-format
 msgid "Offset: (prefix x for hex)"
-msgstr "オフセット: (接頭辞 x は16進数を表す )"
+msgstr "オフセット: (接頭辞 x は 16 進数を表す )"
 
 #: heksedit.rc:619
 #, c-format
@@ -1179,7 +1179,7 @@ msgstr "部分読み込みの開始位置"
 #: heksedit.rc:644
 #, c-format
 msgid "&At offset from the beginning of file: (prefix x for hex):"
-msgstr "ファイルの先頭からのオフセット(&A): (接頭辞 x は16進数を表す):"
+msgstr "ファイルの先頭からのオフセット(&A): (接頭辞 x は 16 進数を表す):"
 
 #: heksedit.rc:646
 #, c-format
@@ -1194,7 +1194,7 @@ msgstr "バイト数(&H):"
 #: heksedit.rc:650
 #, c-format
 msgid "&Display offsets relative to start of file (or start of loaded block)"
-msgstr "ファイル(またはブロック)の先頭からの相対オフセットを表示する(&D)"
+msgstr "ファイル (またはブロック) の先頭からの相対オフセットを表示する(&D)"
 
 #: heksedit.rc:659
 #: heksedit.rc:998
@@ -1249,7 +1249,7 @@ msgstr "置換"
 #: heksedit.rc:699
 #, c-format
 msgid "Find what:"
-msgstr "検索文字列:"
+msgstr "検索する文字列:"
 
 #: heksedit.rc:702
 #, c-format
@@ -1264,7 +1264,7 @@ msgstr "前を検索"
 #: heksedit.rc:704
 #, c-format
 msgid "Match case"
-msgstr "大文字小文字を区別する"
+msgstr "大文字と小文字を区別"
 
 #: heksedit.rc:706
 #, c-format
@@ -1278,12 +1278,12 @@ msgstr "すべて置換..."
 
 #: heksedit.rc:709
 #, c-format
-msgid "... following occurrences"
+msgid "... following occurances"
 msgstr "... 次の出現箇所から"
 
 #: heksedit.rc:711
 #, c-format
-msgid "... previous occurrences"
+msgid "... previous occurances"
 msgstr "... 前の出現箇所から"
 
 #: heksedit.rc:713
@@ -1315,7 +1315,7 @@ msgstr "参照(&B)..."
 #: heksedit.rc:729
 #, c-format
 msgid "Hex:"
-msgstr "16進数:"
+msgstr "16 進数:"
 
 #: heksedit.rc:731
 #, c-format
@@ -1391,12 +1391,12 @@ msgstr "保存先/読込元インスタンス番号の変更"
 #: heksedit.rc:760
 #, c-format
 msgid "Load the following instance data:"
-msgstr "読み込むインスタンスデータの番号:"
+msgstr "読み込むインスタンス データの番号:"
 
 #: heksedit.rc:766
 #, c-format
 msgid "and save (when quiting) to this instance data:"
-msgstr "インスタンスデータの(終了時)保存先番号:"
+msgstr "インスタンス データの (終了時) 保存先番号:"
 
 #: heksedit.rc:774
 #, c-format
@@ -1406,14 +1406,14 @@ msgid ""
 "Unless, that is, that the option to save ini data to the registry on exit is "
 "disabled)"
 msgstr ""
-"もしある Frhed のインスタンスが別のインスタンスと同じインスタンスデータを参照"
-"している場合、最後に終了したもののデータで上書きされることに注意してくださ"
+"もしある Frhed のインスタンスが別のインスタンスと同じインスタンス データを参"
+"照している場合、最後に終了したもののデータで上書きされることに注意してくださ"
 "い。(「必要時に保存する」を無効していない限り)"
 
 #: heksedit.rc:781
 #, c-format
 msgid "Encode / Decode Data"
-msgstr "データのエンコード / デコード"
+msgstr "データのエンコード/デコード"
 
 #: heksedit.rc:784
 #, c-format
@@ -1446,8 +1446,8 @@ msgid ""
 "NOTE: Frhed allows only reading the drive data. Changing and saving the "
 "drive data is not possible."
 msgstr ""
-"注意: Frhed はドライブデータの読込のみ可能です。ドライブデータの変更や保存を"
-"行うことはできません。"
+"注意: Frhed はドライブ データの読み取りのみ可能です。ドライブ データの変更や"
+"保存を行うことはできません。"
 
 #: heksedit.rc:805
 #: heksedit.rc:959
@@ -1567,8 +1567,8 @@ msgid ""
 "Start with (-) for negative length or movement backwards. Prefix with x for "
 "hex notation."
 msgstr ""
-"(-)を前に付加した場合、負の長さまたは後方への移動を表す。接頭辞 x は16進数を"
-"表す。"
+"(-)を前に付加した場合、負の長さまたは後方への移動を表す。接頭辞 x は 16 進数"
+"を表す。"
 
 #: heksedit.rc:864
 #: heksedit.rc:894
@@ -1645,7 +1645,7 @@ msgstr "データ:"
 #: heksedit.rc:905
 #, c-format
 msgid "OLE Drag-drop options"
-msgstr "OLE ドラッグ&&ドロップオプション"
+msgstr "OLE ドラッグ&&ドロップ オプション"
 
 #: heksedit.rc:908
 #, c-format
@@ -1681,7 +1681,7 @@ msgstr "ドロップ後毎度移動するかコピーするかを選ばせる。"
 #: heksedit.rc:921
 #, c-format
 msgid "CF_HDROP opens the files dropped."
-msgstr "CF_HDROPでドロップされたファイルを開く"
+msgstr "CF_HDROP でドロップされたファイルを開く"
 
 #: heksedit.rc:923
 #, c-format
@@ -1711,7 +1711,7 @@ msgstr "CF_TEXT を以下のものとしてドラッグする:"
 #: heksedit.rc:936
 #, c-format
 msgid "Hexdump"
-msgstr "16進ダンプ"
+msgstr "16 進ダンプ"
 
 #: heksedit.rc:938
 #, c-format
@@ -1726,7 +1726,7 @@ msgstr "表示内容のまま"
 #: heksedit.rc:943
 #, c-format
 msgid "Drag \"Rich Text Format\" (as hexdump)"
-msgstr "\"Rich Text Format\" でドラッグする(16進ダンプ)"
+msgstr "\"Rich Text Format\" でドラッグする (16 進ダンプ)"
 
 #: heksedit.rc:953
 #, c-format
@@ -1858,10 +1858,10 @@ msgid ""
 "or click on No if you want to open the link file itself.\n"
 "Choose Cancel if you want to abort opening."
 msgstr ""
-"リンクファイルを開こうとしています。\n"
-"リンク先のファイルを開きたい場合は「はい」を\n"
-"リンクファイル自体を開きたい場合は「いいえ」をクリックしてください。\n"
-"どちらも開きたくない場合は「キャンセル」を選択してください。"
+"リンク ファイルを開こうとしています。\n"
+"リンク先のファイルを開きたい場合は [はい] を\n"
+"リンク ファイル自体を開きたい場合は [いいえ] をクリックしてください。\n"
+"どちらも開きたくない場合は [キャンセル] を選択してください。"
 
 #: heksedit.rc:1037
 #, c-format
@@ -1881,7 +1881,7 @@ msgstr "オフセットが認識できません。"
 #: heksedit.rc:1045
 #, c-format
 msgid "Error while reading from file."
-msgstr "ファイル読込中にエラーが発生ました。"
+msgstr "ファイル読み取り中にエラーが発生ました。"
 
 #: heksedit.rc:1046
 #, c-format
@@ -1949,14 +1949,14 @@ msgid ""
 "%s\n"
 "not found!"
 msgstr ""
-"ヘルプファイル\n"
+"ヘルプ ファイル\n"
 "%s\n"
 "が見つかりません!"
 
 #: heksedit.rc:1058
 #, c-format
 msgid "Error code 0x%x occured while opening file %s."
-msgstr "エラーコード 0x%x が発生しました。(ファイル %s)"
+msgstr "エラー コード 0x%x が発生しました。(ファイル %s)"
 
 #: heksedit.rc:1059
 #, c-format
@@ -1971,7 +1971,7 @@ msgstr "ファイルは空です。"
 #: heksedit.rc:1061
 #, c-format
 msgid "An error occured when calling the text editor."
-msgstr "テキストエディタ起動時にエラーが発生しました。"
+msgstr "テキスト エディタ起動時にエラーが発生しました。"
 
 #: heksedit.rc:1062
 #, c-format
@@ -1981,7 +1981,7 @@ msgstr "データを挿入することができませんでした。"
 #: heksedit.rc:1063
 #, c-format
 msgid "Error checking file size"
-msgstr "ファイルサイズチェックエラー"
+msgstr "ファイル サイズ チェック エラー"
 
 #: heksedit.rc:1064
 #, c-format
@@ -2106,7 +2106,7 @@ msgstr "%d 箇所差異があります。"
 #: heksedit.rc:1116
 #, c-format
 msgid "Remaining loaded data size: %d, size of file on disk: %d."
-msgstr "読み込まれたデータサイズ: %d, ディスク上のファイルサイズ: %d"
+msgstr "読み込まれたデータ サイズ: %d, ディスク上のファイル サイズ: %d"
 
 #: heksedit.rc:1117
 #, c-format
@@ -2141,7 +2141,7 @@ msgstr ""
 #: heksedit.rc:1127
 #, c-format
 msgid "You need to select a clipboard format to use."
-msgstr "使用するクリップボードフォーマットを選択する必要があります。"
+msgstr "使用するクリップボード フォーマットを選択する必要があります。"
 
 #: heksedit.rc:1128
 #, c-format
@@ -2159,7 +2159,7 @@ msgid ""
 "Do you want to import from\n"
 "the clipboard instead of a file?"
 msgstr ""
-"クリップボードにテキストデータが存在します。\n"
+"クリップボードにテキスト データが存在します。\n"
 "ファイルのかわりにクリップボードからインポートしますか?"
 
 #: heksedit.rc:1135
@@ -2195,7 +2195,7 @@ msgstr "データを削除することができませんでした。"
 #: heksedit.rc:1157
 #, c-format
 msgid "Decimal value not recognized."
-msgstr "10進数の値が認識できません。"
+msgstr "10 進数の値が認識できません。"
 
 #: heksedit.rc:1158
 #, c-format
@@ -2210,7 +2210,7 @@ msgstr "無効な開始オフセットです。"
 #: heksedit.rc:1160
 #, c-format
 msgid "Not enough space for writing decimal values."
-msgstr "10進数データを書き込むのに十分なスペースがありません。"
+msgstr "10 進数データを書き込むのに十分なスペースがありません。"
 
 #: heksedit.rc:1166
 #, c-format
@@ -2220,7 +2220,7 @@ msgstr "貼り付け回数は少なくとも1である必要があります。"
 #: heksedit.rc:1167
 #, c-format
 msgid "Tried to paste zero-length array."
-msgstr "0バイト長の配列を貼り付けようとしました。"
+msgstr "0 バイト長の配列を貼り付けようとしました。"
 
 #: heksedit.rc:1168
 #, c-format
@@ -2235,12 +2235,12 @@ msgstr "上書きするのに十分なスペースがありません。"
 #: heksedit.rc:1175
 #, c-format
 msgid "Can't fill a selection with a file of zero size."
-msgstr "0バイト長のファイルで選択範囲にデータを埋め込むことはできません。"
+msgstr "0 バイト長のファイルで選択範囲にデータを埋め込むことはできません。"
 
 #: heksedit.rc:1176
 #, c-format
 msgid "Can't fill a selection with a string of zero size."
-msgstr "0バイト長の文字列で選択範囲にデータを埋め込むことはできません。"
+msgstr "0 バイト長の文字列で選択範囲にデータを埋め込むことはできません。"
 
 #: heksedit.rc:1177
 #, c-format
@@ -2260,7 +2260,7 @@ msgstr "移動/コピー先が不正なオフセットです。"
 #: heksedit.rc:1185
 #, c-format
 msgid "Cannot move/copy a block of zero length"
-msgstr "0バイト長のブロックを移動/コピーすることはできません"
+msgstr "0 バイト長のブロックを移動/コピーすることはできません"
 
 #: heksedit.rc:1186
 #, c-format
@@ -2286,12 +2286,12 @@ msgstr "ファイルのサイズ: %lld バイトです。 何バイト読み込みますか?(&S):"
 #: heksedit.rc:1195
 #, c-format
 msgid "Cannot open more than 2 GB of data."
-msgstr "2GB以上のデータは開けません。"
+msgstr "2 GB 以上のデータは開けません。"
 
 #: heksedit.rc:1196
 #, c-format
 msgid "Specified number of bytes to load greater than file size."
-msgstr "ファイルサイズよりも大きな読み込みバイト数が指定されました。"
+msgstr "ファイル サイズよりも大きな読み込みバイト数が指定されました。"
 
 #: heksedit.rc:1197
 #, c-format
@@ -2301,7 +2301,7 @@ msgstr "ロードするバイト数が多すぎます。"
 #: heksedit.rc:1203
 #, c-format
 msgid "Cannot reverse single byte."
-msgstr "1バイトデータを逆順にすることはできません。"
+msgstr "1 バイト データを逆順にすることはできません。"
 
 #: heksedit.rc:1204
 #, c-format
@@ -2345,12 +2345,12 @@ msgstr "Frhed はここから検索を開始できません"
 #: heksedit.rc:1216
 #, c-format
 msgid "Could not Save shortcut entries"
-msgstr "ショートカットリストをレジストリに保存することができませんでした。"
+msgstr "ショートカット リストをレジストリに保存することができませんでした。"
 
 #: heksedit.rc:1217
 #, c-format
 msgid "Cannot move more than 1 link at a time"
-msgstr "一度に1つより多くのリンクを移動することはできません"
+msgstr "一度に 1 つより多くのリンクを移動することはできません"
 
 #: heksedit.rc:1218
 #, c-format
@@ -2409,7 +2409,7 @@ msgstr "データを見つけることができませんでした。"
 #: heksedit.rc:1233
 #, c-format
 msgid "Findstring is zero bytes long."
-msgstr "検索文字列が0バイト長です。"
+msgstr "検索文字列が 0 バイト長です。"
 
 #: heksedit.rc:1234
 #, c-format
@@ -2444,17 +2444,17 @@ msgstr "セクタ数"
 #: heksedit.rc:1245
 #, c-format
 msgid "Tracks per cylinder"
-msgstr "1シリンダあたりのトラック数"
+msgstr "1 シリンダあたりのトラック数"
 
 #: heksedit.rc:1246
 #, c-format
 msgid "Sectors per track"
-msgstr "1トラックあたりのセクタ数"
+msgstr "1 トラックあたりのセクタ数"
 
 #: heksedit.rc:1247
 #, c-format
 msgid "Bytes per sector"
-msgstr "1セクタあたりのバイト数"
+msgstr "1 セクタあたりのバイト数"
 
 #: heksedit.rc:1248
 #, c-format
@@ -2494,7 +2494,7 @@ msgid ""
 "Do you want to insert %d null bytes at the start of the data?"
 msgstr ""
 "最初のオフセットが 0 ではなく、0x%x です。\n"
-"%d 個のNULバイトをデータの先頭に挿入しますか？"
+"%d 個の NUL バイトをデータの先頭に挿入しますか?"
 
 #: heksedit.rc:1259
 #, c-format
@@ -2512,9 +2512,9 @@ msgid ""
 "Ignore further mismatched data?\n"
 "NB: Hex data will be used when ignoring."
 msgstr ""
-"文字データが16進データと一致していません。\n"
-"以後、データの不一致を無視しますか？\n"
-"注意: 無視するときは、16進データが使用されます。"
+"文字データが 16 進データと一致していません。\n"
+"以後、データの不一致を無視しますか?\n"
+"注意: 無視するときは、16 進データが使用されます。"
 
 #: heksedit.rc:1261
 #, c-format
@@ -2550,12 +2550,12 @@ msgstr ""
 #: heksedit.rc:1264
 #, c-format
 msgid "characters other than whitespace and hexdigits. (like Frhed display)"
-msgstr "空白や16進数以外の文字 (Frhed の表示形式)"
+msgstr "空白や 16 進数以外の文字 (Frhed の表示形式)"
 
 #: heksedit.rc:1265
 #, c-format
 msgid "only whitespace and hexdigits. (unlike Frhed display)"
-msgstr "空白と16進数のみ (Frhed の表示形式ではない)"
+msgstr "空白と 16 進数のみ (Frhed の表示形式ではない)"
 
 #: heksedit.rc:1271
 #, c-format
@@ -2605,7 +2605,7 @@ msgstr "オフセット %d=0x%x"
 #: heksedit.rc:1285
 #, c-format
 msgid "Bits"
-msgstr "2進数"
+msgstr "2 進数"
 
 #: heksedit.rc:1286
 #, c-format
@@ -2635,7 +2635,7 @@ msgstr "サイズ"
 #: heksedit.rc:1299
 #, c-format
 msgid "Template file:"
-msgstr "テンプレートファイル:"
+msgstr "テンプレート ファイル:"
 
 #: heksedit.rc:1300
 #, c-format
@@ -2682,7 +2682,7 @@ msgstr "= %f = 0x%x"
 #: heksedit.rc:1310
 #, c-format
 msgid "ERROR: not enough space for float-size data."
-msgstr "エラー: float型サイズのデータに十分なスペースがありません。"
+msgstr "エラー: float 型サイズのデータに十分なスペースがありません。"
 
 #: heksedit.rc:1311
 #, c-format
@@ -2692,7 +2692,7 @@ msgstr "= %g"
 #: heksedit.rc:1312
 #, c-format
 msgid "ERROR: not enough space for double-size data."
-msgstr "エラー: double型サイズのデータに十分なスペースがありません。"
+msgstr "エラー: double 型サイズのデータに十分なスペースがありません。"
 
 #: heksedit.rc:1313
 #, c-format
@@ -2712,12 +2712,12 @@ msgstr ""
 #: heksedit.rc:1321
 #, c-format
 msgid "Choose template file"
-msgstr "テンプレートファイルの選択"
+msgstr "テンプレート ファイルの選択"
 
 #: heksedit.rc:1322
 #, c-format
 msgid "Could not open template file %s."
-msgstr "テンプレートファイル %s を開くことができませんでした。"
+msgstr "テンプレート ファイル %s を開くことができませんでした。"
 
 #: heksedit.rc:1323
 #, c-format
@@ -2787,7 +2787,7 @@ msgid ""
 msgstr ""
 "\n"
 "部分的にオフセット 0x%x = %d を開きました。\n"
-"読み込みバイト数: %d = %d KB \n"
+"読み取りバイト数: %d = %d KB \n"
 
 #: heksedit.rc:1346
 #, c-format
@@ -2796,7 +2796,7 @@ msgid ""
 "File size: %d bytes = %d kilobytes.\n"
 msgstr ""
 "\n"
-"ファイルサイズ: %d バイト = %d KB\n"
+"ファイル サイズ: %d バイト = %d KB\n"
 
 #: heksedit.rc:1347
 #, c-format
@@ -2811,8 +2811,8 @@ msgstr ""
 #, c-format
 msgid "This file could not be accessed and will be removed from the MRU list."
 msgstr ""
-"このファイルにアクセスすることができませんでした。このファイルはMRUリストから"
-"削除されます。"
+"このファイルにアクセスすることができませんでした。このファイルは MRU リストか"
+"ら削除されます。"
 
 #: heksedit.rc:1349
 #, c-format
@@ -2832,7 +2832,7 @@ msgstr "ファイルを削除することができませんでした。"
 #: heksedit.rc:1352
 #, c-format
 msgid "Really adopt the operating system colour scheme?"
-msgstr "本当に OS のカラースキーマを適用しますか?"
+msgstr "本当に OS のカラー スキーマを適用しますか?"
 
 #: heksedit.rc:1358
 #, c-format
@@ -2842,18 +2842,18 @@ msgstr "変更を保存しますか?"
 #: heksedit.rc:1364
 #, c-format
 msgid "Hexdump saved."
-msgstr "16進ダンプが保存されました。"
+msgstr "16 進ダンプが保存されました。"
 
 #: heksedit.rc:1365
 #, c-format
 msgid "Could not save Hexdump."
-msgstr "16進ダンプを保存することができませんでした。"
+msgstr "16 進ダンプを保存することができませんでした。"
 
 #: heksedit.rc:1366
 #, c-format
 msgid "Not enough memory for copying hexdump to clipboard."
 msgstr ""
-"16進ダンプをクリップボードにコピーするのに必要なメモリが不足しています。"
+"16 進ダンプをクリップボードにコピーするのに必要なメモリが不足しています。"
 
 #: heksedit.rc:1367
 #, c-format
