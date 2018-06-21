@@ -173,7 +173,7 @@ msgstr "Knippen...\tCtrl+X"
 #: heksedit.rc:178
 #, c-format
 msgid "&Copy...\tCtrl+C"
-msgstr "Kopiëren...\tCtrl+C"
+msgstr "KopiEen...\tCtrl+C"
 
 #: heksedit.rc:62
 #: heksedit.rc:179
@@ -189,7 +189,7 @@ msgstr "Plakken met dialoogvenster...\tCtrl+Shift+V"
 #: heksedit.rc:64
 #, c-format
 msgid "&Move/Copy bytes...\tCtrl+Alt+M"
-msgstr "Bytes verplaatsen/kopiëren...\tCtrl+Alt+M"
+msgstr "Bytes verplaatsen/kopiEen...\tCtrl+Alt+M"
 
 #: heksedit.rc:65
 #, c-format
@@ -877,27 +877,27 @@ msgstr "Aantal bytes te knippen"
 #: heksedit.rc:1331
 #, c-format
 msgid "Copy"
-msgstr "Kopiëren"
+msgstr "KopiEen"
 
 #: heksedit.rc:440
 #, c-format
 msgid "Start copying at offset:"
-msgstr "Beginnen kopiëren bij offset:"
+msgstr "Beginnen kopiEen bij offset:"
 
 #: heksedit.rc:442
 #, c-format
 msgid "Copy how many bytes"
-msgstr "Hoeveel bytes te kopiëren"
+msgstr "Hoeveel bytes te kopiEen"
 
 #: heksedit.rc:443
 #, c-format
 msgid "Copy up to and including offset:"
-msgstr "Kopiëren tot en met offset:"
+msgstr "KopiEen tot en met offset:"
 
 #: heksedit.rc:445
 #, c-format
 msgid "Number of bytes to copy:"
-msgstr "Aantal bytes te kopiëren"
+msgstr "Aantal bytes te kopiEen"
 
 #: heksedit.rc:455
 #, c-format
@@ -1077,7 +1077,7 @@ msgstr "aantal_verschillen"
 #: heksedit.rc:565
 #, c-format
 msgid "Copy above list"
-msgstr "Bovenstaande lijst kopiëren"
+msgstr "Bovenstaande lijst kopiEen"
 
 #: heksedit.rc:571
 #, c-format
@@ -1535,7 +1535,7 @@ msgstr "Sluiten"
 #: heksedit.rc:859
 #, c-format
 msgid "Move/Copy bytes"
-msgstr "Bytes verplaatsen/kopiëren"
+msgstr "Bytes verplaatsen/kopiEen"
 
 #: heksedit.rc:862
 #, c-format
@@ -1652,7 +1652,7 @@ msgstr "Scrollvertraging bij selecteren activeren"
 #: heksedit.rc:917
 #, c-format
 msgid "Always give the opportunity to change between move and copy after a drop."
-msgstr "Altijd de mogelijkheid geven om te wisselen tussen verplaatsen en kopiëren na neerzetten."
+msgstr "Altijd de mogelijkheid geven om te wisselen tussen verplaatsen en kopiEen na neerzetten."
 
 #: heksedit.rc:921
 #, c-format
@@ -1931,7 +1931,7 @@ msgstr ""
 
 #: heksedit.rc:1058
 #, c-format
-msgid "Error code 0x%x occured while opening file %s."
+msgid "Error code 0x%x occurred while opening file %s."
 msgstr "Foutcode 0x%x deed zich voor tijdens het openen van bestand %s."
 
 #: heksedit.rc:1059
@@ -1946,7 +1946,7 @@ msgstr "Bestand is leeg."
 
 #: heksedit.rc:1061
 #, c-format
-msgid "An error occured when calling the text editor."
+msgid "An error occurred when calling the text editor."
 msgstr "Er deed zich een fout voor bij het oproepen van de teksteditor."
 
 #: heksedit.rc:1062
@@ -2103,7 +2103,7 @@ msgstr "Kan klembord niet vastzetten."
 #: heksedit.rc:1136
 #, c-format
 msgid "Not enough memory for copying."
-msgstr "Niet genoeg geheugen voor kopiëren."
+msgstr "Niet genoeg geheugen voor kopiEen."
 
 #: heksedit.rc:1126
 #, c-format
@@ -2112,7 +2112,7 @@ msgid ""
 "Do you want the above output to be copied to the clipboard?\n"
 msgstr ""
 "\n"
-"Wilt u bovenstaande uitvoer laten kopiëren naar het klembord?\n"
+"Wilt u bovenstaande uitvoer laten kopiEen naar het klembord?\n"
 
 #: heksedit.rc:1127
 #, c-format
@@ -2142,7 +2142,7 @@ msgstr ""
 #: heksedit.rc:1135
 #, c-format
 msgid "Can't copy more bytes than are present."
-msgstr "Kan niet meer bytes kopiëren dan er aanwezig zijn."
+msgstr "Kan niet meer bytes kopiEen dan er aanwezig zijn."
 
 #: heksedit.rc:1142
 #, c-format
@@ -2152,7 +2152,7 @@ msgstr "Kan niet meer bytes knippen dan er aanwezig zijn."
 #: heksedit.rc:1143
 #, c-format
 msgid "Not enough memory for cutting to clipboard."
-msgstr "Niet genoeg geheugen om naar het klembord te kopiëren."
+msgstr "Niet genoeg geheugen om naar het klembord te kopiEen."
 
 #: heksedit.rc:1144
 #, c-format
@@ -2237,7 +2237,7 @@ msgstr "De doelwaarde is ongeldig."
 #: heksedit.rc:1185
 #, c-format
 msgid "Cannot move/copy a block of zero length"
-msgstr "Kan een blok zonder lengte niet verplaatsen/kopiëren"
+msgstr "Kan een blok zonder lengte niet verplaatsen/kopiEen"
 
 #: heksedit.rc:1186
 #, c-format
@@ -2252,7 +2252,7 @@ msgstr "De blok werd niet verplaatst!"
 #: heksedit.rc:1188
 #, c-format
 msgid "Cannot move/copy the block outside the data"
-msgstr "Kan de blok niet verplaatsen/kopiëren buiten de data"
+msgstr "Kan de blok niet verplaatsen/kopiEen buiten de data"
 
 #: heksedit.rc:1194
 #, c-format
@@ -2355,7 +2355,7 @@ msgid ""
 "Existing links to old versions of Frhed will be updated to this version\n"
 "Are you sure you want to continue"
 msgstr ""
-"Bestaande links naar oude versies van Frhed zullen geüpdatet worden naar deze versie\n"
+"Bestaande links naar oude versies van Frhed zullen geEdatet worden naar deze versie\n"
 "Weet u zeker dat u wil verdergaan?"
 
 #: heksedit.rc:1224
@@ -2385,7 +2385,7 @@ msgstr "Zoekstrink is nul bytes groot."
 
 #: heksedit.rc:1234
 #, c-format
-msgid "Could not find any more occurances."
+msgid "Could not find any more occurrences."
 msgstr "Kon geen gevallen meer vinden."
 
 #: heksedit.rc:1235
@@ -2556,7 +2556,7 @@ msgstr "Te vervangen en vervangen-door data zijn hetzelfde."
 
 #: heksedit.rc:1276
 #, c-format
-msgid "%d occurences replaced."
+msgid "%d occurrences replaced."
 msgstr "%d gevallen vervangen."
 
 #: heksedit.rc:1277
@@ -2822,12 +2822,12 @@ msgstr "Kon Hexdump niet opslaan"
 #: heksedit.rc:1366
 #, c-format
 msgid "Not enough memory for copying hexdump to clipboard."
-msgstr "Niet genoeg geheugen om hexdump naar klembord te kopiëren."
+msgstr "Niet genoeg geheugen om hexdump naar klembord te kopiEen."
 
 #: heksedit.rc:1367
 #, c-format
 msgid "Could not copy hexdump to clipboard."
-msgstr "Kon hexdump niet naar klembord kopiëren."
+msgstr "Kon hexdump niet naar klembord kopiEen."
 
 #: heksedit.rc:1368
 #, c-format

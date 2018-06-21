@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Frhed\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
-"POT-Creation-Date: 2017-10-08 22:17+0000\n"
+"POT-Creation-Date: 2018-06-21 23:08+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: English <frhed-devel@lists.sourceforge.net>\n"
@@ -1901,7 +1901,7 @@ msgstr ""
 
 #: heksedit.rc:1058
 #, c-format
-msgid "Error code 0x%x occured while opening file %s."
+msgid "Error code 0x%x occurred while opening file %s."
 msgstr ""
 
 #: heksedit.rc:1059
@@ -1916,7 +1916,7 @@ msgstr ""
 
 #: heksedit.rc:1061
 #, c-format
-msgid "An error occured when calling the text editor."
+msgid "An error occurred when calling the text editor."
 msgstr ""
 
 #: heksedit.rc:1062
@@ -2327,7 +2327,7 @@ msgstr ""
 
 #: heksedit.rc:1234
 #, c-format
-msgid "Could not find any more occurances."
+msgid "Could not find any more occurrences."
 msgstr ""
 
 #: heksedit.rc:1235
@@ -2462,7 +2462,7 @@ msgstr ""
 
 #: heksedit.rc:1276
 #, c-format
-msgid "%d occurences replaced."
+msgid "%d occurrences replaced."
 msgstr ""
 
 #: heksedit.rc:1277

@@ -1055,10 +1055,10 @@ BEGIN
     IDS_ERR_SEEK_FILE       "Could not seek in file."
     IDS_ERR_WRITE_FILE      "Could not write data to file."
     IDS_ERR_HELP_NOT_FOUND  "Help file\n%s\nnot found!"
-    IDS_ERR_FILE_OPEN_CODE  "Error code 0x%x occured while opening file %s."
+    IDS_ERR_FILE_OPEN_CODE  "Error code 0x%x occurred while opening file %s."
     IDS_ERR_WRITING_OPTIONS "Could not save preferences to registry."
     IDS_ERR_EMPTY_FILE      "File is empty."
-    IDS_ERR_EXT_EDITOR      "An error occured when calling the text editor."
+    IDS_ERR_EXT_EDITOR      "An error occurred when calling the text editor."
     IDS_ERR_CANNOT_INSERT   "Could not insert data"
     IDS_ERR_CHECK_FILESIZE  "Error checking file size"
     IDS_ERR_NO_DATA         "No data present. Cannot continue!"
@@ -1231,7 +1231,7 @@ BEGIN
     IDS_FIND_SEL_TOO_LARGE "Selection too large."
     IDS_FIND_CANNOT_FIND   "Could not find data."
     IDS_FIND_EMPTY_STRING  "Findstring is zero bytes long."
-    IDS_FIND_NO_MORE       "Could not find any more occurances."
+    IDS_FIND_NO_MORE       "Could not find any more occurrences."
     IDS_FIND_NO_STRING     "String to find not specified."
 END
 
@@ -1273,7 +1273,7 @@ BEGIN
     IDS_REPL_FAILED        "Replacing failed."
     IDS_REPL_CANNOT_CONVERT "Could not translate text to binary."
     IDS_REPL_SAME_STRS     "To-replace and replace-with data are same."
-    IDS_REPL_COUNT         "%d occurences replaced."
+    IDS_REPL_COUNT         "%d occurrences replaced."
     IDS_REPL_BAD_SELECT    "Could not use selection as replace target."
 END
 
