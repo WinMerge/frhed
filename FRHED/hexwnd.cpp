@@ -2392,7 +2392,6 @@ BOOL HexEditorWindow::queryCommandEnabled(UINT id)
 		// All kinds of editing disabled for drives
 		return !bReadOnly && Drive == 0;
 	case IDM_COPY_HEXDUMP:
-	case IDM_SAVESELAS:
 	case IDM_SELECT_ALL:
 		// "Select All" is allowed if file is not empty.
 	case IDM_SELECT_BLOCK:
@@ -2430,6 +2429,9 @@ BOOL HexEditorWindow::queryCommandEnabled(UINT id)
 	case IDM_EDIT_COPY:
 		// "Copy" is allowed if there is a selection or the caret is on a byte.
 		return bSelected || iCurByte < m_dataArray.size();
+	case IDM_SAVESELAS:
+		// "Save selection as" is allowed if there is a selection.
+		return bSelected;
 	case IDM_EDIT_PASTE:
 		// No editing of drives
 		if (Drive != 0)
@@ -5039,7 +5041,7 @@ BOOL HexEditorWindow::select_next_diff(BOOL bFromStart)
 	BYTE *sibling1_buffer = ary_sibling[0]->get_buffer(sibling1_length);
 	int sibling2_length = ary_sibling[1]->get_length();
 	BYTE *sibling2_buffer = ary_sibling[1]->get_buffer(sibling2_length);
-	int i = bFromStart ? 0 : bSelected ? iGetEndOfSelection() + 1 : iCurByte;
+	int i = bFromStart ? 0 : iGetEndOfSelection(1);
 	if (length > sibling1_length)
 		length = sibling1_length;
 	if (length > sibling2_length)
@@ -5237,27 +5239,17 @@ void HexEditorWindow::CMD_insertfile()
 	int inslen = _filelength(fhandle);
 	if (inslen != -1)
 	{
-		int rs,re,rl;//Remove start, end, len
-		if (bSelected)
-		{
-			rs = iGetStartOfSelection();
-			re = iGetEndOfSelection();
-			rl = re + 1 - rs;
-		}
-		else
-		{
-			rs = iCurByte;
-			rl = 0;
-		}
+		//Remove start, len
+		int const rs = iGetStartOfSelection();
+		int const rl = iGetEndOfSelection(1) - rs;
 		//New & old lens
-		int ol = m_dataArray.capacity();
-		int nl = ol + inslen - rl;
-		bool rssuc = inslen <= rl || get_buffer(nl); // resize succesful
-		if (rssuc)
+		int const ol = m_dataArray.size();
+		int const nl = ol + inslen - rl;
+		if (inslen <= rl || get_buffer(nl)) // resize successful
 		{
 			UndoRecord::Data *olddata = NULL;
 			if (bSelected)
-				olddata = UndoRecord::alloc(&m_dataArray[rs], re - rs + 1);
+				olddata = UndoRecord::alloc(&m_dataArray[rs], rl);
 			BYTE *src = &m_dataArray[rs + rl];
 			BYTE *dst = &m_dataArray[rs + inslen];
 			int count = ol - (rs + rl);
@@ -5336,13 +5328,8 @@ void HexEditorWindow::CMD_saveselas()
 		if (filehandle != -1)
 		{
 			WaitCursor wc;
-			int lower = 0;
-			int upper = m_dataArray.size();
-			if (bSelected)
-			{
-				lower = iGetStartOfSelection();
-				upper = iGetEndOfSelection() + 1;
-			}
+			int const lower = iGetStartOfSelection();
+			int const upper = iGetEndOfSelection(1);
 			if (_write(filehandle, &m_dataArray[lower], upper - lower) != -1)
 				complain = 0;
 			_close(filehandle);
@@ -5368,9 +5355,9 @@ int HexEditorWindow::iGetStartOfSelection()
 }
 
 //-------------------------------------------------------------------
-int HexEditorWindow::iGetEndOfSelection()
+int HexEditorWindow::iGetEndOfSelection(int iInclusive)
 {
-	return bSelected ? max(iStartOfSelection, iEndOfSelection) : iCurByte;
+	return bSelected ? max(iStartOfSelection, iEndOfSelection) + iInclusive : iCurByte;
 }
 
 bool HexEditorWindow::load_hexfile(hexfile_stream &hexin)
