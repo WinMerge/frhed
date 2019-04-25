@@ -1,0 +1,40 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "frhed.vs2019", "FRHED\frhed.vs2019.vcxproj", "{139D8239-98B4-4B29-A199-B27CDB8B4708}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "heksedit.vs2019", "FRHED\heksedit.vs2019.vcxproj", "{488796F1-8E07-40FE-A006-B6252E958746}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		UnicodeDebug|Win32 = UnicodeDebug|Win32
+		UnicodeDebug|x64 = UnicodeDebug|x64
+		UnicodeRelease|Win32 = UnicodeRelease|Win32
+		UnicodeRelease|x64 = UnicodeRelease|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{139D8239-98B4-4B29-A199-B27CDB8B4708}.UnicodeDebug|Win32.ActiveCfg = UnicodeDebug|Win32
+		{139D8239-98B4-4B29-A199-B27CDB8B4708}.UnicodeDebug|Win32.Build.0 = UnicodeDebug|Win32
+		{139D8239-98B4-4B29-A199-B27CDB8B4708}.UnicodeDebug|x64.ActiveCfg = UnicodeDebug|x64
+		{139D8239-98B4-4B29-A199-B27CDB8B4708}.UnicodeDebug|x64.Build.0 = UnicodeDebug|x64
+		{139D8239-98B4-4B29-A199-B27CDB8B4708}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
+		{139D8239-98B4-4B29-A199-B27CDB8B4708}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
+		{139D8239-98B4-4B29-A199-B27CDB8B4708}.UnicodeRelease|x64.ActiveCfg = UnicodeRelease|x64
+		{139D8239-98B4-4B29-A199-B27CDB8B4708}.UnicodeRelease|x64.Build.0 = UnicodeRelease|x64
+		{488796F1-8E07-40FE-A006-B6252E958746}.UnicodeDebug|Win32.ActiveCfg = UnicodeDebug|Win32
+		{488796F1-8E07-40FE-A006-B6252E958746}.UnicodeDebug|Win32.Build.0 = UnicodeDebug|Win32
+		{488796F1-8E07-40FE-A006-B6252E958746}.UnicodeDebug|x64.ActiveCfg = UnicodeDebug|x64
+		{488796F1-8E07-40FE-A006-B6252E958746}.UnicodeDebug|x64.Build.0 = UnicodeDebug|x64
+		{488796F1-8E07-40FE-A006-B6252E958746}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
+		{488796F1-8E07-40FE-A006-B6252E958746}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
+		{488796F1-8E07-40FE-A006-B6252E958746}.UnicodeRelease|x64.ActiveCfg = UnicodeRelease|x64
+		{488796F1-8E07-40FE-A006-B6252E958746}.UnicodeRelease|x64.Build.0 = UnicodeRelease|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC2E4F75-FADC-4F44-BD62-47A321828081}
+	EndGlobalSection
+EndGlobal
