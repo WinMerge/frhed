@@ -1,0 +1,9 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+shallow_clone: true
+build_script:
+- cmd: >-
+    BuildBin.vs2017.cmd
+    BuildArc.cmd
+artifacts:
+- path: Dist/*.zip
