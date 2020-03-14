@@ -258,6 +258,7 @@
     <po Include="..\Translations\Frhed\fr.po" />
     <po Include="..\Translations\Frhed\ja.po" />
     <po Include="..\Translations\Frhed\nl.po" />
+    <po Include="..\Translations\Frhed\sl.po" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="heksedit.vcxproj">

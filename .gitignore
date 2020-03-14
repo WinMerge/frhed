@@ -1,0 +1,6 @@
+*.un~
+*.filters~
+*.vcxproj~
+*.bak
+*.pot~
+*.po~
