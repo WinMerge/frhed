@@ -449,7 +449,7 @@ BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,101,111,50,14
 END
 
-IDD_VIEWSETTINGSDIALOG DIALOGEX 0, 0, 249, 191
+IDD_VIEWSETTINGSDIALOG DIALOGEX 0, 0, 269, 191
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
     WS_SYSMENU
 CAPTION "View Settings"
@@ -460,31 +460,31 @@ BEGIN
     EDITTEXT        IDC_SETTINGS_BYTESPERLINE,7,16,68,12,ES_AUTOHSCROLL
     CONTROL         "Automatically adjust number of bytes per line (uncheck this if you want Frhed to use your own choice for bytes per line)",
                     IDC_SETTINGS_ADJUST_BYTELINE,"Button",BS_AUTOCHECKBOX |
-                    BS_MULTILINE | WS_TABSTOP,7,31,234,19
+                    BS_MULTILINE | WS_TABSTOP,7,31,254,19
     LTEXT           "Display length of offset in how many characters:",
-                    IDC_STATIC,7,51,200,8
+                    IDC_STATIC,7,51,220,8
     EDITTEXT        IDC_SETTINGS_OFFSETLEN,7,61,68,12,ES_AUTOHSCROLL
     CONTROL         "Adjust offset len to that of the max offset",
                     IDC_SETTINGS_ADJOFFSET,"Button",BS_AUTOCHECKBOX |
-                    BS_MULTILINE | WS_TABSTOP,78,61,163,12
+                    BS_MULTILINE | WS_TABSTOP,78,61,183,12
     GROUPBOX        "Display values at caret position as:",IDC_STATIC,7,76,
-                    128,25,WS_GROUP
+                    255,25,WS_GROUP
     CONTROL         "unsigned",IDC_SETTINGS_CARETUNSIGN,"Button",
-                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,86,45,10
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,86,80,10
     CONTROL         "signed",IDC_SETTINGS_CARETSIGN,"Button",BS_AUTORADIOBUTTON,
-                    65,86,37,10
+                    130,86,80,10
     CONTROL         "Set read-only mode on opening files",IDC_SETTINGS_OPENRO,
-                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,7,106,128,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,7,106,148,
                     10
     LTEXT           "Path and filename of the text editor to call:",
-                    IDC_STATIC,7,122,172,8
-    EDITTEXT        IDC_SETTINGS_EDITOR,7,132,180,13,ES_AUTOHSCROLL
-    PUSHBUTTON      "Browse...",IDC_SETTINGS_EDITORSELECT,191,132,50,14
+                    IDC_STATIC,7,122,192,8
+    EDITTEXT        IDC_SETTINGS_EDITOR,7,132,200,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_SETTINGS_EDITORSELECT,211,132,50,14
     LTEXT           "Language:",IDC_STATIC,7,153,50,8
-    COMBOBOX        IDC_SETTINGS_LANGUAGE,69,150,172,189,CBS_DROPDOWNLIST | 
+    COMBOBOX        IDC_SETTINGS_LANGUAGE,69,150,192,189,CBS_DROPDOWNLIST | 
                     CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP | CBS_NOINTEGRALHEIGHT
-    DEFPUSHBUTTON   "OK",IDOK,138,170,50,14
-    PUSHBUTTON      "Cancel",IDCANCEL,191,170,50,14
+    DEFPUSHBUTTON   "OK",IDOK,158,170,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,211,170,50,14
 END
 
 IDD_APPENDDIALOG DIALOGEX 0, 0, 154, 57
