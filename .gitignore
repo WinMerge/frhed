@@ -1,6 +1,9 @@
-*.un~
-*.filters~
-*.vcxproj~
 *.bak
-*.pot~
-*.po~
+*.*~
+*.swp
+*.user
+.vs/
+Build/
+BuildTmp/
+Dist/
+Translations/Frhed/heksedit.rc
