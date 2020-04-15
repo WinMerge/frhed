@@ -52,6 +52,7 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID)
 	if (dwReason == DLL_PROCESS_DETACH)
 	{
 		HexEditorWindow::FreeStringTable();
+		UnregisterClass(szHexClass, hInstance);
 	}
 	return FALSE;
 }
