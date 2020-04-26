@@ -30,7 +30,7 @@ Last change: 2013-04-10 by Jochen Neubeck
 #define FRHED_MAJOR_VERSION 0
 #define FRHED_MINOR_VERSION 10904
 #define FRHED_SUB_RELEASE_NO 2017
-#define FRHED_BUILD_NO 3
+#define FRHED_BUILD_NO 4
 
 // Utility macros for formatting version number to string.
 #define SHARPEN_A(X) #X
