@@ -13,10 +13,19 @@ Localization:
   Thomas De Rocker <thomasderocker@yahoo.com>
 
 * French:
-  FrÈdÈric Dectot
+  Fr√©d√©ric Dectot
+
+* Galician
+  Luis A. Mart√≠nez <luis.martinez.sobrino at gmail.com>
 
 * German
   Tim Gerundt <gerundt@users.sourceforge.net>
+
+* Japanese
+  Takashi Sawanaka
+
+* Solovenian
+  Jadran Rudec <jrudec at gmail.com>
 
 Other contributors (heksedit versions):
 Kimmo Varis <kimmov@winmerge.org>
