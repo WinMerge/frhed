@@ -20,6 +20,7 @@ Localization:
 
 * German
   Tim Gerundt <gerundt@users.sourceforge.net>
+  Mr-Update
 
 * Japanese
   Takashi Sawanaka
