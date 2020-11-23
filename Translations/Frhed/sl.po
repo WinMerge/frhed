@@ -757,7 +757,7 @@ msgstr "Frhed prikaz kot RTF"
 
 #: heksedit.rc:374
 #, c-format
-msgid "Enter Decimal Value"
+msgid "Enter decimal value"
 msgstr "Vnesi decimalno vrednost"
 
 #: heksedit.rc:377
@@ -837,8 +837,8 @@ msgstr "Prilepi kodirane dvojiške vrednosti kot besedilo"
 
 #: heksedit.rc:409
 #, c-format
-msgid " Skip how many bytes between inserts/overwrites"
-msgstr " Preskoèi koliko bajtov med vstavljanji/prepisovanji"
+msgid "Skip how many bytes between inserts/overwrites"
+msgstr "Preskoèi koliko bajtov med vstavljanji/prepisovanji"
 
 #: heksedit.rc:419
 #: heksedit.rc:1000
@@ -917,7 +917,7 @@ msgstr "Prikaži dolžino odmika s številom znakov:"
 
 #: heksedit.rc:467
 #, c-format
-msgid "Adjust offset len to that of the max offset"
+msgid "Adjust offset length to that of the max offset"
 msgstr "Nastavi dolžino odmika na tisto od najveèjega"
 
 #: heksedit.rc:470
@@ -1102,13 +1102,13 @@ msgstr "Izberi blok"
 
 #: heksedit.rc:587
 #, c-format
-msgid "Start of selection: (prefix x for hex)"
-msgstr "Zaèetek izbire: (predpona x za 16-tiško)"
+msgid "Start of selection (prefix x for hex):"
+msgstr "Zaèetek izbire (predpona x za 16-tiško):"
 
 #: heksedit.rc:590
 #, c-format
-msgid "End of selection: (prefix x for hex)"
-msgstr "Konec izbora: (predpona x za 16-tiško)"
+msgid "End of selection (prefix x for hex):"
+msgstr "Konec izbora (predpona x za 16-tiško):"
 
 #: heksedit.rc:599
 #, c-format
@@ -1132,8 +1132,8 @@ msgstr "Dodaj zaznamek"
 
 #: heksedit.rc:616
 #, c-format
-msgid "Offset: (prefix x for hex)"
-msgstr "Odmik: (predpona x za 16-tiško)"
+msgid "Offset (prefix x for hex):"
+msgstr "Odmik (predpona x za 16-tiško):"
 
 #: heksedit.rc:619
 #, c-format
@@ -1167,8 +1167,8 @@ msgstr "Zaèni odpiranje delno"
 
 #: heksedit.rc:644
 #, c-format
-msgid "&At offset from the beginning of file: (prefix x for hex):"
-msgstr "&Na odmiku od zaèetka datoteke: (predpona \"x\" za šesnajstiško):"
+msgid "&At offset from the beginning of file (prefix x for hex):"
+msgstr "&Na odmiku od zaèetka datoteke (predpona \"x\" za šesnajstiško):"
 
 #: heksedit.rc:646
 #, c-format
@@ -1208,14 +1208,11 @@ msgstr "Osveži"
 
 #: heksedit.rc:674
 #, c-format
-msgid ""
-" - CF_TEXT was used by previous versions of Frhed\n"
-" - Those starting w CF_ are standard formats && others are registered/private ones\n"
-" - Some formats may have been synthesized from the original."
+msgid "- CF_TEXT was used by previous versions of Frhed\n- Those starting w CF_ are standard formats && others are registered/private ones\n- Some formats may have been synthesized from the original."
 msgstr ""
-" - CF_TEXT je bil uporabljen z prejšnjo razlièico Frhed\n"
-" - Tiste, zaèete z w CF_ so v standardnih oblikah in druge so registrirane/zasebne\n"
-" - Nekateri formati so lahko sintetizirani iz izvirnika."
+"- CF_TEXT je bil uporabljen z prejšnjo razlièico Frhed\n"
+"- Tiste, zaèete z w CF_ so v standardnih oblikah in druge so registrirane/zasebne\n"
+"- Nekateri formati so lahko sintetizirani iz izvirnika."
 
 #: heksedit.rc:682
 #, c-format
@@ -1947,8 +1944,8 @@ msgstr "Priklicanjuurejevalnikabesediljeprišlodonapake."
 
 #: heksedit.rc:1062
 #, c-format
-msgid "Could not insert data"
-msgstr "Podatkov ni bilo mogoèe vstaviti"
+msgid "Could not insert data."
+msgstr "Podatkov ni bilo mogoèe vstaviti."
 
 #: heksedit.rc:1063
 #, c-format
@@ -2232,12 +2229,12 @@ msgstr "Ciljna vrednost ni veljavna."
 
 #: heksedit.rc:1185
 #, c-format
-msgid "Cannot move/copy a block of zero length"
-msgstr "Ni mogoèe premakniti/ kopirati blok nièelne dolžine"
+msgid "Cannot move/copy a block of zero length."
+msgstr "Ni mogoèe premakniti/ kopirati blok nièelne dolžine."
 
 #: heksedit.rc:1186
 #, c-format
-msgid "The chosen block extends into non-existant data."
+msgid "The chosen block extends into non-existent data."
 msgstr "Izbrani blok razširja v neobstojeèe podatke."
 
 #: heksedit.rc:1187
@@ -2247,8 +2244,8 @@ msgstr "Blok ni bil premaknjen!"
 
 #: heksedit.rc:1188
 #, c-format
-msgid "Cannot move/copy the block outside the data"
-msgstr "Ni mogoèe premakniti/kopirati bloka izven podatkov"
+msgid "Cannot move/copy the block outside the data."
+msgstr "Ni mogoèe premakniti/kopirati bloka izven podatkov."
 
 #: heksedit.rc:1194
 #, c-format
@@ -2277,13 +2274,13 @@ msgstr "Ni mogoèe obrniti enkratnega bajta."
 
 #: heksedit.rc:1204
 #, c-format
-msgid "The chosen block extends into non-existant data. The offsets will be shifted to correct positions."
+msgid "The chosen block extends into non-existent data. The offsets will be shifted to correct positions."
 msgstr "Izbrani blok razširja v neobstojeèe podatke. Odmiki bodo premaknjeni na pravilne položaje."
 
 #: heksedit.rc:1210
 #, c-format
-msgid "link names are \"Frhed.lnk\""
-msgstr "imena povezav so \"Frhed.lnk\""
+msgid "Link names are \"Frhed.lnk\""
+msgstr "Imena povezav so \"Frhed.lnk\""
 
 #: heksedit.rc:1211
 #, c-format
@@ -2292,43 +2289,43 @@ msgstr "Ta mapa že vsebuje datoteko z imenom \"Frhed.lnk\""
 
 #: heksedit.rc:1212
 #, c-format
-msgid "\"Frhed.lnk\" can be added to this folder"
-msgstr "\"Frhed.lnk\" je mogoèe dodati v to mapo"
+msgid "\"Frhed.lnk\" can be added to this folder."
+msgstr "\"Frhed.lnk\" je mogoèe dodati v to mapo."
 
 #: heksedit.rc:1213
 #, c-format
-msgid "\"Frhed.lnk\" cannot be added to this folder"
-msgstr "\"Frhed.lnk\" ni mogoèe dodati v to mapo"
+msgid "\"Frhed.lnk\" cannot be added to this folder."
+msgstr "\"Frhed.lnk\" ni mogoèe dodati v to mapo."
 
 #: heksedit.rc:1214
 #, c-format
-msgid "Frhed can start searching here"
-msgstr "Frhed lahko zaène z iskanjem tukaj"
+msgid "Frhed can start searching here."
+msgstr "Frhed lahko zaène z iskanjem tukaj."
 
 #: heksedit.rc:1215
 #, c-format
-msgid "Frhed cannot start the search from here"
-msgstr "Frhed ne more zaèeti z iskanjem od tukaj"
+msgid "Frhed cannot start the search from here."
+msgstr "Frhed ne more zaèeti z iskanjem od tukaj."
 
 #: heksedit.rc:1216
 #, c-format
-msgid "Could not Save shortcut entries"
-msgstr "Ni bilo mogoèe shraniti vnosov bližnjice"
+msgid "Could not save shortcut entries."
+msgstr "Ni bilo mogoèe shraniti vnosov bližnjice."
 
 #: heksedit.rc:1217
 #, c-format
-msgid "Cannot move more than 1 link at a time"
-msgstr "Ni mogoèe hkrati premakniti veè kot eno povezavo"
+msgid "Cannot move more than 1 link at a time."
+msgstr "Ni mogoèe hkrati premakniti veè kot eno povezavo."
 
 #: heksedit.rc:1218
 #, c-format
-msgid "No link selected to move"
-msgstr "Nobena povezava ni izbrana za premikanje"
+msgid "No link selected to move."
+msgstr "Nobena povezava ni izbrana za premikanje."
 
 #: heksedit.rc:1219
 #, c-format
-msgid "Couldn't find the selected item"
-msgstr "Izbranega vnosa ni bilo mogoèe najti"
+msgid "Couldn't find the selected item."
+msgstr "Izbranega vnosa ni bilo mogoèe najti."
 
 #: heksedit.rc:1220
 #, c-format
@@ -2342,17 +2339,15 @@ msgstr "Premakni povezavo do Frhed v..."
 
 #: heksedit.rc:1222
 #, c-format
-msgid "There is already a link in that folder"
-msgstr "V tej mapi že obstaja povezava"
+msgid "There is already a link in that folder."
+msgstr "V tej mapi že obstaja povezava."
 
 #: heksedit.rc:1223
 #, c-format
-msgid ""
-"Existing links to old versions of Frhed will be updated to this version\n"
-"Are you sure you want to continue"
+msgid "Existing links to old versions of Frhed will be updated to this version.\nAre you sure you want to continue?"
 msgstr ""
 "Obstojeèe povezave do stare razlièice Frheda bodo posodobljene na to razlièico\n"
-"Ali ste preprièani, da želite nadaljevati"
+"Ali ste preprièani, da želite nadaljevati?"
 
 #: heksedit.rc:1224
 #, c-format
@@ -2361,8 +2356,8 @@ msgstr "Kliknite mapo v kateri želite zaèeti z iskanjem."
 
 #: heksedit.rc:1225
 #, c-format
-msgid "No links selected to delete"
-msgstr "Nobena povezava ni izbrana za brisanje"
+msgid "No links selected to delete."
+msgstr "Nobena povezava ni izbrana za brisanje."
 
 #: heksedit.rc:1231
 #, c-format
@@ -2396,8 +2391,8 @@ msgstr "Za pridobitev seznama pogonov morate imeti skrbniške pravice."
 
 #: heksedit.rc:1242
 #, c-format
-msgid "Unable to open drive"
-msgstr "Pogona ni mogoèe odpreti"
+msgid "Unable to open drive."
+msgstr "Pogona ni mogoèe odpreti."
 
 #: heksedit.rc:1243
 #, c-format
@@ -2497,12 +2492,9 @@ msgstr ""
 
 #: heksedit.rc:1262
 #, c-format
-msgid ""
-"Unexpected end of data found\n"
-"Cannot continue!\n"
-"Do you want to keep what has been found so far?"
+msgid "Unexpected end of data found.\nCannot continue!\nDo you want to keep what has been found so far?"
 msgstr ""
-"Najden je bil neprièakovan konec podatkov\n"
+"Najden je bil neprièakovan konec podatkov.\n"
 "Ni mogoèe nadaljevati!\n"
 "Ali želite ohraniti, kar je bilo ugotovljeno doslej?"
 
@@ -2517,13 +2509,13 @@ msgstr ""
 
 #: heksedit.rc:1264
 #, c-format
-msgid "characters other than whitespace and hexdigits. (like Frhed display)"
-msgstr "drugih znakov razen presledka in šestnajstih. (kot prikazovalnik Frhed)"
+msgid "characters other than whitespace and hexdigits (like Frhed display)."
+msgstr "drugih znakov razen presledka in šestnajstih (kot prikazovalnik Frhed)."
 
 #: heksedit.rc:1265
 #, c-format
-msgid "only whitespace and hexdigits. (unlike Frhed display)"
-msgstr "samo presledki in 16-tiške številke (za razliko od Frhed prikaza)"
+msgid "only whitespace and hexdigits (unlike Frhed display)."
+msgstr "samo presledki in 16-tiške številke (za razliko od Frhed prikaza)."
 
 #: heksedit.rc:1271
 #, c-format
@@ -2709,11 +2701,9 @@ msgstr "TYMED_ISTORAGE ni podprt za 'Povleci in spusti'."
 
 #: heksedit.rc:1340
 #, c-format
-msgid ""
-"float size value:\n"
-"%g\n"
+msgid "Float size value:\n%g\n"
 msgstr ""
-"vrednost s plavajoèo vejivo:\n"
+"Vrednost s plavajoèo vejivo:\n"
 "%g\n"
 
 #: heksedit.rc:1341
@@ -2723,13 +2713,10 @@ msgstr "Ni dovolj prostora za vrednost velikosti s plavajoèo vejico.\n"
 
 #: heksedit.rc:1342
 #, c-format
-msgid ""
-"\n"
-"double size value:\n"
-"%g\n"
+msgid "\nDouble size value:\n%g\n"
 msgstr ""
 "\n"
-"vrednost dvojne velikosti:\n"
+"vRednost dvojne velikosti:\n"
 "%g\n"
 
 #: heksedit.rc:1343

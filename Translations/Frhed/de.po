@@ -758,7 +758,7 @@ msgstr "Frhed-Anzeige als RTF"
 
 #: heksedit.rc:374
 #, c-format
-msgid "Enter Decimal Value"
+msgid "Enter decimal value"
 msgstr "Dezimalwert eingeben"
 
 #: heksedit.rc:377
@@ -838,7 +838,7 @@ msgstr "Kodierte binäre Werte als Text einfügen"
 
 #: heksedit.rc:409
 #, c-format
-msgid " Skip how many bytes between inserts/overwrites"
+msgid "Skip how many bytes between inserts/overwrites"
 msgstr "Wie viele Bytes zwischen Einfügen/Überschreiben überspringen"
 
 #: heksedit.rc:419
@@ -918,7 +918,7 @@ msgstr "Anzahl der Zeichen für Offset-Länge:"
 
 #: heksedit.rc:467
 #, c-format
-msgid "Adjust offset len to that of the max offset"
+msgid "Adjust offset length to that of the max offset"
 msgstr "Offset-Länge an die des maximalen Offsets anpassen"
 
 #: heksedit.rc:470
@@ -1103,12 +1103,12 @@ msgstr "Block auswählen"
 
 #: heksedit.rc:587
 #, c-format
-msgid "Start of selection: (prefix x for hex)"
+msgid "Start of selection (prefix x for hex):"
 msgstr "Beginn der Auswahl (Präfix x für hex):"
 
 #: heksedit.rc:590
 #, c-format
-msgid "End of selection: (prefix x for hex)"
+msgid "End of selection (prefix x for hex):"
 msgstr "Ende der Auswahl (Präfix x für hex):"
 
 #: heksedit.rc:599
@@ -1133,7 +1133,7 @@ msgstr "Lesezeichen hinzufügen"
 
 #: heksedit.rc:616
 #, c-format
-msgid "Offset: (prefix x for hex)"
+msgid "Offset (prefix x for hex):"
 msgstr "Offset (Präfix x für hex):"
 
 #: heksedit.rc:619
@@ -1168,7 +1168,7 @@ msgstr "Teilweise Öffnung beginnen"
 
 #: heksedit.rc:644
 #, c-format
-msgid "&At offset from the beginning of file: (prefix x for hex):"
+msgid "&At offset from the beginning of file (prefix x for hex):"
 msgstr "Beim Offset vom Dateianfang (Präfix x für hex):"
 
 #: heksedit.rc:646
@@ -1209,7 +1209,7 @@ msgstr "Aktualisieren"
 
 #: heksedit.rc:674
 #, c-format
-msgid " - CF_TEXT was used by previous versions of Frhed\n - Those starting w CF_ are standard formats && others are registered/private ones\n - Some formats may have been synthesized from the original."
+msgid "- CF_TEXT was used by previous versions of Frhed\n- Those starting w CF_ are standard formats && others are registered/private ones\n- Some formats may have been synthesized from the original."
 msgstr "- CF_TEXT wurde von früheren Versionen von Frhed verwendet.\n- Die mit w CF_ beginnenden Formate sind Standardformate, andere sind registrierte/private Formate.\n- Einige Formate wurden möglicherweise aus dem Original synthetisiert."
 
 #: heksedit.rc:682
@@ -1924,8 +1924,8 @@ msgstr "Beim Aufruf des Texteditors ist ein Fehler aufgetreten."
 
 #: heksedit.rc:1062
 #, c-format
-msgid "Could not insert data"
-msgstr "Konnte keine Daten einfügen"
+msgid "Could not insert data."
+msgstr "Konnte keine Daten einfügen."
 
 #: heksedit.rc:1063
 #, c-format
@@ -2185,12 +2185,12 @@ msgstr "Der Zielwert ist ungültig."
 
 #: heksedit.rc:1185
 #, c-format
-msgid "Cannot move/copy a block of zero length"
+msgid "Cannot move/copy a block of zero length."
 msgstr "Kann einen Block der Länge Null nicht verschieben/kopieren."
 
 #: heksedit.rc:1186
 #, c-format
-msgid "The chosen block extends into non-existant data."
+msgid "The chosen block extends into non-existent data."
 msgstr "Der gewählte Block erstreckt sich auf nicht vorhandene Daten."
 
 #: heksedit.rc:1187
@@ -2200,7 +2200,7 @@ msgstr "Der Block wurde nicht verschoben!"
 
 #: heksedit.rc:1188
 #, c-format
-msgid "Cannot move/copy the block outside the data"
+msgid "Cannot move/copy the block outside the data."
 msgstr "Der Block kann nicht außerhalb der Daten verschoben/kopiert werden."
 
 #: heksedit.rc:1194
@@ -2230,12 +2230,12 @@ msgstr "Einzelbyte kann nicht umgekehrt werden."
 
 #: heksedit.rc:1204
 #, c-format
-msgid "The chosen block extends into non-existant data. The offsets will be shifted to correct positions."
+msgid "The chosen block extends into non-existent data. The offsets will be shifted to correct positions."
 msgstr "Der gewählte Block erstreckt sich auf nicht vorhandene Daten. Die Offsets werden auf korrekte Positionen verschoben."
 
 #: heksedit.rc:1210
 #, c-format
-msgid "link names are \"Frhed.lnk\""
+msgid "Link names are \"Frhed.lnk\""
 msgstr "Linknamen sind \"Frhed.lnk\""
 
 #: heksedit.rc:1211
@@ -2245,42 +2245,42 @@ msgstr "Dieser Ordner enthält bereits eine Datei namens \"Frhed.lnk\""
 
 #: heksedit.rc:1212
 #, c-format
-msgid "\"Frhed.lnk\" can be added to this folder"
+msgid "\"Frhed.lnk\" can be added to this folder."
 msgstr "\"Frhed.lnk\" kann zu diesem Ordner hinzugefügt werden."
 
 #: heksedit.rc:1213
 #, c-format
-msgid "\"Frhed.lnk\" cannot be added to this folder"
+msgid "\"Frhed.lnk\" cannot be added to this folder."
 msgstr "\"Frhed.lnk\" kann diesem Ordner nicht hinzugefügt werden."
 
 #: heksedit.rc:1214
 #, c-format
-msgid "Frhed can start searching here"
+msgid "Frhed can start searching here."
 msgstr "Frhed kann hier mit der Suche beginnen."
 
 #: heksedit.rc:1215
 #, c-format
-msgid "Frhed cannot start the search from here"
+msgid "Frhed cannot start the search from here."
 msgstr "Frhed kann die Suche nicht von hier aus starten."
 
 #: heksedit.rc:1216
 #, c-format
-msgid "Could not Save shortcut entries"
+msgid "Could not save shortcut entries."
 msgstr "Konnte Verknüpfungseinträge nicht speichern."
 
 #: heksedit.rc:1217
 #, c-format
-msgid "Cannot move more than 1 link at a time"
+msgid "Cannot move more than 1 link at a time."
 msgstr "Kann nicht mehr als 1 Link auf einmal bewegen."
 
 #: heksedit.rc:1218
 #, c-format
-msgid "No link selected to move"
+msgid "No link selected to move."
 msgstr "Kein Link zum Verschieben ausgewählt."
 
 #: heksedit.rc:1219
 #, c-format
-msgid "Couldn't find the selected item"
+msgid "Couldn't find the selected item."
 msgstr "Konnte den ausgewählten Eintrag nicht finden."
 
 #: heksedit.rc:1220
@@ -2295,12 +2295,12 @@ msgstr "Den Link zu Frhed verschieben nach..."
 
 #: heksedit.rc:1222
 #, c-format
-msgid "There is already a link in that folder"
+msgid "There is already a link in that folder."
 msgstr "Es gibt bereits einen Link in diesem Ordner."
 
 #: heksedit.rc:1223
 #, c-format
-msgid "Existing links to old versions of Frhed will be updated to this version\nAre you sure you want to continue"
+msgid "Existing links to old versions of Frhed will be updated to this version.\nAre you sure you want to continue?"
 msgstr "Bestehende Links zu alten Versionen von Frhed werden auf diese Version aktualisiert.\nSind Sie sicher, dass Sie fortfahren möchten?"
 
 #: heksedit.rc:1224
@@ -2310,7 +2310,7 @@ msgstr "Wählen Sie einen Ordner aus, in dem die Suche beginnen soll."
 
 #: heksedit.rc:1225
 #, c-format
-msgid "No links selected to delete"
+msgid "No links selected to delete."
 msgstr "Keine Links zum Löschen ausgewählt."
 
 #: heksedit.rc:1231
@@ -2345,7 +2345,7 @@ msgstr "Sie müssen Administratorrechte haben, um eine Liste von Laufwerken zu er
 
 #: heksedit.rc:1242
 #, c-format
-msgid "Unable to open drive"
+msgid "Unable to open drive."
 msgstr "Laufwerk kann nicht geöffnet werden."
 
 #: heksedit.rc:1243
@@ -2420,7 +2420,7 @@ msgstr "Illegale Zeichen in hexadezimalen Daten.\nKann nicht fortfahren!\nWollen
 
 #: heksedit.rc:1262
 #, c-format
-msgid "Unexpected end of data found\nCannot continue!\nDo you want to keep what has been found so far?"
+msgid "Unexpected end of data found.\nCannot continue!\nDo you want to keep what has been found so far?"
 msgstr "Unerwartetes Ende der gefundenen Daten.\nKann nicht fortfahren!\nWollen Sie das bisher Gefundene behalten?"
 
 #: heksedit.rc:1263
@@ -2430,13 +2430,13 @@ msgstr "Haben diese Daten dasselbe Format wie die Frhed-Anzeige?\nDiese Daten en
 
 #: heksedit.rc:1264
 #, c-format
-msgid "characters other than whitespace and hexdigits. (like Frhed display)"
-msgstr "andere Zeichen als Leerzeichen und Hexadezimalziffern. (Wie Frhed-Anzeige)"
+msgid "characters other than whitespace and hexdigits (like Frhed display)."
+msgstr "andere Zeichen als Leerzeichen und Hexadezimalziffern (Wie Frhed-Anzeige)."
 
 #: heksedit.rc:1265
 #, c-format
-msgid "only whitespace and hexdigits. (unlike Frhed display)"
-msgstr "nur Leerzeichen und Hexadezimalziffern. (Im Gegensatz zur Frhed-Anzeige)"
+msgid "only whitespace and hexdigits (unlike Frhed display)."
+msgstr "nur Leerzeichen und Hexadezimalziffern (Im Gegensatz zur Frhed-Anzeige)."
 
 #: heksedit.rc:1271
 #, c-format
@@ -2578,7 +2578,7 @@ msgstr "FEHLER: Nicht genug Platz für Daten in doppelter Größe."
 #: heksedit.rc:1313
 #, c-format
 msgid "ERROR: Unknown variable type:"
-msgstr "FEHLER: Unbekannter Variablentyp"
+msgstr "FEHLER: Unbekannter Variablentyp:"
 
 #: heksedit.rc:1319
 #, c-format
@@ -2588,7 +2588,7 @@ msgstr "-> Länge der Vorlage = %d Bytes."
 #: heksedit.rc:1320
 #, c-format
 msgid "Template files (*.tpl)\0*.tpl\0\0"
-msgstr "Vorlagendateien (*.tpl)|*.tpl|"
+msgstr "Vorlagendateien (*.tpl)\0*.tpl\0\0"
 
 #: heksedit.rc:1321
 #, c-format
@@ -2622,7 +2622,7 @@ msgstr "TYMED_ISTORAGE wird für Drag-and-Drop nicht unterstützt."
 
 #: heksedit.rc:1340
 #, c-format
-msgid "float size value:\n%g\n"
+msgid "Float size value:\n%g\n"
 msgstr "Gleitkommawert:\n%g\n"
 
 #: heksedit.rc:1341
@@ -2632,7 +2632,7 @@ msgstr "Nicht genug Platz für den Gleitkommawert.\n"
 
 #: heksedit.rc:1342
 #, c-format
-msgid "\ndouble size value:\n%g\n"
+msgid "\nDouble size value:\n%g\n"
 msgstr "\nDoppelwortwert:\n%g\n"
 
 #: heksedit.rc:1343

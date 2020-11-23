@@ -467,7 +467,7 @@ BEGIN
     CONTROL         "Adjust offset length to that of the max offset",
                     IDC_SETTINGS_ADJOFFSET,"Button",BS_AUTOCHECKBOX |
                     BS_MULTILINE | WS_TABSTOP,78,61,183,12
-    GROUPBOX        "Display values at caret position",IDC_STATIC,7,76,
+    GROUPBOX        "Display values at caret position as:",IDC_STATIC,7,76,
                     255,25,WS_GROUP
     CONTROL         "unsigned",IDC_SETTINGS_CARETUNSIGN,"Button",
                     BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,86,80,10
@@ -1310,14 +1310,14 @@ BEGIN
     IDS_TPL_ERR_NOSPC_FLOAT "ERROR: not enough space for float-size data."
     IDS_TPL_FMT_DOUBLE      "= %g"
     IDS_TPL_ERR_NOSPC_DOUBLE "ERROR: not enough space for double-size data."
-    IDS_TPL_ERR_UNK_TYPE    "ERROR: Unknown variable type."
+    IDS_TPL_ERR_UNK_TYPE    "ERROR: Unknown variable type:"
 END
 
 // Template (continued)
 STRINGTABLE 
 BEGIN
    IDS_TPL_LENGTH           "-> Length of template = %d bytes."
-   IDS_TPL_FILE_PATTERN     "Template files (*.tpl)|*.tpl|"
+   IDS_TPL_FILE_PATTERN     "Template files (*.tpl)\0*.tpl\0\0"
    IDS_TPL_CHOOSE_FILE      "Choose template file"
    IDS_TPL_CANNOT_OPEN      "Could not open template file %s."
    IDS_TPL_CANNOT_OPEN_FROM "Could not load template from file %s."
