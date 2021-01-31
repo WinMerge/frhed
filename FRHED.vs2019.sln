@@ -2,9 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28407.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "frhed.vs2019", "FRHED\frhed.vs2019.vcxproj", "{139D8239-98B4-4B29-A199-B27CDB8B4708}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "frhed", "FRHED\frhed.vcxproj", "{139D8239-98B4-4B29-A199-B27CDB8B4708}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "heksedit.vs2019", "FRHED\heksedit.vs2019.vcxproj", "{488796F1-8E07-40FE-A006-B6252E958746}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "heksedit", "FRHED\heksedit.vcxproj", "{488796F1-8E07-40FE-A006-B6252E958746}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
