@@ -1,7 +1,7 @@
 # Released under the "GNU General Public License"
 #
 # Translators:
-# * MirosÅ‚aw Å»ylewicz
+# * Miros³aw ¯ylewicz
 #
 # ID line follows -- this is updated by SVN
 # $Id: pl.po 697 2021-01-04 11:30:30Z $
@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
 "POT-Creation-Date: 2020-12-30 13:41+0000\n"
 "PO-Revision-Date: \n"
-"Last-Translator: MirosÅ‚aw Å»ylewicz\n"
+"Last-Translator: Miros³aw ¯ylewicz\n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,7 +46,7 @@ msgstr "Nowy\tCtrl+N"
 #: heksedit.rc:15
 #, c-format
 msgid "&Open...\tCtrl+O"
-msgstr "OtwÃ³rz...\tCtrl+O"
+msgstr "Otwórz...\tCtrl+O"
 
 #: heksedit.rc:16
 #, c-format
@@ -71,7 +71,7 @@ msgstr "Zapisz zaznaczenie jako...\tCtrl+Shift+O"
 #: heksedit.rc:22
 #, c-format
 msgid "Re&vert\tCtrl+Shift+R"
-msgstr "OdwrÃ³Ä‡\tCtrl+Shift+R"
+msgstr "Odwróæ\tCtrl+Shift+R"
 
 #: heksedit.rc:23
 #, c-format
@@ -81,7 +81,7 @@ msgstr "Wstaw plik...\tCtrl+Shift+I"
 #: heksedit.rc:24
 #, c-format
 msgid "&Delete file...\tCtrl+Shift+D"
-msgstr "UsuÅ„ plik...\tCtrl+Shift+D"
+msgstr "Usuñ plik...\tCtrl+Shift+D"
 
 #: heksedit.rc:25
 #, c-format
@@ -101,7 +101,7 @@ msgstr "Importuj z hexdump...\tCtrl+Shift+H"
 #: heksedit.rc:40
 #, c-format
 msgid "E&xit\tAlt+F4"
-msgstr "WyjdÅº\tAlt+F4"
+msgstr "WyjdŸ\tAlt+F4"
 
 #: heksedit.rc:42
 #, c-format
@@ -111,7 +111,7 @@ msgstr "Dysk"
 #: heksedit.rc:44
 #, c-format
 msgid "&Open drive..."
-msgstr "OtwÃ³rz dysk..."
+msgstr "Otwórz dysk..."
 
 #: heksedit.rc:45
 #, c-format
@@ -122,29 +122,29 @@ msgstr "Zamknij dysk"
 #: heksedit.rc:190
 #, c-format
 msgid "Goto &First Sector"
-msgstr "IdÅº do pierwszego sektora"
+msgstr "IdŸ do pierwszego sektora"
 
 #: heksedit.rc:48
 #, c-format
 msgid "Goto &Next Sector\tCtrl+Shift+PgDn"
-msgstr "IdÅº do nastÄ™pnego sektora\tCtrl+Shift+PgDn"
+msgstr "IdŸ do nastêpnego sektora\tCtrl+Shift+PgDn"
 
 #: heksedit.rc:49
 #, c-format
 msgid "Goto &Previous Sector\tCtrl+Shift+PgUp"
-msgstr "IdÅº do poprzedniego sektora\tCtrl+Shift+PgUp"
+msgstr "IdŸ do poprzedniego sektora\tCtrl+Shift+PgUp"
 
 #: heksedit.rc:51
 #: heksedit.rc:193
 #, c-format
 msgid "Goto &Last Sector"
-msgstr "IdÅº do ostatniego sektora"
+msgstr "IdŸ do ostatniego sektora"
 
 #: heksedit.rc:53
 #: heksedit.rc:195
 #, c-format
 msgid "Goto &Sector #..."
-msgstr "IdÅº do sektora #..."
+msgstr "IdŸ do sektora #..."
 
 #: heksedit.rc:55
 #, c-format
@@ -159,7 +159,7 @@ msgstr "Cofnij\tCtrl+Z"
 #: heksedit.rc:58
 #, c-format
 msgid "&Redo\tCtrl+Y"
-msgstr "PowtÃ³rz\tCtrl+Y"
+msgstr "Powtórz\tCtrl+Y"
 
 #: heksedit.rc:60
 #: heksedit.rc:177
@@ -182,28 +182,28 @@ msgstr "Wklej...\tCtrl+V"
 #: heksedit.rc:63
 #, c-format
 msgid "Paste &with dialog...\tCtrl+Shift+V"
-msgstr "Wklej za pomocÄ… okna dialogowego...\tCtrl+Shift+V"
+msgstr "Wklej za pomoc¹ okna dialogowego...\tCtrl+Shift+V"
 
 #: heksedit.rc:64
 #, c-format
 msgid "&Move/Copy bytes...\tCtrl+Alt+M"
-msgstr "PrzenieÅ›/Kopiuj bajty...\tCtrl+Alt+M"
+msgstr "Przenieœ/Kopiuj bajty...\tCtrl+Alt+M"
 
 #: heksedit.rc:65
 #, c-format
 msgid "Reverse bytes...\tCtrl+Alt+R"
-msgstr "OdwrÃ³Ä‡ bajty...\tCtrl+Alt+R"
+msgstr "Odwróæ bajty...\tCtrl+Alt+R"
 
 #: heksedit.rc:66
 #, c-format
 msgid "&Append...\tCtrl+P"
-msgstr "DoÅ‚Ä…cz...\tCtrl+P"
+msgstr "Do³¹cz...\tCtrl+P"
 
 #: heksedit.rc:67
 #: heksedit.rc:180
 #, c-format
 msgid "&Delete\tDel"
-msgstr "UsuÅ„\tDel"
+msgstr "Usuñ\tDel"
 
 #: heksedit.rc:68
 #, c-format
@@ -238,39 +238,39 @@ msgstr "Tryb tylko do odczytu\tAlt+R"
 #: heksedit.rc:77
 #, c-format
 msgid "&Find and Replace"
-msgstr "ZnajdÅº i zastÄ…p"
+msgstr "ZnajdŸ i zast¹p"
 
 #: heksedit.rc:79
 #: heksedit.rc:182
 #, c-format
 msgid "&Find...\tCtrl+F"
-msgstr "ZnajdÅº...\tCtrl+F"
+msgstr "ZnajdŸ...\tCtrl+F"
 
 #: heksedit.rc:80
 #, c-format
 msgid "&Replace...\tCtrl+H"
-msgstr "ZastÄ…p...\tCtrl+H"
+msgstr "Zast¹p...\tCtrl+H"
 
 #: heksedit.rc:81
 #, c-format
 msgid "Find &next\tF3"
-msgstr "ZnajdÅº nastÄ™pny\tF3"
+msgstr "ZnajdŸ nastêpny\tF3"
 
 #: heksedit.rc:82
 #, c-format
 msgid "Find &previous\tShift+F3"
-msgstr "ZnajdÅº poprzedni\tShift+F3"
+msgstr "ZnajdŸ poprzedni\tShift+F3"
 
 #: heksedit.rc:84
 #: heksedit.rc:186
 #, c-format
 msgid "&Go To...\tCtrl+G"
-msgstr "IdÅº do...\tCtrl+G"
+msgstr "IdŸ do...\tCtrl+G"
 
 #: heksedit.rc:86
 #, c-format
 msgid "Enter decimal &value...\tCtrl+D"
-msgstr "WprowadÅº wartoÅ›Ä‡ dziesiÄ™tnÄ…...\tCtrl+D"
+msgstr "WprowadŸ wartoœæ dziesiêtn¹...\tCtrl+D"
 
 #: heksedit.rc:88
 #, c-format
@@ -290,7 +290,7 @@ msgstr ""
 #: heksedit.rc:92
 #, c-format
 msgid "File properties...\tAlt+Enter"
-msgstr "WÅ‚aÅ›ciwoÅ›ci pliku...\tAlt+Enter"
+msgstr "W³aœciwoœci pliku...\tAlt+Enter"
 
 #: heksedit.rc:93
 #, c-format
@@ -300,7 +300,7 @@ msgstr ""
 #: heksedit.rc:94
 #, c-format
 msgid "Open in text editor\tF5"
-msgstr "OtwÃ³rz w edytorze tekstu\tF5"
+msgstr "Otwórz w edytorze tekstu\tF5"
 
 #: heksedit.rc:96
 #, c-format
@@ -310,37 +310,37 @@ msgstr "Widok"
 #: heksedit.rc:98
 #, c-format
 msgid "Scroll &left\tCtrl+Arrow Left"
-msgstr "PrzewiÅ„ w lewo\tCtrl+StrzaÅ‚ka w lewo"
+msgstr "Przewiñ w lewo\tCtrl+Strza³ka w lewo"
 
 #: heksedit.rc:99
 #, c-format
 msgid "Scroll &right\tCtrl+Arrow Right"
-msgstr "PrzewiÅ„ w prawo\tCtrl+StrzaÅ‚ka w prawo"
+msgstr "Przewiñ w prawo\tCtrl+Strza³ka w prawo"
 
 #: heksedit.rc:100
 #, c-format
 msgid "Scroll &up\tCtrl+Arrow Up"
-msgstr "PrzewiÅ„ w gÃ³rÄ™\tCtrl+StrzaÅ‚ka w gÃ³rÄ™"
+msgstr "Przewiñ w górê\tCtrl+Strza³ka w górê"
 
 #: heksedit.rc:101
 #, c-format
 msgid "Scroll &down\tCtrl+Arrow Down"
-msgstr "PrzewiÅ„ w dÃ³Å‚\tCtrl+StrzaÅ‚ka w dÃ³Å‚"
+msgstr "Przewiñ w dó³\tCtrl+Strza³ka w dó³"
 
 #: heksedit.rc:102
 #, c-format
 msgid "Scroll up a page\tCtrl+Page Up"
-msgstr "PrzewiÅ„ stronÄ™ w gÃ³rÄ™\tCtrl+Page Up"
+msgstr "Przewiñ stronê w górê\tCtrl+Page Up"
 
 #: heksedit.rc:103
 #, c-format
 msgid "Scroll down a page\tCtrl+Page Down"
-msgstr "PrzewiÅ„ stronÄ™ w dÃ³Å‚\tCtrl+Page Down"
+msgstr "Przewiñ stronê w dó³\tCtrl+Page Down"
 
 #: heksedit.rc:105
 #, c-format
 msgid "Zoom in\tCtrl++"
-msgstr "PowiÄ™ksz\tCtrl++"
+msgstr "Powiêksz\tCtrl++"
 
 #: heksedit.rc:106
 #, c-format
@@ -350,7 +350,7 @@ msgstr "Pomniejsz\tCtrl+-"
 #: heksedit.rc:107
 #, c-format
 msgid "Zoom normal\tCtrl+*"
-msgstr "PowiÄ™kszenie normalne\tCtrl+*"
+msgstr "Powiêkszenie normalne\tCtrl+*"
 
 #: heksedit.rc:109
 #, c-format
@@ -375,7 +375,7 @@ msgstr "Kolor tekstu...\tCtrl+T"
 #: heksedit.rc:115
 #, c-format
 msgid "&Background color...\tCtrl+K"
-msgstr "Kolor tÅ‚a...\tCtrl+K"
+msgstr "Kolor t³a...\tCtrl+K"
 
 #: heksedit.rc:116
 #, c-format
@@ -395,22 +395,22 @@ msgstr ""
 #: heksedit.rc:121
 #, c-format
 msgid "Bookmark color...\tCtrl+Shift+B"
-msgstr "Kolor zakÅ‚adki...\tCtrl+Shift+B"
+msgstr "Kolor zak³adki...\tCtrl+Shift+B"
 
 #: heksedit.rc:123
 #, c-format
 msgid "Reset colors to standard...\tCtrl+Shift+S"
-msgstr "PrzywrÃ³Ä‡ standardowe kolory...\tCtrl+Shift+S"
+msgstr "Przywróæ standardowe kolory...\tCtrl+Shift+S"
 
 #: heksedit.rc:125
 #, c-format
 msgid "&Adopt OS colour scheme...\tCtrl+Shift+A"
-msgstr "Zastosuj schemat kolorÃ³w systemu operacyjnego...\tCtrl+Shift+A"
+msgstr "Zastosuj schemat kolorów systemu operacyjnego...\tCtrl+Shift+A"
 
 #: heksedit.rc:128
 #, c-format
 msgid "C&haracter set...\tCtrl+R"
-msgstr "Zestaw znakÃ³w...\tCtrl+R"
+msgstr "Zestaw znaków...\tCtrl+R"
 
 #: heksedit.rc:129
 #, c-format
@@ -420,12 +420,12 @@ msgstr "Tryb binarny...\tCtrl+Shift+Y"
 #: heksedit.rc:130
 #, c-format
 msgid "&OLE Drag-drop...\tCtrl+Alt+O"
-msgstr "PrzeciÄ…gnij i upuÅ›Ä‡ OLE...\tCtrl+Alt+O"
+msgstr "Przeci¹gnij i upuœæ OLE...\tCtrl+Alt+O"
 
 #: heksedit.rc:131
 #, c-format
 msgid "Make backups\tCtrl+Shift+M"
-msgstr "Wykonaj kopiÄ™ zapasowÄ…\tCtrl+Shift+M"
+msgstr "Wykonaj kopiê zapasow¹\tCtrl+Shift+M"
 
 #: heksedit.rc:133
 #, c-format
@@ -460,32 +460,32 @@ msgstr ""
 #: heksedit.rc:140
 #, c-format
 msgid "S&hortcuts to Frhed..."
-msgstr "SkrÃ³ty do Frhed..."
+msgstr "Skróty do Frhed..."
 
 #: heksedit.rc:142
 #, c-format
 msgid "&Bookmarks"
-msgstr "ZakÅ‚adki"
+msgstr "Zak³adki"
 
 #: heksedit.rc:144
 #, c-format
 msgid "&Add bookmark...\tCtrl+W"
-msgstr "Dodaj zakÅ‚adkÄ™...\tCtrl+W"
+msgstr "Dodaj zak³adkê...\tCtrl+W"
 
 #: heksedit.rc:145
 #, c-format
 msgid "&Remove bookmark...\tAlt+W"
-msgstr "UsuÅ„ zakÅ‚adkÄ™...\tAlt+W"
+msgstr "Usuñ zak³adkê...\tAlt+W"
 
 #: heksedit.rc:146
 #, c-format
 msgid "&Clear all bookmarks\tCtrl+Shift+W"
-msgstr "WyczyÅ›Ä‡ wszystkie zakÅ‚adki\tCtrl+Shift+W"
+msgstr "Wyczyœæ wszystkie zak³adki\tCtrl+Shift+W"
 
 #: heksedit.rc:158
 #, c-format
 msgid "&Misc"
-msgstr "RÃ³Å¼ne"
+msgstr "Ró¿ne"
 
 #: heksedit.rc:160
 #, c-format
@@ -520,32 +520,32 @@ msgstr "O programie Frhed..."
 #: heksedit.rc:183
 #, c-format
 msgid "Replace...\tCtrl+H"
-msgstr "ZastÄ…p...\tCtrl+H"
+msgstr "Zast¹p...\tCtrl+H"
 
 #: heksedit.rc:184
 #, c-format
 msgid "Find next\tF3"
-msgstr "ZnajdÅº nastÄ™pny\tF3"
+msgstr "ZnajdŸ nastêpny\tF3"
 
 #: heksedit.rc:185
 #, c-format
 msgid "Find previous\tShift+F3"
-msgstr "ZnajdÅº poprzedni\tShift+F3"
+msgstr "ZnajdŸ poprzedni\tShift+F3"
 
 #: heksedit.rc:191
 #, c-format
 msgid "Goto &Next Sector"
-msgstr "PrzejdÅº do nastÄ™pnego sektora"
+msgstr "PrzejdŸ do nastêpnego sektora"
 
 #: heksedit.rc:192
 #, c-format
 msgid "Goto &Previous Sector"
-msgstr "PrzejdÅº do poprzedniego sektora"
+msgstr "PrzejdŸ do poprzedniego sektora"
 
 #: heksedit.rc:298
 #, c-format
 msgid "Go to Offset"
-msgstr "IdÅº do przesuniÄ™cia"
+msgstr "IdŸ do przesuniêcia"
 
 #: heksedit.rc:301
 #, c-format
@@ -628,12 +628,12 @@ msgstr "Anuluj"
 #: heksedit.rc:996
 #, c-format
 msgid "Find"
-msgstr "ZnajdÅº"
+msgstr "ZnajdŸ"
 
 #: heksedit.rc:316
 #, c-format
 msgid "&Find what:"
-msgstr "ZnajdÅº:"
+msgstr "ZnajdŸ:"
 
 #: heksedit.rc:318
 #, c-format
@@ -648,17 +648,17 @@ msgstr "Kierunek"
 #: heksedit.rc:320
 #, c-format
 msgid "&Up"
-msgstr "W gÃ³rÄ™"
+msgstr "W górê"
 
 #: heksedit.rc:321
 #, c-format
 msgid "&Down"
-msgstr "W dÃ³Å‚"
+msgstr "W dó³"
 
 #: heksedit.rc:322
 #, c-format
 msgid "Match &case"
-msgstr "UwzglÄ™dnij wielkoÅ›Ä‡ liter"
+msgstr "Uwzglêdnij wielkoœæ liter"
 
 #: heksedit.rc:323
 #, c-format
@@ -683,27 +683,27 @@ msgstr "(c) Raihan Kibria 2000"
 #: heksedit.rc:339
 #, c-format
 msgid "All rights reserved."
-msgstr "Wszelkie prawa zastrzeÅ¼one."
+msgstr "Wszelkie prawa zastrze¿one."
 
 #: heksedit.rc:340
 #, c-format
 msgid "Contributors are listed in Contributors.txt."
-msgstr "ListÄ™ wspÃ³Å‚twÃ³rcÃ³w znajdziesz w pliku Contributors.txt."
+msgstr "Listê wspó³twórców znajdziesz w pliku Contributors.txt."
 
 #: heksedit.rc:342
 #, c-format
 msgid "Open contributors list"
-msgstr "OtwÃ³rz listÄ™ wspÃ³Å‚twÃ³rcÃ³w"
+msgstr "Otwórz listê wspó³twórców"
 
 #: heksedit.rc:343
 #, c-format
 msgid "Homepage"
-msgstr "Strona gÅ‚Ã³wna"
+msgstr "Strona g³ówna"
 
 #: heksedit.rc:345
 #, c-format
 msgid "Open Frhed's homepage in browser"
-msgstr "OtwÃ³rz stronÄ™ gÅ‚Ã³wnÄ… Frhed w przeglÄ…darce"
+msgstr "Otwórz stronê g³ówn¹ Frhed w przegl¹darce"
 
 #: heksedit.rc:353
 #, c-format
@@ -713,12 +713,12 @@ msgstr "Eksportuj Hexdump"
 #: heksedit.rc:356
 #, c-format
 msgid "Start at offset:"
-msgstr "RozpoczÄ…Ä‡ od przesuniÄ™cia:"
+msgstr "Rozpocz¹æ od przesuniêcia:"
 
 #: heksedit.rc:358
 #, c-format
 msgid "End at offset:"
-msgstr "ZakoÅ„cz na przesuniÄ™ciu:"
+msgstr "Zakoñcz na przesuniêciu:"
 
 #: heksedit.rc:360
 #, c-format
@@ -783,17 +783,17 @@ msgstr ""
 #: heksedit.rc:384
 #, c-format
 msgid "Byte (8 bit)"
-msgstr "Bajt (8 bitÃ³w)"
+msgstr "Bajt (8 bitów)"
 
 #: heksedit.rc:385
 #, c-format
 msgid "Word (16 bit)"
-msgstr "Wyraz (16 bitÃ³w)"
+msgstr "Wyraz (16 bitów)"
 
 #: heksedit.rc:386
 #, c-format
 msgid "Double word (32 bit)"
-msgstr "PodwÃ³jny wyraz (32 bity)"
+msgstr "Podwójny wyraz (32 bity)"
 
 #: heksedit.rc:394
 #, c-format
@@ -833,7 +833,7 @@ msgstr ""
 #: heksedit.rc:669
 #, c-format
 msgid "Paste coded binary values as text"
-msgstr "Wklej zakodowane wartoÅ›ci binarne jako tekst"
+msgstr "Wklej zakodowane wartoœci binarne jako tekst"
 
 #: heksedit.rc:409
 #, c-format
@@ -849,7 +849,7 @@ msgstr "Wytnij"
 #: heksedit.rc:422
 #, c-format
 msgid "Start cutting at offset:"
-msgstr "Rozpocznij wycinanie na przesuniÄ™ciu:"
+msgstr "Rozpocznij wycinanie na przesuniêciu:"
 
 #: heksedit.rc:424
 #, c-format
@@ -859,12 +859,12 @@ msgstr ""
 #: heksedit.rc:425
 #, c-format
 msgid "Cut up to and including offset:"
-msgstr "Wytnij aÅ¼ do przesuniÄ™cia wÅ‚Ä…cznie:"
+msgstr "Wytnij a¿ do przesuniêcia w³¹cznie:"
 
 #: heksedit.rc:427
 #, c-format
 msgid "Number of bytes to cut:"
-msgstr "Liczba bajtÃ³w do wyciÄ™cia:"
+msgstr "Liczba bajtów do wyciêcia:"
 
 #: heksedit.rc:437
 #: heksedit.rc:865
@@ -878,7 +878,7 @@ msgstr "Kopiuj"
 #: heksedit.rc:440
 #, c-format
 msgid "Start copying at offset:"
-msgstr "ozpocznij kopiowanie na przesuniÄ™ciu:"
+msgstr "ozpocznij kopiowanie na przesuniêciu:"
 
 #: heksedit.rc:442
 #, c-format
@@ -893,7 +893,7 @@ msgstr ""
 #: heksedit.rc:445
 #, c-format
 msgid "Number of bytes to copy:"
-msgstr "Liczba bajtÃ³w do skopiowania:"
+msgstr "Liczba bajtów do skopiowania:"
 
 #: heksedit.rc:455
 #, c-format
@@ -903,7 +903,7 @@ msgstr ""
 #: heksedit.rc:458
 #, c-format
 msgid "Number of bytes to display per line:"
-msgstr "Liczba bajtÃ³w do wyÅ›wietlenia w wierszu:"
+msgstr "Liczba bajtów do wyœwietlenia w wierszu:"
 
 #: heksedit.rc:461
 #, c-format
@@ -948,22 +948,22 @@ msgstr ""
 #: heksedit.rc:482
 #, c-format
 msgid "Browse..."
-msgstr "PrzeglÄ…daj..."
+msgstr "Przegl¹daj..."
 
 #: heksedit.rc:483
 #, c-format
 msgid "Language:"
-msgstr "JÄ™zyk:"
+msgstr "Jêzyk:"
 
 #: heksedit.rc:493
 #, c-format
 msgid "Append"
-msgstr "DoÅ‚Ä…cz"
+msgstr "Do³¹cz"
 
 #: heksedit.rc:496
 #, c-format
 msgid "Bytes to append to the end of the file:"
-msgstr "Bajty do doÅ‚Ä…czenia na koniec pliku:"
+msgstr "Bajty do do³¹czenia na koniec pliku:"
 
 #: heksedit.rc:504
 #, c-format
@@ -1031,12 +1031,12 @@ msgstr "16"
 #: heksedit.rc:540
 #, c-format
 msgid "Character Set"
-msgstr "Zestaw znakÃ³w"
+msgstr "Zestaw znaków"
 
 #: heksedit.rc:543
 #, c-format
 msgid "Choose character set"
-msgstr "Wybierz zestaw znakÃ³w"
+msgstr "Wybierz zestaw znaków"
 
 #: heksedit.rc:544
 #: heksedit.rc:1024
@@ -1118,22 +1118,22 @@ msgstr ""
 #: heksedit.rc:602
 #, c-format
 msgid "Offset of first byte:"
-msgstr "PrzesuniÄ™cie pierwszego bajtu:"
+msgstr "Przesuniêcie pierwszego bajtu:"
 
 #: heksedit.rc:604
 #, c-format
 msgid "Offset of last byte:"
-msgstr "PrzesuniÄ™cie ostatniego bajtu:"
+msgstr "Przesuniêcie ostatniego bajtu:"
 
 #: heksedit.rc:613
 #, c-format
 msgid "Add Bookmark"
-msgstr "Dodaj zakÅ‚adkÄ™"
+msgstr "Dodaj zak³adkê"
 
 #: heksedit.rc:616
 #, c-format
 msgid "Offset (prefix x for hex):"
-msgstr "PrzesuniÄ™cie (prefiks x dla szesnastkowego):"
+msgstr "Przesuniêcie (prefiks x dla szesnastkowego):"
 
 #: heksedit.rc:619
 #, c-format
@@ -1148,12 +1148,12 @@ msgstr "Dodaj"
 #: heksedit.rc:628
 #, c-format
 msgid "Remove Bookmark"
-msgstr "UsuÅ„ zakÅ‚adkÄ™"
+msgstr "Usuñ zak³adkê"
 
 #: heksedit.rc:633
 #, c-format
 msgid "Remove"
-msgstr "UsuÅ„"
+msgstr "Usuñ"
 
 #: heksedit.rc:640
 #, c-format
@@ -1204,7 +1204,7 @@ msgstr ""
 #: heksedit.rc:673
 #, c-format
 msgid "Refresh"
-msgstr "OdÅ›wieÅ¼"
+msgstr "Odœwie¿"
 
 #: heksedit.rc:674
 #, c-format
@@ -1226,52 +1226,52 @@ msgstr ""
 #: heksedit.rc:1005
 #, c-format
 msgid "Replace"
-msgstr "ZastÄ…p"
+msgstr "Zast¹p"
 
 #: heksedit.rc:699
 #, c-format
 msgid "Find what:"
-msgstr "ZnajdÅº:"
+msgstr "ZnajdŸ:"
 
 #: heksedit.rc:702
 #, c-format
 msgid "Find next"
-msgstr "ZnajdÅº nastÄ™pny"
+msgstr "ZnajdŸ nastêpny"
 
 #: heksedit.rc:703
 #, c-format
 msgid "Find previous"
-msgstr "ZnajdÅº poprzedni"
+msgstr "ZnajdŸ poprzedni"
 
 #: heksedit.rc:704
 #, c-format
 msgid "Match case"
-msgstr "UwzglÄ™dnij wielkoÅ›Ä‡ liter"
+msgstr "Uwzglêdnij wielkoœæ liter"
 
 #: heksedit.rc:706
 #, c-format
 msgid "Replace with:"
-msgstr "ZastÄ…p na:"
+msgstr "Zast¹p na:"
 
 #: heksedit.rc:708
 #, c-format
 msgid "Replace all..."
-msgstr "ZastÄ…p wszystkie..."
+msgstr "Zast¹p wszystkie..."
 
 #: heksedit.rc:709
 #, c-format
 msgid "... following occurrences"
-msgstr "... nastÄ™pne wystÄ…pienia"
+msgstr "... nastêpne wyst¹pienia"
 
 #: heksedit.rc:711
 #, c-format
 msgid "... previous occurrences"
-msgstr "... poprzednie wystÄ…pienia"
+msgstr "... poprzednie wyst¹pienia"
 
 #: heksedit.rc:713
 #, c-format
 msgid "Use special syntax"
-msgstr "UÅ¼yj specjalnej skÅ‚adni"
+msgstr "U¿yj specjalnej sk³adni"
 
 #: heksedit.rc:721
 #, c-format
@@ -1292,7 +1292,7 @@ msgstr "Plik:"
 #: heksedit.rc:728
 #, c-format
 msgid "&Browse..."
-msgstr "PrzeglÄ…daj..."
+msgstr "Przegl¹daj..."
 
 #: heksedit.rc:729
 #, c-format
@@ -1307,7 +1307,7 @@ msgstr ""
 #: heksedit.rc:732
 #, c-format
 msgid "Start:"
-msgstr "PoczÄ…tek":
+msgstr "Pocz¹tek":
 
 #: heksedit.rc:734
 #, c-format
@@ -1413,7 +1413,7 @@ msgstr ""
 #: heksedit.rc:800
 #, c-format
 msgid "Open Drive"
-msgstr "OtwÃ³rz dysk"
+msgstr "Otwórz dysk"
 
 #: heksedit.rc:804
 #, c-format
@@ -1425,7 +1425,7 @@ msgstr ""
 #: heksedit.rc:989
 #, c-format
 msgid "Open"
-msgstr "OtwÃ³rz"
+msgstr "Otwórz"
 
 #: heksedit.rc:812
 #, c-format
@@ -1445,7 +1445,7 @@ msgstr ""
 #: heksedit.rc:826
 #, c-format
 msgid "Shortcuts"
-msgstr "SkrÃ³ty"
+msgstr "Skróty"
 
 #: heksedit.rc:829
 #, c-format
@@ -1480,7 +1480,7 @@ msgstr "Menu Start"
 #: heksedit.rc:841
 #, c-format
 msgid "&Send To"
-msgstr "WyÅ›lij do"
+msgstr "Wyœlij do"
 
 #: heksedit.rc:843
 #, c-format
@@ -1500,12 +1500,12 @@ msgstr "<< Dodaj..."
 #: heksedit.rc:847
 #, c-format
 msgid "&Update list"
-msgstr "Aktualizuj listÄ™"
+msgstr "Aktualizuj listê"
 
 #: heksedit.rc:849
 #, c-format
 msgid ">> &Delete"
-msgstr ">> UsuÅ„"
+msgstr ">> Usuñ"
 
 #: heksedit.rc:850
 #, c-format
@@ -1515,7 +1515,7 @@ msgstr ""
 #: heksedit.rc:852
 #, c-format
 msgid "&Reload"
-msgstr "OdÅ›wieÅ¼"
+msgstr "Odœwie¿"
 
 #: heksedit.rc:853
 #, c-format
@@ -1557,12 +1557,12 @@ msgstr ""
 #: heksedit.rc:870
 #, c-format
 msgid "Offset"
-msgstr "PrzesuniÄ™cie"
+msgstr "Przesuniêcie"
 
 #: heksedit.rc:871
 #, c-format
 msgid "Length"
-msgstr "DÅ‚ugoÅ›Ä‡"
+msgstr "D³ugoœæ"
 
 #: heksedit.rc:872
 #, c-format
@@ -1572,37 +1572,37 @@ msgstr "Cel:"
 #: heksedit.rc:874
 #, c-format
 msgid "Bytes forward"
-msgstr "BajtÃ³w do przodu"
+msgstr "Bajtów do przodu"
 
 #: heksedit.rc:875
 #, c-format
 msgid "First byte offset"
-msgstr "PrzesuniÄ™cie pierwszego bajtu"
+msgstr "Przesuniêcie pierwszego bajtu"
 
 #: heksedit.rc:876
 #, c-format
 msgid "Last byte offset"
-msgstr "PrzesuniÄ™cie ostatniego bajtu"
+msgstr "Przesuniêcie ostatniego bajtu"
 
 #: heksedit.rc:884
 #, c-format
 msgid "Drag-drop"
-msgstr "PrzeciÄ…gnij i upuÅ›Ä‡"
+msgstr "Przeci¹gnij i upuœæ"
 
 #: heksedit.rc:887
 #, c-format
 msgid "Clipboard format[s] to use:"
-msgstr "Format(y) schowka do uÅ¼ycia:"
+msgstr "Format(y) schowka do u¿ycia:"
 
 #: heksedit.rc:891
 #, c-format
 msgid "Up"
-msgstr "GÃ³ra"
+msgstr "Góra"
 
 #: heksedit.rc:892
 #, c-format
 msgid "Down"
-msgstr "DÃ³Å‚"
+msgstr "Dó³"
 
 #: heksedit.rc:893
 #, c-format
@@ -1612,12 +1612,12 @@ msgstr "Dane:"
 #: heksedit.rc:905
 #, c-format
 msgid "OLE Drag-drop options"
-msgstr "Opcje przeciÄ…gnij i upuÅ›Ä‡ OLE"
+msgstr "Opcje przeci¹gnij i upuœæ OLE"
 
 #: heksedit.rc:908
 #, c-format
 msgid "General"
-msgstr "OgÃ³lne"
+msgstr "Ogólne"
 
 #: heksedit.rc:909
 #, c-format
@@ -1707,27 +1707,27 @@ msgstr ""
 #: heksedit.rc:966
 #, c-format
 msgid "Delete"
-msgstr "UsuÅ„"
+msgstr "Usuñ"
 
 #: heksedit.rc:969
 #, c-format
 msgid "Start deleting at offset:"
-msgstr "Rozpocznij usuwanie od przesuniÄ™cia:"
+msgstr "Rozpocznij usuwanie od przesuniêcia:"
 
 #: heksedit.rc:971
 #, c-format
 msgid "Delete how many bytes"
-msgstr "Jak duÅ¼o usunÄ…Ä‡ bajtÃ³w"
+msgstr "Jak du¿o usun¹æ bajtów"
 
 #: heksedit.rc:972
 #, c-format
 msgid "Delete up to and including offset:"
-msgstr "UsuÅ„ do przesuniÄ™cia wÅ‚Ä…cznie:"
+msgstr "Usuñ do przesuniêcia w³¹cznie:"
 
 #: heksedit.rc:974
 #, c-format
 msgid "Number of bytes to delete:"
-msgstr "Liczba bajtÃ³w do usuniÄ™cia:"
+msgstr "Liczba bajtów do usuniêcia:"
 
 #: heksedit.rc:990
 #, c-format
@@ -1747,22 +1747,22 @@ msgstr "Pomoc"
 #: heksedit.rc:1010
 #, c-format
 msgid "Goto next sector"
-msgstr "PrzejdÅº do nastÄ™pnego sektora"
+msgstr "PrzejdŸ do nastêpnego sektora"
 
 #: heksedit.rc:1011
 #, c-format
 msgid "Goto previous sector"
-msgstr "PrzejdÅº do poprzedniego sektora"
+msgstr "PrzejdŸ do poprzedniego sektora"
 
 #: heksedit.rc:1012
 #, c-format
 msgid "Goto first sector"
-msgstr "PrzejdÅº do pierwszego sektora"
+msgstr "PrzejdŸ do pierwszego sektora"
 
 #: heksedit.rc:1013
 #, c-format
 msgid "Goto last sector"
-msgstr "PrzejdÅº do ostatniego sektora"
+msgstr "PrzejdŸ do ostatniego sektora"
 
 #: heksedit.rc:1019
 #, c-format
@@ -1777,7 +1777,7 @@ msgstr "Wersja %u.%u.%u"
 #: heksedit.rc:1021
 #, c-format
 msgid "%d) 0x%x=%u to 0x%x=%u (%d bytes)"
-msgstr "%d) 0x%x=%u do 0x%x=%u (%d bajtÃ³w)"
+msgstr "%d) 0x%x=%u do 0x%x=%u (%d bajtów)"
 
 #: heksedit.rc:1022
 #, c-format
@@ -1787,7 +1787,7 @@ msgstr "Wszystkie pliki (*.*)|*.*|"
 #: heksedit.rc:1023
 #, c-format
 msgid "Untitled"
-msgstr "Bez tytuÅ‚u"
+msgstr "Bez tytu³u"
 
 #: heksedit.rc:1026
 #, c-format
@@ -1824,52 +1824,52 @@ msgstr ""
 #: heksedit.rc:1037
 #, c-format
 msgid "Start offset not recognized."
-msgstr "Nie rozpoznano przesuniÄ™cia poczÄ…tkowego."
+msgstr "Nie rozpoznano przesuniêcia pocz¹tkowego."
 
 #: heksedit.rc:1038
 #, c-format
 msgid "End offset not recognized."
-msgstr "Nie rozpoznano przesuniÄ™cia koÅ„cowego."
+msgstr "Nie rozpoznano przesuniêcia koñcowego."
 
 #: heksedit.rc:1039
 #, c-format
 msgid "Offset not recognized."
-msgstr "PrzesuniÄ™cie nie zostaÅ‚o rozpoznane."
+msgstr "Przesuniêcie nie zosta³o rozpoznane."
 
 #: heksedit.rc:1045
 #, c-format
 msgid "Error while reading from file."
-msgstr "BÅ‚Ä…d odczytu z pliku."
+msgstr "B³¹d odczytu z pliku."
 
 #: heksedit.rc:1046
 #, c-format
 msgid "Not enough memory."
-msgstr "Za maÅ‚o pamiÄ™ci."
+msgstr "Za ma³o pamiêci."
 
 #: heksedit.rc:1047
 #, c-format
 msgid "Number of bytes not recognized."
-msgstr "Liczba nierozpoznanych bajtÃ³w."
+msgstr "Liczba nierozpoznanych bajtów."
 
 #: heksedit.rc:1048
 #, c-format
 msgid "Error opening file."
-msgstr "BÅ‚Ä…d otwarcia pliku."
+msgstr "B³¹d otwarcia pliku."
 
 #: heksedit.rc:1049
 #, c-format
 msgid "Not enough memory to load file."
-msgstr "Za maÅ‚o pamiÄ™ci, aby wczytaÄ‡ plik."
+msgstr "Za ma³o pamiêci, aby wczytaæ plik."
 
 #: heksedit.rc:1050
 #, c-format
 msgid "Could not save the file."
-msgstr "Nie moÅ¼na zapisaÄ‡ pliku."
+msgstr "Nie mo¿na zapisaæ pliku."
 
 #: heksedit.rc:1051
 #, c-format
 msgid "Could not backup file!\nBackup aborted, Save continuing."
-msgstr "Nie moÅ¼na utworzyÄ‡ kopii zapasowej pliku!\nPrzerwano tworzenie kopii zapasowej."
+msgstr "Nie mo¿na utworzyæ kopii zapasowej pliku!\nPrzerwano tworzenie kopii zapasowej."
 
 #: heksedit.rc:1052
 #, c-format
@@ -2024,7 +2024,7 @@ msgstr ""
 #: heksedit.rc:1107
 #, c-format
 msgid "Value: 0x%02x, %d signed, %u unsigned."
-msgstr "WartoÅ›Ä‡: 0x%02x, %d podpisany, %u niepodpisany."
+msgstr "Wartoœæ: 0x%02x, %d podpisany, %u niepodpisany."
 
 #: heksedit.rc:1113
 #, c-format
@@ -2320,12 +2320,12 @@ msgstr ""
 #: heksedit.rc:1232
 #, c-format
 msgid "Could not find data."
-msgstr "Nie udaÅ‚o siÄ™ znaleÅºÄ‡ danych."
+msgstr "Nie uda³o siê znaleŸæ danych."
 
 #: heksedit.rc:1233
 #, c-format
 msgid "Findstring is zero bytes long."
-msgstr "Szukany ciÄ…g ma dÅ‚ugoÅ›Ä‡ zero bajtÃ³w."
+msgstr "Szukany ci¹g ma d³ugoœæ zero bajtów."
 
 #: heksedit.rc:1234
 #, c-format
@@ -2370,12 +2370,12 @@ msgstr ""
 #: heksedit.rc:1247
 #, c-format
 msgid "Bytes per sector"
-msgstr "BajtÃ³w na sektor"
+msgstr "Bajtów na sektor"
 
 #: heksedit.rc:1248
 #, c-format
 msgid "Total size in bytes"
-msgstr "CaÅ‚kowity rozmiar w bajtach"
+msgstr "Ca³kowity rozmiar w bajtach"
 
 #: heksedit.rc:1249
 #, c-format
@@ -2475,12 +2475,12 @@ msgstr ""
 #: heksedit.rc:1283
 #, c-format
 msgid "Selected: Offset %d=0x%x to %d=0x%x (%d byte(s))"
-msgstr "Zaznaczono: przesuniÄ™cie %d=0x%x do %d=0x%x (%d bajt(y))"
+msgstr "Zaznaczono: przesuniêcie %d=0x%x do %d=0x%x (%d bajt(y))"
 
 #: heksedit.rc:1284
 #, c-format
 msgid "Offset %d=0x%x"
-msgstr "PrzesuniÄ™cie %d=0x%x"
+msgstr "Przesuniêcie %d=0x%x"
 
 #: heksedit.rc:1285
 #, c-format
@@ -2520,7 +2520,7 @@ msgstr "Plik szablonu:"
 #: heksedit.rc:1300
 #, c-format
 msgid "Applied at offset:"
-msgstr "Stosowany przy przesuniÄ™ciu:"
+msgstr "Stosowany przy przesuniêciu:"
 
 #: heksedit.rc:1301
 #, c-format
@@ -2542,7 +2542,7 @@ msgstr ""
 #: heksedit.rc:1304
 #, c-format
 msgid "ERROR: missing variable name."
-msgstr "BÅÄ„D: brak nazwy zmiennej."
+msgstr "B£¥D: brak nazwy zmiennej."
 
 #: heksedit.rc:1306
 #, c-format
@@ -2577,7 +2577,7 @@ msgstr ""
 #: heksedit.rc:1313
 #, c-format
 msgid "ERROR: Unknown variable type:"
-msgstr "BÅÄ„D: nieznany typ zmiennej:"
+msgstr "B£¥D: nieznany typ zmiennej:"
 
 #: heksedit.rc:1319
 #, c-format
@@ -2642,7 +2642,7 @@ msgstr ""
 #: heksedit.rc:1344
 #, c-format
 msgid "File name and path: "
-msgstr "Nazwa pliku i Å›cieÅ¼ka:"
+msgstr "Nazwa pliku i œcie¿ka:"
 
 #: heksedit.rc:1345
 #, c-format
@@ -2652,7 +2652,7 @@ msgstr ""
 #: heksedit.rc:1346
 #, c-format
 msgid "\nFile size: %d bytes = %d kilobytes.\n"
-msgstr "\nRozmiar pliku: %d bajtÃ³w = %d kilobajtÃ³w.\n"
+msgstr "\nRozmiar pliku: %d bajtów = %d kilobajtów.\n"
 
 #: heksedit.rc:1347
 #, c-format
@@ -2672,12 +2672,12 @@ msgstr ""
 #: heksedit.rc:1350
 #, c-format
 msgid "Are you sure you want to delete this file?"
-msgstr "Czy na pewno chcesz usunÄ…Ä‡ ten plik?"
+msgstr "Czy na pewno chcesz usun¹æ ten plik?"
 
 #: heksedit.rc:1351
 #, c-format
 msgid "Could not delete file."
-msgstr "Nie moÅ¼na usunÄ…Ä‡ pliku."
+msgstr "Nie mo¿na usun¹æ pliku."
 
 #: heksedit.rc:1352
 #, c-format
