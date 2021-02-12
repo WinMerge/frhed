@@ -1,4 +1,4 @@
-# This file is part of Frhed <http://frhed.sourceforge.net/>
+ï»¿# This file is part of Frhed <http://frhed.sourceforge.net/>
 # Released under the "GNU General Public License"
 #
 # Translators:
@@ -17,9 +17,9 @@ msgstr ""
 "Last-Translator: Takashi Sawanaka <sawanaka@d1.dion.ne.jp>\n"
 "Language-Team: German <frhed-devel@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CP932\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: CP932\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../FRHED\n"
 "Language: ja\n"
 "X-Generator: Poedit 2.0.7\n"
@@ -34,531 +34,531 @@ msgstr "LANG_JAPANESE, SUBLANG_JAPANESE"
 #: heksedit.rc:6
 #, c-format
 msgid "1252"
-msgstr "932"
+msgstr "65001"
 
 #: heksedit.rc:12
 #, c-format
 msgid "&File"
-msgstr "ƒtƒ@ƒCƒ‹(&F)"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«(&F)"
 
 #: heksedit.rc:14
 #, c-format
 msgid "&New\tCtrl+N"
-msgstr "V‹Kì¬(&N)\tCtrl+N"
+msgstr "æ–°è¦ä½œæˆ(&N)\tCtrl+N"
 
 #: heksedit.rc:15
 #, c-format
 msgid "&Open...\tCtrl+O"
-msgstr "ŠJ‚­(&O)...\tCtrl+O"
+msgstr "é–‹ã(&O)...\tCtrl+O"
 
 #: heksedit.rc:16
 #, c-format
 msgid "Open pa&rtially...\tAlt+P"
-msgstr "•”•ª“I‚ÉŠJ‚­(&R)...\tAlt+P"
+msgstr "éƒ¨åˆ†çš„ã«é–‹ã(&R)...\tAlt+P"
 
 #: heksedit.rc:18
 #, c-format
 msgid "&Save\tCtrl+S"
-msgstr "•Û‘¶(&S)\tCtrl+S"
+msgstr "ä¿å­˜(&S)\tCtrl+S"
 
 #: heksedit.rc:19
 #, c-format
 msgid "Save &As...\tCtrl+J"
-msgstr "–¼‘O‚ğ•t‚¯‚Ä•Û‘¶(&A)...\tCtrl+J"
+msgstr "åå‰ã‚’ä»˜ã‘ã¦ä¿å­˜(&A)...\tCtrl+J"
 
 #: heksedit.rc:20
 #, c-format
 msgid "Save selec&tion as...\tCtrl+Shift+O"
-msgstr "‘I‘ğ—Ìˆæ‚ğ•Û‘¶(&T)...\tCtrl+Shift+O"
+msgstr "é¸æŠé ˜åŸŸã‚’ä¿å­˜(&T)...\tCtrl+Shift+O"
 
 #: heksedit.rc:22
 #, c-format
 msgid "Re&vert\tCtrl+Shift+R"
-msgstr "Œ³‚É–ß‚·(&V)\tCtrl+Shift+R"
+msgstr "å…ƒã«æˆ»ã™(&V)\tCtrl+Shift+R"
 
 #: heksedit.rc:23
 #, c-format
 msgid "&Insert file...\tCtrl+Shift+I"
-msgstr "ƒtƒ@ƒCƒ‹‚Ì“à—e‚ğ‘}“ü(&I)...\tCtrl+Shift+I"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã®å†…å®¹ã‚’æŒ¿å…¥(&I)...\tCtrl+Shift+I"
 
 #: heksedit.rc:24
 #, c-format
 msgid "&Delete file...\tCtrl+Shift+D"
-msgstr "ƒtƒ@ƒCƒ‹‚ğíœ(&D)...\tCtrl+Shift+D"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤(&D)...\tCtrl+Shift+D"
 
 #: heksedit.rc:25
 #, c-format
 msgid "Close File\tCtrl+Shift+X"
-msgstr "ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é\tCtrl+Shift+X"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹\tCtrl+Shift+X"
 
 #: heksedit.rc:27
 #, c-format
 msgid "&Export as hexdump..."
-msgstr "16 iƒ_ƒ“ƒvŒ`®‚ÅƒGƒNƒXƒ|[ƒg(&E)..."
+msgstr "16 é€²ãƒ€ãƒ³ãƒ—å½¢å¼ã§ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆ(&E)..."
 
 #: heksedit.rc:28
 #, c-format
 msgid "I&mport from hexdump...\tCtrl+Shift+H"
-msgstr "16 iƒ_ƒ“ƒvŒ`®‚ÅƒCƒ“ƒ|[ƒg(&M)...\tCtrl+Shift+H"
+msgstr "16 é€²ãƒ€ãƒ³ãƒ—å½¢å¼ã§ã‚¤ãƒ³ãƒãƒ¼ãƒˆ(&M)...\tCtrl+Shift+H"
 
 #: heksedit.rc:40
 #, c-format
 msgid "E&xit\tAlt+F4"
-msgstr "I—¹(&X)\tAlt+F4"
+msgstr "çµ‚äº†(&X)\tAlt+F4"
 
 #: heksedit.rc:42
 #, c-format
 msgid "&Disk"
-msgstr "ƒfƒBƒXƒN(&D)"
+msgstr "ãƒ‡ã‚£ã‚¹ã‚¯(&D)"
 
 #: heksedit.rc:44
 #, c-format
 msgid "&Open drive..."
-msgstr "ƒhƒ‰ƒCƒu‚ğŠJ‚­(&O)..."
+msgstr "ãƒ‰ãƒ©ã‚¤ãƒ–ã‚’é–‹ã(&O)..."
 
 #: heksedit.rc:45
 #, c-format
 msgid "&Close drive"
-msgstr "ƒhƒ‰ƒCƒu‚ğ•Â‚¶‚é(&C)"
+msgstr "ãƒ‰ãƒ©ã‚¤ãƒ–ã‚’é–‰ã˜ã‚‹(&C)"
 
 #: heksedit.rc:47
 #: heksedit.rc:190
 #, c-format
 msgid "Goto &First Sector"
-msgstr "Å‰‚ÌƒZƒNƒ^‚ÉˆÚ“®(&F)"
+msgstr "æœ€åˆã®ã‚»ã‚¯ã‚¿ã«ç§»å‹•(&F)"
 
 #: heksedit.rc:48
 #, c-format
 msgid "Goto &Next Sector\tCtrl+Shift+PgDn"
-msgstr "Ÿ‚ÌƒZƒNƒ^‚ÉˆÚ“®(&N)\tCtrl+Shift+PgDn"
+msgstr "æ¬¡ã®ã‚»ã‚¯ã‚¿ã«ç§»å‹•(&N)\tCtrl+Shift+PgDn"
 
 #: heksedit.rc:49
 #, c-format
 msgid "Goto &Previous Sector\tCtrl+Shift+PgUp"
-msgstr "‘O‚ÌƒZƒNƒ^‚ÉˆÚ“®(&P)\tCtrl+Shift+PgUp"
+msgstr "å‰ã®ã‚»ã‚¯ã‚¿ã«ç§»å‹•(&P)\tCtrl+Shift+PgUp"
 
 #: heksedit.rc:51
 #: heksedit.rc:193
 #, c-format
 msgid "Goto &Last Sector"
-msgstr "ÅŒã‚ÌƒZƒNƒ^‚ÉˆÚ“®(&L)"
+msgstr "æœ€å¾Œã®ã‚»ã‚¯ã‚¿ã«ç§»å‹•(&L)"
 
 #: heksedit.rc:53
 #: heksedit.rc:195
 #, c-format
 msgid "Goto &Sector #..."
-msgstr "w’è‚µ‚½ƒZƒNƒ^‚ÉˆÚ“®(&S)..."
+msgstr "æŒ‡å®šã—ãŸã‚»ã‚¯ã‚¿ã«ç§»å‹•(&S)..."
 
 #: heksedit.rc:55
 #, c-format
 msgid "&Edit"
-msgstr "•ÒW(&E)"
+msgstr "ç·¨é›†(&E)"
 
 #: heksedit.rc:57
 #, c-format
 msgid "&Undo\tCtrl+Z"
-msgstr "Œ³‚É–ß‚·(&U)\tCtrl+Z"
+msgstr "å…ƒã«æˆ»ã™(&U)\tCtrl+Z"
 
 #: heksedit.rc:58
 #, c-format
 msgid "&Redo\tCtrl+Y"
-msgstr "‚â‚è’¼‚µ(&R)\tCtrl+Y"
+msgstr "ã‚„ã‚Šç›´ã—(&R)\tCtrl+Y"
 
 #: heksedit.rc:60
 #: heksedit.rc:177
 #, c-format
 msgid "Cu&t...\tCtrl+X"
-msgstr "Ø‚èæ‚è(&T)...\tCtrl+X"
+msgstr "åˆ‡ã‚Šå–ã‚Š(&T)...\tCtrl+X"
 
 #: heksedit.rc:61
 #: heksedit.rc:178
 #, c-format
 msgid "&Copy...\tCtrl+C"
-msgstr "ƒRƒs[(&C)...\tCtrl+C"
+msgstr "ã‚³ãƒ”ãƒ¼(&C)...\tCtrl+C"
 
 #: heksedit.rc:62
 #: heksedit.rc:179
 #, c-format
 msgid "&Paste...\tCtrl+V"
-msgstr "“\‚è•t‚¯(&P)...\tCtrl+V"
+msgstr "è²¼ã‚Šä»˜ã‘(&P)...\tCtrl+V"
 
 #: heksedit.rc:63
 #, c-format
 msgid "Paste &with dialog...\tCtrl+Shift+V"
-msgstr "“à—e‚ğŠm”F‚µ‚Ä“\‚è•t‚¯(&W)...\tCtrl+Shift+V"
+msgstr "å†…å®¹ã‚’ç¢ºèªã—ã¦è²¼ã‚Šä»˜ã‘(&W)...\tCtrl+Shift+V"
 
 #: heksedit.rc:64
 #, c-format
 msgid "&Move/Copy bytes...\tCtrl+Alt+M"
-msgstr "ƒf[ƒ^‚ÌˆÚ“®/ƒRƒs[(&M)...\tCtrl+Alt+M"
+msgstr "ãƒ‡ãƒ¼ã‚¿ã®ç§»å‹•/ã‚³ãƒ”ãƒ¼(&M)...\tCtrl+Alt+M"
 
 #: heksedit.rc:65
 #, c-format
 msgid "Reverse bytes...\tCtrl+Alt+R"
-msgstr "ƒf[ƒ^‚ğ‹t‡‚É•À‚Ñ‘Ö‚¦‚é...\tCtrl+Alt+R"
+msgstr "ãƒ‡ãƒ¼ã‚¿ã‚’é€†é †ã«ä¸¦ã³æ›¿ãˆã‚‹...\tCtrl+Alt+R"
 
 #: heksedit.rc:66
 #, c-format
 msgid "&Append...\tCtrl+P"
-msgstr "’Ç‰Á(&A)...\tCtrl+P"
+msgstr "è¿½åŠ (&A)...\tCtrl+P"
 
 #: heksedit.rc:67
 #: heksedit.rc:180
 #, c-format
 msgid "&Delete\tDel"
-msgstr "íœ(&D)\tDel"
+msgstr "å‰Šé™¤(&D)\tDel"
 
 #: heksedit.rc:68
 #, c-format
 msgid "&Select all\tCtrl+A"
-msgstr "‚·‚×‚Ä‘I‘ğ(&S)\tCtrl+A"
+msgstr "ã™ã¹ã¦é¸æŠ(&S)\tCtrl+A"
 
 #: heksedit.rc:69
 #, c-format
 msgid "Select &block...\tCtrl+E"
-msgstr "‘I‘ğ”ÍˆÍ(&B)...\tCtrl+E"
+msgstr "é¸æŠç¯„å›²(&B)...\tCtrl+E"
 
 #: heksedit.rc:70
 #, c-format
 msgid "&Fill selection...\tCtrl+Shift+F"
-msgstr "‘I‘ğ—Ìˆæ‚ğw’è‚µ‚½’l‚Å–„‚ß‚é(&F)...\tCtrl+Shift+F"
+msgstr "é¸æŠé ˜åŸŸã‚’æŒ‡å®šã—ãŸå€¤ã§åŸ‹ã‚ã‚‹(&F)...\tCtrl+Shift+F"
 
 #: heksedit.rc:72
 #, c-format
 msgid "Toggle h&ex/character editing\tTAB"
-msgstr "16 i/•¶š•ÒW‚ÌØ‚è‘Ö‚¦(&E)\tTAB"
+msgstr "16 é€²/æ–‡å­—ç·¨é›†ã®åˆ‡ã‚Šæ›¿ãˆ(&E)\tTAB"
 
 #: heksedit.rc:73
 #, c-format
 msgid "Toggle keyboard I&nsert/Overwrite mode\tIns"
-msgstr "‘}“ü/ã‘‚«ƒ‚[ƒh‚ÌØ‚è‘Ö‚¦(&N)\tIns"
+msgstr "æŒ¿å…¥/ä¸Šæ›¸ããƒ¢ãƒ¼ãƒ‰ã®åˆ‡ã‚Šæ›¿ãˆ(&N)\tIns"
 
 #: heksedit.rc:75
 #, c-format
 msgid "Read-only mode\tAlt+R"
-msgstr "“Ç‚İæ‚èê—pƒ‚[ƒh\tAlt+R"
+msgstr "èª­ã¿å–ã‚Šå°‚ç”¨ãƒ¢ãƒ¼ãƒ‰\tAlt+R"
 
 #: heksedit.rc:77
 #, c-format
 msgid "&Find and Replace"
-msgstr "ŒŸõ‚Æ’uŠ·(&F)"
+msgstr "æ¤œç´¢ã¨ç½®æ›(&F)"
 
 #: heksedit.rc:79
 #: heksedit.rc:182
 #, c-format
 msgid "&Find...\tCtrl+F"
-msgstr "ŒŸõ(&F)...\tCtrl+F"
+msgstr "æ¤œç´¢(&F)...\tCtrl+F"
 
 #: heksedit.rc:80
 #, c-format
 msgid "&Replace...\tCtrl+H"
-msgstr "’uŠ·(&R)...\tCtrl+H"
+msgstr "ç½®æ›(&R)...\tCtrl+H"
 
 #: heksedit.rc:81
 #, c-format
 msgid "Find &next\tF3"
-msgstr "Ÿ‚ğŒŸõ(&N)\tF3"
+msgstr "æ¬¡ã‚’æ¤œç´¢(&N)\tF3"
 
 #: heksedit.rc:82
 #, c-format
 msgid "Find &previous\tShift+F3"
-msgstr "‘O‚ğŒŸõ(&P)\tShift+F3"
+msgstr "å‰ã‚’æ¤œç´¢(&P)\tShift+F3"
 
 #: heksedit.rc:84
 #: heksedit.rc:186
 #, c-format
 msgid "&Go To...\tCtrl+G"
-msgstr "ˆÚ“®(&G)...\tCtrl+G"
+msgstr "ç§»å‹•(&G)...\tCtrl+G"
 
 #: heksedit.rc:86
 #, c-format
 msgid "Enter decimal &value...\tCtrl+D"
-msgstr "10 i”“ü—Í(&V)...\tCtrl+D"
+msgstr "10 é€²æ•°å…¥åŠ›(&V)...\tCtrl+D"
 
 #: heksedit.rc:88
 #, c-format
 msgid "Man&ipulate bits...\tCtrl+B"
-msgstr "ƒrƒbƒg‘€ì(&I)...\tCtrl+B"
+msgstr "ãƒ“ãƒƒãƒˆæ“ä½œ(&I)...\tCtrl+B"
 
 #: heksedit.rc:89
 #, c-format
 msgid "C&ompare from current offset...\tCtrl+M"
-msgstr "Œ»İ‚ÌƒIƒtƒZƒbƒg‚©‚ç”äŠr(&O)...\tCtrl+M"
+msgstr "ç¾åœ¨ã®ã‚ªãƒ•ã‚»ãƒƒãƒˆã‹ã‚‰æ¯”è¼ƒ(&O)...\tCtrl+M"
 
 #: heksedit.rc:91
 #, c-format
 msgid "Get f&loating point value...\tCtrl+L"
-msgstr "•‚“®¬”“_”‚Ìæ“¾(&L)...\tCtrl+L"
+msgstr "æµ®å‹•å°æ•°ç‚¹æ•°ã®å–å¾—(&L)...\tCtrl+L"
 
 #: heksedit.rc:92
 #, c-format
 msgid "File properties...\tAlt+Enter"
-msgstr "ƒtƒ@ƒCƒ‹ ƒvƒƒpƒeƒB...\tAlt+Enter"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ« ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£...\tAlt+Enter"
 
 #: heksedit.rc:93
 #, c-format
 msgid "Appl&y template...\tAlt+T"
-msgstr "ƒeƒ“ƒvƒŒ[ƒg‚Ì“K—p(&Y)...\tAlt+T"
+msgstr "ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã®é©ç”¨(&Y)...\tAlt+T"
 
 #: heksedit.rc:94
 #, c-format
 msgid "Open in text editor\tF5"
-msgstr "ƒeƒLƒXƒg ƒGƒfƒBƒ^‚ÅŠJ‚­\tF5"
+msgstr "ãƒ†ã‚­ã‚¹ãƒˆ ã‚¨ãƒ‡ã‚£ã‚¿ã§é–‹ã\tF5"
 
 #: heksedit.rc:96
 #, c-format
 msgid "&View"
-msgstr "•\¦(&V)"
+msgstr "è¡¨ç¤º(&V)"
 
 #: heksedit.rc:98
 #, c-format
 msgid "Scroll &left\tCtrl+Arrow Left"
-msgstr "¶‚ÖƒXƒNƒ[ƒ‹(&L)\tCtrl+Arrow Left"
+msgstr "å·¦ã¸ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«(&L)\tCtrl+Arrow Left"
 
 #: heksedit.rc:99
 #, c-format
 msgid "Scroll &right\tCtrl+Arrow Right"
-msgstr "‰E‚ÖƒXƒNƒ[ƒ‹(&R)\tCtrl+Arrow Right"
+msgstr "å³ã¸ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«(&R)\tCtrl+Arrow Right"
 
 #: heksedit.rc:100
 #, c-format
 msgid "Scroll &up\tCtrl+Arrow Up"
-msgstr "ã‚ÖƒXƒNƒ[ƒ‹(&U)\tCtrl+Arrow Up"
+msgstr "ä¸Šã¸ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«(&U)\tCtrl+Arrow Up"
 
 #: heksedit.rc:101
 #, c-format
 msgid "Scroll &down\tCtrl+Arrow Down"
-msgstr "‰º‚ÖƒXƒNƒ[ƒ‹(&D)\tCtrl+Arrow Down"
+msgstr "ä¸‹ã¸ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«(&D)\tCtrl+Arrow Down"
 
 #: heksedit.rc:102
 #, c-format
 msgid "Scroll up a page\tCtrl+Page Up"
-msgstr "1 ƒy[ƒWã‚ÖƒXƒNƒ[ƒ‹\tCtrl+Page Up"
+msgstr "1 ãƒšãƒ¼ã‚¸ä¸Šã¸ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«\tCtrl+Page Up"
 
 #: heksedit.rc:103
 #, c-format
 msgid "Scroll down a page\tCtrl+Page Down"
-msgstr "1 ƒy[ƒW‰º‚ÖƒXƒNƒ[ƒ‹\tCtrl+Page Down"
+msgstr "1 ãƒšãƒ¼ã‚¸ä¸‹ã¸ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«\tCtrl+Page Down"
 
 #: heksedit.rc:105
 #, c-format
 msgid "Zoom in\tCtrl++"
-msgstr "Šg‘å•\¦\tCtrl++"
+msgstr "æ‹¡å¤§è¡¨ç¤º\tCtrl++"
 
 #: heksedit.rc:106
 #, c-format
 msgid "Zoom out\tCtrl+-"
-msgstr "k¬•\¦\tCtrl+-"
+msgstr "ç¸®å°è¡¨ç¤º\tCtrl+-"
 
 #: heksedit.rc:107
 #, c-format
 msgid "Zoom normal\tCtrl+*"
-msgstr "’Êí•\¦\tCtrl+*"
+msgstr "é€šå¸¸è¡¨ç¤º\tCtrl+*"
 
 #: heksedit.rc:109
 #, c-format
 msgid "&Options"
-msgstr "İ’è(&O)"
+msgstr "è¨­å®š(&O)"
 
 #: heksedit.rc:111
 #, c-format
 msgid "&View settings...\tCtrl+I"
-msgstr "•\¦İ’è(&V)...\tCtrl+I"
+msgstr "è¡¨ç¤ºè¨­å®š(&V)...\tCtrl+I"
 
 #: heksedit.rc:112
 #, c-format
 msgid "&Color settings"
-msgstr "Fİ’è(&C)"
+msgstr "è‰²è¨­å®š(&C)"
 
 #: heksedit.rc:114
 #, c-format
 msgid "&Text color...\tCtrl+T"
-msgstr "•¶šF(&T)...\tCtrl+T"
+msgstr "æ–‡å­—è‰²(&T)...\tCtrl+T"
 
 #: heksedit.rc:115
 #, c-format
 msgid "&Background color...\tCtrl+K"
-msgstr "”wŒiF(&B)...\tCtrl+K"
+msgstr "èƒŒæ™¯è‰²(&B)...\tCtrl+K"
 
 #: heksedit.rc:116
 #, c-format
 msgid "Separator color...\tCtrl+Q"
-msgstr "ƒZƒpƒŒ[ƒ^‚ÌF...\tCtrl+Q"
+msgstr "ã‚»ãƒ‘ãƒ¬ãƒ¼ã‚¿ã®è‰²...\tCtrl+Q"
 
 #: heksedit.rc:117
 #, c-format
 msgid "Selection text color...\tCtrl+Shift+T"
-msgstr "‘I‘ğ•¶š‚ÌF...\tCtrl+Shift+T"
+msgstr "é¸æŠæ–‡å­—ã®è‰²...\tCtrl+Shift+T"
 
 #: heksedit.rc:119
 #, c-format
 msgid "Selection background color...\tCtrl+Shift+K"
-msgstr "‘I‘ğ—Ìˆæ‚Ì”wŒiF...\tCtrl+Shift+K"
+msgstr "é¸æŠé ˜åŸŸã®èƒŒæ™¯è‰²...\tCtrl+Shift+K"
 
 #: heksedit.rc:121
 #, c-format
 msgid "Bookmark color...\tCtrl+Shift+B"
-msgstr "ƒuƒbƒNƒ}[ƒN‚ÌF...\tCtrl+Shift+B"
+msgstr "ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã®è‰²...\tCtrl+Shift+B"
 
 #: heksedit.rc:123
 #, c-format
 msgid "Reset colors to standard...\tCtrl+Shift+S"
-msgstr "Fİ’è‚ğ•W€‚É–ß‚·...\tCtrl+Shift+S"
+msgstr "è‰²è¨­å®šã‚’æ¨™æº–ã«æˆ»ã™...\tCtrl+Shift+S"
 
 #: heksedit.rc:125
 #, c-format
 msgid "&Adopt OS colour scheme...\tCtrl+Shift+A"
-msgstr "OS ‚ÌƒJƒ‰[ ƒXƒL[ƒ}‚ğ“K—p‚·‚é(&A)...\tCtrl+Shift+A"
+msgstr "OS ã®ã‚«ãƒ©ãƒ¼ ã‚¹ã‚­ãƒ¼ãƒã‚’é©ç”¨ã™ã‚‹(&A)...\tCtrl+Shift+A"
 
 #: heksedit.rc:128
 #, c-format
 msgid "C&haracter set...\tCtrl+R"
-msgstr "•¶šƒZƒbƒg(&H)...\tCtrl+R"
+msgstr "æ–‡å­—ã‚»ãƒƒãƒˆ(&H)...\tCtrl+R"
 
 #: heksedit.rc:129
 #, c-format
 msgid "B&inary mode...\tCtrl+Shift+Y"
-msgstr "ƒoƒCƒiƒŠƒ‚[ƒh(&I)...\tCtrl+Shift+Y"
+msgstr "ãƒã‚¤ãƒŠãƒªãƒ¢ãƒ¼ãƒ‰(&I)...\tCtrl+Shift+Y"
 
 #: heksedit.rc:130
 #, c-format
 msgid "&OLE Drag-drop...\tCtrl+Alt+O"
-msgstr "OLE ƒhƒ‰ƒbƒO&&ƒhƒƒbƒv(&O)...\tCtrl+Alt+O"
+msgstr "OLE ãƒ‰ãƒ©ãƒƒã‚°&&ãƒ‰ãƒ­ãƒƒãƒ—(&O)...\tCtrl+Alt+O"
 
 #: heksedit.rc:131
 #, c-format
 msgid "Make backups\tCtrl+Shift+M"
-msgstr "ƒoƒbƒNƒAƒbƒv‚ğì¬‚·‚é\tCtrl+Shift+M"
+msgstr "ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ã‚’ä½œæˆã™ã‚‹\tCtrl+Shift+M"
 
 #: heksedit.rc:133
 #, c-format
 msgid "&Registry"
-msgstr "ƒŒƒWƒXƒgƒŠ(&R)"
+msgstr "ãƒ¬ã‚¸ã‚¹ãƒˆãƒª(&R)"
 
 #: heksedit.rc:135
 #, c-format
 msgid "In &all context menu"
-msgstr "‚·‚×‚Ä‚ÌƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚É’Ç‰Á(&A)"
+msgstr "ã™ã¹ã¦ã®ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«è¿½åŠ (&A)"
 
 #: heksedit.rc:136
 #, c-format
 msgid "In &unknown context menu"
-msgstr "–¢“o˜^ƒtƒ@ƒCƒ‹í•Ê‚ÌƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚É’Ç‰Á(&U)"
+msgstr "æœªç™»éŒ²ãƒ•ã‚¡ã‚¤ãƒ«ç¨®åˆ¥ã®ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«è¿½åŠ (&U)"
 
 #: heksedit.rc:137
 #, c-format
 msgid "Is &default in unknown context"
-msgstr "–¢“o˜^ƒtƒ@ƒCƒ‹í•Ê‚ÌƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚ÌƒfƒtƒHƒ‹ƒg‚Æ‚·‚é(&D)"
+msgstr "æœªç™»éŒ²ãƒ•ã‚¡ã‚¤ãƒ«ç¨®åˆ¥ã®ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¨ã™ã‚‹(&D)"
 
 #: heksedit.rc:138
 #, c-format
 msgid "&Save ini when required"
-msgstr "•K—v‚É•Û‘¶‚·‚é(&S)"
+msgstr "å¿…è¦æ™‚ã«ä¿å­˜ã™ã‚‹(&S)"
 
 #: heksedit.rc:139
 #, c-format
 msgid "Change &instance..."
-msgstr "•Û‘¶æ/“ÇŒ³ƒCƒ“ƒXƒ^ƒ“ƒX”Ô†‚Ì•ÏX(&I)..."
+msgstr "ä¿å­˜å…ˆ/èª­è¾¼å…ƒã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ç•ªå·ã®å¤‰æ›´(&I)..."
 
 #: heksedit.rc:140
 #, c-format
 msgid "S&hortcuts to Frhed..."
-msgstr "Frhed ‚Ö‚ÌƒVƒ‡[ƒgƒJƒbƒg(&H)..."
+msgstr "Frhed ã¸ã®ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆ(&H)..."
 
 #: heksedit.rc:142
 #, c-format
 msgid "&Bookmarks"
-msgstr "ƒuƒbƒNƒ}[ƒN(&B)"
+msgstr "ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯(&B)"
 
 #: heksedit.rc:144
 #, c-format
 msgid "&Add bookmark...\tCtrl+W"
-msgstr "ƒuƒbƒNƒ}[ƒN‚ğ’Ç‰Á(&A)...\tCtrl+W"
+msgstr "ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã‚’è¿½åŠ (&A)...\tCtrl+W"
 
 #: heksedit.rc:145
 #, c-format
 msgid "&Remove bookmark...\tAlt+W"
-msgstr "ƒuƒbƒNƒ}[ƒN‚ğíœ(&R)...\tAlt+W"
+msgstr "ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã‚’å‰Šé™¤(&R)...\tAlt+W"
 
 #: heksedit.rc:146
 #, c-format
 msgid "&Clear all bookmarks\tCtrl+Shift+W"
-msgstr "‚·‚×‚Ä‚ÌƒuƒbƒNƒ}[ƒN‚ğƒNƒŠƒA(&C)\tCtrl+Shift+W"
+msgstr "ã™ã¹ã¦ã®ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã‚’ã‚¯ãƒªã‚¢(&C)\tCtrl+Shift+W"
 
 #: heksedit.rc:158
 #, c-format
 msgid "&Misc"
-msgstr "‚»‚Ì‘¼(&M)"
+msgstr "ãã®ä»–(&M)"
 
 #: heksedit.rc:160
 #, c-format
 msgid "Goto DLL e&xport names..."
-msgstr "DLL ‚ÌƒGƒNƒXƒ|[ƒg–¼Ši”[ˆÊ’u‚ÉˆÚ“®(&X)..."
+msgstr "DLL ã®ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆåæ ¼ç´ä½ç½®ã«ç§»å‹•(&X)..."
 
 #: heksedit.rc:161
 #, c-format
 msgid "Goto DLL import names..."
-msgstr "DLL ‚ÌƒCƒ“ƒ|[ƒg–¼Ši”[ˆÊ’u‚ÉˆÚ“®..."
+msgstr "DLL ã®ã‚¤ãƒ³ãƒãƒ¼ãƒˆåæ ¼ç´ä½ç½®ã«ç§»å‹•..."
 
 #: heksedit.rc:163
 #, c-format
 msgid "Encode / Decode..."
-msgstr "ƒGƒ“ƒR[ƒh / ƒfƒR[ƒh..."
+msgstr "ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‰ / ãƒ‡ã‚³ãƒ¼ãƒ‰..."
 
 #: heksedit.rc:165
 #, c-format
 msgid "&Help"
-msgstr "ƒwƒ‹ƒv(&H)"
+msgstr "ãƒ˜ãƒ«ãƒ—(&H)"
 
 #: heksedit.rc:167
 #, c-format
 msgid "&Help topics...\tF1"
-msgstr "ƒwƒ‹ƒv ƒgƒsƒbƒN(&H)...\tF1"
+msgstr "ãƒ˜ãƒ«ãƒ— ãƒˆãƒ”ãƒƒã‚¯(&H)...\tF1"
 
 #: heksedit.rc:169
 #, c-format
 msgid "&About Frhed..."
-msgstr "Frhed ‚É‚Â‚¢‚Ä(&A)..."
+msgstr "Frhed ã«ã¤ã„ã¦(&A)..."
 
 #: heksedit.rc:183
 #, c-format
 msgid "Replace...\tCtrl+H"
-msgstr "’uŠ·...\tCtrl+H"
+msgstr "ç½®æ›...\tCtrl+H"
 
 #: heksedit.rc:184
 #, c-format
 msgid "Find next\tF3"
-msgstr "Ÿ‚ğŒŸõ\tF3"
+msgstr "æ¬¡ã‚’æ¤œç´¢\tF3"
 
 #: heksedit.rc:185
 #, c-format
 msgid "Find previous\tShift+F3"
-msgstr "‘O‚ğŒŸõ\tShift+F3"
+msgstr "å‰ã‚’æ¤œç´¢\tShift+F3"
 
 #: heksedit.rc:191
 #, c-format
 msgid "Goto &Next Sector"
-msgstr "Ÿ‚ÌƒZƒNƒ^‚ÖˆÚ“®(&N)"
+msgstr "æ¬¡ã®ã‚»ã‚¯ã‚¿ã¸ç§»å‹•(&N)"
 
 #: heksedit.rc:192
 #, c-format
 msgid "Goto &Previous Sector"
-msgstr "‘O‚ÌƒZƒNƒ^‚ÉˆÚ“®(&P)"
+msgstr "å‰ã®ã‚»ã‚¯ã‚¿ã«ç§»å‹•(&P)"
 
 #: heksedit.rc:298
 #, c-format
 msgid "Go to Offset"
-msgstr "w’èƒIƒtƒZƒbƒg‚Ö‚ÌˆÚ“®"
+msgstr "æŒ‡å®šã‚ªãƒ•ã‚»ãƒƒãƒˆã¸ã®ç§»å‹•"
 
 #: heksedit.rc:301
 #, c-format
 msgid "Start with \"+\" or \"-\" (minus) for relative jump."
-msgstr "æ“ª‚É  \"+\" ‚Ü‚½‚Í \"-\" (ƒ}ƒCƒiƒX) ‚ğ“ü—Í‚·‚é‚Æ‘Š‘ÎˆÚ“®"
+msgstr "å…ˆé ­ã«  \"+\" ã¾ãŸã¯ \"-\" (ãƒã‚¤ãƒŠã‚¹) ã‚’å…¥åŠ›ã™ã‚‹ã¨ç›¸å¯¾ç§»å‹•"
 
 #: heksedit.rc:303
 #, c-format
 msgid "Prefix offset with \"x\" to indicate hex notation."
-msgstr "16 i”‚Åw’è‚µ‚½‚¢ê‡AÚ“ª«‚Æ‚µ‚Ä \"x\" ‚ğw’è"
+msgstr "16 é€²æ•°ã§æŒ‡å®šã—ãŸã„å ´åˆã€æ¥é ­è¾ã¨ã—ã¦ \"x\" ã‚’æŒ‡å®š"
 
 #: heksedit.rc:306
 #: heksedit.rc:347
@@ -624,19 +624,19 @@ msgstr "OK"
 #: heksedit.rc:1332
 #, c-format
 msgid "Cancel"
-msgstr "ƒLƒƒƒ“ƒZƒ‹"
+msgstr "ã‚­ãƒ£ãƒ³ã‚»ãƒ«"
 
 #: heksedit.rc:313
 #: heksedit.rc:324
 #: heksedit.rc:996
 #, c-format
 msgid "Find"
-msgstr "ŒŸõ"
+msgstr "æ¤œç´¢"
 
 #: heksedit.rc:316
 #, c-format
 msgid "&Find what:"
-msgstr "ŒŸõ‚·‚é•¶š—ñ(&F):"
+msgstr "æ¤œç´¢ã™ã‚‹æ–‡å­—åˆ—(&F):"
 
 #: heksedit.rc:318
 #, c-format
@@ -644,28 +644,28 @@ msgid ""
 "Please refer to the online help's Using the Special Syntax section for "
 "searching for binary values."
 msgstr ""
-"ƒoƒCƒiƒŠ ƒf[ƒ^‚ÌŒŸõ‚É‚Â‚¢‚Ä‚ÍƒIƒ“ƒ‰ƒCƒ“ ƒwƒ‹ƒvuUsing the Special Syntaxv"
-"ƒZƒNƒVƒ‡ƒ“‚ğQÆ‚µ‚Ä‚­‚¾‚³‚¢B"
+"ãƒã‚¤ãƒŠãƒª ãƒ‡ãƒ¼ã‚¿ã®æ¤œç´¢ã«ã¤ã„ã¦ã¯ã‚ªãƒ³ãƒ©ã‚¤ãƒ³ ãƒ˜ãƒ«ãƒ—ã€ŒUsing the Special Syntaxã€"
+"ã‚»ã‚¯ã‚·ãƒ§ãƒ³ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚"
 
 #: heksedit.rc:319
 #, c-format
 msgid "Direction"
-msgstr "•ûŒü"
+msgstr "æ–¹å‘"
 
 #: heksedit.rc:320
 #, c-format
 msgid "&Up"
-msgstr "ã‚Ö(&U)"
+msgstr "ä¸Šã¸(&U)"
 
 #: heksedit.rc:321
 #, c-format
 msgid "&Down"
-msgstr "‰º‚Ö(&D)"
+msgstr "ä¸‹ã¸(&D)"
 
 #: heksedit.rc:322
 #, c-format
 msgid "Match &case"
-msgstr "‘å•¶š‚Æ¬•¶š‚ğ‹æ•Ê‚·‚é(&C)"
+msgstr "å¤§æ–‡å­—ã¨å°æ–‡å­—ã‚’åŒºåˆ¥ã™ã‚‹(&C)"
 
 #: heksedit.rc:323
 #, c-format
@@ -675,7 +675,7 @@ msgstr "U&nicode"
 #: heksedit.rc:331
 #, c-format
 msgid "About Frhed"
-msgstr "Frhed ‚É‚Â‚¢‚Ä"
+msgstr "Frhed ã«ã¤ã„ã¦"
 
 #: heksedit.rc:335
 #, c-format
@@ -695,97 +695,97 @@ msgstr "All rights reserved."
 #: heksedit.rc:340
 #, c-format
 msgid "Contributors are listed in Contributors.txt."
-msgstr "vŒ£Ò‚Í Contributors.txt ‚ÉƒŠƒXƒg‚³‚ê‚Ä‚¢‚Ü‚·B"
+msgstr "è²¢çŒ®è€…ã¯ Contributors.txt ã«ãƒªã‚¹ãƒˆã•ã‚Œã¦ã„ã¾ã™ã€‚"
 
 #: heksedit.rc:342
 #, c-format
 msgid "Open contributors list"
-msgstr "vŒ£ÒƒŠƒXƒg‚ğŠJ‚­"
+msgstr "è²¢çŒ®è€…ãƒªã‚¹ãƒˆã‚’é–‹ã"
 
 #: heksedit.rc:343
 #, c-format
 msgid "Homepage"
-msgstr "ƒz[ƒ€ƒy[ƒW"
+msgstr "ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸"
 
 #: heksedit.rc:345
 #, c-format
 msgid "Open Frhed's homepage in browser"
-msgstr "Frhed ‚Ìƒz[ƒ€ƒy[ƒW‚ğƒuƒ‰ƒEƒU‚ÅŠJ‚­"
+msgstr "Frhed ã®ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã‚’ãƒ–ãƒ©ã‚¦ã‚¶ã§é–‹ã"
 
 #: heksedit.rc:353
 #, c-format
 msgid "Export Hexdump"
-msgstr "16 iƒ_ƒ“ƒvŒ`®‚ÅƒGƒNƒXƒ|[ƒg"
+msgstr "16 é€²ãƒ€ãƒ³ãƒ—å½¢å¼ã§ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆ"
 
 #: heksedit.rc:356
 #, c-format
 msgid "Start at offset:"
-msgstr "ŠJnƒIƒtƒZƒbƒg:"
+msgstr "é–‹å§‹ã‚ªãƒ•ã‚»ãƒƒãƒˆ:"
 
 #: heksedit.rc:358
 #, c-format
 msgid "End at offset:"
-msgstr "I—¹ƒIƒtƒZƒbƒg:"
+msgstr "çµ‚äº†ã‚ªãƒ•ã‚»ãƒƒãƒˆ:"
 
 #: heksedit.rc:360
 #, c-format
 msgid "Export to"
-msgstr "ƒGƒNƒXƒ|[ƒgæ"
+msgstr "ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆå…ˆ"
 
 #: heksedit.rc:361
 #, c-format
 msgid "File"
-msgstr "ƒtƒ@ƒCƒ‹"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«"
 
 #: heksedit.rc:362
 #, c-format
 msgid "Clipboard"
-msgstr "ƒNƒŠƒbƒvƒ{[ƒh"
+msgstr "ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰"
 
 #: heksedit.rc:363
 #, c-format
 msgid "Type"
-msgstr "í—Ş"
+msgstr "ç¨®é¡"
 
 #: heksedit.rc:364
 #, c-format
 msgid "Frhed display as text"
-msgstr "Frhed ‚Ì•\¦Œ`®‚ÅƒeƒLƒXƒg‰»"
+msgstr "Frhed ã®è¡¨ç¤ºå½¢å¼ã§ãƒ†ã‚­ã‚¹ãƒˆåŒ–"
 
 #: heksedit.rc:365
 #, c-format
 msgid "Just hex digits on a line"
-msgstr "16 i”ƒf[ƒ^‚Ì—…—ñ(‰üs‚È‚µ)"
+msgstr "16 é€²æ•°ãƒ‡ãƒ¼ã‚¿ã®ç¾…åˆ—(æ”¹è¡Œãªã—)"
 
 #: heksedit.rc:366
 #, c-format
 msgid "Frhed display as RTF"
-msgstr "Frhed ‚Ì•\¦Œ`®‚ÅRTF‰»"
+msgstr "Frhed ã®è¡¨ç¤ºå½¢å¼ã§RTFåŒ–"
 
 #: heksedit.rc:374
 #, c-format
 msgid "Enter decimal value"
-msgstr "10 i”ƒf[ƒ^‚Ì“ü—Í"
+msgstr "10 é€²æ•°ãƒ‡ãƒ¼ã‚¿ã®å…¥åŠ›"
 
 #: heksedit.rc:377
 #, c-format
 msgid "Enter decimal value:"
-msgstr "10 i”ƒf[ƒ^‚Ì“ü—Í:"
+msgstr "10 é€²æ•°ãƒ‡ãƒ¼ã‚¿ã®å…¥åŠ›:"
 
 #: heksedit.rc:379
 #, c-format
 msgid "At offset:"
-msgstr "ƒIƒtƒZƒbƒg:"
+msgstr "ã‚ªãƒ•ã‚»ãƒƒãƒˆ:"
 
 #: heksedit.rc:381
 #, c-format
 msgid "Number of times:"
-msgstr "ŒJ‚è•Ô‚µ‰ñ”:"
+msgstr "ç¹°ã‚Šè¿”ã—å›æ•°:"
 
 #: heksedit.rc:383
 #, c-format
 msgid "Size of Value:"
-msgstr "’l‚ÌƒTƒCƒY:"
+msgstr "å€¤ã®ã‚µã‚¤ã‚º:"
 
 #: heksedit.rc:384
 #, c-format
@@ -805,73 +805,73 @@ msgstr "Double word (32 bit)"
 #: heksedit.rc:394
 #, c-format
 msgid "Paste with dialogue"
-msgstr "“à—e‚ğŠm”F‚µ‚Ä“\‚è•t‚¯"
+msgstr "å†…å®¹ã‚’ç¢ºèªã—ã¦è²¼ã‚Šä»˜ã‘"
 
 #: heksedit.rc:397
 #, c-format
 msgid "Clipboard content (text):"
-msgstr "ƒNƒŠƒbƒvƒ{[ƒh‚Ì“à—e (ƒeƒLƒXƒg):"
+msgstr "ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã®å†…å®¹ (ãƒ†ã‚­ã‚¹ãƒˆ):"
 
 #: heksedit.rc:400
 #: heksedit.rc:662
 #, c-format
 msgid "Paste mode"
-msgstr "“\‚è•t‚¯ƒ‚[ƒh"
+msgstr "è²¼ã‚Šä»˜ã‘ãƒ¢ãƒ¼ãƒ‰"
 
 #: heksedit.rc:401
 #: heksedit.rc:663
 #, c-format
 msgid "Overwrite"
-msgstr "ã‘‚«"
+msgstr "ä¸Šæ›¸ã"
 
 #: heksedit.rc:403
 #: heksedit.rc:664
 #, c-format
 msgid "Insert"
-msgstr "‘}“ü"
+msgstr "æŒ¿å…¥"
 
 #: heksedit.rc:405
 #: heksedit.rc:665
 #, c-format
 msgid "Paste data how many times:"
-msgstr "ƒf[ƒ^“\‚è•t‚¯‰ñ”:"
+msgstr "ãƒ‡ãƒ¼ã‚¿è²¼ã‚Šä»˜ã‘å›æ•°:"
 
 #: heksedit.rc:407
 #: heksedit.rc:669
 #, c-format
 msgid "Paste coded binary values as text"
-msgstr "<bh:..>“™‚Ì‹L–@‚ğ–³‹‚µ‚Ä“\•t‚¯"
+msgstr "<bh:..>ç­‰ã®è¨˜æ³•ã‚’ç„¡è¦–ã—ã¦è²¼ä»˜ã‘"
 
 #: heksedit.rc:409
 #, c-format
 msgid "Skip how many bytes between inserts/overwrites"
-msgstr "“\‚è•t‚¯‚ÌŒJ‚è•Ô‚µ–ˆ‚ÉƒXƒLƒbƒv‚·‚éƒoƒCƒg”"
+msgstr "è²¼ã‚Šä»˜ã‘ã®ç¹°ã‚Šè¿”ã—æ¯ã«ã‚¹ã‚­ãƒƒãƒ—ã™ã‚‹ãƒã‚¤ãƒˆæ•°"
 
 #: heksedit.rc:419
 #: heksedit.rc:1000
 #, c-format
 msgid "Cut"
-msgstr "Ø‚èæ‚è"
+msgstr "åˆ‡ã‚Šå–ã‚Š"
 
 #: heksedit.rc:422
 #, c-format
 msgid "Start cutting at offset:"
-msgstr "Ø‚èæ‚èŠJnƒIƒtƒZƒbƒg:"
+msgstr "åˆ‡ã‚Šå–ã‚Šé–‹å§‹ã‚ªãƒ•ã‚»ãƒƒãƒˆ:"
 
 #: heksedit.rc:424
 #, c-format
 msgid "Cut how many bytes"
-msgstr "Ø‚èæ‚è•û–@"
+msgstr "åˆ‡ã‚Šå–ã‚Šæ–¹æ³•"
 
 #: heksedit.rc:425
 #, c-format
 msgid "Cut up to and including offset:"
-msgstr "w’èƒIƒtƒZƒbƒg‚Ü‚ÅŠÜ‚ß‚ÄØ‚èæ‚è:"
+msgstr "æŒ‡å®šã‚ªãƒ•ã‚»ãƒƒãƒˆã¾ã§å«ã‚ã¦åˆ‡ã‚Šå–ã‚Š:"
 
 #: heksedit.rc:427
 #, c-format
 msgid "Number of bytes to cut:"
-msgstr "ƒoƒCƒg”w’è‚ÅØ‚èæ‚è:"
+msgstr "ãƒã‚¤ãƒˆæ•°æŒ‡å®šã§åˆ‡ã‚Šå–ã‚Š:"
 
 #: heksedit.rc:437
 #: heksedit.rc:865
@@ -880,37 +880,37 @@ msgstr "ƒoƒCƒg”w’è‚ÅØ‚èæ‚è:"
 #: heksedit.rc:1331
 #, c-format
 msgid "Copy"
-msgstr "ƒRƒs["
+msgstr "ã‚³ãƒ”ãƒ¼"
 
 #: heksedit.rc:440
 #, c-format
 msgid "Start copying at offset:"
-msgstr "ƒRƒs[ŠJnƒIƒtƒZƒbƒg:"
+msgstr "ã‚³ãƒ”ãƒ¼é–‹å§‹ã‚ªãƒ•ã‚»ãƒƒãƒˆ:"
 
 #: heksedit.rc:442
 #, c-format
 msgid "Copy how many bytes"
-msgstr "ƒRƒs[•û–@"
+msgstr "ã‚³ãƒ”ãƒ¼æ–¹æ³•"
 
 #: heksedit.rc:443
 #, c-format
 msgid "Copy up to and including offset:"
-msgstr "w’èƒIƒtƒZƒbƒg‚Ü‚ÅŠÜ‚ß‚ÄƒRƒs[:"
+msgstr "æŒ‡å®šã‚ªãƒ•ã‚»ãƒƒãƒˆã¾ã§å«ã‚ã¦ã‚³ãƒ”ãƒ¼:"
 
 #: heksedit.rc:445
 #, c-format
 msgid "Number of bytes to copy:"
-msgstr "ƒoƒCƒg”w’è‚ÅƒRƒs[:"
+msgstr "ãƒã‚¤ãƒˆæ•°æŒ‡å®šã§ã‚³ãƒ”ãƒ¼:"
 
 #: heksedit.rc:455
 #, c-format
 msgid "View Settings"
-msgstr "•\¦İ’è"
+msgstr "è¡¨ç¤ºè¨­å®š"
 
 #: heksedit.rc:458
 #, c-format
 msgid "Number of bytes to display per line:"
-msgstr "1 s‚ ‚½‚è‚Ì•\¦ƒoƒCƒg”:"
+msgstr "1 è¡Œã‚ãŸã‚Šã®è¡¨ç¤ºãƒã‚¤ãƒˆæ•°:"
 
 #: heksedit.rc:461
 #, c-format
@@ -918,23 +918,23 @@ msgid ""
 "Automatically adjust number of bytes per line (uncheck this if you want "
 "Frhed to use your own choice for bytes per line)"
 msgstr ""
-"©“®“I‚É 1 s‚ ‚½‚è‚ÌƒoƒCƒg”‚ğ’²®‚·‚é\n"
-"(1 s‚ ‚½‚è‚ÌƒoƒCƒg”‚ğw’è‚µ‚½‚¢ê‡Aƒ`ƒFƒbƒN‚ğŠO‚µ‚Ä‚­‚¾‚³‚¢)"
+"è‡ªå‹•çš„ã« 1 è¡Œã‚ãŸã‚Šã®ãƒã‚¤ãƒˆæ•°ã‚’èª¿æ•´ã™ã‚‹\n"
+"(1 è¡Œã‚ãŸã‚Šã®ãƒã‚¤ãƒˆæ•°ã‚’æŒ‡å®šã—ãŸã„å ´åˆã€ãƒã‚§ãƒƒã‚¯ã‚’å¤–ã—ã¦ãã ã•ã„)"
 
 #: heksedit.rc:464
 #, c-format
 msgid "Display length of offset in how many characters:"
-msgstr "ƒIƒtƒZƒbƒg‚Ì•\¦Œ…”:"
+msgstr "ã‚ªãƒ•ã‚»ãƒƒãƒˆã®è¡¨ç¤ºæ¡æ•°:"
 
 #: heksedit.rc:467
 #, c-format
 msgid "Adjust offset length to that of the max offset"
-msgstr "Å‘åƒIƒtƒZƒbƒg‚É‡‚í‚¹‚Ä•\¦Œ…”‚ğ’²®‚·‚é"
+msgstr "æœ€å¤§ã‚ªãƒ•ã‚»ãƒƒãƒˆã«åˆã‚ã›ã¦è¡¨ç¤ºæ¡æ•°ã‚’èª¿æ•´ã™ã‚‹"
 
 #: heksedit.rc:470
 #, c-format
 msgid "Display values at caret position as:"
-msgstr "ƒJƒŒƒbƒgˆÊ’u‚Ì’l‚Ì•\¦:"
+msgstr "ã‚«ãƒ¬ãƒƒãƒˆä½ç½®ã®å€¤ã®è¡¨ç¤º:"
 
 #: heksedit.rc:472
 #, c-format
@@ -949,37 +949,37 @@ msgstr "signed"
 #: heksedit.rc:476
 #, c-format
 msgid "Set read-only mode on opening files"
-msgstr "ƒtƒ@ƒCƒ‹ ƒI[ƒvƒ“Œã“Çæê—p‚É‚·‚é"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ« ã‚ªãƒ¼ãƒ—ãƒ³å¾Œèª­å–å°‚ç”¨ã«ã™ã‚‹"
 
 #: heksedit.rc:479
 #, c-format
 msgid "Path and filename of the text editor to call:"
-msgstr "ƒeƒLƒXƒg ƒGƒfƒBƒ^‚ÌƒpƒX:"
+msgstr "ãƒ†ã‚­ã‚¹ãƒˆ ã‚¨ãƒ‡ã‚£ã‚¿ã®ãƒ‘ã‚¹:"
 
 #: heksedit.rc:482
 #, c-format
 msgid "Browse..."
-msgstr "QÆ..."
+msgstr "å‚ç…§..."
 
 #: heksedit.rc:483
 #, c-format
 msgid "Language:"
-msgstr "Œ¾Œê:"
+msgstr "è¨€èª:"
 
 #: heksedit.rc:493
 #, c-format
 msgid "Append"
-msgstr "’Ç‰Á"
+msgstr "è¿½åŠ "
 
 #: heksedit.rc:496
 #, c-format
 msgid "Bytes to append to the end of the file:"
-msgstr "ƒtƒ@ƒCƒ‹‚ÌÅŒã‚É’Ç‰Á‚·‚éƒoƒCƒg”:"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã®æœ€å¾Œã«è¿½åŠ ã™ã‚‹ãƒã‚¤ãƒˆæ•°:"
 
 #: heksedit.rc:504
 #, c-format
 msgid "Manipulate Bits"
-msgstr "ƒrƒbƒg‘€ì"
+msgstr "ãƒ“ãƒƒãƒˆæ“ä½œ"
 
 #: heksedit.rc:508
 #: heksedit.rc:528
@@ -1042,12 +1042,12 @@ msgstr "16"
 #: heksedit.rc:540
 #, c-format
 msgid "Character Set"
-msgstr "•¶šƒZƒbƒg"
+msgstr "æ–‡å­—ã‚»ãƒƒãƒˆ"
 
 #: heksedit.rc:543
 #, c-format
 msgid "Choose character set"
-msgstr "•¶šƒZƒbƒg‚Ì‘I‘ğ"
+msgstr "æ–‡å­—ã‚»ãƒƒãƒˆã®é¸æŠ"
 
 #: heksedit.rc:544
 #: heksedit.rc:1024
@@ -1064,12 +1064,12 @@ msgstr "OEM"
 #: heksedit.rc:547
 #, c-format
 msgid "Font size in points:"
-msgstr "ƒtƒHƒ“ƒg ƒTƒCƒY (pt):"
+msgstr "ãƒ•ã‚©ãƒ³ãƒˆ ã‚µã‚¤ã‚º (pt):"
 
 #: heksedit.rc:556
 #, c-format
 msgid "Choose area of difference to display"
-msgstr "•\¦‚·‚é·ˆÙ‰ÓŠ‚Ì‘I‘ğ"
+msgstr "è¡¨ç¤ºã™ã‚‹å·®ç•°ç®‡æ‰€ã®é¸æŠ"
 
 #: heksedit.rc:559
 #, c-format
@@ -1084,285 +1084,285 @@ msgstr "number_of_diffs"
 #: heksedit.rc:565
 #, c-format
 msgid "Copy above list"
-msgstr "ã‹L‚ğƒRƒs["
+msgstr "ä¸Šè¨˜ã‚’ã‚³ãƒ”ãƒ¼"
 
 #: heksedit.rc:571
 #, c-format
 msgid "Binary Mode"
-msgstr "ƒoƒCƒiƒŠƒ‚[ƒh"
+msgstr "ãƒã‚¤ãƒŠãƒªãƒ¢ãƒ¼ãƒ‰"
 
 #: heksedit.rc:574
 #, c-format
 msgid "Choose binary mode"
-msgstr "ƒoƒCƒiƒŠƒ‚[ƒh‚Ì‘I‘ğ"
+msgstr "ãƒã‚¤ãƒŠãƒªãƒ¢ãƒ¼ãƒ‰ã®é¸æŠ"
 
 #: heksedit.rc:575
 #, c-format
 msgid "Little-endian (Intel)"
-msgstr "ƒŠƒgƒ‹ƒGƒ“ƒfƒBƒAƒ“ (Intel)"
+msgstr "ãƒªãƒˆãƒ«ã‚¨ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³ (Intel)"
 
 #: heksedit.rc:576
 #, c-format
 msgid "Big-endian (Motorola)"
-msgstr "ƒrƒbƒOƒGƒ“ƒfƒBƒAƒ“ (Motorola)"
+msgstr "ãƒ“ãƒƒã‚°ã‚¨ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³ (Motorola)"
 
 #: heksedit.rc:584
 #, c-format
 msgid "Select Block"
-msgstr "‘I‘ğ”ÍˆÍ"
+msgstr "é¸æŠç¯„å›²"
 
 #: heksedit.rc:587
 #, c-format
 msgid "Start of selection (prefix x for hex):"
-msgstr "‘I‘ğ”ÍˆÍ‚ÌŠJn (Ú“ª« x ‚Í 16 i”‚ğ•\‚·):"
+msgstr "é¸æŠç¯„å›²ã®é–‹å§‹ (æ¥é ­è¾ x ã¯ 16 é€²æ•°ã‚’è¡¨ã™):"
 
 #: heksedit.rc:590
 #, c-format
 msgid "End of selection (prefix x for hex):"
-msgstr "‘I‘ğ”ÍˆÍ‚ÌI—¹ (Ú“ª« x ‚Í 16 i”‚ğ•\‚·):"
+msgstr "é¸æŠç¯„å›²ã®çµ‚äº† (æ¥é ­è¾ x ã¯ 16 é€²æ•°ã‚’è¡¨ã™):"
 
 #: heksedit.rc:599
 #, c-format
 msgid "Reverse Bytes"
-msgstr "ƒf[ƒ^‚Ì‹t‡•À‚Ñ‘Ö‚¦"
+msgstr "ãƒ‡ãƒ¼ã‚¿ã®é€†é †ä¸¦ã³æ›¿ãˆ"
 
 #: heksedit.rc:602
 #, c-format
 msgid "Offset of first byte:"
-msgstr "æ“ªƒoƒCƒg‚ÌƒIƒtƒZƒbƒg:"
+msgstr "å…ˆé ­ãƒã‚¤ãƒˆã®ã‚ªãƒ•ã‚»ãƒƒãƒˆ:"
 
 #: heksedit.rc:604
 #, c-format
 msgid "Offset of last byte:"
-msgstr "ÅIƒoƒCƒg‚ÌƒIƒtƒZƒbƒg:"
+msgstr "æœ€çµ‚ãƒã‚¤ãƒˆã®ã‚ªãƒ•ã‚»ãƒƒãƒˆ:"
 
 #: heksedit.rc:613
 #, c-format
 msgid "Add Bookmark"
-msgstr "ƒuƒbƒNƒ}[ƒN‚Ì’Ç‰Á"
+msgstr "ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã®è¿½åŠ "
 
 #: heksedit.rc:616
 #, c-format
 msgid "Offset (prefix x for hex):"
-msgstr "ƒIƒtƒZƒbƒg (Ú“ª« x ‚Í 16 i”‚ğ•\‚· ):"
+msgstr "ã‚ªãƒ•ã‚»ãƒƒãƒˆ (æ¥é ­è¾ x ã¯ 16 é€²æ•°ã‚’è¡¨ã™ ):"
 
 #: heksedit.rc:619
 #, c-format
 msgid "Name:"
-msgstr "–¼‘O:"
+msgstr "åå‰:"
 
 #: heksedit.rc:621
 #, c-format
 msgid "Add"
-msgstr "’Ç‰Á"
+msgstr "è¿½åŠ "
 
 #: heksedit.rc:628
 #, c-format
 msgid "Remove Bookmark"
-msgstr "ƒuƒbƒNƒ}[ƒN‚Ìíœ"
+msgstr "ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã®å‰Šé™¤"
 
 #: heksedit.rc:633
 #, c-format
 msgid "Remove"
-msgstr "íœ"
+msgstr "å‰Šé™¤"
 
 #: heksedit.rc:640
 #, c-format
 msgid "Open partially"
-msgstr "•”•ªƒI[ƒvƒ“"
+msgstr "éƒ¨åˆ†ã‚ªãƒ¼ãƒ—ãƒ³"
 
 #: heksedit.rc:643
 #, c-format
 msgid "Start opening partially"
-msgstr "•”•ª“Ç‚İ‚İ‚ÌŠJnˆÊ’u"
+msgstr "éƒ¨åˆ†èª­ã¿è¾¼ã¿ã®é–‹å§‹ä½ç½®"
 
 #: heksedit.rc:644
 #, c-format
 msgid "&At offset from the beginning of file (prefix x for hex):"
-msgstr "ƒtƒ@ƒCƒ‹‚Ìæ“ª‚©‚ç‚ÌƒIƒtƒZƒbƒg(&A) (Ú“ª« x ‚Í 16 i”‚ğ•\‚·):"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã®å…ˆé ­ã‹ã‚‰ã®ã‚ªãƒ•ã‚»ãƒƒãƒˆ(&A) (æ¥é ­è¾ x ã¯ 16 é€²æ•°ã‚’è¡¨ã™):"
 
 #: heksedit.rc:646
 #, c-format
 msgid "&From end of file"
-msgstr "ƒtƒ@ƒCƒ‹‚ÌI’[‚©‚ç(&F)"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã®çµ‚ç«¯ã‹ã‚‰(&F)"
 
 #: heksedit.rc:648
 #, c-format
 msgid "&How many bytes:"
-msgstr "ƒoƒCƒg”(&H):"
+msgstr "ãƒã‚¤ãƒˆæ•°(&H):"
 
 #: heksedit.rc:650
 #, c-format
 msgid "&Display offsets relative to start of file (or start of loaded block)"
-msgstr "ƒtƒ@ƒCƒ‹ (‚Ü‚½‚ÍƒuƒƒbƒN) ‚Ìæ“ª‚©‚ç‚Ì‘Š‘ÎƒIƒtƒZƒbƒg‚ğ•\¦‚·‚é(&D)"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ« (ã¾ãŸã¯ãƒ–ãƒ­ãƒƒã‚¯) ã®å…ˆé ­ã‹ã‚‰ã®ç›¸å¯¾ã‚ªãƒ•ã‚»ãƒƒãƒˆã‚’è¡¨ç¤ºã™ã‚‹(&D)"
 
 #: heksedit.rc:659
 #: heksedit.rc:998
 #, c-format
 msgid "Paste"
-msgstr "“\‚è•t‚¯"
+msgstr "è²¼ã‚Šä»˜ã‘"
 
 #: heksedit.rc:667
 #, c-format
 msgid "Bytes to skip between inserts/overwrites:"
-msgstr "“\‚è•t‚¯‚ÌŒJ‚è•Ô‚µ–ˆ‚ÉƒXƒLƒbƒv‚·‚éƒoƒCƒg”:"
+msgstr "è²¼ã‚Šä»˜ã‘ã®ç¹°ã‚Šè¿”ã—æ¯ã«ã‚¹ã‚­ãƒƒãƒ—ã™ã‚‹ãƒã‚¤ãƒˆæ•°:"
 
 #: heksedit.rc:671
 #, c-format
 msgid "Clipboard format to use:"
-msgstr "g—p‚·‚éƒNƒŠƒbƒvƒ{[ƒh‚ÌŒ`®:"
+msgstr "ä½¿ç”¨ã™ã‚‹ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã®å½¢å¼:"
 
 #: heksedit.rc:673
 #, c-format
 msgid "Refresh"
-msgstr "Ä“Ç"
+msgstr "å†èª­è¾¼"
 
 #: heksedit.rc:674
 #, c-format
 msgid "- CF_TEXT was used by previous versions of Frhed\n- Those starting w CF_ are standard formats && others are registered/private ones\n- Some formats may have been synthesized from the original."
 msgstr ""
-"- CF_TEXT ‚Í Frhed ‚Ì‘O‚Ìƒo[ƒWƒ‡ƒ“‚Åg—p‚³‚ê‚Ä‚¢‚Ü‚µ‚½\n"
-"- CF_ ‚Ån‚Ü‚é‚à‚Ì‚Í•W€ƒtƒH[ƒ}ƒbƒgA‚»‚Ì‘¼‚ÍŒã‚Å“o˜^‚³‚ê‚½‚à‚Ì/“à•”—p\n"
-"- ‚¢‚­‚Â‚©‚ÌƒtƒH[ƒ}ƒbƒg‚ÍƒIƒŠƒWƒiƒ‹‚ğŒ³‚É‡¬‚³‚ê‚Ä‚¢‚é‚©‚à‚µ‚ê‚Ü‚¹‚ñ"
+"- CF_TEXT ã¯ Frhed ã®å‰ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã§ä½¿ç”¨ã•ã‚Œã¦ã„ã¾ã—ãŸ\n"
+"- CF_ ã§å§‹ã¾ã‚‹ã‚‚ã®ã¯æ¨™æº–ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã€ãã®ä»–ã¯å¾Œã§ç™»éŒ²ã•ã‚ŒãŸã‚‚ã®/å†…éƒ¨ç”¨\n"
+"- ã„ãã¤ã‹ã®ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã¯ã‚ªãƒªã‚¸ãƒŠãƒ«ã‚’å…ƒã«åˆæˆã•ã‚Œã¦ã„ã‚‹ã‹ã‚‚ã—ã‚Œã¾ã›ã‚“"
 
 #: heksedit.rc:682
 #, c-format
 msgid "Template"
-msgstr "ƒeƒ“ƒvƒŒ[ƒg"
+msgstr "ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ"
 
 #: heksedit.rc:685
 #, c-format
 msgid "Result of template application:"
-msgstr "ƒeƒ“ƒvƒŒ[ƒg“K—pŒ‹‰Ê:"
+msgstr "ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆé©ç”¨çµæœ:"
 
 #: heksedit.rc:696
 #: heksedit.rc:715
 #: heksedit.rc:1005
 #, c-format
 msgid "Replace"
-msgstr "’uŠ·"
+msgstr "ç½®æ›"
 
 #: heksedit.rc:699
 #, c-format
 msgid "Find what:"
-msgstr "ŒŸõ‚·‚é•¶š—ñ:"
+msgstr "æ¤œç´¢ã™ã‚‹æ–‡å­—åˆ—:"
 
 #: heksedit.rc:702
 #, c-format
 msgid "Find next"
-msgstr "Ÿ‚ğŒŸõ"
+msgstr "æ¬¡ã‚’æ¤œç´¢"
 
 #: heksedit.rc:703
 #, c-format
 msgid "Find previous"
-msgstr "‘O‚ğŒŸõ"
+msgstr "å‰ã‚’æ¤œç´¢"
 
 #: heksedit.rc:704
 #, c-format
 msgid "Match case"
-msgstr "‘å•¶š‚Æ¬•¶š‚ğ‹æ•Ê"
+msgstr "å¤§æ–‡å­—ã¨å°æ–‡å­—ã‚’åŒºåˆ¥"
 
 #: heksedit.rc:706
 #, c-format
 msgid "Replace with:"
-msgstr "’uŠ·Œã‚Ì•¶š—ñ:"
+msgstr "ç½®æ›å¾Œã®æ–‡å­—åˆ—:"
 
 #: heksedit.rc:708
 #, c-format
 msgid "Replace all..."
-msgstr "‚·‚×‚Ä’uŠ·..."
+msgstr "ã™ã¹ã¦ç½®æ›..."
 
 #: heksedit.rc:709
 #, c-format
 msgid "... following occurrences"
-msgstr "... Ÿ‚ÌoŒ»‰ÓŠ‚©‚ç"
+msgstr "... æ¬¡ã®å‡ºç¾ç®‡æ‰€ã‹ã‚‰"
 
 #: heksedit.rc:711
 #, c-format
 msgid "... previous occurrences"
-msgstr "... ‘O‚ÌoŒ»‰ÓŠ‚©‚ç"
+msgstr "... å‰ã®å‡ºç¾ç®‡æ‰€ã‹ã‚‰"
 
 #: heksedit.rc:713
 #, c-format
 msgid "Use special syntax"
-msgstr "“Áê‹L–@‚ğg—p"
+msgstr "ç‰¹æ®Šè¨˜æ³•ã‚’ä½¿ç”¨"
 
 #: heksedit.rc:721
 #, c-format
 msgid "Fill Selection"
-msgstr "‘I‘ğ”ÍˆÍ‚ğw’èƒf[ƒ^‚Å–„‚ß‚é"
+msgstr "é¸æŠç¯„å›²ã‚’æŒ‡å®šãƒ‡ãƒ¼ã‚¿ã§åŸ‹ã‚ã‚‹"
 
 #: heksedit.rc:724
 #, c-format
 msgid "Fill from:"
-msgstr "“ü—ÍŒ³:"
+msgstr "å…¥åŠ›å…ƒ:"
 
 #: heksedit.rc:726
 #: heksedit.rc:1298
 #, c-format
 msgid "File:"
-msgstr "ƒtƒ@ƒCƒ‹:"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«:"
 
 #: heksedit.rc:728
 #, c-format
 msgid "&Browse..."
-msgstr "QÆ(&B)..."
+msgstr "å‚ç…§(&B)..."
 
 #: heksedit.rc:729
 #, c-format
 msgid "Hex:"
-msgstr "16 i”:"
+msgstr "16 é€²æ•°:"
 
 #: heksedit.rc:731
 #, c-format
 msgid "Selection"
-msgstr "‘I‘ğ”ÍˆÍ"
+msgstr "é¸æŠç¯„å›²"
 
 #: heksedit.rc:732
 #, c-format
 msgid "Start:"
-msgstr "ŠJn:"
+msgstr "é–‹å§‹:"
 
 #: heksedit.rc:734
 #, c-format
 msgid "End:"
-msgstr "I—¹:"
+msgstr "çµ‚äº†:"
 
 #: heksedit.rc:736
 #, c-format
 msgid "Size:"
-msgstr "ƒTƒCƒY:"
+msgstr "ã‚µã‚¤ã‚º:"
 
 #: heksedit.rc:738
 #: heksedit.rc:920
 #, c-format
 msgid "Input"
-msgstr "“ü—Í"
+msgstr "å…¥åŠ›"
 
 #: heksedit.rc:739
 #, c-format
 msgid "Size of input:"
-msgstr "“ü—Í‚ÌƒTƒCƒY:"
+msgstr "å…¥åŠ›ã®ã‚µã‚¤ã‚º:"
 
 #: heksedit.rc:741
 #, c-format
 msgid "# Times input fits:"
-msgstr "ƒtƒBƒbƒg‚·‚é“ü—Í‰ñ”:"
+msgstr "ãƒ•ã‚£ãƒƒãƒˆã™ã‚‹å…¥åŠ›å›æ•°:"
 
 #: heksedit.rc:743
 #, c-format
 msgid "Remainder:"
-msgstr "—]‚è:"
+msgstr "ä½™ã‚Š:"
 
 #: heksedit.rc:745
 #, c-format
 msgid "Assignment operator"
-msgstr "‘ã“ü‰‰Zq"
+msgstr "ä»£å…¥æ¼”ç®—å­"
 
 #: heksedit.rc:746
 #, c-format
 msgid "Assign (=)"
-msgstr "‘ã“ü (=)"
+msgstr "ä»£å…¥ (=)"
 
 #: heksedit.rc:747
 #, c-format
@@ -1382,17 +1382,17 @@ msgstr "XOR (^=)"
 #: heksedit.rc:757
 #, c-format
 msgid "Change Instance"
-msgstr "•Û‘¶æ/“ÇŒ³ƒCƒ“ƒXƒ^ƒ“ƒX”Ô†‚Ì•ÏX"
+msgstr "ä¿å­˜å…ˆ/èª­è¾¼å…ƒã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ç•ªå·ã®å¤‰æ›´"
 
 #: heksedit.rc:760
 #, c-format
 msgid "Load the following instance data:"
-msgstr "“Ç‚İ‚ŞƒCƒ“ƒXƒ^ƒ“ƒX ƒf[ƒ^‚Ì”Ô†:"
+msgstr "èª­ã¿è¾¼ã‚€ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ ãƒ‡ãƒ¼ã‚¿ã®ç•ªå·:"
 
 #: heksedit.rc:766
 #, c-format
 msgid "and save (when quiting) to this instance data:"
-msgstr "ƒCƒ“ƒXƒ^ƒ“ƒX ƒf[ƒ^‚Ì (I—¹) •Û‘¶æ”Ô†:"
+msgstr "ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ ãƒ‡ãƒ¼ã‚¿ã® (çµ‚äº†æ™‚) ä¿å­˜å…ˆç•ªå·:"
 
 #: heksedit.rc:774
 #, c-format
@@ -1402,39 +1402,39 @@ msgid ""
 "Unless, that is, that the option to save ini data to the registry on exit is "
 "disabled)"
 msgstr ""
-"‚à‚µ‚ ‚é Frhed ‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ª•Ê‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚Æ“¯‚¶ƒCƒ“ƒXƒ^ƒ“ƒX ƒf[ƒ^‚ğQ"
-"Æ‚µ‚Ä‚¢‚éê‡AÅŒã‚ÉI—¹‚µ‚½‚à‚Ì‚Ìƒf[ƒ^‚Åã‘‚«‚³‚ê‚é‚±‚Æ‚É’ˆÓ‚µ‚Ä‚­‚¾‚³"
-"‚¢B(u•K—v‚É•Û‘¶‚·‚év‚ğ–³Œø‚µ‚Ä‚¢‚È‚¢ŒÀ‚è)"
+"ã‚‚ã—ã‚ã‚‹ Frhed ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒåˆ¥ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã¨åŒã˜ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ ãƒ‡ãƒ¼ã‚¿ã‚’å‚"
+"ç…§ã—ã¦ã„ã‚‹å ´åˆã€æœ€å¾Œã«çµ‚äº†ã—ãŸã‚‚ã®ã®ãƒ‡ãƒ¼ã‚¿ã§ä¸Šæ›¸ãã•ã‚Œã‚‹ã“ã¨ã«æ³¨æ„ã—ã¦ãã ã•"
+"ã„ã€‚(ã€Œå¿…è¦æ™‚ã«ä¿å­˜ã™ã‚‹ã€ã‚’ç„¡åŠ¹ã—ã¦ã„ãªã„é™ã‚Š)"
 
 #: heksedit.rc:781
 #, c-format
 msgid "Encode / Decode Data"
-msgstr "ƒf[ƒ^‚ÌƒGƒ“ƒR[ƒh/ƒfƒR[ƒh"
+msgstr "ãƒ‡ãƒ¼ã‚¿ã®ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‰/ãƒ‡ã‚³ãƒ¼ãƒ‰"
 
 #: heksedit.rc:784
 #, c-format
 msgid "Algorithms:"
-msgstr "ƒAƒ‹ƒSƒŠƒYƒ€:"
+msgstr "ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ :"
 
 #: heksedit.rc:787
 #, c-format
 msgid "Arguments:"
-msgstr "ˆø”:"
+msgstr "å¼•æ•°:"
 
 #: heksedit.rc:789
 #, c-format
 msgid "Encode"
-msgstr "ƒGƒ“ƒR[ƒh"
+msgstr "ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‰"
 
 #: heksedit.rc:791
 #, c-format
 msgid "Decode"
-msgstr "ƒfƒR[ƒh"
+msgstr "ãƒ‡ã‚³ãƒ¼ãƒ‰"
 
 #: heksedit.rc:800
 #, c-format
 msgid "Open Drive"
-msgstr "ƒhƒ‰ƒCƒu‚ğŠJ‚­"
+msgstr "ãƒ‰ãƒ©ã‚¤ãƒ–ã‚’é–‹ã"
 
 #: heksedit.rc:804
 #, c-format
@@ -1442,120 +1442,120 @@ msgid ""
 "NOTE: Frhed allows only reading the drive data. Changing and saving the "
 "drive data is not possible."
 msgstr ""
-"’ˆÓ: Frhed ‚Íƒhƒ‰ƒCƒu ƒf[ƒ^‚Ì“Ç‚İæ‚è‚Ì‚İ‰Â”\‚Å‚·Bƒhƒ‰ƒCƒu ƒf[ƒ^‚Ì•ÏX‚â"
-"•Û‘¶‚ğs‚¤‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB"
+"æ³¨æ„: Frhed ã¯ãƒ‰ãƒ©ã‚¤ãƒ– ãƒ‡ãƒ¼ã‚¿ã®èª­ã¿å–ã‚Šã®ã¿å¯èƒ½ã§ã™ã€‚ãƒ‰ãƒ©ã‚¤ãƒ– ãƒ‡ãƒ¼ã‚¿ã®å¤‰æ›´ã‚„"
+"ä¿å­˜ã‚’è¡Œã†ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:805
 #: heksedit.rc:959
 #: heksedit.rc:989
 #, c-format
 msgid "Open"
-msgstr "ŠJ‚­"
+msgstr "é–‹ã"
 
 #: heksedit.rc:812
 #, c-format
 msgid "Go to Track"
-msgstr "w’èƒZƒNƒ^‚Ö‚ÌˆÚ“®"
+msgstr "æŒ‡å®šã‚»ã‚¯ã‚¿ã¸ã®ç§»å‹•"
 
 #: heksedit.rc:815
 #, c-format
 msgid "Drive Information:"
-msgstr "ƒhƒ‰ƒCƒuî•ñ:"
+msgstr "ãƒ‰ãƒ©ã‚¤ãƒ–æƒ…å ±:"
 
 #: heksedit.rc:817
 #, c-format
 msgid "&Go to track:"
-msgstr "ˆÚ“®‚·‚éƒZƒNƒ^(&G):"
+msgstr "ç§»å‹•ã™ã‚‹ã‚»ã‚¯ã‚¿(&G):"
 
 #: heksedit.rc:826
 #, c-format
 msgid "Shortcuts"
-msgstr "ƒVƒ‡[ƒgƒJƒbƒg"
+msgstr "ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆ"
 
 #: heksedit.rc:829
 #, c-format
 msgid "Paths of shortcuts to Frhed:"
-msgstr "Frhed ‚Ö‚ÌƒVƒ‡[ƒgƒJƒbƒg‚ÌƒpƒX:"
+msgstr "Frhed ã¸ã®ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆã®ãƒ‘ã‚¹:"
 
 #: heksedit.rc:830
 #, c-format
 msgid "Links to Frhed"
-msgstr "Frhed ‚Ö‚ÌƒŠƒ“ƒN"
+msgstr "Frhed ã¸ã®ãƒªãƒ³ã‚¯"
 
 #: heksedit.rc:833
 #, c-format
 msgid "&Find links to any Frhed.exe, fix them and list them here."
-msgstr "Frhed.exe ‚Ö‚ÌƒŠƒ“ƒN‚ğŒŸõ‚µAƒŠƒ“ƒN‚ÌXV‚ğs‚¤B(&F)"
+msgstr "Frhed.exe ã¸ã®ãƒªãƒ³ã‚¯ã‚’æ¤œç´¢ã—ã€ãƒªãƒ³ã‚¯ã®æ›´æ–°ã‚’è¡Œã†ã€‚(&F)"
 
 #: heksedit.rc:836
 #, c-format
 msgid "Create link in/on:"
-msgstr "ƒŠƒ“ƒN‚Ìì¬:"
+msgstr "ãƒªãƒ³ã‚¯ã®ä½œæˆ:"
 
 #: heksedit.rc:837
 #, c-format
 msgid "&Desktop"
-msgstr "ÃŞ½¸Ä¯Ìß"
+msgstr "ï¾ƒï¾ï½½ï½¸ï¾„ï½¯ï¾Œï¾Ÿ"
 
 #: heksedit.rc:839
 #, c-format
 msgid "S&tart Menu"
-msgstr "½À°ÄÒÆ­°"
+msgstr "ï½½ï¾€ï½°ï¾„ï¾’ï¾†ï½­ï½°"
 
 #: heksedit.rc:841
 #, c-format
 msgid "&Send To"
-msgstr "‘—‚é(&S)"
+msgstr "é€ã‚‹(&S)"
 
 #: heksedit.rc:843
 #, c-format
 msgid "&Programs"
-msgstr "ƒvƒƒOƒ‰ƒ€(&P)"
+msgstr "ãƒ—ãƒ­ã‚°ãƒ©ãƒ (&P)"
 
 #: heksedit.rc:845
 #, c-format
 msgid "Link management:"
-msgstr "ƒŠƒ“ƒNŠÇ—:"
+msgstr "ãƒªãƒ³ã‚¯ç®¡ç†:"
 
 #: heksedit.rc:846
 #, c-format
 msgid "<< &Add..."
-msgstr "<< ’Ç‰Á(&A)"
+msgstr "<< è¿½åŠ (&A)"
 
 #: heksedit.rc:847
 #, c-format
 msgid "&Update list"
-msgstr "ˆê——XV(&U)"
+msgstr "ä¸€è¦§æ›´æ–°(&U)"
 
 #: heksedit.rc:849
 #, c-format
 msgid ">> &Delete"
-msgstr ">> íœ(&D)"
+msgstr ">> å‰Šé™¤(&D)"
 
 #: heksedit.rc:850
 #, c-format
 msgid "&Move"
-msgstr "ˆÚ“®(&M)"
+msgstr "ç§»å‹•(&M)"
 
 #: heksedit.rc:852
 #, c-format
 msgid "&Reload"
-msgstr "Ä“Ç(&R)"
+msgstr "å†èª­è¾¼(&R)"
 
 #: heksedit.rc:853
 #, c-format
 msgid "&Close"
-msgstr "•Â‚¶‚é(&C)"
+msgstr "é–‰ã˜ã‚‹(&C)"
 
 #: heksedit.rc:859
 #, c-format
 msgid "Move/Copy bytes"
-msgstr "ƒf[ƒ^‚ÌˆÚ“®/ƒRƒs["
+msgstr "ãƒ‡ãƒ¼ã‚¿ã®ç§»å‹•/ã‚³ãƒ”ãƒ¼"
 
 #: heksedit.rc:862
 #, c-format
 msgid "Operation:"
-msgstr "‘€ì:"
+msgstr "æ“ä½œ:"
 
 #: heksedit.rc:863
 #, c-format
@@ -1563,236 +1563,236 @@ msgid ""
 "Start with (-) for negative length or movement backwards. Prefix with x for "
 "hex notation."
 msgstr ""
-"(-)‚ğ‘O‚É•t‰Á‚µ‚½ê‡A•‰‚Ì’·‚³‚Ü‚½‚ÍŒã•û‚Ö‚ÌˆÚ“®‚ğ•\‚·BÚ“ª« x ‚Í 16 i”"
-"‚ğ•\‚·B"
+"(-)ã‚’å‰ã«ä»˜åŠ ã—ãŸå ´åˆã€è² ã®é•·ã•ã¾ãŸã¯å¾Œæ–¹ã¸ã®ç§»å‹•ã‚’è¡¨ã™ã€‚æ¥é ­è¾ x ã¯ 16 é€²æ•°"
+"ã‚’è¡¨ã™ã€‚"
 
 #: heksedit.rc:864
 #: heksedit.rc:894
 #: heksedit.rc:1330
 #, c-format
 msgid "Move"
-msgstr "ˆÚ“®"
+msgstr "ç§»å‹•"
 
 #: heksedit.rc:866
 #, c-format
 msgid "Begin of the block:"
-msgstr "ƒuƒƒbƒN‚ÌŠJnˆÊ’u:"
+msgstr "ãƒ–ãƒ­ãƒƒã‚¯ã®é–‹å§‹ä½ç½®:"
 
 #: heksedit.rc:868
 #, c-format
 msgid "End of the block:"
-msgstr "ƒuƒƒbƒN‚ÌI—¹ˆÊ’u:"
+msgstr "ãƒ–ãƒ­ãƒƒã‚¯ã®çµ‚äº†ä½ç½®:"
 
 #: heksedit.rc:870
 #, c-format
 msgid "Offset"
-msgstr "ƒIƒtƒZƒbƒg"
+msgstr "ã‚ªãƒ•ã‚»ãƒƒãƒˆ"
 
 #: heksedit.rc:871
 #, c-format
 msgid "Length"
-msgstr "’·‚³"
+msgstr "é•·ã•"
 
 #: heksedit.rc:872
 #, c-format
 msgid "Target:"
-msgstr "ˆÚ“®/ƒRƒs[æ:"
+msgstr "ç§»å‹•/ã‚³ãƒ”ãƒ¼å…ˆ:"
 
 #: heksedit.rc:874
 #, c-format
 msgid "Bytes forward"
-msgstr "‘O•û‚Ö‚Ì‘Š‘ÎƒoƒCƒg”"
+msgstr "å‰æ–¹ã¸ã®ç›¸å¯¾ãƒã‚¤ãƒˆæ•°"
 
 #: heksedit.rc:875
 #, c-format
 msgid "First byte offset"
-msgstr "æ“ªƒoƒCƒg‚©‚ç‚ÌƒIƒtƒZƒbƒg"
+msgstr "å…ˆé ­ãƒã‚¤ãƒˆã‹ã‚‰ã®ã‚ªãƒ•ã‚»ãƒƒãƒˆ"
 
 #: heksedit.rc:876
 #, c-format
 msgid "Last byte offset"
-msgstr "ÅIƒoƒCƒg‚©‚ç‚ÌƒIƒtƒZƒbƒg"
+msgstr "æœ€çµ‚ãƒã‚¤ãƒˆã‹ã‚‰ã®ã‚ªãƒ•ã‚»ãƒƒãƒˆ"
 
 #: heksedit.rc:884
 #, c-format
 msgid "Drag-drop"
-msgstr "ƒhƒ‰ƒbƒO&&ƒhƒƒbƒv"
+msgstr "ãƒ‰ãƒ©ãƒƒã‚°&&ãƒ‰ãƒ­ãƒƒãƒ—"
 
 #: heksedit.rc:887
 #, c-format
 msgid "Clipboard format[s] to use:"
-msgstr "g—p‚·‚éƒNƒŠƒbƒvƒ{[ƒh‚ÌŒ`®:"
+msgstr "ä½¿ç”¨ã™ã‚‹ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã®å½¢å¼:"
 
 #: heksedit.rc:891
 #, c-format
 msgid "Up"
-msgstr "ã‚Ö"
+msgstr "ä¸Šã¸"
 
 #: heksedit.rc:892
 #, c-format
 msgid "Down"
-msgstr "‰º‚Ö"
+msgstr "ä¸‹ã¸"
 
 #: heksedit.rc:893
 #, c-format
 msgid "Data:"
-msgstr "ƒf[ƒ^:"
+msgstr "ãƒ‡ãƒ¼ã‚¿:"
 
 #: heksedit.rc:905
 #, c-format
 msgid "OLE Drag-drop options"
-msgstr "OLE ƒhƒ‰ƒbƒO&&ƒhƒƒbƒv ƒIƒvƒVƒ‡ƒ“"
+msgstr "OLE ãƒ‰ãƒ©ãƒƒã‚°&&ãƒ‰ãƒ­ãƒƒãƒ— ã‚ªãƒ—ã‚·ãƒ§ãƒ³"
 
 #: heksedit.rc:908
 #, c-format
 msgid "General"
-msgstr "‘S”Ê"
+msgstr "å…¨èˆ¬"
 
 #: heksedit.rc:909
 #, c-format
 msgid "Enable drop input"
-msgstr "ƒhƒƒbƒv“ü—Í‚ğ—LŒø‚É‚·‚é"
+msgstr "ãƒ‰ãƒ­ãƒƒãƒ—å…¥åŠ›ã‚’æœ‰åŠ¹ã«ã™ã‚‹"
 
 #: heksedit.rc:911
 #, c-format
 msgid "Enable drag output"
-msgstr "ƒhƒ‰ƒbƒOo—Í‚ğ—LŒø‚É‚·‚é"
+msgstr "ãƒ‰ãƒ©ãƒƒã‚°å‡ºåŠ›ã‚’æœ‰åŠ¹ã«ã™ã‚‹"
 
 #: heksedit.rc:913
 #, c-format
 msgid "Enable scroll-delaying for drag-drop"
-msgstr "ÄŞ×¯¸Ş&&ÄŞÛ¯Ìß—p‚ÉƒXƒNƒ[ƒ‹’x‰„‚ğ—LŒø"
+msgstr "ï¾„ï¾ï¾—ï½¯ï½¸ï¾&&ï¾„ï¾ï¾›ï½¯ï¾Œï¾Ÿç”¨ã«ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«é…å»¶ã‚’æœ‰åŠ¹"
 
 #: heksedit.rc:915
 #, c-format
 msgid "Enable scroll-delaying for selecting"
-msgstr "‘I‘ğ—p‚ÉƒXƒNƒ[ƒ‹’x‰„‚ğ—LŒø‚É‚·‚é"
+msgstr "é¸æŠç”¨ã«ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«é…å»¶ã‚’æœ‰åŠ¹ã«ã™ã‚‹"
 
 #: heksedit.rc:917
 #, c-format
 msgid ""
 "Always give the opportunity to change between move and copy after a drop."
-msgstr "ƒhƒƒbƒvŒã–ˆ“xˆÚ“®‚·‚é‚©ƒRƒs[‚·‚é‚©‚ğ‘I‚Î‚¹‚éB"
+msgstr "ãƒ‰ãƒ­ãƒƒãƒ—å¾Œæ¯åº¦ç§»å‹•ã™ã‚‹ã‹ã‚³ãƒ”ãƒ¼ã™ã‚‹ã‹ã‚’é¸ã°ã›ã‚‹ã€‚"
 
 #: heksedit.rc:921
 #, c-format
 msgid "CF_HDROP opens the files dropped."
-msgstr "CF_HDROP ‚Åƒhƒƒbƒv‚³‚ê‚½ƒtƒ@ƒCƒ‹‚ğŠJ‚­"
+msgstr "CF_HDROP ã§ãƒ‰ãƒ­ãƒƒãƒ—ã•ã‚ŒãŸãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã"
 
 #: heksedit.rc:923
 #, c-format
 msgid "Drop \"BinaryData\" if present"
-msgstr "‘¶İ‚·‚ê‚Î \"BinaryData\" ‚ğƒhƒƒbƒv‚·‚é"
+msgstr "å­˜åœ¨ã™ã‚Œã° \"BinaryData\" ã‚’ãƒ‰ãƒ­ãƒƒãƒ—ã™ã‚‹"
 
 #: heksedit.rc:926
 #, c-format
 msgid "Drop CF_TEXT if present"
-msgstr "‘¶İ‚·‚ê‚Î CF_TEXT ‚ğƒhƒƒbƒv‚·‚é"
+msgstr "å­˜åœ¨ã™ã‚Œã° CF_TEXT ã‚’ãƒ‰ãƒ­ãƒƒãƒ—ã™ã‚‹"
 
 #: heksedit.rc:929
 #, c-format
 msgid "Output"
-msgstr "o—Í"
+msgstr "å‡ºåŠ›"
 
 #: heksedit.rc:930
 #, c-format
 msgid "Drag \"BinaryData\""
-msgstr "\"BinaryData\" ‚ğƒhƒ‰ƒbƒO‚·‚é"
+msgstr "\"BinaryData\" ã‚’ãƒ‰ãƒ©ãƒƒã‚°ã™ã‚‹"
 
 #: heksedit.rc:933
 #, c-format
 msgid "Drag CF_TEXT as:"
-msgstr "CF_TEXT ‚ğˆÈ‰º‚Ì‚à‚Ì‚Æ‚µ‚Äƒhƒ‰ƒbƒO‚·‚é:"
+msgstr "CF_TEXT ã‚’ä»¥ä¸‹ã®ã‚‚ã®ã¨ã—ã¦ãƒ‰ãƒ©ãƒƒã‚°ã™ã‚‹:"
 
 #: heksedit.rc:936
 #, c-format
 msgid "Hexdump"
-msgstr "16 iƒ_ƒ“ƒv"
+msgstr "16 é€²ãƒ€ãƒ³ãƒ—"
 
 #: heksedit.rc:938
 #, c-format
 msgid "Special syntax (<bh:ff>...)"
-msgstr "“Áê‹L–@ (<bh:ff>...)"
+msgstr "ç‰¹æ®Šè¨˜æ³• (<bh:ff>...)"
 
 #: heksedit.rc:940
 #, c-format
 msgid "display (else digits)"
-msgstr "•\¦“à—e‚Ì‚Ü‚Ü"
+msgstr "è¡¨ç¤ºå†…å®¹ã®ã¾ã¾"
 
 #: heksedit.rc:943
 #, c-format
 msgid "Drag \"Rich Text Format\" (as hexdump)"
-msgstr "\"Rich Text Format\" ‚Åƒhƒ‰ƒbƒO‚·‚é (16 iƒ_ƒ“ƒv)"
+msgstr "\"Rich Text Format\" ã§ãƒ‰ãƒ©ãƒƒã‚°ã™ã‚‹ (16 é€²ãƒ€ãƒ³ãƒ—)"
 
 #: heksedit.rc:953
 #, c-format
 msgid "Multiple files dropped"
-msgstr "•¡”‚Ìƒtƒ@ƒCƒ‹‚ªƒhƒƒbƒv‚³‚ê‚Ü‚µ‚½"
+msgstr "è¤‡æ•°ã®ãƒ•ã‚¡ã‚¤ãƒ«ãŒãƒ‰ãƒ­ãƒƒãƒ—ã•ã‚Œã¾ã—ãŸ"
 
 #: heksedit.rc:956
 #, c-format
 msgid "Select the file to open:"
-msgstr "ŠJ‚­ƒtƒ@ƒCƒ‹‚Ì‘I‘ğ:"
+msgstr "é–‹ããƒ•ã‚¡ã‚¤ãƒ«ã®é¸æŠ:"
 
 #: heksedit.rc:966
 #, c-format
 msgid "Delete"
-msgstr "íœ"
+msgstr "å‰Šé™¤"
 
 #: heksedit.rc:969
 #, c-format
 msgid "Start deleting at offset:"
-msgstr "íœŠJnƒIƒtƒZƒbƒg:"
+msgstr "å‰Šé™¤é–‹å§‹ã‚ªãƒ•ã‚»ãƒƒãƒˆ:"
 
 #: heksedit.rc:971
 #, c-format
 msgid "Delete how many bytes"
-msgstr "íœ•û–@"
+msgstr "å‰Šé™¤æ–¹æ³•"
 
 #: heksedit.rc:972
 #, c-format
 msgid "Delete up to and including offset:"
-msgstr "w’èƒIƒtƒZƒbƒg‚Ü‚ÅŠÜ‚ß‚Äíœ:"
+msgstr "æŒ‡å®šã‚ªãƒ•ã‚»ãƒƒãƒˆã¾ã§å«ã‚ã¦å‰Šé™¤:"
 
 #: heksedit.rc:974
 #, c-format
 msgid "Number of bytes to delete:"
-msgstr "ƒoƒCƒg”w’è‚Åíœ:"
+msgstr "ãƒã‚¤ãƒˆæ•°æŒ‡å®šã§å‰Šé™¤:"
 
 #: heksedit.rc:990
 #, c-format
 msgid "New"
-msgstr "V‹Kì¬"
+msgstr "æ–°è¦ä½œæˆ"
 
 #: heksedit.rc:995
 #, c-format
 msgid "Save"
-msgstr "•Û‘¶"
+msgstr "ä¿å­˜"
 
 #: heksedit.rc:999
 #, c-format
 msgid "Help"
-msgstr "ƒwƒ‹ƒv"
+msgstr "ãƒ˜ãƒ«ãƒ—"
 
 #: heksedit.rc:1010
 #, c-format
 msgid "Goto next sector"
-msgstr "Ÿ‚ÌƒZƒNƒ^‚ÖˆÚ“®"
+msgstr "æ¬¡ã®ã‚»ã‚¯ã‚¿ã¸ç§»å‹•"
 
 #: heksedit.rc:1011
 #, c-format
 msgid "Goto previous sector"
-msgstr "‘O‚ÌƒZƒNƒ^‚ÖˆÚ“®"
+msgstr "å‰ã®ã‚»ã‚¯ã‚¿ã¸ç§»å‹•"
 
 #: heksedit.rc:1012
 #, c-format
 msgid "Goto first sector"
-msgstr "Å‰‚ÌƒZƒNƒ^‚ÖˆÚ“®"
+msgstr "æœ€åˆã®ã‚»ã‚¯ã‚¿ã¸ç§»å‹•"
 
 #: heksedit.rc:1013
 #, c-format
 msgid "Goto last sector"
-msgstr "ÅŒã‚ÌƒZƒNƒ^‚ÖˆÚ“®"
+msgstr "æœ€å¾Œã®ã‚»ã‚¯ã‚¿ã¸ç§»å‹•"
 
 #: heksedit.rc:1019
 #, c-format
@@ -1807,32 +1807,32 @@ msgstr "Version %u.%u.%u"
 #: heksedit.rc:1021
 #, c-format
 msgid "%d) 0x%x=%u to 0x%x=%u (%d bytes)"
-msgstr "%d) 0x%x=%u to 0x%x=%u (%d ƒoƒCƒg)"
+msgstr "%d) 0x%x=%u to 0x%x=%u (%d ãƒã‚¤ãƒˆ)"
 
 #: heksedit.rc:1022
 #, c-format
 msgid "All Files (*.*)|*.*|"
-msgstr "‚·‚×‚Ä‚Ìƒtƒ@ƒCƒ‹ (*.*)|*.*|"
+msgstr "ã™ã¹ã¦ã®ãƒ•ã‚¡ã‚¤ãƒ« (*.*)|*.*|"
 
 #: heksedit.rc:1023
 #, c-format
 msgid "Untitled"
-msgstr "–³‘è"
+msgstr "ç„¡é¡Œ"
 
 #: heksedit.rc:1026
 #, c-format
 msgid "READ"
-msgstr "“Çê"
+msgstr "èª­å°‚"
 
 #: heksedit.rc:1027
 #, c-format
 msgid "OVR"
-msgstr "ã‘"
+msgstr "ä¸Šæ›¸"
 
 #: heksedit.rc:1028
 #, c-format
 msgid "INS"
-msgstr "‘}“ü"
+msgstr "æŒ¿å…¥"
 
 #: heksedit.rc:1029
 #: heksedit.rc:1290
@@ -1854,55 +1854,55 @@ msgid ""
 "or click on No if you want to open the link file itself.\n"
 "Choose Cancel if you want to abort opening."
 msgstr ""
-"ƒŠƒ“ƒN ƒtƒ@ƒCƒ‹‚ğŠJ‚±‚¤‚Æ‚µ‚Ä‚¢‚Ü‚·B\n"
-"ƒŠƒ“ƒNæ‚Ìƒtƒ@ƒCƒ‹‚ğŠJ‚«‚½‚¢ê‡‚Í [‚Í‚¢] ‚ğ\n"
-"ƒŠƒ“ƒN ƒtƒ@ƒCƒ‹©‘Ì‚ğŠJ‚«‚½‚¢ê‡‚Í [‚¢‚¢‚¦] ‚ğƒNƒŠƒbƒN‚µ‚Ä‚­‚¾‚³‚¢B\n"
-"‚Ç‚¿‚ç‚àŠJ‚«‚½‚­‚È‚¢ê‡‚Í [ƒLƒƒƒ“ƒZƒ‹] ‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢B"
+"ãƒªãƒ³ã‚¯ ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã“ã†ã¨ã—ã¦ã„ã¾ã™ã€‚\n"
+"ãƒªãƒ³ã‚¯å…ˆã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ããŸã„å ´åˆã¯ [ã¯ã„] ã‚’\n"
+"ãƒªãƒ³ã‚¯ ãƒ•ã‚¡ã‚¤ãƒ«è‡ªä½“ã‚’é–‹ããŸã„å ´åˆã¯ [ã„ã„ãˆ] ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„ã€‚\n"
+"ã©ã¡ã‚‰ã‚‚é–‹ããŸããªã„å ´åˆã¯ [ã‚­ãƒ£ãƒ³ã‚»ãƒ«] ã‚’é¸æŠã—ã¦ãã ã•ã„ã€‚"
 
 #: heksedit.rc:1037
 #, c-format
 msgid "Start offset not recognized."
-msgstr "ŠJnƒIƒtƒZƒbƒg‚ª”F¯‚Å‚«‚Ü‚¹‚ñB"
+msgstr "é–‹å§‹ã‚ªãƒ•ã‚»ãƒƒãƒˆãŒèªè­˜ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1038
 #, c-format
 msgid "End offset not recognized."
-msgstr "I—¹ƒIƒtƒZƒbƒg‚ª”F¯‚Å‚«‚Ü‚¹‚ñB"
+msgstr "çµ‚äº†ã‚ªãƒ•ã‚»ãƒƒãƒˆãŒèªè­˜ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1039
 #, c-format
 msgid "Offset not recognized."
-msgstr "ƒIƒtƒZƒbƒg‚ª”F¯‚Å‚«‚Ü‚¹‚ñB"
+msgstr "ã‚ªãƒ•ã‚»ãƒƒãƒˆãŒèªè­˜ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1045
 #, c-format
 msgid "Error while reading from file."
-msgstr "ƒtƒ@ƒCƒ‹“Ç‚İæ‚è’†‚ÉƒGƒ‰[‚ª”­¶‚Ü‚µ‚½B"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«èª­ã¿å–ã‚Šä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã¾ã—ãŸã€‚"
 
 #: heksedit.rc:1046
 #, c-format
 msgid "Not enough memory."
-msgstr "\•ª‚Èƒƒ‚ƒŠ‚ª‚ ‚è‚Ü‚¹‚ñB"
+msgstr "ååˆ†ãªãƒ¡ãƒ¢ãƒªãŒã‚ã‚Šã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1047
 #, c-format
 msgid "Number of bytes not recognized."
-msgstr "ƒoƒCƒg”‚ª”F¯‚Å‚«‚Ü‚¹‚ñB"
+msgstr "ãƒã‚¤ãƒˆæ•°ãŒèªè­˜ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1048
 #, c-format
 msgid "Error opening file."
-msgstr "ƒtƒ@ƒCƒ‹ƒI[ƒvƒ“‚ÉƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã‚ªãƒ¼ãƒ—ãƒ³æ™‚ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚"
 
 #: heksedit.rc:1049
 #, c-format
 msgid "Not enough memory to load file."
-msgstr "ƒtƒ@ƒCƒ‹‚ğƒ[ƒh‚·‚é‚Ì‚É\•ª‚Èƒƒ‚ƒŠ‚ª‚ ‚è‚Ü‚¹‚ñ"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒ­ãƒ¼ãƒ‰ã™ã‚‹ã®ã«ååˆ†ãªãƒ¡ãƒ¢ãƒªãŒã‚ã‚Šã¾ã›ã‚“"
 
 #: heksedit.rc:1050
 #, c-format
 msgid "Could not save the file."
-msgstr "ƒtƒ@ƒCƒ‹‚ğ•Û‘¶‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä¿å­˜ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1051
 #, c-format
@@ -1910,33 +1910,33 @@ msgid ""
 "Could not backup file!\n"
 "Backup aborted, Save continuing."
 msgstr ""
-"ƒtƒ@ƒCƒ‹‚ÌƒoƒbƒNƒAƒbƒv‚ğ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½!\n"
-"ƒoƒbƒNƒAƒbƒv‚ğ’†~‚µ‚Ü‚µ‚½B•Û‘¶‚ğŒp‘±‚µ‚Ü‚·B"
+"ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ã‚’ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸ!\n"
+"ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ã‚’ä¸­æ­¢ã—ã¾ã—ãŸã€‚ä¿å­˜ã‚’ç¶™ç¶šã—ã¾ã™ã€‚"
 
 #: heksedit.rc:1052
 #, c-format
 msgid "Could not save partially opened file."
-msgstr "•”•ª“I‚ÉŠJ‚¢‚½ƒtƒ@ƒCƒ‹‚ğ•Û‘¶‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "éƒ¨åˆ†çš„ã«é–‹ã„ãŸãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä¿å­˜ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1053
 #, c-format
 msgid "Could not move data in the file."
-msgstr "ƒtƒ@ƒCƒ‹“à‚Ìƒf[ƒ^‚ğˆÚ“®‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«å†…ã®ãƒ‡ãƒ¼ã‚¿ã‚’ç§»å‹•ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1054
 #, c-format
 msgid "Could not resize the file."
-msgstr "ƒtƒ@ƒCƒ‹‚ğƒŠƒTƒCƒY‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒªã‚µã‚¤ã‚ºã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1055
 #, c-format
 msgid "Could not seek in file."
-msgstr "ƒtƒ@ƒCƒ‹‚ğƒV[ƒN‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚·ãƒ¼ã‚¯ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1056
 #, c-format
 msgid "Could not write data to file."
-msgstr "ƒtƒ@ƒCƒ‹‚Öƒf[ƒ^‚ğ‘‚«‚Ş‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã¸ãƒ‡ãƒ¼ã‚¿ã‚’æ›¸ãè¾¼ã‚€ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1057
 #, c-format
@@ -1945,44 +1945,44 @@ msgid ""
 "%s\n"
 "not found!"
 msgstr ""
-"ƒwƒ‹ƒv ƒtƒ@ƒCƒ‹\n"
+"ãƒ˜ãƒ«ãƒ— ãƒ•ã‚¡ã‚¤ãƒ«\n"
 "%s\n"
-"‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ!"
+"ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“!"
 
 #: heksedit.rc:1058
 #, c-format
 msgid "Error code 0x%x occurred while opening file %s."
-msgstr "ƒGƒ‰[ ƒR[ƒh 0x%x ‚ª”­¶‚µ‚Ü‚µ‚½B(ƒtƒ@ƒCƒ‹ %s)"
+msgstr "ã‚¨ãƒ©ãƒ¼ ã‚³ãƒ¼ãƒ‰ 0x%x ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚(ãƒ•ã‚¡ã‚¤ãƒ« %s)"
 
 #: heksedit.rc:1059
 #, c-format
 msgid "Could not save preferences to registry."
-msgstr "İ’èî•ñ‚ğƒŒƒWƒXƒgƒŠ‚É•Û‘¶‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "è¨­å®šæƒ…å ±ã‚’ãƒ¬ã‚¸ã‚¹ãƒˆãƒªã«ä¿å­˜ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1060
 #, c-format
 msgid "File is empty."
-msgstr "ƒtƒ@ƒCƒ‹‚Í‹ó‚Å‚·B"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã¯ç©ºã§ã™ã€‚"
 
 #: heksedit.rc:1061
 #, c-format
 msgid "An error occurred when calling the text editor."
-msgstr "ƒeƒLƒXƒg ƒGƒfƒBƒ^‹N“®‚ÉƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B"
+msgstr "ãƒ†ã‚­ã‚¹ãƒˆ ã‚¨ãƒ‡ã‚£ã‚¿èµ·å‹•æ™‚ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚"
 
 #: heksedit.rc:1062
 #, c-format
 msgid "Could not insert data."
-msgstr "ƒf[ƒ^‚ğ‘}“ü‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ‡ãƒ¼ã‚¿ã‚’æŒ¿å…¥ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1063
 #, c-format
 msgid "Error checking file size"
-msgstr "ƒtƒ@ƒCƒ‹ ƒTƒCƒY ƒ`ƒFƒbƒN ƒGƒ‰["
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ« ã‚µã‚¤ã‚º ãƒã‚§ãƒƒã‚¯ ã‚¨ãƒ©ãƒ¼"
 
 #: heksedit.rc:1064
 #, c-format
 msgid "No data present. Cannot continue!"
-msgstr "ƒf[ƒ^‚ª‚ ‚è‚Ü‚¹‚ñBŒp‘±‚Å‚«‚Ü‚¹‚ñ!"
+msgstr "ãƒ‡ãƒ¼ã‚¿ãŒã‚ã‚Šã¾ã›ã‚“ã€‚ç¶™ç¶šã§ãã¾ã›ã‚“!"
 
 #: heksedit.rc:1065
 #, c-format
@@ -1990,8 +1990,8 @@ msgid ""
 "Could not get text from the file.\n"
 "Cannot continue!"
 msgstr ""
-"ƒtƒ@ƒCƒ‹‚©‚çƒeƒLƒXƒg‚ğæ“¾‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B\n"
-"Œp‘±‚Å‚«‚Ü‚¹‚ñ!"
+"ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ãƒ†ã‚­ã‚¹ãƒˆã‚’å–å¾—ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚\n"
+"ç¶™ç¶šã§ãã¾ã›ã‚“!"
 
 #: heksedit.rc:1071
 #, c-format
@@ -2016,7 +2016,7 @@ msgstr "TB"
 #: heksedit.rc:1080
 #, c-format
 msgid "Could not open the browser."
-msgstr "ƒuƒ‰ƒEƒU‚ÅŠJ‚­‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ–ãƒ©ã‚¦ã‚¶ã§é–‹ãã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1081
 #, c-format
@@ -2025,105 +2025,105 @@ msgid ""
 "%s\n"
 "not found!"
 msgstr ""
-"ƒtƒ@ƒCƒ‹\n"
+"ãƒ•ã‚¡ã‚¤ãƒ«\n"
 "%s\n"
-"‚ÍŒ©‚Â‚©‚è‚Ü‚¹‚ñ!"
+"ã¯è¦‹ã¤ã‹ã‚Šã¾ã›ã‚“!"
 
 #: heksedit.rc:1087
 #, c-format
 msgid "Can not set bookmark at that position."
-msgstr "‚»‚ÌêŠ‚É‚ÍƒuƒbƒNƒ}[ƒN‚ğİ’u‚Å‚«‚Ü‚¹‚ñB"
+msgstr "ãã®å ´æ‰€ã«ã¯ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã‚’è¨­ç½®ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1088
 #, c-format
 msgid "There already is a bookmark on that position."
-msgstr "‚»‚ÌêŠ‚É‚Í‚·‚Å‚ÉƒuƒbƒNƒ}[ƒN‚ªİ’u‚³‚ê‚Ä‚¢‚Ü‚·B"
+msgstr "ãã®å ´æ‰€ã«ã¯ã™ã§ã«ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ãŒè¨­ç½®ã•ã‚Œã¦ã„ã¾ã™ã€‚"
 
 #: heksedit.rc:1089
 #, c-format
 msgid "Can not set bookmark in empty file."
-msgstr "‹ó‚Ìƒtƒ@ƒCƒ‹‚ÉƒuƒbƒNƒ}[ƒN‚ğİ’u‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB"
+msgstr "ç©ºã®ãƒ•ã‚¡ã‚¤ãƒ«ã«ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã‚’è¨­ç½®ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1090
 #, c-format
 msgid "Can not set any more bookmarks."
-msgstr "‚±‚êˆÈãƒuƒbƒNƒ}[ƒN‚ğİ’u‚Å‚«‚Ü‚¹‚ñB"
+msgstr "ã“ã‚Œä»¥ä¸Šãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã‚’è¨­ç½®ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1091
 #, c-format
 msgid "Bookmark points to invalid position."
-msgstr "ƒuƒbƒNƒ}[ƒN‚Í•s³‚ÈˆÊ’u‚ğ¦‚µ‚Ä‚¢‚Ü‚·B"
+msgstr "ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã¯ä¸æ­£ãªä½ç½®ã‚’ç¤ºã—ã¦ã„ã¾ã™ã€‚"
 
 #: heksedit.rc:1092
 #, c-format
 msgid "No bookmarks to remove."
-msgstr "íœ‚·‚éƒuƒbƒNƒ}[ƒN‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB"
+msgstr "å‰Šé™¤ã™ã‚‹ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1093
 #, c-format
 msgid "Remove all bookmarks?"
-msgstr "‚·‚×‚Ä‚ÌƒuƒbƒNƒ}[ƒN‚ğíœ‚µ‚Ü‚·‚©?"
+msgstr "ã™ã¹ã¦ã®ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã‚’å‰Šé™¤ã—ã¾ã™ã‹?"
 
 #: heksedit.rc:1099
 #, c-format
 msgid "Number of bytes to append not recognized."
-msgstr "’Ç‰Á‚·‚éƒoƒCƒg”‚ª”F¯‚Å‚«‚Ü‚¹‚ñB"
+msgstr "è¿½åŠ ã™ã‚‹ãƒã‚¤ãƒˆæ•°ãŒèªè­˜ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1100
 #, c-format
 msgid "Not enough memory for appending."
-msgstr "’Ç‰Á‚·‚é‚Ì‚É\•ª‚Èƒƒ‚ƒŠ‚ª‚ ‚è‚Ü‚¹‚ñB"
+msgstr "è¿½åŠ ã™ã‚‹ã®ã«ååˆ†ãªãƒ¡ãƒ¢ãƒªãŒã‚ã‚Šã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1106
 #, c-format
 msgid "Offset: 0x%x = %d"
-msgstr "ƒIƒtƒZƒbƒg: 0x%x = %d"
+msgstr "ã‚ªãƒ•ã‚»ãƒƒãƒˆ: 0x%x = %d"
 
 #: heksedit.rc:1107
 #, c-format
 msgid "Value: 0x%02x, %d signed, %u unsigned."
-msgstr "’l: 0x%02x, %d signed, %u unsigned"
+msgstr "å€¤: 0x%02x, %d signed, %u unsigned"
 
 #: heksedit.rc:1113
 #, c-format
 msgid "Choose file to compare with"
-msgstr "”äŠr‚·‚éƒtƒ@ƒCƒ‹‚Ì‘I‘ğ"
+msgstr "æ¯”è¼ƒã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã®é¸æŠ"
 
 #: heksedit.rc:1114
 #, c-format
 msgid "Error while opening file."
-msgstr "ƒtƒ@ƒCƒ‹‚ÌƒI[ƒvƒ“‚ÅƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚ªãƒ¼ãƒ—ãƒ³ã§ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚"
 
 #: heksedit.rc:1115
 #, c-format
 msgid "%d areas of difference found."
-msgstr "%d ‰ÓŠ·ˆÙ‚ª‚ ‚è‚Ü‚·B"
+msgstr "%d ç®‡æ‰€å·®ç•°ãŒã‚ã‚Šã¾ã™ã€‚"
 
 #: heksedit.rc:1116
 #, c-format
 msgid "Remaining loaded data size: %d, size of file on disk: %d."
-msgstr "“Ç‚İ‚Ü‚ê‚½ƒf[ƒ^ ƒTƒCƒY: %d, ƒfƒBƒXƒNã‚Ìƒtƒ@ƒCƒ‹ ƒTƒCƒY: %d"
+msgstr "èª­ã¿è¾¼ã¾ã‚ŒãŸãƒ‡ãƒ¼ã‚¿ ã‚µã‚¤ã‚º: %d, ãƒ‡ã‚£ã‚¹ã‚¯ä¸Šã®ãƒ•ã‚¡ã‚¤ãƒ« ã‚µã‚¤ã‚º: %d"
 
 #: heksedit.rc:1117
 #, c-format
 msgid "Data matches exactly."
-msgstr "ƒf[ƒ^‚Í‚·‚×‚Äˆê’v‚µ‚Ä‚¢‚Ü‚·B"
+msgstr "ãƒ‡ãƒ¼ã‚¿ã¯ã™ã¹ã¦ä¸€è‡´ã—ã¦ã„ã¾ã™ã€‚"
 
 #: heksedit.rc:1123
 #, c-format
 msgid "Cannot get access to clipboard."
-msgstr "ƒNƒŠƒbƒvƒ{[ƒh‚ÉƒAƒNƒZƒX‚Å‚«‚Ü‚¹‚ñB"
+msgstr "ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1124
 #, c-format
 msgid "Cannot lock clipboard."
-msgstr "ƒNƒŠƒbƒvƒ{[ƒh‚ğƒƒbƒN‚Å‚«‚Ü‚¹‚ñB"
+msgstr "ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‚’ãƒ­ãƒƒã‚¯ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1125
 #: heksedit.rc:1136
 #, c-format
 msgid "Not enough memory for copying."
-msgstr "ƒRƒs[‚·‚é‚Ì‚É\•ª‚Èƒƒ‚ƒŠ‚ª‚ ‚è‚Ü‚¹‚ñB"
+msgstr "ã‚³ãƒ”ãƒ¼ã™ã‚‹ã®ã«ååˆ†ãªãƒ¡ãƒ¢ãƒªãŒã‚ã‚Šã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1126
 #, c-format
@@ -2132,12 +2132,12 @@ msgid ""
 "Do you want the above output to be copied to the clipboard?\n"
 msgstr ""
 "\n"
-"ã‹L‚Ì’l‚ğƒNƒŠƒbƒvƒ{[ƒh‚ÉƒRƒs[‚µ‚Ü‚·‚©?\n"
+"ä¸Šè¨˜ã®å€¤ã‚’ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«ã‚³ãƒ”ãƒ¼ã—ã¾ã™ã‹?\n"
 
 #: heksedit.rc:1127
 #, c-format
 msgid "You need to select a clipboard format to use."
-msgstr "g—p‚·‚éƒNƒŠƒbƒvƒ{[ƒh ƒtƒH[ƒ}ƒbƒg‚ğ‘I‘ğ‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B"
+msgstr "ä½¿ç”¨ã™ã‚‹ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã‚’é¸æŠã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚"
 
 #: heksedit.rc:1128
 #, c-format
@@ -2145,8 +2145,8 @@ msgid ""
 "Could not get text from the clipboard.\n"
 "Cannot continue!"
 msgstr ""
-"ƒNƒŠƒbƒvƒ{[ƒh‚©‚çƒeƒLƒXƒg‚ğæ“¾‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B\n"
-"Œp‘±‚Å‚«‚Ü‚¹‚ñ!"
+"ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‹ã‚‰ãƒ†ã‚­ã‚¹ãƒˆã‚’å–å¾—ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚\n"
+"ç¶™ç¶šã§ãã¾ã›ã‚“!"
 
 #: heksedit.rc:1129
 #, c-format
@@ -2155,318 +2155,318 @@ msgid ""
 "Do you want to import from\n"
 "the clipboard instead of a file?"
 msgstr ""
-"ƒNƒŠƒbƒvƒ{[ƒh‚ÉƒeƒLƒXƒg ƒf[ƒ^‚ª‘¶İ‚µ‚Ü‚·B\n"
-"ƒtƒ@ƒCƒ‹‚Ì‚©‚í‚è‚ÉƒNƒŠƒbƒvƒ{[ƒh‚©‚çƒCƒ“ƒ|[ƒg‚µ‚Ü‚·‚©?"
+"ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«ãƒ†ã‚­ã‚¹ãƒˆ ãƒ‡ãƒ¼ã‚¿ãŒå­˜åœ¨ã—ã¾ã™ã€‚\n"
+"ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‹ã‚ã‚Šã«ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‹ã‚‰ã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ã¾ã™ã‹?"
 
 #: heksedit.rc:1135
 #, c-format
 msgid "Can't copy more bytes than are present."
-msgstr "‘¶İ‚·‚é‚æ‚è‘½‚­‚Ìƒf[ƒ^‚ğƒRƒs[‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB"
+msgstr "å­˜åœ¨ã™ã‚‹ã‚ˆã‚Šå¤šãã®ãƒ‡ãƒ¼ã‚¿ã‚’ã‚³ãƒ”ãƒ¼ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1142
 #, c-format
 msgid "Can't cut more bytes than are present."
-msgstr "‘¶İ‚·‚é‚æ‚è‘½‚­‚Ìƒf[ƒ^‚ğØ‚èæ‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB"
+msgstr "å­˜åœ¨ã™ã‚‹ã‚ˆã‚Šå¤šãã®ãƒ‡ãƒ¼ã‚¿ã‚’åˆ‡ã‚Šå–ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1143
 #, c-format
 msgid "Not enough memory for cutting to clipboard."
-msgstr "ƒNƒŠƒbƒvƒ{[ƒh‚ÖØ‚èæ‚èƒf[ƒ^‚ğŠi”[‚·‚é‚Ì‚É\•ª‚Èƒƒ‚ƒŠ‚ª‚ ‚è‚Ü‚¹‚ñB"
+msgstr "ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã¸åˆ‡ã‚Šå–ã‚Šãƒ‡ãƒ¼ã‚¿ã‚’æ ¼ç´ã™ã‚‹ã®ã«ååˆ†ãªãƒ¡ãƒ¢ãƒªãŒã‚ã‚Šã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1144
 #, c-format
 msgid "Could not cut the data."
-msgstr "ƒf[ƒ^‚ğØ‚èæ‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ‡ãƒ¼ã‚¿ã‚’åˆ‡ã‚Šå–ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1150
 #, c-format
 msgid "Can't delete more bytes than are present."
-msgstr "‘¶İ‚·‚é‚æ‚è‘½‚­‚Ìƒf[ƒ^‚ğíœ‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB"
+msgstr "å­˜åœ¨ã™ã‚‹ã‚ˆã‚Šå¤šãã®ãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1151
 #, c-format
 msgid "Could not delete data."
-msgstr "ƒf[ƒ^‚ğíœ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1157
 #, c-format
 msgid "Decimal value not recognized."
-msgstr "10 i”‚Ì’l‚ª”F¯‚Å‚«‚Ü‚¹‚ñB"
+msgstr "10 é€²æ•°ã®å€¤ãŒèªè­˜ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1158
 #, c-format
 msgid "Number of times not recognized."
-msgstr "‰ñ”‚ª”F¯‚Å‚«‚Ü‚¹‚ñB"
+msgstr "å›æ•°ãŒèªè­˜ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1159
 #, c-format
 msgid "Invalid start offset."
-msgstr "–³Œø‚ÈŠJnƒIƒtƒZƒbƒg‚Å‚·B"
+msgstr "ç„¡åŠ¹ãªé–‹å§‹ã‚ªãƒ•ã‚»ãƒƒãƒˆã§ã™ã€‚"
 
 #: heksedit.rc:1160
 #, c-format
 msgid "Not enough space for writing decimal values."
-msgstr "10 i”ƒf[ƒ^‚ğ‘‚«‚Ş‚Ì‚É\•ª‚ÈƒXƒy[ƒX‚ª‚ ‚è‚Ü‚¹‚ñB"
+msgstr "10 é€²æ•°ãƒ‡ãƒ¼ã‚¿ã‚’æ›¸ãè¾¼ã‚€ã®ã«ååˆ†ãªã‚¹ãƒšãƒ¼ã‚¹ãŒã‚ã‚Šã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1166
 #, c-format
 msgid "Number of times to paste must be at least 1."
-msgstr "“\‚è•t‚¯‰ñ”‚Í­‚È‚­‚Æ‚à1‚Å‚ ‚é•K—v‚ª‚ ‚è‚Ü‚·B"
+msgstr "è²¼ã‚Šä»˜ã‘å›æ•°ã¯å°‘ãªãã¨ã‚‚1ã§ã‚ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚"
 
 #: heksedit.rc:1167
 #, c-format
 msgid "Tried to paste zero-length array."
-msgstr "0 ƒoƒCƒg’·‚Ì”z—ñ‚ğ“\‚è•t‚¯‚æ‚¤‚Æ‚µ‚Ü‚µ‚½B"
+msgstr "0 ãƒã‚¤ãƒˆé•·ã®é…åˆ—ã‚’è²¼ã‚Šä»˜ã‘ã‚ˆã†ã¨ã—ã¾ã—ãŸã€‚"
 
 #: heksedit.rc:1168
 #, c-format
 msgid "Not enough memory for inserting."
-msgstr "‘}“ü‚·‚é‚Ì‚É\•ª‚Èƒƒ‚ƒŠ‚ª‚ ‚è‚Ü‚¹‚ñB"
+msgstr "æŒ¿å…¥ã™ã‚‹ã®ã«ååˆ†ãªãƒ¡ãƒ¢ãƒªãŒã‚ã‚Šã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1169
 #, c-format
 msgid "Not enough space for overwriting."
-msgstr "ã‘‚«‚·‚é‚Ì‚É\•ª‚ÈƒXƒy[ƒX‚ª‚ ‚è‚Ü‚¹‚ñB"
+msgstr "ä¸Šæ›¸ãã™ã‚‹ã®ã«ååˆ†ãªã‚¹ãƒšãƒ¼ã‚¹ãŒã‚ã‚Šã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1175
 #, c-format
 msgid "Can't fill a selection with a file of zero size."
-msgstr "0 ƒoƒCƒg’·‚Ìƒtƒ@ƒCƒ‹‚Å‘I‘ğ”ÍˆÍ‚Éƒf[ƒ^‚ğ–„‚ß‚Ş‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB"
+msgstr "0 ãƒã‚¤ãƒˆé•·ã®ãƒ•ã‚¡ã‚¤ãƒ«ã§é¸æŠç¯„å›²ã«ãƒ‡ãƒ¼ã‚¿ã‚’åŸ‹ã‚è¾¼ã‚€ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1176
 #, c-format
 msgid "Can't fill a selection with a string of zero size."
-msgstr "0 ƒoƒCƒg’·‚Ì•¶š—ñ‚Å‘I‘ğ”ÍˆÍ‚Éƒf[ƒ^‚ğ–„‚ß‚Ş‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB"
+msgstr "0 ãƒã‚¤ãƒˆé•·ã®æ–‡å­—åˆ—ã§é¸æŠç¯„å›²ã«ãƒ‡ãƒ¼ã‚¿ã‚’åŸ‹ã‚è¾¼ã‚€ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1177
 #, c-format
 msgid "Too many bytes to fill with or some other error."
-msgstr "ƒf[ƒ^‚ª‘½‚·‚¬‚Ü‚½‚Í‚»‚Ì‘¼‚ÌƒGƒ‰[‚Å‚·"
+msgstr "ãƒ‡ãƒ¼ã‚¿ãŒå¤šã™ãã¾ãŸã¯ãã®ä»–ã®ã‚¨ãƒ©ãƒ¼ã§ã™"
 
 #: heksedit.rc:1183
 #, c-format
 msgid "You have chosen an offset but it is negative, which is invalid."
-msgstr "•‰‚ÌƒIƒtƒZƒbƒg‚ğw’è‚µ‚Ü‚µ‚½‚ª‚±‚±‚Å‚Í–³Œø‚Å‚·B"
+msgstr "è² ã®ã‚ªãƒ•ã‚»ãƒƒãƒˆã‚’æŒ‡å®šã—ã¾ã—ãŸãŒã“ã“ã§ã¯ç„¡åŠ¹ã§ã™ã€‚"
 
 #: heksedit.rc:1184
 #, c-format
 msgid "The target value is invalid."
-msgstr "ˆÚ“®/ƒRƒs[æ‚ª•s³‚ÈƒIƒtƒZƒbƒg‚Å‚·B"
+msgstr "ç§»å‹•/ã‚³ãƒ”ãƒ¼å…ˆãŒä¸æ­£ãªã‚ªãƒ•ã‚»ãƒƒãƒˆã§ã™ã€‚"
 
 #: heksedit.rc:1185
 #, c-format
 msgid "Cannot move/copy a block of zero length."
-msgstr "0 ƒoƒCƒg’·‚ÌƒuƒƒbƒN‚ğˆÚ“®/ƒRƒs[‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB"
+msgstr "0 ãƒã‚¤ãƒˆé•·ã®ãƒ–ãƒ­ãƒƒã‚¯ã‚’ç§»å‹•/ã‚³ãƒ”ãƒ¼ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1186
 #, c-format
 msgid "The chosen block extends into non-existent data."
 msgstr ""
-"w’è‚³‚ê‚½ƒuƒƒbƒN‚Ì”ÍˆÍ‚ª‘¶İ‚µ‚È‚¢ƒf[ƒ^‚Ì—Ìˆæ‚É‚Ü‚ÅŠg’£‚³‚ê‚Ä‚¢‚Ü‚·B"
+"æŒ‡å®šã•ã‚ŒãŸãƒ–ãƒ­ãƒƒã‚¯ã®ç¯„å›²ãŒå­˜åœ¨ã—ãªã„ãƒ‡ãƒ¼ã‚¿ã®é ˜åŸŸã«ã¾ã§æ‹¡å¼µã•ã‚Œã¦ã„ã¾ã™ã€‚"
 
 #: heksedit.rc:1187
 #, c-format
 msgid "The block was not moved!"
-msgstr "ƒuƒƒbƒN‚ÍˆÚ“®‚³‚ê‚Ü‚¹‚ñ‚Å‚µ‚½!"
+msgstr "ãƒ–ãƒ­ãƒƒã‚¯ã¯ç§»å‹•ã•ã‚Œã¾ã›ã‚“ã§ã—ãŸ!"
 
 #: heksedit.rc:1188
 #, c-format
 msgid "Cannot move/copy the block outside the data."
-msgstr "ƒuƒƒbƒN‚ğƒf[ƒ^‚ÌŠO‘¤‚ÉˆÚ“®/ƒRƒs[‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB"
+msgstr "ãƒ–ãƒ­ãƒƒã‚¯ã‚’ãƒ‡ãƒ¼ã‚¿ã®å¤–å´ã«ç§»å‹•/ã‚³ãƒ”ãƒ¼ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1194
 #, c-format
 msgid "&Size of file: %lld bytes. Load how many bytes:"
-msgstr "ƒtƒ@ƒCƒ‹‚ÌƒTƒCƒY: %lld ƒoƒCƒg‚Å‚·B ‰½ƒoƒCƒg“Ç‚İ‚İ‚Ü‚·‚©?(&S):"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚µã‚¤ã‚º: %lld ãƒã‚¤ãƒˆã§ã™ã€‚ ä½•ãƒã‚¤ãƒˆèª­ã¿è¾¼ã¿ã¾ã™ã‹?(&S):"
 
 #: heksedit.rc:1195
 #, c-format
 msgid "Cannot open more than 2 GB of data."
-msgstr "2 GB ˆÈã‚Ìƒf[ƒ^‚ÍŠJ‚¯‚Ü‚¹‚ñB"
+msgstr "2 GB ä»¥ä¸Šã®ãƒ‡ãƒ¼ã‚¿ã¯é–‹ã‘ã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1196
 #, c-format
 msgid "Specified number of bytes to load greater than file size."
-msgstr "ƒtƒ@ƒCƒ‹ ƒTƒCƒY‚æ‚è‚à‘å‚«‚È“Ç‚İ‚İƒoƒCƒg”‚ªw’è‚³‚ê‚Ü‚µ‚½B"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ« ã‚µã‚¤ã‚ºã‚ˆã‚Šã‚‚å¤§ããªèª­ã¿è¾¼ã¿ãƒã‚¤ãƒˆæ•°ãŒæŒ‡å®šã•ã‚Œã¾ã—ãŸã€‚"
 
 #: heksedit.rc:1197
 #, c-format
 msgid "Too many bytes to load."
-msgstr "ƒ[ƒh‚·‚éƒoƒCƒg”‚ª‘½‚·‚¬‚Ü‚·B"
+msgstr "ãƒ­ãƒ¼ãƒ‰ã™ã‚‹ãƒã‚¤ãƒˆæ•°ãŒå¤šã™ãã¾ã™ã€‚"
 
 #: heksedit.rc:1203
 #, c-format
 msgid "Cannot reverse single byte."
-msgstr "1 ƒoƒCƒg ƒf[ƒ^‚ğ‹t‡‚É‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB"
+msgstr "1 ãƒã‚¤ãƒˆ ãƒ‡ãƒ¼ã‚¿ã‚’é€†é †ã«ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1204
 #, c-format
 msgid "The chosen block extends into non-existent data. The offsets will be shifted to correct positions."
 msgstr ""
-"w’è‚³‚ê‚½ƒuƒƒbƒN‚Ì”ÍˆÍ‚ª‘¶İ‚µ‚È‚¢ƒf[ƒ^‚Ì—Ìˆæ‚É‚Ü‚ÅŠg’£‚³‚ê‚Ä‚¢‚Ü‚·BƒIƒt"
-"ƒZƒbƒg‚Í³‚µ‚¢ˆÊ’u‚ÉƒVƒtƒg‚³‚ê‚Ü‚·B"
+"æŒ‡å®šã•ã‚ŒãŸãƒ–ãƒ­ãƒƒã‚¯ã®ç¯„å›²ãŒå­˜åœ¨ã—ãªã„ãƒ‡ãƒ¼ã‚¿ã®é ˜åŸŸã«ã¾ã§æ‹¡å¼µã•ã‚Œã¦ã„ã¾ã™ã€‚ã‚ªãƒ•"
+"ã‚»ãƒƒãƒˆã¯æ­£ã—ã„ä½ç½®ã«ã‚·ãƒ•ãƒˆã•ã‚Œã¾ã™ã€‚"
 
 #: heksedit.rc:1210
 #, c-format
 msgid "Link names are \"Frhed.lnk\""
-msgstr "ƒŠƒ“ƒN–¼‚Í \"Frhed.lnk\""
+msgstr "ãƒªãƒ³ã‚¯åã¯ \"Frhed.lnk\""
 
 #: heksedit.rc:1211
 #, c-format
 msgid "This folder already contains a file called \"Frhed.lnk\""
-msgstr "‚±‚ÌƒtƒHƒ‹ƒ_‚É‚ÍŠù‚Éƒtƒ@ƒCƒ‹ \"Frhed.lnk\" ‚ª‘¶İ‚µ‚Ä‚¢‚Ü‚·B"
+msgstr "ã“ã®ãƒ•ã‚©ãƒ«ãƒ€ã«ã¯æ—¢ã«ãƒ•ã‚¡ã‚¤ãƒ« \"Frhed.lnk\" ãŒå­˜åœ¨ã—ã¦ã„ã¾ã™ã€‚"
 
 #: heksedit.rc:1212
 #, c-format
 msgid "\"Frhed.lnk\" can be added to this folder."
-msgstr "‚±‚ÌƒtƒHƒ‹ƒ_‚É‚Í \"Frhed.lnk\"  ‚ğ’Ç‰Á‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B"
+msgstr "ã“ã®ãƒ•ã‚©ãƒ«ãƒ€ã«ã¯ \"Frhed.lnk\"  ã‚’è¿½åŠ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚"
 
 #: heksedit.rc:1213
 #, c-format
 msgid "\"Frhed.lnk\" cannot be added to this folder."
-msgstr "\"Frhed.lnk\" ‚Í‚±‚ÌƒtƒHƒ‹ƒ_‚É’Ç‰Á‚Å‚«‚Ü‚¹‚ñB"
+msgstr "\"Frhed.lnk\" ã¯ã“ã®ãƒ•ã‚©ãƒ«ãƒ€ã«è¿½åŠ ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1214
 #, c-format
 msgid "Frhed can start searching here."
-msgstr "Frhed ‚Í‚±‚±‚©‚çŒŸõ‚Å‚«‚Ü‚·B"
+msgstr "Frhed ã¯ã“ã“ã‹ã‚‰æ¤œç´¢ã§ãã¾ã™ã€‚"
 
 #: heksedit.rc:1215
 #, c-format
 msgid "Frhed cannot start the search from here."
-msgstr "Frhed ‚Í‚±‚±‚©‚çŒŸõ‚ğŠJn‚Å‚«‚Ü‚¹‚ñB"
+msgstr "Frhed ã¯ã“ã“ã‹ã‚‰æ¤œç´¢ã‚’é–‹å§‹ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1216
 #, c-format
 msgid "Could not save shortcut entries."
-msgstr "ƒVƒ‡[ƒgƒJƒbƒg ƒŠƒXƒg‚ğƒŒƒWƒXƒgƒŠ‚É•Û‘¶‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆ ãƒªã‚¹ãƒˆã‚’ãƒ¬ã‚¸ã‚¹ãƒˆãƒªã«ä¿å­˜ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1217
 #, c-format
 msgid "Cannot move more than 1 link at a time."
-msgstr "ˆê“x‚É 1 ‚Â‚æ‚è‘½‚­‚ÌƒŠƒ“ƒN‚ğˆÚ“®‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB"
+msgstr "ä¸€åº¦ã« 1 ã¤ã‚ˆã‚Šå¤šãã®ãƒªãƒ³ã‚¯ã‚’ç§»å‹•ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1218
 #, c-format
 msgid "No link selected to move."
-msgstr "ˆÚ“®‚·‚éƒŠƒ“ƒN‚ª‘I‘ğ‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB"
+msgstr "ç§»å‹•ã™ã‚‹ãƒªãƒ³ã‚¯ãŒé¸æŠã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1219
 #, c-format
 msgid "Couldn't find the selected item."
-msgstr "‘I‘ğ€–Ú‚ğŒ©‚Â‚¯‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "é¸æŠé …ç›®ã‚’è¦‹ã¤ã‘ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1220
 #, c-format
 msgid "Place a link to Frhed in..."
-msgstr "Frhed ‚Ö‚ÌƒŠƒ“ƒN‚Ì”z’u..."
+msgstr "Frhed ã¸ã®ãƒªãƒ³ã‚¯ã®é…ç½®..."
 
 #: heksedit.rc:1221
 #, c-format
 msgid "Move the link to Frhed to..."
-msgstr "Frhed ‚Ö‚ÌƒŠƒ“ƒN‚ÌˆÚ“®..."
+msgstr "Frhed ã¸ã®ãƒªãƒ³ã‚¯ã®ç§»å‹•..."
 
 #: heksedit.rc:1222
 #, c-format
 msgid "There is already a link in that folder."
-msgstr "Šù‚É‚»‚ÌƒtƒHƒ‹ƒ_‚É‚ÍƒŠƒ“ƒN‚ª‘¶İ‚µ‚Ü‚·B"
+msgstr "æ—¢ã«ãã®ãƒ•ã‚©ãƒ«ãƒ€ã«ã¯ãƒªãƒ³ã‚¯ãŒå­˜åœ¨ã—ã¾ã™ã€‚"
 
 #: heksedit.rc:1223
 #, c-format
 msgid "Existing links to old versions of Frhed will be updated to this version.\nAre you sure you want to continue?"
 msgstr ""
-"Frhed ‚Ì‹Œƒo[ƒWƒ‡ƒ“‚Ö‚ÌƒŠƒ“ƒN‚ª‘¶İ‚µ‚Ä‚¢‚ê‚ÎA‚±‚Ìƒo[ƒWƒ‡ƒ“‚ÉXV‚³‚ê‚Ü"
-"‚·B‘±‚¯‚Ä‚æ‚ë‚µ‚¢‚Å‚·‚©?"
+"Frhed ã®æ—§ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã¸ã®ãƒªãƒ³ã‚¯ãŒå­˜åœ¨ã—ã¦ã„ã‚Œã°ã€ã“ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã«æ›´æ–°ã•ã‚Œã¾"
+"ã™ã€‚ç¶šã‘ã¦ã‚ˆã‚ã—ã„ã§ã™ã‹?"
 
 #: heksedit.rc:1224
 #, c-format
 msgid "Pick a folder to start searching in."
-msgstr "ŒŸõ‚ğŠJn‚·‚éƒtƒHƒ‹ƒ_‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B"
+msgstr "æ¤œç´¢ã‚’é–‹å§‹ã™ã‚‹ãƒ•ã‚©ãƒ«ãƒ€ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚"
 
 #: heksedit.rc:1225
 #, c-format
 msgid "No links selected to delete."
-msgstr "íœ‚·‚éƒŠƒ“ƒN‚ª‘I‘ğ‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB"
+msgstr "å‰Šé™¤ã™ã‚‹ãƒªãƒ³ã‚¯ãŒé¸æŠã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1231
 #, c-format
 msgid "Selection too large."
-msgstr "‘I‘ğ”ÍˆÍ‚ªL‚·‚¬‚Ü‚·B"
+msgstr "é¸æŠç¯„å›²ãŒåºƒã™ãã¾ã™ã€‚"
 
 #: heksedit.rc:1232
 #, c-format
 msgid "Could not find data."
-msgstr "ƒf[ƒ^‚ğŒ©‚Â‚¯‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ‡ãƒ¼ã‚¿ã‚’è¦‹ã¤ã‘ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1233
 #, c-format
 msgid "Findstring is zero bytes long."
-msgstr "ŒŸõ•¶š—ñ‚ª 0 ƒoƒCƒg’·‚Å‚·B"
+msgstr "æ¤œç´¢æ–‡å­—åˆ—ãŒ 0 ãƒã‚¤ãƒˆé•·ã§ã™ã€‚"
 
 #: heksedit.rc:1234
 #, c-format
 msgid "Could not find any more occurrences."
-msgstr "‚±‚êˆÈã‚ÌoŒ»‰ÓŠ‚ğŒ©‚Â‚¯‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ã“ã‚Œä»¥ä¸Šã®å‡ºç¾ç®‡æ‰€ã‚’è¦‹ã¤ã‘ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1235
 #, c-format
 msgid "String to find not specified."
-msgstr "ŒŸõ•¶š—ñ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB"
+msgstr "æ¤œç´¢æ–‡å­—åˆ—ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1241
 #, c-format
 msgid "You need to have Administrator privileges for getting list of drives."
-msgstr "ƒhƒ‰ƒCƒu‚ÌƒŠƒXƒg‚ğæ“¾‚·‚é‚É‚ÍŠÇ—ÒŒ ŒÀ‚ª•K—v‚Å‚·B"
+msgstr "ãƒ‰ãƒ©ã‚¤ãƒ–ã®ãƒªã‚¹ãƒˆã‚’å–å¾—ã™ã‚‹ã«ã¯ç®¡ç†è€…æ¨©é™ãŒå¿…è¦ã§ã™ã€‚"
 
 #: heksedit.rc:1242
 #, c-format
 msgid "Unable to open drive."
-msgstr "ƒhƒ‰ƒCƒu‚ÌƒI[ƒvƒ“‚ğ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñB"
+msgstr "ãƒ‰ãƒ©ã‚¤ãƒ–ã®ã‚ªãƒ¼ãƒ—ãƒ³ã‚’ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1243
 #, c-format
 msgid "Cylinders"
-msgstr "ƒVƒŠƒ“ƒ_”"
+msgstr "ã‚·ãƒªãƒ³ãƒ€æ•°"
 
 #: heksedit.rc:1244
 #, c-format
 msgid "Sectors"
-msgstr "ƒZƒNƒ^”"
+msgstr "ã‚»ã‚¯ã‚¿æ•°"
 
 #: heksedit.rc:1245
 #, c-format
 msgid "Tracks per cylinder"
-msgstr "1 ƒVƒŠƒ“ƒ_‚ ‚½‚è‚Ìƒgƒ‰ƒbƒN”"
+msgstr "1 ã‚·ãƒªãƒ³ãƒ€ã‚ãŸã‚Šã®ãƒˆãƒ©ãƒƒã‚¯æ•°"
 
 #: heksedit.rc:1246
 #, c-format
 msgid "Sectors per track"
-msgstr "1 ƒgƒ‰ƒbƒN‚ ‚½‚è‚ÌƒZƒNƒ^”"
+msgstr "1 ãƒˆãƒ©ãƒƒã‚¯ã‚ãŸã‚Šã®ã‚»ã‚¯ã‚¿æ•°"
 
 #: heksedit.rc:1247
 #, c-format
 msgid "Bytes per sector"
-msgstr "1 ƒZƒNƒ^‚ ‚½‚è‚ÌƒoƒCƒg”"
+msgstr "1 ã‚»ã‚¯ã‚¿ã‚ãŸã‚Šã®ãƒã‚¤ãƒˆæ•°"
 
 #: heksedit.rc:1248
 #, c-format
 msgid "Total size in bytes"
-msgstr "‡ŒvƒoƒCƒg”"
+msgstr "åˆè¨ˆãƒã‚¤ãƒˆæ•°"
 
 #: heksedit.rc:1249
 #, c-format
 msgid "%s:Sector %I64d"
-msgstr "%s:ƒZƒNƒ^ %I64d"
+msgstr "%s:ã‚»ã‚¯ã‚¿ %I64d"
 
 #: heksedit.rc:1250
 #, c-format
 msgid "Drive %d, Partition %d (%s)"
-msgstr "ƒhƒ‰ƒCƒu %d, ƒp[ƒeƒBƒVƒ‡ƒ“ %d (%s)"
+msgstr "ãƒ‰ãƒ©ã‚¤ãƒ– %d, ãƒ‘ãƒ¼ãƒ†ã‚£ã‚·ãƒ§ãƒ³ %d (%s)"
 
 #: heksedit.rc:1251
 #, c-format
 msgid "Drive %d (%s)"
-msgstr "ƒhƒ‰ƒCƒu %d (%s)"
+msgstr "ãƒ‰ãƒ©ã‚¤ãƒ– %d (%s)"
 
 #: heksedit.rc:1257
 #, c-format
@@ -2475,9 +2475,9 @@ msgid ""
 "Cannot continue!\n"
 "Do you want to keep what has been found so far?"
 msgstr ""
-"ƒf[ƒ^‚ğƒCƒ“ƒ|[ƒg‚·‚é‚Ì‚É\•ª‚Èƒƒ‚ƒŠ‚ª‚ ‚è‚Ü‚¹‚ñB\n"
-"Œp‘±‚Å‚«‚Ü‚¹‚ñ!\n"
-"‚±‚±‚Ü‚Å“Ç‚İæ‚Á‚½ƒf[ƒ^‚ğ‚»‚Ì‚Ü‚Ü‚É‚µ‚Ä‚¨‚«‚Ü‚·‚©?"
+"ãƒ‡ãƒ¼ã‚¿ã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã™ã‚‹ã®ã«ååˆ†ãªãƒ¡ãƒ¢ãƒªãŒã‚ã‚Šã¾ã›ã‚“ã€‚\n"
+"ç¶™ç¶šã§ãã¾ã›ã‚“!\n"
+"ã“ã“ã¾ã§èª­ã¿å–ã£ãŸãƒ‡ãƒ¼ã‚¿ã‚’ãã®ã¾ã¾ã«ã—ã¦ãŠãã¾ã™ã‹?"
 
 #: heksedit.rc:1258
 #, c-format
@@ -2485,8 +2485,8 @@ msgid ""
 "The first offset found was 0x%x, which is greater than zero.\n"
 "Do you want to insert %d null bytes at the start of the data?"
 msgstr ""
-"Å‰‚ÌƒIƒtƒZƒbƒg‚ª 0 ‚Å‚Í‚È‚­A0x%x ‚Å‚·B\n"
-"%d ŒÂ‚Ì NUL ƒoƒCƒg‚ğƒf[ƒ^‚Ìæ“ª‚É‘}“ü‚µ‚Ü‚·‚©?"
+"æœ€åˆã®ã‚ªãƒ•ã‚»ãƒƒãƒˆãŒ 0 ã§ã¯ãªãã€0x%x ã§ã™ã€‚\n"
+"%d å€‹ã® NUL ãƒã‚¤ãƒˆã‚’ãƒ‡ãƒ¼ã‚¿ã®å…ˆé ­ã«æŒ¿å…¥ã—ã¾ã™ã‹?"
 
 #: heksedit.rc:1259
 #, c-format
@@ -2494,8 +2494,8 @@ msgid ""
 "Invalid offset found.\n"
 "Ignore further invalid offsets?"
 msgstr ""
-"•s³‚ÈƒIƒtƒZƒbƒg‚ªŒ©‚Â‚©‚è‚Ü‚µ‚½B\n"
-"ˆÈŒã•s³‚ÈƒIƒtƒZƒbƒg‚ğ–³‹‚µ‚Ü‚·‚©?"
+"ä¸æ­£ãªã‚ªãƒ•ã‚»ãƒƒãƒˆãŒè¦‹ã¤ã‹ã‚Šã¾ã—ãŸã€‚\n"
+"ä»¥å¾Œä¸æ­£ãªã‚ªãƒ•ã‚»ãƒƒãƒˆã‚’ç„¡è¦–ã—ã¾ã™ã‹?"
 
 #: heksedit.rc:1260
 #, c-format
@@ -2504,9 +2504,9 @@ msgid ""
 "Ignore further mismatched data?\n"
 "NB: Hex data will be used when ignoring."
 msgstr ""
-"•¶šƒf[ƒ^‚ª 16 iƒf[ƒ^‚Æˆê’v‚µ‚Ä‚¢‚Ü‚¹‚ñB\n"
-"ˆÈŒãAƒf[ƒ^‚Ì•sˆê’v‚ğ–³‹‚µ‚Ü‚·‚©?\n"
-"’ˆÓ: –³‹‚·‚é‚Æ‚«‚ÍA16 iƒf[ƒ^‚ªg—p‚³‚ê‚Ü‚·B"
+"æ–‡å­—ãƒ‡ãƒ¼ã‚¿ãŒ 16 é€²ãƒ‡ãƒ¼ã‚¿ã¨ä¸€è‡´ã—ã¦ã„ã¾ã›ã‚“ã€‚\n"
+"ä»¥å¾Œã€ãƒ‡ãƒ¼ã‚¿ã®ä¸ä¸€è‡´ã‚’ç„¡è¦–ã—ã¾ã™ã‹?\n"
+"æ³¨æ„: ç„¡è¦–ã™ã‚‹ã¨ãã¯ã€16 é€²ãƒ‡ãƒ¼ã‚¿ãŒä½¿ç”¨ã•ã‚Œã¾ã™ã€‚"
 
 #: heksedit.rc:1261
 #, c-format
@@ -2515,17 +2515,17 @@ msgid ""
 "Cannot continue!\n"
 "Do you want to keep what has been found so far?"
 msgstr ""
-"16iƒf[ƒ^“à‚É•s³‚È•¶š‚ªŠÜ‚Ü‚ê‚Ä‚¢‚Ü‚·B\n"
-"Œp‘±‚Å‚«‚Ü‚¹‚ñ!\n"
-"‚±‚ê‚Ü‚Å“Ç‚İæ‚Á‚½ƒf[ƒ^‚ğ‚»‚Ì‚Ü‚Ü‚É‚µ‚Ä‚¨‚«‚Ü‚·‚©?"
+"16é€²ãƒ‡ãƒ¼ã‚¿å†…ã«ä¸æ­£ãªæ–‡å­—ãŒå«ã¾ã‚Œã¦ã„ã¾ã™ã€‚\n"
+"ç¶™ç¶šã§ãã¾ã›ã‚“!\n"
+"ã“ã‚Œã¾ã§èª­ã¿å–ã£ãŸãƒ‡ãƒ¼ã‚¿ã‚’ãã®ã¾ã¾ã«ã—ã¦ãŠãã¾ã™ã‹?"
 
 #: heksedit.rc:1262
 #, c-format
 msgid "Unexpected end of data found.\nCannot continue!\nDo you want to keep what has been found so far?"
 msgstr ""
-"—\Šú‚µ‚Ä‚¢‚È‚¢ƒf[ƒ^‚ÌI’[‚ªŒŸo‚³‚ê‚Ü‚µ‚½B\n"
-"Œp‘±‚Å‚«‚Ü‚¹‚ñ!\n"
-"‚±‚ê‚Ü‚Å“Ç‚İæ‚Á‚½ƒf[ƒ^‚ğ‚»‚Ì‚Ü‚Ü‚É‚µ‚Ä‚¨‚«‚Ü‚·‚©?"
+"äºˆæœŸã—ã¦ã„ãªã„ãƒ‡ãƒ¼ã‚¿ã®çµ‚ç«¯ãŒæ¤œå‡ºã•ã‚Œã¾ã—ãŸã€‚\n"
+"ç¶™ç¶šã§ãã¾ã›ã‚“!\n"
+"ã“ã‚Œã¾ã§èª­ã¿å–ã£ãŸãƒ‡ãƒ¼ã‚¿ã‚’ãã®ã¾ã¾ã«ã—ã¦ãŠãã¾ã™ã‹?"
 
 #: heksedit.rc:1263
 #, c-format
@@ -2533,68 +2533,68 @@ msgid ""
 "Does this data have the same format as the Frhed display?\n"
 "This data contains "
 msgstr ""
-"‚±‚Ìƒf[ƒ^‚Í Frhed ‚Ì‰æ–Ê•\¦‚Æ“¯‚¶ƒtƒH[ƒ}ƒbƒg‚Å‚·‚©?\n"
-"‚±‚Ìƒf[ƒ^‚É‚ÍŸ‚Ì‚à‚Ì‚ªŠÜ‚Ü‚ê‚Ä‚¢‚Ü‚·: "
+"ã“ã®ãƒ‡ãƒ¼ã‚¿ã¯ Frhed ã®ç”»é¢è¡¨ç¤ºã¨åŒã˜ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã§ã™ã‹?\n"
+"ã“ã®ãƒ‡ãƒ¼ã‚¿ã«ã¯æ¬¡ã®ã‚‚ã®ãŒå«ã¾ã‚Œã¦ã„ã¾ã™: "
 
 #: heksedit.rc:1264
 #, c-format
 msgid "characters other than whitespace and hexdigits (like Frhed display)."
-msgstr "‹ó”’‚â 16 i”ˆÈŠO‚Ì•¶š (Frhed ‚Ì•\¦Œ`®)B"
+msgstr "ç©ºç™½ã‚„ 16 é€²æ•°ä»¥å¤–ã®æ–‡å­— (Frhed ã®è¡¨ç¤ºå½¢å¼)ã€‚"
 
 #: heksedit.rc:1265
 #, c-format
 msgid "only whitespace and hexdigits (unlike Frhed display)."
-msgstr "‹ó”’‚Æ 16 i”‚Ì‚İ (Frhed ‚Ì•\¦Œ`®‚Å‚Í‚È‚¢)B"
+msgstr "ç©ºç™½ã¨ 16 é€²æ•°ã®ã¿ (Frhed ã®è¡¨ç¤ºå½¢å¼ã§ã¯ãªã„)ã€‚"
 
 #: heksedit.rc:1271
 #, c-format
 msgid "Data to replace must be selected."
-msgstr "’uŠ·‚·‚éƒf[ƒ^‚ª‘I‘ğ‚³‚ê‚Ä‚¢‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñB"
+msgstr "ç½®æ›ã™ã‚‹ãƒ‡ãƒ¼ã‚¿ãŒé¸æŠã•ã‚Œã¦ã„ãªã‘ã‚Œã°ãªã‚Šã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1272
 #, c-format
 msgid "Could not delete selected data."
-msgstr "‘I‘ğ‚µ‚½ƒf[ƒ^‚ğíœ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "é¸æŠã—ãŸãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1273
 #, c-format
 msgid "Replacing failed."
-msgstr "’uŠ·‚É¸”s‚µ‚Ü‚µ‚½B"
+msgstr "ç½®æ›ã«å¤±æ•—ã—ã¾ã—ãŸã€‚"
 
 #: heksedit.rc:1274
 #, c-format
 msgid "Could not translate text to binary."
-msgstr "ƒeƒLƒXƒg‚©‚çƒoƒCƒiƒŠ‚É•ÏŠ·‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ†ã‚­ã‚¹ãƒˆã‹ã‚‰ãƒã‚¤ãƒŠãƒªã«å¤‰æ›ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1275
 #, c-format
 msgid "To-replace and replace-with data are same."
-msgstr "’uŠ·‘ÎÛƒf[ƒ^‚Æ’uŠ·Œã‚Ìƒf[ƒ^‚ªˆê’v‚µ‚Ä‚¢‚Ü‚·B"
+msgstr "ç½®æ›å¯¾è±¡ãƒ‡ãƒ¼ã‚¿ã¨ç½®æ›å¾Œã®ãƒ‡ãƒ¼ã‚¿ãŒä¸€è‡´ã—ã¦ã„ã¾ã™ã€‚"
 
 #: heksedit.rc:1276
 #, c-format
 msgid "%d occurrences replaced."
-msgstr "%d ŒÂ‚ÌoŒ»‰ÓŠ‚ğ’uŠ·‚µ‚Ü‚µ‚½B"
+msgstr "%d å€‹ã®å‡ºç¾ç®‡æ‰€ã‚’ç½®æ›ã—ã¾ã—ãŸã€‚"
 
 #: heksedit.rc:1277
 #, c-format
 msgid "Could not use selection as replace target."
-msgstr "’uŠ·‘ÎÛ‚Æ‚µ‚Ä‘I‘ğ”ÍˆÍ‚Ì“à—e‚ğg—p‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ç½®æ›å¯¾è±¡ã¨ã—ã¦é¸æŠç¯„å›²ã®å†…å®¹ã‚’ä½¿ç”¨ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1283
 #, c-format
 msgid "Selected: Offset %d=0x%x to %d=0x%x (%d byte(s))"
-msgstr "‘I‘ğ”ÍˆÍ: ƒIƒtƒZƒbƒg %d=0x%x ` %d=0x%x (%d ƒoƒCƒg)"
+msgstr "é¸æŠç¯„å›²: ã‚ªãƒ•ã‚»ãƒƒãƒˆ %d=0x%x ï½ %d=0x%x (%d ãƒã‚¤ãƒˆ)"
 
 #: heksedit.rc:1284
 #, c-format
 msgid "Offset %d=0x%x"
-msgstr "ƒIƒtƒZƒbƒg %d=0x%x"
+msgstr "ã‚ªãƒ•ã‚»ãƒƒãƒˆ %d=0x%x"
 
 #: heksedit.rc:1285
 #, c-format
 msgid "Bits"
-msgstr "2 i”"
+msgstr "2 é€²æ•°"
 
 #: heksedit.rc:1286
 #, c-format
@@ -2619,17 +2619,17 @@ msgstr "Signed"
 #: heksedit.rc:1292
 #, c-format
 msgid "Size"
-msgstr "ƒTƒCƒY"
+msgstr "ã‚µã‚¤ã‚º"
 
 #: heksedit.rc:1299
 #, c-format
 msgid "Template file:"
-msgstr "ƒeƒ“ƒvƒŒ[ƒg ƒtƒ@ƒCƒ‹:"
+msgstr "ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ ãƒ•ã‚¡ã‚¤ãƒ«:"
 
 #: heksedit.rc:1300
 #, c-format
 msgid "Applied at offset:"
-msgstr "“K—p‚³‚ê‚éƒIƒtƒZƒbƒg:"
+msgstr "é©ç”¨ã•ã‚Œã‚‹ã‚ªãƒ•ã‚»ãƒƒãƒˆ:"
 
 #: heksedit.rc:1301
 #, c-format
@@ -2646,22 +2646,22 @@ msgstr "= %d (signed) = %u (unsigned) = 0x%x"
 #: heksedit.rc:1303
 #, c-format
 msgid "ERROR: not enough space for byte-size data."
-msgstr "ƒGƒ‰[: BYTE ƒTƒCƒY‚Ìƒf[ƒ^‚É\•ª‚ÈƒXƒy[ƒX‚ª‚ ‚è‚Ü‚¹‚ñB"
+msgstr "ã‚¨ãƒ©ãƒ¼: BYTE ã‚µã‚¤ã‚ºã®ãƒ‡ãƒ¼ã‚¿ã«ååˆ†ãªã‚¹ãƒšãƒ¼ã‚¹ãŒã‚ã‚Šã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1304
 #, c-format
 msgid "ERROR: missing variable name."
-msgstr "ƒGƒ‰[: •Ï”–¼‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB"
+msgstr "ã‚¨ãƒ©ãƒ¼: å¤‰æ•°åãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1306
 #, c-format
 msgid "ERROR: not enough space for WORD-size data."
-msgstr "ƒGƒ‰[: WORD ƒTƒCƒY‚Ìƒf[ƒ^‚É\•ª‚ÈƒXƒy[ƒX‚ª‚ ‚è‚Ü‚¹‚ñB"
+msgstr "ã‚¨ãƒ©ãƒ¼: WORD ã‚µã‚¤ã‚ºã®ãƒ‡ãƒ¼ã‚¿ã«ååˆ†ãªã‚¹ãƒšãƒ¼ã‚¹ãŒã‚ã‚Šã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1308
 #, c-format
 msgid "ERROR: not enough space for DWORD-size data."
-msgstr "ƒGƒ‰[: DWORD ƒTƒCƒY‚Ìƒf[ƒ^‚É\•ª‚ÈƒXƒy[ƒX‚ª‚ ‚è‚Ü‚¹‚ñB"
+msgstr "ã‚¨ãƒ©ãƒ¼: DWORD ã‚µã‚¤ã‚ºã®ãƒ‡ãƒ¼ã‚¿ã«ååˆ†ãªã‚¹ãƒšãƒ¼ã‚¹ãŒã‚ã‚Šã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1309
 #, c-format
@@ -2671,7 +2671,7 @@ msgstr "= %f = 0x%x"
 #: heksedit.rc:1310
 #, c-format
 msgid "ERROR: not enough space for float-size data."
-msgstr "ƒGƒ‰[: float Œ^ƒTƒCƒY‚Ìƒf[ƒ^‚É\•ª‚ÈƒXƒy[ƒX‚ª‚ ‚è‚Ü‚¹‚ñB"
+msgstr "ã‚¨ãƒ©ãƒ¼: float å‹ã‚µã‚¤ã‚ºã®ãƒ‡ãƒ¼ã‚¿ã«ååˆ†ãªã‚¹ãƒšãƒ¼ã‚¹ãŒã‚ã‚Šã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1311
 #, c-format
@@ -2681,17 +2681,17 @@ msgstr "= %g"
 #: heksedit.rc:1312
 #, c-format
 msgid "ERROR: not enough space for double-size data."
-msgstr "ƒGƒ‰[: double Œ^ƒTƒCƒY‚Ìƒf[ƒ^‚É\•ª‚ÈƒXƒy[ƒX‚ª‚ ‚è‚Ü‚¹‚ñB"
+msgstr "ã‚¨ãƒ©ãƒ¼: double å‹ã‚µã‚¤ã‚ºã®ãƒ‡ãƒ¼ã‚¿ã«ååˆ†ãªã‚¹ãƒšãƒ¼ã‚¹ãŒã‚ã‚Šã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1313
 #, c-format
 msgid "ERROR: Unknown variable type:"
-msgstr "ƒGƒ‰[: –¢’m‚Ì•Ï”‚ÌŒ^‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚·:"
+msgstr "ã‚¨ãƒ©ãƒ¼: æœªçŸ¥ã®å¤‰æ•°ã®å‹ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã™:"
 
 #: heksedit.rc:1319
 #, c-format
 msgid "-> Length of template = %d bytes."
-msgstr "-> ƒeƒ“ƒvƒŒ[ƒg‚Ì’·‚³ = %d ƒoƒCƒg"
+msgstr "-> ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã®é•·ã• = %d ãƒã‚¤ãƒˆ"
 
 #: heksedit.rc:1320
 #, c-format
@@ -2701,51 +2701,51 @@ msgstr ""
 #: heksedit.rc:1321
 #, c-format
 msgid "Choose template file"
-msgstr "ƒeƒ“ƒvƒŒ[ƒg ƒtƒ@ƒCƒ‹‚Ì‘I‘ğ"
+msgstr "ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ ãƒ•ã‚¡ã‚¤ãƒ«ã®é¸æŠ"
 
 #: heksedit.rc:1322
 #, c-format
 msgid "Could not open template file %s."
-msgstr "ƒeƒ“ƒvƒŒ[ƒg ƒtƒ@ƒCƒ‹ %s ‚ğŠJ‚­‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ ãƒ•ã‚¡ã‚¤ãƒ« %s ã‚’é–‹ãã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1323
 #, c-format
 msgid "Could not load template from file %s."
-msgstr "ƒtƒ@ƒCƒ‹ %s ‚©‚ç ƒeƒ“ƒvƒŒ[ƒg‚ğƒ[ƒh‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ« %s ã‹ã‚‰ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚’ãƒ­ãƒ¼ãƒ‰ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1329
 #, c-format
 msgid "Select an item to move."
-msgstr "ˆÚ“®‚·‚é€–Ú‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢B"
+msgstr "ç§»å‹•ã™ã‚‹é …ç›®ã‚’é¸æŠã—ã¦ãã ã•ã„ã€‚"
 
 #: heksedit.rc:1333
 #, c-format
 msgid "No data to insert"
-msgstr "‘}“ü‚·‚éƒf[ƒ^‚ª‚ ‚è‚Ü‚¹‚ñ"
+msgstr "æŒ¿å…¥ã™ã‚‹ãƒ‡ãƒ¼ã‚¿ãŒã‚ã‚Šã¾ã›ã‚“"
 
 #: heksedit.rc:1334
 #, c-format
 msgid "TYMED_ISTORAGE is not supported for drag-drop."
-msgstr "TYMED_ISTORAGE ‚Ìƒhƒ‰ƒbƒO&&ƒhƒƒbƒv‚ÍƒTƒ|[ƒg‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB"
+msgstr "TYMED_ISTORAGE ã®ãƒ‰ãƒ©ãƒƒã‚°&&ãƒ‰ãƒ­ãƒƒãƒ—ã¯ã‚µãƒãƒ¼ãƒˆã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚"
 
 #: heksedit.rc:1340
 #, c-format
 msgid "Float size value:\n%g\n"
 msgstr ""
-"’P¸“x•‚“®¬”“_”:\n"
+"å˜ç²¾åº¦æµ®å‹•å°æ•°ç‚¹æ•°:\n"
 "%g\n"
 
 #: heksedit.rc:1341
 #, c-format
 msgid "Not enough space for float size value.\n"
-msgstr "’P¸“x•‚“®¬”“_”‚É\•ª‚ÈƒXƒy[ƒX‚ª‚ ‚è‚Ü‚¹‚ñB\n"
+msgstr "å˜ç²¾åº¦æµ®å‹•å°æ•°ç‚¹æ•°ã«ååˆ†ãªã‚¹ãƒšãƒ¼ã‚¹ãŒã‚ã‚Šã¾ã›ã‚“ã€‚\n"
 
 #: heksedit.rc:1342
 #, c-format
 msgid "\nDouble size value:\n%g\n"
 msgstr ""
 "\n"
-"”{¸“x•‚“®¬”“_”:\n"
+"å€ç²¾åº¦æµ®å‹•å°æ•°ç‚¹æ•°:\n"
 "%g\n"
 
 #: heksedit.rc:1343
@@ -2755,12 +2755,12 @@ msgid ""
 "Not enough space for double size value.\n"
 msgstr ""
 "\n"
-"”{¸“x•‚“®¬”“_”‚É\•ª‚ÈƒXƒy[ƒX‚ª‚ ‚è‚Ü‚¹‚ñB\n"
+"å€ç²¾åº¦æµ®å‹•å°æ•°ç‚¹æ•°ã«ååˆ†ãªã‚¹ãƒšãƒ¼ã‚¹ãŒã‚ã‚Šã¾ã›ã‚“ã€‚\n"
 
 #: heksedit.rc:1344
 #, c-format
 msgid "File name and path: "
-msgstr "ƒtƒ@ƒCƒ‹–¼‚ÆƒpƒX:"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«åã¨ãƒ‘ã‚¹:"
 
 #: heksedit.rc:1345
 #, c-format
@@ -2770,8 +2770,8 @@ msgid ""
 "Number of bytes read: %d = %d kilobytes.\n"
 msgstr ""
 "\n"
-"•”•ª“I‚ÉƒIƒtƒZƒbƒg 0x%x = %d ‚ğŠJ‚«‚Ü‚µ‚½B\n"
-"“Ç‚İæ‚èƒoƒCƒg”: %d = %d KB \n"
+"éƒ¨åˆ†çš„ã«ã‚ªãƒ•ã‚»ãƒƒãƒˆ 0x%x = %d ã‚’é–‹ãã¾ã—ãŸã€‚\n"
+"èª­ã¿å–ã‚Šãƒã‚¤ãƒˆæ•°: %d = %d KB \n"
 
 #: heksedit.rc:1346
 #, c-format
@@ -2780,7 +2780,7 @@ msgid ""
 "File size: %d bytes = %d kilobytes.\n"
 msgstr ""
 "\n"
-"ƒtƒ@ƒCƒ‹ ƒTƒCƒY: %d ƒoƒCƒg = %d KB\n"
+"ãƒ•ã‚¡ã‚¤ãƒ« ã‚µã‚¤ã‚º: %d ãƒã‚¤ãƒˆ = %d KB\n"
 
 #: heksedit.rc:1347
 #, c-format
@@ -2789,60 +2789,60 @@ msgid ""
 "Number of hexdump lines: %d.\n"
 msgstr ""
 "\n"
-"16iƒ_ƒ“ƒv‚Ìs”: %d.\n"
+"16é€²ãƒ€ãƒ³ãƒ—ã®è¡Œæ•°: %d.\n"
 
 #: heksedit.rc:1348
 #, c-format
 msgid "This file could not be accessed and will be removed from the MRU list."
 msgstr ""
-"‚±‚Ìƒtƒ@ƒCƒ‹‚ÉƒAƒNƒZƒX‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B‚±‚Ìƒtƒ@ƒCƒ‹‚Í MRU ƒŠƒXƒg‚©"
-"‚çíœ‚³‚ê‚Ü‚·B"
+"ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«ã‚¢ã‚¯ã‚»ã‚¹ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã¯ MRU ãƒªã‚¹ãƒˆã‹"
+"ã‚‰å‰Šé™¤ã•ã‚Œã¾ã™ã€‚"
 
 #: heksedit.rc:1349
 #, c-format
 msgid "Really reset colors to default values?"
-msgstr "–{“–‚ÉF‚ğƒfƒtƒHƒ‹ƒg’l‚ÉƒŠƒZƒbƒg‚µ‚Ü‚·‚©?"
+msgstr "æœ¬å½“ã«è‰²ã‚’ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤ã«ãƒªã‚»ãƒƒãƒˆã—ã¾ã™ã‹?"
 
 #: heksedit.rc:1350
 #, c-format
 msgid "Are you sure you want to delete this file?"
-msgstr "–{“–‚É‚±‚Ìƒtƒ@ƒCƒ‹‚ğíœ‚µ‚Ü‚·‚©?"
+msgstr "æœ¬å½“ã«ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤ã—ã¾ã™ã‹?"
 
 #: heksedit.rc:1351
 #, c-format
 msgid "Could not delete file."
-msgstr "ƒtƒ@ƒCƒ‹‚ğíœ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1352
 #, c-format
 msgid "Really adopt the operating system colour scheme?"
-msgstr "–{“–‚É OS ‚ÌƒJƒ‰[ ƒXƒL[ƒ}‚ğ“K—p‚µ‚Ü‚·‚©?"
+msgstr "æœ¬å½“ã« OS ã®ã‚«ãƒ©ãƒ¼ ã‚¹ã‚­ãƒ¼ãƒã‚’é©ç”¨ã—ã¾ã™ã‹?"
 
 #: heksedit.rc:1358
 #, c-format
 msgid "Do you want to save your changes?"
-msgstr "•ÏX‚ğ•Û‘¶‚µ‚Ü‚·‚©?"
+msgstr "å¤‰æ›´ã‚’ä¿å­˜ã—ã¾ã™ã‹?"
 
 #: heksedit.rc:1364
 #, c-format
 msgid "Hexdump saved."
-msgstr "16 iƒ_ƒ“ƒv‚ª•Û‘¶‚³‚ê‚Ü‚µ‚½B"
+msgstr "16 é€²ãƒ€ãƒ³ãƒ—ãŒä¿å­˜ã•ã‚Œã¾ã—ãŸã€‚"
 
 #: heksedit.rc:1365
 #, c-format
 msgid "Could not save Hexdump."
-msgstr "16 iƒ_ƒ“ƒv‚ğ•Û‘¶‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "16 é€²ãƒ€ãƒ³ãƒ—ã‚’ä¿å­˜ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1366
 #, c-format
 msgid "Not enough memory for copying hexdump to clipboard."
 msgstr ""
-"16 iƒ_ƒ“ƒv‚ğƒNƒŠƒbƒvƒ{[ƒh‚ÉƒRƒs[‚·‚é‚Ì‚É•K—v‚Èƒƒ‚ƒŠ‚ª•s‘«‚µ‚Ä‚¢‚Ü‚·B"
+"16 é€²ãƒ€ãƒ³ãƒ—ã‚’ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«ã‚³ãƒ”ãƒ¼ã™ã‚‹ã®ã«å¿…è¦ãªãƒ¡ãƒ¢ãƒªãŒä¸è¶³ã—ã¦ã„ã¾ã™ã€‚"
 
 #: heksedit.rc:1367
 #, c-format
 msgid "Could not copy hexdump to clipboard."
-msgstr "ƒNƒŠƒbƒvƒ{[ƒh‚Ö16iƒ_ƒ“ƒv‚ğƒRƒs[‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+msgstr "ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã¸16é€²ãƒ€ãƒ³ãƒ—ã‚’ã‚³ãƒ”ãƒ¼ã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 
 #: heksedit.rc:1368
 #, c-format

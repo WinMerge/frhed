@@ -1,3 +1,4 @@
+﻿# This file is part of Frhed <http://frhed.sourceforge.net/>
 # Released under the "GNU General Public License"
 #
 # Translators:
@@ -31,7 +32,7 @@ msgstr "LANG_POLISH, SUBLANG_DEFAULT"
 #: heksedit.rc:6
 #, c-format
 msgid "1252"
-msgstr "1250"
+msgstr "65001"
 
 #: heksedit.rc:12
 #, c-format
@@ -2713,3 +2714,4 @@ msgstr "Nie można skopiować hexdump do schowka."
 #, c-format
 msgid "Hex Dump files(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
 msgstr "Pliki Hex Dump (*.txt,*.hex)|*.txt;*.hex|Wszystkie pliki (*.*)|*.*|"
+
