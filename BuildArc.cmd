@@ -12,6 +12,8 @@ mkdir "%DISTDIR%\Win32\frhed\Docs" 2> NUL
 mkdir "%DISTDIR%\Win32\frhed\Languages" 2> NUL
 mkdir "%DISTDIR%\x64\frhed\Docs" 2> NUL
 mkdir "%DISTDIR%\x64\frhed\Languages" 2> NUL
+mkdir "%DISTDIR%\ARM64\frhed\Docs" 2> NUL
+mkdir "%DISTDIR%\ARM64\frhed\Languages" 2> NUL
 
 copy Build\FRHED\Win32\Release\frhed.exe "%DISTDIR%\Win32\frhed\"
 copy Build\FRHED\Win32\Release\hekseditU.dll "%DISTDIR%\Win32\frhed\"
@@ -23,7 +25,13 @@ copy Build\FRHED\x64\Release\hekseditU.dll "%DISTDIR%\x64\frhed\"
 copy Build\FRHED\x64\Release\Docs\*.* "%DISTDIR%\x64\frhed\Docs\"
 copy Build\FRHED\x64\Release\Languages\*.* "%DISTDIR%\x64\frhed\Languages\"
 copy GPL.txt "%DISTDIR%\x64\frhed\"
+copy Build\FRHED\ARM64\Release\frhed.exe "%DISTDIR%\ARM64\frhed\"
+copy Build\FRHED\ARM64\Release\hekseditU.dll "%DISTDIR%\ARM64\frhed\"
+copy Build\FRHED\ARM64\Release\Docs\*.* "%DISTDIR%\ARM64\frhed\Docs\"
+copy Build\FRHED\ARM64\Release\Languages\*.* "%DISTDIR%\ARM64\frhed\Languages\"
+copy GPL.txt "%DISTDIR%\ARM64\frhed\"
 
 7z.exe a -tzip "%DISTDIR%\frhed-%VERSION%-win32.zip" "%DISTDIR%\Win32\frhed\"
 7z.exe a -tzip "%DISTDIR%\frhed-%VERSION%-x64.zip" "%DISTDIR%\x64\frhed\"
+7z.exe a -tzip "%DISTDIR%\frhed-%VERSION%-ARM64.zip" "%DISTDIR%\ARM64\frhed\"
 
