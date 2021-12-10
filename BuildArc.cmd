@@ -8,30 +8,28 @@ for /F %%f in ('cscript //nologo get_file_version.vbs Build\FRHED\Win32\Release\
 echo %VERSION%
 del get_file_version.vbs
 
-mkdir "%DISTDIR%\Win32\frhed\Docs" 2> NUL
-mkdir "%DISTDIR%\Win32\frhed\Languages" 2> NUL
-mkdir "%DISTDIR%\x64\frhed\Docs" 2> NUL
-mkdir "%DISTDIR%\x64\frhed\Languages" 2> NUL
-mkdir "%DISTDIR%\ARM64\frhed\Docs" 2> NUL
-mkdir "%DISTDIR%\ARM64\frhed\Languages" 2> NUL
+if "%1" == "" (
+  call :BuildArc Win32 || goto :eof
+  call :BuildArc ARM64 || goto :eof
+  call :BuildArc x64 || goto :eof
+) else (
+  call :BuildArc %1 || goto :eof
+)
 
-copy Build\FRHED\Win32\Release\frhed.exe "%DISTDIR%\Win32\frhed\"
-copy Build\FRHED\Win32\Release\hekseditU.dll "%DISTDIR%\Win32\frhed\"
-copy Build\FRHED\Win32\Release\Docs\*.* "%DISTDIR%\Win32\frhed\Docs\"
-copy Build\FRHED\Win32\Release\Languages\*.* "%DISTDIR%\Win32\frhed\Languages\"
-copy GPL.txt "%DISTDIR%\Win32\frhed\"
-copy Build\FRHED\x64\Release\frhed.exe "%DISTDIR%\x64\frhed\"
-copy Build\FRHED\x64\Release\hekseditU.dll "%DISTDIR%\x64\frhed\"
-copy Build\FRHED\x64\Release\Docs\*.* "%DISTDIR%\x64\frhed\Docs\"
-copy Build\FRHED\x64\Release\Languages\*.* "%DISTDIR%\x64\frhed\Languages\"
-copy GPL.txt "%DISTDIR%\x64\frhed\"
-copy Build\FRHED\ARM64\Release\frhed.exe "%DISTDIR%\ARM64\frhed\"
-copy Build\FRHED\ARM64\Release\hekseditU.dll "%DISTDIR%\ARM64\frhed\"
-copy Build\FRHED\ARM64\Release\Docs\*.* "%DISTDIR%\ARM64\frhed\Docs\"
-copy Build\FRHED\ARM64\Release\Languages\*.* "%DISTDIR%\ARM64\frhed\Languages\"
+goto :eof
+
+:BuildArc
+
+mkdir "%DISTDIR%\%1\frhed\Docs" 2> NUL
+mkdir "%DISTDIR%\%1\frhed\Languages" 2> NUL
+
+copy Build\FRHED\%1\Release\frhed.exe "%DISTDIR%\%1\frhed\"
+copy Build\FRHED\%1\Release\hekseditU.dll "%DISTDIR%\%1\frhed\"
+copy Build\FRHED\%1\Release\Docs\*.* "%DISTDIR%\%1\frhed\Docs\"
+copy Build\FRHED\%1\Release\Languages\*.* "%DISTDIR%\%1\frhed\Languages\"
+copy GPL.txt "%DISTDIR%\%1\frhed\"
 copy GPL.txt "%DISTDIR%\ARM64\frhed\"
 
-7z.exe a -tzip "%DISTDIR%\frhed-%VERSION%-win32.zip" "%DISTDIR%\Win32\frhed\"
-7z.exe a -tzip "%DISTDIR%\frhed-%VERSION%-x64.zip" "%DISTDIR%\x64\frhed\"
-7z.exe a -tzip "%DISTDIR%\frhed-%VERSION%-ARM64.zip" "%DISTDIR%\ARM64\frhed\"
+7z.exe a -tzip "%DISTDIR%\frhed-%VERSION%-%1.zip" "%DISTDIR%\%1\frhed\"
 
+goto :eof
