@@ -143,7 +143,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
-    <OutDir>$(SolutionDir)Build\$(PlatformTarget)\$(Configuration)\frhed</OutDir>
+    <OutDir>$(SolutionDir)Build\$(PlatformTarget)\$(Configuration)\Frhed\</OutDir>
     <IntDir>$(SolutionDir)BuildTmp\$(ProjectName)\$(PlatformTarget)\$(Configuration)\</IntDir>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
     <LinkIncremental>false</LinkIncremental>
