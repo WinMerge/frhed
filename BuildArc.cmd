@@ -19,10 +19,11 @@ goto :eof
 mkdir "%DISTDIR%\%1\frhed\Docs" 2> NUL
 mkdir "%DISTDIR%\%1\frhed\Languages" 2> NUL
 
-copy Build\FRHED\%1\Release\frhed.exe "%DISTDIR%\%1\frhed\"
-copy Build\FRHED\%1\Release\hekseditU.dll "%DISTDIR%\%1\frhed\"
-copy Build\FRHED\%1\Release\Docs\*.* "%DISTDIR%\%1\frhed\Docs\"
-copy Build\FRHED\%1\Release\Languages\*.* "%DISTDIR%\%1\frhed\Languages\"
+copy Build\%1\Release\FRHED\frhed.exe "%DISTDIR%\%1\frhed\"
+copy Build\%1\Release\FRHED\hekseditU.dll "%DISTDIR%\%1\frhed\"
+copy Build\%1\Release\FRHED\Docs\*.* "%DISTDIR%\%1\frhed\Docs\"
+copy Build\%1\Release\FRHED\Languages\*.* "%DISTDIR%\%1\frhed\Languages\"
+call :GET_EXE_VERSION %~dp0Build\%1\Release\FRHED\frhed.exe
 copy GPL.txt "%DISTDIR%\%1\frhed\""
 
 7z.exe a -tzip "%DISTDIR%\frhed-%EXE_VERSION%-%1.zip" "%DISTDIR%\%1\frhed\"
