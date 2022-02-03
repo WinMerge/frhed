@@ -505,7 +505,7 @@ msgstr "Kodiraj/Dekodiraj..."
 #: heksedit.rc:165
 #, c-format
 msgid "&Help"
-msgstr "Po&moE
+msgstr "Po&moč"
 
 #: heksedit.rc:167
 #, c-format
@@ -1745,7 +1745,7 @@ msgstr "Shrani"
 #: heksedit.rc:999
 #, c-format
 msgid "Help"
-msgstr "PomoE
+msgstr "Pomoč"
 
 #: heksedit.rc:1010
 #, c-format
