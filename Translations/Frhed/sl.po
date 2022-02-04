@@ -2815,5 +2815,5 @@ msgstr "16-tiškega smetišča nibilo mogoče kopirati v odložišče."
 #: heksedit.rc:1368
 #, c-format
 msgid "Hex Dump files(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
-msgstr ""
+msgstr "Datoteke 16-tiškega smetišča (*.txt,*.hex)|*.txt;*.hex|Vse datoteke (*.*)|*.*|"
 

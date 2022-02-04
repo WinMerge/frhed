@@ -2847,5 +2847,5 @@ msgstr "クリップボードへ16進ダンプをコピーすることができ�
 #: heksedit.rc:1368
 #, c-format
 msgid "Hex Dump files(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
-msgstr ""
+msgstr "Hex Dump ファイル(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
 
