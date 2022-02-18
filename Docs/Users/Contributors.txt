@@ -25,7 +25,10 @@ Localization:
 * Japanese
   Takashi Sawanaka
 
-* Solovenian
+* Slovak
+  Jozef Matta <jozef.m923@gmail.com>
+
+* Slovenian
   Jadran Rudec <jrudec at gmail.com>
 
 Other contributors (heksedit versions):
