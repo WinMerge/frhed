@@ -1,4 +1,4 @@
-# This file is part of Frhed <http://frhed.sourceforge.net/>
+﻿# This file is part of Frhed <http://frhed.sourceforge.net/>
 # Released under the "GNU General Public License"
 #
 # Translators:
@@ -2714,3 +2714,4 @@ msgstr "Nie można skopiować hexdump do schowka."
 #, c-format
 msgid "Hex Dump files(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
 msgstr "Pliki Hex Dump (*.txt,*.hex)|*.txt;*.hex|Wszystkie pliki (*.*)|*.*|"
+
