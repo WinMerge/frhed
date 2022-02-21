@@ -1,4 +1,4 @@
-﻿# This file is part of Frhed <http://frhed.sourceforge.net/>
+# This file is part of Frhed <http://frhed.sourceforge.net/>
 # Released under the "GNU General Public License"
 #
 # ID line follows -- this is updated by SVN
@@ -9,17 +9,17 @@ msgstr ""
 "Project-Id-Version: Frhed\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-03-13 20:56+0100\n"
+"PO-Revision-Date: 2022-02-21 22:04+0100\n"
 "Last-Translator: Jadran Rudec <jrudec@gmail.com>\n"
 "Language-Team: Slovenian <jrudec@gmail.com>\n"
+"Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n%100<=4 ? 2 : 3);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../FRHED\n"
-"Language: sl_SI\n"
-"X-Generator: Poedit 2.3\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n%100<=4 ? 2 : 3);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. LANGUAGE, SUBLANGUAGE
 #: heksedit.rc:5
@@ -118,8 +118,7 @@ msgstr "Odpri po&gon..."
 msgid "&Close drive"
 msgstr "Zapri po&gon"
 
-#: heksedit.rc:47
-#: heksedit.rc:190
+#: heksedit.rc:47 heksedit.rc:190
 #, c-format
 msgid "Goto &First Sector"
 msgstr "Pojdi na &prvi sektor"
@@ -134,14 +133,12 @@ msgstr "Pojdi &na naslednji sektor\tCtrl+Shift+PgDn"
 msgid "Goto &Previous Sector\tCtrl+Shift+PgUp"
 msgstr "&Pojdi na prejšnji sektor\tCtrl+Shift+PgUp"
 
-#: heksedit.rc:51
-#: heksedit.rc:193
+#: heksedit.rc:51 heksedit.rc:193
 #, c-format
 msgid "Goto &Last Sector"
 msgstr "Pojdi na &zadnji sektor"
 
-#: heksedit.rc:53
-#: heksedit.rc:195
+#: heksedit.rc:53 heksedit.rc:195
 #, c-format
 msgid "Goto &Sector #..."
 msgstr "Pojdi na &sektor #..."
@@ -161,20 +158,17 @@ msgstr "&Razveljavi\tCtrl+Z"
 msgid "&Redo\tCtrl+Y"
 msgstr "&Povrni\tCtrl+Y"
 
-#: heksedit.rc:60
-#: heksedit.rc:177
+#: heksedit.rc:60 heksedit.rc:177
 #, c-format
 msgid "Cu&t...\tCtrl+X"
 msgstr "Iz&reži...\tCtrl+X"
 
-#: heksedit.rc:61
-#: heksedit.rc:178
+#: heksedit.rc:61 heksedit.rc:178
 #, c-format
 msgid "&Copy...\tCtrl+C"
 msgstr "&Kopiraj...\tCtrl+C"
 
-#: heksedit.rc:62
-#: heksedit.rc:179
+#: heksedit.rc:62 heksedit.rc:179
 #, c-format
 msgid "&Paste...\tCtrl+V"
 msgstr "&Prilepi...\tCtrl+V"
@@ -199,8 +193,7 @@ msgstr "Povrni bajte...\tCtrl+Alt+R"
 msgid "&Append...\tCtrl+P"
 msgstr "Pri&loži...\tCtrl+P"
 
-#: heksedit.rc:67
-#: heksedit.rc:180
+#: heksedit.rc:67 heksedit.rc:180
 #, c-format
 msgid "&Delete\tDel"
 msgstr "I&zbriši\tDel"
@@ -240,8 +233,7 @@ msgstr "Način 'Samo za branje'\tAlt+R"
 msgid "&Find and Replace"
 msgstr "Najdi in &zamenjaj"
 
-#: heksedit.rc:79
-#: heksedit.rc:182
+#: heksedit.rc:79 heksedit.rc:182
 #, c-format
 msgid "&Find...\tCtrl+F"
 msgstr "&Najdi...\tCtrl+F"
@@ -261,8 +253,7 @@ msgstr "Najdi nas&lednji\tF3"
 msgid "Find &previous\tShift+F3"
 msgstr "Najdi &prejšnji\tShift+F3"
 
-#: heksedit.rc:84
-#: heksedit.rc:186
+#: heksedit.rc:84 heksedit.rc:186
 #, c-format
 msgid "&Go To...\tCtrl+G"
 msgstr "Po&jdi na...\tCtrl+G"
@@ -557,75 +548,30 @@ msgstr "Začni z \"+\" ali \"-\" (minus) za relativen skok."
 msgid "Prefix offset with \"x\" to indicate hex notation."
 msgstr "Predpona odmika z \"x\" za označevanje šestnajstiškega zapisa."
 
-#: heksedit.rc:306
-#: heksedit.rc:347
-#: heksedit.rc:367
-#: heksedit.rc:387
-#: heksedit.rc:412
-#: heksedit.rc:430
-#: heksedit.rc:448
-#: heksedit.rc:486
-#: heksedit.rc:498
-#: heksedit.rc:533
-#: heksedit.rc:549
-#: heksedit.rc:563
-#: heksedit.rc:577
-#: heksedit.rc:593
-#: heksedit.rc:606
-#: heksedit.rc:652
-#: heksedit.rc:675
-#: heksedit.rc:689
-#: heksedit.rc:750
-#: heksedit.rc:772
-#: heksedit.rc:793
-#: heksedit.rc:819
-#: heksedit.rc:877
-#: heksedit.rc:898
-#: heksedit.rc:946
-#: heksedit.rc:977
+#: heksedit.rc:306 heksedit.rc:347 heksedit.rc:367 heksedit.rc:387
+#: heksedit.rc:412 heksedit.rc:430 heksedit.rc:448 heksedit.rc:486
+#: heksedit.rc:498 heksedit.rc:533 heksedit.rc:549 heksedit.rc:563
+#: heksedit.rc:577 heksedit.rc:593 heksedit.rc:606 heksedit.rc:652
+#: heksedit.rc:675 heksedit.rc:689 heksedit.rc:750 heksedit.rc:772
+#: heksedit.rc:793 heksedit.rc:819 heksedit.rc:877 heksedit.rc:898
+#: heksedit.rc:946 heksedit.rc:977
 #, c-format
 msgid "OK"
 msgstr "Vredu"
 
-#: heksedit.rc:307
-#: heksedit.rc:325
-#: heksedit.rc:368
-#: heksedit.rc:388
-#: heksedit.rc:413
-#: heksedit.rc:431
-#: heksedit.rc:449
-#: heksedit.rc:487
-#: heksedit.rc:499
-#: heksedit.rc:534
-#: heksedit.rc:550
-#: heksedit.rc:564
-#: heksedit.rc:578
-#: heksedit.rc:594
-#: heksedit.rc:607
-#: heksedit.rc:622
-#: heksedit.rc:634
-#: heksedit.rc:653
-#: heksedit.rc:676
-#: heksedit.rc:690
-#: heksedit.rc:716
-#: heksedit.rc:751
-#: heksedit.rc:773
-#: heksedit.rc:794
-#: heksedit.rc:806
-#: heksedit.rc:820
-#: heksedit.rc:878
-#: heksedit.rc:899
-#: heksedit.rc:947
-#: heksedit.rc:960
-#: heksedit.rc:978
-#: heksedit.rc:1332
+#: heksedit.rc:307 heksedit.rc:325 heksedit.rc:368 heksedit.rc:388
+#: heksedit.rc:413 heksedit.rc:431 heksedit.rc:449 heksedit.rc:487
+#: heksedit.rc:499 heksedit.rc:534 heksedit.rc:550 heksedit.rc:564
+#: heksedit.rc:578 heksedit.rc:594 heksedit.rc:607 heksedit.rc:622
+#: heksedit.rc:634 heksedit.rc:653 heksedit.rc:676 heksedit.rc:690
+#: heksedit.rc:716 heksedit.rc:751 heksedit.rc:773 heksedit.rc:794
+#: heksedit.rc:806 heksedit.rc:820 heksedit.rc:878 heksedit.rc:899
+#: heksedit.rc:947 heksedit.rc:960 heksedit.rc:978 heksedit.rc:1332
 #, c-format
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: heksedit.rc:313
-#: heksedit.rc:324
-#: heksedit.rc:996
+#: heksedit.rc:313 heksedit.rc:324 heksedit.rc:996
 #, c-format
 msgid "Find"
 msgstr "Najdi"
@@ -788,7 +734,7 @@ msgstr "Bajt (8 bitov)"
 #: heksedit.rc:385
 #, c-format
 msgid "Word (16 bit)"
-msgstr "Beseda (16 Bit)"
+msgstr "Beseda (16 Bitna)"
 
 #: heksedit.rc:386
 #, c-format
@@ -805,32 +751,27 @@ msgstr "Prilepi s pogovornim oknom"
 msgid "Clipboard content (text):"
 msgstr "Vsebina odložišča (besedilo):"
 
-#: heksedit.rc:400
-#: heksedit.rc:662
+#: heksedit.rc:400 heksedit.rc:662
 #, c-format
 msgid "Paste mode"
 msgstr "Način lepljenja"
 
-#: heksedit.rc:401
-#: heksedit.rc:663
+#: heksedit.rc:401 heksedit.rc:663
 #, c-format
 msgid "Overwrite"
 msgstr "Prepiši"
 
-#: heksedit.rc:403
-#: heksedit.rc:664
+#: heksedit.rc:403 heksedit.rc:664
 #, c-format
 msgid "Insert"
 msgstr "Vstavi"
 
-#: heksedit.rc:405
-#: heksedit.rc:665
+#: heksedit.rc:405 heksedit.rc:665
 #, c-format
 msgid "Paste data how many times:"
 msgstr "Prilepi podatke X krat:"
 
-#: heksedit.rc:407
-#: heksedit.rc:669
+#: heksedit.rc:407 heksedit.rc:669
 #, c-format
 msgid "Paste coded binary values as text"
 msgstr "Prilepi kodirane dvojiške vrednosti kot besedilo"
@@ -840,8 +781,7 @@ msgstr "Prilepi kodirane dvojiške vrednosti kot besedilo"
 msgid "Skip how many bytes between inserts/overwrites"
 msgstr "Preskoči koliko bajtov med vstavljanji/prepisovanji"
 
-#: heksedit.rc:419
-#: heksedit.rc:1000
+#: heksedit.rc:419 heksedit.rc:1000
 #, c-format
 msgid "Cut"
 msgstr "Izreži"
@@ -866,10 +806,7 @@ msgstr "Izreži do vključno z odmikom:"
 msgid "Number of bytes to cut:"
 msgstr "Število bajtov za izrez:"
 
-#: heksedit.rc:437
-#: heksedit.rc:865
-#: heksedit.rc:896
-#: heksedit.rc:997
+#: heksedit.rc:437 heksedit.rc:865 heksedit.rc:896 heksedit.rc:997
 #: heksedit.rc:1331
 #, c-format
 msgid "Copy"
@@ -970,8 +907,7 @@ msgstr "Bajtov za prilaganje na konec datoteke:"
 msgid "Manipulate Bits"
 msgstr "Upravljaj bite"
 
-#: heksedit.rc:508
-#: heksedit.rc:528
+#: heksedit.rc:508 heksedit.rc:528
 #, c-format
 msgid "8"
 msgstr "8"
@@ -991,8 +927,7 @@ msgstr "6"
 msgid "5"
 msgstr "5"
 
-#: heksedit.rc:512
-#: heksedit.rc:529
+#: heksedit.rc:512 heksedit.rc:529
 #, c-format
 msgid "4"
 msgstr "4"
@@ -1002,8 +937,7 @@ msgstr "4"
 msgid "3"
 msgstr "3"
 
-#: heksedit.rc:514
-#: heksedit.rc:530
+#: heksedit.rc:514 heksedit.rc:530
 #, c-format
 msgid "2"
 msgstr "2"
@@ -1038,14 +972,12 @@ msgstr "Nabor znakov"
 msgid "Choose character set"
 msgstr "Izberite nabor znakov"
 
-#: heksedit.rc:544
-#: heksedit.rc:1024
+#: heksedit.rc:544 heksedit.rc:1024
 #, c-format
 msgid "ANSI"
 msgstr "ANSI"
 
-#: heksedit.rc:546
-#: heksedit.rc:1025
+#: heksedit.rc:546 heksedit.rc:1025
 #, c-format
 msgid "OEM"
 msgstr "OEM"
@@ -1185,8 +1117,7 @@ msgstr "&Koliko bajtov:"
 msgid "&Display offsets relative to start of file (or start of loaded block)"
 msgstr "Pr&ikaži odmike relativno od začetka datoteke (ali začetka naloženega bloka)"
 
-#: heksedit.rc:659
-#: heksedit.rc:998
+#: heksedit.rc:659 heksedit.rc:998
 #, c-format
 msgid "Paste"
 msgstr "Prilepi"
@@ -1208,7 +1139,10 @@ msgstr "Osveži"
 
 #: heksedit.rc:674
 #, c-format
-msgid "- CF_TEXT was used by previous versions of Frhed\n- Those starting w CF_ are standard formats && others are registered/private ones\n- Some formats may have been synthesized from the original."
+msgid ""
+"- CF_TEXT was used by previous versions of Frhed\n"
+"- Those starting w CF_ are standard formats && others are registered/private ones\n"
+"- Some formats may have been synthesized from the original."
 msgstr ""
 "- CF_TEXT je bil uporabljen z prejšnjo različico Frhed\n"
 "- Tiste, začete z w CF_ so v standardnih oblikah in druge so registrirane/zasebne\n"
@@ -1224,9 +1158,7 @@ msgstr "Predloga"
 msgid "Result of template application:"
 msgstr "Rezultat predloge aplikacije:"
 
-#: heksedit.rc:696
-#: heksedit.rc:715
-#: heksedit.rc:1005
+#: heksedit.rc:696 heksedit.rc:715 heksedit.rc:1005
 #, c-format
 msgid "Replace"
 msgstr "Zamenjaj"
@@ -1264,12 +1196,12 @@ msgstr "Zamenjaj vse..."
 #: heksedit.rc:709
 #, c-format
 msgid "... following occurrences"
-msgstr "... naslednji dogodki"
+msgstr "... naslednji pojavi"
 
 #: heksedit.rc:711
 #, c-format
 msgid "... previous occurrences"
-msgstr "... prejšnji dogodki"
+msgstr "... prejšnji pojavi"
 
 #: heksedit.rc:713
 #, c-format
@@ -1286,8 +1218,7 @@ msgstr "Zapolni izbor"
 msgid "Fill from:"
 msgstr "Zapolni iz:"
 
-#: heksedit.rc:726
-#: heksedit.rc:1298
+#: heksedit.rc:726 heksedit.rc:1298
 #, c-format
 msgid "File:"
 msgstr "Datoteka:"
@@ -1322,8 +1253,7 @@ msgstr "Konec:"
 msgid "Size:"
 msgstr "Velikost:"
 
-#: heksedit.rc:738
-#: heksedit.rc:920
+#: heksedit.rc:738 heksedit.rc:920
 #, c-format
 msgid "Input"
 msgstr "Vnos"
@@ -1423,9 +1353,7 @@ msgstr "Odpri pogon"
 msgid "NOTE: Frhed allows only reading the drive data. Changing and saving the drive data is not possible."
 msgstr "OPOMBA: Frhed omogoča samo branje podatkov na pogonu. Spreminjanje in shranjevanje pogonskih podatkov ni mogoče."
 
-#: heksedit.rc:805
-#: heksedit.rc:959
-#: heksedit.rc:989
+#: heksedit.rc:805 heksedit.rc:959 heksedit.rc:989
 #, c-format
 msgid "Open"
 msgstr "Odpri"
@@ -1540,9 +1468,7 @@ msgstr "Operacija:"
 msgid "Start with (-) for negative length or movement backwards. Prefix with x for hex notation."
 msgstr "Začni z (-) za negativno dolžino ali premik nazaj. Predpona z \"x\" za 16-tiški zapis."
 
-#: heksedit.rc:864
-#: heksedit.rc:894
-#: heksedit.rc:1330
+#: heksedit.rc:864 heksedit.rc:894 heksedit.rc:1330
 #, c-format
 msgid "Move"
 msgstr "Premakni"
@@ -1807,14 +1733,12 @@ msgstr "PRE"
 msgid "INS"
 msgstr "INS"
 
-#: heksedit.rc:1029
-#: heksedit.rc:1290
+#: heksedit.rc:1029 heksedit.rc:1290
 #, c-format
 msgid "L"
 msgstr "L"
 
-#: heksedit.rc:1030
-#: heksedit.rc:1287
+#: heksedit.rc:1030 heksedit.rc:1287
 #, c-format
 msgid "B"
 msgstr "B"
@@ -2092,8 +2016,7 @@ msgstr "Ni mogoče dobiti dostopa v odložišče."
 msgid "Cannot lock clipboard."
 msgstr "Ni mogoče zakleniti odložišča."
 
-#: heksedit.rc:1125
-#: heksedit.rc:1136
+#: heksedit.rc:1125 heksedit.rc:1136
 #, c-format
 msgid "Not enough memory for copying."
 msgstr "Ni dovolj pomnilnika za kopiranje."
@@ -2344,7 +2267,9 @@ msgstr "V tej mapi že obstaja povezava."
 
 #: heksedit.rc:1223
 #, c-format
-msgid "Existing links to old versions of Frhed will be updated to this version.\nAre you sure you want to continue?"
+msgid ""
+"Existing links to old versions of Frhed will be updated to this version.\n"
+"Are you sure you want to continue?"
 msgstr ""
 "Obstoječe povezave do stare različice Frheda bodo posodobljene na to različico\n"
 "Ali ste prepričani, da želite nadaljevati?"
@@ -2377,7 +2302,7 @@ msgstr "Iskalni niz je olg 0 bajtov."
 #: heksedit.rc:1234
 #, c-format
 msgid "Could not find any more occurrences."
-msgstr "Večdogodkovnibilomogočenajti."
+msgstr "Ni bilo mogoče najti več pojavov."
 
 #: heksedit.rc:1235
 #, c-format
@@ -2492,7 +2417,10 @@ msgstr ""
 
 #: heksedit.rc:1262
 #, c-format
-msgid "Unexpected end of data found.\nCannot continue!\nDo you want to keep what has been found so far?"
+msgid ""
+"Unexpected end of data found.\n"
+"Cannot continue!\n"
+"Do you want to keep what has been found so far?"
 msgstr ""
 "Najden je bil nepričakovan konec podatkov.\n"
 "Ni mogoče nadaljevati!\n"
@@ -2545,7 +2473,7 @@ msgstr "Podatki za zamenjavo in 'zamenjaj z' so enaki."
 #: heksedit.rc:1276
 #, c-format
 msgid "%d occurrences replaced."
-msgstr "%dzamenjanihpojavov."
+msgstr "%d zamenjanih pojavov."
 
 #: heksedit.rc:1277
 #, c-format
@@ -2607,9 +2535,7 @@ msgstr "Uporabljeno na odmiku:"
 msgid "= %d (signed) = %u (unsigned) = 0x%x = '%c'"
 msgstr "= %d (podpisano) = %u (nepodpisano) = 0x%x = '%c'"
 
-#: heksedit.rc:1302
-#: heksedit.rc:1305
-#: heksedit.rc:1307
+#: heksedit.rc:1302 heksedit.rc:1305 heksedit.rc:1307
 #, c-format
 msgid "= %d (signed) = %u (unsigned) = 0x%x"
 msgstr "= %d (podpisano) = %u (nepodpisano) = 0x%x"
@@ -2666,7 +2592,7 @@ msgstr "-> Dolžina predloge = %d bajtov."
 
 #: heksedit.rc:1320
 #, c-format
-msgid "Template files (*.tpl)\0*.tpl\0\0"
+msgid "Template files (*.tpl)\\0*.tpl\\0\\0"
 msgstr "Datotekepredlog(*.tpl)\\0*.tpl\\0\\0"
 
 #: heksedit.rc:1321
@@ -2701,7 +2627,9 @@ msgstr "TYMED_ISTORAGE ni podprt za 'Povleci in spusti'."
 
 #: heksedit.rc:1340
 #, c-format
-msgid "Float size value:\n%g\n"
+msgid ""
+"Float size value:\n"
+"%g\n"
 msgstr ""
 "Vrednost s plavajočo vejivo:\n"
 "%g\n"
@@ -2713,10 +2641,13 @@ msgstr "Ni dovolj prostora za vrednost velikosti s plavajočo vejico.\n"
 
 #: heksedit.rc:1342
 #, c-format
-msgid "\nDouble size value:\n%g\n"
+msgid ""
+"\n"
+"Double size value:\n"
+"%g\n"
 msgstr ""
 "\n"
-"vRednost dvojne velikosti:\n"
+"Vrednost dvojne velikosti:\n"
 "%g\n"
 
 #: heksedit.rc:1343
@@ -2760,7 +2691,7 @@ msgid ""
 "Number of hexdump lines: %d.\n"
 msgstr ""
 "\n"
-"Število hexdump vrstic: %d.\n"
+"Število vrstic 16-tipkega smetišča: %d.\n"
 
 #: heksedit.rc:1348
 #, c-format
@@ -2795,7 +2726,7 @@ msgstr "Ali želite shraniti svoje spremembe?"
 #: heksedit.rc:1364
 #, c-format
 msgid "Hexdump saved."
-msgstr "16-tiško smetišče je shranjeno"
+msgstr "16-tiško smetišče je shranjeno."
 
 #: heksedit.rc:1365
 #, c-format
@@ -2810,10 +2741,9 @@ msgstr "Ni dovolj pomnilnika za kopiranje 16-tiškega smetišča v odložišče.
 #: heksedit.rc:1367
 #, c-format
 msgid "Could not copy hexdump to clipboard."
-msgstr "16-tiškega smetišča nibilo mogoče kopirati v odložišče."
+msgstr "16-tiškega smetišča ni bilo mogoče kopirati v odložišče."
 
 #: heksedit.rc:1368
 #, c-format
 msgid "Hex Dump files(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
-msgstr "Datoteke 16-tiškega smetišča (*.txt,*.hex)|*.txt;*.hex|Vse datoteke (*.*)|*.*|"
-
+msgstr "Šestnajstiški datoteke smetišča (*.txt,*.hex)|*.txt;*.hex|Vse datoteke (*.*)|*.*|"
