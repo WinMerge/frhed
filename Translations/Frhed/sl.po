@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Frhed\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-02-21 22:04+0100\n"
+"PO-Revision-Date: 2022-03-20 22:23+0100\n"
 "Last-Translator: Jadran Rudec <jrudec@gmail.com>\n"
 "Language-Team: Slovenian <jrudec@gmail.com>\n"
 "Language: sl_SI\n"
@@ -2675,7 +2675,7 @@ msgstr "-> Dolžina predloge = %d bajtov."
 #: heksedit.rc:1320
 #, c-format
 msgid "Template files (*.tpl)\0*.tpl\0\0"
-msgstr ""
+msgstr "Datoteke predlog (*.tpl)\0*.tpl\0\0"
 
 #: heksedit.rc:1321
 #, c-format
