@@ -62,11 +62,11 @@ BOOL MoveCopyDlg::OnInitDialog(HWindow *pDlg)
  * @param [out] value Value read from the dialog.
  * @return true if the value was read, false if value could not be read.
  */
-bool MoveCopyDlg::ReadStartOffset(HWindow *pDlg, int &value)
+bool MoveCopyDlg::ReadStartOffset(HWindow *pDlg, int64_t &value)
 {
 	TCHAR buf[30];
 	if (!pDlg->GetDlgItemText(IDC_1STOFFSET, buf, RTL_NUMBER_OF(buf)) ||
-		!offset_parse(buf, value))
+		!offset_parse64(buf, value))
 	{
 		MessageBox(pDlg, GetLangString(IDS_OFFSET_START_ERROR), MB_ICONERROR);
 		return false;
@@ -85,11 +85,11 @@ bool MoveCopyDlg::ReadStartOffset(HWindow *pDlg, int &value)
  * @param [out] value Value read from the dialog.
  * @return true if the value was read, false if value could not be read.
  */
-bool MoveCopyDlg::ReadEndOffset(HWindow *pDlg, int &value)
+bool MoveCopyDlg::ReadEndOffset(HWindow *pDlg, int64_t &value)
 {
 	TCHAR buf[30];
 	if (!pDlg->GetDlgItemText(IDC_2NDDELIM, buf, RTL_NUMBER_OF(buf)) ||
-		!offset_parse(buf, value))
+		!offset_parse64(buf, value))
 	{
 		MessageBox(pDlg, GetLangString(IDS_OFFSET_END_ERROR), MB_ICONERROR);
 		return false;
@@ -109,11 +109,11 @@ bool MoveCopyDlg::ReadEndOffset(HWindow *pDlg, int &value)
  * @param [out] value Value read from the dialog.
  * @return true if the value was read, false if value could not be read.
  */
-bool MoveCopyDlg::ReadTargetOffset(HWindow *pDlg, int &value)
+bool MoveCopyDlg::ReadTargetOffset(HWindow *pDlg, int64_t &value)
 {
 	TCHAR buf[30];
 	if (!pDlg->GetDlgItemText(IDC_MOVEMENT, buf, RTL_NUMBER_OF(buf)) ||
-		!offset_parse(buf, value))
+		!offset_parse64(buf, value))
 	{
 		MessageBox(pDlg, GetLangString(IDS_CM_INVALID_TARGET), MB_ICONERROR);
 		return false;
@@ -133,7 +133,7 @@ bool MoveCopyDlg::ReadTargetOffset(HWindow *pDlg, int &value)
  */
 BOOL MoveCopyDlg::Apply(HWindow *pDlg)
 {
-	int vals[3];
+	int64_t vals[3];
 	if (!ReadStartOffset(pDlg, vals[0]))
 		return FALSE;
 	if (!ReadEndOffset(pDlg, vals[1]))
@@ -141,9 +141,9 @@ BOOL MoveCopyDlg::Apply(HWindow *pDlg)
 	if (!ReadTargetOffset(pDlg, vals[2]))
 		return FALSE;
 	
-	int clen = m_dataArray.size();
-	int iMove1stEnd = vals[0];
-	int iMove2ndEndorLen = vals[1];
+	size_t clen = m_dataArray.size();
+	int64_t iMove1stEnd = vals[0];
+	int64_t iMove2ndEndorLen = vals[1];
 	if (!pDlg->IsDlgButtonChecked(IDC_OTHEREND))
 	{
 		if (iMove2ndEndorLen == 0)

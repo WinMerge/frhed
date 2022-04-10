@@ -83,7 +83,7 @@ char *HexDump::GetBuffer() const
 	return m_pBuffer;
 }
 
-void HexDump::Write(int startInd, int endInd)
+void HexDump::Write(size_t startInd, size_t endInd)
 {
 	char buf2[128];
 
@@ -93,23 +93,23 @@ void HexDump::Write(int startInd, int endInd)
 	//b = iCopyHexdumpDlgEnd;
 	// a = Offset of current line.
 	// k = Offset in text array.
-	for (int k = 0, a = startInd; a <= endInd;
+	for (size_t k = 0, a = startInd; a <= endInd;
 			a += m_bytesPerLine, k += m_charsPerLine + 2)
 	{
 		// Write offset.
-		int m = sprintf(buf2, "%*.*x", m_offsetMinLen, m_offsetMinLen,
-				m_partialStats ? a + static_cast<int>(m_partialOffset) : a);
+		int m = sprintf(buf2, "%*.*zx", m_offsetMinLen, m_offsetMinLen,
+				m_partialStats ? a + m_partialOffset : a);
 
-		for (int i = m; i < m_offsetMaxLen + m_byteSpace - m; i++)
+		for (size_t i = m; i < m_offsetMaxLen + m_byteSpace - m; i++)
 			buf2[i] = ' ';
 		buf2[m_offsetMaxLen + m_byteSpace] = '\0';
 
-		int l = 0; // l = Offset in line, relative to k.
-		int n = 0;
+		size_t l = 0; // l = Offset in line, relative to k.
+		size_t n = 0;
 		while (buf2[n] != '\0')
 			m_pBuffer[k + (l++)] = buf2[n++]; // Copy Offset. l = next empty place after spaces.
 		// Write bytes and chars.
-		for (int j = 0 ; j < m_bytesPerLine ; j++)
+		for (size_t j = 0 ; j < m_bytesPerLine ; j++)
 		{
 			if (a + j >= m_pData->size())
 			{
@@ -123,18 +123,18 @@ void HexDump::Write(int startInd, int endInd)
 			else
 			{
 				// Write byte.
-				sprintf(buf2, "%2.2x ", (*m_pData)[(int)a + j]);
+				sprintf(buf2, "%2.2x ", (*m_pData)[a + j]);
 				m_pBuffer[k + l + j*3    ] = buf2[0];
 				m_pBuffer[k + l + j*3 + 1] = buf2[1];
 				m_pBuffer[k + l + j*3 + 2] = buf2[2];
 				// Write char.
-				if (m_charset == OEM_FIXED_FONT && (*m_pData)[(int)a + j] != 0)
-					m_pBuffer[k + l + m_bytesPerLine*3 + m_charSpace + j] = (*m_pData)[(int)a + j];
-				else if (((*m_pData)[(int)a + j] >= 32 && (*m_pData)[(int)a + j] <= 126) ||
-						((*m_pData)[(int)a + j]>=160 && (*m_pData)[(int)a + j] <= 255) ||
-						((*m_pData)[(int)a + j] >= 145 && (*m_pData)[(int)a + j] <= 146))
+				if (m_charset == OEM_FIXED_FONT && (*m_pData)[a + j] != 0)
+					m_pBuffer[k + l + m_bytesPerLine*3 + m_charSpace + j] = (*m_pData)[a + j];
+				else if (((*m_pData)[a + j] >= 32 && (*m_pData)[a + j] <= 126) ||
+						((*m_pData)[a + j]>=160 && (*m_pData)[a + j] <= 255) ||
+						((*m_pData)[a + j] >= 145 && (*m_pData)[a + j] <= 146))
 				{
-					m_pBuffer[k + l + m_bytesPerLine*3 + m_charSpace + j] = (*m_pData)[(int)a + j];
+					m_pBuffer[k + l + m_bytesPerLine*3 + m_charSpace + j] = (*m_pData)[a + j];
 				}
 				else
 					m_pBuffer[k + l + m_bytesPerLine*3 + m_charSpace + j] = '.';

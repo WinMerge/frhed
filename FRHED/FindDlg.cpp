@@ -43,10 +43,10 @@ BOOL FindDlg::OnInitDialog(HWindow *pDlg)
 	if (bSelected)
 	{
 		// Get start offset and length (is at least =1) of selection.
-		int sel_start = iGetStartOfSelection();
-		int select_len = iGetEndOfSelection() - sel_start + 1;
+		size_t sel_start = iGetStartOfSelection();
+		size_t select_len = iGetEndOfSelection() - sel_start + 1;
 		// Get the length of the bytecode representation of the selection (including zero-byte at end).
-		int findlen = Text2BinTranslator::iBytes2BytecodeDestLen(&m_dataArray[sel_start], select_len);
+		size_t findlen = Text2BinTranslator::iBytes2BytecodeDestLen(&m_dataArray[sel_start], select_len);
 		if (findlen > FindCtxt::MAX_TEXT_LEN)
 		{
 			MessageBox(pDlg, GetLangString(IDS_FIND_SEL_TOO_LARGE), MB_ICONERROR);
@@ -54,7 +54,7 @@ BOOL FindDlg::OnInitDialog(HWindow *pDlg)
 			return TRUE;
 		}
 		// Translate the selection into bytecode and write it into the find text buffer.
-		int destLen = Text2BinTranslator::iBytes2BytecodeDestLen(&m_dataArray[sel_start], select_len);
+		size_t destLen = Text2BinTranslator::iBytes2BytecodeDestLen(&m_dataArray[sel_start], select_len);
 		char *tmpBuf = new char[destLen + 1];
 		ZeroMemory(tmpBuf, destLen + 1);
 		Text2BinTranslator::iTranslateBytesToBC(tmpBuf, &m_dataArray[sel_start], select_len);
@@ -101,7 +101,7 @@ BOOL FindDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM lParam)
 			// Copy text in Edit-Control. Return the number of characters
 			// in the Edit-control minus the zero byte at the end.
 			BYTE *pcFindstring = 0;
-			int destlen;
+			size_t destlen;
 			if (m_pFindCtxt->m_bUnicode)
 			{
 				pcFindstring = new BYTE[srclen * 2];
@@ -117,7 +117,7 @@ BOOL FindDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM lParam)
 			}
 			if (destlen)
 			{
-				int i;
+				size_t i;
 				SetCursor(LoadCursor(NULL, IDC_WAIT));
 				// Find forward.
 				if (m_pFindCtxt->m_iDirection == 1)

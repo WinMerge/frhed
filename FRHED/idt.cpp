@@ -252,15 +252,15 @@ STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POIN
 			}
 			copying = choice != 1;
 		}
-		int iMove1stEnd = hexwnd.iGetStartOfSelection();
-		int iMove2ndEndorLen = hexwnd.iGetEndOfSelection();
-		int iMovePosOrg = hexwnd.new_pos;
+		size_t iMove1stEnd = hexwnd.iGetStartOfSelection();
+		size_t iMove2ndEndorLen = hexwnd.iGetEndOfSelection();
+		size_t iMovePosOrg = hexwnd.new_pos;
 		if (!copying && hexwnd.new_pos > iMove2ndEndorLen)
 			hexwnd.new_pos += iMove1stEnd - iMove2ndEndorLen - 1;
 		iMovePos = hexwnd.new_pos;
 		iMoveOpTyp = copying ? OPTYP_COPY : OPTYP_MOVE;
 		UndoRecord::Data *olddata = NULL;
-		const int len = iMove2ndEndorLen - iMove1stEnd + 1;
+		const size_t len = iMove2ndEndorLen - iMove1stEnd + 1;
 		if (grfKeyState & MK_SHIFT) // Overwrite
 		{
 			if (copying)
@@ -475,7 +475,7 @@ STDMETHODIMP CDropTarget::Drop(IDataObject* pDataObject, DWORD grfKeyState, POIN
 						int fh = _wopen(stm.lpszFileName, _O_BINARY | _O_RDONLY);
 						if (fh != -1)
 						{
-							len = _filelength(fh);
+							len = _filelengthi64(fh);
 							if (len == (size_t)-1)
 								len = 0;
 							_close(fh);

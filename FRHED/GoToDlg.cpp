@@ -60,12 +60,12 @@ BOOL GoToDlg::OnInitDialog(HWindow *pDlg)
 BOOL GoToDlg::Apply(HWindow *pDlg)
 {
 	TCHAR buffer[EditLen + 1];
-	int offset, i = 0, r = 0;
+	int64_t offset, i = 0, r = 0;
 	pDlg->GetDlgItemText(IDC_GOTO_OFFSET, buffer, RTL_NUMBER_OF(buffer));
 	// For a relative jump, read offset from 2nd character on.
 	if (buffer[0] == '+' || buffer[0] == '-')
 		r = 1;
-	if (!offset_parse(buffer + r, offset))
+	if (!offset_parse64(buffer + r, offset))
 	{
 		MessageBox(pDlg, GetLangString(IDS_OFFSET_ERROR), MB_ICONERROR);
 		return FALSE;

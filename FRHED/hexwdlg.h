@@ -101,16 +101,16 @@ private:
 	enum { FW_MAX = 1024 }; //max bytes to fill with
 	static TCHAR pcFWText[FW_MAX];//hex representation of bytes to fill with
 	static BYTE buf[FW_MAX];//bytes to fill with
-	static int buflen;//number of bytes to fill with
+	static size_t buflen;//number of bytes to fill with
 	static TCHAR szFWFileName[_MAX_PATH];//fill with file name
-	static int FWFile,FWFilelen;//fill with file and len
+	static size_t FWFile,FWFilelen;//fill with file and len
 	static LONG_PTR oldproc;//old hex box proc
 	static HFONT hfon;//needed so possible to display infinity char in fill with dlg box
 	static TCHAR curtyp;//filling with input-0 or file-1
 	static TCHAR asstyp;
 	void inittxt(HWindow *);
-	static BYTE input(int);
-	static BYTE file(int);
+	static BYTE input(size_t);
+	static BYTE file(size_t);
 	static void hexstring2charstring();
 	static void deletenonhex(HWND);
 	static LRESULT CALLBACK HexProc(HWND, UINT, WPARAM, LPARAM);
@@ -173,8 +173,8 @@ class ReplaceDlg : public HexEditorWindow
 public:
 	enum { IDD = IDD_REPLACEDIALOG };
 	INT_PTR DlgProc(HWindow *, UINT, WPARAM, LPARAM);
-	int transl_text_to_binary(SimpleArray<BYTE> &out);
-	static int transl_binary_to_text(const BYTE*, int);
+	size_t transl_text_to_binary(SimpleArray<BYTE> &out);
+	static bool transl_binary_to_text(const BYTE*, size_t);
 	bool find_and_select_data(int finddir, bool case_sensitive);
 	bool replace_selected_data(HWindow *);
 	void find_directed(HWindow *, int finddir);
@@ -194,8 +194,8 @@ public:
 private:
 	BOOL OnInitDialog(HWindow *);
 	BOOL OnCommand(HWindow *, WPARAM, LPARAM);
-	void add_diff(HListBox *, int diff, int lower, int upper);
-	int get_diffs(HListBox *, BYTE *ps, int sl, BYTE *pd, int dl);
+	void add_diff(HListBox *, int diff, size_t lower, size_t upper);
+	int get_diffs(HListBox *, BYTE *ps, size_t sl, BYTE *pd, size_t dl);
 };
 
 class CopyHexdumpDlg : public HexEditorWindow
@@ -292,9 +292,9 @@ public:
 	INT_PTR DlgProc(HWindow *, UINT, WPARAM, LPARAM);
 private:
 	BOOL OnInitDialog(HWindow *);
-	bool ReadStartOffset(HWindow *, int &);
-	bool ReadEndOffset(HWindow *, int &);
-	bool ReadTargetOffset(HWindow *, int &);
+	bool ReadStartOffset(HWindow *, int64_t &);
+	bool ReadEndOffset(HWindow *, int64_t &);
+	bool ReadTargetOffset(HWindow *, int64_t &);
 	BOOL OnCommand(HWindow *, WPARAM, LPARAM);
 	BOOL Apply(HWindow *);
 };

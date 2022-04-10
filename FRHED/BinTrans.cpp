@@ -33,9 +33,9 @@ Last change: 2017-06-21 by Jochen Neubeck
 // Return: Length of resulting string.
 // ppd = pointer to pointer to result, must be delete[]-ed later.
 // If the input string was empty, no translated array is created and zero is returned.
-int create_bc_translation(BYTE **ppd, const char* src, int srclen, int charset, int binarymode)
+size_t create_bc_translation(BYTE **ppd, const char* src, size_t srclen, int charset, int binarymode)
 {
-	int destlen = Text2BinTranslator::iLengthOfTransToBin(src, srclen);
+	size_t destlen = Text2BinTranslator::iLengthOfTransToBin(src, srclen);
 	if (destlen > 0)
 	{
 		*ppd = new BYTE[destlen];
@@ -58,10 +58,10 @@ int create_bc_translation(BYTE **ppd, const char* src, int srclen, int charset, 
  * @return Position of the found char in the string, or length
  *  of the string if character not found.
  */
-int Text2BinTranslator::iFindBytePos(const char* src, char c)
+size_t Text2BinTranslator::iFindBytePos(const char* src, char c)
 {
 	const char *ptr = strchr(src, c);
-	return static_cast<int>(ptr != NULL ? ptr - src : strlen(src));
+	return ptr != NULL ? ptr - src : strlen(src);
 }
 
 /**
@@ -71,9 +71,9 @@ int Text2BinTranslator::iFindBytePos(const char* src, char c)
  * @param [in] binmode BIG/LITTLE endian.
  * @return TRUE if translation succeeded, FALSE otherwise.
  */
-int Text2BinTranslator::GetTrans2Bin(Vector<BYTE> &sa, int charmode, int binmode)
+size_t Text2BinTranslator::GetTrans2Bin(Vector<BYTE> &sa, int charmode, int binmode)
 {
-	int destlen = iLengthOfTransToBin(c_str(), length());
+	size_t destlen = iLengthOfTransToBin(c_str(), length());
 	sa.resize(destlen);
 	return iCreateBcTranslation(sa.pointer(), c_str(), length(), charmode, binmode);
 }
@@ -84,10 +84,10 @@ int Text2BinTranslator::GetTrans2Bin(Vector<BYTE> &sa, int charmode, int binmode
  * @param [in] srclen How many chars to calculate.
  * @return Length of bytecode-string including zero-byte.
  */
-int Text2BinTranslator::iBytes2BytecodeDestLen(const BYTE *src, int srclen)
+size_t Text2BinTranslator::iBytes2BytecodeDestLen(const BYTE *src, size_t srclen)
 {
-	int destlen = 1;
-	for (int i = 0; i < srclen; i++)
+	size_t destlen = 1;
+	for (size_t i = 0; i < srclen; i++)
 	{
 		if (src[i] == '<')
 			destlen += 2; // Escapecode needed.
@@ -109,7 +109,7 @@ int Text2BinTranslator::iBytes2BytecodeDestLen(const BYTE *src, int srclen)
  * @param [in] len Lengt of the string.
  * @return 0 if no  bytecode, lenght of the bytecode (1/2/4/8) else.
  */
-int Text2BinTranslator::iIsBytecode(const char* src, int len)
+int Text2BinTranslator::iIsBytecode(const char* src, size_t len)
 {
 	if (len < 5)
 		return 0; // Too short to be a bytecode
@@ -183,7 +183,7 @@ int Text2BinTranslator::iIsBytecode(const char* src, int len)
 // Get value of *one* bytecode token.
 // Return: value of code.
 // bytecode must be checked before!!
-int Text2BinTranslator::iTranslateOneBytecode(BYTE* dest, const char* src, int srclen, int binmode )
+int Text2BinTranslator::iTranslateOneBytecode(BYTE* dest, const char* src, size_t srclen, int binmode )
 {
 	int i, k=0;
 	char buf[50];
@@ -296,9 +296,9 @@ int Text2BinTranslator::iTranslateOneBytecode(BYTE* dest, const char* src, int s
 
 //-------------------------------------------------------------------
 // Get length of translated array of bytes from text.
-int Text2BinTranslator::iLengthOfTransToBin(const char* src, int srclen)
+size_t Text2BinTranslator::iLengthOfTransToBin(const char* src, size_t srclen)
 {
-	int i, destlen = 0, l, k;
+	size_t i, destlen = 0, l, k;
 	for (i = 0; i < srclen; i++)
 	{
 		if ((l = iIsBytecode (&(src[i]), srclen - i)) == 0)
@@ -350,9 +350,9 @@ int Text2BinTranslator::iLengthOfTransToBin(const char* src, int srclen)
 
 //-------------------------------------------------------------------
 // dest must be set to right length before calling.
-int Text2BinTranslator::iCreateBcTranslation(BYTE* dest, const char* src, int srclen, int charmode, int binmode )
+size_t Text2BinTranslator::iCreateBcTranslation(BYTE* dest, const char* src, size_t srclen, int charmode, int binmode )
 {
-	int i, di = 0, bclen;
+	size_t i, di = 0, bclen;
 	for (i = 0; i < srclen; i++)
 	{
 		if ((bclen = iIsBytecode(&(src[i]), srclen - i)) > 0) // Get length of byte-code.
@@ -414,8 +414,8 @@ Text2BinTranslator::Text2BinTranslator(const char* ps)
 int Text2BinTranslator::bCompareBin(Text2BinTranslator& tr2, int charmode, int binmode)
 {
 	Vector<BYTE> sa1, sa2;
-	int const n = GetTrans2Bin(sa1, charmode, binmode);
-	int const m = tr2.GetTrans2Bin(sa2, charmode, binmode);
+	size_t const n = GetTrans2Bin(sa1, charmode, binmode);
+	size_t const m = tr2.GetTrans2Bin(sa2, charmode, binmode);
 	return n == m && memcmp(sa1.pointer(), sa2.pointer(), n) == 0;
 }
 
@@ -426,9 +426,9 @@ int Text2BinTranslator::bCompareBin(Text2BinTranslator& tr2, int charmode, int b
  * @param [in] srclen Length of the source byte array.
  * @return Length of string including zero-byte.
  */
-int Text2BinTranslator::iTranslateBytesToBC(char* pd, const BYTE* src, int srclen)
+size_t Text2BinTranslator::iTranslateBytesToBC(char* pd, const BYTE* src, size_t srclen)
 {
-	int i, k = 0;
+	size_t i, k = 0;
 	char buf[16];
 	for (i = 0; i < srclen; i++)
 	{

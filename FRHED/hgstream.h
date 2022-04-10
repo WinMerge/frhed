@@ -41,7 +41,7 @@ public:
 	HGlobalStream& operator << (const char *);
 	HGlobalStream& operator << (BYTE);
 	HGlobalStream& operator << (DWORD);
-	HGlobalStream& operator << (int);
+	HGlobalStream& operator << (size_t);
 	void Realloc(SIZE_T len, void *src);
 	void filter(const char *src);
 	HGLOBAL Relinquish();

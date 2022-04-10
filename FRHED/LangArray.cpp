@@ -102,7 +102,7 @@ void LangArray::ClearAll()
  * @param [in] codepage Codepage to use in conversion.
  * @param [in,out] s String to convert.
  */
-static int unslash(unsigned codepage, char *s)
+static size_t unslash(unsigned codepage, char *s)
 {
 	char *p = s;
 	char *q = p;
@@ -154,7 +154,7 @@ static int unslash(unsigned codepage, char *s)
 		}
 		++p;
 	} while (c != '\0');
-	return static_cast<int>(p - s - 1);
+	return p - s - 1;
 }
 
 BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
@@ -232,7 +232,7 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 				if (q > p)
 				{
 					*q = '\0';
-					ps->append(p + 1, static_cast<int>(q - p - 1));
+					ps->append(p + 1, q - p - 1);
 				}
 				else
 				{
@@ -334,7 +334,7 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 			if (q > p)
 			{
 				*q = '\0';
-				ps->append(p + 1, static_cast<int>(q - p - 1));
+				ps->append(p + 1, q - p - 1);
 			}
 			else
 			{

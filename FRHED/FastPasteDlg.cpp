@@ -94,17 +94,17 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 	}
 	UINT uFormat = static_cast<UINT>(list->GetItemData(i));
 	char *pcPastestring = 0;
-	int destlen = 0;
+	size_t destlen = 0;
 	BOOL bPasteBinary = FALSE;
 	BOOL bPasteUnicode = FALSE;
 	if (OpenClipboard(NULL))
 	{
 		if (HGLOBAL hClipMemory = GetClipboardData(uFormat))
 		{
-			int gsize = 0;
+			size_t gsize = 0;
 			if (SIZE_T size = GlobalSize(hClipMemory))
 			{
-				gsize = size <= INT_MAX ? static_cast<int>(size) : INT_MAX;
+				gsize = size;
 				void *pClipMemory = GlobalLock(hClipMemory);
 				pcPastestring = new char[gsize];
 				memcpy(pcPastestring, pClipMemory, gsize);
@@ -130,13 +130,13 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 	{
 		if (bPasteAsText)
 		{
-			destlen = static_cast<int>(bPasteUnicode ? 2 * wcslen((WCHAR *)pcPastestring) : strlen(pcPastestring));
+			destlen = bPasteUnicode ? 2 * wcslen((WCHAR *)pcPastestring) : strlen(pcPastestring);
 		}
 		else
 		{
 			BYTE *pc = 0;
 			destlen = create_bc_translation(&pc, pcPastestring,
-				static_cast<int>(strlen(pcPastestring)), iCharacterSet, iBinaryMode);
+				strlen(pcPastestring), iCharacterSet, iBinaryMode);
 			delete [] pcPastestring;
 			pcPastestring = (char *)pc;
 		}
@@ -155,7 +155,7 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 		if (bSelected)
 		{
 			iCurByte = iGetStartOfSelection();
-			int iEndByte = iGetEndOfSelection();
+			size_t iEndByte = iGetEndOfSelection();
 			olddata = UndoRecord::alloc(&m_dataArray[iCurByte], iEndByte - iCurByte + 1 + (iPasteTimes - 1) * iPasteSkip);
 			m_dataArray.RemoveAt(iCurByte, iEndByte - iCurByte + 1);//Remove extraneous data
 			bSelected = false; // Deselect

@@ -27,6 +27,6 @@ Last change: 2013-02-24 by Jochen Neubeck
 #ifndef _FIND_UTIL_H_
 #define _FIND_UTIL_H_
 
-int findutils_FindBytes(BYTE* ps, int ls, BYTE* pb, int lb, int mode, bool case_sensitive);
+size_t findutils_FindBytes(BYTE* ps, size_t ls, BYTE* pb, size_t lb, int mode, bool case_sensitive);
 
 #endif // _FIND_UTIL_H_

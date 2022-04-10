@@ -79,6 +79,7 @@ using NT4::GetSaveFileName;
 #include <shlwapi.h>
 #include <shlobj.h>
 #include <limits.h>
+#include <stdint.h>
 #include "gtools.h"
 
 #if _MSC_VER >= 1500

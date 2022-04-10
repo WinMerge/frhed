@@ -45,9 +45,9 @@ INT_PTR ReverseDlg::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPARAM lPar
 	switch (uMsg)
 	{
 	case WM_INITDIALOG:
-		_stprintf(buf, _T("x%x"), iGetStartOfSelection());
+		_stprintf(buf, _T("x%zx"), iGetStartOfSelection());
 		pDlg->SetDlgItemText(IDC_REVERSE_OFFSET, buf);
-		_stprintf(buf, _T("x%x"), iGetEndOfSelection());
+		_stprintf(buf, _T("x%zx"), iGetEndOfSelection());
 		pDlg->SetDlgItemText(IDC_REVERSE_OFFSETEND, buf);
 		return TRUE;
 
@@ -80,7 +80,7 @@ INT_PTR ReverseDlg::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPARAM lPar
 			if (iEndOfSelSetting < iStartOfSelSetting)
 				swap(iEndOfSelSetting, iStartOfSelSetting);
 
-			int const maxb = m_dataArray.size() - 1;
+			size_t const maxb = m_dataArray.size() - 1;
 			if (iStartOfSelSetting < 0 || iEndOfSelSetting > maxb)
 			{
 				MessageBox(pDlg, GetLangString(IDS_REVERSE_BLOCK_EXTEND), MB_ICONERROR);

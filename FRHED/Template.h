@@ -59,7 +59,7 @@ private:
 	int m_filehandle; /**< File handle to template file. */
 	TCHAR m_origFilename[MAX_PATH]; /**< Filename of the file in the editor. */
 	TCHAR m_filename[MAX_PATH]; /**< Template file name. */
-	int m_filelen; /**< Template file size. */
+	size_t m_filelen; /**< Template file size. */
 	char *m_tmplBuf; /**< Template file data buffer (read from file). */
 	TString m_resultString; /**< Resulting string for applied template. */
 	//const SimpleArray<BYTE, 100> &m_dataArray; /**< Original data. */

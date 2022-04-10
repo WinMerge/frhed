@@ -139,10 +139,10 @@ namespace MAUtil {
 		 *  \param ptr A pointer to the elements.
 		 *  \param num The number of elements.
 		 */
-		bool add(const Type* ptr, int num) {
-			int neededCapacity = mSize + num;
+		bool add(const Type* ptr, size_t num) {
+			size_t neededCapacity = mSize + num;
 			if(mCapacity < neededCapacity) {
-				int newCapacity = mCapacity;
+				size_t newCapacity = mCapacity;
 				if (newCapacity == 0) {
 					newCapacity = neededCapacity;
 				} else do {
@@ -151,7 +151,7 @@ namespace MAUtil {
 				if (!reserve(newCapacity))
 					return false;
 			}
-			for(int i=0; i<num; i++) {
+			for(size_t i=0; i<num; i++) {
 				mData[mSize++] = *(ptr++);
 			}
 			return true;
@@ -161,13 +161,13 @@ namespace MAUtil {
 		 *  \param index The index of the element that should be removed.
 		 *  \param number The number of elements to remove.
 		 */
-		bool remove(int index, int number = 1) {
+		bool remove(size_t index, size_t number = 1) {
 #ifdef MOSYNCDEBUG
 			ASSERT_MSG(index >= 0 && index < mSize, "Remove index out of bounds");
 			ASSERT_MSG(number > 0 && (index + number) < mSize, "Remove number out of bounds");
 #endif
-			int base = index;
-			int next = index + number;
+			size_t base = index;
+			size_t next = index + number;
 			while(next < mSize) {
 				mData[base] = mData[next];
 				base++;
@@ -181,15 +181,15 @@ namespace MAUtil {
 		 *  \param t The element itself.
 		 *  \param number The number of copies to insert.
 		 */
-		bool insert(int index, Type val, int number) {
+		bool insert(size_t index, Type val, size_t number) {
 #ifdef MOSYNCDEBUG
 			ASSERT_MSG(index >= 0 && index <= mSize, "Insert index out of bounds");
 			ASSERT_MSG(number > 0, "Insert number out of bounds");
 #endif
-			int base = mSize;
+			size_t base = mSize;
 			if (!resize(mSize + number))
 				return false;
-			int next = mSize;
+			size_t next = mSize;
 			while(base > index)
 				mData[--next] = mData[--base];
 			while(index < next)
@@ -202,15 +202,15 @@ namespace MAUtil {
 		 *  \param ptr A pointer to the elements.
 		 *  \param number The number of elements to insert.
 		 */
-		bool insert(int index, const Type *ptr, int number) {
+		bool insert(size_t index, const Type *ptr, size_t number) {
 #ifdef MOSYNCDEBUG
 			ASSERT_MSG(index >= 0 && index <= mSize, "Insert index out of bounds");
 			ASSERT_MSG(number > 0, "Insert number out of bounds");
 #endif
-			int base = mSize;
+			size_t base = mSize;
 			if (!resize(mSize + number))
 				return false;
-			int next = mSize;
+			size_t next = mSize;
 			while(base > index)
 				mData[--next] = mData[--base];
 			while(index < next)
@@ -224,8 +224,8 @@ namespace MAUtil {
 		 *  \param ptr A pointer to the replacement elements.
 		 *  \param number The number of replacement elements.
 		 */
-		bool replace(int index, int length, const Type* ptr, int number) {
-			int const next = index + number;
+		bool replace(size_t index, size_t length, const Type* ptr, size_t number) {
+			size_t const next = index + number;
 			if (length > number)
 				remove(next, length - number);
 			else if (length < number && !insert(index, Type(), number - length))
@@ -239,14 +239,14 @@ namespace MAUtil {
 		 *  \return Returns the number of elements currently in the Vector.
 		 *  \see capacity
 		 */
-		int size() const {
+		size_t size() const {
 			return mSize;
 		}
 
 		/** \brief Resizes the Vector to contain \a size elements.
 		 *  \param newSize The desired size of the Vector.
 		 */
-		bool resize(int newSize) {
+		bool resize(size_t newSize) {
 #ifdef MOSYNCDEBUG
 			ASSERT_MSG(newSize>=0, "Resize negative");
 #endif
@@ -256,7 +256,7 @@ namespace MAUtil {
 				return false;
 			MAUTIL_VECTOR_LOG("resize 2");
 
-			for(int i = newSize; i < mSize; i++) {
+			for(size_t i = newSize; i < mSize; i++) {
 				mData[i] = Type();
 			}
 
@@ -269,7 +269,7 @@ namespace MAUtil {
 		 *  \param newCapacity The desired capacity of the Vector.
 		 *  \note If \a newCapacity is less than the current capacity of the Vector, nothing will happen.
 		 */
-		bool reserve(int newCapacity) {
+		bool reserve(size_t newCapacity) {
 			MAUTIL_VECTOR_LOG("reserve %p %i", this, newCapacity);
 			if(newCapacity <= mCapacity)
 				return true;
@@ -279,7 +279,7 @@ namespace MAUtil {
 			if (newData == 0)
 				return false;
 			MAUTIL_VECTOR_LOG("reserve 4");
-			for(int i=0; i < mSize; i++) {
+			for(size_t i=0; i < mSize; i++) {
 				newData[i] = mData[i];
 			}
 			MAUTIL_VECTOR_LOG("reserve 5");
@@ -309,7 +309,7 @@ namespace MAUtil {
 		/** \brief Returns the Vector's current capacity.
 		 * \see size
 		 */
-		int capacity() const {
+		size_t capacity() const {
 			return mCapacity;
 		}
 
@@ -344,7 +344,7 @@ namespace MAUtil {
 		/** \brief Returns a reference to the element at \a index. No range-checking is done.
 		 *  \param index The index of the element to be returned.
 		 */
-		Type& operator[](int index) {
+		Type& operator[](size_t index) {
 #ifdef MOSYNCDEBUG
 			MAASSERT(index < mCapacity && index >= 0);
 #endif
@@ -354,7 +354,7 @@ namespace MAUtil {
 		/** \brief Returns a const reference to the element at \a index. No range-checking is done.
 		 *  \param index The index of the element to be returned.
 		 */
-		const Type& operator[](int index) const {
+		const Type& operator[](size_t index) const {
 #ifdef MOSYNCDEBUG
 			MAASSERT(index < mCapacity && index >= 0);
 #endif
@@ -376,8 +376,8 @@ namespace MAUtil {
 		}
 
 	protected:
-		int mSize;
-		int mCapacity;
+		size_t mSize;
+		size_t mCapacity;
 		Type* mData;
 
 	private:

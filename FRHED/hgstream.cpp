@@ -108,7 +108,7 @@ HGlobalStream& HGlobalStream::operator << (DWORD i)
 	return *this;
 }
 
-HGlobalStream& HGlobalStream::operator << (int i)
+HGlobalStream& HGlobalStream::operator << (size_t i)
 {
 	//Maximum size of an integer in hex is 8
 	//Maximum size for an int is the length of -2147483647 (11)

@@ -42,12 +42,12 @@ static const int MaxTextLen = 16;
  */
 BOOL CopyDlg::OnInitDialog(HWindow *pDlg)
 {
-	int iStart = iGetStartOfSelection();
-	int iEnd = iGetEndOfSelection();
+	size_t iStart = iGetStartOfSelection();
+	size_t iEnd = iGetEndOfSelection();
 	TCHAR buf[32];
-	_stprintf(buf, _T("0x%x"), iStart);
+	_stprintf(buf, _T("0x%zx"), iStart);
 	pDlg->SetDlgItemText(IDC_COPY_STARTOFFSET, buf);
-	_stprintf(buf, _T("0x%x"), iEnd);
+	_stprintf(buf, _T("0x%zx"), iEnd);
 	pDlg->SetDlgItemText(IDC_COPY_OFFSETEDIT, buf);
 	pDlg->SetDlgItemInt(IDC_COPY_BYTECOUNT, iEnd - iStart + 1, TRUE);
 	pDlg->CheckDlgButton(IDC_COPY_OFFSET, BST_CHECKED);
@@ -67,10 +67,10 @@ BOOL CopyDlg::Apply(HWindow *pDlg)
 {
 	const int bufSize = 64;
 	TCHAR buf[bufSize + 1] = {0};
-	int iOffset;
-	int iNumberOfBytes;
+	int64_t iOffset;
+	int64_t iNumberOfBytes;
 	if (pDlg->GetDlgItemText(IDC_COPY_STARTOFFSET, buf, bufSize) &&
-		!offset_parse(buf, iOffset))
+		!offset_parse64(buf, iOffset))
 	{
 		MessageBox(pDlg, GetLangString(IDS_OFFSET_START_ERROR), MB_ICONERROR);
 		return FALSE;
@@ -78,7 +78,7 @@ BOOL CopyDlg::Apply(HWindow *pDlg)
 	if (pDlg->IsDlgButtonChecked(IDC_COPY_OFFSET))
 	{
 		if (pDlg->GetDlgItemText(IDC_COPY_OFFSETEDIT, buf, bufSize) &&
-			!offset_parse(buf, iNumberOfBytes))
+			!offset_parse64(buf, iNumberOfBytes))
 		{
 			MessageBox(pDlg, GetLangString(IDS_OFFSET_END_ERROR), MB_ICONERROR);
 			return FALSE;
@@ -102,7 +102,7 @@ BOOL CopyDlg::Apply(HWindow *pDlg)
 		return FALSE;
 	}
 	// Transfer to clipboard.
-	int destlen = Text2BinTranslator::iBytes2BytecodeDestLen(&m_dataArray[iOffset], iNumberOfBytes);
+	size_t destlen = Text2BinTranslator::iBytes2BytecodeDestLen(&m_dataArray[iOffset], iNumberOfBytes);
 	HGLOBAL hGlobal = GlobalAlloc(GHND, destlen);
 	if (hGlobal == 0)
 	{

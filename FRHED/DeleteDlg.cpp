@@ -42,13 +42,13 @@ static const int OffsetLen = 16;
  */
 BOOL DeleteDlg::OnInitDialog(HWindow *pDlg)
 {
-	int iStart = iGetStartOfSelection();
-	int iEnd = iGetEndOfSelection();
+	size_t iStart = iGetStartOfSelection();
+	size_t iEnd = iGetEndOfSelection();
 	TCHAR buf[OffsetLen + 1];
 
-	_stprintf(buf, _T("0x%x"), iStart);
+	_stprintf(buf, _T("0x%zx"), iStart);
 	pDlg->SetDlgItemText(IDC_DELETE_STARTOFFSET, buf);
-	_stprintf(buf, _T("0x%x"), iEnd);
+	_stprintf(buf, _T("0x%zx"), iEnd);
 
 	pDlg->CheckDlgButton(IDC_DELETE_INCLUDEOFFSET, BST_CHECKED);
 	pDlg->SetDlgItemText(IDC_DELETE_ENDOFFSET, buf);
@@ -66,11 +66,11 @@ BOOL DeleteDlg::OnInitDialog(HWindow *pDlg)
 BOOL DeleteDlg::Apply(HWindow *pDlg)
 {
 	TCHAR buf[OffsetLen + 1];
-	int iOffset;
-	int iNumberOfBytes;
+	int64_t iOffset;
+	int64_t iNumberOfBytes;
 
 	if (pDlg->GetDlgItemText(IDC_DELETE_STARTOFFSET, buf, OffsetLen) &&
-		!offset_parse(buf, iOffset))
+		!offset_parse64(buf, iOffset))
 	{
 		MessageBox(pDlg, GetLangString(IDS_OFFSET_START_ERROR), MB_ICONERROR);
 		return FALSE;
@@ -79,7 +79,7 @@ BOOL DeleteDlg::Apply(HWindow *pDlg)
 	if (pDlg->IsDlgButtonChecked(IDC_DELETE_INCLUDEOFFSET))
 	{
 		if (pDlg->GetDlgItemText(IDC_DELETE_ENDOFFSET, buf, OffsetLen) &&
-			!offset_parse(buf, iNumberOfBytes))
+			!offset_parse64(buf, iNumberOfBytes))
 		{
 			MessageBox(pDlg, GetLangString(IDS_OFFSET_END_ERROR), MB_ICONERROR);
 			return FALSE;

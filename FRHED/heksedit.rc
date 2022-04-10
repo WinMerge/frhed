@@ -1018,7 +1018,7 @@ STRINGTABLE
 BEGIN
     IDS_APPNAME             "Frhed"
     IDS_ABOUTFRHEDVER       "Version %u.%u.%u"
-    IDS_DIFFLISTITEMFORMAT  "%d) 0x%x=%u to 0x%x=%u (%d bytes)"
+    IDS_DIFFLISTITEMFORMAT  "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
     IDS_OPEN_ALL_FILES      "All Files (*.*)|*.*|"
     IDS_UNTITLED            "Untitled"
     IDS_FONT_ANSI           "ANSI"
@@ -1103,7 +1103,7 @@ END
 // Bit manipulation
 STRINGTABLE 
 BEGIN
-    IDS_BITMANIP_AT_OFFSET  "Offset: 0x%x = %d"
+    IDS_BITMANIP_AT_OFFSET  "Offset: 0x%zx = %zd"
     IDS_BITMANIP_VALUE      "Value: 0x%02x, %d signed, %u unsigned."
 END
 
@@ -1280,8 +1280,8 @@ END
 // Status bar
 STRINGTABLE 
 BEGIN
-    IDS_SBAR_SELECTED_OFFSET "Selected: Offset %d=0x%x to %d=0x%x (%d byte(s))"
-    IDS_SBAR_NSEL_OFFSET   "Offset %d=0x%x"
+    IDS_SBAR_SELECTED_OFFSET "Selected: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
+    IDS_SBAR_NSEL_OFFSET   "Offset %zd=0x%zx"
     IDS_SBAR_BITS          "Bits"
     IDS_SBAR_UNSIGNED      "Unsigned"
     IDS_SBAR_BYTE_SHORT    "B"
@@ -1342,7 +1342,7 @@ BEGIN
    IDS_DOUBLE_SIZE         "\nDouble size value:\n%g\n"
    IDS_DOUBLE_NOSPACE      "\nNot enough space for double size value.\n"
    IDS_FPROP_NAME          "File name and path: "
-   IDS_FPROP_PARTIAL_OPEN  "\nPartially opened at offset 0x%x = %d.\nNumber of bytes read: %d = %d kilobytes.\n"
+   IDS_FPROP_PARTIAL_OPEN  "\nPartially opened at offset 0x%zx = %zd.\nNumber of bytes read: %zd = %zd kilobytes.\n"
    IDS_FPROP_FSIZE         "\nFile size: %d bytes = %d kilobytes.\n"
    IDS_FPROP_HDUMP_LINES   "\nNumber of hexdump lines: %d.\n"
    IDS_MRU_REMOVING        "This file could not be accessed and will be removed from the MRU list."

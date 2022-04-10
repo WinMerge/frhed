@@ -42,7 +42,7 @@ public:
 	void SetArray(const SimpleArray<BYTE> *dataArray);
 	void CreateBuffer(unsigned size);
 	char *GetBuffer() const;
-	void Write(int startInd, int endInd);
+	void Write(size_t startInd, size_t endInd);
 
 private:
 	SimpleArray<BYTE> *m_pData;

@@ -31,11 +31,11 @@ Last change: 2013-02-24 by Jochen Neubeck
 #include "hexwdlg.h"
 #include "StringTable.h"
 
-void ChooseDiffDlg::add_diff(HListBox *list, int diff, int lower, int upper)
+void ChooseDiffDlg::add_diff(HListBox *list, int diff, size_t lower, size_t upper)
 {
 	TCHAR buf[100];
 	_stprintf(buf,
-		// "%d) 0x%x=%u to 0x%x=%u (%d bytes)"
+		// "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
 		GetLangString(IDS_DIFFLISTITEMFORMAT),
 		diff, lower, lower,	upper, upper, upper - lower + 1);
 	list->AddString(buf);
@@ -43,10 +43,11 @@ void ChooseDiffDlg::add_diff(HListBox *list, int diff, int lower, int upper)
 
 //-------------------------------------------------------------------
 // Transfer offsets of differences to pdiff.
-int ChooseDiffDlg::get_diffs(HListBox *list, BYTE *ps, int sl, BYTE *pd, int dl)
+int ChooseDiffDlg::get_diffs(HListBox *list, BYTE *ps, size_t sl, BYTE *pd, size_t dl)
 {
-	int lower, upper;
-	int i = 0, diff = 0, type = 1;
+	size_t lower, upper;
+	size_t i = 0, type = 1;
+	int diff = 0;
 	// type=0 means differences, type=1 means equality at last char.
 	while (i < sl && i < dl)
 	{
@@ -110,10 +111,10 @@ BOOL ChooseDiffDlg::OnInitDialog(HWindow *pDlg)
 		return FALSE;
 	}
 	BOOL bDone = FALSE;
-	if (int filelen = _filelength(filehandle))
+	if (int64_t filelen = _filelengthi64(filehandle))
 	{
-		int iDestFileLen = filelen;
-		int iSrcFileLen = m_dataArray.size() - iCurByte;
+		int64_t iDestFileLen = filelen;
+		int64_t iSrcFileLen = m_dataArray.size() - iCurByte;
 		if (BYTE *cmpdata = new BYTE[filelen])
 		{
 			// Read data.
@@ -202,12 +203,13 @@ BOOL ChooseDiffDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM)
 			int i = pLb->GetCurSel();
 			if (i != -1)
 			{
+				size_t is;
 				TString s;
 				pLb->GetText(i, s);
 				i = _stscanf(s.c_str(),
-					// "%d) 0x%x=%u to 0x%x=%u (%d bytes)"
+					// "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
 					GetLangString(IDS_DIFFLISTITEMFORMAT),
-					&i, &i, &iStartOfSelection, &i, &iEndOfSelection, &i);
+					&i, &is, &iStartOfSelection, &is, &iEndOfSelection, &is);
 				iStartOfSelection += iCurByte;
 				iEndOfSelection += iCurByte;
 				iCurByte = iStartOfSelection;

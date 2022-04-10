@@ -39,7 +39,7 @@ int CopyHexdumpDlg::iCopyHexdumpType = IDC_EXPORTDISPLAY;
  */
 BOOL CopyHexdumpDlg::OnInitDialog(HWindow *pDlg)
 {
-	int iCopyHexdumpDlgStart, iCopyHexdumpDlgEnd;
+	size_t iCopyHexdumpDlgStart, iCopyHexdumpDlgEnd;
 	if (!bSelected)
 	{
 		// Assume whole file is to be hexdumped. (except the last line (if incomplete))
@@ -54,9 +54,9 @@ BOOL CopyHexdumpDlg::OnInitDialog(HWindow *pDlg)
 		iCopyHexdumpDlgEnd = iGetEndOfSelection();
 	}
 	TCHAR buf[16];
-	_stprintf(buf, _T("0x%x"), iCopyHexdumpDlgStart);
+	_stprintf(buf, _T("0x%zx"), iCopyHexdumpDlgStart);
 	pDlg->SetDlgItemText(IDC_HEXDUMP_OFFSET, buf);
-	_stprintf(buf, _T("0x%x"), iCopyHexdumpDlgEnd);
+	_stprintf(buf, _T("0x%zx"), iCopyHexdumpDlgEnd);
 	pDlg->SetDlgItemText(IDC_HEXDUMP_OFFSET2, buf);
 	pDlg->CheckDlgButton(iCopyHexdumpMode ? IDC_HEXDUMP_EXPORTCLIPB :
 			IDC_HEXDUMP_EXPORTFILE, BST_CHECKED);
@@ -73,16 +73,16 @@ BOOL CopyHexdumpDlg::OnInitDialog(HWindow *pDlg)
  */
 BOOL CopyHexdumpDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM lParam)
 {
-	int iCopyHexdumpDlgStart, iCopyHexdumpDlgEnd;
+	int64_t iCopyHexdumpDlgStart, iCopyHexdumpDlgEnd;
 	const int bufSize = 16;
 	TCHAR buf[bufSize + 1];
 	switch (wParam)
 	{
 	case IDOK:
 		if (pDlg->GetDlgItemText(IDC_HEXDUMP_OFFSET, buf, bufSize) &&
-			offset_parse(buf, iCopyHexdumpDlgStart) &&
+			offset_parse64(buf, iCopyHexdumpDlgStart) &&
 			pDlg->GetDlgItemText(IDC_HEXDUMP_OFFSET2, buf, bufSize) &&
-			offset_parse(buf, iCopyHexdumpDlgEnd))
+			offset_parse64(buf, iCopyHexdumpDlgEnd))
 		{
 			iCopyHexdumpMode = pDlg->IsDlgButtonChecked(IDC_HEXDUMP_EXPORTCLIPB);
 			if (pDlg->IsDlgButtonChecked(IDC_EXPORTDISPLAY))

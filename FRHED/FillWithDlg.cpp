@@ -34,10 +34,10 @@ C_ASSERT(sizeof(FillWithDialog) == sizeof(HexEditorWindow)); // disallow instanc
 
 TCHAR FillWithDialog::pcFWText[FW_MAX];//hex representation of bytes to fill with
 BYTE FillWithDialog::buf[FW_MAX];//bytes to fill with
-int FillWithDialog::buflen;//number of bytes to fill with
+size_t FillWithDialog::buflen;//number of bytes to fill with
 TCHAR FillWithDialog::szFWFileName[_MAX_PATH];//fill with file name
-int FillWithDialog::FWFile;//fill with file
-int FillWithDialog::FWFilelen;//fill with file len
+size_t FillWithDialog::FWFile;//fill with file
+size_t FillWithDialog::FWFilelen;//fill with file len
 LONG_PTR FillWithDialog::oldproc;//old hex box proc
 HFONT FillWithDialog::hfon;//needed so possible to display infinity char in fill with dlg box
 TCHAR FillWithDialog::curtyp;//filling with input-0 or file-1
@@ -46,8 +46,8 @@ TCHAR FillWithDialog::asstyp;
 
 void FillWithDialog::inittxt(HWindow *pDlg)
 {
-	int iStartOfSelSetting;
-	int iEndOfSelSetting;
+	size_t iStartOfSelSetting;
+	size_t iEndOfSelSetting;
 	if (bSelected)
 	{
 		iStartOfSelSetting = iStartOfSelection;
@@ -60,12 +60,12 @@ void FillWithDialog::inittxt(HWindow *pDlg)
 	}
 	//init all the readonly boxes down below
 	TCHAR bufff[250];
-	int tteemmpp = 1 + abs(iStartOfSelSetting - iEndOfSelSetting);
-	_stprintf(bufff, _T("%d=0x%x"), iStartOfSelSetting, iStartOfSelSetting);
+	size_t tteemmpp = 1 + abs((int64_t)iStartOfSelSetting - (int64_t)iEndOfSelSetting);
+	_stprintf(bufff, _T("%zd=0x%zx"), iStartOfSelSetting, iStartOfSelSetting);
 	pDlg->SetDlgItemText(IDC_STS, bufff);
-	_stprintf(bufff, _T("%d=0x%x"), iEndOfSelSetting, iEndOfSelSetting);
+	_stprintf(bufff, _T("%zd=0x%zx"), iEndOfSelSetting, iEndOfSelSetting);
 	pDlg->SetDlgItemText(IDC_ES, bufff);
-	_stprintf(bufff, _T("%d=0x%x"), tteemmpp, tteemmpp);
+	_stprintf(bufff, _T("%zd=0x%zx"), tteemmpp, tteemmpp);
 	pDlg->SetDlgItemText(IDC_SS, bufff);
 	if (curtyp)
 	{//1-file
@@ -75,17 +75,17 @@ void FillWithDialog::inittxt(HWindow *pDlg)
 	}
 	else
 	{//0-input
-		_stprintf(bufff, _T("%d=0x%x"), buflen, buflen);
+		_stprintf(bufff, _T("%zd=0x%zx"), buflen, buflen);
 		pDlg->SetDlgItemText(IDC_SI, bufff);
 		if (buflen)
 		{
-			int d = tteemmpp / buflen;
-			int m = tteemmpp % buflen;
-			_stprintf(bufff, _T("%d=0x%x"), d, d);
+			size_t d = tteemmpp / buflen;
+			size_t m = tteemmpp % buflen;
+			_stprintf(bufff, _T("%zd=0x%zx"), d, d);
 			pDlg->SetDlgItemText(IDC_IFS, bufff);
 			HFont *hfdef = pDlg->GetFont();
 			pDlg->SendDlgItemMessage(IDC_IFS, WM_SETFONT, (WPARAM)hfdef, MAKELPARAM(TRUE, 0));
-			_stprintf(bufff, _T("%d=0x%x"), m, m);
+			_stprintf(bufff, _T("%zd=0x%zx"), m, m);
 			pDlg->SetDlgItemText(IDC_R, bufff);
 		}
 		else
@@ -97,16 +97,16 @@ void FillWithDialog::inittxt(HWindow *pDlg)
 	}
 }
 
-BYTE FillWithDialog::input(int index)
+BYTE FillWithDialog::input(size_t index)
 {
 	return buf[index];
 }
 
 //see CMD_fw below
-BYTE FillWithDialog::file(int index)
+BYTE FillWithDialog::file(size_t index)
 {
 	BYTE x;
-	_lseek(FWFile, index, SEEK_SET);
+	_lseeki64(FWFile, index, SEEK_SET);
 	_read(FWFile,&x,1);
 	return x;
 }
@@ -235,7 +235,7 @@ INT_PTR FillWithDialog::DlgProc(HWindow *pDlg, UINT iMsg, WPARAM wParam, LPARAM 
 						MessageBox(pDlg, GetLangString(IDS_ERR_OPENING_FILE), MB_ICONERROR);//tell user but don't close dlgbox
 						return 1;//didn't process this message
 					}//if
-					FWFilelen = _filelength(FWFile);
+					FWFilelen = _filelengthi64(FWFile);
 					if (FWFilelen == 0)
 					{//if filelen is zero
 						MessageBox(pDlg, GetLangString(IDS_FILL_ZERO_SIZE_FILE), MB_ICONERROR);//tell user but don't close dlgbox
@@ -277,10 +277,10 @@ INT_PTR FillWithDialog::DlgProc(HWindow *pDlg, UINT iMsg, WPARAM wParam, LPARAM 
 
 				// go ahead
 				SetCursor(LoadCursor(NULL, IDC_WAIT));
-				BYTE (*fnc)(int);
-				int iStartOfSelSetting;
-				int iEndOfSelSetting;
-				int iimax;
+				BYTE (*fnc)(size_t);
+				size_t iStartOfSelSetting;
+				size_t iEndOfSelSetting;
+				size_t iimax;
 				if (curtyp)
 				{//1-file
 					fnc = file;
@@ -304,8 +304,8 @@ INT_PTR FillWithDialog::DlgProc(HWindow *pDlg, UINT iMsg, WPARAM wParam, LPARAM 
 				}
 
 				UndoRecord::Data *olddata = UndoRecord::alloc(&m_dataArray[iStartOfSelSetting], iEndOfSelSetting - iStartOfSelSetting + 1);
-				int i = iStartOfSelSetting;
-				int ii = 0;
+				size_t i = iStartOfSelSetting;
+				size_t ii = 0;
 				switch (asstyp)
 				{// use switch instead of pointers to funcs that just call an operator as its faster
 				case 0:
