@@ -193,7 +193,7 @@ public:
 	void fix_scroll_timers(long x, long y);
 	void kill_scroll_timers();
 	void reset();
-	int lbd_pos;
+	size_t lbd_pos;
 	size_t nibblenum, bytenum, column, line, new_pos, old_pos, old_col, old_row;
 	int bMouseOpDelayTimerSet;
 	SCROLL_TYPE prev_vert;
@@ -266,8 +266,8 @@ public:
 	virtual bool STDMETHODCALLTYPE close();
 	virtual int STDMETHODCALLTYPE initmenupopup(WPARAM w, LPARAM l);
 	void adjust_view_for_caret();
-	void print_line(HSurface *pdc, int line, HBrush *pbr);
-	void PrintBookmarkIndicators(HSurface *pdc, HBrush *pbr, int startpos);
+	void print_line(HSurface *pdc, size_t line, HBrush *pbr);
+	void PrintBookmarkIndicators(HSurface *pdc, HBrush *pbr, size_t startpos);
 	void mark_char(HSurface *pdc);
 	void STDMETHODCALLTYPE adjust_hscrollbar();
 	void STDMETHODCALLTYPE adjust_vscrollbar();
@@ -354,7 +354,7 @@ protected:
 	int bOpenReadOnly; /**< Open files read-only. */
 	INT64 iPartialOffset, iPartialFileLen;
 	bool bPartialOpen; /**< Was file opened partially? */
-	int iPartialOpenLen; /**< Length of the partially opened block from file. */
+	INT64 iPartialOpenLen; /**< Length of the partially opened block from file. */
 	bool bPartialStats;
 	int iBmkCount; /**< Count of bookmarks. */
 	bookmark pbmkList[BMKMAX]; /**< List of bookmarks. */
@@ -373,7 +373,8 @@ protected:
 	SharedUndoRecords *m_pSharedUndoRecords;
 	int bSelecting; /**< Is user selecting bytes/text? */
 	int iLBDownX, iLBDownY;
-	int cxChar, cxCaps, cyChar, cxClient, cyClient, cxBuffer, cyBuffer, iNumlines;
+	int cxChar, cxCaps, cyChar, cxClient, cyClient, cxBuffer, cyBuffer;
+	size_t iNumlines;
 	int iByteSpace, iCharSpace;
 	TCHAR filename[_MAX_PATH];
 	HWindow *pwnd;

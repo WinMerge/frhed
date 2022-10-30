@@ -173,8 +173,8 @@ HexEditorWindow::HexEditorWindow()
 	iCharacterSet = ANSI_FIXED_FONT;
 
 	bSelected = false;
-	iVscrollMax = 0;
-	iVscrollPos = 0;
+	iVscrollMax64 = 0;
+	iVscrollPos64 = 0;
 	iHscrollMax = 0;
 	iHscrollPos = 0;
 
@@ -302,13 +302,13 @@ static LPTSTR NTAPI LoadResString(UINT uStringID)
 
 void HexEditorWindow::LoadStringTable()
 {
-	for (int i = 0 ; i < RTL_NUMBER_OF(S) ; ++i)
+	for (size_t i = 0 ; i < RTL_NUMBER_OF(S) ; ++i)
 		S[i] = LoadResString(IDS[i]);
 }
 
 void HexEditorWindow::FreeStringTable()
 {
-	for (int i = 0 ; i < RTL_NUMBER_OF(S) ; ++i)
+	for (size_t i = 0 ; i < RTL_NUMBER_OF(S) ; ++i)
 		SysFreeString((BSTR)S[i]);
 
 }
@@ -376,17 +376,28 @@ HMENU HexEditorWindow::load_menu(UINT id)
 
 static int64_t _read64(int const fd, void* const buffer, uint64_t const buffer_size)
 {
-	int64_t result = 0;
-	int64_t n = buffer_size >> 30;
-	unsigned g = buffer_size & 0x3fffffff;
-	for (size_t i = 0; i <= n; ++i)
+	uint64_t pos = 0;
+	while (pos < buffer_size)
 	{
-		int res32 = _read(fd, (char *)buffer + i * 0x40000000, (i == n) ? g : 0x40000000);
+		int res32 = _read(fd, reinterpret_cast<char *>(buffer) + pos, buffer_size - pos < 0x10000000 ? buffer_size - pos : 0x10000000);
 		if (res32 == -1)
 			return -1;
-		result += res32;
+		pos += res32;
 	}
-	return result;
+	return static_cast<int64_t>(pos);
+}
+
+static int64_t _write64(int filehandle, void* const buffer, uint64_t buffer_size)
+{
+	uint64_t pos = 0;
+	while (pos < buffer_size)
+	{
+		int res32 = _write(filehandle, reinterpret_cast<const unsigned char*>(buffer) + pos, buffer_size - pos < 0x10000000 ? buffer_size - pos : 0x10000000);
+		if (res32 == -1)
+			return -1;
+		pos += res32;
+	}
+	return static_cast<int64_t>(pos);
 }
 
 /**
@@ -404,7 +415,7 @@ int HexEditorWindow::load_file(LPCTSTR fname)
 		int64_t filelen = _filelengthi64(filehandle);
 		m_dataArray.clear();
 		// Try to allocate memory for the file.
-		if (m_dataArray.resize(filelen))
+		if (filelen >= 0 && (sizeof(size_t) >= 8 || filelen < 0x100000000) && m_dataArray.resize(filelen))
 		{
 			// If read-only mode on opening is enabled or the file is read only:
 			bReadOnly = bOpenReadOnly || -1 == _taccess(fname, 02); //Pabs added call to _access
@@ -440,8 +451,8 @@ int HexEditorWindow::load_file(LPCTSTR fname)
 		// Update MRU list.
 		update_MRU();
 		bFilestatusChanged = true;
-		iVscrollMax = 0;
-		iVscrollPos = 0;
+		iVscrollMax64 = 0;
+		iVscrollPos64 = 0;
 		iHscrollMax = 0;
 		iHscrollPos = 0;
 		iCurByte = 0;
@@ -504,8 +515,8 @@ int HexEditorWindow::at_window_create(HWND hw, HINSTANCE hI)
 	hInstance = hI;
 	hAccel = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDR_ACCELERATOR1));
 
-	iVscrollMax = 0;
-	iVscrollPos = 0;
+	iVscrollMax64 = 0;
+	iVscrollPos64 = 0;
 	iHscrollMax = 0;
 	iHscrollPos = 0;
 
@@ -548,6 +559,32 @@ static int DetermineMaxOffsetLen(INT64 size)
 	while (size & ~(INT64)0 << 4 * maxLen)
 		++maxLen;
 	return maxLen;
+}
+
+static int toVScrollPos32(int64_t iVscrollPos64, int64_t iVscrollMax64)
+{
+	while (iVscrollMax64 >= 0x80000000)
+	{
+		iVscrollMax64 /= 2;
+		iVscrollPos64 /= 2;
+	}
+	return static_cast<int>(iVscrollPos64);
+}
+
+static int64_t fromVScrollPos32(int nPos32, int64_t iVscrollMax64)
+{
+	int64_t nNewPos64 = static_cast<int64_t>(nPos32);
+	while (iVscrollMax64 >= 0x80000000)
+	{
+		iVscrollMax64 /= 2;
+		nNewPos64 *= 2;
+	}
+	return nNewPos64;
+}
+
+static int64_t adjustVScrollPos64(int64_t iVscrollPos64, int64_t iVscrollMax64)
+{
+	return fromVScrollPos32(toVScrollPos32(iVscrollPos64, iVscrollMax64), iVscrollMax64);
 }
 
 /**
@@ -602,8 +639,8 @@ void HexEditorWindow::resize_window()
 	if (bCenterCaret)
 	{
 		size_t iCenter = (bSelected ? iEndOfSelection : iCurByte) / iBytesPerLine;
-		if (iCenter < iVscrollPos || iCenter > iVscrollPos + cyBuffer)
-			iVscrollPos = max(0, iCenter - cyBuffer / 2);
+		if (iCenter < iVscrollPos64 || iCenter > iVscrollPos64 + cyBuffer)
+			iVscrollPos64 = adjustVScrollPos64(max(0, iCenter - cyBuffer / 2), iVscrollMax64);
 	}
 //Pabs removed - scrollbar fix
 
@@ -619,26 +656,20 @@ void HexEditorWindow::resize_window()
 		if (length < ary_sibling[i]->get_length())
 			length = ary_sibling[i]->get_length();
 	}
-	iVscrollMax = (length + iBytesPerLine) / iBytesPerLine;
+	iVscrollMax64 = (length + iBytesPerLine) / iBytesPerLine;
 
-//Pabs inserted "ffff" after each 0xffff - 32bit scrolling
-	if (iVscrollMax <= 0xffffffff)
-		iVscrollMax = iVscrollMax - 1;
-	else
-		iVscrollMax = 0xffffffff;
-//end
 //Pabs reorganised this bit to fix the scrollbars
 	SCROLLINFO SI;
 	SI.cbSize = sizeof SI;
 	SI.fMask = SIF_RANGE | SIF_POS | SIF_DISABLENOSCROLL | SIF_PAGE;
-	if (iVscrollPos > iVscrollMax - cyBuffer + 1)
-		iVscrollPos = iVscrollMax - cyBuffer + 1;
-	if (iVscrollPos < 0)
-		iVscrollPos = 0;
-	SI.nPage = cyBuffer;
-	SI.nPos = iVscrollPos;
+	if (iVscrollPos64 > iVscrollMax64 - cyBuffer + 1)
+		iVscrollPos64 = adjustVScrollPos64(iVscrollMax64 - cyBuffer + 1, iVscrollMax64);
+	if (iVscrollPos64 < 0)
+		iVscrollPos64 = 0;
+	SI.nPage = toVScrollPos32(cyBuffer, iVscrollMax64);
+	SI.nPos = toVScrollPos32(iVscrollPos64, iVscrollMax64);
 	SI.nMin = 0;
-	SI.nMax = iVscrollMax;
+	SI.nMax = toVScrollPos32(iVscrollMax64, iVscrollMax64);
 	pwnd->SetScrollInfo(SB_VERT, &SI, TRUE);
 
 	iHscrollMax = iCharsPerLine - 1;
@@ -715,17 +746,19 @@ void HexEditorWindow::snap_caret()
 		adjust_hscrollbar();
 	}
 
-	int row = iCurByte / iBytesPerLine;
-	if (row < iVscrollPos)
+	size_t row = iCurByte / iBytesPerLine;
+	if (row < iVscrollPos64)
 	{
-		iVscrollPos = row;
+		iVscrollPos64 = adjustVScrollPos64(row, iVscrollMax64);
 		adjust_vscrollbar();
 	}
-	else if (row >= iVscrollPos + cyBuffer)
+	else if (row >= iVscrollPos64 + cyBuffer)
 	{
-		iVscrollPos = row - (cyBuffer - 1);
-		if (iVscrollPos < 0)
-			iVscrollPos = 0;
+		iVscrollPos64 = adjustVScrollPos64(row - (cyBuffer - 1), iVscrollMax64);
+		if (iVscrollPos64 < 0)
+			iVscrollPos64 = 0;
+		if (row >= iVscrollPos64 + cyBuffer)
+			iVscrollPos64 += fromVScrollPos32(1, iVscrollMax64);
 		adjust_vscrollbar();
 	}
 }
@@ -829,7 +862,7 @@ void HexEditorWindow::keydown(int key)
 		}
 	}
 
-	int icn = iCurNibble;
+	size_t icn = iCurNibble;
 
 	size_t lastbyte = m_dataArray.size();
 	if (bSelected)
@@ -856,7 +889,10 @@ void HexEditorWindow::keydown(int key)
 	switch(key)
 	{
 	case VK_LEFT: case VK_UP:  case VK_PRIOR:
-		*a -= b;
+		if (*a >= b)
+			*a -= b;
+		else
+			*a = 0;
 		break;
 	case VK_RIGHT: case VK_DOWN: case VK_NEXT:
 		*a += b;
@@ -1000,8 +1036,8 @@ void HexEditorWindow::character(char ch)
 	{
 		olddata = UndoRecord::alloc(&m_dataArray[iCurByte], 1);
 	}
-	int offset = iCurByte;
-	int iByteLine = iCurByte / iBytesPerLine;
+	size_t offset = iCurByte;
+	size_t iByteLine = iCurByte / iBytesPerLine;
 	if (iEnteringMode == BYTES) // Byte-mode
 	{
 		if (iCurNibble == 0)
@@ -1050,50 +1086,51 @@ void HexEditorWindow::vscroll(int cmd)
 	SI.cbSize = sizeof SI;
 	SI.fMask = SIF_POS | SIF_TRACKPOS;
 	pwnd->GetScrollInfo(SB_VERT, &SI);
-	SI.nPos = iVscrollPos;
+	SI.nPos = toVScrollPos32(iVscrollPos64, iVscrollMax64);
 	switch (cmd)
 	{
 	case SB_TOP:
-		iVscrollPos = 0;
+		iVscrollPos64 = 0;
 		break;
 	case SB_BOTTOM:
-		iVscrollPos = iNumlines - 1;
+		iVscrollPos64 = iNumlines - 1;
 		break;
 	case SB_LINEUP:
-		if (iVscrollPos > 0)
-			iVscrollPos -= 1;
+		if (iVscrollPos64 > 0)
+			iVscrollPos64 -= fromVScrollPos32(1, iVscrollMax64);
 		break;
 	case SB_LINEDOWN:
-		if (iVscrollPos < iNumlines)
-			iVscrollPos += 1;
+		if (iVscrollPos64 < iNumlines)
+			iVscrollPos64 += fromVScrollPos32(1, iVscrollMax64);
 		break;
 	case SB_PAGEUP:
-		if (iVscrollPos >= cyBuffer)
-			iVscrollPos -= cyBuffer;
+		if (iVscrollPos64 >= cyBuffer)
+			iVscrollPos64 -= cyBuffer;
 		else
-			iVscrollPos = 0;
+			iVscrollPos64 = 0;
 		break;
 	case SB_PAGEDOWN:
-		if (iVscrollPos <= iNumlines - cyBuffer)
-			iVscrollPos += cyBuffer;
+		if (iVscrollPos64 <= iNumlines - cyBuffer)
+			iVscrollPos64 += cyBuffer;
 		else
-			iVscrollPos = iNumlines;
+			iVscrollPos64 = iNumlines;
 		break;
 	case SB_THUMBTRACK:
-		iVscrollPos = SI.nTrackPos;
+		iVscrollPos64 = fromVScrollPos32(SI.nTrackPos, iVscrollMax64);
 		break;
 	default:
 		return;//break;//Pabs put return here - don't repaint if don't need to
 	}
 //Pabs inserted
-	if (iVscrollPos > iVscrollMax - cyBuffer + 1)
-		iVscrollPos = iVscrollMax - cyBuffer + 1;
-	if (iVscrollPos < 0)
-		iVscrollPos = 0;
+	if (iVscrollPos64 > iVscrollMax64 - cyBuffer + 1)
+		iVscrollPos64 = iVscrollMax64 - cyBuffer + 1;
+	if (iVscrollPos64 < 0)
+		iVscrollPos64 = 0;
+	iVscrollPos64 = adjustVScrollPos64(iVscrollPos64, iVscrollMax64);
 //end
-	scroll_window(0, SI.nPos - iVscrollPos);
+	scroll_window(0, fromVScrollPos32(SI.nPos, iVscrollMax64) - iVscrollPos64);
 	SI.fMask = SIF_POS | SIF_DISABLENOSCROLL;
-	SI.nPos = iVscrollPos;
+	SI.nPos = toVScrollPos32(iVscrollPos64, iVscrollMax64);
 	pwnd->SetScrollInfo(SB_VERT, &SI, TRUE);
 }
 
@@ -1163,8 +1200,8 @@ int HexEditorWindow::paint()
 	//-------------------------------------------------------
 	pwnd->HideCaret();
 	// Delete remains of last position.
-	int a = iVscrollPos + ps.rcPaint.top / cyChar;
-	int b = iVscrollPos + ps.rcPaint.bottom / cyChar;
+	size_t a = iVscrollPos64 + ps.rcPaint.top / cyChar;
+	size_t b = iVscrollPos64 + ps.rcPaint.bottom / cyChar;
 	if (b >= iNumlines)
 		b = iNumlines - 1;
 	int iBkColor = PALETTERGB(GetRValue(iBkColorValue), GetGValue(iBkColorValue), GetBValue(iBkColorValue));
@@ -1172,7 +1209,7 @@ int HexEditorWindow::paint()
 	HBrush *pbr = HBrush::CreateSolidBrush(iBkColor);
 	// Delete lower border if there are empty lines on screen.
 	pwnd->GetClientRect(&rc);
-	rc.top = (b - iVscrollPos + 1) * cyChar;
+	rc.top = (b - iVscrollPos64 + 1) * cyChar;
 	if (rc.top < rc.bottom)
 		pdc->FillRect(&rc, pbr);
 	// Delete right border.
@@ -1188,7 +1225,7 @@ int HexEditorWindow::paint()
 	HGdiObj *oldpen = pdc->SelectObject(sep_pen);
 	pbr = HBrush::CreateSolidBrush(iBmkColor);
 
-	for (int i = a ; i <= b ; i++)
+	for (size_t i = a ; i <= b ; i++)
 	{
 		print_line(pdc, i, pbr);
 		// Mark character.
@@ -1513,8 +1550,8 @@ void HexEditorWindow::command(int cmd)
 			n += buf[n].Format(_T("Data size: %d\n"), m_dataArray.capacity());
 			n += buf[n].Format(_T("cxChar: %d\n"), cxChar);
 			n += buf[n].Format(_T("cyChar: %d\n"), cyChar);
-			n += buf[n].Format(_T("iNumlines: %d\n"), iNumlines);
-			n += buf[n].Format(_T("iVscrollPos: %d\n"), iVscrollPos);
+			n += buf[n].Format(_T("iNumlines: %zd\n"), iNumlines);
+			n += buf[n].Format(_T("iVscrollPos: %zd\n"), iVscrollPos64);
 			n += buf[n].Format(_T("iCurByte: %d\n"), iCurByte);
 			n += buf[n].Format(_T("cyBuffer: %d\n"), cyBuffer);
 			n += buf[n].Format(_T("cxBuffer: %d\n"), cxBuffer);
@@ -1994,7 +2031,7 @@ void HexEditorWindow::set_caret_pos()
 	size_t iCaretByte = bSelected ? iEndOfSelection : iCurByte;
 	size_t iCaretLine = iCaretByte / iBytesPerLine;
 	int x = iMaxOffsetLen + iByteSpace - iHscrollPos;
-	int y = iCaretLine - iVscrollPos;
+	int64_t y = iCaretLine - iVscrollPos64;
 	if (y >= 0 && y < cyBuffer && !bSelecting)
 	{
 		switch (iEnteringMode)
@@ -2034,7 +2071,7 @@ void HexEditorWindow::repaint(size_t from, size_t to)
 		swap(from, to);
 	if (from != (size_t)-1)
 	{
-		from -= iVscrollPos;
+		from -= iVscrollPos64;
 		if (from < 0)
 			from = 0;
 		else if (from > cyBuffer)
@@ -2043,7 +2080,7 @@ void HexEditorWindow::repaint(size_t from, size_t to)
 	}
 	if (to != (size_t)-1)
 	{
-		to -= iVscrollPos - 1;
+		to -= iVscrollPos64 - 1;
 		if (to < 0)
 			to = 0;
 		else if (to > cyBuffer)
@@ -2072,8 +2109,8 @@ void HexEditorWindow::clear_all()
 	iCharSpace = 1;
 	m_dataArray.clear();
 	filename[0] = '\0';
-	iVscrollMax = 0;
-	iVscrollPos = 0;
+	iVscrollMax64 = 0;
+	iVscrollPos64 = 0;
 	iHscrollMax = 0;
 	iHscrollPos = 0;
 	iCurByte = 0;
@@ -2088,10 +2125,10 @@ void HexEditorWindow::adjust_vscrollbar()
 	SI.cbSize = sizeof SI;
 	SI.fMask = SIF_RANGE | SIF_POS | SIF_DISABLENOSCROLL;
 	pwnd->GetScrollInfo(SB_VERT, &SI);
-	scroll_window(0, SI.nPos - iVscrollPos);
+	scroll_window(0, fromVScrollPos32(SI.nPos, iVscrollMax64) - iVscrollPos64);
 	SI.nMin = 0;
-	SI.nMax = iVscrollMax;
-	SI.nPos = iVscrollPos;
+	SI.nMax = toVScrollPos32(iVscrollMax64, iVscrollMax64);
+	SI.nPos = toVScrollPos32(iVscrollPos64, iVscrollMax64);
 	pwnd->SetScrollInfo(SB_VERT, &SI, TRUE);
 }
 
@@ -2134,7 +2171,7 @@ void HexEditorWindow::mark_char(HSurface *pdc)
 		assert(FALSE);
 		return;
 	}
-	r.top = iCurByte / iBytesPerLine - iVscrollPos;
+	r.top = iCurByte / iBytesPerLine - iVscrollPos64;
 	r.bottom = r.top + 1;
 	r.left *= cxChar;
 	r.right *= cxChar;
@@ -2173,9 +2210,9 @@ void HexEditorWindow::print_text(HSurface *pdc, int x, int y, TCHAR *pch, int cc
  * @param [in] line Absolute line number to print.
  * @param [in] hbr Paint brush.
  */
-void HexEditorWindow::print_line(HSurface *pdc, int line, HBrush *pbr)
+void HexEditorWindow::print_line(HSurface *pdc, size_t line, HBrush *pbr)
 {
-	size_t startpos = static_cast<size_t>(line) * iBytesPerLine;
+	size_t startpos = line * iBytesPerLine;
 
 	// Return if this line does not even contain the end-of-file double
 	// underscore (at index upperbound+1).
@@ -2200,7 +2237,7 @@ void HexEditorWindow::print_line(HSurface *pdc, int line, HBrush *pbr)
 	size_t iSelLower = min(iStartOfSelection, iEndOfSelection);
 	size_t iSelUpper = max(iStartOfSelection, iEndOfSelection);
 
-	int y = line - iVscrollPos;
+	size_t y = line - iVscrollPos64;
 	int x = -iHscrollPos;
 
 	int m = iMaxOffsetLen + iByteSpace;
@@ -2287,7 +2324,7 @@ void HexEditorWindow::print_line(HSurface *pdc, int line, HBrush *pbr)
 
 	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	// Separators.
-	r.top = (line - iVscrollPos) * cyChar;
+	r.top = (line - iVscrollPos64) * cyChar;
 	r.bottom = r.top + cyChar;
 	for (i = 0 ; i <= iBytesPerLine ; i += 4)
 	{
@@ -2310,17 +2347,17 @@ void HexEditorWindow::print_line(HSurface *pdc, int line, HBrush *pbr)
  * @param [in] hbr Paint brush.
  * @param [in] startpos Start position of the line.
  */
-void HexEditorWindow::PrintBookmarkIndicators(HSurface *pdc, HBrush *pbr, int startpos)
+void HexEditorWindow::PrintBookmarkIndicators(HSurface *pdc, HBrush *pbr, size_t startpos)
 {
 	// Print bookmark indicators.
 	// Are there bookmarks in this line?
-	int length = get_length();
-	int el = startpos + iBytesPerLine - 1;
+	size_t length = get_length();
+	size_t el = startpos + iBytesPerLine - 1;
 	int chpos;
 	// Brush for bookmark borders.
 	for (int i = 0; i < iBmkCount; i++)
 	{
-		int offset = pbmkList[i].offset;
+		size_t offset = pbmkList[i].offset;
 		// Print the bookmark if it is within the file.
 		if (offset >= startpos && offset <= el && offset < length)
 		{
@@ -2329,9 +2366,9 @@ void HexEditorWindow::PrintBookmarkIndicators(HSurface *pdc, HBrush *pbr, int st
 			chpos = iMaxOffsetLen + iByteSpace + (offset % iBytesPerLine) * 3 - iHscrollPos;
 			RECT r;
 			r.left = chpos * cxChar;
-			r.top = (offset / iBytesPerLine - iVscrollPos) * cyChar;
+			r.top = (offset / iBytesPerLine - iVscrollPos64) * cyChar;
 			r.right = r.left + 2 * cxChar;
-			r.bottom = (offset / iBytesPerLine - iVscrollPos + 1) * cyChar;
+			r.bottom = (offset / iBytesPerLine - iVscrollPos64 + 1) * cyChar;
 			r.top--;
 			r.left -= 2;
 			r.right += 2;
@@ -2341,9 +2378,9 @@ void HexEditorWindow::PrintBookmarkIndicators(HSurface *pdc, HBrush *pbr, int st
 			chpos = iMaxOffsetLen + iByteSpace + iBytesPerLine * 3 + iCharSpace
 				+ (offset % iBytesPerLine) - iHscrollPos;
 			r.left = chpos * cxChar;
-			r.top = (offset / iBytesPerLine - iVscrollPos) * cyChar;
+			r.top = (offset / iBytesPerLine - iVscrollPos64) * cyChar;
 			r.right = (chpos + 1) * cxChar;
-			r.bottom = (offset / iBytesPerLine - iVscrollPos + 1) * cyChar;
+			r.bottom = (offset / iBytesPerLine - iVscrollPos64 + 1) * cyChar;
 			r.top--;
 			pdc->FrameRect(&r, pbr);
 		}
@@ -2369,14 +2406,15 @@ void HexEditorWindow::adjust_view_for_caret()
 	if( iHscrollPos < 0 )
 		iHscrollPos = 0;
 	adjust_hscrollbar();
-	int row = iCurByte / iBytesPerLine;
-	if( row < iVscrollPos
-	 || row >= iVscrollPos + cyBuffer )
-		iVscrollPos = row - cyBuffer / 2;
-	if( iVscrollPos > iVscrollMax - cyBuffer + 1 )
-		iVscrollPos = iVscrollMax - cyBuffer + 1;
-	if( iVscrollPos < 0 )
-		iVscrollPos = 0;
+	size_t row = iCurByte / iBytesPerLine;
+	if( row < iVscrollPos64
+	 || row >= iVscrollPos64 + cyBuffer )
+		iVscrollPos64 = row - cyBuffer / 2;
+	if( iVscrollPos64 > iVscrollMax64 - cyBuffer + 1 )
+		iVscrollPos64 = iVscrollMax64 - cyBuffer + 1;
+	if( iVscrollPos64 < 0 )
+		iVscrollPos64 = 0;
+	iVscrollPos64 = adjustVScrollPos64(iVscrollPos64, iVscrollMax64);
 	adjust_vscrollbar();
 //end
 }
@@ -2686,7 +2724,7 @@ int HexEditorWindow::mousemove(int xPos, int yPos)
 			if (iEndOfSelection != new_pos)
 			{
 				bSelected = true;
-				int oeos = iEndOfSelection;
+				size_t oeos = iEndOfSelection;
 				iEndOfSelection = new_pos;
 				repaint(oeos / iBytesPerLine, new_pos / iBytesPerLine);
 			}
@@ -2766,7 +2804,7 @@ int HexEditorWindow::lbuttondown(int nFlags, int xPos, int yPos)
 				bSelecting = true;
 				if (iEndOfSelection != new_pos)
 				{
-					const int oeos = iEndOfSelection;
+					const size_t oeos = iEndOfSelection;
 					iEndOfSelection = new_pos;
 					if (!bSelected)
 					{
@@ -2822,7 +2860,7 @@ void HexEditorWindow::get_pos(long x, long y)
 	int scr_column = x / cxChar; // Column on the screen.
 	int scr_row = y / cyChar; // Line on the screen.
 	column = scr_column + iHscrollPos; // Absolute column number.
-	line = iVscrollPos + scr_row; // Absolute line number.
+	line = iVscrollPos64 + scr_row; // Absolute line number.
 
 	int iStartofChars = iGetCharsPerLine() - iBytesPerLine;
 	int iStartofBytes = iMaxOffsetLen + iByteSpace;
@@ -2969,7 +3007,6 @@ void HexEditorWindow::set_drag_caret(long x, long y, bool Copying, bool Overwrit
 		line = new_pos / iBytesPerLine;
 	}
 
-	y = line;
 	x = bytenum;
 
 	if (area == AREA_BYTES)
@@ -2982,7 +3019,7 @@ void HexEditorWindow::set_drag_caret(long x, long y, bool Copying, bool Overwrit
 	}
 
 	x -= iHscrollPos;
-	y -= iVscrollPos;
+	y = line - iVscrollPos64;
 
 	if (x != old_col || y != old_row)
 	{
@@ -3056,8 +3093,8 @@ void HexEditorWindow::reset()
 	bSelecting = false;
 	clear_undorecords();
 	bFilestatusChanged = true;
-	iVscrollMax = 0;
-	iVscrollPos = 0;
+	iVscrollMax64 = 0;
+	iVscrollPos64 = 0;
 	iHscrollMax = 0;
 	iHscrollPos = 0;
 	iCurByte = 0;
@@ -3141,7 +3178,7 @@ int HexEditorWindow::CMD_copy_hexdump(int iCopyHexdumpMode, int iCopyHexdumpType
 //Pabs changed - "char*" removed - see further up
 		if (!mem)
 		{
-			pMem = new char[buflen];
+			pMem = new(std::nothrow) char[buflen];
 			if (!pMem)
 				return 0;
 		}
@@ -3216,7 +3253,7 @@ int HexEditorWindow::CMD_copy_hexdump(int iCopyHexdumpMode, int iCopyHexdumpType
 		// Create hexdump.
 		if (!mem)
 		{
-			pMem = new char[buflen];
+			pMem = new(std::nothrow) char[buflen];
 			if (!pMem)
 				return 0;
 		}
@@ -3275,7 +3312,7 @@ int HexEditorWindow::CMD_copy_hexdump(int iCopyHexdumpMode, int iCopyHexdumpType
 			if (filehandle != -1)
 			{
 				// Write file.
-				if (_write(filehandle, pMem, static_cast<unsigned>(buflen - 1)) != -1)
+				if (_write64(filehandle, pMem, buflen - 1) != -1)
 				{//Pabs replaced NULL w hwnd
 					MessageBox(pwnd, GetLangString(IDS_HDUMP_SAVED), MB_ICONINFORMATION);
 				}
@@ -3409,7 +3446,7 @@ int HexEditorWindow::CMD_save_as()
 		return 0;
 	}
 	int done = 0;
-	if (_write(filehandle, m_dataArray.pointer(), m_dataArray.size()) != -1)
+	if (_write64(filehandle, m_dataArray.pointer(), m_dataArray.size()) != -1)
 	{
 		// File was saved.
 		GetLongPathNameWin32(szFileName, filename);
@@ -3508,7 +3545,7 @@ int HexEditorWindow::CMD_save()
 		{
 			MessageBox(pwnd, GetLangString(IDS_ERR_SEEK_FILE), MB_ICONERROR);
 		}
-		else if (_write(filehandle, m_dataArray.pointer(), nbl) == -1)
+		else if (_write64(filehandle, m_dataArray.pointer(), nbl) == -1)
 		{
 			MessageBox(pwnd, GetLangString(IDS_ERR_WRITE_FILE), MB_ICONERROR);
 		}
@@ -3529,7 +3566,7 @@ int HexEditorWindow::CMD_save()
 		MessageBox(pwnd, GetLangString(IDS_FILE_SAVE_ERROR), MB_ICONERROR);
 		return 0;
 	}
-	if (_write(filehandle, m_dataArray.pointer(), m_dataArray.size()) == -1)
+	if (_write64(filehandle, m_dataArray.pointer(), m_dataArray.size()) == -1)
 	{
 		MessageBox(pwnd, GetLangString(IDS_ERR_WRITE_FILE), MB_ICONERROR);
 	}
@@ -3577,8 +3614,8 @@ void HexEditorWindow::adjust_view_for_selection()
 		if (iStartOfSelSetting > iEndOfSelSetting)
 			swap(iStartOfSelSetting, iEndOfSelSetting);
 
-		int sosline = iStartOfSelSetting / iBytesPerLine;
-		int eosline = iEndOfSelSetting / iBytesPerLine;
+		size_t sosline = iStartOfSelSetting / iBytesPerLine;
+		size_t eosline = iEndOfSelSetting / iBytesPerLine;
 
 		int soscol,eoscol,maxcols;
 		if (iEnteringMode == BYTES)
@@ -3594,15 +3631,15 @@ void HexEditorWindow::adjust_view_for_selection()
 			maxcols = iBytesPerLine;
 		}
 
-		int lines = eosline - sosline + 1;
+		size_t lines = eosline - sosline + 1;
 		int cols = ((eosline == sosline) ? eoscol - soscol + 1 : maxcols);
 
 		if( lines > cyBuffer ){
-			if( iVscrollPos <= (sosline+eosline-cyBuffer+1)/2 )
-				iVscrollPos = sosline;
-			else iVscrollPos = eosline-cyBuffer+1;
+			if( iVscrollPos64 <= (sosline+eosline-cyBuffer+1)/2 )
+				iVscrollPos64 = sosline;
+			else iVscrollPos64 = eosline-cyBuffer+1;
 		}
-		else iVscrollPos = sosline - (cyBuffer - (eosline-sosline) )/2;
+		else iVscrollPos64 = sosline - (cyBuffer - (eosline-sosline) )/2;
 
 		int mincol, maxcol;
 		if(soscol>=eoscol){maxcol=soscol;mincol=eoscol;}
@@ -3630,9 +3667,10 @@ void HexEditorWindow::adjust_view_for_selection()
 		if( iHscrollPos > iHscrollMax - cxBuffer + 1 )
 			iHscrollPos = iHscrollMax - cxBuffer + 1;
 		if( iHscrollPos < 0 ) iHscrollPos = 0;
-		if( iVscrollPos > iVscrollMax - cyBuffer + 1 )
-			iVscrollPos = iVscrollMax - cyBuffer + 1;
-		if( iVscrollPos < 0 ) iVscrollPos = 0;
+		if( iVscrollPos64 > iVscrollMax64 - cyBuffer + 1 )
+			iVscrollPos64 = iVscrollMax64 - cyBuffer + 1;
+		if( iVscrollPos64 < 0 ) iVscrollPos64 = 0;
+		iVscrollPos64 = adjustVScrollPos64(iVscrollPos64, iVscrollMax64);
 		adjust_hscrollbar();
 		adjust_vscrollbar();
 //end
@@ -3899,7 +3937,7 @@ void HexEditorWindow::CMD_on_backspace()
 	else
 	{
 		// Only step back.
-		int iByteLine = iCurByte-- / iBytesPerLine;
+		size_t iByteLine = iCurByte-- / iBytesPerLine;
 		snap_caret();
 		repaint(iByteLine, iCurByte / iBytesPerLine);
 	}
@@ -3986,18 +4024,18 @@ void HexEditorWindow::timer(WPARAM w, LPARAM)
 			if (iMouseY >= cyBuffer * cyChar)
 			{
 				// Lower border reached.
-				if (iVscrollPos < iNumlines - cyBuffer)
+				if (iVscrollPos64 < iNumlines - cyBuffer)
 				{
-					iVscrollPos++;
+					iVscrollPos64++;
 					adjustv = 1;
 				}
 			}
 			else if (iMouseY < cyChar)
 			{
 				// Upper border reached.
-				if (iVscrollPos > 0)
+				if (iVscrollPos64 > 0)
 				{
-					iVscrollPos--;
+					iVscrollPos64--;
 					adjustv = 1;
 				}
 			}
@@ -4020,7 +4058,7 @@ void HexEditorWindow::timer(WPARAM w, LPARAM)
 					adjusth = 1;
 				}
 			}
-
+			iVscrollPos64 = adjustVScrollPos64(iVscrollPos64, iVscrollMax64);
 			if (adjusth)
 				adjust_hscrollbar();
 			if (adjustv)
@@ -4036,8 +4074,8 @@ void HexEditorWindow::start_mouse_operation()
 	pwnd->KillTimer(MOUSE_OP_DELAY_TIMER_ID);
 	bMouseOpDelayTimerSet = FALSE;
 
-	int iStartOfSelSetting = iStartOfSelection;
-	int iEndOfSelSetting = iEndOfSelection;
+	size_t iStartOfSelSetting = iStartOfSelection;
+	size_t iEndOfSelSetting = iEndOfSelection;
 	if (iEndOfSelSetting < iStartOfSelSetting)
 		swap(iEndOfSelSetting, iStartOfSelSetting);
 
@@ -4095,8 +4133,8 @@ void HexEditorWindow::start_mouse_operation()
 			else
 			{
 				int iCopyHexdumpType;
-				int iCopyHexdumpDlgStart;
-				int iCopyHexdumpDlgEnd;
+				size_t iCopyHexdumpDlgStart;
+				size_t iCopyHexdumpDlgEnd;
 				//One of the two hexdump types
 				if (/*Output like display*/ output_text_hexdump_display)
 				{
@@ -4725,8 +4763,8 @@ void HexEditorWindow::RefreshCurrentTrack()
 			_stprintf(filename, GetLangString(IDS_DRIVES_SECTOR),
 					(LPCSTR) SelectedPartitionInfo->GetNameAsString(), CurrentSectorNumber);
 			bFileNeverSaved = false;
-			iVscrollMax = 0;
-			iVscrollPos = 0;
+			iVscrollMax64 = 0;
+			iVscrollPos64 = 0;
 			iHscrollMax = 0;
 			iHscrollPos = 0;
 			iCurByte = 0;
@@ -5098,7 +5136,7 @@ BOOL HexEditorWindow::select_prev_diff(BOOL bFromEnd)
 	{
 		--i;
 	} while (i >= 0 && buffer[i] == sibling1_buffer[i] && buffer[i] == sibling2_buffer[i]);
-	int j = i;
+	int64_t j = i;
 	while (j >= 0 && (buffer[j] != sibling1_buffer[j] || buffer[j] != sibling2_buffer[j]))
 		--j;
 	if (i != j)
@@ -5136,8 +5174,8 @@ void HexEditorWindow::synch_sibling(BOOL bSynchSelection)
 			sibling_status->iCurByte = iCurByte < sibling_length ? iCurByte : sibling_length;
 			sibling_status->iCurNibble = iCurNibble;
 
-			sibling_status->iVscrollMax = iVscrollMax;
-			sibling_status->iVscrollPos = iVscrollPos;
+			sibling_status->iVscrollMax64 = iVscrollMax64;
+			sibling_status->iVscrollPos64 = iVscrollPos64;
 			ary_sibling[i]->adjust_vscrollbar();
 
 			if (bSynchSelection)
@@ -5150,10 +5188,10 @@ void HexEditorWindow::synch_sibling(BOOL bSynchSelection)
 					sibling_status->iStartOfSelection = sibling_length - 1;
 				if (sibling_status->iEndOfSelection >= sibling_length)
 					sibling_status->iEndOfSelection = sibling_length - 1;
-				int iMinNew = sibling_status->bSelected ?
+				size_t iMinNew = sibling_status->bSelected ?
 					min(sibling_status->iStartOfSelection, sibling_status->iEndOfSelection) :
 					sibling_status->iCurByte;
-				int iMaxNew = sibling_status->bSelected ?
+				size_t iMaxNew = sibling_status->bSelected ?
 					max(sibling_status->iStartOfSelection, sibling_status->iEndOfSelection) :
 					sibling_status->iCurByte;
 				if (iMin > iMinNew)
@@ -5181,11 +5219,12 @@ void HexEditorWindow::CMD_revert()
 			_lseeki64(filehandle, iPartialOffset, 0);
 			if (m_dataArray.reserve(iPartialOpenLen))
 			{
-				if (_read(filehandle, &m_dataArray[0], iPartialOpenLen) != -1)
+				if (_read64(filehandle, &m_dataArray[0], iPartialOpenLen) != -1)
 				{
 					bReadOnly = bOpenReadOnly || -1 == _taccess(filename, 02);
-					iVscrollMax = iVscrollPos = iHscrollMax = iHscrollPos =
-					iVscrollPos = iCurByte = iCurNibble = 0;
+					iVscrollMax64 = iVscrollPos64 = iCurByte = 0;
+					iHscrollMax = iHscrollPos = 0;
+					iCurNibble = 0;
 					clear_undorecords();
 					bFilestatusChanged = true;
 					bFileNeverSaved = false;
@@ -5270,7 +5309,7 @@ void HexEditorWindow::CMD_insertfile()
 			size_t count = ol - (rs + rl);
 			if (inslen > rl) // bigger
 				memmove(dst, src, count);
-			bool rdsuc = _read(fhandle, &m_dataArray[rs], inslen) != -1; //read successful
+			bool rdsuc = _read64(fhandle, &m_dataArray[rs], inslen) != -1; //read successful
 			push_undorecord(rs, inslen, olddata);
 
 			//In the following two if blocks m_dataArray.SetUpperBound(somelen-1);
@@ -5345,7 +5384,7 @@ void HexEditorWindow::CMD_saveselas()
 			WaitCursor wc;
 			size_t const lower = iGetStartOfSelection();
 			size_t const upper = iGetEndOfSelection(1);
-			if (_write(filehandle, &m_dataArray[lower], upper - lower) != -1)
+			if (_write64(filehandle, &m_dataArray[lower], upper - lower) != -1)
 				complain = 0;
 			_close(filehandle);
 		}
@@ -5498,8 +5537,10 @@ void HexEditorWindow::CMD_open_hexdump()
 		_tcscpy(filename, GetLangString(IDS_UNTITLED));
 		bPartialOpen = bPartialStats = false;
 		clear_undorecords();
-		iVscrollMax = iVscrollPos = iHscrollMax = iHscrollPos =
-			iCurByte = iCurNibble = 0;
+		iVscrollMax64 = iVscrollPos64 = 0;
+		iHscrollMax = iHscrollPos = 0;
+		iCurByte = 0;
+		iCurNibble = 0;
 		bSelected = false;
 		bFileNeverSaved = true;
 		bFilestatusChanged = true;
@@ -6753,9 +6794,11 @@ UndoRecord::Data *UndoRecord::alloc(const BYTE *ptr, size_t len)
 	Data *data = NULL;
 	if (len >= sizeof data)
 	{
-		data = reinterpret_cast<Data *>(SysAllocStringByteLen(reinterpret_cast<LPCSTR>(ptr), len));
+		data = reinterpret_cast<Data *>(malloc(len));
 		if (data == NULL)
-			data = reinterpret_cast<Data *>(-1);
+			data = reinterpret_cast<Data*>(-1);
+		else
+			memcpy(data, ptr, len);
 	}
 	else
 	{
@@ -6771,13 +6814,13 @@ void UndoRecord::free(Data *data)
 	BYTE *p = reinterpret_cast<BYTE *>(&data);
 	if (*p & sizeof data - 1)
 		return;
-	SysFreeString(reinterpret_cast<BSTR>(data));
+	::free(data);
 }
 
 size_t UndoRecord::len(Data *data)
 {
 	BYTE const *const p = reinterpret_cast<BYTE const *>(&data);
-	return *p & sizeof data - 1 ? *p : SysStringByteLen(reinterpret_cast<BSTR>(data));
+	return *p & sizeof data - 1 ? *p : _msize(reinterpret_cast<BSTR>(data));
 }
 
 size_t UndoRecord::reclen() const
@@ -6819,7 +6862,7 @@ bool UndoRecords::push_back(size_t offset, size_t length, UndoRecord::Data *data
 
 void UndoRecords::clear()
 {
-	for (int i = 0; i < recs.size(); ++i)
+	for (size_t i = 0; i < recs.size(); ++i)
 		recs[i].clear();
 	recs.clear();
 	pos = 0;
@@ -6862,7 +6905,7 @@ IHexEditorWindow::SharedUndoRecords::SharedUndoRecords() : pos(0)
 
 IHexEditorWindow::SharedUndoRecords::~SharedUndoRecords()
 {
-	for (int i = 0; i < targets.size(); ++i)
+	for (size_t i = 0; i < targets.size(); ++i)
 		targets[i]->m_pSharedUndoRecords = NULL;
 }
 

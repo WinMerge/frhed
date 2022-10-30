@@ -84,6 +84,19 @@ int ChooseDiffDlg::get_diffs(HListBox *list, BYTE *ps, size_t sl, BYTE *pd, size
 	return diff;
 }
 
+static int64_t _read64(int const fd, void* const buffer, uint64_t const buffer_size)
+{
+	uint64_t pos = 0;
+	while (pos < buffer_size)
+	{
+		int res32 = _read(fd, reinterpret_cast<char *>(buffer) + pos, buffer_size - pos < 0x10000000 ? buffer_size - pos : 0x10000000);
+		if (res32 == -1)
+			return -1;
+		pos += res32;
+	}
+	return static_cast<int64_t>(pos);
+}
+
 /**
  * @brief Initialize the dialog.
  * @param [in] hDlg Handle to dialog.
@@ -115,10 +128,10 @@ BOOL ChooseDiffDlg::OnInitDialog(HWindow *pDlg)
 	{
 		int64_t iDestFileLen = filelen;
 		int64_t iSrcFileLen = m_dataArray.size() - iCurByte;
-		if (BYTE *cmpdata = new BYTE[filelen])
+		if (BYTE *cmpdata = new(std::nothrow) BYTE[filelen])
 		{
 			// Read data.
-			if (_read(filehandle, cmpdata, filelen) != -1)
+			if (_read64(filehandle, cmpdata, filelen) != -1)
 			{
 				HListBox *list = static_cast<HListBox *>(pDlg->GetDlgItem(IDC_CHOOSEDIFF_DIFFLIST));
 				if (int diff = get_diffs(list, &m_dataArray[iCurByte], m_dataArray.size() - iCurByte, cmpdata, filelen))

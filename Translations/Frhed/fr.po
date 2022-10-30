@@ -1780,8 +1780,8 @@ msgstr "Version %u.%u.%u"
 
 #: heksedit.rc:1021
 #, c-format
-msgid "%d) 0x%x=%u to 0x%x=%u (%d bytes)"
-msgstr "%d) 0x%x=%u à 0x%x=%u (%d octets)"
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
+msgstr "%d) 0x%zx=%zu à 0x%zx=%zu (%zd octets)"
 
 #: heksedit.rc:1022
 #, c-format
@@ -2050,8 +2050,8 @@ msgstr "Mémoire insuffisante pour l'ajout."
 
 #: heksedit.rc:1106
 #, c-format
-msgid "Offset: 0x%x = %d"
-msgstr "Offset: 0x%x = %d"
+msgid "Offset: 0x%zx = %zd"
+msgstr "Offset: 0x%zx = %zd"
 
 #: heksedit.rc:1107
 #, c-format
@@ -2555,13 +2555,13 @@ msgstr "Impossible d'utiliser le choix comme cible du remplacement."
 
 #: heksedit.rc:1283
 #, c-format
-msgid "Selected: Offset %d=0x%x to %d=0x%x (%d byte(s))"
-msgstr "Choisi: Offset %d=0x%x vers %d=0x%x (%d octet(s))"
+msgid "Selected: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
+msgstr "Choisi: Offset %zd=0x%zx vers %zd=0x%zx (%zd octet(s))"
 
 #: heksedit.rc:1284
 #, c-format
-msgid "Offset %d=0x%x"
-msgstr "Offset %d=0x%x"
+msgid "Offset %zd=0x%zx"
+msgstr "Offset %zd=0x%zx"
 
 #: heksedit.rc:1285
 #, c-format
@@ -2736,14 +2736,11 @@ msgstr "Nom de fichier et emplacement:"
 
 #: heksedit.rc:1345
 #, c-format
-msgid ""
-"\n"
-"Partially opened at offset 0x%x = %d.\n"
-"Number of bytes read: %d = %d kilobytes.\n"
+msgid "\nPartially opened at offset 0x%zx = %zd.\nNumber of bytes read: %zd = %zd kilobytes.\n"
 msgstr ""
 "\n"
-"Ouvert partiellement à l'offset 0x%x = %d.\n"
-"Nombre d'octets lus: %d = %d kilo-octets.\n"
+"Ouvert partiellement à l'offset 0x%zx = %zd.\n"
+"Nombre d'octets lus: %zd = %zd kilo-octets.\n"
 
 #: heksedit.rc:1346
 #, c-format
@@ -2756,12 +2753,8 @@ msgstr ""
 
 #: heksedit.rc:1347
 #, c-format
-msgid ""
-"\n"
-"Number of hexdump lines: %d.\n"
+msgid "\nNumber of hexdump lines: %zu.\n"
 msgstr ""
-"\n"
-"Nombre d'hexdump par lignes: %d.\n"
 
 #: heksedit.rc:1348
 #, c-format

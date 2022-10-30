@@ -79,8 +79,8 @@ public:
 		int const(iEnteringMode);
 		size_t const(iCurByte);
 		int const(iCurNibble);
-		int const(iVscrollMax);
-		int const(iVscrollPos);
+		int64_t const(iVscrollMax64);
+		int64_t const(iVscrollPos64);
 		int const(iHscrollMax);
 		int const(iHscrollPos);
 		bool const(bSelected);

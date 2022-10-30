@@ -275,7 +275,7 @@ namespace MAUtil {
 				return true;
 			newCapacity = (newCapacity + mGrowBy - 1) / mGrowBy * mGrowBy;
 			MAUTIL_VECTOR_LOG("reserve 2");
-			Type* newData = new Type[newCapacity];
+			Type* newData = new(std::nothrow) Type[newCapacity];
 			if (newData == 0)
 				return false;
 			MAUTIL_VECTOR_LOG("reserve 4");

@@ -1777,8 +1777,8 @@ msgstr "Wersja %u.%u.%u"
 
 #: heksedit.rc:1021
 #, c-format
-msgid "%d) 0x%x=%u to 0x%x=%u (%d bytes)"
-msgstr "%d) 0x%x=%u do 0x%x=%u (%d bajtów)"
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
+msgstr "%d) 0x%zx=%zu do 0x%zx=%zu (%zd bajtów)"
 
 #: heksedit.rc:1022
 #, c-format
@@ -2019,8 +2019,8 @@ msgstr "Za mało pamięci, aby dołączyć."
 
 #: heksedit.rc:1106
 #, c-format
-msgid "Offset: 0x%x = %d"
-msgstr "Przesunięcie: 0x%x = %d"
+msgid "Offset: 0x%zx = %zd"
+msgstr "Przesunięcie: 0x%zx = %zd"
 
 #: heksedit.rc:1107
 #, c-format
@@ -2475,13 +2475,13 @@ msgstr ""
 
 #: heksedit.rc:1283
 #, c-format
-msgid "Selected: Offset %d=0x%x to %d=0x%x (%d byte(s))"
-msgstr "Zaznaczono: przesunięcie %d=0x%x do %d=0x%x (%d bajt(y))"
+msgid "Selected: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
+msgstr "Zaznaczono: przesunięcie %zd=0x%zx do %zd=0x%zx (%zd bajt(y))"
 
 #: heksedit.rc:1284
 #, c-format
-msgid "Offset %d=0x%x"
-msgstr "Przesunięcie %d=0x%x"
+msgid "Offset %zd=0x%zx"
+msgstr "Przesunięcie %zd=0x%zx"
 
 #: heksedit.rc:1285
 #, c-format
@@ -2647,8 +2647,8 @@ msgstr "Nazwa pliku i ścieżka:"
 
 #: heksedit.rc:1345
 #, c-format
-msgid "\nPartially opened at offset 0x%x = %d.\nNumber of bytes read: %d = %d kilobytes.\n"
-msgstr "\nCzęściowo otwarte z przesunięciem 0x%x = %d.\nLiczba odczytanych bajtów: %d = %d kilobajty.\n"
+msgid "\nPartially opened at offset 0x%zx = %zd.\nNumber of bytes read: %zd = %zd kilobytes.\n"
+msgstr "\nCzęściowo otwarte z przesunięciem 0x%zx = %zd.\nLiczba odczytanych bajtów: %zd = %zd kilobajty.\n"
 
 #: heksedit.rc:1346
 #, c-format
@@ -2657,8 +2657,8 @@ msgstr "\nRozmiar pliku: %d bajtów = %d kilobajtów.\n"
 
 #: heksedit.rc:1347
 #, c-format
-msgid "\nNumber of hexdump lines: %d.\n"
-msgstr "\nLiczba linii hexdump: %d.\n"
+msgid "\nNumber of hexdump lines: %zu.\n"
+msgstr ""
 
 #: heksedit.rc:1348
 #, c-format

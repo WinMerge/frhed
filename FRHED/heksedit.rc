@@ -1344,7 +1344,7 @@ BEGIN
    IDS_FPROP_NAME          "File name and path: "
    IDS_FPROP_PARTIAL_OPEN  "\nPartially opened at offset 0x%zx = %zd.\nNumber of bytes read: %zd = %zd kilobytes.\n"
    IDS_FPROP_FSIZE         "\nFile size: %d bytes = %d kilobytes.\n"
-   IDS_FPROP_HDUMP_LINES   "\nNumber of hexdump lines: %d.\n"
+   IDS_FPROP_HDUMP_LINES   "\nNumber of hexdump lines: %zu.\n"
    IDS_MRU_REMOVING        "This file could not be accessed and will be removed from the MRU list."
    IDS_RESET_COLORS        "Really reset colors to default values?"
    IDS_ASK_DELETE_FILE     "Are you sure you want to delete this file?"

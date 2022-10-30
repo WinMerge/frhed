@@ -1782,8 +1782,8 @@ msgstr "Različica %u.%u.%u"
 
 #: heksedit.rc:1021
 #, c-format
-msgid "%d) 0x%x=%u to 0x%x=%u (%d bytes)"
-msgstr "%d) 0x%x=%u to 0x%x=%u (%d bajtov)"
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
+msgstr "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bajtov)"
 
 #: heksedit.rc:1022
 #, c-format
@@ -2052,8 +2052,8 @@ msgstr "Ni dovolj pomnilnika za dodajanje."
 
 #: heksedit.rc:1106
 #, c-format
-msgid "Offset: 0x%x = %d"
-msgstr "Odmik: 0x%x = %d"
+msgid "Offset: 0x%zx = %zd"
+msgstr "Odmik: 0x%zx = %zd"
 
 #: heksedit.rc:1107
 #, c-format
@@ -2562,13 +2562,13 @@ msgstr "Izbora ni bilo mogoče uporabiti kot cilj zamenjave."
 
 #: heksedit.rc:1283
 #, c-format
-msgid "Selected: Offset %d=0x%x to %d=0x%x (%d byte(s))"
-msgstr "Izbrano: Odmik %d=0x%x do %d=0x%x (%d bajtov)"
+msgid "Selected: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
+msgstr "Izbrano: Odmik %zd=0x%zx do %zd=0x%zx (%zd bajtov)"
 
 #: heksedit.rc:1284
 #, c-format
-msgid "Offset %d=0x%x"
-msgstr "Odmik %d=0x%x"
+msgid "Offset %zd=0x%zx"
+msgstr "Odmik %zd=0x%zx"
 
 #: heksedit.rc:1285
 #, c-format
@@ -2748,14 +2748,11 @@ msgstr "Ime datoteke in pot: "
 
 #: heksedit.rc:1345
 #, c-format
-msgid ""
-"\n"
-"Partially opened at offset 0x%x = %d.\n"
-"Number of bytes read: %d = %d kilobytes.\n"
+msgid "\nPartially opened at offset 0x%zx = %zd.\nNumber of bytes read: %zd = %zd kilobytes.\n"
 msgstr ""
 "\n"
-"Delno odprto na odmiku 0x%x = %d.\n"
-"Število prebranih bajtov: %d = %d kilobajtov.\n"
+"Delno odprto na odmiku 0x%zx = %zd.\n"
+"Število prebranih bajtov: %zd = %zd kilobajtov.\n"
 
 #: heksedit.rc:1346
 #, c-format
@@ -2768,12 +2765,8 @@ msgstr ""
 
 #: heksedit.rc:1347
 #, c-format
-msgid ""
-"\n"
-"Number of hexdump lines: %d.\n"
+msgid "\nNumber of hexdump lines: %zu.\n"
 msgstr ""
-"\n"
-"Število vrstic 16-tipkega smetišča: %d.\n"
 
 #: heksedit.rc:1348
 #, c-format

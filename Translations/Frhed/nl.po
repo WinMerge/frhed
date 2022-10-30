@@ -1783,8 +1783,8 @@ msgstr "Versie %u.%u.%u"
 
 #: heksedit.rc:1021
 #, c-format
-msgid "%d) 0x%x=%u to 0x%x=%u (%d bytes)"
-msgstr "%d) 0x%x=%u naar 0x%x=%u (%d bytes)"
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
+msgstr "%d) 0x%zx=%zu naar 0x%zx=%zu (%zd bytes)"
 
 #: heksedit.rc:1022
 #, c-format
@@ -2053,8 +2053,8 @@ msgstr "Niet genoeg geheugen om aan te sluiten."
 
 #: heksedit.rc:1106
 #, c-format
-msgid "Offset: 0x%x = %d"
-msgstr "Offset: 0x%x = %d"
+msgid "Offset: 0x%zx = %zd"
+msgstr "Offset: 0x%zx = %zd"
 
 #: heksedit.rc:1107
 #, c-format
@@ -2558,13 +2558,13 @@ msgstr "Kon selectie niet gebruiken als vervangingsdoel."
 
 #: heksedit.rc:1283
 #, c-format
-msgid "Selected: Offset %d=0x%x to %d=0x%x (%d byte(s))"
-msgstr "Geselecteerd: Offset %d=0x%x tot %d=0x%x (%d byte(s))"
+msgid "Selected: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
+msgstr "Geselecteerd: Offset %zd=0x%zx tot %zd=0x%zx (%zd byte(s))"
 
 #: heksedit.rc:1284
 #, c-format
-msgid "Offset %d=0x%x"
-msgstr "Offset %d=0x%x"
+msgid "Offset %zd=0x%zx"
+msgstr "Offset %zd=0x%zx"
 
 #: heksedit.rc:1285
 #, c-format
@@ -2739,14 +2739,11 @@ msgstr "Bestandsnaam en pad:"
 
 #: heksedit.rc:1345
 #, c-format
-msgid ""
-"\n"
-"Partially opened at offset 0x%x = %d.\n"
-"Number of bytes read: %d = %d kilobytes.\n"
+msgid "\nPartially opened at offset 0x%zx = %zd.\nNumber of bytes read: %zd = %zd kilobytes.\n"
 msgstr ""
 "\n"
-"Gedeeltelijk geopend bij offset 0x%x = %d.\n"
-"Aantal gelezen bytes: %d = %d kilobytes.\n"
+"Gedeeltelijk geopend bij offset 0x%zx = %zd.\n"
+"Aantal gelezen bytes: %zd = %zd kilobytes.\n"
 
 #: heksedit.rc:1346
 #, c-format
@@ -2759,12 +2756,8 @@ msgstr ""
 
 #: heksedit.rc:1347
 #, c-format
-msgid ""
-"\n"
-"Number of hexdump lines: %d.\n"
+msgid "\nNumber of hexdump lines: %zu.\n"
 msgstr ""
-"\n"
-"Aantal hexdump-regels: %d.\n"
 
 #: heksedit.rc:1348
 #, c-format
