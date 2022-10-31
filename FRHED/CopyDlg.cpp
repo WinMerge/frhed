@@ -49,7 +49,8 @@ BOOL CopyDlg::OnInitDialog(HWindow *pDlg)
 	pDlg->SetDlgItemText(IDC_COPY_STARTOFFSET, buf);
 	_stprintf(buf, _T("0x%zx"), iEnd);
 	pDlg->SetDlgItemText(IDC_COPY_OFFSETEDIT, buf);
-	pDlg->SetDlgItemInt(IDC_COPY_BYTECOUNT, iEnd - iStart + 1, TRUE);
+	_stprintf(buf, _T("%zu"), iEnd - iStart + 1);
+	pDlg->SetDlgItemText(IDC_COPY_BYTECOUNT, buf);
 	pDlg->CheckDlgButton(IDC_COPY_OFFSET, BST_CHECKED);
 	// Limit edit text lengths
 	pDlg->SendDlgItemMessage(IDC_COPY_STARTOFFSET, EM_SETLIMITTEXT, MaxTextLen);
@@ -67,8 +68,8 @@ BOOL CopyDlg::Apply(HWindow *pDlg)
 {
 	const int bufSize = 64;
 	TCHAR buf[bufSize + 1] = {0};
-	int64_t iOffset;
-	int64_t iNumberOfBytes;
+	int64_t iOffset = 0;
+	int64_t iNumberOfBytes = 0;
 	if (pDlg->GetDlgItemText(IDC_COPY_STARTOFFSET, buf, bufSize) &&
 		!offset_parse64(buf, iOffset))
 	{
@@ -88,7 +89,7 @@ BOOL CopyDlg::Apply(HWindow *pDlg)
 	else
 	{// Get number of bytes.
 		if (pDlg->GetDlgItemText(IDC_COPY_BYTECOUNT, buf, bufSize) &&
-			_stscanf(buf, _T("%d"), &iNumberOfBytes) == 0)
+			_stscanf(buf, _T("%zd"), &iNumberOfBytes) == 0)
 		{
 			MessageBox(pDlg, GetLangString(IDS_BYTES_NOT_KNOWN), MB_ICONERROR);
 			return FALSE;
@@ -96,7 +97,7 @@ BOOL CopyDlg::Apply(HWindow *pDlg)
 	}
 	// Can requested number be cut?
 	// DataArray.GetLength ()-iCutOffset = number of bytes from current pos. to end.
-	if (m_dataArray.size() - iOffset < iNumberOfBytes)
+	if (static_cast<int64_t>(m_dataArray.size()) - iOffset < iNumberOfBytes)
 	{
 		MessageBox(pDlg, GetLangString(IDS_COPY_TOO_MANY), MB_ICONERROR);
 		return FALSE;

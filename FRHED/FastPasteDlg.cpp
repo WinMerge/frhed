@@ -164,7 +164,7 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 		{
 			olddata = UndoRecord::alloc(&m_dataArray[iCurByte], (iPasteTimes - 1) * iPasteSkip);
 		}
-		int i = iCurByte;
+		size_t i = iCurByte;
 		for (int k = 0 ; k < iPasteTimes ; k++)
 		{
 			if (!m_dataArray.InsertAtGrow(i, (BYTE*)pcPastestring, destlen))
@@ -191,7 +191,7 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 		// Overwrite data.
 		for (int k = 0 ; k < iPasteTimes ; k++)
 		{
-			for (int i = 0 ; i < destlen ; i++)
+			for (size_t i = 0 ; i < destlen ; i++)
 			{
 				m_dataArray[iCurByte + k * (iPasteSkip + destlen) + i] = pcPastestring[i];
 			}

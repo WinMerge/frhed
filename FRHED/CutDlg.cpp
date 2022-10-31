@@ -52,7 +52,8 @@ BOOL CutDlg::OnInitDialog(HWindow *pDlg)
 
 	pDlg->CheckDlgButton(IDC_CUT_INCLUDEOFFSET, BST_CHECKED);
 	pDlg->SetDlgItemText(IDC_CUT_ENDOFFSET, buf);
-	pDlg->SetDlgItemInt(IDC_CUT_NUMBYTES, iEnd - iStart + 1, TRUE);
+	_stprintf(buf, _T("%zu"), iEnd - iStart + 1);
+	pDlg->SetDlgItemText(IDC_CUT_NUMBYTES, buf);
 
 	return TRUE;
 }
@@ -65,9 +66,9 @@ BOOL CutDlg::OnInitDialog(HWindow *pDlg)
  */
 BOOL CutDlg::Apply(HWindow *pDlg)
 {
-	TCHAR buf[OffsetLen + 1];
-	int64_t iOffset;
-	int64_t iNumberOfBytes;
+	TCHAR buf[OffsetLen + 1] = {};
+	int64_t iOffset = 0;
+	int64_t iNumberOfBytes = 0;
 
 	if (pDlg->GetDlgItemText(IDC_CUT_STARTOFFSET, buf, OffsetLen) &&
 		!offset_parse64(buf, iOffset))
@@ -89,7 +90,7 @@ BOOL CutDlg::Apply(HWindow *pDlg)
 	else
 	{// Get number of bytes.
 		if (pDlg->GetDlgItemText(IDC_CUT_NUMBYTES, buf, OffsetLen) &&
-			_stscanf(buf, _T("%d"), &iNumberOfBytes) == 0)
+			_stscanf(buf, _T("%zd"), &iNumberOfBytes) == 0)
 		{
 			MessageBox(pDlg, GetLangString(IDS_BYTES_NOT_KNOWN), MB_ICONERROR);
 			return FALSE;
@@ -98,7 +99,7 @@ BOOL CutDlg::Apply(HWindow *pDlg)
 
 	// Can requested number be cut?
 	// DataArray.GetLength ()-iCutOffset = number of bytes from current pos. to end.
-	if (m_dataArray.size() - iOffset < iNumberOfBytes)
+	if (static_cast<int64_t>(m_dataArray.size()) - iOffset < iNumberOfBytes)
 	{
 		MessageBox(pDlg, GetLangString(IDS_CUT_TOO_MANY), MB_ICONERROR);
 		return FALSE;

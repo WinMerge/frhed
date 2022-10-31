@@ -88,7 +88,7 @@ bool load_hexfile_1::StreamIn(hexfile_stream &hexin)
 {
 	int temp[4] = {0,0,0,0};
 	unsigned char c[4] = {0,0,0,0};
-	int i, ii = 0, ls, bpl, fo = 0, fol;
+	int64_t i, ii = 0, ls, bpl, fo = 0, fol;
 	int flnd = 1, dim = 1, diio = 1;
 	bAutoOffsetLen = 1;
 	do
