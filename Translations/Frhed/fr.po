@@ -1780,8 +1780,8 @@ msgstr "Version %u.%u.%u"
 
 #: heksedit.rc:1021
 #, c-format
-msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
-msgstr "%d) 0x%zx=%zu à 0x%zx=%zu (%zd octets)"
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytes)"
+msgstr "%d) 0x%zx=%zu à 0x%zx=%zu (%zu octets)"
 
 #: heksedit.rc:1022
 #, c-format
@@ -2453,12 +2453,10 @@ msgstr ""
 
 #: heksedit.rc:1258
 #, c-format
-msgid ""
-"The first offset found was 0x%x, which is greater than zero.\n"
-"Do you want to insert %d null bytes at the start of the data?"
+msgid "The first offset found was 0x%llx, which is greater than zero.\nDo you want to insert %lld null bytes at the start of the data?"
 msgstr ""
-"Le premier offset trouvé était 0x%x, qui est plus grand que zéro.\n"
-"Voulez-vous insérer %d octets nuls au début de la donnée?"
+"Le premier offset trouvé était 0x%llx, qui est plus grand que zéro.\n"
+"Voulez-vous insérer %lld octets nuls au début de la donnée?"
 
 #: heksedit.rc:1259
 #, c-format

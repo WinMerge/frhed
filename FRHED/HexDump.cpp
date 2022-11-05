@@ -71,10 +71,10 @@ void HexDump::SetArray(const SimpleArray<BYTE> *dataArray)
 	m_pData = const_cast<SimpleArray<BYTE>*>(dataArray);
 }
 
-void HexDump::CreateBuffer(unsigned size)
+void HexDump::CreateBuffer(size_t size)
 {
 	m_pBuffer = new char[size];
-	for (unsigned i = 0; i < size; i++)
+	for (size_t i = 0; i < size; i++)
 		m_pBuffer[i] = ' ';
 }
 
@@ -97,8 +97,8 @@ void HexDump::Write(size_t startInd, size_t endInd)
 			a += m_bytesPerLine, k += m_charsPerLine + 2)
 	{
 		// Write offset.
-		int m = sprintf(buf2, "%*.*zx", m_offsetMinLen, m_offsetMinLen,
-				m_partialStats ? a + m_partialOffset : a);
+		int m = sprintf(buf2, "%*.*llx", m_offsetMinLen, m_offsetMinLen,
+				static_cast<long long>(m_partialStats ? a + m_partialOffset : a));
 
 		for (size_t i = m; i < m_offsetMaxLen + m_byteSpace - m; i++)
 			buf2[i] = ' ';

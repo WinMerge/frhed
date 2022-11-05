@@ -1782,8 +1782,8 @@ msgstr "Različica %u.%u.%u"
 
 #: heksedit.rc:1021
 #, c-format
-msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
-msgstr "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bajtov)"
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytes)"
+msgstr "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bajtov)"
 
 #: heksedit.rc:1022
 #, c-format
@@ -2457,12 +2457,10 @@ msgstr ""
 
 #: heksedit.rc:1258
 #, c-format
-msgid ""
-"The first offset found was 0x%x, which is greater than zero.\n"
-"Do you want to insert %d null bytes at the start of the data?"
+msgid "The first offset found was 0x%llx, which is greater than zero.\nDo you want to insert %lld null bytes at the start of the data?"
 msgstr ""
-"Najden je bil prvi odmik 0x%x, kar je večje od niE\n"
-"Ali želite na začetku podatkov vstaviti %d praznih bajtov?"
+"Najden je bil prvi odmik 0x%llx, kar je večje od niE\n"
+"Ali želite na začetku podatkov vstaviti %lld praznih bajtov?"
 
 #: heksedit.rc:1259
 #, c-format

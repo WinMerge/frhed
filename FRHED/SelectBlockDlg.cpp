@@ -61,20 +61,20 @@ BOOL SelectBlockDlg::OnInitDialog(HWindow *pDlg)
 BOOL SelectBlockDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM lParam)
 {
 	TCHAR buf[128];
-	int iStartOfSelSetting = 0;
-	int iEndOfSelSetting =  0;
-	int maxb;
+	size_t iStartOfSelSetting = 0;
+	size_t iEndOfSelSetting =  0;
+	size_t maxb;
 	switch (wParam)
 	{
 	case IDOK:
 		if (pDlg->GetDlgItemText(IDC_BLOCKSEL_OFFSET, buf, 128) &&
-			!offset_parse(buf, iStartOfSelSetting))
+			!offset_parse_size_t(buf, iStartOfSelSetting))
 		{
 			MessageBox(pDlg, GetLangString(IDS_OFFSET_START_ERROR), MB_ICONERROR);
 			return TRUE;
 		}
 		if (pDlg->GetDlgItemText(IDC_BLOCKSEL_OFFSETEND, buf, 128) &&
-			!offset_parse(buf, iEndOfSelSetting))
+			!offset_parse_size_t(buf, iEndOfSelSetting))
 		{
 			MessageBox(pDlg, GetLangString(IDS_OFFSET_END_ERROR), MB_ICONERROR);
 			return TRUE;

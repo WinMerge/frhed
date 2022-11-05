@@ -60,17 +60,18 @@ BOOL AddBmkDlg::OnInitDialog(HWindow *pDlg)
 BOOL AddBmkDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM lParam)
 {
 	TCHAR buf[OffsetLen + 1];
-	int64_t i, offset = 0;
+	int i;
+	size_t offset = 0;
 	switch (wParam)
 	{
 	case IDOK:
 		if (pDlg->GetDlgItemText(IDC_BMKADD_OFFSET, buf, RTL_NUMBER_OF(buf)) &&
-			!offset_parse64(buf, offset))
+			!offset_parse_size_t(buf, offset))
 		{
 			MessageBox(pDlg, GetLangString(IDS_OFFSET_START_ERROR), MB_ICONERROR);
 			return TRUE;
 		}
-		if (offset < 0 || offset > static_cast<int64_t>(m_dataArray.size()))
+		if (offset < 0 || offset > m_dataArray.size())
 		{
 			MessageBox(pDlg, GetLangString(IDS_BMK_INVALID_POSITION), MB_ICONERROR);
 			return TRUE;

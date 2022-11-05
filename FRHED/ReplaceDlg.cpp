@@ -76,7 +76,7 @@ bool ReplaceDlg::find_and_select_data(int finddir, bool case_sensitive)
 		strToReplaceData.length(), iCharacterSet, iBinaryMode);
 	size_t i = iGetStartOfSelection();
 	size_t n = iGetEndOfSelection() - i + 1;
-	size_t j;
+	SSIZE_T j;
 	if (finddir >= 0)
 	{
 		i += finddir * n;

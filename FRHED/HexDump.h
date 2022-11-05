@@ -40,7 +40,7 @@ public:
 			int byteSpace, int charSpace, int charset);
 	void SetOffsets(int minLen, int maxLen);
 	void SetArray(const SimpleArray<BYTE> *dataArray);
-	void CreateBuffer(unsigned size);
+	void CreateBuffer(size_t size);
 	char *GetBuffer() const;
 	void Write(size_t startInd, size_t endInd);
 

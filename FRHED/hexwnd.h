@@ -159,8 +159,8 @@ public:
 	void CMD_deletefile();
 	void CMD_insertfile();
 	void CMD_move_copy(bool redraw = true);
-	void CMD_move_copy(int iMove1stEnd, int iMove2ndEndorLen, bool redraw);
-	bool move_copy_sub(int iMove1stEnd, int iMove2ndEndorLen, bool redraw);
+	void CMD_move_copy(size_t iMove1stEnd, size_t iMove2ndEndorLen, bool redraw);
+	bool move_copy_sub(size_t iMove1stEnd, size_t iMove2ndEndorLen, bool redraw);
 	void CMD_reverse();
 	bool load_hexfile(hexfile_stream &);
 	void CMD_open_hexdump();
@@ -245,7 +245,7 @@ public:
 	int CMD_save_as();
 	int CMD_new();
 	void CMD_edit_enterdecimalvalue();
-	int CMD_copy_hexdump(int iCopyHexdumpMode, int iCopyHexdumpType, int iCopyHexdumpDlgStart, int iCopyHexdumpDlgEnd, char *mem = 0, DWORD memlen = 0);
+	int CMD_copy_hexdump(int iCopyHexdumpMode, int iCopyHexdumpType, size_t iCopyHexdumpDlgStart, size_t iCopyHexdumpDlgEnd, char *mem = 0, size_t memlen = 0);
 	void CMD_copy_hexdump();
 	void STDMETHODCALLTYPE CMD_edit_undo();
 	void STDMETHODCALLTYPE CMD_edit_redo();
@@ -455,7 +455,7 @@ struct IHexEditorWindow::SharedUndoRecords
 };
 
 extern HINSTANCE hMainInstance;
-extern int iMovePos;
+extern size_t iMovePos;
 enum OPTYP { OPTYP_MOVE, OPTYP_COPY };
 extern OPTYP iMoveOpTyp;
 extern const CLIPFORMAT CF_BINARYDATA;

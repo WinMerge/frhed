@@ -47,7 +47,7 @@ typedef struct s_MEMORY_CODING_DESCRIPTION
 typedef struct s_MEMORY_ENCODING
 {
 	LPBYTE lpbMemory; /**< Pointer to data buffer. */
-	DWORD dwSize; /**< Size of the data. */
+	SIZE_T dwSize; /**< Size of the data. */
 	LPCTSTR lpszArguments; /**< Arguments for the function. */
 	BOOL bEncode; /**< If TRUE encode, if false decode. */
 	const MEMORY_CODING_DESCRIPTION *fpMcd; /**< Encoder description. */

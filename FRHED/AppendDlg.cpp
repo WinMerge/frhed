@@ -41,7 +41,7 @@ BOOL AppendDlg::Apply(HWindow *pDlg)
 	TCHAR buf[bufsize + 1];
 	size_t iAppendbytes = 0;
 	if (pDlg->GetDlgItemText(IDC_APPEND_BYTES, buf, bufsize) &&
-		_stscanf(buf, _T("%zd"), &iAppendbytes) == 0)
+		_stscanf(buf, _T("%zu"), &iAppendbytes) == 0)
 	{
 		MessageBox(pDlg, GetLangString(IDS_APPEND_UNKNOWN_AMOUNT), MB_ICONERROR);
 		return FALSE;

@@ -50,7 +50,7 @@ bool load_hexfile_0::StreamIn(hexfile_stream &hexin)
 //Use only if U know c is a hex digit & not something else like' ', 'z' etc
 #	define hex2nibble(c) (isdigit((c)) ? (c) - '0' : (c) - (islower((c)) ? 'a' : 'A') + 10)
 	BYTE flnd = 0;//Start with the first nibble
-	int ii = 0;
+	size_t ii = 0;
 	int diio = 1;
 	for (int i = 0 ; (temp[0] = hexin.lhgetc()) != EOF ; i++)
 	{
@@ -88,7 +88,8 @@ bool load_hexfile_1::StreamIn(hexfile_stream &hexin)
 {
 	int temp[4] = {0,0,0,0};
 	unsigned char c[4] = {0,0,0,0};
-	int64_t i, ii = 0, ls, bpl, fo = 0, fol;
+	size_t i, ii = 0,  bpl, fo = 0, fol;
+	long long ls;
 	int flnd = 1, dim = 1, diio = 1;
 	bAutoOffsetLen = 1;
 	do
@@ -96,7 +97,7 @@ bool load_hexfile_1::StreamIn(hexfile_stream &hexin)
 		//get the offset
 		if (diio)
 			ls = hexin.lhtell();
-		int ol = 0;
+		size_t ol = 0;
 		for (;;)
 		{
 			temp[0] = hexin.lhgetc();
@@ -128,9 +129,9 @@ bool load_hexfile_1::StreamIn(hexfile_stream &hexin)
 
 		if (diio)
 		{
-			int tmp = 0;
+			long long tmp = 0;
 			hexin.lhseek(ls);
-			hexin.scanf("%x", &tmp);
+			hexin.scanf("%llx", &tmp);
 			if (flnd && tmp)
 			{
 				TCHAR msg[150];

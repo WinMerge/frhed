@@ -107,7 +107,7 @@ BOOL PasteDlg::Apply(HWindow *pDlg)
 		if (bSelected)
 		{
 			iCurByte = iGetStartOfSelection();
-			int iEndByte = iGetEndOfSelection();
+			size_t iEndByte = iGetEndOfSelection();
 			olddata = UndoRecord::alloc(&m_dataArray[iCurByte], iEndByte - iCurByte + 1 + (iPasteTimes - 1) * iPasteSkip);
 			m_dataArray.RemoveAt(iCurByte, iEndByte - iCurByte + 1);//Remove extraneous data
 			bSelected = false; // Deselect
@@ -116,7 +116,7 @@ BOOL PasteDlg::Apply(HWindow *pDlg)
 		{
 			olddata = UndoRecord::alloc(&m_dataArray[iCurByte], (iPasteTimes - 1) * iPasteSkip);
 		}
-		int i = iCurByte;
+		size_t i = iCurByte;
 		for (int k = 0 ; k < iPasteTimes ; k++)
 		{
 			if (!m_dataArray.InsertAtGrow(i, (BYTE*)pcPastestring, destlen))

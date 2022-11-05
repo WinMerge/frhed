@@ -1783,8 +1783,8 @@ msgstr "Versie %u.%u.%u"
 
 #: heksedit.rc:1021
 #, c-format
-msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
-msgstr "%d) 0x%zx=%zu naar 0x%zx=%zu (%zd bytes)"
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytes)"
+msgstr "%d) 0x%zx=%zu naar 0x%zx=%zu (%zu bytes)"
 
 #: heksedit.rc:1022
 #, c-format
@@ -2456,12 +2456,10 @@ msgstr ""
 
 #: heksedit.rc:1258
 #, c-format
-msgid ""
-"The first offset found was 0x%x, which is greater than zero.\n"
-"Do you want to insert %d null bytes at the start of the data?"
+msgid "The first offset found was 0x%llx, which is greater than zero.\nDo you want to insert %lld null bytes at the start of the data?"
 msgstr ""
-"De eerst gevonden offset was 0x%x, die groter is dan nul.\n"
-"Wilt u %d null bytes invoegen aan het begin van de data?"
+"De eerst gevonden offset was 0x%llx, die groter is dan nul.\n"
+"Wilt u %lld null bytes invoegen aan het begin van de data?"
 
 #: heksedit.rc:1259
 #, c-format

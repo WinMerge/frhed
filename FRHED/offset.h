@@ -29,5 +29,7 @@ Last change: 2013-02-24 by Jochen Neubeck
 
 bool offset_parse(LPCTSTR str, int &offset);
 bool offset_parse64(LPCTSTR str, INT64 &offset);
+bool offset_parse_size_t(LPCTSTR str, size_t &offset);
+bool offset_parse_ssize_t(LPCTSTR str, SSIZE_T &offset);
 
 #endif _OFFSET_H_

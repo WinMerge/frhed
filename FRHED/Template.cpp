@@ -33,7 +33,7 @@ Last change: 2013-02-24 by Jochen Neubeck
 /**
  * @brief Constructor.
  */
-Template::Template(BYTE const *data, int size)
+Template::Template(BYTE const *data, size_t size)
 : m_filehandle(-1)
 , m_tmplBuf(NULL)
 , m_filelen(0)
@@ -98,7 +98,7 @@ bool Template::LoadTemplateData()
 	if (m_tmplBuf)
 	{
 		memset(m_tmplBuf, 0, m_filelen + 1);
-		int ret = _read(m_filehandle, m_tmplBuf, m_filelen);
+		int ret = _read(m_filehandle, m_tmplBuf, static_cast<unsigned>(m_filelen));
 		if (ret == -1)
 		{
 			delete [] m_tmplBuf;
@@ -113,7 +113,7 @@ bool Template::LoadTemplateData()
  * Format template info text.
  * @param [in] curByte Current byte index in the open hex file.
  */
-void Template::CreateTemplateArray(int curByte)
+void Template::CreateTemplateArray(size_t curByte)
 {
 	// Print filename and current offset to output.
 	m_resultString += GetLangString(IDS_TPL_FILENAME);
@@ -127,18 +127,18 @@ void Template::CreateTemplateArray(int curByte)
 	m_resultString += GetLangString(IDS_TPL_APPLIED_AT);
 	m_resultString += _T(" ");
 	TCHAR buf[16];
-	_stprintf(buf, _T("%d\r\n\r\n"), curByte);
+	_stprintf(buf, _T("%zu\r\n\r\n"), curByte);
 	m_resultString += buf;
 }
 
 //-------------------------------------------------------------------
 // Applies the template code in pcTpl of length tpl_len on the current file
 // from the current offset and outputs the result to the ResultArray.
-void Template::ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, int curByte)
+void Template::ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, size_t curByte)
 {
 	// Use source code in pcTpl to decipher data in file.
-	int index = 0;
-	int fpos = curByte;
+	size_t index = 0;
+	size_t fpos = curByte;
 	// While there is still code left...
 	while (index < m_filelen)
 	{
@@ -437,7 +437,7 @@ LPCTSTR Template::GetResult()
 //-------------------------------------------------------------------
 // This will set index to the position of the next non-space-character.
 // Return is FALSE if there are no non-spaces left up to the end of the array.
-bool Template::ignore_non_code(char* pcTpl, int tpl_len, int& index)
+bool Template::ignore_non_code(char* pcTpl, size_t tpl_len, size_t& index)
 {
 	while (index < tpl_len)
 	{
@@ -463,9 +463,9 @@ bool Template::ignore_non_code(char* pcTpl, int tpl_len, int& index)
 // with a zero-byte. index is set to position of the first space-
 // character. Return is false if there is only the array end after the
 // keyword. In that case index is set to tpl_len.
-bool Template::read_tpl_token(char *pcTpl, int tpl_len, int &index, TCHAR *dest)
+bool Template::read_tpl_token(char *pcTpl, size_t tpl_len, size_t &index, TCHAR *dest)
 {
-	int i = 0;
+	size_t i = 0;
 	while (index + i < tpl_len)
 	{
 		switch (pcTpl[index + i])

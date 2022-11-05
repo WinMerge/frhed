@@ -90,9 +90,9 @@ BOOL EnterDecimalValueDlg::Apply(HWindow *pDlg)
 		MessageBox(pDlg, GetLangString(IDS_DECI_UNKNOWN), MB_ICONERROR);
 		return FALSE;
 	}
-	int64_t iDecValDlgOffset;
+	size_t iDecValDlgOffset;
 	if (!pDlg->GetDlgItemText(IDC_DECIMAL_OFFSET, buf, 16) ||
-		!offset_parse64(buf, iDecValDlgOffset))
+		!offset_parse_size_t(buf, iDecValDlgOffset))
 	{
 		MessageBox(pDlg, GetLangString(IDS_OFFSET_ERROR), MB_ICONERROR);
 		return FALSE;
@@ -114,7 +114,7 @@ BOOL EnterDecimalValueDlg::Apply(HWindow *pDlg)
 		return FALSE;
 	}
 	WaitCursor wc;
-	int iDecValDlgOffsetOrg = iDecValDlgOffset;
+	size_t iDecValDlgOffsetOrg = iDecValDlgOffset;
 	UndoRecord::Data *olddata = UndoRecord::alloc(&m_dataArray[iDecValDlgOffset], iDecValDlgSize * iDecValDlgTimes);
 	while (iDecValDlgTimes)
 	{

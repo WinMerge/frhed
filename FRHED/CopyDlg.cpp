@@ -68,10 +68,10 @@ BOOL CopyDlg::Apply(HWindow *pDlg)
 {
 	const int bufSize = 64;
 	TCHAR buf[bufSize + 1] = {0};
-	int64_t iOffset = 0;
-	int64_t iNumberOfBytes = 0;
+	size_t iOffset = 0;
+	size_t iNumberOfBytes = 0;
 	if (pDlg->GetDlgItemText(IDC_COPY_STARTOFFSET, buf, bufSize) &&
-		!offset_parse64(buf, iOffset))
+		!offset_parse_size_t(buf, iOffset))
 	{
 		MessageBox(pDlg, GetLangString(IDS_OFFSET_START_ERROR), MB_ICONERROR);
 		return FALSE;
@@ -79,7 +79,7 @@ BOOL CopyDlg::Apply(HWindow *pDlg)
 	if (pDlg->IsDlgButtonChecked(IDC_COPY_OFFSET))
 	{
 		if (pDlg->GetDlgItemText(IDC_COPY_OFFSETEDIT, buf, bufSize) &&
-			!offset_parse64(buf, iNumberOfBytes))
+			!offset_parse_size_t(buf, iNumberOfBytes))
 		{
 			MessageBox(pDlg, GetLangString(IDS_OFFSET_END_ERROR), MB_ICONERROR);
 			return FALSE;
@@ -89,7 +89,7 @@ BOOL CopyDlg::Apply(HWindow *pDlg)
 	else
 	{// Get number of bytes.
 		if (pDlg->GetDlgItemText(IDC_COPY_BYTECOUNT, buf, bufSize) &&
-			_stscanf(buf, _T("%zd"), &iNumberOfBytes) == 0)
+			_stscanf(buf, _T("%zu"), &iNumberOfBytes) == 0)
 		{
 			MessageBox(pDlg, GetLangString(IDS_BYTES_NOT_KNOWN), MB_ICONERROR);
 			return FALSE;
@@ -97,7 +97,7 @@ BOOL CopyDlg::Apply(HWindow *pDlg)
 	}
 	// Can requested number be cut?
 	// DataArray.GetLength ()-iCutOffset = number of bytes from current pos. to end.
-	if (static_cast<int64_t>(m_dataArray.size()) - iOffset < iNumberOfBytes)
+	if (m_dataArray.size() - iOffset < iNumberOfBytes)
 	{
 		MessageBox(pDlg, GetLangString(IDS_COPY_TOO_MANY), MB_ICONERROR);
 		return FALSE;

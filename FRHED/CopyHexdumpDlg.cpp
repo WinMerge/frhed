@@ -73,16 +73,16 @@ BOOL CopyHexdumpDlg::OnInitDialog(HWindow *pDlg)
  */
 BOOL CopyHexdumpDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM lParam)
 {
-	int64_t iCopyHexdumpDlgStart, iCopyHexdumpDlgEnd;
+	size_t iCopyHexdumpDlgStart, iCopyHexdumpDlgEnd;
 	const int bufSize = 16;
 	TCHAR buf[bufSize + 1];
 	switch (wParam)
 	{
 	case IDOK:
 		if (pDlg->GetDlgItemText(IDC_HEXDUMP_OFFSET, buf, bufSize) &&
-			offset_parse64(buf, iCopyHexdumpDlgStart) &&
+			offset_parse_size_t(buf, iCopyHexdumpDlgStart) &&
 			pDlg->GetDlgItemText(IDC_HEXDUMP_OFFSET2, buf, bufSize) &&
-			offset_parse64(buf, iCopyHexdumpDlgEnd))
+			offset_parse_size_t(buf, iCopyHexdumpDlgEnd))
 		{
 			iCopyHexdumpMode = pDlg->IsDlgButtonChecked(IDC_HEXDUMP_EXPORTCLIPB);
 			if (pDlg->IsDlgButtonChecked(IDC_EXPORTDISPLAY))

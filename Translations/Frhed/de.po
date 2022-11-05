@@ -1777,8 +1777,8 @@ msgstr "Version %u.%u.%u"
 
 #: heksedit.rc:1021
 #, c-format
-msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
-msgstr "%d) 0x%zx=%zu bis 0x%zx=%zu (%zd Bytes)"
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytes)"
+msgstr "%d) 0x%zx=%zu bis 0x%zx=%zu (%zu Bytes)"
 
 #: heksedit.rc:1022
 #, c-format
@@ -2400,8 +2400,8 @@ msgstr "Nicht genug Speicher zum Importieren von Daten.\nKann nicht fortfahren!\
 
 #: heksedit.rc:1258
 #, c-format
-msgid "The first offset found was 0x%x, which is greater than zero.\nDo you want to insert %d null bytes at the start of the data?"
-msgstr "Der erste gefundene Offset war 0x%x, was größer als Null ist.\nWollen Sie %d Nullbytes am Anfang der Daten einfügen?"
+msgid "The first offset found was 0x%llx, which is greater than zero.\nDo you want to insert %lld null bytes at the start of the data?"
+msgstr "Der erste gefundene Offset war 0x%llx, was größer als Null ist.\nWollen Sie %lld Nullbytes am Anfang der Daten einfügen?"
 
 #: heksedit.rc:1259
 #, c-format

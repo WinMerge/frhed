@@ -60,7 +60,7 @@ void FillWithDialog::inittxt(HWindow *pDlg)
 	}
 	//init all the readonly boxes down below
 	TCHAR bufff[250];
-	size_t tteemmpp = 1 + abs((int64_t)iStartOfSelSetting - (int64_t)iEndOfSelSetting);
+	size_t tteemmpp = 1 + abs((SSIZE_T)iStartOfSelSetting - (SSIZE_T)iEndOfSelSetting);
 	_stprintf(bufff, _T("%zd=0x%zx"), iStartOfSelSetting, iStartOfSelSetting);
 	pDlg->SetDlgItemText(IDC_STS, bufff);
 	_stprintf(bufff, _T("%zd=0x%zx"), iEndOfSelSetting, iEndOfSelSetting);

@@ -89,7 +89,7 @@ static int64_t _read64(int const fd, void* const buffer, uint64_t const buffer_s
 	uint64_t pos = 0;
 	while (pos < buffer_size)
 	{
-		int res32 = _read(fd, reinterpret_cast<char *>(buffer) + pos, buffer_size - pos < 0x10000000 ? buffer_size - pos : 0x10000000);
+		int res32 = _read(fd, reinterpret_cast<char *>(buffer) + pos, static_cast<unsigned>(buffer_size - pos < 0x10000000 ? buffer_size - pos : 0x10000000));
 		if (res32 == -1)
 			return -1;
 		pos += res32;
@@ -220,7 +220,7 @@ BOOL ChooseDiffDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM)
 				TString s;
 				pLb->GetText(i, s);
 				i = _stscanf(s.c_str(),
-					// "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
+					// "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytes)"
 					GetLangString(IDS_DIFFLISTITEMFORMAT),
 					&i, &is, &iStartOfSelection, &is, &iEndOfSelection, &is);
 				iStartOfSelection += iCurByte;

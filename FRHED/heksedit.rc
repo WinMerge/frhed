@@ -1018,7 +1018,7 @@ STRINGTABLE
 BEGIN
     IDS_APPNAME             "Frhed"
     IDS_ABOUTFRHEDVER       "Version %u.%u.%u"
-    IDS_DIFFLISTITEMFORMAT  "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
+    IDS_DIFFLISTITEMFORMAT  "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytes)"
     IDS_OPEN_ALL_FILES      "All Files (*.*)|*.*|"
     IDS_UNTITLED            "Untitled"
     IDS_FONT_ANSI           "ANSI"
@@ -1255,7 +1255,7 @@ END
 STRINGTABLE
 BEGIN
     IDS_HEXF_NO_MEM        "Not enough memory to import data.\nCannot continue!\nDo you want to keep what has been found so far?"
-    IDS_HEXF_NONZERO_START "The first offset found was 0x%x, which is greater than zero.\nDo you want to insert %d null bytes at the start of the data?"
+    IDS_HEXF_NONZERO_START "The first offset found was 0x%llx, which is greater than zero.\nDo you want to insert %lld null bytes at the start of the data?"
     IDS_HEXF_INV_OFFSET    "Invalid offset found.\nIgnore further invalid offsets?"
     IDS_HEXF_CHAR_HEX_NO_MATCH "Character data does not agree with hex data.\nIgnore further mismatched data?\nNB: Hex data will be used when ignoring."
     IDS_HEXF_ERR_INV_CHAR  "Illegal character in hex data.\nCannot continue!\nDo you want to keep what has been found so far?"

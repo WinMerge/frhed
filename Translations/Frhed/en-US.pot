@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Frhed\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
-"POT-Creation-Date: 2022-10-30 18:47+0000\n"
+"POT-Creation-Date: 2022-11-05 21:05+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: English <frhed-devel@lists.sourceforge.net>\n"
@@ -1774,7 +1774,7 @@ msgstr ""
 
 #: heksedit.rc:1021
 #, c-format
-msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zd bytes)"
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytes)"
 msgstr ""
 
 #: heksedit.rc:1022
@@ -2397,7 +2397,7 @@ msgstr ""
 
 #: heksedit.rc:1258
 #, c-format
-msgid "The first offset found was 0x%x, which is greater than zero.\nDo you want to insert %d null bytes at the start of the data?"
+msgid "The first offset found was 0x%llx, which is greater than zero.\nDo you want to insert %lld null bytes at the start of the data?"
 msgstr ""
 
 #: heksedit.rc:1259

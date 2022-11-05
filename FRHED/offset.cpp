@@ -84,3 +84,58 @@ bool offset_parse64(LPCTSTR str, INT64 &offset)
 		offset = -offset;
 	return true;
 }
+
+/**
+ * @brief Parse size_t offset number from string.
+ * @param [in] str String to parse.
+ * @param [out] offset Number to return (parsed offset)
+ * @return true if parsing succeeded, false if failed.
+ * @todo Find a faster way to parse all possibilities.
+ */
+bool offset_parse_size_t(LPCTSTR str, size_t &offset)
+{
+	if (*str == '-')
+	{
+		offset = 0;
+		return false;
+	}
+	if ((_stscanf(str, _T("x%zx"), &offset) <= 0) &&
+		(_stscanf(str, _T("X%zx"), &offset) <= 0) &&
+		(_stscanf(str, _T("0x%zx"), &offset) <= 0) &&
+		(_stscanf(str, _T("0X%zx"), &offset) <= 0) &&
+		(_stscanf(str, _T("%zu"), &offset) <= 0))
+	{
+		offset = 0;
+		return false;
+	}
+	return true;
+}
+
+/**
+ * @brief Parse SSIZE_T offset number from string.
+ * @param [in] str String to parse.
+ * @param [out] offset Number to return (parsed offset)
+ * @return true if parsing succeeded, false if failed.
+ * @todo Find a faster way to parse all possibilities.
+ */
+bool offset_parse_ssize_t(LPCTSTR str, SSIZE_T &offset)
+{
+	bool negate = false;
+	if (*str == '-')
+	{
+		++str;
+		negate = true;
+	}
+	if ((_stscanf(str, _T("x%zx"), &offset) <= 0) &&
+		(_stscanf(str, _T("X%zx"), &offset) <= 0) &&
+		(_stscanf(str, _T("0x%zx"), &offset) <= 0) &&
+		(_stscanf(str, _T("0X%zx"), &offset) <= 0) &&
+		(_stscanf(str, _T("%zd"), &offset) <= 0))
+	{
+		offset = 0;
+		return false;
+	}
+	if (negate)
+		offset = -offset;
+	return true;
+}

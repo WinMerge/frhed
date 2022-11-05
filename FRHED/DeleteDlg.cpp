@@ -67,11 +67,11 @@ BOOL DeleteDlg::OnInitDialog(HWindow *pDlg)
 BOOL DeleteDlg::Apply(HWindow *pDlg)
 {
 	TCHAR buf[OffsetLen + 1] = {};
-	int64_t iOffset = 0;
-	int64_t iNumberOfBytes = 0;
+	size_t iOffset = 0;
+	size_t iNumberOfBytes = 0;
 
 	if (pDlg->GetDlgItemText(IDC_DELETE_STARTOFFSET, buf, OffsetLen) &&
-		!offset_parse64(buf, iOffset))
+		!offset_parse_size_t(buf, iOffset))
 	{
 		MessageBox(pDlg, GetLangString(IDS_OFFSET_START_ERROR), MB_ICONERROR);
 		return FALSE;
@@ -80,7 +80,7 @@ BOOL DeleteDlg::Apply(HWindow *pDlg)
 	if (pDlg->IsDlgButtonChecked(IDC_DELETE_INCLUDEOFFSET))
 	{
 		if (pDlg->GetDlgItemText(IDC_DELETE_ENDOFFSET, buf, OffsetLen) &&
-			!offset_parse64(buf, iNumberOfBytes))
+			!offset_parse_size_t(buf, iNumberOfBytes))
 		{
 			MessageBox(pDlg, GetLangString(IDS_OFFSET_END_ERROR), MB_ICONERROR);
 			return FALSE;
@@ -90,7 +90,7 @@ BOOL DeleteDlg::Apply(HWindow *pDlg)
 	else
 	{// Get number of bytes.
 		if (pDlg->GetDlgItemText(IDC_DELETE_NUMBYTES, buf, OffsetLen) &&
-			_stscanf(buf, _T("%zd"), &iNumberOfBytes) == 0)
+			!offset_parse_size_t(buf, iNumberOfBytes))
 		{
 			MessageBox(pDlg, GetLangString(IDS_BYTES_NOT_KNOWN), MB_ICONERROR);
 			return FALSE;
@@ -99,7 +99,7 @@ BOOL DeleteDlg::Apply(HWindow *pDlg)
 
 	// Can requested number be cut?
 	// DataArray.GetLength ()-iCutOffset = number of bytes from current pos. to end.
-	if (static_cast<int64_t>(m_dataArray.size()) - iOffset < iNumberOfBytes)
+	if (m_dataArray.size() - iOffset < iNumberOfBytes)
 	{
 		MessageBox(pDlg, GetLangString(IDS_DELETE_TOO_MANY), MB_ICONERROR);
 		return FALSE;

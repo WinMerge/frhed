@@ -292,9 +292,9 @@ public:
 	INT_PTR DlgProc(HWindow *, UINT, WPARAM, LPARAM);
 private:
 	BOOL OnInitDialog(HWindow *);
-	bool ReadStartOffset(HWindow *, int64_t &);
-	bool ReadEndOffset(HWindow *, int64_t &);
-	bool ReadTargetOffset(HWindow *, int64_t &);
+	bool ReadStartOffset(HWindow *, SSIZE_T &);
+	bool ReadEndOffset(HWindow *, SSIZE_T &);
+	bool ReadTargetOffset(HWindow *, SSIZE_T &);
 	BOOL OnCommand(HWindow *, WPARAM, LPARAM);
 	BOOL Apply(HWindow *);
 };

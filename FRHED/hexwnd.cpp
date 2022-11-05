@@ -84,7 +84,7 @@ int HexEditorWindow::iPasteSkip = 0;
 TCHAR HexEditorWindow::TexteditorName[MAX_PATH] = _T("NOTEPAD.EXE");
 
 //Temporary stuff for CMD_move_copy
-int iMovePos;
+size_t iMovePos;
 OPTYP iMoveOpTyp;
 
 /**
@@ -379,7 +379,7 @@ static int64_t _read64(int const fd, void* const buffer, uint64_t const buffer_s
 	uint64_t pos = 0;
 	while (pos < buffer_size)
 	{
-		int res32 = _read(fd, reinterpret_cast<char *>(buffer) + pos, buffer_size - pos < 0x10000000 ? buffer_size - pos : 0x10000000);
+		int res32 = _read(fd, reinterpret_cast<char *>(buffer) + pos, static_cast<unsigned>(buffer_size - pos < 0x10000000 ? buffer_size - pos : 0x10000000));
 		if (res32 == -1)
 			return -1;
 		pos += res32;
@@ -392,7 +392,7 @@ static int64_t _write64(int filehandle, void* const buffer, uint64_t buffer_size
 	uint64_t pos = 0;
 	while (pos < buffer_size)
 	{
-		int res32 = _write(filehandle, reinterpret_cast<const unsigned char*>(buffer) + pos, buffer_size - pos < 0x10000000 ? buffer_size - pos : 0x10000000);
+		int res32 = _write(filehandle, reinterpret_cast<const unsigned char*>(buffer) + pos, static_cast<unsigned>(buffer_size - pos < 0x10000000 ? buffer_size - pos : 0x10000000));
 		if (res32 == -1)
 			return -1;
 		pos += res32;
@@ -629,7 +629,7 @@ void HexEditorWindow::resize_window()
 	// cxBuffer = maximal width of client-area in chars.
 	if (iAutomaticBPL)
 	{
-		size_t bytemax = cxBuffer - iMaxOffsetLen - iByteSpace - iCharSpace;
+		int bytemax = cxBuffer - iMaxOffsetLen - iByteSpace - iCharSpace;
 		iBytesPerLine = bytemax / 4;
 		if (iBytesPerLine < 1)
 			iBytesPerLine = 1;
@@ -917,7 +917,8 @@ void HexEditorWindow::keydown(int key)
 		if (lastbyte < 0)
 		{
 			bSelected = false;
-			iCurNibble = iCurByte = 0;
+			iCurNibble = 0;
+			iCurByte = 0;
 		}
 		else
 		{
@@ -2046,7 +2047,8 @@ void HexEditorWindow::set_caret_pos()
 	}
 	else
 	{
-		x = y = -1;
+		x = -1;
+		y = -1;
 	}
 	SetCaretPos(x * cxChar, y * cyChar + LineSpaceAbove);
 }
@@ -3142,7 +3144,7 @@ void HexEditorWindow::CMD_edit_copy()
 //-------------------------------------------------------------------
 // On hexdump to file/clipboard command.
 int HexEditorWindow::CMD_copy_hexdump(int iCopyHexdumpMode, int iCopyHexdumpType,
-	int iCopyHexdumpDlgStart, int iCopyHexdumpDlgEnd, char* mem, DWORD memlen)
+	size_t iCopyHexdumpDlgStart, size_t iCopyHexdumpDlgEnd, char* mem, size_t memlen)
 {
 	int iCharsPerLine = iGetCharsPerLine();
 
@@ -3165,7 +3167,7 @@ int HexEditorWindow::CMD_copy_hexdump(int iCopyHexdumpMode, int iCopyHexdumpType
 		iCopyHexdumpDlgEnd = iCopyHexdumpDlgEnd / iBytesPerLine * iBytesPerLine;//cut back to the line start
 //end
 		// Number of lines to copy:
-		int linecount = (iCopyHexdumpDlgEnd - iCopyHexdumpDlgStart) / iBytesPerLine + 1;
+		size_t linecount = (iCopyHexdumpDlgEnd - iCopyHexdumpDlgStart) / iBytesPerLine + 1;
 		// Req'd mem for lines:
 		// (Every line ended with CR+LF ('\r'+'\n'))
 //Pabs changed - "int" removed - see further up
@@ -3193,7 +3195,7 @@ int HexEditorWindow::CMD_copy_hexdump(int iCopyHexdumpMode, int iCopyHexdumpType
 		for (size_t k = 0, a = iCopyHexdumpDlgStart; a <= iCopyHexdumpDlgEnd; a += iBytesPerLine, k += iCharsPerLine + 2)
 		{
 			// Write offset.
-			int m = sprintf(buf2, "%*.*zx", iMinOffsetLen, iMinOffsetLen, bPartialStats ? a + iPartialOffset : a);
+			int m = sprintf(buf2, "%*.*llx", iMinOffsetLen, iMinOffsetLen, bPartialStats ? a + iPartialOffset : a);
 
 			memset(buf2 + m, ' ', iMaxOffsetLen + iByteSpace - m);
 			buf2[iMaxOffsetLen + iByteSpace] = '\0';
@@ -3513,7 +3515,7 @@ int HexEditorWindow::CMD_save()
 				n = -1;
 				swap(e, i);
 			}
-			int r = nbl - iPartialOpenLen; // relative movement len
+			int64_t r = nbl - iPartialOpenLen; // relative movement len
 			//move the data
 			e += n;
 			do
@@ -4790,7 +4792,7 @@ void HexEditorWindow::CMD_OpenDrive()
 		TCHAR params[32];
 		wsprintf(params, _T("/i%d /c%d"), iInstCount, ID_DISK_OPEN_DRIVE);
 		HINSTANCE hi = ShellExecute(NULL, _T("runas"), path, params, NULL, SW_SHOWNORMAL);
-		if ((int) hi > HINSTANCE_ERROR)
+		if ((intptr_t) hi > HINSTANCE_ERROR)
 		{
 			reset();
 			PostMessage(hwndMain, WM_CLOSE, 0, 0);
@@ -4845,7 +4847,7 @@ void HexEditorWindow::CMD_findnext()
 			m_pFindCtxt->GetText(), srclen, iCharacterSet, iBinaryMode))
 		{
 			SetCursor(LoadCursor(NULL, IDC_WAIT));
-			size_t i = findutils_FindBytes(&m_dataArray[iCurByte + 1],
+			SSIZE_T i = findutils_FindBytes(&m_dataArray[iCurByte + 1],
 				m_dataArray.size() - iCurByte - 1,
 				pcFindstring, destlen, 1,
 				m_pFindCtxt->m_bMatchCase);
@@ -4887,7 +4889,7 @@ void HexEditorWindow::CMD_findprev()
 	if (bSelected)
 	{
 		// Get start/end offset and length of selection.
-		int sel_start, select_len;
+		size_t sel_start, select_len;
 		if( iEndOfSelection < iStartOfSelection )
 		{
 			sel_start = iEndOfSelection;
@@ -4922,7 +4924,7 @@ void HexEditorWindow::CMD_findprev()
 			// you are somewhere in the middle of the findstring with the caret
 			// and you choose "find previous" you usually want to find the beginning
 			// of the findstring in the file.
-			size_t i = findutils_FindBytes(&m_dataArray[0],
+			SSIZE_T i = findutils_FindBytes(&m_dataArray[0],
 				min(iCurByte + (destlen - 1), m_dataArray.size()),
 				pcFindstring, destlen, -1, m_pFindCtxt->m_bMatchCase);
 			SetCursor(LoadCursor(NULL, IDC_ARROW));
@@ -4961,7 +4963,7 @@ void HexEditorWindow::CMD_summon_text_edit()
 	if (!close())
 		return;
 	HINSTANCE hi = ShellExecute(pwnd->m_hWnd, _T("open"), TexteditorName, filename, NULL, SW_SHOWNORMAL);
-	if ((int) hi <= HINSTANCE_ERROR)
+	if ((intptr_t) hi <= HINSTANCE_ERROR)
 	{
 		MessageBox(pwnd, GetLangString(IDS_ERR_EXT_EDITOR), MB_ICONERROR);
 	}
@@ -5982,10 +5984,10 @@ void HexEditorWindow::CMD_move_copy(bool redraw)
 	static_cast<dialog<MoveCopyDlg>*>(this)->DoModal(pwnd);
 }
 
-void HexEditorWindow::CMD_move_copy(int iMove1stEnd, int iMove2ndEndorLen, bool redraw)
+void HexEditorWindow::CMD_move_copy(size_t iMove1stEnd, size_t iMove2ndEndorLen, bool redraw)
 {
 	UndoRecord::Data *olddata = NULL;
-	const int len = iMove2ndEndorLen - iMove1stEnd + 1;
+	const size_t len = iMove2ndEndorLen - iMove1stEnd + 1;
 	if (iMovePos > iMove1stEnd)
 	{
 		if (iMoveOpTyp != OPTYP_COPY)
@@ -6020,7 +6022,7 @@ void HexEditorWindow::CMD_move_copy(int iMove1stEnd, int iMove2ndEndorLen, bool 
 	}
 }
 
-bool HexEditorWindow::move_copy_sub(int iMove1stEnd, int iMove2ndEndorLen, bool redraw)
+bool HexEditorWindow::move_copy_sub(size_t iMove1stEnd, size_t iMove2ndEndorLen, bool redraw)
 {
 	/*Call like so
 	iMove1stEnd = position of start of block to move;
@@ -6037,7 +6039,7 @@ bool HexEditorWindow::move_copy_sub(int iMove1stEnd, int iMove2ndEndorLen, bool 
 	}
 	if (iMove1stEnd > iMove2ndEndorLen)
 		swap(iMove1stEnd, iMove2ndEndorLen);
-	int dist = iMovePos - iMove1stEnd;
+	size_t dist = iMovePos - iMove1stEnd;
 	if (iMoveOpTyp == OPTYP_COPY)
 	{
 		if (iMovePos > clen)
@@ -6055,7 +6057,7 @@ bool HexEditorWindow::move_copy_sub(int iMove1stEnd, int iMove2ndEndorLen, bool 
 
 	if (iMoveOpTyp == OPTYP_COPY)
 	{
-		int len = iMove2ndEndorLen - iMove1stEnd + 1;
+		size_t len = iMove2ndEndorLen - iMove1stEnd + 1;
 		if (!m_dataArray.resize(clen + len))
 		{
 			MessageBox(pwnd, GetLangString(IDS_NO_MEMORY), MB_ICONERROR);
@@ -6069,7 +6071,7 @@ bool HexEditorWindow::move_copy_sub(int iMove1stEnd, int iMove2ndEndorLen, bool 
 		}
 		else
 		{
-			int tmp = iMovePos <= iMove1stEnd ? len : 0;
+			size_t tmp = iMovePos <= iMove1stEnd ? len : 0;
 			memcpy(&m_dataArray[iMovePos], &m_dataArray[iMove1stEnd + tmp], len);
 		}
 	}
@@ -6082,14 +6084,14 @@ bool HexEditorWindow::move_copy_sub(int iMove1stEnd, int iMove2ndEndorLen, bool 
 		//It doesn't matter what order these three calls are in, it works
 		//in all cases but the values will need to be calculated differently
 		//Start and end of the block we are moving
-		int ms = iMove1stEnd;
-		int me = iMove2ndEndorLen;
+		size_t ms = iMove1stEnd;
+		size_t me = iMove2ndEndorLen;
 		//Start and end of the other block that is affected
-		int os = iMovePos > iMove1stEnd ? iMove2ndEndorLen + 1 : iMovePos;
-		int oe = iMovePos > iMove1stEnd ? iMove2ndEndorLen + dist : iMove1stEnd - 1;
+		size_t os = iMovePos > iMove1stEnd ? iMove2ndEndorLen + 1 : iMovePos;
+		size_t oe = iMovePos > iMove1stEnd ? iMove2ndEndorLen + dist : iMove1stEnd - 1;
 		//Start and end of the total block
-		int ts = min(ms, os);
-		int te = max(me, oe);
+		size_t ts = min(ms, os);
+		size_t te = max(me, oe);
 		reverse_bytes(&m_dataArray[ms], &m_dataArray[me]);
 		reverse_bytes(&m_dataArray[os], &m_dataArray[oe]);
 		reverse_bytes(&m_dataArray[ts], &m_dataArray[te]);
@@ -6820,6 +6822,8 @@ void UndoRecord::free(Data *data)
 size_t UndoRecord::len(Data *data)
 {
 	BYTE const *const p = reinterpret_cast<BYTE const *>(&data);
+	if (!p)
+		return 0;
 	return *p & sizeof data - 1 ? *p : _msize(reinterpret_cast<BSTR>(data));
 }
 
