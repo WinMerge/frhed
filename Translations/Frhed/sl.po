@@ -2077,8 +2077,8 @@ msgstr "Najedno je %d področij razlik."
 
 #: heksedit.rc:1116
 #, c-format
-msgid "Remaining loaded data size: %d, size of file on disk: %d."
-msgstr "Preostala naložena velikost podatkov: %d, velikost datoteke na disku: %d."
+msgid "Remaining loaded data size: %lld, size of file on disk: %lld."
+msgstr "Preostala naložena velikost podatkov: %lld, velikost datoteke na disku: %lld."
 
 #: heksedit.rc:1117
 #, c-format
@@ -2667,8 +2667,8 @@ msgstr "NAPAKA: Neznana vrsta spremenljivke:"
 
 #: heksedit.rc:1319
 #, c-format
-msgid "-> Length of template = %d bytes."
-msgstr "-> Dolžina predloge = %d bajtov."
+msgid "-> Length of template = %zu bytes."
+msgstr "-> Dolžina predloge = %zu bajtov."
 
 #: heksedit.rc:1320
 #, c-format
@@ -2754,12 +2754,10 @@ msgstr ""
 
 #: heksedit.rc:1346
 #, c-format
-msgid ""
-"\n"
-"File size: %d bytes = %d kilobytes.\n"
+msgid "\nFile size: %zu bytes = %zu kilobytes.\n"
 msgstr ""
 "\n"
-"Velikost datoteke: %d bajtov = %d kilobajtov.\n"
+"Velikost datoteke: %zu bajtov = %zu kilobajtov.\n"
 
 #: heksedit.rc:1347
 #, c-format

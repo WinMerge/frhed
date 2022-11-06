@@ -2044,7 +2044,7 @@ msgstr ""
 
 #: heksedit.rc:1116
 #, c-format
-msgid "Remaining loaded data size: %d, size of file on disk: %d."
+msgid "Remaining loaded data size: %lld, size of file on disk: %lld."
 msgstr ""
 
 #: heksedit.rc:1117
@@ -2582,8 +2582,8 @@ msgstr "BŁĄD: nieznany typ zmiennej:"
 
 #: heksedit.rc:1319
 #, c-format
-msgid "-> Length of template = %d bytes."
-msgstr "-> Długość szablonu =%d bajtów."
+msgid "-> Length of template = %zu bytes."
+msgstr "-> Długość szablonu =%zu bajtów."
 
 #: heksedit.rc:1320
 #, c-format
@@ -2652,8 +2652,8 @@ msgstr "\nCzęściowo otwarte z przesunięciem 0x%zx = %zd.\nLiczba odczytanych 
 
 #: heksedit.rc:1346
 #, c-format
-msgid "\nFile size: %d bytes = %d kilobytes.\n"
-msgstr "\nRozmiar pliku: %d bajtów = %d kilobajtów.\n"
+msgid "\nFile size: %zu bytes = %zu kilobytes.\n"
+msgstr "\nRozmiar pliku: %zu bajtów = %zu kilobajtów.\n"
 
 #: heksedit.rc:1347
 #, c-format

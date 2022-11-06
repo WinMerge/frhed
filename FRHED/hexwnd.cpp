@@ -288,7 +288,7 @@ static LPTSTR NTAPI LoadResString(UINT uStringID)
 		text = (PSTR)SysAllocStringByteLen(0, cb);
 		WideCharToMultiByte(CP_ACP, 0, p, n, text, cb, 0, 0);
 #endif
-		if (langArray.m_hLangDll)
+		if (langArray.m_hLangDll && text)
 		{
 			int line = 0;
 			if (LPTSTR p = _tcschr(text, _T(':')))
@@ -6392,7 +6392,7 @@ HGLOBAL HexEditorWindow::RTF_hexdump(size_t start, size_t end, SIZE_T *plen)
 			//Offsets
 			i = 0;
 			i -= s.m_dwLen;
-			s << hex << (DWORD)l;
+			s << hex << l;
 			i += s.m_dwLen;
 			//Bytespace
 			for ( ; i < iMaxOffsetLen + iByteSpace; i++)
@@ -6821,9 +6821,9 @@ void UndoRecord::free(Data *data)
 
 size_t UndoRecord::len(Data *data)
 {
-	BYTE const *const p = reinterpret_cast<BYTE const *>(&data);
-	if (!p)
+	if (!data)
 		return 0;
+	BYTE const *const p = reinterpret_cast<BYTE const *>(&data);
 	return *p & sizeof data - 1 ? *p : _msize(reinterpret_cast<BSTR>(data));
 }
 

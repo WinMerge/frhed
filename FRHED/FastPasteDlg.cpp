@@ -106,8 +106,9 @@ BOOL FastPasteDlg::Apply(HWindow *pDlg)
 			{
 				gsize = size;
 				void *pClipMemory = GlobalLock(hClipMemory);
-				pcPastestring = new char[gsize];
-				memcpy(pcPastestring, pClipMemory, gsize);
+				pcPastestring = new(std::nothrow) char[gsize];
+				if (pcPastestring)
+					memcpy(pcPastestring, pClipMemory, gsize);
 				GlobalUnlock(hClipMemory);
 			}
 			switch (uFormat)

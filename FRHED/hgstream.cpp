@@ -117,7 +117,7 @@ HGlobalStream& HGlobalStream::operator << (size_t i)
 #error The buffer below needs increasing
 #endif
 	char integer[12];
-	Realloc(sprintf(integer, _hex ? "%x" : "%d", i), integer);
+	Realloc(sprintf(integer, _hex ? "%zx" : "%zd", i), integer);
 	_hex = _nbsp = _escfilt = 0;
 	return *this;
 }

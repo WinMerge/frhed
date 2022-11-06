@@ -1113,7 +1113,7 @@ BEGIN
     IDS_DIFF_CHOOSEFILE     "Choose file to compare with"
     IDS_DIFF_ERROPEN        "Error while opening file."
     IDS_DIFF_AREAS_FOUND    "%d areas of difference found."
-    IDS_DIFF_REMAINING_BYTES "Remaining loaded data size: %d, size of file on disk: %d."
+    IDS_DIFF_REMAINING_BYTES "Remaining loaded data size: %lld, size of file on disk: %lld."
     IDS_DIFF_NO_DIFF        "Data matches exactly."
 END
 
@@ -1316,7 +1316,7 @@ END
 // Template (continued)
 STRINGTABLE 
 BEGIN
-   IDS_TPL_LENGTH           "-> Length of template = %d bytes."
+   IDS_TPL_LENGTH           "-> Length of template = %zu bytes."
    IDS_TPL_FILE_PATTERN     "Template files (*.tpl)\0*.tpl\0\0"
    IDS_TPL_CHOOSE_FILE      "Choose template file"
    IDS_TPL_CANNOT_OPEN      "Could not open template file %s."
@@ -1343,7 +1343,7 @@ BEGIN
    IDS_DOUBLE_NOSPACE      "\nNot enough space for double size value.\n"
    IDS_FPROP_NAME          "File name and path: "
    IDS_FPROP_PARTIAL_OPEN  "\nPartially opened at offset 0x%zx = %zd.\nNumber of bytes read: %zd = %zd kilobytes.\n"
-   IDS_FPROP_FSIZE         "\nFile size: %d bytes = %d kilobytes.\n"
+   IDS_FPROP_FSIZE         "\nFile size: %zu bytes = %zu kilobytes.\n"
    IDS_FPROP_HDUMP_LINES   "\nNumber of hexdump lines: %zu.\n"
    IDS_MRU_REMOVING        "This file could not be accessed and will be removed from the MRU list."
    IDS_RESET_COLORS        "Really reset colors to default values?"

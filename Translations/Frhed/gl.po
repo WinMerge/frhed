@@ -2096,9 +2096,9 @@ msgstr "Atopáronse %d áreas de diferenza."
 
 #: heksedit.rc:1116
 #, c-format
-msgid "Remaining loaded data size: %d, size of file on disk: %d."
+msgid "Remaining loaded data size: %lld, size of file on disk: %lld."
 msgstr ""
-"Tamaño dos datos cargados restantes: %d, tamaño do arquivo no disco: %d."
+"Tamaño dos datos cargados restantes: %lld, tamaño do arquivo no disco: %lld."
 
 #: heksedit.rc:1117
 #, c-format
@@ -2689,8 +2689,8 @@ msgstr "ERRO: tipo de variable descoñecido:"
 
 #: heksedit.rc:1319
 #, c-format
-msgid "-> Length of template = %d bytes."
-msgstr "-> Lonxitide do marco = %d bytes."
+msgid "-> Length of template = %zu bytes."
+msgstr "-> Lonxitide do marco = %zu bytes."
 
 #: heksedit.rc:1320
 #, c-format
@@ -2771,12 +2771,10 @@ msgstr ""
 
 #: heksedit.rc:1346
 #, c-format
-msgid ""
-"\n"
-"File size: %d bytes = %d kilobytes.\n"
+msgid "\nFile size: %zu bytes = %zu kilobytes.\n"
 msgstr ""
 "\n"
-"Tamaño de arquivo: %d bytes = %d kilobytes.\n"
+"Tamaño de arquivo: %zu bytes = %zu kilobytes.\n"
 
 #: heksedit.rc:1347
 #, c-format

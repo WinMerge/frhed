@@ -2044,8 +2044,8 @@ msgstr "%d Bereiche mit Unterschieden gefunden."
 
 #: heksedit.rc:1116
 #, c-format
-msgid "Remaining loaded data size: %d, size of file on disk: %d."
-msgstr "Verbleibende Größe der geladenen Daten: %d, Größe der Datei auf der Festplatte: %d."
+msgid "Remaining loaded data size: %lld, size of file on disk: %lld."
+msgstr "Verbleibende Größe der geladenen Daten: %lld, Größe der Datei auf der Festplatte: %lld."
 
 #: heksedit.rc:1117
 #, c-format
@@ -2582,8 +2582,8 @@ msgstr "FEHLER: Unbekannter Variablentyp:"
 
 #: heksedit.rc:1319
 #, c-format
-msgid "-> Length of template = %d bytes."
-msgstr "-> Länge der Vorlage = %d Bytes."
+msgid "-> Length of template = %zu bytes."
+msgstr "-> Länge der Vorlage = %zu Bytes."
 
 #: heksedit.rc:1320
 #, c-format
@@ -2652,8 +2652,8 @@ msgstr "\nTeilweise geöffnet bei Offset 0x%zx = %zd.\nAnzahl der gelesenen Byte
 
 #: heksedit.rc:1346
 #, c-format
-msgid "\nFile size: %d bytes = %d kilobytes.\n"
-msgstr "\nDateigröße: %d Bytes = %d Kilobytes.\n"
+msgid "\nFile size: %zu bytes = %zu kilobytes.\n"
+msgstr "\nDateigröße: %zu Bytes = %zu Kilobytes.\n"
 
 #: heksedit.rc:1347
 #, c-format

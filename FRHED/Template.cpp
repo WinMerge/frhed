@@ -39,6 +39,8 @@ Template::Template(BYTE const *data, size_t size)
 , m_filelen(0)
 , m_data(data)
 , m_size(size)
+, m_filename{}
+, m_origFilename{}
 {
 }
 

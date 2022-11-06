@@ -2101,8 +2101,8 @@ msgstr "%d 箇所差異があります。"
 
 #: heksedit.rc:1116
 #, c-format
-msgid "Remaining loaded data size: %d, size of file on disk: %d."
-msgstr "読み込まれたデータ サイズ: %d, ディスク上のファイル サイズ: %d"
+msgid "Remaining loaded data size: %lld, size of file on disk: %lld."
+msgstr "読み込まれたデータ サイズ: %lld, ディスク上のファイル サイズ: %lld"
 
 #: heksedit.rc:1117
 #, c-format
@@ -2688,8 +2688,8 @@ msgstr "エラー: 未知の変数の型が指定されています:"
 
 #: heksedit.rc:1319
 #, c-format
-msgid "-> Length of template = %d bytes."
-msgstr "-> テンプレートの長さ = %d バイト"
+msgid "-> Length of template = %zu bytes."
+msgstr ""
 
 #: heksedit.rc:1320
 #, c-format
@@ -2770,12 +2770,10 @@ msgstr ""
 
 #: heksedit.rc:1346
 #, c-format
-msgid ""
-"\n"
-"File size: %d bytes = %d kilobytes.\n"
+msgid "\nFile size: %zu bytes = %zu kilobytes.\n"
 msgstr ""
 "\n"
-"ファイル サイズ: %d バイト = %d KB\n"
+"ファイル サイズ: %zu バイト = %zu KB\n"
 
 #: heksedit.rc:1347
 #, c-format

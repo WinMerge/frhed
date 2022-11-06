@@ -2111,9 +2111,9 @@ msgstr "Nájdených %d rozdielnych oblastí."
 
 #: heksedit.rc:1116
 #, c-format
-msgid "Remaining loaded data size: %d, size of file on disk: %d."
+msgid "Remaining loaded data size: %lld, size of file on disk: %lld."
 msgstr ""
-"Zostávajúca veľkosť načítaných údajov: %d, veľkosť súboru na disku: %d."
+"Zostávajúca veľkosť načítaných údajov: %lld, veľkosť súboru na disku: %lld."
 
 #: heksedit.rc:1117
 #, c-format
@@ -2709,8 +2709,8 @@ msgstr "CHYBA: Neznámy typ premennej:"
 
 #: heksedit.rc:1319
 #, c-format
-msgid "-> Length of template = %d bytes."
-msgstr "-> Dĺžka šablóny = %d bajtov."
+msgid "-> Length of template = %zu bytes."
+msgstr "-> Dĺžka šablóny = %zu bajtov."
 
 #: heksedit.rc:1320
 #, c-format
@@ -2796,12 +2796,10 @@ msgstr ""
 
 #: heksedit.rc:1346
 #, c-format
-msgid ""
-"\n"
-"File size: %d bytes = %d kilobytes.\n"
+msgid "\nFile size: %zu bytes = %zu kilobytes.\n"
 msgstr ""
 "\n"
-"Veľkosť súboru: %d bytov = %d kilobytov.\n"
+"Veľkosť súboru: %zu bytov = %zu kilobytov.\n"
 
 #: heksedit.rc:1347
 #, c-format

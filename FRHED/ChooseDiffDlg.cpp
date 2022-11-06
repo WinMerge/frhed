@@ -128,7 +128,8 @@ BOOL ChooseDiffDlg::OnInitDialog(HWindow *pDlg)
 	{
 		int64_t iDestFileLen = filelen;
 		int64_t iSrcFileLen = m_dataArray.size() - iCurByte;
-		if (BYTE *cmpdata = new(std::nothrow) BYTE[filelen])
+		BYTE* cmpdata = nullptr;
+		if (filelen < SIZE_MAX && (cmpdata = new(std::nothrow) BYTE[filelen]) != nullptr)
 		{
 			// Read data.
 			if (_read64(filehandle, cmpdata, filelen) != -1)

@@ -122,24 +122,18 @@ BOOL FindDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM lParam)
 				// Find forward.
 				if (m_pFindCtxt->m_iDirection == 1)
 				{
-					if (iCurByte + 1 < m_dataArray.size())
-					{
-						i = findutils_FindBytes(&m_dataArray[iCurByte + 1],
+					i = findutils_FindBytes(&m_dataArray[iCurByte + 1],
 							m_dataArray.size() - iCurByte - 1,
 							pcFindstring, destlen, 1, m_pFindCtxt->m_bMatchCase);
-					}
 					if (i != -1)
 						iCurByte += i + 1;
 				}
 				// Find backward.
 				else
 				{
-					if (iCurByte > 0)
-					{
-						i = findutils_FindBytes(&m_dataArray[0],
-							min(iCurByte + (destlen - 1), m_dataArray.size()),
-							pcFindstring, destlen, -1, m_pFindCtxt->m_bMatchCase);
-					}
+					i = findutils_FindBytes(&m_dataArray[0],
+						min(iCurByte + (destlen - 1), m_dataArray.size()),
+						pcFindstring, destlen, -1, m_pFindCtxt->m_bMatchCase);
 					if (i != -1)
 						iCurByte = i;
 				}

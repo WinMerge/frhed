@@ -99,7 +99,7 @@ BOOL CutDlg::Apply(HWindow *pDlg)
 
 	// Can requested number be cut?
 	// DataArray.GetLength ()-iCutOffset = number of bytes from current pos. to end.
-	if (static_cast<int64_t>(m_dataArray.size()) - iOffset < iNumberOfBytes)
+	if (m_dataArray.size() - iOffset < iNumberOfBytes)
 	{
 		MessageBox(pDlg, GetLangString(IDS_CUT_TOO_MANY), MB_ICONERROR);
 		return FALSE;

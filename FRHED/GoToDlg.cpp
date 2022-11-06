@@ -82,7 +82,7 @@ BOOL GoToDlg::Apply(HWindow *pDlg)
 	// Check limits and jump to begin/end if out of limits
 	if (offset < 0)
 		offset = 0;
-	if (offset >= static_cast<int64_t>(m_dataArray.size()))
+	if (offset >= static_cast<SSIZE_T>(m_dataArray.size()))
 		offset = m_dataArray.size() - 1;
 
 	iCurByte = offset;

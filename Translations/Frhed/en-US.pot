@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Frhed\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
-"POT-Creation-Date: 2022-11-05 21:05+0000\n"
+"POT-Creation-Date: 2022-11-06 12:47+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: English <frhed-devel@lists.sourceforge.net>\n"
@@ -2041,7 +2041,7 @@ msgstr ""
 
 #: heksedit.rc:1116
 #, c-format
-msgid "Remaining loaded data size: %d, size of file on disk: %d."
+msgid "Remaining loaded data size: %lld, size of file on disk: %lld."
 msgstr ""
 
 #: heksedit.rc:1117
@@ -2579,7 +2579,7 @@ msgstr ""
 
 #: heksedit.rc:1319
 #, c-format
-msgid "-> Length of template = %d bytes."
+msgid "-> Length of template = %zu bytes."
 msgstr ""
 
 #: heksedit.rc:1320
@@ -2649,7 +2649,7 @@ msgstr ""
 
 #: heksedit.rc:1346
 #, c-format
-msgid "\nFile size: %d bytes = %d kilobytes.\n"
+msgid "\nFile size: %zu bytes = %zu kilobytes.\n"
 msgstr ""
 
 #: heksedit.rc:1347

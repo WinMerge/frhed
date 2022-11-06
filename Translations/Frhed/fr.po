@@ -2075,8 +2075,8 @@ msgstr "%d aires de différences trouvées."
 
 #: heksedit.rc:1116
 #, c-format
-msgid "Remaining loaded data size: %d, size of file on disk: %d."
-msgstr "Taille de donnée encore à charger: %d, taille du fichier sur le disque: %d."
+msgid "Remaining loaded data size: %lld, size of file on disk: %lld."
+msgstr "Taille de donnée encore à charger: %lld, taille du fichier sur le disque: %lld."
 
 #: heksedit.rc:1117
 #, c-format
@@ -2660,8 +2660,8 @@ msgstr "ERREUR: type de variable inconnue:"
 
 #: heksedit.rc:1319
 #, c-format
-msgid "-> Length of template = %d bytes."
-msgstr "-> Longueur du modèle = %d octets."
+msgid "-> Length of template = %zu bytes."
+msgstr "-> Longueur du modèle = %zu octets."
 
 #: heksedit.rc:1320
 #, c-format
@@ -2742,12 +2742,10 @@ msgstr ""
 
 #: heksedit.rc:1346
 #, c-format
-msgid ""
-"\n"
-"File size: %d bytes = %d kilobytes.\n"
+msgid "\nFile size: %zu bytes = %zu kilobytes.\n"
 msgstr ""
 "\n"
-"Taille fichier: %d octets = %d kilo-octets.\n"
+"Taille fichier: %zu octets = %zu kilo-octets.\n"
 
 #: heksedit.rc:1347
 #, c-format
