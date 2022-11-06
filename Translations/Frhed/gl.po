@@ -1806,8 +1806,8 @@ msgstr "Versión %u.%u.%u"
 
 #: heksedit.rc:1021
 #, c-format
-msgid "%d) 0x%x=%u to 0x%x=%u (%d bytes)"
-msgstr "%d) 0x%x=%u a 0x%x=%u (%d bytes)"
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytes)"
+msgstr "%d) 0x%zx=%zu a 0x%zx=%zu (%zu bytes)"
 
 #: heksedit.rc:1022
 #, c-format
@@ -2071,8 +2071,8 @@ msgstr "Non hai memoria para engadir."
 
 #: heksedit.rc:1106
 #, c-format
-msgid "Offset: 0x%x = %d"
-msgstr "Offset: 0x%x = %d"
+msgid "Offset: 0x%zx = %zd"
+msgstr "Offset: 0x%zx = %zd"
 
 #: heksedit.rc:1107
 #, c-format
@@ -2096,9 +2096,9 @@ msgstr "Atopáronse %d áreas de diferenza."
 
 #: heksedit.rc:1116
 #, c-format
-msgid "Remaining loaded data size: %d, size of file on disk: %d."
+msgid "Remaining loaded data size: %lld, size of file on disk: %lld."
 msgstr ""
-"Tamaño dos datos cargados restantes: %d, tamaño do arquivo no disco: %d."
+"Tamaño dos datos cargados restantes: %lld, tamaño do arquivo no disco: %lld."
 
 #: heksedit.rc:1117
 #, c-format
@@ -2478,12 +2478,10 @@ msgstr ""
 
 #: heksedit.rc:1258
 #, c-format
-msgid ""
-"The first offset found was 0x%x, which is greater than zero.\n"
-"Do you want to insert %d null bytes at the start of the data?"
+msgid "The first offset found was 0x%llx, which is greater than zero.\nDo you want to insert %lld null bytes at the start of the data?"
 msgstr ""
-"O primeiro offset atopado foi 0x%x, que é maior que cero.\n"
-"Queres inserir %d bytes nulos ao inicio deses datos?"
+"O primeiro offset atopado foi 0x%llx, que é maior que cero.\n"
+"Queres inserir %lld bytes nulos ao inicio deses datos?"
 
 #: heksedit.rc:1259
 #, c-format
@@ -2584,13 +2582,13 @@ msgstr "Non se puido usar a selección como obxectivo de substitución."
 
 #: heksedit.rc:1283
 #, c-format
-msgid "Selected: Offset %d=0x%x to %d=0x%x (%d byte(s))"
-msgstr "Selección: Offset %d=0x%x to %d=0x%x (%d byte(s))"
+msgid "Selected: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
+msgstr "Selección: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
 
 #: heksedit.rc:1284
 #, c-format
-msgid "Offset %d=0x%x"
-msgstr "Offset %d=0x%x"
+msgid "Offset %zd=0x%zx"
+msgstr "Offset %zd=0x%zx"
 
 #: heksedit.rc:1285
 #, c-format
@@ -2691,8 +2689,8 @@ msgstr "ERRO: tipo de variable descoñecido:"
 
 #: heksedit.rc:1319
 #, c-format
-msgid "-> Length of template = %d bytes."
-msgstr "-> Lonxitide do marco = %d bytes."
+msgid "-> Length of template = %zu bytes."
+msgstr "-> Lonxitide do marco = %zu bytes."
 
 #: heksedit.rc:1320
 #, c-format
@@ -2765,32 +2763,23 @@ msgstr "Nome de arquivo e ruta: "
 
 #: heksedit.rc:1345
 #, c-format
-msgid ""
-"\n"
-"Partially opened at offset 0x%x = %d.\n"
-"Number of bytes read: %d = %d kilobytes.\n"
+msgid "\nPartially opened at offset 0x%zx = %zd.\nNumber of bytes read: %zd = %zd kilobytes.\n"
 msgstr ""
 "\n"
-"Aberto parcialmente no offset 0x%x = %d.\n"
-"Número de bytes leídos: %d = %d kilobytes.\n"
+"Aberto parcialmente no offset 0x%zx = %zd.\n"
+"Número de bytes leídos: %zd = %zd kilobytes.\n"
 
 #: heksedit.rc:1346
 #, c-format
-msgid ""
-"\n"
-"File size: %d bytes = %d kilobytes.\n"
+msgid "\nFile size: %zu bytes = %zu kilobytes.\n"
 msgstr ""
 "\n"
-"Tamaño de arquivo: %d bytes = %d kilobytes.\n"
+"Tamaño de arquivo: %zu bytes = %zu kilobytes.\n"
 
 #: heksedit.rc:1347
 #, c-format
-msgid ""
-"\n"
-"Number of hexdump lines: %d.\n"
+msgid "\nNumber of hexdump lines: %zu.\n"
 msgstr ""
-"\n"
-"Número de liñas de volcado hexadecimal: %d.\n"
 
 #: heksedit.rc:1348
 #, c-format

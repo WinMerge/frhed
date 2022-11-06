@@ -46,7 +46,7 @@ BOOL EnterDecimalValueDlg::OnInitDialog(HWindow *pDlg)
 	UINT iDecValDlgValue = 0;
 	if (iCurByte >= 0 && iCurByte < m_dataArray.size())
 	{
-		int t = m_dataArray.size() - iCurByte;
+		size_t t = m_dataArray.size() - iCurByte;
 		//Set the size down a bit if someone called this func with a size thats too large
 		while (iDecValDlgSize > t)
 			iDecValDlgSize /= 2;
@@ -60,7 +60,7 @@ BOOL EnterDecimalValueDlg::OnInitDialog(HWindow *pDlg)
 	}
 	TCHAR buf[16];
 	pDlg->SetDlgItemInt(IDC_DECIMAL_VALUE, iDecValDlgValue, bSigned ? TRUE : FALSE);
-	_stprintf(buf, _T("0x%x"), iCurByte);
+	_stprintf(buf, _T("0x%zx"), iCurByte);
 	pDlg->SetDlgItemText(IDC_DECIMAL_OFFSET, buf);
 	pDlg->SetDlgItemInt(IDC_DECIMAL_TIMES, 1, TRUE);
 	pDlg->CheckDlgButton(
@@ -90,9 +90,9 @@ BOOL EnterDecimalValueDlg::Apply(HWindow *pDlg)
 		MessageBox(pDlg, GetLangString(IDS_DECI_UNKNOWN), MB_ICONERROR);
 		return FALSE;
 	}
-	int iDecValDlgOffset;
+	size_t iDecValDlgOffset;
 	if (!pDlg->GetDlgItemText(IDC_DECIMAL_OFFSET, buf, 16) ||
-		!offset_parse(buf, iDecValDlgOffset))
+		!offset_parse_size_t(buf, iDecValDlgOffset))
 	{
 		MessageBox(pDlg, GetLangString(IDS_OFFSET_ERROR), MB_ICONERROR);
 		return FALSE;
@@ -114,7 +114,7 @@ BOOL EnterDecimalValueDlg::Apply(HWindow *pDlg)
 		return FALSE;
 	}
 	WaitCursor wc;
-	int iDecValDlgOffsetOrg = iDecValDlgOffset;
+	size_t iDecValDlgOffsetOrg = iDecValDlgOffset;
 	UndoRecord::Data *olddata = UndoRecord::alloc(&m_dataArray[iDecValDlgOffset], iDecValDlgSize * iDecValDlgTimes);
 	while (iDecValDlgTimes)
 	{

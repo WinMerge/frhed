@@ -37,35 +37,35 @@ class SimpleArray : public Vector<Type, mGrowBy>
 {
 public:
 	SimpleArray() { }
-	bool InsertAtGrow(int index, Type val, int number = 1)
+	bool InsertAtGrow(size_t index, Type val, size_t number = 1)
 	{
-		if (index < 0 || index > mSize || number <= 0)
+		if (index > mSize)
 			return false;
 		return Vector::insert(index, val, number);
 	}
-	bool InsertAtGrow(int index, Type const *ptr, int number)
+	bool InsertAtGrow(size_t index, Type const *ptr, size_t number)
 	{
-		if (index < 0 || index > mSize || number <= 0)
+		if (index > mSize)
 			return false;
 		return Vector::insert(index, ptr, number);
 	}
-	bool RemoveAt(int index, int number = 1)
+	bool RemoveAt(size_t index, size_t number = 1)
 	{
-		if (index < 0 || index >= mSize || number <= 0)
+		if (index >= mSize || number <= 0)
 			return false;
 		Vector::remove(index, number);
 		return true;
 	}
-	void Adopt(Type *data, int size, int capacity)
+	void Adopt(Type *data, size_t size, size_t capacity)
 	{
 		delete [] mData;
 		mData = data;
 		mCapacity = capacity;
 		mSize = size;
 	}
-	bool Replace(int index, int length, Type const *ptr, int number)
+	bool Replace(size_t index, size_t length, Type const *ptr, size_t number)
 	{
-		if (index < 0 || length <= 0 || index + length > mSize)
+		if (length <= 0 || index + length > mSize)
 			return false;
 		return replace(index, length, ptr, number);
 	}

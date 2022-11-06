@@ -1018,7 +1018,7 @@ STRINGTABLE
 BEGIN
     IDS_APPNAME             "Frhed"
     IDS_ABOUTFRHEDVER       "Version %u.%u.%u"
-    IDS_DIFFLISTITEMFORMAT  "%d) 0x%x=%u to 0x%x=%u (%d bytes)"
+    IDS_DIFFLISTITEMFORMAT  "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytes)"
     IDS_OPEN_ALL_FILES      "All Files (*.*)|*.*|"
     IDS_UNTITLED            "Untitled"
     IDS_FONT_ANSI           "ANSI"
@@ -1103,7 +1103,7 @@ END
 // Bit manipulation
 STRINGTABLE 
 BEGIN
-    IDS_BITMANIP_AT_OFFSET  "Offset: 0x%x = %d"
+    IDS_BITMANIP_AT_OFFSET  "Offset: 0x%zx = %zd"
     IDS_BITMANIP_VALUE      "Value: 0x%02x, %d signed, %u unsigned."
 END
 
@@ -1113,7 +1113,7 @@ BEGIN
     IDS_DIFF_CHOOSEFILE     "Choose file to compare with"
     IDS_DIFF_ERROPEN        "Error while opening file."
     IDS_DIFF_AREAS_FOUND    "%d areas of difference found."
-    IDS_DIFF_REMAINING_BYTES "Remaining loaded data size: %d, size of file on disk: %d."
+    IDS_DIFF_REMAINING_BYTES "Remaining loaded data size: %lld, size of file on disk: %lld."
     IDS_DIFF_NO_DIFF        "Data matches exactly."
 END
 
@@ -1255,7 +1255,7 @@ END
 STRINGTABLE
 BEGIN
     IDS_HEXF_NO_MEM        "Not enough memory to import data.\nCannot continue!\nDo you want to keep what has been found so far?"
-    IDS_HEXF_NONZERO_START "The first offset found was 0x%x, which is greater than zero.\nDo you want to insert %d null bytes at the start of the data?"
+    IDS_HEXF_NONZERO_START "The first offset found was 0x%llx, which is greater than zero.\nDo you want to insert %lld null bytes at the start of the data?"
     IDS_HEXF_INV_OFFSET    "Invalid offset found.\nIgnore further invalid offsets?"
     IDS_HEXF_CHAR_HEX_NO_MATCH "Character data does not agree with hex data.\nIgnore further mismatched data?\nNB: Hex data will be used when ignoring."
     IDS_HEXF_ERR_INV_CHAR  "Illegal character in hex data.\nCannot continue!\nDo you want to keep what has been found so far?"
@@ -1280,8 +1280,8 @@ END
 // Status bar
 STRINGTABLE 
 BEGIN
-    IDS_SBAR_SELECTED_OFFSET "Selected: Offset %d=0x%x to %d=0x%x (%d byte(s))"
-    IDS_SBAR_NSEL_OFFSET   "Offset %d=0x%x"
+    IDS_SBAR_SELECTED_OFFSET "Selected: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
+    IDS_SBAR_NSEL_OFFSET   "Offset %zd=0x%zx"
     IDS_SBAR_BITS          "Bits"
     IDS_SBAR_UNSIGNED      "Unsigned"
     IDS_SBAR_BYTE_SHORT    "B"
@@ -1316,7 +1316,7 @@ END
 // Template (continued)
 STRINGTABLE 
 BEGIN
-   IDS_TPL_LENGTH           "-> Length of template = %d bytes."
+   IDS_TPL_LENGTH           "-> Length of template = %zu bytes."
    IDS_TPL_FILE_PATTERN     "Template files (*.tpl)\0*.tpl\0\0"
    IDS_TPL_CHOOSE_FILE      "Choose template file"
    IDS_TPL_CANNOT_OPEN      "Could not open template file %s."
@@ -1342,9 +1342,9 @@ BEGIN
    IDS_DOUBLE_SIZE         "\nDouble size value:\n%g\n"
    IDS_DOUBLE_NOSPACE      "\nNot enough space for double size value.\n"
    IDS_FPROP_NAME          "File name and path: "
-   IDS_FPROP_PARTIAL_OPEN  "\nPartially opened at offset 0x%x = %d.\nNumber of bytes read: %d = %d kilobytes.\n"
-   IDS_FPROP_FSIZE         "\nFile size: %d bytes = %d kilobytes.\n"
-   IDS_FPROP_HDUMP_LINES   "\nNumber of hexdump lines: %d.\n"
+   IDS_FPROP_PARTIAL_OPEN  "\nPartially opened at offset 0x%zx = %zd.\nNumber of bytes read: %zd = %zd kilobytes.\n"
+   IDS_FPROP_FSIZE         "\nFile size: %zu bytes = %zu kilobytes.\n"
+   IDS_FPROP_HDUMP_LINES   "\nNumber of hexdump lines: %zu.\n"
    IDS_MRU_REMOVING        "This file could not be accessed and will be removed from the MRU list."
    IDS_RESET_COLORS        "Really reset colors to default values?"
    IDS_ASK_DELETE_FILE     "Are you sure you want to delete this file?"

@@ -41,30 +41,30 @@ const int TPL_NAME_MAXLEN = 128;
 class Template
 {
 public:
-	Template(BYTE const *data, int size);
+	Template(BYTE const *data, size_t size);
 	~Template();
 
 	void SetOriginalFilename(LPCTSTR filename);
 	bool OpenTemplate(LPCTSTR filename);
 	bool LoadTemplateData();
-	void CreateTemplateArray(int curByte);
-	void ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, int curByte);
+	void CreateTemplateArray(size_t curByte);
+	void ApplyTemplate(HexEditorWindow::BYTE_ENDIAN binaryMode, size_t curByte);
 	LPCTSTR GetResult();
 
 protected:
-	bool ignore_non_code(char *pcTpl, int tpl_len, int &index);
-	bool read_tpl_token(char *pcTpl, int tpl_len, int &index, TCHAR *name);
+	bool ignore_non_code(char *pcTpl, size_t tpl_len, size_t &index);
+	bool read_tpl_token(char *pcTpl, size_t tpl_len, size_t &index, TCHAR *name);
 
 private:
 	int m_filehandle; /**< File handle to template file. */
 	TCHAR m_origFilename[MAX_PATH]; /**< Filename of the file in the editor. */
 	TCHAR m_filename[MAX_PATH]; /**< Template file name. */
-	int m_filelen; /**< Template file size. */
+	size_t m_filelen; /**< Template file size. */
 	char *m_tmplBuf; /**< Template file data buffer (read from file). */
 	TString m_resultString; /**< Resulting string for applied template. */
 	//const SimpleArray<BYTE, 100> &m_dataArray; /**< Original data. */
 	BYTE const *const m_data;
-	int const m_size;
+	size_t const m_size;
 };
 
 #endif // _TEMPLATE_H_

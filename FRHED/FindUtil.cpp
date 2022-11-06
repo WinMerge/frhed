@@ -29,7 +29,7 @@ Last change: 2013-02-24 by Jochen Neubeck
 
 static BYTE equal(BYTE c);
 static BYTE lower_case(BYTE c);
-static int find_bytes(BYTE* ps, int ls, BYTE* pb, int lb, int mode, BYTE (*cmp)(BYTE));
+static SSIZE_T find_bytes(BYTE* ps, SSIZE_T ls, BYTE* pb, SSIZE_T lb, int mode, BYTE (*cmp)(BYTE));
 
 /**
  * @brief Find bytes in buffer.
@@ -43,7 +43,7 @@ static int find_bytes(BYTE* ps, int ls, BYTE* pb, int lb, int mode, BYTE (*cmp)(
  * @param [in] case_sensitive If true, performs case-sensitive search.
  * @return Position of found string or -1 if not there.
 */
-int findutils_FindBytes(BYTE* ps, int ls, BYTE* pb, int lb, int mode, bool case_sensitive)
+SSIZE_T findutils_FindBytes(BYTE* ps, SSIZE_T ls, BYTE* pb, SSIZE_T lb, int mode, bool case_sensitive)
 {
 	BYTE (*cmp)(BYTE) = case_sensitive ? equal : lower_case;
 	return find_bytes(ps, ls, pb, lb, mode, cmp);
@@ -75,9 +75,9 @@ BYTE lower_case(BYTE c)
  * @param [in] cmp pointer to function that is applied to data before comparing.
  * @return Position of found string or -1 if not there.
 */
-int find_bytes(BYTE* ps, int ls, BYTE* pb, int lb, int mode, BYTE (*cmp)(BYTE))
+SSIZE_T find_bytes(BYTE* ps, SSIZE_T ls, BYTE* pb, SSIZE_T lb, int mode, BYTE (*cmp)(BYTE))
 {
-	int start, inc, end, i;
+	SSIZE_T start, inc, end, i;
 	if (mode == 1)
 	{
 		start = 0;

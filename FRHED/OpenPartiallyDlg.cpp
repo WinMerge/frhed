@@ -55,6 +55,19 @@ BOOL OpenPartiallyDlg::OnInitDialog(HWindow *pDlg)
 	return TRUE;
 }
 
+static int64_t _read64(int const fd, void* const buffer, uint64_t const buffer_size)
+{
+	uint64_t pos = 0;
+	while (pos < buffer_size)
+	{
+		int res32 = _read(fd, reinterpret_cast<char *>(buffer) + pos, buffer_size - pos < 0x10000000 ? static_cast<unsigned>(buffer_size - pos) : 0x10000000);
+		if (res32 == -1)
+			return -1;
+		pos += res32;
+	}
+	return static_cast<int64_t>(pos);
+}
+
 /**
  * @brief Apply user's selections and open the file.
  * @param [in] hDlg Handle to the dialog.
@@ -66,17 +79,17 @@ BOOL OpenPartiallyDlg::Apply(HWindow *pDlg)
 	const UINT state = pDlg->IsDlgButtonChecked(IDC_OPENPARTIAL_RELOFFSET);
 	bShowFileStatsPL = state == BST_CHECKED;
 	TCHAR buf[128];
-	UINT numBytesPl = 0; // Bytes to read
+	size_t numBytesPl = 0; // Bytes to read
 	
 	// Only complain about wrong offset in start offset editbox if loading from start.
 	if (pDlg->GetDlgItemText(IDC_OPENPARTIAL_BYTES, buf, RTL_NUMBER_OF(buf)) &&
-		_stscanf(buf, _T("%u"), &numBytesPl) == 0)
+		_stscanf(buf, _T("%zu"), &numBytesPl) == 0)
 	{
 		MessageBox(pDlg, GetLangString(IDS_BYTES_NOT_KNOWN), MB_ICONERROR);
 		return FALSE;
 	}
 
-	if (numBytesPl >= INT_MAX)
+	if (sizeof(size_t) == 4 && numBytesPl >= INT_MAX)
 	{
 		MessageBox(pDlg, GetLangString(IDS_PARTIAL_TOO_BIG), MB_ICONERROR);
 		return FALSE;
@@ -110,12 +123,12 @@ BOOL OpenPartiallyDlg::Apply(HWindow *pDlg)
 	{
 		_lseeki64(filehandle, iStartPL, 0);
 		iPartialOffset = iStartPL;
-		iPartialOpenLen = (int) numBytesPl;
+		iPartialOpenLen = numBytesPl;
 		iPartialFileLen = iPLFileLen;
 		bPartialStats = bShowFileStatsPL;
 
 		// m_dataArray restricts max size to 2 GB.
-		if (_read(filehandle, m_dataArray.pointer(), numBytesPl) != -1)
+		if (_read64(filehandle, m_dataArray.pointer(), numBytesPl) != -1)
 		{
 			done = TRUE;
 		}

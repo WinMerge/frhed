@@ -40,10 +40,10 @@ String ReplaceDlg::strReplaceWithData(0); // Don't let default ctor cause SIOF
 
 //-------------------------------------------------------------------
 // Translate the text in the string to binary data and store in the array.
-int ReplaceDlg::transl_text_to_binary(SimpleArray<BYTE> &out)
+size_t ReplaceDlg::transl_text_to_binary(SimpleArray<BYTE> &out)
 {
 	BYTE *pcOut;
-	int destlen = create_bc_translation(&pcOut,
+	size_t destlen = create_bc_translation(&pcOut,
 		strReplaceWithData.c_str(), strReplaceWithData.length(),
 		iCharacterSet, iBinaryMode);
 	if (destlen)
@@ -54,10 +54,10 @@ int ReplaceDlg::transl_text_to_binary(SimpleArray<BYTE> &out)
 //-------------------------------------------------------------------
 // Create a text representation of an array of bytes and save it in
 // a String object.
-int	ReplaceDlg::transl_binary_to_text(const BYTE *src, int len)
+bool ReplaceDlg::transl_binary_to_text(const BYTE *src, size_t len)
 {
 	// How long will the text representation of array of bytes be?
-	int destlen = Text2BinTranslator::iBytes2BytecodeDestLen(src, len);
+	size_t destlen = Text2BinTranslator::iBytes2BytecodeDestLen(src, len);
 	strToReplaceData.resize(destlen);
 	if (char *pd = strToReplaceData.pointer())
 	{
@@ -72,11 +72,11 @@ bool ReplaceDlg::find_and_select_data(int finddir, bool case_sensitive)
 {
 	BYTE *tofind;
 	// Create a translation from bytecode to char array of finddata.
-	int destlen = create_bc_translation(&tofind, strToReplaceData.c_str(),
+	size_t destlen = create_bc_translation(&tofind, strToReplaceData.c_str(),
 		strToReplaceData.length(), iCharacterSet, iBinaryMode);
-	int i = iGetStartOfSelection();
-	int n = iGetEndOfSelection() - i + 1;
-	int j;
+	size_t i = iGetStartOfSelection();
+	size_t n = iGetEndOfSelection() - i + 1;
+	SSIZE_T j;
 	if (finddir >= 0)
 	{
 		i += finddir * n;
@@ -118,8 +118,8 @@ bool ReplaceDlg::replace_selected_data(HWindow *pDlg)
 		MessageBox(pDlg, GetLangString(IDS_REPL_NO_DATA), MB_ICONERROR);
 		return false;
 	}
-	int i = iGetStartOfSelection();
-	int n = iGetEndOfSelection() - i + 1;
+	size_t i = iGetStartOfSelection();
+	size_t n = iGetEndOfSelection() - i + 1;
 	UndoRecord::Data *olddata = UndoRecord::alloc(&m_dataArray[i], n);
 	if (strReplaceWithData.length() == 0)
 	{
@@ -251,8 +251,8 @@ INT_PTR ReplaceDlg::DlgProc(HWindow *pDlg, UINT iMsg, WPARAM wParam, LPARAM lPar
 		// If there is selected data then make it the data to find.
 		if (bSelected)
 		{
-			int sel_start = iGetStartOfSelection();
-			int select_len = iGetEndOfSelection() - sel_start + 1;
+			size_t sel_start = iGetStartOfSelection();
+			size_t select_len = iGetEndOfSelection() - sel_start + 1;
 			if (!transl_binary_to_text(&m_dataArray[sel_start], select_len))
 			{
 				MessageBox(pDlg, GetLangString(IDS_REPL_BAD_SELECT), MB_OK);

@@ -24,9 +24,9 @@ public:
 	// Methods
 	virtual int lhgetc() = 0;
 	virtual int lhungetc(int) = 0;
-	virtual long lhtell() = 0;
-	virtual int lhseek(long) = 0;
-	virtual int scanf(const char *, int *) = 0;
+	virtual long long lhtell() = 0;
+	virtual int lhseek(long long) = 0;
+	virtual int scanf(const char *, long long *) = 0;
 	int lheatwhite();
 };
 
@@ -46,15 +46,15 @@ public:
 	{
 		return ungetc(c, i);
 	}
-	virtual long lhtell()
+	virtual long long lhtell()
 	{
-		return ftell(i);
+		return _ftelli64(i);
 	}
-	virtual int lhseek(long p)
+	virtual int lhseek(long long p)
 	{
-		return fseek(i, p, SEEK_SET);
+		return _fseeki64(i, p, SEEK_SET);
 	}
-	virtual int scanf(const char *fmt, int *p)
+	virtual int scanf(const char *fmt, long long *p)
 	{
 		return fscanf(i, fmt, p);
 	}
@@ -65,7 +65,7 @@ class chexfile_stream : public hexfile_stream
 public:
 	// Data
 	char *i;
-	long lhpos;
+	long long lhpos;
 	// Constructor
 	chexfile_stream(char *i): i(i), lhpos(0) { }
 	// Methods
@@ -82,15 +82,16 @@ public:
 	{
 		return BYTE(i[--lhpos] = (BYTE)c);
 	}
-	virtual long lhtell()
+	virtual long long lhtell()
 	{
 		return lhpos;
 	}
-	virtual int lhseek(long p)
+	virtual int lhseek(long long p)
 	{
-		return lhpos = p;
+		lhpos = p;
+		return 0;
 	}
-	virtual int scanf(const char *fmt, int *p)
+	virtual int scanf(const char *fmt, long long *p)
 	{
 		return sscanf(i + lhpos, fmt, p);
 	}
@@ -113,9 +114,9 @@ class load_hexfile_1 : SimpleArray<unsigned char>
 {
 private:
 	HWindow *pwnd;
-	int iMinOffsetLen;
+	size_t iMinOffsetLen;
 	int bAutoOffsetLen;
-	int iBytesPerLine;
+	size_t iBytesPerLine;
 	int iAutomaticBPL;
 	int iCharacterSet;
 	int bPartialStats;

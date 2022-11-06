@@ -39,21 +39,21 @@ BOOL AppendDlg::Apply(HWindow *pDlg)
 {
 	const int bufsize = 64;
 	TCHAR buf[bufsize + 1];
-	int iAppendbytes;
+	size_t iAppendbytes = 0;
 	if (pDlg->GetDlgItemText(IDC_APPEND_BYTES, buf, bufsize) &&
-		_stscanf(buf, _T("%d"), &iAppendbytes) == 0)
+		_stscanf(buf, _T("%zu"), &iAppendbytes) == 0)
 	{
 		MessageBox(pDlg, GetLangString(IDS_APPEND_UNKNOWN_AMOUNT), MB_ICONERROR);
 		return FALSE;
 	}
-	int oldsize = m_dataArray.size();
+	size_t oldsize = m_dataArray.size();
 	if (!m_dataArray.resize(oldsize + iAppendbytes))
 	{
 		MessageBox(pDlg, GetLangString(IDS_APPEND_NO_MEM), MB_ICONERROR);
 		return FALSE;
 	}
 	WaitCursor wc;
-	for (int i = 0 ; i < iAppendbytes ; i++)
+	for (size_t i = 0 ; i < iAppendbytes ; i++)
 		m_dataArray[oldsize + i] = 0;
 	push_undorecord(oldsize, iAppendbytes, NULL);
 	bFilestatusChanged = true;

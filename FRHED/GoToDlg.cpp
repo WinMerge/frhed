@@ -45,7 +45,7 @@ BOOL GoToDlg::OnInitDialog(HWindow *pDlg)
 {
 	// Get current offset
 	TCHAR buffer[EditLen + 1];
-	_itot(iCurByte, buffer, 10);
+	_stprintf(buffer, _T("%zd"), iCurByte);
 	pDlg->SetDlgItemText(IDC_GOTO_OFFSET, buffer);
 	// Limit edit field char amount
 	pDlg->SendDlgItemMessage(IDC_GOTO_OFFSET, EM_SETLIMITTEXT, EditLen);
@@ -60,12 +60,12 @@ BOOL GoToDlg::OnInitDialog(HWindow *pDlg)
 BOOL GoToDlg::Apply(HWindow *pDlg)
 {
 	TCHAR buffer[EditLen + 1];
-	int offset, i = 0, r = 0;
+	SSIZE_T offset, i = 0, r = 0;
 	pDlg->GetDlgItemText(IDC_GOTO_OFFSET, buffer, RTL_NUMBER_OF(buffer));
 	// For a relative jump, read offset from 2nd character on.
 	if (buffer[0] == '+' || buffer[0] == '-')
 		r = 1;
-	if (!offset_parse(buffer + r, offset))
+	if (!offset_parse_ssize_t(buffer + r, offset))
 	{
 		MessageBox(pDlg, GetLangString(IDS_OFFSET_ERROR), MB_ICONERROR);
 		return FALSE;
@@ -82,7 +82,7 @@ BOOL GoToDlg::Apply(HWindow *pDlg)
 	// Check limits and jump to begin/end if out of limits
 	if (offset < 0)
 		offset = 0;
-	if (offset >= m_dataArray.size())
+	if (offset >= static_cast<SSIZE_T>(m_dataArray.size()))
 		offset = m_dataArray.size() - 1;
 
 	iCurByte = offset;

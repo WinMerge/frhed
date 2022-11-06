@@ -1806,8 +1806,8 @@ msgstr "Version %u.%u.%u"
 
 #: heksedit.rc:1021
 #, c-format
-msgid "%d) 0x%x=%u to 0x%x=%u (%d bytes)"
-msgstr "%d) 0x%x=%u to 0x%x=%u (%d バイト)"
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytes)"
+msgstr "%d) 0x%zx=%zu to 0x%zx=%zu (%zu バイト)"
 
 #: heksedit.rc:1022
 #, c-format
@@ -2076,8 +2076,8 @@ msgstr "追加するのに十分なメモリがありません。"
 
 #: heksedit.rc:1106
 #, c-format
-msgid "Offset: 0x%x = %d"
-msgstr "オフセット: 0x%x = %d"
+msgid "Offset: 0x%zx = %zd"
+msgstr "オフセット: 0x%zx = %zd"
 
 #: heksedit.rc:1107
 #, c-format
@@ -2101,8 +2101,8 @@ msgstr "%d 箇所差異があります。"
 
 #: heksedit.rc:1116
 #, c-format
-msgid "Remaining loaded data size: %d, size of file on disk: %d."
-msgstr "読み込まれたデータ サイズ: %d, ディスク上のファイル サイズ: %d"
+msgid "Remaining loaded data size: %lld, size of file on disk: %lld."
+msgstr "読み込まれたデータ サイズ: %lld, ディスク上のファイル サイズ: %lld"
 
 #: heksedit.rc:1117
 #, c-format
@@ -2481,12 +2481,10 @@ msgstr ""
 
 #: heksedit.rc:1258
 #, c-format
-msgid ""
-"The first offset found was 0x%x, which is greater than zero.\n"
-"Do you want to insert %d null bytes at the start of the data?"
+msgid "The first offset found was 0x%llx, which is greater than zero.\nDo you want to insert %lld null bytes at the start of the data?"
 msgstr ""
-"最初のオフセットが 0 ではなく、0x%x です。\n"
-"%d 個の NUL バイトをデータの先頭に挿入しますか?"
+"最初のオフセットが 0 ではなく、0x%llx です。\n"
+"%lld 個の NUL バイトをデータの先頭に挿入しますか?"
 
 #: heksedit.rc:1259
 #, c-format
@@ -2583,13 +2581,13 @@ msgstr "置換対象として選択範囲の内容を使用することができ
 
 #: heksedit.rc:1283
 #, c-format
-msgid "Selected: Offset %d=0x%x to %d=0x%x (%d byte(s))"
-msgstr "選択範囲: オフセット %d=0x%x ～ %d=0x%x (%d バイト)"
+msgid "Selected: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
+msgstr "選択範囲: オフセット %d=0x%zx ～ %d=0x%zx (%zd バイト)"
 
 #: heksedit.rc:1284
 #, c-format
-msgid "Offset %d=0x%x"
-msgstr "オフセット %d=0x%x"
+msgid "Offset %zd=0x%zx"
+msgstr "オフセット %zd=0x%zx"
 
 #: heksedit.rc:1285
 #, c-format
@@ -2690,8 +2688,8 @@ msgstr "エラー: 未知の変数の型が指定されています:"
 
 #: heksedit.rc:1319
 #, c-format
-msgid "-> Length of template = %d bytes."
-msgstr "-> テンプレートの長さ = %d バイト"
+msgid "-> Length of template = %zu bytes."
+msgstr ""
 
 #: heksedit.rc:1320
 #, c-format
@@ -2764,32 +2762,23 @@ msgstr "ファイル名とパス:"
 
 #: heksedit.rc:1345
 #, c-format
-msgid ""
-"\n"
-"Partially opened at offset 0x%x = %d.\n"
-"Number of bytes read: %d = %d kilobytes.\n"
+msgid "\nPartially opened at offset 0x%zx = %zd.\nNumber of bytes read: %zd = %zd kilobytes.\n"
 msgstr ""
 "\n"
-"部分的にオフセット 0x%x = %d を開きました。\n"
-"読み取りバイト数: %d = %d KB \n"
+"部分的にオフセット 0x%zx = %zd を開きました。\n"
+"読み取りバイト数: %zd = %zd KB \n"
 
 #: heksedit.rc:1346
 #, c-format
-msgid ""
-"\n"
-"File size: %d bytes = %d kilobytes.\n"
+msgid "\nFile size: %zu bytes = %zu kilobytes.\n"
 msgstr ""
 "\n"
-"ファイル サイズ: %d バイト = %d KB\n"
+"ファイル サイズ: %zu バイト = %zu KB\n"
 
 #: heksedit.rc:1347
 #, c-format
-msgid ""
-"\n"
-"Number of hexdump lines: %d.\n"
+msgid "\nNumber of hexdump lines: %zu.\n"
 msgstr ""
-"\n"
-"16進ダンプの行数: %d.\n"
 
 #: heksedit.rc:1348
 #, c-format

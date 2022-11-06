@@ -27,7 +27,7 @@ Last change: 2017-06-21 by Jochen Neubeck
 #ifndef BinTrans_h
 #define BinTrans_h
 
-int create_bc_translation(BYTE** ppd, const char* src, int srclen, int charset, int binarymode);
+size_t create_bc_translation(BYTE** ppd, const char* src, size_t srclen, int charset, int binarymode);
 
 /**
  * @brief A class translating between text export and binary data.
@@ -37,16 +37,16 @@ class Text2BinTranslator : public String
 public:
 	int bCompareBin(Text2BinTranslator& tr2, int charmode, int binmode);
 	Text2BinTranslator(const char* ps);
-	static int iIsBytecode(const char* src, int len);
-	static int iBytes2BytecodeDestLen(const BYTE* src, int srclen);
-	static int iLengthOfTransToBin(const char* src, int srclen);
-	static int iCreateBcTranslation(BYTE* dest, const char* src, int srclen, int charmode, int binmode);
-	static int iTranslateOneBytecode(BYTE* dest, const char* src, int srclen, int binmode);
-	static int iFindBytePos(const char* src, char c);
-	static int iTranslateBytesToBC(char* pd, const BYTE* src, int srclen);
+	static int iIsBytecode(const char* src, size_t len);
+	static size_t iBytes2BytecodeDestLen(const BYTE* src, size_t srclen);
+	static size_t iLengthOfTransToBin(const char* src, size_t srclen);
+	static size_t iCreateBcTranslation(BYTE* dest, const char* src, size_t srclen, int charmode, int binmode);
+	static int iTranslateOneBytecode(BYTE* dest, const char* src, size_t srclen, int binmode);
+	static size_t iFindBytePos(const char* src, char c);
+	static size_t iTranslateBytesToBC(char* pd, const BYTE* src, size_t srclen);
 
 private:
-	int GetTrans2Bin(Vector<BYTE>& sa, int charmode, int binmode);
+	size_t GetTrans2Bin(Vector<BYTE>& sa, int charmode, int binmode);
 };
 
 #endif // BinTrans_h

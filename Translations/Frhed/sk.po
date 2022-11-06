@@ -1816,8 +1816,8 @@ msgstr "Verzia %u.%u.%u"
 
 #: heksedit.rc:1021
 #, c-format
-msgid "%d) 0x%x=%u to 0x%x=%u (%d bytes)"
-msgstr "%d) 0x%x=%u to 0x%x=%u (%d bytov)"
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytes)"
+msgstr "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytov)"
 
 #: heksedit.rc:1022
 #, c-format
@@ -2086,8 +2086,8 @@ msgstr "Nedostatok pamäte na pripojenie."
 
 #: heksedit.rc:1106
 #, c-format
-msgid "Offset: 0x%x = %d"
-msgstr "Posuv: 0x%x = %d"
+msgid "Offset: 0x%zx = %zd"
+msgstr "Posuv: 0x%zx = %zd"
 
 #: heksedit.rc:1107
 #, c-format
@@ -2111,9 +2111,9 @@ msgstr "Nájdených %d rozdielnych oblastí."
 
 #: heksedit.rc:1116
 #, c-format
-msgid "Remaining loaded data size: %d, size of file on disk: %d."
+msgid "Remaining loaded data size: %lld, size of file on disk: %lld."
 msgstr ""
-"Zostávajúca veľkosť načítaných údajov: %d, veľkosť súboru na disku: %d."
+"Zostávajúca veľkosť načítaných údajov: %lld, veľkosť súboru na disku: %lld."
 
 #: heksedit.rc:1117
 #, c-format
@@ -2497,12 +2497,10 @@ msgstr ""
 
 #: heksedit.rc:1258
 #, c-format
-msgid ""
-"The first offset found was 0x%x, which is greater than zero.\n"
-"Do you want to insert %d null bytes at the start of the data?"
+msgid "The first offset found was 0x%llx, which is greater than zero.\nDo you want to insert %lld null bytes at the start of the data?"
 msgstr ""
-"Prvý nájdený posuv bol 0x% x, čo je viac ako nula.\n"
-"Chcete vložiť %d nulových bajtov na začiatok údajov?"
+"Prvý nájdený posuv bol 0x%llx, čo je viac ako nula.\n"
+"Chcete vložiť %lld nulových bajtov na začiatok údajov?"
 
 #: heksedit.rc:1259
 #, c-format
@@ -2604,13 +2602,13 @@ msgstr "Nemožno použiť výber ako cieľ nahradenia."
 
 #: heksedit.rc:1283
 #, c-format
-msgid "Selected: Offset %d=0x%x to %d=0x%x (%d byte(s))"
-msgstr "Vybrané: posuv %d=0x%x do %d=0x%x (%d byty(ov))"
+msgid "Selected: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
+msgstr "Vybrané: posuv %zd=0x%zx do %zd=0x%zx (%zd byty(ov))"
 
 #: heksedit.rc:1284
 #, c-format
-msgid "Offset %d=0x%x"
-msgstr "Posuv %d=0x%x"
+msgid "Offset %zd=0x%zx"
+msgstr "Posuv %zd=0x%zx"
 
 #: heksedit.rc:1285
 #, c-format
@@ -2711,8 +2709,8 @@ msgstr "CHYBA: Neznámy typ premennej:"
 
 #: heksedit.rc:1319
 #, c-format
-msgid "-> Length of template = %d bytes."
-msgstr "-> Dĺžka šablóny = %d bajtov."
+msgid "-> Length of template = %zu bytes."
+msgstr "-> Dĺžka šablóny = %zu bajtov."
 
 #: heksedit.rc:1320
 #, c-format
@@ -2790,32 +2788,23 @@ msgstr "Názov súboru a cesta: "
 
 #: heksedit.rc:1345
 #, c-format
-msgid ""
-"\n"
-"Partially opened at offset 0x%x = %d.\n"
-"Number of bytes read: %d = %d kilobytes.\n"
+msgid "\nPartially opened at offset 0x%zx = %zd.\nNumber of bytes read: %zd = %zd kilobytes.\n"
 msgstr ""
 "\n"
-"Čiastočne otvorené pre posuv 0x%x = %d.\n"
-"Počet prečítaných bajtov: %d = %d kilobajtov.\n"
+"Čiastočne otvorené pre posuv 0x%zx = %zd.\n"
+"Počet prečítaných bajtov: %zd = %zd kilobajtov.\n"
 
 #: heksedit.rc:1346
 #, c-format
-msgid ""
-"\n"
-"File size: %d bytes = %d kilobytes.\n"
+msgid "\nFile size: %zu bytes = %zu kilobytes.\n"
 msgstr ""
 "\n"
-"Veľkosť súboru: %d bytov = %d kilobytov.\n"
+"Veľkosť súboru: %zu bytov = %zu kilobytov.\n"
 
 #: heksedit.rc:1347
 #, c-format
-msgid ""
-"\n"
-"Number of hexdump lines: %d.\n"
+msgid "\nNumber of hexdump lines: %zu.\n"
 msgstr ""
-"\n"
-"Počet riadkov hexadecimálneho výpisu: %d.\n"
 
 #: heksedit.rc:1348
 #, c-format

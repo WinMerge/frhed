@@ -82,14 +82,14 @@ BOOL PasteDlg::Apply(HWindow *pDlg)
 	}
 	iPasteSkip = pDlg->GetDlgItemInt(IDC_PASTE_SKIPBYTES);
 	HEdit *pwndEdit1 = static_cast<HEdit *>(pDlg->GetDlgItem(IDC_PASTE_CLIPBOARD));
-	int destlen = pwndEdit1->GetWindowTextLength() + 1;
+	size_t destlen = pwndEdit1->GetWindowTextLength() + 1;
 	char *pcPastestring = new char[destlen];
 	destlen = pwndEdit1->GetWindowTextA(pcPastestring, destlen);
 	if (!bPasteAsText)
 	{
 		char *pc = 0;
 		destlen = create_bc_translation((BYTE **)&pc, pcPastestring,
-			static_cast<int>(strlen(pcPastestring)), iCharacterSet, iBinaryMode);
+			strlen(pcPastestring), iCharacterSet, iBinaryMode);
 		delete [] pcPastestring;
 		pcPastestring = pc;
 	}
@@ -107,7 +107,7 @@ BOOL PasteDlg::Apply(HWindow *pDlg)
 		if (bSelected)
 		{
 			iCurByte = iGetStartOfSelection();
-			int iEndByte = iGetEndOfSelection();
+			size_t iEndByte = iGetEndOfSelection();
 			olddata = UndoRecord::alloc(&m_dataArray[iCurByte], iEndByte - iCurByte + 1 + (iPasteTimes - 1) * iPasteSkip);
 			m_dataArray.RemoveAt(iCurByte, iEndByte - iCurByte + 1);//Remove extraneous data
 			bSelected = false; // Deselect
@@ -116,7 +116,7 @@ BOOL PasteDlg::Apply(HWindow *pDlg)
 		{
 			olddata = UndoRecord::alloc(&m_dataArray[iCurByte], (iPasteTimes - 1) * iPasteSkip);
 		}
-		int i = iCurByte;
+		size_t i = iCurByte;
 		for (int k = 0 ; k < iPasteTimes ; k++)
 		{
 			if (!m_dataArray.InsertAtGrow(i, (BYTE*)pcPastestring, destlen))

@@ -72,7 +72,7 @@ BOOL AboutDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM lParam)
 		{
 			HINSTANCE hi = ShellExecute(pDlg->m_hWnd,
 				_T("open"), FrhedHomepageURL, 0, NULL, SW_SHOWNORMAL);
-			if ((UINT)hi <= HINSTANCE_ERROR)
+			if ((UINT_PTR)hi <= HINSTANCE_ERROR)
 			{
 				MessageBox(pDlg, GetLangString(IDS_ABOUT_BROWSER_ERR), MB_ICONERROR);
 			}

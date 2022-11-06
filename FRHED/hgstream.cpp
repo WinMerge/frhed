@@ -108,7 +108,7 @@ HGlobalStream& HGlobalStream::operator << (DWORD i)
 	return *this;
 }
 
-HGlobalStream& HGlobalStream::operator << (int i)
+HGlobalStream& HGlobalStream::operator << (size_t i)
 {
 	//Maximum size of an integer in hex is 8
 	//Maximum size for an int is the length of -2147483647 (11)
@@ -117,7 +117,7 @@ HGlobalStream& HGlobalStream::operator << (int i)
 #error The buffer below needs increasing
 #endif
 	char integer[12];
-	Realloc(sprintf(integer, _hex ? "%x" : "%d", i), integer);
+	Realloc(sprintf(integer, _hex ? "%zx" : "%zd", i), integer);
 	_hex = _nbsp = _escfilt = 0;
 	return *this;
 }

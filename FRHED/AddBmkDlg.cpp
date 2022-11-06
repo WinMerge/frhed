@@ -42,7 +42,7 @@ static const int OffsetLen = 16;
 BOOL AddBmkDlg::OnInitDialog(HWindow *pDlg)
 {
 	TCHAR buf[OffsetLen + 1];
-	_stprintf(buf, _T("0x%x"), iCurByte);
+	_stprintf(buf, _T("0x%zx"), iCurByte);
 	pDlg->SetDlgItemText(IDC_BMKADD_OFFSET, buf);
 	// Limit edit text lengths
 	pDlg->SendDlgItemMessage(IDC_BMKADD_OFFSET, EM_SETLIMITTEXT, OffsetLen, 0);
@@ -60,12 +60,13 @@ BOOL AddBmkDlg::OnInitDialog(HWindow *pDlg)
 BOOL AddBmkDlg::OnCommand(HWindow *pDlg, WPARAM wParam, LPARAM lParam)
 {
 	TCHAR buf[OffsetLen + 1];
-	int i, offset;
+	int i;
+	size_t offset = 0;
 	switch (wParam)
 	{
 	case IDOK:
 		if (pDlg->GetDlgItemText(IDC_BMKADD_OFFSET, buf, RTL_NUMBER_OF(buf)) &&
-			!offset_parse(buf, offset))
+			!offset_parse_size_t(buf, offset))
 		{
 			MessageBox(pDlg, GetLangString(IDS_OFFSET_START_ERROR), MB_ICONERROR);
 			return TRUE;

@@ -39,14 +39,14 @@ Last change: 2013-02-24 by Jochen Neubeck
 BOOL MoveCopyDlg::OnInitDialog(HWindow *pDlg)
 {
 	TCHAR buf[30];
-	int iMove1stEnd = iGetStartOfSelection();
-	int iMove2ndEndorLen = iGetEndOfSelection();
-	_stprintf(buf, _T("0x%x"), iMove1stEnd);
+	size_t iMove1stEnd = iGetStartOfSelection();
+	size_t iMove2ndEndorLen = iGetEndOfSelection();
+	_stprintf(buf, _T("0x%zx"), iMove1stEnd);
 	pDlg->SetDlgItemText(IDC_1STOFFSET, buf);
-	_stprintf(buf, _T("0x%x"), iMove2ndEndorLen);
+	_stprintf(buf, _T("0x%zx"), iMove2ndEndorLen);
 	pDlg->SetDlgItemText(IDC_2NDDELIM, buf);
 	pDlg->CheckDlgButton(IDC_OTHEREND, BST_CHECKED);
-	_stprintf(buf, _T("0x%x"), iMovePos);
+	_stprintf(buf, _T("0x%zx"), iMovePos);
 	pDlg->SetDlgItemText(IDC_MOVEMENT, buf);
 	pDlg->CheckDlgButton(IDC_FPOS, BST_CHECKED);
 	if (iMoveOpTyp == OPTYP_MOVE)
@@ -62,11 +62,11 @@ BOOL MoveCopyDlg::OnInitDialog(HWindow *pDlg)
  * @param [out] value Value read from the dialog.
  * @return true if the value was read, false if value could not be read.
  */
-bool MoveCopyDlg::ReadStartOffset(HWindow *pDlg, int &value)
+bool MoveCopyDlg::ReadStartOffset(HWindow *pDlg, SSIZE_T &value)
 {
 	TCHAR buf[30];
 	if (!pDlg->GetDlgItemText(IDC_1STOFFSET, buf, RTL_NUMBER_OF(buf)) ||
-		!offset_parse(buf, value))
+		!offset_parse_ssize_t(buf, value))
 	{
 		MessageBox(pDlg, GetLangString(IDS_OFFSET_START_ERROR), MB_ICONERROR);
 		return false;
@@ -85,11 +85,11 @@ bool MoveCopyDlg::ReadStartOffset(HWindow *pDlg, int &value)
  * @param [out] value Value read from the dialog.
  * @return true if the value was read, false if value could not be read.
  */
-bool MoveCopyDlg::ReadEndOffset(HWindow *pDlg, int &value)
+bool MoveCopyDlg::ReadEndOffset(HWindow *pDlg, SSIZE_T &value)
 {
 	TCHAR buf[30];
 	if (!pDlg->GetDlgItemText(IDC_2NDDELIM, buf, RTL_NUMBER_OF(buf)) ||
-		!offset_parse(buf, value))
+		!offset_parse_ssize_t(buf, value))
 	{
 		MessageBox(pDlg, GetLangString(IDS_OFFSET_END_ERROR), MB_ICONERROR);
 		return false;
@@ -109,11 +109,11 @@ bool MoveCopyDlg::ReadEndOffset(HWindow *pDlg, int &value)
  * @param [out] value Value read from the dialog.
  * @return true if the value was read, false if value could not be read.
  */
-bool MoveCopyDlg::ReadTargetOffset(HWindow *pDlg, int &value)
+bool MoveCopyDlg::ReadTargetOffset(HWindow *pDlg, SSIZE_T &value)
 {
 	TCHAR buf[30];
 	if (!pDlg->GetDlgItemText(IDC_MOVEMENT, buf, RTL_NUMBER_OF(buf)) ||
-		!offset_parse(buf, value))
+		!offset_parse_ssize_t(buf, value))
 	{
 		MessageBox(pDlg, GetLangString(IDS_CM_INVALID_TARGET), MB_ICONERROR);
 		return false;
@@ -133,7 +133,7 @@ bool MoveCopyDlg::ReadTargetOffset(HWindow *pDlg, int &value)
  */
 BOOL MoveCopyDlg::Apply(HWindow *pDlg)
 {
-	int vals[3];
+	SSIZE_T vals[3];
 	if (!ReadStartOffset(pDlg, vals[0]))
 		return FALSE;
 	if (!ReadEndOffset(pDlg, vals[1]))
@@ -141,9 +141,9 @@ BOOL MoveCopyDlg::Apply(HWindow *pDlg)
 	if (!ReadTargetOffset(pDlg, vals[2]))
 		return FALSE;
 	
-	int clen = m_dataArray.size();
-	int iMove1stEnd = vals[0];
-	int iMove2ndEndorLen = vals[1];
+	size_t clen = m_dataArray.size();
+	SSIZE_T iMove1stEnd = vals[0];
+	SSIZE_T iMove2ndEndorLen = vals[1];
 	if (!pDlg->IsDlgButtonChecked(IDC_OTHEREND))
 	{
 		if (iMove2ndEndorLen == 0)

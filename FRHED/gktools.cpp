@@ -211,8 +211,8 @@ INT_PTR EncodeDecodeDialog::DlgProc(HWindow *pDlg, UINT uMsg, WPARAM wParam, LPA
 				if (nCurSel < 0)
 					return TRUE;
 				mc.fpMcd = reinterpret_cast<MEMORY_CODING_DESCRIPTION const *>(pListbox->GetItemData(nCurSel));
-				int lower = 0;
-				int upper = m_dataArray.size() - 1;
+				size_t lower = 0;
+				size_t upper = m_dataArray.size() - 1;
 				if (bSelected)
 				{
 					lower = iGetStartOfSelection();

@@ -42,17 +42,18 @@ static const int OffsetLen = 16;
  */
 BOOL CutDlg::OnInitDialog(HWindow *pDlg)
 {
-	int iStart = iGetStartOfSelection();
-	int iEnd = iGetEndOfSelection();
+	size_t iStart = iGetStartOfSelection();
+	size_t iEnd = iGetEndOfSelection();
 	TCHAR buf[OffsetLen + 1];
 
-	_stprintf(buf, _T("0x%x"), iStart);
+	_stprintf(buf, _T("0x%zx"), iStart);
 	pDlg->SetDlgItemText(IDC_CUT_STARTOFFSET, buf);
-	_stprintf(buf, _T("0x%x"), iEnd);
+	_stprintf(buf, _T("0x%zx"), iEnd);
 
 	pDlg->CheckDlgButton(IDC_CUT_INCLUDEOFFSET, BST_CHECKED);
 	pDlg->SetDlgItemText(IDC_CUT_ENDOFFSET, buf);
-	pDlg->SetDlgItemInt(IDC_CUT_NUMBYTES, iEnd - iStart + 1, TRUE);
+	_stprintf(buf, _T("%zu"), iEnd - iStart + 1);
+	pDlg->SetDlgItemText(IDC_CUT_NUMBYTES, buf);
 
 	return TRUE;
 }
@@ -65,12 +66,12 @@ BOOL CutDlg::OnInitDialog(HWindow *pDlg)
  */
 BOOL CutDlg::Apply(HWindow *pDlg)
 {
-	TCHAR buf[OffsetLen + 1];
-	int iOffset;
-	int iNumberOfBytes;
+	TCHAR buf[OffsetLen + 1] = {};
+	size_t iOffset = 0;
+	size_t iNumberOfBytes = 0;
 
 	if (pDlg->GetDlgItemText(IDC_CUT_STARTOFFSET, buf, OffsetLen) &&
-		!offset_parse(buf, iOffset))
+		!offset_parse_size_t(buf, iOffset))
 	{
 		MessageBox(pDlg, GetLangString(IDS_OFFSET_START_ERROR), MB_ICONERROR);
 		return FALSE;
@@ -79,7 +80,7 @@ BOOL CutDlg::Apply(HWindow *pDlg)
 	if (pDlg->IsDlgButtonChecked(IDC_CUT_INCLUDEOFFSET))
 	{
 		if (pDlg->GetDlgItemText(IDC_CUT_ENDOFFSET, buf, OffsetLen) &&
-			!offset_parse(buf, iNumberOfBytes))
+			!offset_parse_size_t(buf, iNumberOfBytes))
 		{
 			MessageBox(pDlg, GetLangString(IDS_OFFSET_END_ERROR), MB_ICONERROR);
 			return FALSE;
@@ -89,7 +90,7 @@ BOOL CutDlg::Apply(HWindow *pDlg)
 	else
 	{// Get number of bytes.
 		if (pDlg->GetDlgItemText(IDC_CUT_NUMBYTES, buf, OffsetLen) &&
-			_stscanf(buf, _T("%d"), &iNumberOfBytes) == 0)
+			_stscanf(buf, _T("%zu"), &iNumberOfBytes) == 0)
 		{
 			MessageBox(pDlg, GetLangString(IDS_BYTES_NOT_KNOWN), MB_ICONERROR);
 			return FALSE;
@@ -105,7 +106,7 @@ BOOL CutDlg::Apply(HWindow *pDlg)
 	}
 
 	// Transfer to cipboard.
-	int destlen = Text2BinTranslator::iBytes2BytecodeDestLen(&m_dataArray[iOffset], iNumberOfBytes);
+	size_t destlen = Text2BinTranslator::iBytes2BytecodeDestLen(&m_dataArray[iOffset], iNumberOfBytes);
 	HGLOBAL hGlobal = GlobalAlloc(GHND, destlen);
 	if (hGlobal == 0)
 	{

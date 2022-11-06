@@ -171,7 +171,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <PreLinkEvent>
-      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)"</Command>
+      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)" "$(PlatformTarget)"</Command>
     </PreLinkEvent>
     <Link>
       <AdditionalDependencies>version.lib;comctl32.lib;wininet.lib;shlwapi.lib;htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -205,7 +205,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <PreLinkEvent>
-      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)"</Command>
+      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)" "$(PlatformTarget)"</Command>
     </PreLinkEvent>
     <Link>
       <AdditionalDependencies>version.lib;comctl32.lib;wininet.lib;shlwapi.lib;htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -239,7 +239,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <PreLinkEvent>
-      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)"</Command>
+      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)" "$(PlatformTarget)"</Command>
     </PreLinkEvent>
     <Link>
       <AdditionalDependencies>version.lib;comctl32.lib;wininet.lib;shlwapi.lib;htmlhelp.lib;advapi32.lib;shell32.lib;oleaut32.lib;ole32.lib;gdi32.lib;comdlg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -272,7 +272,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <PreLinkEvent>
-      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)"</Command>
+      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)" "$(PlatformTarget)"</Command>
     </PreLinkEvent>
     <Link>
       <AdditionalDependencies>version.lib;comctl32.lib;wininet.lib;shlwapi.lib;htmlhelp.lib;advapi32.lib;shell32.lib;oleaut32.lib;ole32.lib;gdi32.lib;comdlg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -302,7 +302,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <PreLinkEvent>
-      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)"</Command>
+      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)" "$(PlatformTarget)"</Command>
     </PreLinkEvent>
     <Link>
       <AdditionalDependencies>version.lib;comctl32.lib;wininet.lib;shlwapi.lib;htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -337,7 +337,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <PreLinkEvent>
-      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)"</Command>
+      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)" "$(PlatformTarget)"</Command>
     </PreLinkEvent>
     <Link>
       <AdditionalDependencies>version.lib;comctl32.lib;wininet.lib;shlwapi.lib;htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -371,7 +371,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <PreLinkEvent>
-      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)"</Command>
+      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)" "$(PlatformTarget)"</Command>
     </PreLinkEvent>
     <Link>
       <AdditionalDependencies>version.lib;comctl32.lib;wininet.lib;shlwapi.lib;htmlhelp.lib;advapi32.lib;shell32.lib;oleaut32.lib;ole32.lib;gdi32.lib;comdlg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -404,7 +404,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <PreLinkEvent>
-      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)"</Command>
+      <Command>PreLink.bat "$(IntDir)" "$(TargetPath)" "$(PlatformTarget)"</Command>
     </PreLinkEvent>
     <Link>
       <AdditionalDependencies>version.lib;comctl32.lib;wininet.lib;shlwapi.lib;htmlhelp.lib;advapi32.lib;shell32.lib;oleaut32.lib;ole32.lib;gdi32.lib;comdlg32.lib;%(AdditionalDependencies)</AdditionalDependencies>

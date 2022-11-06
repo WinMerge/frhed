@@ -40,9 +40,9 @@ BOOL RemoveBmkDlg::OnInitDialog(HWindow *pDlg)
 	for (int i = 0 ; i < iBmkCount ; i++)
 	{
 		if (pbmkList[i].name.length())
-			_stprintf(buf, _T("%d %s (0x%x)"), i + 1, pbmkList[i].name.c_str(), pbmkList[i].offset);
+			_stprintf(buf, _T("%d %s (0x%zx)"), i + 1, pbmkList[i].name.c_str(), pbmkList[i].offset);
 		else
-			_stprintf(buf, _T("%d 0x%x"), i + 1, pbmkList[i].offset);
+			_stprintf(buf, _T("%d 0x%zx"), i + 1, pbmkList[i].offset);
 		list->AddString(buf);
 	}
 	list->SetCurSel(0);
