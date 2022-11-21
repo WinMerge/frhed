@@ -4,6 +4,24 @@ to Subversion revision numbers (rXXXXX).
 
 For changes in version 1.1 beta 1 and earlier, see the History.txt file.
 
+Frhed 0.10904.2017.11 (2022-11-6)
+  Add Open files larger than 2GB for 64bit version
+
+frhed 0.10904.2017.9 (2022-03-18)
+  Add Tranlslation : Polish, Slovak
+
+Frhed 0.10904.2017.7 (2021-04-03)
+  Add ARM64 support
+
+Frhed 0.10904.2017.1 (2019-08-25)
+  (Major changes in first release on GitHub)
+  Add Implement undo & redo
+  Improve Tweak icon for high DPI (by Tim Gerundt @gerundt)
+  Remove Win9x support
+  Add Tranlslation : Galician, Slovenian
+
+Moved to GitHub via bitbucket.org
+
 Frhed 0.10902.2013 experimental
   Auto-elevate the application for CMD_OpenDrive()
 

@@ -4,8 +4,9 @@ People who have contributed to Frhed
 Original developer:
 Raihan Kibria <raihan@kibria.de>
 
-Maintainer of this version:
-Jochen Neubeck
+Maintainer on GitHub:
+Takashi Sawanaka (GitHub@sdottaka, 2014 and after)
+And other contributors: https://github.com/WinMerge/frhed/graphs/contributors
 
 Localization:
 
@@ -16,14 +17,17 @@ Localization:
   Frédéric Dectot
 
 * Galician
-  Luis A. Martínez <luis.martinez.sobrino at gmail.com>
+  Luis A. Martínez <luis.martinez.sobrino at gmail.com> (GitHub@qosobrin)
 
 * German
   Tim Gerundt <gerundt@users.sourceforge.net>
-  Mr-Update
+  Mr-Update (GitHub@Mr-Update)
 
 * Japanese
   Takashi Sawanaka
+
+* Polish
+  Mirosław Żylewicz (GitHub@miroslaw-zylewicz)
 
 * Slovak
   Jozef Matta <jozef.m923@gmail.com>
@@ -32,6 +36,8 @@ Localization:
   Jadran Rudec <jrudec at gmail.com>
 
 Other contributors (heksedit versions):
+Jochen Tucht (@jtuc in history, 2017)
+Jochen Neubeck (admin@jochen in history, 2013)
 Kimmo Varis <kimmov@winmerge.org>
 Tim Gerundt <gerundt@users.sourceforge.net>
 Martin Hughes <martinhughes@users.sourceforge.net>
