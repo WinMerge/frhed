@@ -2658,7 +2658,7 @@ msgstr "\nDateigröße: %zu Bytes = %zu Kilobytes.\n"
 #: heksedit.rc:1347
 #, c-format
 msgid "\nNumber of hexdump lines: %zu.\n"
-msgstr ""
+msgstr "\nAnzahl der Hexdump-Zeilen: %zu.\n"
 
 #: heksedit.rc:1348
 #, c-format
