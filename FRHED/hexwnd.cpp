@@ -625,6 +625,8 @@ void HexEditorWindow::resize_window()
 	else if (iMaxOffsetLen < iMinOffsetLen)
 		iMaxOffsetLen = iMinOffsetLen;
 
+	size_t startpos = iVscrollPos64 * iBytesPerLine;
+
 	// Adjust bytes per line to width of window.
 	// cxBuffer = maximal width of client-area in chars.
 	if (iAutomaticBPL)
@@ -641,6 +643,10 @@ void HexEditorWindow::resize_window()
 		size_t iCenter = (bSelected ? iEndOfSelection : iCurByte) / iBytesPerLine;
 		if (iCenter < iVscrollPos64 || iCenter > iVscrollPos64 + cyBuffer)
 			iVscrollPos64 = adjustVScrollPos64(max(0, iCenter - cyBuffer / 2), iVscrollMax64);
+	}
+	else
+	{
+		iVscrollPos64  = adjustVScrollPos64(startpos / iBytesPerLine, iVscrollMax64);
 	}
 //Pabs removed - scrollbar fix
 
