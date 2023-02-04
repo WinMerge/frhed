@@ -208,7 +208,7 @@ public:
 	BOOL STDMETHODCALLTYPE select_next_diff(BOOL bFromStart);
 	BOOL STDMETHODCALLTYPE select_prev_diff(BOOL bFromEnd);
 	void CMD_colors_to_default();
-	void CMD_goto();
+	void STDMETHODCALLTYPE CMD_goto();
 	void apply_template(TCHAR *pcTemplate);
 	void CMD_apply_template();
 	void dropfiles(HDROP);
