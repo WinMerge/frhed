@@ -6,4 +6,5 @@
 Build/
 BuildTmp/
 Dist/
+frhed-cppcheck-build-dir/
 Translations/Frhed/heksedit.rc
