@@ -33,7 +33,7 @@ Localization:
   Jozef Matta <jozef.m923@gmail.com>
 
 * Slovenian
-  Jadran Rudec <jrudec at gmail.com>
+  Jadran Rudec <***@***.***>
 
 Other contributors (heksedit versions):
 Jochen Tucht (@jtuc in history, 2017)
