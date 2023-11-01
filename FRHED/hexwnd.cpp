@@ -1100,7 +1100,7 @@ void HexEditorWindow::vscroll(int cmd)
 		iVscrollPos64 = 0;
 		break;
 	case SB_BOTTOM:
-		iVscrollPos64 = iNumlines - 1;
+		iVscrollPos64 = static_cast<int64_t>(iNumlines) - 1;
 		break;
 	case SB_LINEUP:
 		if (iVscrollPos64 > 0)
@@ -2417,7 +2417,7 @@ void HexEditorWindow::adjust_view_for_caret()
 	size_t row = iCurByte / iBytesPerLine;
 	if( row < iVscrollPos64
 	 || row >= iVscrollPos64 + cyBuffer )
-		iVscrollPos64 = row - cyBuffer / 2;
+		iVscrollPos64 = static_cast<int64_t>(row) - cyBuffer / 2;
 	if( iVscrollPos64 > iVscrollMax64 - cyBuffer + 1 )
 		iVscrollPos64 = iVscrollMax64 - cyBuffer + 1;
 	if( iVscrollPos64 < 0 )
@@ -3643,11 +3643,11 @@ void HexEditorWindow::adjust_view_for_selection()
 		int cols = ((eosline == sosline) ? eoscol - soscol + 1 : maxcols);
 
 		if( lines > cyBuffer ){
-			if( iVscrollPos64 <= (sosline+eosline-cyBuffer+1)/2 )
+			if( iVscrollPos64 <= (static_cast<int64_t>(sosline+eosline)-cyBuffer+1)/2 )
 				iVscrollPos64 = sosline;
-			else iVscrollPos64 = eosline-cyBuffer+1;
+			else iVscrollPos64 = static_cast<int64_t>(eosline)-cyBuffer+1;
 		}
-		else iVscrollPos64 = sosline - (cyBuffer - (eosline-sosline) )/2;
+		else iVscrollPos64 = static_cast<int64_t>(sosline) - (cyBuffer - (static_cast<int64_t>(eosline)-sosline) )/2;
 
 		int mincol, maxcol;
 		if(soscol>=eoscol){maxcol=soscol;mincol=eoscol;}
