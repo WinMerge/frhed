@@ -82,7 +82,7 @@ bool ReplaceDlg::find_and_select_data(int finddir, bool case_sensitive)
 		i += finddir * n;
 		// Find forward.
 		j = findutils_FindBytes(&m_dataArray[i],
-			m_dataArray.size() - i - 1,
+			m_dataArray.size() - i,
 			tofind,	destlen, 1, case_sensitive);
 		if (j != -1)
 			i += j;
