@@ -4,6 +4,10 @@ to Subversion revision numbers (rXXXXX).
 
 For changes in version 1.1 beta 1 and earlier, see the History.txt file.
 
+Frhed 0.10904.2017.13 (2023-12-19)
+  BugFix: Could not replace data at the end of the file
+  Update French translation
+
 Frhed 0.10904.2017.12 (2023-11-03)
   BugFix: Searching with the 32-bit version of frhed sometimes scrolled to an unexpected position.
   Update French translation
