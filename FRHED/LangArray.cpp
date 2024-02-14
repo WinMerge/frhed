@@ -73,7 +73,6 @@ void LangArray::StringData::Unshare(char *data)
 
 LangArray::LangArray()
 : m_hLangDll(0)
-, m_codepage(0)
 , m_langid(0)
 {
 }
@@ -99,10 +98,9 @@ void LangArray::ClearAll()
 
 /**
  * @brief Convert C style \\nnn, \\r, \\n, \\t etc into their indicated characters.
- * @param [in] codepage Codepage to use in conversion.
  * @param [in,out] s String to convert.
  */
-static size_t unslash(unsigned codepage, char *s)
+static size_t unslash(char *s)
 {
 	char *p = s;
 	char *q = p;
@@ -148,7 +146,7 @@ static size_t unslash(unsigned codepage, char *s)
 			// fall through
 		default:
 			*p = c;
-			if ((c & 0x80) && IsDBCSLeadByteEx(codepage, c))
+			if ((c & 0x80) && IsDBCSLeadByteEx(CP_UTF8, c))
 				*++p = *r++;
 			q = r;
 		}
@@ -303,8 +301,6 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 			if (char *q = strchr(p, ':'))
 			{
 				int line = strtol(q + 1, &q, 10);
-				if (line == 367)
-					line = line;
 				lines.add(line);
 				--unresolved;
 			}
@@ -341,7 +337,7 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 				ps = 0;
 				if (msgstr.length() == 0)
 					msgstr.append(msgid.c_str(), msgid.length());
-				msgstr.resize(unslash(m_codepage, msgstr.pointer()));
+				msgstr.resize(unslash(msgstr.pointer()));
 				if (int i = lines.size())
 				{
 					StringData *psd = StringData::Create(msgstr.c_str(), msgstr.length());
@@ -366,11 +362,6 @@ BOOL LangArray::Load(HINSTANCE hMainInstance, LANGID langid, LPCTSTR langdir)
 					} while (i);
 				}
 				lines.clear();
-				if (strcmp(directive.c_str(), "Codepage") == 0)
-				{
-					m_codepage = strtol(msgstr.c_str(), &p, 10);
-					directive.clear();
-				}
 				msgid.clear();
 				msgstr.clear();
 			}
@@ -399,7 +390,7 @@ PTSTR LangArray::TranslateString(int line)
 			if (UINT len = static_cast<UINT>(strlen(s)))
 			{
 				ws = SysAllocStringLen(0, len);
-				len = MultiByteToWideChar(m_codepage, 0, s, -1, ws, len + 1);
+				len = MultiByteToWideChar(CP_UTF8, 0, s, -1, ws, len + 1);
 				SysReAllocStringLen(&ws, ws, len - 1);
 			}
 		}
@@ -414,11 +405,11 @@ PTSTR LangArray::TranslateString(int line)
 			if (UINT len = static_cast<UINT>(strlen(s)))
 			{
 				unsigned codepage = GetACP();
-				if (m_codepage != codepage)
+				if (CP_UTF8 != codepage)
 				{
 					// Attempt to convert to UI codepage
 					BSTR ws = SysAllocStringLen(0, len);
-					len = MultiByteToWideChar(m_codepage, 0, s, -1, ws, len + 1);
+					len = MultiByteToWideChar(CP_UTF8, 0, s, -1, ws, len + 1);
 					if (len)
 					{
 						SysReAllocStringLen(&ws, ws, len - 1);

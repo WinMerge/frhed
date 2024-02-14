@@ -4,8 +4,8 @@ echo $(IntDir) = %1
 echo $(TargetPath) = %2
 echo $(PlatformTarget) = %3
 cd ..\Translations\Frhed
-cscript CreateMasterPotFile.vbs
-cscript UpdatePoFilesFromPotFile.vbs
+cscript CreateMasterPotFile.js
+cscript UpdatePoFilesFromPotFile.js
 cd ..\..\FRHED
 rc "/fo%~1\lang.res" /i.. ..\Translations\Frhed\heksedit.rc
 mkdir "%~2\..\Languages"

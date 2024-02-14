@@ -1,4 +1,4 @@
-# This file is part of Frhed <http://frhed.sourceforge.net/>
+﻿# This file is part of Frhed <http://frhed.sourceforge.net/>
 # Released under the "GNU General Public License"
 #
 # Translators:
@@ -28,12 +28,6 @@ msgstr ""
 #, c-format
 msgid "LANG_ENGLISH, SUBLANG_ENGLISH_US"
 msgstr "LANG_FRENCH, SUBLANG_FRENCH_FR"
-
-#. Codepage
-#: heksedit.rc:6
-#, c-format
-msgid "1252"
-msgstr "65001"
 
 #: heksedit.rc:12
 #, c-format
@@ -919,8 +913,8 @@ msgstr ""
 msgid "Display length of offset in how many characters:"
 msgstr "Nombre de caractères d'affichage de la longueur du décalage :"
 
-#: heksedit.rc:467
 # Texte court (manque d'espace) !
+#: heksedit.rc:467
 #, c-format
 msgid "Adjust offset length to that of the max offset"
 msgstr "Ajuster la longueur du décalage avec le décalage max"
@@ -2834,3 +2828,4 @@ msgstr "Impossible de copier la décharge_hexa (Hexdump) vers le presse-papier."
 #, c-format
 msgid "Hex Dump files(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
 msgstr "Fichiers HexDump (*.txt,*.hex)|*.txt;*.hex|Tous fichiers (*.*)|*.*|"
+

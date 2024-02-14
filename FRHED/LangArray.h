@@ -37,7 +37,6 @@ public:
 		static void Unshare(char *);
 	};
 	HMODULE m_hLangDll;
-	unsigned m_codepage;
 	LANGID m_langid;
 	LangArray();
 	~LangArray();
