@@ -80,7 +80,7 @@ msgstr "கோப்பை மூடு\tCtrl+Shift+X"
 #: heksedit.rc:27
 #, c-format
 msgid "&Export as hexdump..."
-msgstr "எக்ச்டம்பாக ஏற்றுமதி..."
+msgstr "பதின்மகொத்தாக ஏற்றுமதி..."
 
 #: heksedit.rc:28
 #, c-format
@@ -90,122 +90,122 @@ msgstr "hexdumpஇல் இருந்து இறக்குமதி...\tC
 #: heksedit.rc:40
 #, c-format
 msgid "E&xit\tAlt+F4"
-msgstr "இ & XIT மாற்று + F4"
+msgstr "வெளியேறு\tAlt+F4"
 
 #: heksedit.rc:42
 #, c-format
 msgid "&Disk"
-msgstr "& வட்டு"
+msgstr "வட்டு"
 
 #: heksedit.rc:44
 #, c-format
 msgid "&Open drive..."
-msgstr "திறந்த இயக்கி ..."
+msgstr "இயக்கி திற..."
 
 #: heksedit.rc:45
 #, c-format
 msgid "&Close drive"
-msgstr "& மூடு இயக்கி"
+msgstr "இயக்கி மூடு"
 
 #: heksedit.rc:47 heksedit.rc:190
 #, c-format
 msgid "Goto &First Sector"
-msgstr "கோட்டோ & முதல் துறை"
+msgstr "முதல் பகுதிக்கு செல்"
 
 #: heksedit.rc:48
 #, c-format
 msgid "Goto &Next Sector\tCtrl+Shift+PgDn"
-msgstr "கோட்டோ & நெக்ச்ட் செக்டர் சி.டி.ஆர்.எல்+சிப்ட்+பி.சி.டி.என்"
+msgstr "அடுத்த பகுதிக்கு செல்\tCtrl+Shift+PgDn"
 
 #: heksedit.rc:49
 #, c-format
 msgid "Goto &Previous Sector\tCtrl+Shift+PgUp"
-msgstr "கோட்டோ & முந்தைய துறை CTRL+SHIFT+PGUP"
+msgstr "முந்தைய பகுதிக்கு செல்\tCtrl+Shift+PgUp"
 
 #: heksedit.rc:51 heksedit.rc:193
 #, c-format
 msgid "Goto &Last Sector"
-msgstr "கோட்டோ & கடைசி துறை"
+msgstr "கடைசி பகுதிக்கு செல்"
 
 #: heksedit.rc:53 heksedit.rc:195
 #, c-format
 msgid "Goto &Sector #..."
-msgstr "கோட்டோ & பிரிவு #..."
+msgstr "பகுதிக்கு # செல்..."
 
 #: heksedit.rc:55
 #, c-format
 msgid "&Edit"
-msgstr "திருத்து (&e)"
+msgstr "திருத்து"
 
 #: heksedit.rc:57
 #, c-format
 msgid "&Undo\tCtrl+Z"
-msgstr "Ctrl+z ஐ செயல்தவிர்க்கவும்"
+msgstr "செயல்தவிர்\tCtrl+Z"
 
 #: heksedit.rc:58
 #, c-format
 msgid "&Redo\tCtrl+Y"
-msgstr "& சிவப்பு Ctrl+மற்றும்"
+msgstr "மறுசெயல்\tCtrl+Y"
 
 #: heksedit.rc:60 heksedit.rc:177
 #, c-format
 msgid "Cu&t...\tCtrl+X"
-msgstr "Cu & T ... Ctrl+x"
+msgstr "வெட்டு...\tCtrl+X"
 
 #: heksedit.rc:61 heksedit.rc:178
 #, c-format
 msgid "&Copy...\tCtrl+C"
-msgstr "& நகல் ... Ctrl+c"
+msgstr "நகல்...\tCtrl+C"
 
 #: heksedit.rc:62 heksedit.rc:179
 #, c-format
 msgid "&Paste...\tCtrl+V"
-msgstr "& பேச்ட் ... ctrl+v"
+msgstr "ஒட்டு...\tCtrl+C"
 
 #: heksedit.rc:63
 #, c-format
 msgid "Paste &with dialog...\tCtrl+Shift+V"
-msgstr "பேச்ட் & உரையாடலுடன் ... ctrl+shift+v"
+msgstr "உரையாடலுடன் ஒட்டு...\tCtrl+Shift+V"
 
 #: heksedit.rc:64
 #, c-format
 msgid "&Move/Copy bytes...\tCtrl+Alt+M"
-msgstr "& நகர்த்த/பைட்டுகளை நகர்த்தவும் ... Ctrl+alt+m"
+msgstr "பைட்டுகளை நகர்த்த/நகலெடுக்க...\tCtrl+Alt+M"
 
 #: heksedit.rc:65
 #, c-format
 msgid "Reverse bytes...\tCtrl+Alt+R"
-msgstr "தலைகீழ் பைட்டுகள் ... ctrl+alt+r"
+msgstr "தலைகீழ் பைட்டுகள்...\tCtrl+Alt+R"
 
 #: heksedit.rc:66
 #, c-format
 msgid "&Append...\tCtrl+P"
-msgstr "& பிற்சேர் ... ctrl+p"
+msgstr "பிற்சேர்...\tCtrl+P"
 
 #: heksedit.rc:67 heksedit.rc:180
 #, c-format
 msgid "&Delete\tDel"
-msgstr "& டெல் நீக்கு"
+msgstr "நீக்கு\tDel"
 
 #: heksedit.rc:68
 #, c-format
 msgid "&Select all\tCtrl+A"
-msgstr "அனைத்து Ctrl+a ஐத் தேர்ந்தெடுக்கவும்"
+msgstr "அனைத்தும் தேர்ந்தெடு\tCtrl+A"
 
 #: heksedit.rc:69
 #, c-format
 msgid "Select &block...\tCtrl+E"
-msgstr "தேர்ந்தெடு & தடுப்பு ... ctrl+e"
+msgstr "தொகுதி தேர்ந்தெடு...\tCtrl+E"
 
 #: heksedit.rc:70
 #, c-format
 msgid "&Fill selection...\tCtrl+Shift+F"
-msgstr "& தேர்வை நிரப்பவும் ... ctrl+shift+f"
+msgstr "தேர்வை நிரப்பவும்...\tCtrl+Shift+F"
 
 #: heksedit.rc:72
 #, c-format
 msgid "Toggle h&ex/character editing\tTAB"
-msgstr "எச் & எக்ச்/கேரக்டர் திருத்துதல் தாவலை மாற்றவும்"
+msgstr "பதின்ம/எழுத்துகள் திருத்துதல் தாவலை மாற்றவும்"
 
 #: heksedit.rc:73
 #, c-format
@@ -215,7 +215,7 @@ msgstr "விசைப்பலகை I & NSERT/OverWrite பயன்முற
 #: heksedit.rc:75
 #, c-format
 msgid "Read-only mode\tAlt+R"
-msgstr "படிக்க மட்டும் பயன்முறை alt+r"
+msgstr "படிக்க மட்டும் பயன்முறை\tAlt+R"
 
 #: heksedit.rc:77
 #, c-format
@@ -225,12 +225,12 @@ msgstr "கண்டுபிடித்து மாற்றவும்"
 #: heksedit.rc:79 heksedit.rc:182
 #, c-format
 msgid "&Find...\tCtrl+F"
-msgstr "& கண்டுபிடி ... ctrl+f"
+msgstr "கண்டுபிடி ...\tCtrl+f"
 
 #: heksedit.rc:80
 #, c-format
 msgid "&Replace...\tCtrl+H"
-msgstr "& மாற்றவும் ... ctrl+h"
+msgstr "மாற்று...\tCtrl+H"
 
 #: heksedit.rc:81
 #, c-format
@@ -245,12 +245,12 @@ msgstr "கண்டுபிடி & முந்தைய சிப்ட்+�
 #: heksedit.rc:84 heksedit.rc:186
 #, c-format
 msgid "&Go To...\tCtrl+G"
-msgstr "& செல்லுங்கள் ... ctrl+g"
+msgstr "& செல்லுங்கள் ...\tCtrl+g"
 
 #: heksedit.rc:86
 #, c-format
 msgid "Enter decimal &value...\tCtrl+D"
-msgstr "தசம மற்றும் மதிப்பை உள்ளிடவும் ... ctrl+d"
+msgstr "தசம மற்றும் மதிப்பை உள்ளிடவும் ...\tCtrl+d"
 
 #: heksedit.rc:88
 #, c-format
@@ -260,12 +260,12 @@ msgstr "மேன் & ஐபுலேட் பிட்கள் ... சி.�
 #: heksedit.rc:89
 #, c-format
 msgid "C&ompare from current offset...\tCtrl+M"
-msgstr "தற்போதைய ஆஃப்செட்டிலிருந்து சி & ompare ... ctrl+m"
+msgstr "தற்போதைய ஆஃப்செட்டிலிருந்து சி & ompare ...\tCtrl+m"
 
 #: heksedit.rc:91
 #, c-format
 msgid "Get f&loating point value...\tCtrl+L"
-msgstr "புள்ளி மதிப்பைப் பெறுங்கள் ... ctrl+l"
+msgstr "புள்ளி மதிப்பைப் பெறுங்கள் ...\tCtrl+l"
 
 #: heksedit.rc:92
 #, c-format
@@ -300,7 +300,7 @@ msgstr "வலதுபுறம் CTRL+அம்பு வலதுபுற�
 #: heksedit.rc:100
 #, c-format
 msgid "Scroll &up\tCtrl+Arrow Up"
-msgstr "உருள் & ctrl+அம்பு அப்"
+msgstr "உருள் &\tCtrl+அம்பு அப்"
 
 #: heksedit.rc:101
 #, c-format
@@ -340,7 +340,7 @@ msgstr "& விருப்பங்கள்"
 #: heksedit.rc:111
 #, c-format
 msgid "&View settings...\tCtrl+I"
-msgstr "& அமைப்புகளைக் காண்க ... ctrl+i"
+msgstr "& அமைப்புகளைக் காண்க ...\tCtrl+i"
 
 #: heksedit.rc:112
 #, c-format
@@ -360,7 +360,7 @@ msgstr "பின்னணி நிறம் ... Ctrl+k"
 #: heksedit.rc:116
 #, c-format
 msgid "Separator color...\tCtrl+Q"
-msgstr "பிரிப்பான் நிறம் ... ctrl+q"
+msgstr "பிரிப்பான் நிறம் ...\tCtrl+q"
 
 #: heksedit.rc:117
 #, c-format
@@ -400,7 +400,7 @@ msgstr "பி & இனரி பயன்முறை ... சி.டி.ஆர�
 #: heksedit.rc:130
 #, c-format
 msgid "&OLE Drag-drop...\tCtrl+Alt+O"
-msgstr "& Ole இழுவை-துளி ... ctrl+alt+o"
+msgstr "& Ole இழுவை-துளி ...\tCtrl+alt+o"
 
 #: heksedit.rc:131
 #, c-format
@@ -450,7 +450,7 @@ msgstr "& புக்மார்க்குகள்"
 #: heksedit.rc:144
 #, c-format
 msgid "&Add bookmark...\tCtrl+W"
-msgstr "& புக்மார்க்கைச் சேர்க்கவும் ... ctrl+w"
+msgstr "& புக்மார்க்கைச் சேர்க்கவும் ...\tCtrl+w"
 
 #: heksedit.rc:145
 #, c-format
@@ -500,7 +500,7 @@ msgstr "& Frhed பற்றி ..."
 #: heksedit.rc:183
 #, c-format
 msgid "Replace...\tCtrl+H"
-msgstr "மாற்றவும் ... ctrl+h"
+msgstr "மாற்றவும் ...\tCtrl+h"
 
 #: heksedit.rc:184
 #, c-format
@@ -1145,7 +1145,7 @@ msgid ""
 "- Those starting w CF_ are standard formats && others are registered/private ones\n"
 "- Some formats may have been synthesized from the original."
 msgstr ""
-"- CF_TEXT FRHED இன் முந்தைய பதிப்புகளால் பயன்படுத்தப்பட்டது \n"
+"- CF_TEXT ஃப்ரெட் இன் முந்தைய பதிப்புகளால் பயன்படுத்தப்பட்டது \n"
 "- w cf_ ஐத் தொடங்குபவர்கள் நிலையான வடிவங்கள் && மற்றவர்கள் பதிவுசெய்யப்பட்ட/தனிப்பட்டவர்கள் \n"
 "- சில வடிவங்கள் அசலில் இருந்து ஒருங்கிணைக்கப்பட்டிருக்கலாம்."
 
@@ -1232,7 +1232,7 @@ msgstr "& உலாவுக ..."
 #: heksedit.rc:729
 #, c-format
 msgid "Hex:"
-msgstr "எக்ச்:"
+msgstr "பதின்ம:"
 
 #: heksedit.rc:731
 #, c-format
@@ -1322,7 +1322,7 @@ msgid ""
 "Unless, that is, that the option to save ini data to the registry on exit is"
 " disabled)"
 msgstr ""
-"FRHED இன் எந்தவொரு நிகழ்வும் அதே நிகழ்வு தரவுகளில் இயங்கினால், அது கடைசியாக "
+"ஃப்ரெட் இன் எந்தவொரு நிகழ்வும் அதே நிகழ்வு தரவுகளில் இயங்கினால், அது கடைசியாக "
 "வெளியேறினால் இந்த தரவை மேலெழுதும் என்பதை நினைவில் கொள்ளுங்கள். தவிர, ஐ.என்.ஐ"
 " தரவை வெளியேறும்போது பதிவேட்டில் சேமிப்பதற்கான விருப்பம் முடக்கப்பட்டுள்ளது)"
 
@@ -1362,7 +1362,7 @@ msgid ""
 "NOTE: Frhed allows only reading the drive data. Changing and saving the "
 "drive data is not possible."
 msgstr ""
-"குறிப்பு: இயக்கி தரவைப் படிக்க மட்டுமே FRHED அனுமதிக்கிறது. இயக்கி தரவை "
+"குறிப்பு: இயக்கி தரவைப் படிக்க மட்டுமே ஃப்ரெட் அனுமதிக்கிறது. இயக்கி தரவை "
 "மாற்றுவதும் சேமிப்பதும் சாத்தியமில்லை."
 
 #: heksedit.rc:805 heksedit.rc:959 heksedit.rc:989
@@ -1642,7 +1642,7 @@ msgstr "காட்சி (வேறு இலக்கங்கள்)"
 #: heksedit.rc:943
 #, c-format
 msgid "Drag \"Rich Text Format\" (as hexdump)"
-msgstr "\"பணக்கார உரை வடிவத்தை\" இழுக்கவும் (எக்ச்டம்பாக)"
+msgstr "\"பணக்கார உரை வடிவத்தை\" இழுக்கவும் (பதின்மகொத்தாக)"
 
 #: heksedit.rc:953
 #, c-format
@@ -1870,7 +1870,7 @@ msgstr ""
 #: heksedit.rc:1058
 #, c-format
 msgid "Error code 0x%x occurred while opening file %s."
-msgstr "பிழைக் குறியீடு 0x %x ஆனது %s ஐ திறக்கும்போது ஏற்பட்டது."
+msgstr "பிழைக் குறியீடு 0x%x ஆனது %s ஐ திறக்கும்போது ஏற்பட்டது."
 
 #: heksedit.rc:1059
 #, c-format
@@ -1995,7 +1995,7 @@ msgstr "சேர்க்க போதுமான நினைவகம் இ
 #: heksedit.rc:1106
 #, c-format
 msgid "Offset: 0x%zx = %zd"
-msgstr "ஆஃப்செட்: 0x %ZX = %ZD"
+msgstr "ஆஃப்செட்: 0x%zx = %zd"
 
 #: heksedit.rc:1107
 #, c-format
@@ -2300,7 +2300,7 @@ msgid ""
 "Existing links to old versions of Frhed will be updated to this version.\n"
 "Are you sure you want to continue?"
 msgstr ""
-"FRHED இன் பழைய பதிப்புகளுக்கான தற்போதைய இணைப்புகள் இந்த பதிப்பிற்கு புதுப்பிக்கப்படும். \n"
+"ஃப்ரெட் இன் பழைய பதிப்புகளுக்கான தற்போதைய இணைப்புகள் இந்த பதிப்பிற்கு புதுப்பிக்கப்படும். \n"
 "நீங்கள் தொடர விரும்புகிறீர்களா?"
 
 #: heksedit.rc:1224
@@ -2463,21 +2463,21 @@ msgid ""
 "Does this data have the same format as the Frhed display?\n"
 "This data contains "
 msgstr ""
-"இந்தத் தரவுகள் FRHED டிச்ப்ளே போன்ற வடிவத்தைக் கொண்டிருக்கிறதா? \n"
+"இந்தத் தரவுகள் ஃப்ரெட் காட்சி போன்ற வடிவத்தைக் கொண்டிருக்கிறதா? \n"
 "இந்த தரவு உள்ளது"
 
 #: heksedit.rc:1264
 #, c-format
 msgid "characters other than whitespace and hexdigits (like Frhed display)."
 msgstr ""
-"வைட்ச்பேச் மற்றும் எக்ச்டிகிட்ச் (ஃப்ரெட் டிச்ப்ளே போன்றவை) தவிர வேறு "
+"வெள்ளைவெளி மற்றும் பதின்மஎண்கள் (ஃப்ரெட் காட்சி போன்றவை) தவிர வேறு "
 "எழுத்துக்கள்."
 
 #: heksedit.rc:1265
 #, c-format
 msgid "only whitespace and hexdigits (unlike Frhed display)."
 msgstr ""
-"வைட்ச்பேச் மற்றும் எக்ச்டிகிட்ச் மட்டுமே (ஃப்ரெட் டிச்ப்ளே போலல்லாமல்)."
+"வெள்ளைவெளி மற்றும் பதின்மஎண்கள் மட்டுமே (ஃப்ரெட் காட்சி போலல்லாமல்)."
 
 #: heksedit.rc:1271
 #, c-format
@@ -2512,18 +2512,18 @@ msgstr "%d நிகழ்வுகள் மாற்றப்பட்டன."
 #: heksedit.rc:1277
 #, c-format
 msgid "Could not use selection as replace target."
-msgstr "மாற்றத்தை மாற்றுவதாக தேர்வைப் பயன்படுத்த முடியவில்லை."
+msgstr "மாற்றுவதற்கு இலக்காக தேர்வைப் பயன்படுத்த முடியவில்லை."
 
 #: heksedit.rc:1283
 #, c-format
 msgid "Selected: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
 msgstr ""
-"தேர்ந்தெடுக்கப்பட்டது: ஆஃப்செட்%ZD = 0x%ZX to%ZD = 0x%ZX (%ZD BYTE (S))"
+"தேர்ந்தெடுக்கப்பட்டது: ஈடுசெய் %zd = 0x%zx to %zd=0x%zx (%zd பைட் (கள்))"
 
 #: heksedit.rc:1284
 #, c-format
 msgid "Offset %zd=0x%zx"
-msgstr "ஆஃப்செட் %ZD = 0x %ZX"
+msgstr "ஆஃப்செட் %zd = 0x%zx"
 
 #: heksedit.rc:1285
 #, c-format
@@ -2543,7 +2543,7 @@ msgstr "முடிவு"
 #: heksedit.rc:1289
 #, c-format
 msgid "W"
-msgstr "W"
+msgstr "சொ"
 
 #: heksedit.rc:1291
 #, c-format
@@ -2563,17 +2563,17 @@ msgstr "வார்ப்புரு கோப்பு:"
 #: heksedit.rc:1300
 #, c-format
 msgid "Applied at offset:"
-msgstr "ஆஃப்செட்டில் பயன்படுத்தப்படுகிறது:"
+msgstr "ஈடுசெய் இடத்தில் பயன்படுத்தப்படுகிறது:"
 
 #: heksedit.rc:1301
 #, c-format
 msgid "= %d (signed) = %u (unsigned) = 0x%x = '%c'"
-msgstr "= %d (கையொப்பமிடப்பட்டது) = %u (கையொப்பமிடாத) = 0x %x = ' %c'"
+msgstr "= %d (கையொப்பமிடப்பட்டது) = %u (கையொப்பமிடாத) = 0x%x = '%c'"
 
 #: heksedit.rc:1302 heksedit.rc:1305 heksedit.rc:1307
 #, c-format
 msgid "= %d (signed) = %u (unsigned) = 0x%x"
-msgstr "= %d (கையொப்பமிடப்பட்டது) = %u (கையொப்பமிடாத) = 0x %x"
+msgstr "= %d (கையொப்பமிடப்பட்டது) = %u (கையொப்பமிடாத) = 0x%x"
 
 #: heksedit.rc:1303
 #, c-format
@@ -2593,12 +2593,12 @@ msgstr "பிழை: சொல் அளவிலான தரவுக்க�
 #: heksedit.rc:1308
 #, c-format
 msgid "ERROR: not enough space for DWORD-size data."
-msgstr "பிழை: DWORD- அளவு தரவுக்கு போதுமான இடம் இல்லை."
+msgstr "பிழை: இருசொல்- அளவு தரவுக்கு போதுமான இடம் இல்லை."
 
 #: heksedit.rc:1309
 #, c-format
 msgid "= %f = 0x%x"
-msgstr "=% f = 0x% ஃச்"
+msgstr "=% f = 0x%x"
 
 #: heksedit.rc:1310
 #, c-format
@@ -2623,12 +2623,12 @@ msgstr "பிழை: தெரியாத மாறி வகை:"
 #: heksedit.rc:1319
 #, c-format
 msgid "-> Length of template = %zu bytes."
-msgstr "-> வார்ப்புருவின் நீளம் = %ZU பைட்டுகள்."
+msgstr "-> வார்ப்புருவின் நீளம் = %zu பைட்டுகள்."
 
 #: heksedit.rc:1320
 #, c-format
 msgid "Template files (*.tpl)\\0*.tpl\\0\\0"
-msgstr "வார்ப்புரு கோப்புகள் (*.tpl) \\ 0*.tpl \\ 0 \\ 0"
+msgstr "வார்ப்புரு கோப்புகள் (*.tpl)\\0*.tpl\\0\\0"
 
 #: heksedit.rc:1321
 #, c-format
@@ -2648,7 +2648,7 @@ msgstr "கோப்பு %s இலிருந்து வார்ப்ப�
 #: heksedit.rc:1329
 #, c-format
 msgid "Select an item to move."
-msgstr "நகர்த்த ஒரு உருப்படியைத் தேர்ந்தெடுக்கவும்."
+msgstr "நகர்த்த ஒரு உருப்படியைத் தேர்ந்தெடு."
 
 #: heksedit.rc:1333
 #, c-format
@@ -2658,7 +2658,7 @@ msgstr "செருக தரவு இல்லை"
 #: heksedit.rc:1334
 #, c-format
 msgid "TYMED_ISTORAGE is not supported for drag-drop."
-msgstr "இழுவை-சொட்டுக்கு Tymed_istorage ஆதரிக்கப்படவில்லை."
+msgstr "இழுத்து-விடுக்கு TYMED_ISTORAGE ஆதரிக்கப்படவில்லை."
 
 #: heksedit.rc:1340
 #, c-format
@@ -2707,8 +2707,8 @@ msgid ""
 "Number of bytes read: %zd = %zd kilobytes.\n"
 msgstr ""
 "\n"
-"ஆஃப்செட் 0x %ZX = %ZD இல் ஓரளவு திறக்கப்பட்டது. \n"
-"பைட்டுகளின் எண்ணிக்கை படிக்க: %ZD = %ZD கிலோபைட்டுகள்.\n"
+"ஈடுசெய் 0x%zx = %zd இல் ஓரளவு திறக்கப்பட்டது. \n"
+"பைட்டுகளின் எண்ணிக்கை படிக்க: %zd = %zd கிலோபைட்டுகள்.\n"
 
 #: heksedit.rc:1346
 #, c-format
@@ -2717,7 +2717,7 @@ msgid ""
 "File size: %zu bytes = %zu kilobytes.\n"
 msgstr ""
 "\n"
-"கோப்பு அளவு: %முதல் பைட்டுகள் = %கிலோபைட்டுகளுக்கு.\n"
+"கோப்பு அளவு: %zu பைட்டுகள் = %zu கிலோபைட்டுகள்.\n"
 
 #: heksedit.rc:1347
 #, c-format
@@ -2726,13 +2726,13 @@ msgid ""
 "Number of hexdump lines: %zu.\n"
 msgstr ""
 "\n"
-"எக்ச்டம்ப் கோடுகளின் எண்ணிக்கை: %கூட.\n"
+"பதின்ம கோடுகளின் எண்ணிக்கை: %zu.\n"
 
 #: heksedit.rc:1348
 #, c-format
 msgid "This file could not be accessed and will be removed from the MRU list."
 msgstr ""
-"இந்த கோப்பை அணுக முடியவில்லை, மேலும் எம்.ஆர்.யூ பட்டியலிலிருந்து "
+"இந்த கோப்பை அணுக முடியவில்லை, மேலும் அஅப பட்டியலிலிருந்து "
 "அகற்றப்படும்."
 
 #: heksedit.rc:1349
@@ -2763,26 +2763,26 @@ msgstr "உங்கள் மாற்றங்களைச் சேமிக�
 #: heksedit.rc:1364
 #, c-format
 msgid "Hexdump saved."
-msgstr "எக்ச்டம்ப் சேமிக்கப்பட்டது."
+msgstr "பதின்ம சேமிக்கப்பட்டது."
 
 #: heksedit.rc:1365
 #, c-format
 msgid "Could not save Hexdump."
-msgstr "எக்ச்டம்பை சேமிக்க முடியவில்லை."
+msgstr "பதின்மகொத்து சேமிக்க முடியவில்லை."
 
 #: heksedit.rc:1366
 #, c-format
 msgid "Not enough memory for copying hexdump to clipboard."
-msgstr "இடைநிலைப்பலகைக்கு எக்ச்டம்பை நகலெடுக்க போதுமான நினைவகம் இல்லை."
+msgstr "இடைநிலைப்பலகைக்கு பதின்மகொத்து நகலெடுக்க போதுமான நினைவகம் இல்லை."
 
 #: heksedit.rc:1367
 #, c-format
 msgid "Could not copy hexdump to clipboard."
-msgstr "இடைநிலைப்பலகைக்கு எக்ச்டம்பை நகலெடுக்க முடியவில்லை."
+msgstr "இடைநிலைப்பலகைக்கு பதின்மகொத்து நகலெடுக்க முடியவில்லை."
 
 #: heksedit.rc:1368
 #, c-format
 msgid "Hex Dump files(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
 msgstr ""
-"ஃச் டம்ப் கோப்புகள் (*. Txt,*. எக்ச்) |*.txt;*. ஃச் | அனைத்து கோப்புகளும் "
+"பதின்மகொத்து கோப்புகள் (*. txt,*. hex) |*.txt;*. hex | அனைத்து கோப்புகளும் "
 "(*.*) |*.*|"
