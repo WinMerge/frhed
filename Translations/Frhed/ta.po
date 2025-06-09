@@ -205,12 +205,12 @@ msgstr "தேர்வை நிரப்பவும்...\tCtrl+Shift+F"
 #: heksedit.rc:72
 #, c-format
 msgid "Toggle h&ex/character editing\tTAB"
-msgstr "பதின்ம/எழுத்துகள் திருத்துதல் தாவலை மாற்றவும்"
+msgstr "பதின்ம/எழுத்துகள் திருத்துதல் தாவலை மாற்று\tTAB"
 
 #: heksedit.rc:73
 #, c-format
 msgid "Toggle keyboard I&nsert/Overwrite mode\tIns"
-msgstr "விசைப்பலகை I & NSERT/OverWrite பயன்முறை சொரு ஐ மாற்றவும்"
+msgstr "விசைப்பலகை செருகு/மேலெழுது பயன்முறை மாற்று\tIns"
 
 #: heksedit.rc:75
 #, c-format
@@ -220,12 +220,12 @@ msgstr "படிக்க மட்டும் பயன்முறை\tAlt+R
 #: heksedit.rc:77
 #, c-format
 msgid "&Find and Replace"
-msgstr "கண்டுபிடித்து மாற்றவும்"
+msgstr "கண்டுபிடித்து மாற்று"
 
 #: heksedit.rc:79 heksedit.rc:182
 #, c-format
 msgid "&Find...\tCtrl+F"
-msgstr "கண்டுபிடி ...\tCtrl+f"
+msgstr "கண்டுபிடி...\tCtrl+F"
 
 #: heksedit.rc:80
 #, c-format
@@ -235,17 +235,17 @@ msgstr "மாற்று...\tCtrl+H"
 #: heksedit.rc:81
 #, c-format
 msgid "Find &next\tF3"
-msgstr "கண்டுபிடி & அடுத்த எஃப் 3"
+msgstr "அடுத்தது கண்டுபிடி\tF3"
 
 #: heksedit.rc:82
 #, c-format
 msgid "Find &previous\tShift+F3"
-msgstr "கண்டுபிடி & முந்தைய சிப்ட்+எஃப் 3"
+msgstr "முந்தையது கண்டுபிடி\tShift+F3"
 
 #: heksedit.rc:84 heksedit.rc:186
 #, c-format
 msgid "&Go To...\tCtrl+G"
-msgstr "& செல்லுங்கள் ...\tCtrl+g"
+msgstr "செல்...\tCtrl+G"
 
 #: heksedit.rc:86
 #, c-format
@@ -500,7 +500,7 @@ msgstr "& Frhed பற்றி ..."
 #: heksedit.rc:183
 #, c-format
 msgid "Replace...\tCtrl+H"
-msgstr "மாற்றவும் ...\tCtrl+h"
+msgstr "மாற்று ...\tCtrl+h"
 
 #: heksedit.rc:184
 #, c-format
@@ -1162,7 +1162,7 @@ msgstr "வார்ப்புரு பயன்பாட்டின் ம�
 #: heksedit.rc:696 heksedit.rc:715 heksedit.rc:1005
 #, c-format
 msgid "Replace"
-msgstr "மாற்றவும்"
+msgstr "மாற்று"
 
 #: heksedit.rc:699
 #, c-format
@@ -1187,12 +1187,12 @@ msgstr "போட்டி வழக்கு"
 #: heksedit.rc:706
 #, c-format
 msgid "Replace with:"
-msgstr "இதனுடன் மாற்றவும்:"
+msgstr "இதனுடன் மாற்று:"
 
 #: heksedit.rc:708
 #, c-format
 msgid "Replace all..."
-msgstr "அனைத்தையும் மாற்றவும் ..."
+msgstr "அனைத்தையும் மாற்று ..."
 
 #: heksedit.rc:709
 #, c-format
@@ -1302,7 +1302,7 @@ msgstr "Xor (^=)"
 #: heksedit.rc:757
 #, c-format
 msgid "Change Instance"
-msgstr "உதாரணத்தை மாற்றவும்"
+msgstr "உதாரணத்தை மாற்று"
 
 #: heksedit.rc:760
 #, c-format
@@ -2502,7 +2502,7 @@ msgstr "உரையை பைனரிக்கு மொழிபெயர்�
 #: heksedit.rc:1275
 #, c-format
 msgid "To-replace and replace-with data are same."
-msgstr "தரவுகளை மாற்றவும் மாற்றவும் தரவுகள் ஒன்றே."
+msgstr "தரவுகளை மாற்று மாற்று தரவுகள் ஒன்றே."
 
 #: heksedit.rc:1276
 #, c-format
