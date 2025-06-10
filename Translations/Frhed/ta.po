@@ -490,7 +490,7 @@ msgstr "உதவி"
 #: heksedit.rc:167
 #, c-format
 msgid "&Help topics...\tF1"
-msgstr "உதவி தலைப்புகள் ... F1"
+msgstr "உதவி தலைப்புகள்...\tF1"
 
 #: heksedit.rc:169
 #, c-format
@@ -500,27 +500,27 @@ msgstr "Frhed பற்றி..."
 #: heksedit.rc:183
 #, c-format
 msgid "Replace...\tCtrl+H"
-msgstr "மாற்று ...\tCtrl+h"
+msgstr "மாற்று...\tCtrl+h"
 
 #: heksedit.rc:184
 #, c-format
 msgid "Find next\tF3"
-msgstr "அடுத்த F3 ஐக் கண்டறியவும்"
+msgstr "அடுத்ததை தேடு\tF3"
 
 #: heksedit.rc:185
 #, c-format
 msgid "Find previous\tShift+F3"
-msgstr "முந்தைய சிப்ட்+எஃப் 3 ஐக் கண்டறியவும்"
+msgstr "முந்தையதை தேடு\tShift+F3"
 
 #: heksedit.rc:191
 #, c-format
 msgid "Goto &Next Sector"
-msgstr "கோட்டோ & அடுத்த துறை"
+msgstr "அடுத்த பகுதிக்கு செல்"
 
 #: heksedit.rc:192
 #, c-format
 msgid "Goto &Previous Sector"
-msgstr "கோட்டோ & முந்தைய துறை"
+msgstr "முந்தைய பகுதிக்கு செல்"
 
 #: heksedit.rc:298
 #, c-format
@@ -558,17 +558,17 @@ msgstr "சரி"
 #: heksedit.rc:947 heksedit.rc:960 heksedit.rc:978 heksedit.rc:1332
 #, c-format
 msgid "Cancel"
-msgstr "ரத்துசெய்"
+msgstr "கைவிடு"
 
 #: heksedit.rc:313 heksedit.rc:324 heksedit.rc:996
 #, c-format
 msgid "Find"
-msgstr "கண்டுபிடி"
+msgstr "தேடு"
 
 #: heksedit.rc:316
 #, c-format
 msgid "&Find what:"
-msgstr "& எதைக் கண்டுபிடி:"
+msgstr "எதைத் தேட:"
 
 #: heksedit.rc:318
 #, c-format
@@ -576,8 +576,8 @@ msgid ""
 "Please refer to the online help's Using the Special Syntax section for "
 "searching for binary values."
 msgstr ""
-"பைனரி மதிப்புகளைத் தேடுவதற்கு சிறப்பு தொடரியல் பகுதியைப் பயன்படுத்தும் "
-"நிகழ்நிலை உதவியைப் பார்க்கவும்."
+"இருமம் மதிப்புகளைத் தேடுவதற்கு சிறப்பு தொடரியல் பகுதியைப் பயன்படுத்தும் "
+"நிகழ்நிலை உதவியைப் பார்."
 
 #: heksedit.rc:319
 #, c-format
@@ -597,7 +597,7 @@ msgstr "கீழே"
 #: heksedit.rc:322
 #, c-format
 msgid "Match &case"
-msgstr "போட்டி & வழக்கு"
+msgstr "வழக்கு பொருத்து"
 
 #: heksedit.rc:323
 #, c-format
@@ -607,7 +607,7 @@ msgstr "ஒருங்குறி"
 #: heksedit.rc:331
 #, c-format
 msgid "About Frhed"
-msgstr "பற்றி Frhed"
+msgstr "Frhed பற்றி"
 
 #: heksedit.rc:335
 #, c-format
@@ -617,7 +617,7 @@ msgstr "Frhed - இலவச பதிண்ம திருத்தி"
 #: heksedit.rc:338
 #, c-format
 msgid "(c) Raihan Kibria 2000"
-msgstr "(c) Raihan Kibria 2000"
+msgstr "(c) ராய்கன் கிபிரியா 2000"
 
 #: heksedit.rc:339
 #, c-format
@@ -627,7 +627,7 @@ msgstr "அனைத்து உரிமைகளும் பாதுகா�
 #: heksedit.rc:340
 #, c-format
 msgid "Contributors are listed in Contributors.txt."
-msgstr "பங்களிப்பாளர்கள் அரே listed in Contributors.txt."
+msgstr "பங்களிப்பாளர்கள் பங்களிப்பாளர்கள்.txt இல் பட்டியலிடப்பட்டுள்ளார்கள்."
 
 #: heksedit.rc:342
 #, c-format
@@ -637,12 +637,12 @@ msgstr "திற பங்களிப்பாளர்கள் பட்ட�
 #: heksedit.rc:343
 #, c-format
 msgid "Homepage"
-msgstr "Homepage"
+msgstr "முகப்புபக்கம்"
 
 #: heksedit.rc:345
 #, c-format
 msgid "Open Frhed's homepage in browser"
-msgstr "திற Frhed's homepage in browser"
+msgstr "Frhedஇன் முகப்புபக்கத்தை உலாவியில் திற"
 
 #: heksedit.rc:353
 #, c-format
@@ -767,7 +767,7 @@ msgstr "ஒட்டு தகவல்கள் how many times:"
 #: heksedit.rc:407 heksedit.rc:669
 #, c-format
 msgid "Paste coded binary values as text"
-msgstr "குறியிடப்பட்ட பைனரி மதிப்புகளை உரையாக ஒட்டவும்"
+msgstr "குறியிடப்பட்ட இருமம் மதிப்புகளை உரையாக ஒட்டவும்"
 
 #: heksedit.rc:409
 #, c-format
@@ -1013,7 +1013,7 @@ msgstr "ஈரக முறை"
 #: heksedit.rc:574
 #, c-format
 msgid "Choose binary mode"
-msgstr "பைனரி பயன்முறையைத் தேர்வுசெய்க"
+msgstr "இருமம் பயன்முறையைத் தேர்வுசெய்க"
 
 #: heksedit.rc:575
 #, c-format
@@ -1602,7 +1602,7 @@ msgstr "CF_HDROP கைவிடப்பட்ட கோப்புகளை�
 #: heksedit.rc:923
 #, c-format
 msgid "Drop \"BinaryData\" if present"
-msgstr "இருந்தால் \"பைனரி டேட்டா\" ஐ கைவிடவும்"
+msgstr "இருந்தால் \"இருமம் டேட்டா\" ஐ கைவிடவும்"
 
 #: heksedit.rc:926
 #, c-format
@@ -1617,7 +1617,7 @@ msgstr "வெளியீடு"
 #: heksedit.rc:930
 #, c-format
 msgid "Drag \"BinaryData\""
-msgstr "\"பைனரி டேட்டா\" ஐ இழுக்கவும்"
+msgstr "\"இருமம் டேட்டா\" ஐ இழுக்கவும்"
 
 #: heksedit.rc:933
 #, c-format
@@ -2497,7 +2497,7 @@ msgstr "மாற்றுவது தோல்வியுற்றது."
 #: heksedit.rc:1274
 #, c-format
 msgid "Could not translate text to binary."
-msgstr "உரையை பைனரிக்கு மொழிபெயர்க்க முடியவில்லை."
+msgstr "உரையை இருமம்க்கு மொழிபெயர்க்க முடியவில்லை."
 
 #: heksedit.rc:1275
 #, c-format
