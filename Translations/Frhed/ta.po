@@ -1,4 +1,4 @@
-# This file is part of Frhed <http://frhed.sourceforge.net/>
+﻿# This file is part of Frhed <http://frhed.sourceforge.net/>
 # Released under the "GNU General Public License"
 #
 msgid ""
@@ -15,6 +15,64 @@ msgstr ""
 "X-Poedit-Basepath: ../../FRHED\n"
 "X-Poedit-Language: English\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+
+#: heksedit.rc:514
+#: heksedit.rc:530
+#, c-format
+msgid "2"
+msgstr "2"
+
+#: heksedit.rc:513
+#, c-format
+msgid "3"
+msgstr "3"
+
+#: heksedit.rc:512
+#: heksedit.rc:529
+#, c-format
+msgid "4"
+msgstr "4"
+
+#: heksedit.rc:511
+#, c-format
+msgid "5"
+msgstr "5"
+
+#: heksedit.rc:510
+#, c-format
+msgid "6"
+msgstr "6"
+
+#: heksedit.rc:509
+#, c-format
+msgid "7"
+msgstr "7"
+
+#: heksedit.rc:508
+#: heksedit.rc:528
+#, c-format
+msgid "8"
+msgstr "8"
+
+#: heksedit.rc:527
+#, c-format
+msgid "16"
+msgstr "16"
+
+#: heksedit.rc:526
+#, c-format
+msgid "32"
+msgstr "32"
+
+#: heksedit.rc:525
+#, c-format
+msgid "64"
+msgstr "64"
+
+#: heksedit.rc:524
+#, c-format
+msgid "128"
+msgstr "128"
 
 #. LANGUAGE, SUBLANGUAGE
 #: heksedit.rc:5
@@ -107,7 +165,8 @@ msgstr "இயக்கி திற..."
 msgid "&Close drive"
 msgstr "இயக்கி மூடு"
 
-#: heksedit.rc:47 heksedit.rc:190
+#: heksedit.rc:47
+#: heksedit.rc:190
 #, c-format
 msgid "Goto &First Sector"
 msgstr "முதல் பகுதிக்கு செல்"
@@ -122,12 +181,14 @@ msgstr "அடுத்த பகுதிக்கு செல்\tCtrl+Shift+
 msgid "Goto &Previous Sector\tCtrl+Shift+PgUp"
 msgstr "முந்தைய பகுதிக்கு செல்\tCtrl+Shift+PgUp"
 
-#: heksedit.rc:51 heksedit.rc:193
+#: heksedit.rc:51
+#: heksedit.rc:193
 #, c-format
 msgid "Goto &Last Sector"
 msgstr "கடைசி பகுதிக்கு செல்"
 
-#: heksedit.rc:53 heksedit.rc:195
+#: heksedit.rc:53
+#: heksedit.rc:195
 #, c-format
 msgid "Goto &Sector #..."
 msgstr "பகுதிக்கு # செல்..."
@@ -147,17 +208,20 @@ msgstr "செயல்தவிர்\tCtrl+Z"
 msgid "&Redo\tCtrl+Y"
 msgstr "மறுசெயல்\tCtrl+Y"
 
-#: heksedit.rc:60 heksedit.rc:177
+#: heksedit.rc:60
+#: heksedit.rc:177
 #, c-format
 msgid "Cu&t...\tCtrl+X"
 msgstr "வெட்டு...\tCtrl+X"
 
-#: heksedit.rc:61 heksedit.rc:178
+#: heksedit.rc:61
+#: heksedit.rc:178
 #, c-format
 msgid "&Copy...\tCtrl+C"
 msgstr "நகல்...\tCtrl+C"
 
-#: heksedit.rc:62 heksedit.rc:179
+#: heksedit.rc:62
+#: heksedit.rc:179
 #, c-format
 msgid "&Paste...\tCtrl+V"
 msgstr "ஒட்டு...\tCtrl+C"
@@ -182,7 +246,8 @@ msgstr "தலைகீழ் பைட்டுகள்...\tCtrl+Alt+R"
 msgid "&Append...\tCtrl+P"
 msgstr "பிற்சேர்...\tCtrl+P"
 
-#: heksedit.rc:67 heksedit.rc:180
+#: heksedit.rc:67
+#: heksedit.rc:180
 #, c-format
 msgid "&Delete\tDel"
 msgstr "நீக்கு\tDel"
@@ -222,7 +287,8 @@ msgstr "படிக்க மட்டும் பயன்முறை\tAlt+R
 msgid "&Find and Replace"
 msgstr "கண்டுபிடித்து மாற்று"
 
-#: heksedit.rc:79 heksedit.rc:182
+#: heksedit.rc:79
+#: heksedit.rc:182
 #, c-format
 msgid "&Find...\tCtrl+F"
 msgstr "கண்டுபிடி...\tCtrl+F"
@@ -242,7 +308,8 @@ msgstr "அடுத்தது கண்டுபிடி\tF3"
 msgid "Find &previous\tShift+F3"
 msgstr "முந்தையது கண்டுபிடி\tShift+F3"
 
-#: heksedit.rc:84 heksedit.rc:186
+#: heksedit.rc:84
+#: heksedit.rc:186
 #, c-format
 msgid "&Go To...\tCtrl+G"
 msgstr "செல்...\tCtrl+G"
@@ -537,30 +604,75 @@ msgstr "உறவினர் தாவலுக்கு \"+\" அல்லத�
 msgid "Prefix offset with \"x\" to indicate hex notation."
 msgstr "பதிண்ம குறியீட்டைக் குறிக்க \"x\" உடன் முன்னொட்டு ஈடுசெய்."
 
-#: heksedit.rc:306 heksedit.rc:347 heksedit.rc:367 heksedit.rc:387
-#: heksedit.rc:412 heksedit.rc:430 heksedit.rc:448 heksedit.rc:486
-#: heksedit.rc:498 heksedit.rc:533 heksedit.rc:549 heksedit.rc:563
-#: heksedit.rc:577 heksedit.rc:593 heksedit.rc:606 heksedit.rc:652
-#: heksedit.rc:675 heksedit.rc:689 heksedit.rc:750 heksedit.rc:772
-#: heksedit.rc:793 heksedit.rc:819 heksedit.rc:877 heksedit.rc:898
-#: heksedit.rc:946 heksedit.rc:977
+#: heksedit.rc:306
+#: heksedit.rc:347
+#: heksedit.rc:367
+#: heksedit.rc:387
+#: heksedit.rc:412
+#: heksedit.rc:430
+#: heksedit.rc:448
+#: heksedit.rc:486
+#: heksedit.rc:498
+#: heksedit.rc:533
+#: heksedit.rc:549
+#: heksedit.rc:563
+#: heksedit.rc:577
+#: heksedit.rc:593
+#: heksedit.rc:606
+#: heksedit.rc:652
+#: heksedit.rc:675
+#: heksedit.rc:689
+#: heksedit.rc:750
+#: heksedit.rc:772
+#: heksedit.rc:793
+#: heksedit.rc:819
+#: heksedit.rc:877
+#: heksedit.rc:898
+#: heksedit.rc:946
+#: heksedit.rc:977
 #, c-format
 msgid "OK"
 msgstr "சரி"
 
-#: heksedit.rc:307 heksedit.rc:325 heksedit.rc:368 heksedit.rc:388
-#: heksedit.rc:413 heksedit.rc:431 heksedit.rc:449 heksedit.rc:487
-#: heksedit.rc:499 heksedit.rc:534 heksedit.rc:550 heksedit.rc:564
-#: heksedit.rc:578 heksedit.rc:594 heksedit.rc:607 heksedit.rc:622
-#: heksedit.rc:634 heksedit.rc:653 heksedit.rc:676 heksedit.rc:690
-#: heksedit.rc:716 heksedit.rc:751 heksedit.rc:773 heksedit.rc:794
-#: heksedit.rc:806 heksedit.rc:820 heksedit.rc:878 heksedit.rc:899
-#: heksedit.rc:947 heksedit.rc:960 heksedit.rc:978 heksedit.rc:1332
+#: heksedit.rc:307
+#: heksedit.rc:325
+#: heksedit.rc:368
+#: heksedit.rc:388
+#: heksedit.rc:413
+#: heksedit.rc:431
+#: heksedit.rc:449
+#: heksedit.rc:487
+#: heksedit.rc:499
+#: heksedit.rc:534
+#: heksedit.rc:550
+#: heksedit.rc:564
+#: heksedit.rc:578
+#: heksedit.rc:594
+#: heksedit.rc:607
+#: heksedit.rc:622
+#: heksedit.rc:634
+#: heksedit.rc:653
+#: heksedit.rc:676
+#: heksedit.rc:690
+#: heksedit.rc:716
+#: heksedit.rc:751
+#: heksedit.rc:773
+#: heksedit.rc:794
+#: heksedit.rc:806
+#: heksedit.rc:820
+#: heksedit.rc:878
+#: heksedit.rc:899
+#: heksedit.rc:947
+#: heksedit.rc:960
+#: heksedit.rc:978
+#: heksedit.rc:1332
 #, c-format
 msgid "Cancel"
 msgstr "கைவிடு"
 
-#: heksedit.rc:313 heksedit.rc:324 heksedit.rc:996
+#: heksedit.rc:313
+#: heksedit.rc:324
+#: heksedit.rc:996
 #, c-format
 msgid "Find"
 msgstr "தேடு"
@@ -744,27 +856,32 @@ msgstr "ஒட்டு with dialogue"
 msgid "Clipboard content (text):"
 msgstr "இடைநிலைப்பலகை உள்ளடக்கம் (உரை):"
 
-#: heksedit.rc:400 heksedit.rc:662
+#: heksedit.rc:400
+#: heksedit.rc:662
 #, c-format
 msgid "Paste mode"
 msgstr "ஒட்டு பயன்முறை"
 
-#: heksedit.rc:401 heksedit.rc:663
+#: heksedit.rc:401
+#: heksedit.rc:663
 #, c-format
 msgid "Overwrite"
 msgstr "மேலெழுதும்"
 
-#: heksedit.rc:403 heksedit.rc:664
+#: heksedit.rc:403
+#: heksedit.rc:664
 #, c-format
 msgid "Insert"
 msgstr "செருகவும்"
 
-#: heksedit.rc:405 heksedit.rc:665
+#: heksedit.rc:405
+#: heksedit.rc:665
 #, c-format
 msgid "Paste data how many times:"
 msgstr "ஒட்டு தகவல்கள் how many times:"
 
-#: heksedit.rc:407 heksedit.rc:669
+#: heksedit.rc:407
+#: heksedit.rc:669
 #, c-format
 msgid "Paste coded binary values as text"
 msgstr "குறியிடப்பட்ட இருமம் மதிப்புகளை உரையாக ஒட்டவும்"
@@ -774,7 +891,8 @@ msgstr "குறியிடப்பட்ட இருமம் மதிப�
 msgid "Skip how many bytes between inserts/overwrites"
 msgstr "தவிர் how many பைட்டுகள் between inserts/overwrites"
 
-#: heksedit.rc:419 heksedit.rc:1000
+#: heksedit.rc:419
+#: heksedit.rc:1000
 #, c-format
 msgid "Cut"
 msgstr "வெட்டு"
@@ -799,7 +917,10 @@ msgstr "வெட்டு மேலே பெறுநர் and including offs
 msgid "Number of bytes to cut:"
 msgstr "வெட்ட வேண்டிய பைட்டுகளின் எண்ணிக்கை:"
 
-#: heksedit.rc:437 heksedit.rc:865 heksedit.rc:896 heksedit.rc:997
+#: heksedit.rc:437
+#: heksedit.rc:865
+#: heksedit.rc:896
+#: heksedit.rc:997
 #: heksedit.rc:1331
 #, c-format
 msgid "Copy"
@@ -905,61 +1026,6 @@ msgstr "கோப்பின் முடிவில் சேர்க்க 
 msgid "Manipulate Bits"
 msgstr "பிட்களை கையாளவும்"
 
-#: heksedit.rc:508 heksedit.rc:528
-#, c-format
-msgid "8"
-msgstr "8"
-
-#: heksedit.rc:509
-#, c-format
-msgid "7"
-msgstr "7"
-
-#: heksedit.rc:510
-#, c-format
-msgid "6"
-msgstr "6"
-
-#: heksedit.rc:511
-#, c-format
-msgid "5"
-msgstr "5"
-
-#: heksedit.rc:512 heksedit.rc:529
-#, c-format
-msgid "4"
-msgstr "4"
-
-#: heksedit.rc:513
-#, c-format
-msgid "3"
-msgstr "3"
-
-#: heksedit.rc:514 heksedit.rc:530
-#, c-format
-msgid "2"
-msgstr "2"
-
-#: heksedit.rc:524
-#, c-format
-msgid "128"
-msgstr "128"
-
-#: heksedit.rc:525
-#, c-format
-msgid "64"
-msgstr "64"
-
-#: heksedit.rc:526
-#, c-format
-msgid "32"
-msgstr "32"
-
-#: heksedit.rc:527
-#, c-format
-msgid "16"
-msgstr "16"
-
 #: heksedit.rc:540
 #, c-format
 msgid "Character Set"
@@ -970,12 +1036,14 @@ msgstr "எழுத்து தொகுப்பு"
 msgid "Choose character set"
 msgstr "எழுத்து தொகுப்பைத் தேர்வுசெய்க"
 
-#: heksedit.rc:544 heksedit.rc:1024
+#: heksedit.rc:544
+#: heksedit.rc:1024
 #, c-format
 msgid "ANSI"
 msgstr "அன்சி"
 
-#: heksedit.rc:546 heksedit.rc:1025
+#: heksedit.rc:546
+#: heksedit.rc:1025
 #, c-format
 msgid "OEM"
 msgstr "ஒஇஎம்"
@@ -1118,7 +1186,8 @@ msgstr ""
 "கோப்பின் தொடக்கத்துடன் தொடர்புடைய ஈடுசெய்யைக் காண்பி (அல்லது ஏற்றப்பட்ட "
 "தொகுதியின் தொடக்க)"
 
-#: heksedit.rc:659 heksedit.rc:998
+#: heksedit.rc:659
+#: heksedit.rc:998
 #, c-format
 msgid "Paste"
 msgstr "ஒட்டு"
@@ -1159,7 +1228,9 @@ msgstr "வார்ப்புரு"
 msgid "Result of template application:"
 msgstr "வார்ப்புரு பயன்பாட்டின் முடிவு:"
 
-#: heksedit.rc:696 heksedit.rc:715 heksedit.rc:1005
+#: heksedit.rc:696
+#: heksedit.rc:715
+#: heksedit.rc:1005
 #, c-format
 msgid "Replace"
 msgstr "மாற்று"
@@ -1219,7 +1290,8 @@ msgstr "தேர்வை நிரப்பவும்"
 msgid "Fill from:"
 msgstr "இதிலிருந்து நிரப்பவும்:"
 
-#: heksedit.rc:726 heksedit.rc:1298
+#: heksedit.rc:726
+#: heksedit.rc:1298
 #, c-format
 msgid "File:"
 msgstr "கோப்பு:"
@@ -1254,7 +1326,8 @@ msgstr "முடிவு:"
 msgid "Size:"
 msgstr "அளவு:"
 
-#: heksedit.rc:738 heksedit.rc:920
+#: heksedit.rc:738
+#: heksedit.rc:920
 #, c-format
 msgid "Input"
 msgstr "உள்ளீடு"
@@ -1365,7 +1438,9 @@ msgstr ""
 "குறிப்பு: இயக்கி தரவைப் படிக்க மட்டுமே ஃப்ரெட் அனுமதிக்கிறது. இயக்கி தரவை "
 "மாற்றுவதும் சேமிப்பதும் சாத்தியமில்லை."
 
-#: heksedit.rc:805 heksedit.rc:959 heksedit.rc:989
+#: heksedit.rc:805
+#: heksedit.rc:959
+#: heksedit.rc:989
 #, c-format
 msgid "Open"
 msgstr "திற"
@@ -1486,7 +1561,9 @@ msgstr ""
 "எதிர்மறை நீளம் அல்லது இயக்கத்திற்கு பின்னோக்கி (-) உடன் தொடங்கவும். ஃச் "
 "குறியீட்டிற்கு ஃச் உடன் முன்னொட்டு."
 
-#: heksedit.rc:864 heksedit.rc:894 heksedit.rc:1330
+#: heksedit.rc:864
+#: heksedit.rc:894
+#: heksedit.rc:1330
 #, c-format
 msgid "Move"
 msgstr "நகர்த்தவும்"
@@ -1754,12 +1831,14 @@ msgstr "ஒவிஆர்"
 msgid "INS"
 msgstr "சொரு"
 
-#: heksedit.rc:1029 heksedit.rc:1290
+#: heksedit.rc:1029
+#: heksedit.rc:1290
 #, c-format
 msgid "L"
 msgstr "எல்"
 
-#: heksedit.rc:1030 heksedit.rc:1287
+#: heksedit.rc:1030
+#: heksedit.rc:1287
 #, c-format
 msgid "B"
 msgstr "B"
@@ -2038,7 +2117,8 @@ msgstr "கிளிப்போர்டுக்கான அணுகலை�
 msgid "Cannot lock clipboard."
 msgstr "கிளிப்போர்டைப் பூட்ட முடியாது."
 
-#: heksedit.rc:1125 heksedit.rc:1136
+#: heksedit.rc:1125
+#: heksedit.rc:1136
 #, c-format
 msgid "Not enough memory for copying."
 msgstr "நகலெடுப்பதற்கு போதுமான நினைவகம் இல்லை."
@@ -2570,7 +2650,9 @@ msgstr "ஈடுசெய் இடத்தில் பயன்படுத�
 msgid "= %d (signed) = %u (unsigned) = 0x%x = '%c'"
 msgstr "= %d (கையொப்பமிடப்பட்டது) = %u (கையொப்பமிடாத) = 0x%x = '%c'"
 
-#: heksedit.rc:1302 heksedit.rc:1305 heksedit.rc:1307
+#: heksedit.rc:1302
+#: heksedit.rc:1305
+#: heksedit.rc:1307
 #, c-format
 msgid "= %d (signed) = %u (unsigned) = 0x%x"
 msgstr "= %d (கையொப்பமிடப்பட்டது) = %u (கையொப்பமிடாத) = 0x%x"
@@ -2627,8 +2709,8 @@ msgstr "-> வார்ப்புருவின் நீளம் = %zu ப�
 
 #: heksedit.rc:1320
 #, c-format
-msgid "Template files (*.tpl)\\0*.tpl\\0\\0"
-msgstr "வார்ப்புரு கோப்புகள் (*.tpl)\\0*.tpl\\0\\0"
+msgid "Template files (*.tpl)\0*.tpl\0\0"
+msgstr "வார்ப்புரு கோப்புகள் (*.tpl)\0*.tpl\0\0"
 
 #: heksedit.rc:1321
 #, c-format
@@ -2786,3 +2868,4 @@ msgid "Hex Dump files(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
 msgstr ""
 "பதின்மகொத்து கோப்புகள் (*. txt,*. hex) |*.txt;*. hex | அனைத்து கோப்புகளும் "
 "(*.*) |*.*|"
+
