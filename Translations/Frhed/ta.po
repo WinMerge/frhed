@@ -1,0 +1,2788 @@
+# This file is part of Frhed <http://frhed.sourceforge.net/>
+# Released under the "GNU General Public License"
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Frhed\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
+"POT-Creation-Date: 2024-02-14 06:39+0000\n"
+"PO-Revision-Date: 2025-06-09 09:49\n"
+"Last-Translator: \n"
+"Language-Team: English <frhed-devel@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ../../FRHED\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. LANGUAGE, SUBLANGUAGE
+#: heksedit.rc:5
+#, c-format
+msgid "LANG_ENGLISH, SUBLANG_ENGLISH_US"
+msgstr "Tamil, தமிழ்"
+
+#: heksedit.rc:12
+#, c-format
+msgid "&File"
+msgstr "கோப்பு"
+
+#: heksedit.rc:14
+#, c-format
+msgid "&New\tCtrl+N"
+msgstr "புதிய\tCtrl+N"
+
+#: heksedit.rc:15
+#, c-format
+msgid "&Open...\tCtrl+O"
+msgstr "திற...\tCtrl+O"
+
+#: heksedit.rc:16
+#, c-format
+msgid "Open pa&rtially...\tAlt+P"
+msgstr "பகுதி திற...\tAlt+P"
+
+#: heksedit.rc:18
+#, c-format
+msgid "&Save\tCtrl+S"
+msgstr "சேமி\tCtrl+S"
+
+#: heksedit.rc:19
+#, c-format
+msgid "Save &As...\tCtrl+J"
+msgstr "என சேமி...\tCtrl+J"
+
+#: heksedit.rc:20
+#, c-format
+msgid "Save selec&tion as...\tCtrl+Shift+O"
+msgstr "தேர்வை என சேமி...\tCtrl+Shift+O"
+
+#: heksedit.rc:22
+#, c-format
+msgid "Re&vert\tCtrl+Shift+R"
+msgstr "திருப்பிஎடு\tCtrl+Shift+R"
+
+#: heksedit.rc:23
+#, c-format
+msgid "&Insert file...\tCtrl+Shift+I"
+msgstr "கோப்பை செருகவும்...\tCtrl+Shift+I"
+
+#: heksedit.rc:24
+#, c-format
+msgid "&Delete file...\tCtrl+Shift+D"
+msgstr "கோப்பை நீக்கு...\tCtrl+Shift+D"
+
+#: heksedit.rc:25
+#, c-format
+msgid "Close File\tCtrl+Shift+X"
+msgstr "கோப்பை மூடு\tCtrl+Shift+X"
+
+#: heksedit.rc:27
+#, c-format
+msgid "&Export as hexdump..."
+msgstr "பதின்மகொத்தாக ஏற்றுமதி..."
+
+#: heksedit.rc:28
+#, c-format
+msgid "I&mport from hexdump...\tCtrl+Shift+H"
+msgstr "hexdumpஇல் இருந்து இறக்குமதி...\tCtrl+Shift+H"
+
+#: heksedit.rc:40
+#, c-format
+msgid "E&xit\tAlt+F4"
+msgstr "வெளியேறு\tAlt+F4"
+
+#: heksedit.rc:42
+#, c-format
+msgid "&Disk"
+msgstr "வட்டு"
+
+#: heksedit.rc:44
+#, c-format
+msgid "&Open drive..."
+msgstr "இயக்கி திற..."
+
+#: heksedit.rc:45
+#, c-format
+msgid "&Close drive"
+msgstr "இயக்கி மூடு"
+
+#: heksedit.rc:47 heksedit.rc:190
+#, c-format
+msgid "Goto &First Sector"
+msgstr "முதல் பகுதிக்கு செல்"
+
+#: heksedit.rc:48
+#, c-format
+msgid "Goto &Next Sector\tCtrl+Shift+PgDn"
+msgstr "அடுத்த பகுதிக்கு செல்\tCtrl+Shift+PgDn"
+
+#: heksedit.rc:49
+#, c-format
+msgid "Goto &Previous Sector\tCtrl+Shift+PgUp"
+msgstr "முந்தைய பகுதிக்கு செல்\tCtrl+Shift+PgUp"
+
+#: heksedit.rc:51 heksedit.rc:193
+#, c-format
+msgid "Goto &Last Sector"
+msgstr "கடைசி பகுதிக்கு செல்"
+
+#: heksedit.rc:53 heksedit.rc:195
+#, c-format
+msgid "Goto &Sector #..."
+msgstr "பகுதிக்கு # செல்..."
+
+#: heksedit.rc:55
+#, c-format
+msgid "&Edit"
+msgstr "திருத்து"
+
+#: heksedit.rc:57
+#, c-format
+msgid "&Undo\tCtrl+Z"
+msgstr "செயல்தவிர்\tCtrl+Z"
+
+#: heksedit.rc:58
+#, c-format
+msgid "&Redo\tCtrl+Y"
+msgstr "மறுசெயல்\tCtrl+Y"
+
+#: heksedit.rc:60 heksedit.rc:177
+#, c-format
+msgid "Cu&t...\tCtrl+X"
+msgstr "வெட்டு...\tCtrl+X"
+
+#: heksedit.rc:61 heksedit.rc:178
+#, c-format
+msgid "&Copy...\tCtrl+C"
+msgstr "நகல்...\tCtrl+C"
+
+#: heksedit.rc:62 heksedit.rc:179
+#, c-format
+msgid "&Paste...\tCtrl+V"
+msgstr "ஒட்டு...\tCtrl+C"
+
+#: heksedit.rc:63
+#, c-format
+msgid "Paste &with dialog...\tCtrl+Shift+V"
+msgstr "உரையாடலுடன் ஒட்டு...\tCtrl+Shift+V"
+
+#: heksedit.rc:64
+#, c-format
+msgid "&Move/Copy bytes...\tCtrl+Alt+M"
+msgstr "பைட்டுகளை நகர்த்த/நகலெடுக்க...\tCtrl+Alt+M"
+
+#: heksedit.rc:65
+#, c-format
+msgid "Reverse bytes...\tCtrl+Alt+R"
+msgstr "தலைகீழ் பைட்டுகள்...\tCtrl+Alt+R"
+
+#: heksedit.rc:66
+#, c-format
+msgid "&Append...\tCtrl+P"
+msgstr "பிற்சேர்...\tCtrl+P"
+
+#: heksedit.rc:67 heksedit.rc:180
+#, c-format
+msgid "&Delete\tDel"
+msgstr "நீக்கு\tDel"
+
+#: heksedit.rc:68
+#, c-format
+msgid "&Select all\tCtrl+A"
+msgstr "அனைத்தும் தேர்ந்தெடு\tCtrl+A"
+
+#: heksedit.rc:69
+#, c-format
+msgid "Select &block...\tCtrl+E"
+msgstr "தொகுதி தேர்ந்தெடு...\tCtrl+E"
+
+#: heksedit.rc:70
+#, c-format
+msgid "&Fill selection...\tCtrl+Shift+F"
+msgstr "தேர்வை நிரப்பவும்...\tCtrl+Shift+F"
+
+#: heksedit.rc:72
+#, c-format
+msgid "Toggle h&ex/character editing\tTAB"
+msgstr "பதின்ம/எழுத்துகள் திருத்துதல் தாவலை மாற்று\tTAB"
+
+#: heksedit.rc:73
+#, c-format
+msgid "Toggle keyboard I&nsert/Overwrite mode\tIns"
+msgstr "விசைப்பலகை செருகு/மேலெழுது பயன்முறை மாற்று\tIns"
+
+#: heksedit.rc:75
+#, c-format
+msgid "Read-only mode\tAlt+R"
+msgstr "படிக்க மட்டும் பயன்முறை\tAlt+R"
+
+#: heksedit.rc:77
+#, c-format
+msgid "&Find and Replace"
+msgstr "கண்டுபிடித்து மாற்று"
+
+#: heksedit.rc:79 heksedit.rc:182
+#, c-format
+msgid "&Find...\tCtrl+F"
+msgstr "கண்டுபிடி...\tCtrl+F"
+
+#: heksedit.rc:80
+#, c-format
+msgid "&Replace...\tCtrl+H"
+msgstr "மாற்று...\tCtrl+H"
+
+#: heksedit.rc:81
+#, c-format
+msgid "Find &next\tF3"
+msgstr "அடுத்தது கண்டுபிடி\tF3"
+
+#: heksedit.rc:82
+#, c-format
+msgid "Find &previous\tShift+F3"
+msgstr "முந்தையது கண்டுபிடி\tShift+F3"
+
+#: heksedit.rc:84 heksedit.rc:186
+#, c-format
+msgid "&Go To...\tCtrl+G"
+msgstr "செல்...\tCtrl+G"
+
+#: heksedit.rc:86
+#, c-format
+msgid "Enter decimal &value...\tCtrl+D"
+msgstr "தசம மற்றும் மதிப்பை உள்ளிடு...\tCtrl+D"
+
+#: heksedit.rc:88
+#, c-format
+msgid "Man&ipulate bits...\tCtrl+B"
+msgstr "மாற்றி அமை இருமங்கள்...\tCtrl+B"
+
+#: heksedit.rc:89
+#, c-format
+msgid "C&ompare from current offset...\tCtrl+M"
+msgstr "தற்போதைய ஈடுசெய்யிலிருந்து ஒப்பிடு...\tCtrl+M"
+
+#: heksedit.rc:91
+#, c-format
+msgid "Get f&loating point value...\tCtrl+L"
+msgstr "புள்ளி மதிப்பைப் பெறு...\tCtrl+l"
+
+#: heksedit.rc:92
+#, c-format
+msgid "File properties...\tAlt+Enter"
+msgstr "கோப்பு பண்புகள்...\tAlt+Enter"
+
+#: heksedit.rc:93
+#, c-format
+msgid "Appl&y template...\tAlt+T"
+msgstr "வார்ப்புரு இடு...\tAlt+T"
+
+#: heksedit.rc:94
+#, c-format
+msgid "Open in text editor\tF5"
+msgstr "உரை திருத்தியில் திற\tF5"
+
+#: heksedit.rc:96
+#, c-format
+msgid "&View"
+msgstr "காண்க"
+
+#: heksedit.rc:98
+#, c-format
+msgid "Scroll &left\tCtrl+Arrow Left"
+msgstr "இடதுபுறம் உருட்டு\tCtrl+Arrow Left"
+
+#: heksedit.rc:99
+#, c-format
+msgid "Scroll &right\tCtrl+Arrow Right"
+msgstr "வலதுபுறம் உருட்டு\tCtrl+Arrow Right"
+
+#: heksedit.rc:100
+#, c-format
+msgid "Scroll &up\tCtrl+Arrow Up"
+msgstr "உருள் &\tCtrl+அம்பு அப்"
+
+#: heksedit.rc:101
+#, c-format
+msgid "Scroll &down\tCtrl+Arrow Down"
+msgstr "Ctrl+அம்புக்குறியை கீழே உருட்டு"
+
+#: heksedit.rc:102
+#, c-format
+msgid "Scroll up a page\tCtrl+Page Up"
+msgstr "CTRL+பக்கத்தை மேலே உருட்டு"
+
+#: heksedit.rc:103
+#, c-format
+msgid "Scroll down a page\tCtrl+Page Down"
+msgstr "Ctrl+பக்கத்தை கீழே உருட்டு"
+
+#: heksedit.rc:105
+#, c-format
+msgid "Zoom in\tCtrl++"
+msgstr "கட்டுப்பாடு ++ இல் பெரிதாக்கு"
+
+#: heksedit.rc:106
+#, c-format
+msgid "Zoom out\tCtrl+-"
+msgstr "Ctrl+- பெரிதாக்கு"
+
+#: heksedit.rc:107
+#, c-format
+msgid "Zoom normal\tCtrl+*"
+msgstr "சாதாரண\tCtrl+* ஐ பெரிதாக்கு"
+
+#: heksedit.rc:109
+#, c-format
+msgid "&Options"
+msgstr "விருப்பங்கள்"
+
+#: heksedit.rc:111
+#, c-format
+msgid "&View settings...\tCtrl+I"
+msgstr "அமைப்புகளைக் காண்க...\tCtrl+i"
+
+#: heksedit.rc:112
+#, c-format
+msgid "&Color settings"
+msgstr "வண்ண அமைப்புகள்"
+
+#: heksedit.rc:114
+#, c-format
+msgid "&Text color...\tCtrl+T"
+msgstr "உரை நிறம்...\tCtrl+T."
+
+#: heksedit.rc:115
+#, c-format
+msgid "&Background color...\tCtrl+K"
+msgstr "பின்னணி நிறம்...\tCtrl+k"
+
+#: heksedit.rc:116
+#, c-format
+msgid "Separator color...\tCtrl+Q"
+msgstr "பிரிப்பான் நிறம்...\tCtrl+q"
+
+#: heksedit.rc:117
+#, c-format
+msgid "Selection text color...\tCtrl+Shift+T"
+msgstr "தேர்வு உரை நிறம்...\tCTRL+SHIFT+T."
+
+#: heksedit.rc:119
+#, c-format
+msgid "Selection background color...\tCtrl+Shift+K"
+msgstr "தேர்வு பின்னணி நிறம்...\tCtrl+Shift+K"
+
+#: heksedit.rc:121
+#, c-format
+msgid "Bookmark color...\tCtrl+Shift+B"
+msgstr "புத்தக்குறி நிறம் ...\tCtrl+Shift+B"
+
+#: heksedit.rc:123
+#, c-format
+msgid "Reset colors to standard...\tCtrl+Shift+S"
+msgstr "வண்ணங்களை தரத்திற்கு மீட்டமை...\tCtrl+Shift+s"
+
+#: heksedit.rc:125
+#, c-format
+msgid "&Adopt OS colour scheme...\tCtrl+Shift+A"
+msgstr "ஒரு வண்ணத் திட்டத்தை ஏற்றுக்கொள்...\tCtrl+Shift+a"
+
+#: heksedit.rc:128
+#, c-format
+msgid "C&haracter set...\tCtrl+R"
+msgstr "எழுத்து தொகுப்பு...\tCtrl+R"
+
+#: heksedit.rc:129
+#, c-format
+msgid "B&inary mode...\tCtrl+Shift+Y"
+msgstr "இரும பயன்முறை...\tCtrl+Shift+Y"
+
+#: heksedit.rc:130
+#, c-format
+msgid "&OLE Drag-drop...\tCtrl+Alt+O"
+msgstr "Ole இழுத்து-விடு...\tCtrl+alt+o"
+
+#: heksedit.rc:131
+#, c-format
+msgid "Make backups\tCtrl+Shift+M"
+msgstr "​​காப்புப்பிரதிகளை உருவாக்கு\tCtrl+Shift+M"
+
+#: heksedit.rc:133
+#, c-format
+msgid "&Registry"
+msgstr "பதிவேடு"
+
+#: heksedit.rc:135
+#, c-format
+msgid "In &all context menu"
+msgstr "அனைத்து சூழல் பட்டியலிலும்"
+
+#: heksedit.rc:136
+#, c-format
+msgid "In &unknown context menu"
+msgstr "அறியப்படாத சூழல் பட்டியல்"
+
+#: heksedit.rc:137
+#, c-format
+msgid "Is &default in unknown context"
+msgstr "அறியப்படாத சூழலில் இயல்புநிலை"
+
+#: heksedit.rc:138
+#, c-format
+msgid "&Save ini when required"
+msgstr "தேவைப்படும்போது இனி சேமி"
+
+#: heksedit.rc:139
+#, c-format
+msgid "Change &instance..."
+msgstr "நிகழ்வு மாற்று..."
+
+#: heksedit.rc:140
+#, c-format
+msgid "S&hortcuts to Frhed..."
+msgstr "ஃப்ரெட்க்கு குறுக்குவழிகள்..."
+
+#: heksedit.rc:142
+#, c-format
+msgid "&Bookmarks"
+msgstr "புத்தக்குறிகள்"
+
+#: heksedit.rc:144
+#, c-format
+msgid "&Add bookmark...\tCtrl+W"
+msgstr "புத்தக்குறியைச் சேர்...\tCtrl+w"
+
+#: heksedit.rc:145
+#, c-format
+msgid "&Remove bookmark...\tAlt+W"
+msgstr "புத்தகக்குறியை அகற்று ...\tAlt+w"
+
+#: heksedit.rc:146
+#, c-format
+msgid "&Clear all bookmarks\tCtrl+Shift+W"
+msgstr "அனைத்து புத்தக்குறிகளையும் அழிக்கவும்\tCtrl+Shift+W"
+
+#: heksedit.rc:158
+#, c-format
+msgid "&Misc"
+msgstr "மற்றவை"
+
+#: heksedit.rc:160
+#, c-format
+msgid "Goto DLL e&xport names..."
+msgstr "dll எற்றுமதி பெயர்களுக்கு செல்..."
+
+#: heksedit.rc:161
+#, c-format
+msgid "Goto DLL import names..."
+msgstr "dll இறக்குமதி பெயர்களுக்கு செல்..."
+
+#: heksedit.rc:163
+#, c-format
+msgid "Encode / Decode..."
+msgstr "குறியாக்கம் / மறைகுறி..."
+
+#: heksedit.rc:165
+#, c-format
+msgid "&Help"
+msgstr "உதவி"
+
+#: heksedit.rc:167
+#, c-format
+msgid "&Help topics...\tF1"
+msgstr "உதவி தலைப்புகள்...\tF1"
+
+#: heksedit.rc:169
+#, c-format
+msgid "&About Frhed..."
+msgstr "Frhed பற்றி..."
+
+#: heksedit.rc:183
+#, c-format
+msgid "Replace...\tCtrl+H"
+msgstr "மாற்று...\tCtrl+h"
+
+#: heksedit.rc:184
+#, c-format
+msgid "Find next\tF3"
+msgstr "அடுத்ததை தேடு\tF3"
+
+#: heksedit.rc:185
+#, c-format
+msgid "Find previous\tShift+F3"
+msgstr "முந்தையதை தேடு\tShift+F3"
+
+#: heksedit.rc:191
+#, c-format
+msgid "Goto &Next Sector"
+msgstr "அடுத்த பகுதிக்கு செல்"
+
+#: heksedit.rc:192
+#, c-format
+msgid "Goto &Previous Sector"
+msgstr "முந்தைய பகுதிக்கு செல்"
+
+#: heksedit.rc:298
+#, c-format
+msgid "Go to Offset"
+msgstr "ஈடுசெய்க்குச் செல்"
+
+#: heksedit.rc:301
+#, c-format
+msgid "Start with \"+\" or \"-\" (minus) for relative jump."
+msgstr "உறவினர் தாவலுக்கு \"+\" அல்லது \"-\" (கழித்தல்) உடன் தொடங்கு."
+
+#: heksedit.rc:303
+#, c-format
+msgid "Prefix offset with \"x\" to indicate hex notation."
+msgstr "பதிண்ம குறியீட்டைக் குறிக்க \"x\" உடன் முன்னொட்டு ஈடுசெய்."
+
+#: heksedit.rc:306 heksedit.rc:347 heksedit.rc:367 heksedit.rc:387
+#: heksedit.rc:412 heksedit.rc:430 heksedit.rc:448 heksedit.rc:486
+#: heksedit.rc:498 heksedit.rc:533 heksedit.rc:549 heksedit.rc:563
+#: heksedit.rc:577 heksedit.rc:593 heksedit.rc:606 heksedit.rc:652
+#: heksedit.rc:675 heksedit.rc:689 heksedit.rc:750 heksedit.rc:772
+#: heksedit.rc:793 heksedit.rc:819 heksedit.rc:877 heksedit.rc:898
+#: heksedit.rc:946 heksedit.rc:977
+#, c-format
+msgid "OK"
+msgstr "சரி"
+
+#: heksedit.rc:307 heksedit.rc:325 heksedit.rc:368 heksedit.rc:388
+#: heksedit.rc:413 heksedit.rc:431 heksedit.rc:449 heksedit.rc:487
+#: heksedit.rc:499 heksedit.rc:534 heksedit.rc:550 heksedit.rc:564
+#: heksedit.rc:578 heksedit.rc:594 heksedit.rc:607 heksedit.rc:622
+#: heksedit.rc:634 heksedit.rc:653 heksedit.rc:676 heksedit.rc:690
+#: heksedit.rc:716 heksedit.rc:751 heksedit.rc:773 heksedit.rc:794
+#: heksedit.rc:806 heksedit.rc:820 heksedit.rc:878 heksedit.rc:899
+#: heksedit.rc:947 heksedit.rc:960 heksedit.rc:978 heksedit.rc:1332
+#, c-format
+msgid "Cancel"
+msgstr "கைவிடு"
+
+#: heksedit.rc:313 heksedit.rc:324 heksedit.rc:996
+#, c-format
+msgid "Find"
+msgstr "தேடு"
+
+#: heksedit.rc:316
+#, c-format
+msgid "&Find what:"
+msgstr "எதைத் தேட:"
+
+#: heksedit.rc:318
+#, c-format
+msgid ""
+"Please refer to the online help's Using the Special Syntax section for "
+"searching for binary values."
+msgstr ""
+"இருமம் மதிப்புகளைத் தேடுவதற்கு சிறப்பு தொடரியல் பகுதியைப் பயன்படுத்தும் "
+"நிகழ்நிலை உதவியைப் பார்."
+
+#: heksedit.rc:319
+#, c-format
+msgid "Direction"
+msgstr "திசை"
+
+#: heksedit.rc:320
+#, c-format
+msgid "&Up"
+msgstr "மேலே"
+
+#: heksedit.rc:321
+#, c-format
+msgid "&Down"
+msgstr "கீழே"
+
+#: heksedit.rc:322
+#, c-format
+msgid "Match &case"
+msgstr "வழக்கு பொருத்து"
+
+#: heksedit.rc:323
+#, c-format
+msgid "U&nicode"
+msgstr "ஒருங்குறி"
+
+#: heksedit.rc:331
+#, c-format
+msgid "About Frhed"
+msgstr "Frhed பற்றி"
+
+#: heksedit.rc:335
+#, c-format
+msgid "Frhed - Free hex editor"
+msgstr "Frhed - இலவச பதிண்ம திருத்தி"
+
+#: heksedit.rc:338
+#, c-format
+msgid "(c) Raihan Kibria 2000"
+msgstr "(c) ராய்கன் கிபிரியா 2000"
+
+#: heksedit.rc:339
+#, c-format
+msgid "All rights reserved."
+msgstr "அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
+
+#: heksedit.rc:340
+#, c-format
+msgid "Contributors are listed in Contributors.txt."
+msgstr "பங்களிப்பாளர்கள் பங்களிப்பாளர்கள்.txt இல் பட்டியலிடப்பட்டுள்ளார்கள்."
+
+#: heksedit.rc:342
+#, c-format
+msgid "Open contributors list"
+msgstr "திற பங்களிப்பாளர்கள் பட்டியல்"
+
+#: heksedit.rc:343
+#, c-format
+msgid "Homepage"
+msgstr "முகப்புபக்கம்"
+
+#: heksedit.rc:345
+#, c-format
+msgid "Open Frhed's homepage in browser"
+msgstr "Frhedஇன் முகப்புபக்கத்தை உலாவியில் திற"
+
+#: heksedit.rc:353
+#, c-format
+msgid "Export Hexdump"
+msgstr "ஏற்றுமதி Hexdump"
+
+#: heksedit.rc:356
+#, c-format
+msgid "Start at offset:"
+msgstr "தொடங்கு at offset:"
+
+#: heksedit.rc:358
+#, c-format
+msgid "End at offset:"
+msgstr "End at offset:"
+
+#: heksedit.rc:360
+#, c-format
+msgid "Export to"
+msgstr "ஏற்றுமதி"
+
+#: heksedit.rc:361
+#, c-format
+msgid "File"
+msgstr "கோப்பு"
+
+#: heksedit.rc:362
+#, c-format
+msgid "Clipboard"
+msgstr "இடைநிலைப் பலகை"
+
+#: heksedit.rc:363
+#, c-format
+msgid "Type"
+msgstr "வகை"
+
+#: heksedit.rc:364
+#, c-format
+msgid "Frhed display as text"
+msgstr "Frhed காட்சி அச் உரை"
+
+#: heksedit.rc:365
+#, c-format
+msgid "Just hex digits on a line"
+msgstr "Just hex digits on a வரி"
+
+#: heksedit.rc:366
+#, c-format
+msgid "Frhed display as RTF"
+msgstr "Rtf ஆக frhed காட்சி"
+
+#: heksedit.rc:374
+#, c-format
+msgid "Enter decimal value"
+msgstr "தசம மதிப்பை உள்ளிடு"
+
+#: heksedit.rc:377
+#, c-format
+msgid "Enter decimal value:"
+msgstr "தசம மதிப்பை உள்ளிடு:"
+
+#: heksedit.rc:379
+#, c-format
+msgid "At offset:"
+msgstr "ஈடுசெய்யில்:"
+
+#: heksedit.rc:381
+#, c-format
+msgid "Number of times:"
+msgstr "எண்ணிக்கையிலான முறை:"
+
+#: heksedit.rc:383
+#, c-format
+msgid "Size of Value:"
+msgstr "மதிப்பின் அளவு:"
+
+#: heksedit.rc:384
+#, c-format
+msgid "Byte (8 bit)"
+msgstr "பைட் (8 இருமம்)"
+
+#: heksedit.rc:385
+#, c-format
+msgid "Word (16 bit)"
+msgstr "சொல் (16 இருமம்)"
+
+#: heksedit.rc:386
+#, c-format
+msgid "Double word (32 bit)"
+msgstr "இரட்டை சொல் (32 இருமம்)"
+
+#: heksedit.rc:394
+#, c-format
+msgid "Paste with dialogue"
+msgstr "ஒட்டு with dialogue"
+
+#: heksedit.rc:397
+#, c-format
+msgid "Clipboard content (text):"
+msgstr "இடைநிலைப்பலகை உள்ளடக்கம் (உரை):"
+
+#: heksedit.rc:400 heksedit.rc:662
+#, c-format
+msgid "Paste mode"
+msgstr "ஒட்டு பயன்முறை"
+
+#: heksedit.rc:401 heksedit.rc:663
+#, c-format
+msgid "Overwrite"
+msgstr "மேலெழுதும்"
+
+#: heksedit.rc:403 heksedit.rc:664
+#, c-format
+msgid "Insert"
+msgstr "செருகவும்"
+
+#: heksedit.rc:405 heksedit.rc:665
+#, c-format
+msgid "Paste data how many times:"
+msgstr "ஒட்டு தகவல்கள் how many times:"
+
+#: heksedit.rc:407 heksedit.rc:669
+#, c-format
+msgid "Paste coded binary values as text"
+msgstr "குறியிடப்பட்ட இருமம் மதிப்புகளை உரையாக ஒட்டவும்"
+
+#: heksedit.rc:409
+#, c-format
+msgid "Skip how many bytes between inserts/overwrites"
+msgstr "தவிர் how many பைட்டுகள் between inserts/overwrites"
+
+#: heksedit.rc:419 heksedit.rc:1000
+#, c-format
+msgid "Cut"
+msgstr "வெட்டு"
+
+#: heksedit.rc:422
+#, c-format
+msgid "Start cutting at offset:"
+msgstr "ஈடுசெய்யில் வெட்டத் தொடங்கு:"
+
+#: heksedit.rc:424
+#, c-format
+msgid "Cut how many bytes"
+msgstr "எத்தனை பைட்டுகளை வெட்டுங்கள்"
+
+#: heksedit.rc:425
+#, c-format
+msgid "Cut up to and including offset:"
+msgstr "வெட்டு மேலே பெறுநர் and including offset:"
+
+#: heksedit.rc:427
+#, c-format
+msgid "Number of bytes to cut:"
+msgstr "வெட்ட வேண்டிய பைட்டுகளின் எண்ணிக்கை:"
+
+#: heksedit.rc:437 heksedit.rc:865 heksedit.rc:896 heksedit.rc:997
+#: heksedit.rc:1331
+#, c-format
+msgid "Copy"
+msgstr "நகலெடு"
+
+#: heksedit.rc:440
+#, c-format
+msgid "Start copying at offset:"
+msgstr "ஈடுசெய்யில் நகலெடுக்கத் தொடங்கு:"
+
+#: heksedit.rc:442
+#, c-format
+msgid "Copy how many bytes"
+msgstr "நகலெடு how many பைட்டுகள்"
+
+#: heksedit.rc:443
+#, c-format
+msgid "Copy up to and including offset:"
+msgstr "நகலெடு மேலே பெறுநர் and including offset:"
+
+#: heksedit.rc:445
+#, c-format
+msgid "Number of bytes to copy:"
+msgstr "எண் of பைட்டுகள் பெறுநர் copy:"
+
+#: heksedit.rc:455
+#, c-format
+msgid "View Settings"
+msgstr "பார்வை அமைப்புகள்"
+
+#: heksedit.rc:458
+#, c-format
+msgid "Number of bytes to display per line:"
+msgstr "ஒரு வரிக்கு காண்பிக்க பைட்டுகளின் எண்ணிக்கை:"
+
+#: heksedit.rc:461
+#, c-format
+msgid ""
+"Automatically adjust number of bytes per line (uncheck this if you want "
+"Frhed to use your own choice for bytes per line)"
+msgstr ""
+"ஒரு வரிக்கு பைட்டுகளின் எண்ணிக்கையை தானாக சரிசெய்யவும் (ஒரு வரிக்கு "
+"பைட்டுகளுக்கு உங்கள் சொந்த தேர்வைப் பயன்படுத்த விரும்பினால் இதைத் "
+"தேர்வுசெய்யவும்)"
+
+#: heksedit.rc:464
+#, c-format
+msgid "Display length of offset in how many characters:"
+msgstr "எத்தனை எழுத்துக்களில் ஈடுசெய்யின் நீளம்:"
+
+#: heksedit.rc:467
+#, c-format
+msgid "Adjust offset length to that of the max offset"
+msgstr "Adjust offset length பெறுநர் that of the max offset"
+
+#: heksedit.rc:470
+#, c-format
+msgid "Display values at caret position as:"
+msgstr "காட்சி values at caret position as:"
+
+#: heksedit.rc:472
+#, c-format
+msgid "unsigned"
+msgstr "கையொப்பமிடாத"
+
+#: heksedit.rc:474
+#, c-format
+msgid "signed"
+msgstr "signed"
+
+#: heksedit.rc:476
+#, c-format
+msgid "Set read-only mode on opening files"
+msgstr "கோப்புகளைத் திறப்பதில் படிக்க மட்டும் பயன்முறையை அமைக்கவும்"
+
+#: heksedit.rc:479
+#, c-format
+msgid "Path and filename of the text editor to call:"
+msgstr "அழைக்க உரை எடிட்டரின் பாதை மற்றும் கோப்பு பெயர்:"
+
+#: heksedit.rc:482
+#, c-format
+msgid "Browse..."
+msgstr "உலாவுக ..."
+
+#: heksedit.rc:483
+#, c-format
+msgid "Language:"
+msgstr "மொழி:"
+
+#: heksedit.rc:493
+#, c-format
+msgid "Append"
+msgstr "பிற்சேர்"
+
+#: heksedit.rc:496
+#, c-format
+msgid "Bytes to append to the end of the file:"
+msgstr "கோப்பின் முடிவில் சேர்க்க பைட்டுகள்:"
+
+#: heksedit.rc:504
+#, c-format
+msgid "Manipulate Bits"
+msgstr "பிட்களை கையாளவும்"
+
+#: heksedit.rc:508 heksedit.rc:528
+#, c-format
+msgid "8"
+msgstr "8"
+
+#: heksedit.rc:509
+#, c-format
+msgid "7"
+msgstr "7"
+
+#: heksedit.rc:510
+#, c-format
+msgid "6"
+msgstr "6"
+
+#: heksedit.rc:511
+#, c-format
+msgid "5"
+msgstr "5"
+
+#: heksedit.rc:512 heksedit.rc:529
+#, c-format
+msgid "4"
+msgstr "4"
+
+#: heksedit.rc:513
+#, c-format
+msgid "3"
+msgstr "3"
+
+#: heksedit.rc:514 heksedit.rc:530
+#, c-format
+msgid "2"
+msgstr "2"
+
+#: heksedit.rc:524
+#, c-format
+msgid "128"
+msgstr "128"
+
+#: heksedit.rc:525
+#, c-format
+msgid "64"
+msgstr "64"
+
+#: heksedit.rc:526
+#, c-format
+msgid "32"
+msgstr "32"
+
+#: heksedit.rc:527
+#, c-format
+msgid "16"
+msgstr "16"
+
+#: heksedit.rc:540
+#, c-format
+msgid "Character Set"
+msgstr "எழுத்து தொகுப்பு"
+
+#: heksedit.rc:543
+#, c-format
+msgid "Choose character set"
+msgstr "எழுத்து தொகுப்பைத் தேர்வுசெய்க"
+
+#: heksedit.rc:544 heksedit.rc:1024
+#, c-format
+msgid "ANSI"
+msgstr "அன்சி"
+
+#: heksedit.rc:546 heksedit.rc:1025
+#, c-format
+msgid "OEM"
+msgstr "ஒஇஎம்"
+
+#: heksedit.rc:547
+#, c-format
+msgid "Font size in points:"
+msgstr "புள்ளிகளில் எழுத்துரு அளவு:"
+
+#: heksedit.rc:556
+#, c-format
+msgid "Choose area of difference to display"
+msgstr "காண்பிக்க வேறுபாட்டின் பகுதியைத் தேர்வுசெய்க"
+
+#: heksedit.rc:559
+#, c-format
+msgid "file_sizes"
+msgstr "file_sizes"
+
+#: heksedit.rc:560
+#, c-format
+msgid "number_of_diffs"
+msgstr "number_of_diffs"
+
+#: heksedit.rc:565
+#, c-format
+msgid "Copy above list"
+msgstr "மேலே பட்டியலை நகலெடுக்கவும்"
+
+#: heksedit.rc:571
+#, c-format
+msgid "Binary Mode"
+msgstr "ஈரக முறை"
+
+#: heksedit.rc:574
+#, c-format
+msgid "Choose binary mode"
+msgstr "இருமம் பயன்முறையைத் தேர்வுசெய்க"
+
+#: heksedit.rc:575
+#, c-format
+msgid "Little-endian (Intel)"
+msgstr "லிட்டில்-எண்டியன் (இன்டெல்)"
+
+#: heksedit.rc:576
+#, c-format
+msgid "Big-endian (Motorola)"
+msgstr "பிக்-எண்டியன் (மோட்டோரோலா)"
+
+#: heksedit.rc:584
+#, c-format
+msgid "Select Block"
+msgstr "தொகுதி தேர்ந்தெடுக்கவும்"
+
+#: heksedit.rc:587
+#, c-format
+msgid "Start of selection (prefix x for hex):"
+msgstr "தேர்வின் தொடக்க (எக்சிற்கான ஃச் முன்னொட்டு):"
+
+#: heksedit.rc:590
+#, c-format
+msgid "End of selection (prefix x for hex):"
+msgstr "தேர்வின் முடிவு (எக்சுக்கான முன்னொட்டு x):"
+
+#: heksedit.rc:599
+#, c-format
+msgid "Reverse Bytes"
+msgstr "தலைகீழ் பைட்டுகள்"
+
+#: heksedit.rc:602
+#, c-format
+msgid "Offset of first byte:"
+msgstr "முதல் பைட் ஈடுசெய்:"
+
+#: heksedit.rc:604
+#, c-format
+msgid "Offset of last byte:"
+msgstr "கடைசி பைட் ஈடுசெய்:"
+
+#: heksedit.rc:613
+#, c-format
+msgid "Add Bookmark"
+msgstr "புத்தக்குறியைச் சேர்"
+
+#: heksedit.rc:616
+#, c-format
+msgid "Offset (prefix x for hex):"
+msgstr "ஈடுசெய் (பதிண்மத்திற்கு ஃச் முன்னொட்டு):"
+
+#: heksedit.rc:619
+#, c-format
+msgid "Name:"
+msgstr "பெயர்:"
+
+#: heksedit.rc:621
+#, c-format
+msgid "Add"
+msgstr "கூட்டு"
+
+#: heksedit.rc:628
+#, c-format
+msgid "Remove Bookmark"
+msgstr "புத்தகக்குறியை அகற்று"
+
+#: heksedit.rc:633
+#, c-format
+msgid "Remove"
+msgstr "அகற்று"
+
+#: heksedit.rc:640
+#, c-format
+msgid "Open partially"
+msgstr "ஓரளவு திறக்கவும்"
+
+#: heksedit.rc:643
+#, c-format
+msgid "Start opening partially"
+msgstr "ஓரளவு திறக்கத் தொடங்குங்கள்"
+
+#: heksedit.rc:644
+#, c-format
+msgid "&At offset from the beginning of file (prefix x for hex):"
+msgstr ""
+"& கோப்பின் தொடக்கத்திலிருந்து ஈடுசெய்யில் (பதிண்மத்திற்கு ஃச் முன்னொட்டு):"
+
+#: heksedit.rc:646
+#, c-format
+msgid "&From end of file"
+msgstr "கோப்பின் முடிவில் இருந்து"
+
+#: heksedit.rc:648
+#, c-format
+msgid "&How many bytes:"
+msgstr "எத்தனை பைட்டுகள்:"
+
+#: heksedit.rc:650
+#, c-format
+msgid "&Display offsets relative to start of file (or start of loaded block)"
+msgstr ""
+"கோப்பின் தொடக்கத்துடன் தொடர்புடைய ஈடுசெய்யைக் காண்பி (அல்லது ஏற்றப்பட்ட "
+"தொகுதியின் தொடக்க)"
+
+#: heksedit.rc:659 heksedit.rc:998
+#, c-format
+msgid "Paste"
+msgstr "ஒட்டு"
+
+#: heksedit.rc:667
+#, c-format
+msgid "Bytes to skip between inserts/overwrites:"
+msgstr "செருகல்/மேலெழுதும் இடையில் தவிர்க்க பைட்டுகள்:"
+
+#: heksedit.rc:671
+#, c-format
+msgid "Clipboard format to use:"
+msgstr "பயன்படுத்த இடைநிலைப்பலகை வடிவம்:"
+
+#: heksedit.rc:673
+#, c-format
+msgid "Refresh"
+msgstr "புதுப்பிப்பு"
+
+#: heksedit.rc:674
+#, c-format
+msgid ""
+"- CF_TEXT was used by previous versions of Frhed\n"
+"- Those starting w CF_ are standard formats && others are registered/private ones\n"
+"- Some formats may have been synthesized from the original."
+msgstr ""
+"- CF_TEXT ஃப்ரெட் இன் முந்தைய பதிப்புகளால் பயன்படுத்தப்பட்டது \n"
+"- w cf_ ஐத் தொடங்குபவர்கள் நிலையான வடிவங்கள் && மற்றவர்கள் பதிவுசெய்யப்பட்ட/தனிப்பட்டவர்கள் \n"
+"- சில வடிவங்கள் அசலில் இருந்து ஒருங்கிணைக்கப்பட்டிருக்கலாம்."
+
+#: heksedit.rc:682
+#, c-format
+msgid "Template"
+msgstr "வார்ப்புரு"
+
+#: heksedit.rc:685
+#, c-format
+msgid "Result of template application:"
+msgstr "வார்ப்புரு பயன்பாட்டின் முடிவு:"
+
+#: heksedit.rc:696 heksedit.rc:715 heksedit.rc:1005
+#, c-format
+msgid "Replace"
+msgstr "மாற்று"
+
+#: heksedit.rc:699
+#, c-format
+msgid "Find what:"
+msgstr "எதைக் கண்டுபிடி:"
+
+#: heksedit.rc:702
+#, c-format
+msgid "Find next"
+msgstr "அடுத்ததை தேடு"
+
+#: heksedit.rc:703
+#, c-format
+msgid "Find previous"
+msgstr "முந்தையதைக் கண்டறியவும்"
+
+#: heksedit.rc:704
+#, c-format
+msgid "Match case"
+msgstr "போட்டி வழக்கு"
+
+#: heksedit.rc:706
+#, c-format
+msgid "Replace with:"
+msgstr "இதனுடன் மாற்று:"
+
+#: heksedit.rc:708
+#, c-format
+msgid "Replace all..."
+msgstr "அனைத்தையும் மாற்று ..."
+
+#: heksedit.rc:709
+#, c-format
+msgid "... following occurrences"
+msgstr "... பின்வரும் நிகழ்வுகள்"
+
+#: heksedit.rc:711
+#, c-format
+msgid "... previous occurrences"
+msgstr "... முந்தைய நிகழ்வுகள்"
+
+#: heksedit.rc:713
+#, c-format
+msgid "Use special syntax"
+msgstr "சிறப்பு தொடரியல் பயன்படுத்தவும்"
+
+#: heksedit.rc:721
+#, c-format
+msgid "Fill Selection"
+msgstr "தேர்வை நிரப்பவும்"
+
+#: heksedit.rc:724
+#, c-format
+msgid "Fill from:"
+msgstr "இதிலிருந்து நிரப்பவும்:"
+
+#: heksedit.rc:726 heksedit.rc:1298
+#, c-format
+msgid "File:"
+msgstr "கோப்பு:"
+
+#: heksedit.rc:728
+#, c-format
+msgid "&Browse..."
+msgstr "& உலாவுக ..."
+
+#: heksedit.rc:729
+#, c-format
+msgid "Hex:"
+msgstr "பதின்ம:"
+
+#: heksedit.rc:731
+#, c-format
+msgid "Selection"
+msgstr "தேர்வு"
+
+#: heksedit.rc:732
+#, c-format
+msgid "Start:"
+msgstr "தொடக்க:"
+
+#: heksedit.rc:734
+#, c-format
+msgid "End:"
+msgstr "முடிவு:"
+
+#: heksedit.rc:736
+#, c-format
+msgid "Size:"
+msgstr "அளவு:"
+
+#: heksedit.rc:738 heksedit.rc:920
+#, c-format
+msgid "Input"
+msgstr "உள்ளீடு"
+
+#: heksedit.rc:739
+#, c-format
+msgid "Size of input:"
+msgstr "உள்ளீட்டின் அளவு:"
+
+#: heksedit.rc:741
+#, c-format
+msgid "# Times input fits:"
+msgstr "# டைம்ச் உள்ளீடு பொருந்துகிறது:"
+
+#: heksedit.rc:743
+#, c-format
+msgid "Remainder:"
+msgstr "மீதமுள்ள:"
+
+#: heksedit.rc:745
+#, c-format
+msgid "Assignment operator"
+msgstr "ஒதுக்கீட்டு ஆபரேட்டர்"
+
+#: heksedit.rc:746
+#, c-format
+msgid "Assign (=)"
+msgstr "ஒதுக்கு (=)"
+
+#: heksedit.rc:747
+#, c-format
+msgid "OR (|=)"
+msgstr "அல்லது (| =)"
+
+#: heksedit.rc:748
+#, c-format
+msgid "AND (&&=)"
+msgstr "மற்றும் (&& =)"
+
+#: heksedit.rc:749
+#, c-format
+msgid "XOR (^=)"
+msgstr "Xor (^=)"
+
+#: heksedit.rc:757
+#, c-format
+msgid "Change Instance"
+msgstr "உதாரணத்தை மாற்று"
+
+#: heksedit.rc:760
+#, c-format
+msgid "Load the following instance data:"
+msgstr "பின்வரும் நிகழ்வு தரவை ஏற்றவும்:"
+
+#: heksedit.rc:766
+#, c-format
+msgid "and save (when quiting) to this instance data:"
+msgstr "இந்த நிகழ்வு தரவுகளில் சேமிக்கவும் (வெளியேறும்போது):"
+
+#: heksedit.rc:774
+#, c-format
+msgid ""
+"Remember that if any instance of Frhed is running on the same instance data "
+"as this one it will overwrite the data of this one if it exits last.  "
+"Unless, that is, that the option to save ini data to the registry on exit is"
+" disabled)"
+msgstr ""
+"ஃப்ரெட் இன் எந்தவொரு நிகழ்வும் அதே நிகழ்வு தரவுகளில் இயங்கினால், அது கடைசியாக "
+"வெளியேறினால் இந்த தரவை மேலெழுதும் என்பதை நினைவில் கொள்ளுங்கள். தவிர, ஐ.என்.ஐ"
+" தரவை வெளியேறும்போது பதிவேட்டில் சேமிப்பதற்கான விருப்பம் முடக்கப்பட்டுள்ளது)"
+
+#: heksedit.rc:781
+#, c-format
+msgid "Encode / Decode Data"
+msgstr "குறியீடு / டிகோட் தரவை"
+
+#: heksedit.rc:784
+#, c-format
+msgid "Algorithms:"
+msgstr "வழிமுறைகள்:"
+
+#: heksedit.rc:787
+#, c-format
+msgid "Arguments:"
+msgstr "வாதங்கள்:"
+
+#: heksedit.rc:789
+#, c-format
+msgid "Encode"
+msgstr "குறியாக்கம்"
+
+#: heksedit.rc:791
+#, c-format
+msgid "Decode"
+msgstr "டிகோட்"
+
+#: heksedit.rc:800
+#, c-format
+msgid "Open Drive"
+msgstr "திறந்த இயக்கி"
+
+#: heksedit.rc:804
+#, c-format
+msgid ""
+"NOTE: Frhed allows only reading the drive data. Changing and saving the "
+"drive data is not possible."
+msgstr ""
+"குறிப்பு: இயக்கி தரவைப் படிக்க மட்டுமே ஃப்ரெட் அனுமதிக்கிறது. இயக்கி தரவை "
+"மாற்றுவதும் சேமிப்பதும் சாத்தியமில்லை."
+
+#: heksedit.rc:805 heksedit.rc:959 heksedit.rc:989
+#, c-format
+msgid "Open"
+msgstr "திற"
+
+#: heksedit.rc:812
+#, c-format
+msgid "Go to Track"
+msgstr "கண்காணிக்கச் செல்லுங்கள்"
+
+#: heksedit.rc:815
+#, c-format
+msgid "Drive Information:"
+msgstr "இயக்கி தகவல்:"
+
+#: heksedit.rc:817
+#, c-format
+msgid "&Go to track:"
+msgstr "& பாதையில் செல்லுங்கள்:"
+
+#: heksedit.rc:826
+#, c-format
+msgid "Shortcuts"
+msgstr "குறுக்குவழிகள்"
+
+#: heksedit.rc:829
+#, c-format
+msgid "Paths of shortcuts to Frhed:"
+msgstr "Frhed க்கு குறுக்குவழிகளின் பாதைகள்:"
+
+#: heksedit.rc:830
+#, c-format
+msgid "Links to Frhed"
+msgstr "Frhed க்கான இணைப்புகள்"
+
+#: heksedit.rc:833
+#, c-format
+msgid "&Find links to any Frhed.exe, fix them and list them here."
+msgstr ""
+"& எந்த frhed.exe க்கும் இணைப்புகளைக் கண்டறிந்து, அவற்றை சரிசெய்து இங்கே "
+"பட்டியலிடுங்கள்."
+
+#: heksedit.rc:836
+#, c-format
+msgid "Create link in/on:"
+msgstr "/ஆன் இல் இணைப்பை உருவாக்கவும்:"
+
+#: heksedit.rc:837
+#, c-format
+msgid "&Desktop"
+msgstr "& டெச்க்டாப்"
+
+#: heksedit.rc:839
+#, c-format
+msgid "S&tart Menu"
+msgstr "எச் & டார்ட் பட்டியல்"
+
+#: heksedit.rc:841
+#, c-format
+msgid "&Send To"
+msgstr "& அனுப்பு"
+
+#: heksedit.rc:843
+#, c-format
+msgid "&Programs"
+msgstr "& திட்டங்கள்"
+
+#: heksedit.rc:845
+#, c-format
+msgid "Link management:"
+msgstr "இணைப்பு மேலாண்மை:"
+
+#: heksedit.rc:846
+#, c-format
+msgid "<< &Add..."
+msgstr "<< & சேர் ..."
+
+#: heksedit.rc:847
+#, c-format
+msgid "&Update list"
+msgstr "& புதுப்பிப்பு பட்டியல்"
+
+#: heksedit.rc:849
+#, c-format
+msgid ">> &Delete"
+msgstr ">> & நீக்கு"
+
+#: heksedit.rc:850
+#, c-format
+msgid "&Move"
+msgstr "& நகர்த்தவும்"
+
+#: heksedit.rc:852
+#, c-format
+msgid "&Reload"
+msgstr "& மீண்டும் ஏற்றவும்"
+
+#: heksedit.rc:853
+#, c-format
+msgid "&Close"
+msgstr "மூடு (&c)"
+
+#: heksedit.rc:859
+#, c-format
+msgid "Move/Copy bytes"
+msgstr "பைட்டுகளை நகர்த்தவும்/நகலெடுக்கவும்"
+
+#: heksedit.rc:862
+#, c-format
+msgid "Operation:"
+msgstr "செயல்பாடு:"
+
+#: heksedit.rc:863
+#, c-format
+msgid ""
+"Start with (-) for negative length or movement backwards. Prefix with x for "
+"hex notation."
+msgstr ""
+"எதிர்மறை நீளம் அல்லது இயக்கத்திற்கு பின்னோக்கி (-) உடன் தொடங்கவும். ஃச் "
+"குறியீட்டிற்கு ஃச் உடன் முன்னொட்டு."
+
+#: heksedit.rc:864 heksedit.rc:894 heksedit.rc:1330
+#, c-format
+msgid "Move"
+msgstr "நகர்த்தவும்"
+
+#: heksedit.rc:866
+#, c-format
+msgid "Begin of the block:"
+msgstr "தொகுதியைத் தொடங்கு:"
+
+#: heksedit.rc:868
+#, c-format
+msgid "End of the block:"
+msgstr "தொகுதியின் முடிவு:"
+
+#: heksedit.rc:870
+#, c-format
+msgid "Offset"
+msgstr "ஈடுசெய்யும்"
+
+#: heksedit.rc:871
+#, c-format
+msgid "Length"
+msgstr "நீளம்"
+
+#: heksedit.rc:872
+#, c-format
+msgid "Target:"
+msgstr "இலக்கு:"
+
+#: heksedit.rc:874
+#, c-format
+msgid "Bytes forward"
+msgstr "பைட்டுகள் முன்னோக்கி"
+
+#: heksedit.rc:875
+#, c-format
+msgid "First byte offset"
+msgstr "முதல் பைட் ஈடுசெய்"
+
+#: heksedit.rc:876
+#, c-format
+msgid "Last byte offset"
+msgstr "கடைசி பைட் ஈடுசெய்"
+
+#: heksedit.rc:884
+#, c-format
+msgid "Drag-drop"
+msgstr "இழுத்தல்"
+
+#: heksedit.rc:887
+#, c-format
+msgid "Clipboard format[s] to use:"
+msgstr "பயன்படுத்த இடைநிலைப்பலகை வடிவம் [கள்]:"
+
+#: heksedit.rc:891
+#, c-format
+msgid "Up"
+msgstr "மேலே"
+
+#: heksedit.rc:892
+#, c-format
+msgid "Down"
+msgstr "கீழே"
+
+#: heksedit.rc:893
+#, c-format
+msgid "Data:"
+msgstr "தரவு:"
+
+#: heksedit.rc:905
+#, c-format
+msgid "OLE Drag-drop options"
+msgstr "ஓலே இழுவை விருப்பங்கள்"
+
+#: heksedit.rc:908
+#, c-format
+msgid "General"
+msgstr "பொது"
+
+#: heksedit.rc:909
+#, c-format
+msgid "Enable drop input"
+msgstr "துளி உள்ளீட்டை இயக்கவும்"
+
+#: heksedit.rc:911
+#, c-format
+msgid "Enable drag output"
+msgstr "இழுவை வெளியீட்டை இயக்கவும்"
+
+#: heksedit.rc:913
+#, c-format
+msgid "Enable scroll-delaying for drag-drop"
+msgstr "இழுவை-சொட்டுக்கு சுருள்-தாமதத்தை இயக்கவும்"
+
+#: heksedit.rc:915
+#, c-format
+msgid "Enable scroll-delaying for selecting"
+msgstr "தேர்ந்தெடுப்பதற்கு சுருள்-தாமதத்தை இயக்கவும்"
+
+#: heksedit.rc:917
+#, c-format
+msgid ""
+"Always give the opportunity to change between move and copy after a drop."
+msgstr ""
+"ஒரு துளைக்குப் பிறகு நகர்த்துவதற்கும் நகலெடுப்பதற்கும் இடையில் மாற்றுவதற்கான"
+" வாய்ப்பை எப்போதும் கொடுங்கள்."
+
+#: heksedit.rc:921
+#, c-format
+msgid "CF_HDROP opens the files dropped."
+msgstr "CF_HDROP கைவிடப்பட்ட கோப்புகளைத் திறக்கிறது."
+
+#: heksedit.rc:923
+#, c-format
+msgid "Drop \"BinaryData\" if present"
+msgstr "இருந்தால் \"இருமம் டேட்டா\" ஐ கைவிடவும்"
+
+#: heksedit.rc:926
+#, c-format
+msgid "Drop CF_TEXT if present"
+msgstr "இருந்தால் CF_TEXT ஐ கைவிடவும்"
+
+#: heksedit.rc:929
+#, c-format
+msgid "Output"
+msgstr "வெளியீடு"
+
+#: heksedit.rc:930
+#, c-format
+msgid "Drag \"BinaryData\""
+msgstr "\"இருமம் டேட்டா\" ஐ இழுக்கவும்"
+
+#: heksedit.rc:933
+#, c-format
+msgid "Drag CF_TEXT as:"
+msgstr "CF_TEXT ஐ இழுக்கவும்:"
+
+#: heksedit.rc:936
+#, c-format
+msgid "Hexdump"
+msgstr "ஃச் டம்ப்"
+
+#: heksedit.rc:938
+#, c-format
+msgid "Special syntax (<bh:ff>...)"
+msgstr "சிறப்பு தொடரியல் (<bh: ff> ...)"
+
+#: heksedit.rc:940
+#, c-format
+msgid "display (else digits)"
+msgstr "காட்சி (வேறு இலக்கங்கள்)"
+
+#: heksedit.rc:943
+#, c-format
+msgid "Drag \"Rich Text Format\" (as hexdump)"
+msgstr "\"பணக்கார உரை வடிவத்தை\" இழுக்கவும் (பதின்மகொத்தாக)"
+
+#: heksedit.rc:953
+#, c-format
+msgid "Multiple files dropped"
+msgstr "பல கோப்புகள் கைவிடப்பட்டன"
+
+#: heksedit.rc:956
+#, c-format
+msgid "Select the file to open:"
+msgstr "திறக்க கோப்பைத் தேர்ந்தெடுக்கவும்:"
+
+#: heksedit.rc:966
+#, c-format
+msgid "Delete"
+msgstr "நீக்கு"
+
+#: heksedit.rc:969
+#, c-format
+msgid "Start deleting at offset:"
+msgstr "ஈடுசெய்யில் நீக்கத் தொடங்குங்கள்:"
+
+#: heksedit.rc:971
+#, c-format
+msgid "Delete how many bytes"
+msgstr "எத்தனை பைட்டுகளை நீக்கு"
+
+#: heksedit.rc:972
+#, c-format
+msgid "Delete up to and including offset:"
+msgstr "ஈடுசெய் வரை நீக்கவும்:"
+
+#: heksedit.rc:974
+#, c-format
+msgid "Number of bytes to delete:"
+msgstr "நீக்க பைட்டுகளின் எண்ணிக்கை:"
+
+#: heksedit.rc:990
+#, c-format
+msgid "New"
+msgstr "புதிய"
+
+#: heksedit.rc:995
+#, c-format
+msgid "Save"
+msgstr "சேமி"
+
+#: heksedit.rc:999
+#, c-format
+msgid "Help"
+msgstr "உதவி"
+
+#: heksedit.rc:1010
+#, c-format
+msgid "Goto next sector"
+msgstr "கோட்டோ அடுத்த துறை"
+
+#: heksedit.rc:1011
+#, c-format
+msgid "Goto previous sector"
+msgstr "கோட்டோ முந்தைய துறை"
+
+#: heksedit.rc:1012
+#, c-format
+msgid "Goto first sector"
+msgstr "கோட்டோ முதல் துறை"
+
+#: heksedit.rc:1013
+#, c-format
+msgid "Goto last sector"
+msgstr "கோட்டோ கடைசி துறை"
+
+#: heksedit.rc:1019
+#, c-format
+msgid "Frhed"
+msgstr "ஃப்ரெர்னச்"
+
+#: heksedit.rc:1020
+#, c-format
+msgid "Version %u.%u.%u"
+msgstr "பதிப்பு%u.%u.%u"
+
+#: heksedit.rc:1021
+#, c-format
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytes)"
+msgstr "%d) 0x%Zx =%முதல் 0x%Zx =%முதல் (%முதல் பைட்டுகள் வரை)"
+
+#: heksedit.rc:1022
+#, c-format
+msgid "All Files (*.*)|*.*|"
+msgstr "எல்லா கோப்புகளும் (*.*) |*.*|"
+
+#: heksedit.rc:1023
+#, c-format
+msgid "Untitled"
+msgstr "தலைப்பிடப்படாத"
+
+#: heksedit.rc:1026
+#, c-format
+msgid "READ"
+msgstr "படிக்க"
+
+#: heksedit.rc:1027
+#, c-format
+msgid "OVR"
+msgstr "ஒவிஆர்"
+
+#: heksedit.rc:1028
+#, c-format
+msgid "INS"
+msgstr "சொரு"
+
+#: heksedit.rc:1029 heksedit.rc:1290
+#, c-format
+msgid "L"
+msgstr "எல்"
+
+#: heksedit.rc:1030 heksedit.rc:1287
+#, c-format
+msgid "B"
+msgstr "B"
+
+#: heksedit.rc:1031
+#, c-format
+msgid ""
+"You are trying to open a link file.\n"
+"Click on Yes if you want to open the file linked to,\n"
+"or click on No if you want to open the link file itself.\n"
+"Choose Cancel if you want to abort opening."
+msgstr ""
+"நீங்கள் ஒரு இணைப்பு கோப்பைத் திறக்க முயற்சிக்கிறீர்கள். \n"
+"இணைக்கப்பட்ட கோப்பைத் திறக்க விரும்பினால் ஆம் என்பதைக் சொடுக்கு செய்க, \n"
+"அல்லது இணைப்பு கோப்பைத் திறக்க விரும்பினால் இல்லை ஐக் சொடுக்கு செய்க. \n"
+"நீங்கள் திறப்பதை நிறுத்த விரும்பினால் நீக்கறல் என்பதைத் தேர்வுசெய்க."
+
+#: heksedit.rc:1037
+#, c-format
+msgid "Start offset not recognized."
+msgstr "ஈடுசெய் அங்கீகரிக்கப்படவில்லை."
+
+#: heksedit.rc:1038
+#, c-format
+msgid "End offset not recognized."
+msgstr "முடிவு ஈடுசெய் அங்கீகரிக்கப்படவில்லை."
+
+#: heksedit.rc:1039
+#, c-format
+msgid "Offset not recognized."
+msgstr "ஈடுசெய் அங்கீகரிக்கப்படவில்லை."
+
+#: heksedit.rc:1045
+#, c-format
+msgid "Error while reading from file."
+msgstr "கோப்பிலிருந்து படிக்கும்போது பிழை."
+
+#: heksedit.rc:1046
+#, c-format
+msgid "Not enough memory."
+msgstr "போதுமான நினைவகம் இல்லை."
+
+#: heksedit.rc:1047
+#, c-format
+msgid "Number of bytes not recognized."
+msgstr "பைட்டுகளின் எண்ணிக்கை அங்கீகரிக்கப்படவில்லை."
+
+#: heksedit.rc:1048
+#, c-format
+msgid "Error opening file."
+msgstr "கோப்பைத் திறப்பதில் பிழை."
+
+#: heksedit.rc:1049
+#, c-format
+msgid "Not enough memory to load file."
+msgstr "கோப்பை ஏற்ற போதுமான நினைவகம் இல்லை."
+
+#: heksedit.rc:1050
+#, c-format
+msgid "Could not save the file."
+msgstr "கோப்பை சேமிக்க முடியவில்லை."
+
+#: heksedit.rc:1051
+#, c-format
+msgid ""
+"Could not backup file!\n"
+"Backup aborted, Save continuing."
+msgstr ""
+"கோப்பை காப்புப் பிரதி எடுக்க முடியவில்லை! \n"
+"காப்புப்பிரதி கைவிடப்பட்டது, தொடர்ந்து சேமிக்கவும்."
+
+#: heksedit.rc:1052
+#, c-format
+msgid "Could not save partially opened file."
+msgstr "ஓரளவு திறந்த கோப்பை சேமிக்க முடியவில்லை."
+
+#: heksedit.rc:1053
+#, c-format
+msgid "Could not move data in the file."
+msgstr "கோப்பில் தரவை நகர்த்த முடியவில்லை."
+
+#: heksedit.rc:1054
+#, c-format
+msgid "Could not resize the file."
+msgstr "கோப்பை அளவை மாற்ற முடியவில்லை."
+
+#: heksedit.rc:1055
+#, c-format
+msgid "Could not seek in file."
+msgstr "கோப்பில் தேட முடியவில்லை."
+
+#: heksedit.rc:1056
+#, c-format
+msgid "Could not write data to file."
+msgstr "தாக்கல் செய்ய தரவை எழுத முடியவில்லை."
+
+#: heksedit.rc:1057
+#, c-format
+msgid ""
+"Help file\n"
+"%s\n"
+"not found!"
+msgstr ""
+"உதவி கோப்பு \n"
+"%s \n"
+"கண்டுபிடிக்கப்படவில்லை!"
+
+#: heksedit.rc:1058
+#, c-format
+msgid "Error code 0x%x occurred while opening file %s."
+msgstr "பிழைக் குறியீடு 0x%x ஆனது %s ஐ திறக்கும்போது ஏற்பட்டது."
+
+#: heksedit.rc:1059
+#, c-format
+msgid "Could not save preferences to registry."
+msgstr "பதிவேட்டில் விருப்பங்களை சேமிக்க முடியவில்லை."
+
+#: heksedit.rc:1060
+#, c-format
+msgid "File is empty."
+msgstr "கோப்பு காலியாக உள்ளது."
+
+#: heksedit.rc:1061
+#, c-format
+msgid "An error occurred when calling the text editor."
+msgstr "உரை எடிட்டரை அழைக்கும்போது பிழை ஏற்பட்டது."
+
+#: heksedit.rc:1062
+#, c-format
+msgid "Could not insert data."
+msgstr "தரவைச் செருக முடியவில்லை."
+
+#: heksedit.rc:1063
+#, c-format
+msgid "Error checking file size"
+msgstr "கோப்பு அளவை சரிபார்க்க பிழை"
+
+#: heksedit.rc:1064
+#, c-format
+msgid "No data present. Cannot continue!"
+msgstr "தரவு இல்லை. தொடர முடியாது!"
+
+#: heksedit.rc:1065
+#, c-format
+msgid ""
+"Could not get text from the file.\n"
+"Cannot continue!"
+msgstr ""
+"கோப்பிலிருந்து உரையைப் பெற முடியவில்லை. \n"
+"தொடர முடியாது!"
+
+#: heksedit.rc:1071
+#, c-format
+msgid "KB"
+msgstr "கே.பி."
+
+#: heksedit.rc:1072
+#, c-format
+msgid "MB"
+msgstr "எம்பி"
+
+#: heksedit.rc:1073
+#, c-format
+msgid "GB"
+msgstr "சிபி"
+
+#: heksedit.rc:1074
+#, c-format
+msgid "TB"
+msgstr "காசநோய்"
+
+#: heksedit.rc:1080
+#, c-format
+msgid "Could not open the browser."
+msgstr "உலாவியைத் திறக்க முடியவில்லை."
+
+#: heksedit.rc:1081
+#, c-format
+msgid ""
+"File\n"
+"%s\n"
+"not found!"
+msgstr ""
+"கோப்பு \n"
+"%s \n"
+"கண்டுபிடிக்கப்படவில்லை!"
+
+#: heksedit.rc:1087
+#, c-format
+msgid "Can not set bookmark at that position."
+msgstr "அந்த நிலையில் புத்தகக்குறியை அமைக்க முடியாது."
+
+#: heksedit.rc:1088
+#, c-format
+msgid "There already is a bookmark on that position."
+msgstr "ஏற்கனவே அந்த நிலையில் ஒரு புத்தக்குறி உள்ளது."
+
+#: heksedit.rc:1089
+#, c-format
+msgid "Can not set bookmark in empty file."
+msgstr "வெற்று கோப்பில் புத்தகக்குறியை அமைக்க முடியாது."
+
+#: heksedit.rc:1090
+#, c-format
+msgid "Can not set any more bookmarks."
+msgstr "மேலும் புத்தக்குறிகளை அமைக்க முடியாது."
+
+#: heksedit.rc:1091
+#, c-format
+msgid "Bookmark points to invalid position."
+msgstr "புத்தகக்குறி தவறான நிலையை சுட்டிக்காட்டுகிறது."
+
+#: heksedit.rc:1092
+#, c-format
+msgid "No bookmarks to remove."
+msgstr "அகற்ற புத்தக்குறிகள் இல்லை."
+
+#: heksedit.rc:1093
+#, c-format
+msgid "Remove all bookmarks?"
+msgstr "அனைத்து புத்தக்குறிகளையும் அகற்றவா?"
+
+#: heksedit.rc:1099
+#, c-format
+msgid "Number of bytes to append not recognized."
+msgstr "அங்கீகரிக்கப்படாத பைட்டுகளின் எண்ணிக்கை."
+
+#: heksedit.rc:1100
+#, c-format
+msgid "Not enough memory for appending."
+msgstr "சேர்க்க போதுமான நினைவகம் இல்லை."
+
+#: heksedit.rc:1106
+#, c-format
+msgid "Offset: 0x%zx = %zd"
+msgstr "ஈடுசெய்: 0x%zx = %zd"
+
+#: heksedit.rc:1107
+#, c-format
+msgid "Value: 0x%02x, %d signed, %u unsigned."
+msgstr "மதிப்பு: 0x %02x, %d கையொப்பமிடப்பட்டது, %u கையொப்பமிடப்படவில்லை."
+
+#: heksedit.rc:1113
+#, c-format
+msgid "Choose file to compare with"
+msgstr "ஒப்பிடுவதற்கு கோப்பைத் தேர்வுசெய்க"
+
+#: heksedit.rc:1114
+#, c-format
+msgid "Error while opening file."
+msgstr "கோப்பைத் திறக்கும்போது பிழை."
+
+#: heksedit.rc:1115
+#, c-format
+msgid "%d areas of difference found."
+msgstr "வேறுபாட்டின் %d பகுதிகள்."
+
+#: heksedit.rc:1116
+#, c-format
+msgid "Remaining loaded data size: %lld, size of file on disk: %lld."
+msgstr ""
+"மீதமுள்ள ஏற்றப்பட்ட தரவு அளவு: %எல்.எல்.டி, வட்டில் கோப்பின் அளவு: %lld"
+
+#: heksedit.rc:1117
+#, c-format
+msgid "Data matches exactly."
+msgstr "தரவு சரியாக பொருந்துகிறது."
+
+#: heksedit.rc:1123
+#, c-format
+msgid "Cannot get access to clipboard."
+msgstr "கிளிப்போர்டுக்கான அணுகலைப் பெற முடியாது."
+
+#: heksedit.rc:1124
+#, c-format
+msgid "Cannot lock clipboard."
+msgstr "கிளிப்போர்டைப் பூட்ட முடியாது."
+
+#: heksedit.rc:1125 heksedit.rc:1136
+#, c-format
+msgid "Not enough memory for copying."
+msgstr "நகலெடுப்பதற்கு போதுமான நினைவகம் இல்லை."
+
+#: heksedit.rc:1126
+#, c-format
+msgid ""
+"\n"
+"Do you want the above output to be copied to the clipboard?\n"
+msgstr ""
+"\n"
+"மேலே உள்ள வெளியீட்டை கிளிப்போர்டில் நகலெடுக்க விரும்புகிறீர்களா?\n"
+
+#: heksedit.rc:1127
+#, c-format
+msgid "You need to select a clipboard format to use."
+msgstr ""
+"பயன்படுத்த நீங்கள் ஒரு இடைநிலைப்பலகை வடிவமைப்பைத் தேர்ந்தெடுக்க வேண்டும்."
+
+#: heksedit.rc:1128
+#, c-format
+msgid ""
+"Could not get text from the clipboard.\n"
+"Cannot continue!"
+msgstr ""
+"கிளிப்போர்டிலிருந்து உரையைப் பெற முடியவில்லை. \n"
+"தொடர முடியாது!"
+
+#: heksedit.rc:1129
+#, c-format
+msgid ""
+"There is text on the clipboard.\n"
+"Do you want to import from\n"
+"the clipboard instead of a file?"
+msgstr ""
+"கிளிப்போர்டில் உரை உள்ளது. \n"
+"நீங்கள் இறக்குமதி செய்ய விரும்புகிறீர்களா? \n"
+"கோப்புக்கு பதிலாக கிளிப்போர்டு?"
+
+#: heksedit.rc:1135
+#, c-format
+msgid "Can't copy more bytes than are present."
+msgstr "இருப்பதை விட அதிகமான பைட்டுகளை நகலெடுக்க முடியாது."
+
+#: heksedit.rc:1142
+#, c-format
+msgid "Can't cut more bytes than are present."
+msgstr "இருப்பதை விட அதிகமான பைட்டுகளை வெட்ட முடியாது."
+
+#: heksedit.rc:1143
+#, c-format
+msgid "Not enough memory for cutting to clipboard."
+msgstr "இடைநிலைப்பலகைக்கு வெட்டுவதற்கு போதுமான நினைவகம் இல்லை."
+
+#: heksedit.rc:1144
+#, c-format
+msgid "Could not cut the data."
+msgstr "தரவை வெட்ட முடியவில்லை."
+
+#: heksedit.rc:1150
+#, c-format
+msgid "Can't delete more bytes than are present."
+msgstr "இருப்பதை விட அதிகமான பைட்டுகளை நீக்க முடியாது."
+
+#: heksedit.rc:1151
+#, c-format
+msgid "Could not delete data."
+msgstr "தரவை நீக்க முடியவில்லை."
+
+#: heksedit.rc:1157
+#, c-format
+msgid "Decimal value not recognized."
+msgstr "தசம மதிப்பு அங்கீகரிக்கப்படவில்லை."
+
+#: heksedit.rc:1158
+#, c-format
+msgid "Number of times not recognized."
+msgstr "அங்கீகரிக்கப்படாத முறை எண்ணிக்கையில்."
+
+#: heksedit.rc:1159
+#, c-format
+msgid "Invalid start offset."
+msgstr "தவறான தொடக்க ஈடுசெய்."
+
+#: heksedit.rc:1160
+#, c-format
+msgid "Not enough space for writing decimal values."
+msgstr "தசம மதிப்புகளை எழுதுவதற்கு போதுமான இடம் இல்லை."
+
+#: heksedit.rc:1166
+#, c-format
+msgid "Number of times to paste must be at least 1."
+msgstr "ஒட்ட வேண்டிய நேரங்கள் குறைந்தது 1 ஆக இருக்க வேண்டும்."
+
+#: heksedit.rc:1167
+#, c-format
+msgid "Tried to paste zero-length array."
+msgstr "சுழிய நீள வரிசையை ஒட்ட முயற்சித்தேன்."
+
+#: heksedit.rc:1168
+#, c-format
+msgid "Not enough memory for inserting."
+msgstr "செருகுவதற்கு போதுமான நினைவகம் இல்லை."
+
+#: heksedit.rc:1169
+#, c-format
+msgid "Not enough space for overwriting."
+msgstr "மேலெழுத போதுமான இடம் இல்லை."
+
+#: heksedit.rc:1175
+#, c-format
+msgid "Can't fill a selection with a file of zero size."
+msgstr "சுழிய அளவிலான கோப்புடன் ஒரு தேர்வை நிரப்ப முடியாது."
+
+#: heksedit.rc:1176
+#, c-format
+msgid "Can't fill a selection with a string of zero size."
+msgstr "சுழிய அளவிலான சரம் மூலம் ஒரு தேர்வை நிரப்ப முடியாது."
+
+#: heksedit.rc:1177
+#, c-format
+msgid "Too many bytes to fill with or some other error."
+msgstr "நிரப்ப பல பைட்டுகள் அல்லது வேறு ஏதேனும் பிழைகள்."
+
+#: heksedit.rc:1183
+#, c-format
+msgid "You have chosen an offset but it is negative, which is invalid."
+msgstr ""
+"நீங்கள் ஒரு ஈடுசெய்யைத் தேர்ந்தெடுத்துள்ளீர்கள், ஆனால் அது எதிர்மறையானது, "
+"இது தவறானது."
+
+#: heksedit.rc:1184
+#, c-format
+msgid "The target value is invalid."
+msgstr "இலக்கு மதிப்பு தவறானது."
+
+#: heksedit.rc:1185
+#, c-format
+msgid "Cannot move/copy a block of zero length."
+msgstr "சுழிய நீளத்தின் தொகுதியை நகர்த்த/நகலெடுக்க முடியாது."
+
+#: heksedit.rc:1186
+#, c-format
+msgid "The chosen block extends into non-existent data."
+msgstr "தேர்ந்தெடுக்கப்பட்ட தொகுதி இல்லாத தரவுகளாக நீண்டுள்ளது."
+
+#: heksedit.rc:1187
+#, c-format
+msgid "The block was not moved!"
+msgstr "தொகுதி நகர்த்தப்படவில்லை!"
+
+#: heksedit.rc:1188
+#, c-format
+msgid "Cannot move/copy the block outside the data."
+msgstr "தரவுக்கு வெளியே தொகுதியை நகர்த்த/நகலெடுக்க முடியாது."
+
+#: heksedit.rc:1194
+#, c-format
+msgid "&Size of file: %lld bytes. Load how many bytes:"
+msgstr "கோப்பின் அளவு: %மற்றும் பைட்டுகள். எத்தனை பைட்டுகளை ஏற்றவும்:"
+
+#: heksedit.rc:1195
+#, c-format
+msgid "Cannot open more than 2 GB of data."
+msgstr "2 சிபி தரவைத் திறக்க முடியாது."
+
+#: heksedit.rc:1196
+#, c-format
+msgid "Specified number of bytes to load greater than file size."
+msgstr "கோப்பு அளவை விட அதிகமாக ஏற்ற குறிப்பிட்ட பைட்டுகளின் எண்ணிக்கை."
+
+#: heksedit.rc:1197
+#, c-format
+msgid "Too many bytes to load."
+msgstr "ஏற்ற பல பைட்டுகள்."
+
+#: heksedit.rc:1203
+#, c-format
+msgid "Cannot reverse single byte."
+msgstr "ஒற்றை பைட்டை மாற்ற முடியாது."
+
+#: heksedit.rc:1204
+#, c-format
+msgid ""
+"The chosen block extends into non-existent data. The offsets will be shifted"
+" to correct positions."
+msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட தொகுதி இல்லாத தரவுகளாக நீண்டுள்ளது. ஈடுசெய்கள் சரியான"
+" நிலைகளுக்கு மாற்றப்படும்."
+
+#: heksedit.rc:1210
+#, c-format
+msgid "Link names are \"Frhed.lnk\""
+msgstr "இணைப்பு பெயர்கள் \"frhed.lnk\""
+
+#: heksedit.rc:1211
+#, c-format
+msgid "This folder already contains a file called \"Frhed.lnk\""
+msgstr "இந்த கோப்புறையில் ஏற்கனவே \"frhed.lnk\" என்ற கோப்பை கொண்டுள்ளது"
+
+#: heksedit.rc:1212
+#, c-format
+msgid "\"Frhed.lnk\" can be added to this folder."
+msgstr "இந்த கோப்புறையில் \"frhed.lnk\" ஐ சேர்க்கலாம்."
+
+#: heksedit.rc:1213
+#, c-format
+msgid "\"Frhed.lnk\" cannot be added to this folder."
+msgstr "இந்த கோப்புறையில் \"frhed.lnk\" ஐ சேர்க்க முடியாது."
+
+#: heksedit.rc:1214
+#, c-format
+msgid "Frhed can start searching here."
+msgstr "Frhed இங்கே தேட ஆரம்பிக்கலாம்."
+
+#: heksedit.rc:1215
+#, c-format
+msgid "Frhed cannot start the search from here."
+msgstr "இங்கிருந்து தேடலைத் தொடங்க முடியாது."
+
+#: heksedit.rc:1216
+#, c-format
+msgid "Could not save shortcut entries."
+msgstr "குறுக்குவழி உள்ளீடுகளை சேமிக்க முடியவில்லை."
+
+#: heksedit.rc:1217
+#, c-format
+msgid "Cannot move more than 1 link at a time."
+msgstr "ஒரு நேரத்தில் 1 இணைப்புக்கு மேல் நகர்த்த முடியாது."
+
+#: heksedit.rc:1218
+#, c-format
+msgid "No link selected to move."
+msgstr "நகர்த்த எந்த இணைப்பும் தேர்ந்தெடுக்கப்படவில்லை."
+
+#: heksedit.rc:1219
+#, c-format
+msgid "Couldn't find the selected item."
+msgstr "தேர்ந்தெடுக்கப்பட்ட உருப்படியைக் கண்டுபிடிக்க முடியவில்லை."
+
+#: heksedit.rc:1220
+#, c-format
+msgid "Place a link to Frhed in..."
+msgstr "Frhed க்கு ஒரு இணைப்பை வைக்கவும் ..."
+
+#: heksedit.rc:1221
+#, c-format
+msgid "Move the link to Frhed to..."
+msgstr "இணைப்பை frhed க்கு நகர்த்தவும் ..."
+
+#: heksedit.rc:1222
+#, c-format
+msgid "There is already a link in that folder."
+msgstr "அந்த கோப்புறையில் ஏற்கனவே ஒரு இணைப்பு உள்ளது."
+
+#: heksedit.rc:1223
+#, c-format
+msgid ""
+"Existing links to old versions of Frhed will be updated to this version.\n"
+"Are you sure you want to continue?"
+msgstr ""
+"ஃப்ரெட் இன் பழைய பதிப்புகளுக்கான தற்போதைய இணைப்புகள் இந்த பதிப்பிற்கு புதுப்பிக்கப்படும். \n"
+"நீங்கள் தொடர விரும்புகிறீர்களா?"
+
+#: heksedit.rc:1224
+#, c-format
+msgid "Pick a folder to start searching in."
+msgstr "தேடத் தொடங்க ஒரு கோப்புறையைத் தேர்ந்தெடுக்கவும்."
+
+#: heksedit.rc:1225
+#, c-format
+msgid "No links selected to delete."
+msgstr "நீக்க எந்த இணைப்புகளும் தேர்ந்தெடுக்கப்படவில்லை."
+
+#: heksedit.rc:1231
+#, c-format
+msgid "Selection too large."
+msgstr "தேர்வு மிகப் பெரியது."
+
+#: heksedit.rc:1232
+#, c-format
+msgid "Could not find data."
+msgstr "தரவைக் கண்டுபிடிக்க முடியவில்லை."
+
+#: heksedit.rc:1233
+#, c-format
+msgid "Findstring is zero bytes long."
+msgstr "ஃபைண்ட்ச்ட்ரிங் சுழிய பைட்டுகள் நீளமானது."
+
+#: heksedit.rc:1234
+#, c-format
+msgid "Could not find any more occurrences."
+msgstr "மேலும் நிகழ்வுகளைக் கண்டுபிடிக்க முடியவில்லை."
+
+#: heksedit.rc:1235
+#, c-format
+msgid "String to find not specified."
+msgstr "குறிப்பிடப்படவில்லை என்பதைக் கண்டறிய சரம்."
+
+#: heksedit.rc:1241
+#, c-format
+msgid "You need to have Administrator privileges for getting list of drives."
+msgstr ""
+"டிரைவ்களின் பட்டியலைப் பெறுவதற்கான நிர்வாகி சலுகைகள் உங்களுக்கு இருக்க "
+"வேண்டும்."
+
+#: heksedit.rc:1242
+#, c-format
+msgid "Unable to open drive."
+msgstr "இயக்கி திறக்க முடியவில்லை."
+
+#: heksedit.rc:1243
+#, c-format
+msgid "Cylinders"
+msgstr "கலன்கள்"
+
+#: heksedit.rc:1244
+#, c-format
+msgid "Sectors"
+msgstr "துறைகள்"
+
+#: heksedit.rc:1245
+#, c-format
+msgid "Tracks per cylinder"
+msgstr "ஒரு சிலிண்டருக்கு தடங்கள்"
+
+#: heksedit.rc:1246
+#, c-format
+msgid "Sectors per track"
+msgstr "ஒரு பாதையில் துறைகள்"
+
+#: heksedit.rc:1247
+#, c-format
+msgid "Bytes per sector"
+msgstr "ஒரு துறைக்கு பைட்டுகள்"
+
+#: heksedit.rc:1248
+#, c-format
+msgid "Total size in bytes"
+msgstr "பைட்டுகளில் மொத்த அளவு"
+
+#: heksedit.rc:1249
+#, c-format
+msgid "%s:Sector %I64d"
+msgstr "%s: பிரிவு %i64d"
+
+#: heksedit.rc:1250
+#, c-format
+msgid "Drive %d, Partition %d (%s)"
+msgstr "இயக்கி %d, பகிர்வு %d ( %s)"
+
+#: heksedit.rc:1251
+#, c-format
+msgid "Drive %d (%s)"
+msgstr "இயக்கி %d ( %s)"
+
+#: heksedit.rc:1257
+#, c-format
+msgid ""
+"Not enough memory to import data.\n"
+"Cannot continue!\n"
+"Do you want to keep what has been found so far?"
+msgstr ""
+"தரவை இறக்குமதி செய்ய போதுமான நினைவகம் இல்லை. \n"
+"தொடர முடியாது! \n"
+"இதுவரை கண்டுபிடிக்கப்பட்டதை வைத்திருக்க விரும்புகிறீர்களா?"
+
+#: heksedit.rc:1258
+#, c-format
+msgid ""
+"The first offset found was 0x%llx, which is greater than zero.\n"
+"Do you want to insert %lld null bytes at the start of the data?"
+msgstr ""
+"கண்டுபிடிக்கப்பட்ட முதல் ஈடுசெய் 0x%llx ஆகும், இது பூச்சியத்தை விட அதிகமாகும். \n"
+"தரவின் தொடக்கத்தில் %எல்.எல்.டி சுழிய பைட்டுகளை செருக விரும்புகிறீர்களா?"
+
+#: heksedit.rc:1259
+#, c-format
+msgid ""
+"Invalid offset found.\n"
+"Ignore further invalid offsets?"
+msgstr ""
+"தவறான ஈடுசெய் காணப்பட்டது. \n"
+"மேலும் தவறான ஈடுசெய்களை புறக்கணிக்கவா?"
+
+#: heksedit.rc:1260
+#, c-format
+msgid ""
+"Character data does not agree with hex data.\n"
+"Ignore further mismatched data?\n"
+"NB: Hex data will be used when ignoring."
+msgstr ""
+"எழுத்து தரவு ஃச் தரவுடன் உடன்படவில்லை. \n"
+"மேலும் பொருந்தாத தரவை புறக்கணிக்கவா? \n"
+"NB: புறக்கணிக்கும்போது ஃச் தரவு பயன்படுத்தப்படும்."
+
+#: heksedit.rc:1261
+#, c-format
+msgid ""
+"Illegal character in hex data.\n"
+"Cannot continue!\n"
+"Do you want to keep what has been found so far?"
+msgstr ""
+"ஃச் தரவுகளில் சட்டவிரோத எழுத்து. \n"
+"தொடர முடியாது! \n"
+"இதுவரை கண்டுபிடிக்கப்பட்டதை வைத்திருக்க விரும்புகிறீர்களா?"
+
+#: heksedit.rc:1262
+#, c-format
+msgid ""
+"Unexpected end of data found.\n"
+"Cannot continue!\n"
+"Do you want to keep what has been found so far?"
+msgstr ""
+"தரவின் எதிர்பாராத முடிவு. \n"
+"தொடர முடியாது! \n"
+"இதுவரை கண்டுபிடிக்கப்பட்டதை வைத்திருக்க விரும்புகிறீர்களா?"
+
+#: heksedit.rc:1263
+#, c-format
+msgid ""
+"Does this data have the same format as the Frhed display?\n"
+"This data contains "
+msgstr ""
+"இந்தத் தரவுகள் ஃப்ரெட் காட்சி போன்ற வடிவத்தைக் கொண்டிருக்கிறதா? \n"
+"இந்த தரவு உள்ளது"
+
+#: heksedit.rc:1264
+#, c-format
+msgid "characters other than whitespace and hexdigits (like Frhed display)."
+msgstr ""
+"வெள்ளைவெளி மற்றும் பதின்மஎண்கள் (ஃப்ரெட் காட்சி போன்றவை) தவிர வேறு "
+"எழுத்துக்கள்."
+
+#: heksedit.rc:1265
+#, c-format
+msgid "only whitespace and hexdigits (unlike Frhed display)."
+msgstr ""
+"வெள்ளைவெளி மற்றும் பதின்மஎண்கள் மட்டுமே (ஃப்ரெட் காட்சி போலல்லாமல்)."
+
+#: heksedit.rc:1271
+#, c-format
+msgid "Data to replace must be selected."
+msgstr "மாற்றுவதற்கான தரவு தேர்ந்தெடுக்கப்பட வேண்டும்."
+
+#: heksedit.rc:1272
+#, c-format
+msgid "Could not delete selected data."
+msgstr "தேர்ந்தெடுக்கப்பட்ட தரவை நீக்க முடியவில்லை."
+
+#: heksedit.rc:1273
+#, c-format
+msgid "Replacing failed."
+msgstr "மாற்றுவது தோல்வியுற்றது."
+
+#: heksedit.rc:1274
+#, c-format
+msgid "Could not translate text to binary."
+msgstr "உரையை இருமம்க்கு மொழிபெயர்க்க முடியவில்லை."
+
+#: heksedit.rc:1275
+#, c-format
+msgid "To-replace and replace-with data are same."
+msgstr "தரவுகளை மாற்று மாற்று தரவுகள் ஒன்றே."
+
+#: heksedit.rc:1276
+#, c-format
+msgid "%d occurrences replaced."
+msgstr "%d நிகழ்வுகள் மாற்றப்பட்டன."
+
+#: heksedit.rc:1277
+#, c-format
+msgid "Could not use selection as replace target."
+msgstr "மாற்றுவதற்கு இலக்காக தேர்வைப் பயன்படுத்த முடியவில்லை."
+
+#: heksedit.rc:1283
+#, c-format
+msgid "Selected: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
+msgstr ""
+"தேர்ந்தெடுக்கப்பட்டது: ஈடுசெய் %zd = 0x%zx to %zd=0x%zx (%zd பைட்(கள்))"
+
+#: heksedit.rc:1284
+#, c-format
+msgid "Offset %zd=0x%zx"
+msgstr "ஈடுசெய் %zd = 0x%zx"
+
+#: heksedit.rc:1285
+#, c-format
+msgid "Bits"
+msgstr "பிட்கள்"
+
+#: heksedit.rc:1286
+#, c-format
+msgid "Unsigned"
+msgstr "கையொப்பமிடாத"
+
+#: heksedit.rc:1288
+#, c-format
+msgid "END"
+msgstr "முடிவு"
+
+#: heksedit.rc:1289
+#, c-format
+msgid "W"
+msgstr "சொ"
+
+#: heksedit.rc:1291
+#, c-format
+msgid "Signed"
+msgstr "கையொப்பமிடப்பட்டது"
+
+#: heksedit.rc:1292
+#, c-format
+msgid "Size"
+msgstr "அளவு"
+
+#: heksedit.rc:1299
+#, c-format
+msgid "Template file:"
+msgstr "வார்ப்புரு கோப்பு:"
+
+#: heksedit.rc:1300
+#, c-format
+msgid "Applied at offset:"
+msgstr "ஈடுசெய் இடத்தில் பயன்படுத்தப்படுகிறது:"
+
+#: heksedit.rc:1301
+#, c-format
+msgid "= %d (signed) = %u (unsigned) = 0x%x = '%c'"
+msgstr "= %d (கையொப்பமிடப்பட்டது) = %u (கையொப்பமிடாத) = 0x%x = '%c'"
+
+#: heksedit.rc:1302 heksedit.rc:1305 heksedit.rc:1307
+#, c-format
+msgid "= %d (signed) = %u (unsigned) = 0x%x"
+msgstr "= %d (கையொப்பமிடப்பட்டது) = %u (கையொப்பமிடாத) = 0x%x"
+
+#: heksedit.rc:1303
+#, c-format
+msgid "ERROR: not enough space for byte-size data."
+msgstr "பிழை: பைட் அளவிலான தரவுக்கு போதுமான இடம் இல்லை."
+
+#: heksedit.rc:1304
+#, c-format
+msgid "ERROR: missing variable name."
+msgstr "பிழை: மாறி பெயரைக் காணவில்லை."
+
+#: heksedit.rc:1306
+#, c-format
+msgid "ERROR: not enough space for WORD-size data."
+msgstr "பிழை: சொல் அளவிலான தரவுக்கு போதுமான இடம் இல்லை."
+
+#: heksedit.rc:1308
+#, c-format
+msgid "ERROR: not enough space for DWORD-size data."
+msgstr "பிழை: இருசொல்- அளவு தரவுக்கு போதுமான இடம் இல்லை."
+
+#: heksedit.rc:1309
+#, c-format
+msgid "= %f = 0x%x"
+msgstr "=% f = 0x%x"
+
+#: heksedit.rc:1310
+#, c-format
+msgid "ERROR: not enough space for float-size data."
+msgstr "பிழை: மிதவை அளவிலான தரவுக்கு போதுமான இடம் இல்லை."
+
+#: heksedit.rc:1311
+#, c-format
+msgid "= %g"
+msgstr "= %g"
+
+#: heksedit.rc:1312
+#, c-format
+msgid "ERROR: not enough space for double-size data."
+msgstr "பிழை: இரட்டை அளவு தரவுக்கு போதுமான இடம் இல்லை."
+
+#: heksedit.rc:1313
+#, c-format
+msgid "ERROR: Unknown variable type:"
+msgstr "பிழை: தெரியாத மாறி வகை:"
+
+#: heksedit.rc:1319
+#, c-format
+msgid "-> Length of template = %zu bytes."
+msgstr "-> வார்ப்புருவின் நீளம் = %zu பைட்டுகள்."
+
+#: heksedit.rc:1320
+#, c-format
+msgid "Template files (*.tpl)\\0*.tpl\\0\\0"
+msgstr "வார்ப்புரு கோப்புகள் (*.tpl)\\0*.tpl\\0\\0"
+
+#: heksedit.rc:1321
+#, c-format
+msgid "Choose template file"
+msgstr "வார்ப்புரு கோப்பைத் தேர்வுசெய்க"
+
+#: heksedit.rc:1322
+#, c-format
+msgid "Could not open template file %s."
+msgstr "வார்ப்புரு கோப்பு %s ஐ திறக்க முடியவில்லை."
+
+#: heksedit.rc:1323
+#, c-format
+msgid "Could not load template from file %s."
+msgstr "கோப்பு %s இலிருந்து வார்ப்புருவை ஏற்ற முடியவில்லை."
+
+#: heksedit.rc:1329
+#, c-format
+msgid "Select an item to move."
+msgstr "நகர்த்த ஒரு உருப்படியைத் தேர்ந்தெடு."
+
+#: heksedit.rc:1333
+#, c-format
+msgid "No data to insert"
+msgstr "செருக தரவு இல்லை"
+
+#: heksedit.rc:1334
+#, c-format
+msgid "TYMED_ISTORAGE is not supported for drag-drop."
+msgstr "இழுத்து-விடுக்கு TYMED_ISTORAGE ஆதரிக்கப்படவில்லை."
+
+#: heksedit.rc:1340
+#, c-format
+msgid ""
+"Float size value:\n"
+"%g\n"
+msgstr ""
+"மிதவை அளவு மதிப்பு: \n"
+"%g\n"
+
+#: heksedit.rc:1341
+#, c-format
+msgid "Not enough space for float size value.\n"
+msgstr "மிதவை அளவு மதிப்புக்கு போதுமான இடம் இல்லை.\n"
+
+#: heksedit.rc:1342
+#, c-format
+msgid ""
+"\n"
+"Double size value:\n"
+"%g\n"
+msgstr ""
+"\n"
+"இரட்டை அளவு மதிப்பு: \n"
+"%g\n"
+
+#: heksedit.rc:1343
+#, c-format
+msgid ""
+"\n"
+"Not enough space for double size value.\n"
+msgstr ""
+"\n"
+"இரட்டை அளவு மதிப்புக்கு போதுமான இடம் இல்லை.\n"
+
+#: heksedit.rc:1344
+#, c-format
+msgid "File name and path: "
+msgstr "கோப்பு பெயர் மற்றும் பாதை:"
+
+#: heksedit.rc:1345
+#, c-format
+msgid ""
+"\n"
+"Partially opened at offset 0x%zx = %zd.\n"
+"Number of bytes read: %zd = %zd kilobytes.\n"
+msgstr ""
+"\n"
+"ஈடுசெய் 0x%zx = %zd இல் ஓரளவு திறக்கப்பட்டது. \n"
+"பைட்டுகளின் எண்ணிக்கை படிக்க: %zd = %zd கிலோபைட்டுகள்.\n"
+
+#: heksedit.rc:1346
+#, c-format
+msgid ""
+"\n"
+"File size: %zu bytes = %zu kilobytes.\n"
+msgstr ""
+"\n"
+"கோப்பு அளவு: %zu பைட்டுகள் = %zu கிலோபைட்டுகள்.\n"
+
+#: heksedit.rc:1347
+#, c-format
+msgid ""
+"\n"
+"Number of hexdump lines: %zu.\n"
+msgstr ""
+"\n"
+"பதின்ம கோடுகளின் எண்ணிக்கை: %zu.\n"
+
+#: heksedit.rc:1348
+#, c-format
+msgid "This file could not be accessed and will be removed from the MRU list."
+msgstr ""
+"இந்த கோப்பை அணுக முடியவில்லை, மேலும் அஅப பட்டியலிலிருந்து "
+"அகற்றப்படும்."
+
+#: heksedit.rc:1349
+#, c-format
+msgid "Really reset colors to default values?"
+msgstr "இயல்புநிலை மதிப்புகளுக்கு வண்ணங்களை உண்மையில் மீட்டமைக்கவா?"
+
+#: heksedit.rc:1350
+#, c-format
+msgid "Are you sure you want to delete this file?"
+msgstr "இந்த கோப்பை நீக்க விரும்புகிறீர்களா?"
+
+#: heksedit.rc:1351
+#, c-format
+msgid "Could not delete file."
+msgstr "கோப்பை நீக்க முடியவில்லை."
+
+#: heksedit.rc:1352
+#, c-format
+msgid "Really adopt the operating system colour scheme?"
+msgstr "இயக்க முறைமை வண்ணத் திட்டத்தை உண்மையில் ஏற்றுக்கொள்கிறீர்களா?"
+
+#: heksedit.rc:1358
+#, c-format
+msgid "Do you want to save your changes?"
+msgstr "உங்கள் மாற்றங்களைச் சேமிக்க விரும்புகிறீர்களா?"
+
+#: heksedit.rc:1364
+#, c-format
+msgid "Hexdump saved."
+msgstr "பதின்ம சேமிக்கப்பட்டது."
+
+#: heksedit.rc:1365
+#, c-format
+msgid "Could not save Hexdump."
+msgstr "பதின்மகொத்து சேமிக்க முடியவில்லை."
+
+#: heksedit.rc:1366
+#, c-format
+msgid "Not enough memory for copying hexdump to clipboard."
+msgstr "இடைநிலைப்பலகைக்கு பதின்மகொத்து நகலெடுக்க போதுமான நினைவகம் இல்லை."
+
+#: heksedit.rc:1367
+#, c-format
+msgid "Could not copy hexdump to clipboard."
+msgstr "இடைநிலைப்பலகைக்கு பதின்மகொத்து நகலெடுக்க முடியவில்லை."
+
+#: heksedit.rc:1368
+#, c-format
+msgid "Hex Dump files(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
+msgstr ""
+"பதின்மகொத்து கோப்புகள் (*. txt,*. hex) |*.txt;*. hex | அனைத்து கோப்புகளும் "
+"(*.*) |*.*|"
