@@ -4,6 +4,9 @@ to Subversion revision numbers (rXXXXX).
 
 For changes in version 1.1 beta 1 and earlier, see the History.txt file.
 
+Frhed 0.10904.2017.17 (2025-07-22)
+  Update Tamil translation
+
 Frhed 0.10904.2017.16 (2025-06-11)
   Added Tamil translation
 
