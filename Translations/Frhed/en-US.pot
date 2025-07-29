@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Frhed\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
-"POT-Creation-Date: 2024-02-14 06:39+0000\n"
+"POT-Creation-Date: 2025-07-30 07:05+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: English <frhed-devel@lists.sourceforge.net>\n"
@@ -15,6 +15,64 @@ msgstr ""
 "X-Poedit-Language: English\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../FRHED\n"
+
+#: heksedit.rc:514
+#: heksedit.rc:530
+#, c-format
+msgid "2"
+msgstr ""
+
+#: heksedit.rc:513
+#, c-format
+msgid "3"
+msgstr ""
+
+#: heksedit.rc:512
+#: heksedit.rc:529
+#, c-format
+msgid "4"
+msgstr ""
+
+#: heksedit.rc:511
+#, c-format
+msgid "5"
+msgstr ""
+
+#: heksedit.rc:510
+#, c-format
+msgid "6"
+msgstr ""
+
+#: heksedit.rc:509
+#, c-format
+msgid "7"
+msgstr ""
+
+#: heksedit.rc:508
+#: heksedit.rc:528
+#, c-format
+msgid "8"
+msgstr ""
+
+#: heksedit.rc:527
+#, c-format
+msgid "16"
+msgstr ""
+
+#: heksedit.rc:526
+#, c-format
+msgid "32"
+msgstr ""
+
+#: heksedit.rc:525
+#, c-format
+msgid "64"
+msgstr ""
+
+#: heksedit.rc:524
+#, c-format
+msgid "128"
+msgstr ""
 
 #. LANGUAGE, SUBLANGUAGE
 #: heksedit.rc:5
@@ -957,64 +1015,6 @@ msgstr ""
 #: heksedit.rc:504
 #, c-format
 msgid "Manipulate Bits"
-msgstr ""
-
-#: heksedit.rc:508
-#: heksedit.rc:528
-#, c-format
-msgid "8"
-msgstr ""
-
-#: heksedit.rc:509
-#, c-format
-msgid "7"
-msgstr ""
-
-#: heksedit.rc:510
-#, c-format
-msgid "6"
-msgstr ""
-
-#: heksedit.rc:511
-#, c-format
-msgid "5"
-msgstr ""
-
-#: heksedit.rc:512
-#: heksedit.rc:529
-#, c-format
-msgid "4"
-msgstr ""
-
-#: heksedit.rc:513
-#, c-format
-msgid "3"
-msgstr ""
-
-#: heksedit.rc:514
-#: heksedit.rc:530
-#, c-format
-msgid "2"
-msgstr ""
-
-#: heksedit.rc:524
-#, c-format
-msgid "128"
-msgstr ""
-
-#: heksedit.rc:525
-#, c-format
-msgid "64"
-msgstr ""
-
-#: heksedit.rc:526
-#, c-format
-msgid "32"
-msgstr ""
-
-#: heksedit.rc:527
-#, c-format
-msgid "16"
 msgstr ""
 
 #: heksedit.rc:540

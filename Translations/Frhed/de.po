@@ -22,6 +22,64 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../FRHED\n"
 
+#: heksedit.rc:514
+#: heksedit.rc:530
+#, c-format
+msgid "2"
+msgstr "2"
+
+#: heksedit.rc:513
+#, c-format
+msgid "3"
+msgstr "3"
+
+#: heksedit.rc:512
+#: heksedit.rc:529
+#, c-format
+msgid "4"
+msgstr "4"
+
+#: heksedit.rc:511
+#, c-format
+msgid "5"
+msgstr "5"
+
+#: heksedit.rc:510
+#, c-format
+msgid "6"
+msgstr "6"
+
+#: heksedit.rc:509
+#, c-format
+msgid "7"
+msgstr "7"
+
+#: heksedit.rc:508
+#: heksedit.rc:528
+#, c-format
+msgid "8"
+msgstr "8"
+
+#: heksedit.rc:527
+#, c-format
+msgid "16"
+msgstr "16"
+
+#: heksedit.rc:526
+#, c-format
+msgid "32"
+msgstr "32"
+
+#: heksedit.rc:525
+#, c-format
+msgid "64"
+msgstr "64"
+
+#: heksedit.rc:524
+#, c-format
+msgid "128"
+msgstr "128"
+
 #. LANGUAGE, SUBLANGUAGE
 #: heksedit.rc:5
 #, c-format
@@ -964,64 +1022,6 @@ msgstr "An das Ende der Datei anzuhängende Bytes:"
 #, c-format
 msgid "Manipulate Bits"
 msgstr "Bits manipulieren"
-
-#: heksedit.rc:508
-#: heksedit.rc:528
-#, c-format
-msgid "8"
-msgstr "8"
-
-#: heksedit.rc:509
-#, c-format
-msgid "7"
-msgstr "7"
-
-#: heksedit.rc:510
-#, c-format
-msgid "6"
-msgstr "6"
-
-#: heksedit.rc:511
-#, c-format
-msgid "5"
-msgstr "5"
-
-#: heksedit.rc:512
-#: heksedit.rc:529
-#, c-format
-msgid "4"
-msgstr "4"
-
-#: heksedit.rc:513
-#, c-format
-msgid "3"
-msgstr "3"
-
-#: heksedit.rc:514
-#: heksedit.rc:530
-#, c-format
-msgid "2"
-msgstr "2"
-
-#: heksedit.rc:524
-#, c-format
-msgid "128"
-msgstr "128"
-
-#: heksedit.rc:525
-#, c-format
-msgid "64"
-msgstr "64"
-
-#: heksedit.rc:526
-#, c-format
-msgid "32"
-msgstr "32"
-
-#: heksedit.rc:527
-#, c-format
-msgid "16"
-msgstr "16"
 
 #: heksedit.rc:540
 #, c-format
