@@ -25,11 +25,20 @@ Localization:
   Tim Gerundt <gerundt@users.sourceforge.net>
   Mr-Update (GitHub@Mr-Update)
 
+* Italian
+  bovirus
+
 * Japanese
   Takashi Sawanaka
 
+* Lithuanian
+  Dalius Guzauskas (aka Tichij) <tichij AT mail DOT com>
+
 * Polish
   Mirosław Żylewicz (GitHub@miroslaw-zylewicz)
+
+* Russian
+  Timon34
 
 * Slovak
   Jozef Matta <jozef.m923@gmail.com>
@@ -37,8 +46,8 @@ Localization:
 * Slovenian
   Jadran Rudec <***@***.***>
 
-* Lithuanian
-  Dalius Guzauskas (aka Tichij) <tichij AT mail DOT com>
+* Tamil
+  TamilNeram
 
 Other contributors (heksedit versions):
 Jochen Tucht (@jtuc in history, 2017)
