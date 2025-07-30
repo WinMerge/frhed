@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Frhed\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
 "POT-Creation-Date: 2024-02-14 06:39+0000\n"
-"PO-Revision-Date: 2025-07-28 07:28+0200\n"
+"PO-Revision-Date: 2025-07-30 08:40+0200\n"
 "Last-Translator: Tichij <tichij@mail.com>\n"
 "Language-Team: Lithuanian <frhed-devel@lists.sourceforge.net>\n"
 "Language: lt\n"
@@ -162,12 +162,12 @@ msgstr "&Diskas"
 #: heksedit.rc:44
 #, c-format
 msgid "&Open drive..."
-msgstr ""
+msgstr "&Atverti diską..."
 
 #: heksedit.rc:45
 #, c-format
 msgid "&Close drive"
-msgstr ""
+msgstr "&Užverti diską"
 
 #: heksedit.rc:47
 #: heksedit.rc:190
@@ -274,49 +274,49 @@ msgstr "&Užpildyti pažym. fragmentą...\tCtrl+Shift+F"
 #: heksedit.rc:72
 #, c-format
 msgid "Toggle h&ex/character editing\tTAB"
-msgstr ""
+msgstr "Perjungti šešioliktainį ar simbolinį redagavimą\tTAB"
 
 #: heksedit.rc:73
 #, c-format
 msgid "Toggle keyboard I&nsert/Overwrite mode\tIns"
-msgstr ""
+msgstr "Perjungti klaviatūros Iterpimo ar Perrašymo režimą\tIns"
 
 #: heksedit.rc:75
 #, c-format
 msgid "Read-only mode\tAlt+R"
-msgstr ""
+msgstr "„Tik skaitymui“ režimas\tAlt+R"
 
 #: heksedit.rc:77
 #, c-format
 msgid "&Find and Replace"
-msgstr ""
+msgstr "&Rasti ir Keisti"
 
 #: heksedit.rc:79
 #: heksedit.rc:182
 #, c-format
 msgid "&Find...\tCtrl+F"
-msgstr ""
+msgstr "&Rasti...\tCtrl+F"
 
 #: heksedit.rc:80
 #, c-format
 msgid "&Replace...\tCtrl+H"
-msgstr ""
+msgstr "&Keisti...\tCtrl+H"
 
 #: heksedit.rc:81
 #, c-format
 msgid "Find &next\tF3"
-msgstr ""
+msgstr "Rasti &kitą\tF3"
 
 #: heksedit.rc:82
 #, c-format
 msgid "Find &previous\tShift+F3"
-msgstr ""
+msgstr "Rasti &praeitą\tShift+F3"
 
 #: heksedit.rc:84
 #: heksedit.rc:186
 #, c-format
 msgid "&Go To...\tCtrl+G"
-msgstr ""
+msgstr "P&ereiti į...\tCtrl+G"
 
 #: heksedit.rc:86
 #, c-format
@@ -341,17 +341,17 @@ msgstr ""
 #: heksedit.rc:92
 #, c-format
 msgid "File properties...\tAlt+Enter"
-msgstr ""
+msgstr "Failo savybės...\tAlt+Enter"
 
 #: heksedit.rc:93
 #, c-format
 msgid "Appl&y template...\tAlt+T"
-msgstr ""
+msgstr "Taik&yti šabloną...\tAlt+T"
 
 #: heksedit.rc:94
 #, c-format
 msgid "Open in text editor\tF5"
-msgstr ""
+msgstr "Atverti teksto redaktoriuje\tF5"
 
 #: heksedit.rc:96
 #, c-format
@@ -391,72 +391,72 @@ msgstr ""
 #: heksedit.rc:105
 #, c-format
 msgid "Zoom in\tCtrl++"
-msgstr ""
+msgstr "Didinti\tCtrl++"
 
 #: heksedit.rc:106
 #, c-format
 msgid "Zoom out\tCtrl+-"
-msgstr ""
+msgstr "Mažinti\tCtrl+-"
 
 #: heksedit.rc:107
 #, c-format
 msgid "Zoom normal\tCtrl+*"
-msgstr ""
+msgstr "Gražinti įprastą\tCtrl+*"
 
 #: heksedit.rc:109
 #, c-format
 msgid "&Options"
-msgstr ""
+msgstr "Nu&ostatos"
 
 #: heksedit.rc:111
 #, c-format
 msgid "&View settings...\tCtrl+I"
-msgstr ""
+msgstr "&Peržiūros parametrai...\tCtrl+I"
 
 #: heksedit.rc:112
 #, c-format
 msgid "&Color settings"
-msgstr ""
+msgstr "&Spalvų parametrai"
 
 #: heksedit.rc:114
 #, c-format
 msgid "&Text color...\tCtrl+T"
-msgstr ""
+msgstr "&Teksto spalva...\tCtrl+T"
 
 #: heksedit.rc:115
 #, c-format
 msgid "&Background color...\tCtrl+K"
-msgstr ""
+msgstr "&Fono spalva...\tCtrl+K"
 
 #: heksedit.rc:116
 #, c-format
 msgid "Separator color...\tCtrl+Q"
-msgstr ""
+msgstr "Skirtuko spalva...\tCtrl+Q"
 
 #: heksedit.rc:117
 #, c-format
 msgid "Selection text color...\tCtrl+Shift+T"
-msgstr ""
+msgstr "Pažym. fragmento teksto spalva...\tCtrl+Shift+T"
 
 #: heksedit.rc:119
 #, c-format
 msgid "Selection background color...\tCtrl+Shift+K"
-msgstr ""
+msgstr "Pažym. fragmento fono spalva...\tCtrl+Shift+K"
 
 #: heksedit.rc:121
 #, c-format
 msgid "Bookmark color...\tCtrl+Shift+B"
-msgstr ""
+msgstr "Žymės spalva...\tCtrl+Shift+B"
 
 #: heksedit.rc:123
 #, c-format
 msgid "Reset colors to standard...\tCtrl+Shift+S"
-msgstr ""
+msgstr "Gražinti numatytasias spalvas...\tCtrl+Shift+S"
 
 #: heksedit.rc:125
 #, c-format
 msgid "&Adopt OS colour scheme...\tCtrl+Shift+A"
-msgstr ""
+msgstr "T&aikyti OS spalvų schemą...\tCtrl+Shift+A"
 
 #: heksedit.rc:128
 #, c-format
@@ -551,7 +551,7 @@ msgstr ""
 #: heksedit.rc:163
 #, c-format
 msgid "Encode / Decode..."
-msgstr ""
+msgstr "Koduoti / Dekoduoti..."
 
 #: heksedit.rc:165
 #, c-format
@@ -571,27 +571,27 @@ msgstr "&Apie „Frhed“..."
 #: heksedit.rc:183
 #, c-format
 msgid "Replace...\tCtrl+H"
-msgstr ""
+msgstr "Keisti...\tCtrl+H"
 
 #: heksedit.rc:184
 #, c-format
 msgid "Find next\tF3"
-msgstr ""
+msgstr "Rasti kitą\tF3"
 
 #: heksedit.rc:185
 #, c-format
 msgid "Find previous\tShift+F3"
-msgstr ""
+msgstr "Rasti praeitą\tShift+F3"
 
 #: heksedit.rc:191
 #, c-format
 msgid "Goto &Next Sector"
-msgstr ""
+msgstr "Pereiti į ki&tą sektorių"
 
 #: heksedit.rc:192
 #, c-format
 msgid "Goto &Previous Sector"
-msgstr ""
+msgstr "Pereiti į &praeitą sektorių"
 
 #: heksedit.rc:298
 #, c-format
@@ -694,17 +694,17 @@ msgstr ""
 #: heksedit.rc:319
 #, c-format
 msgid "Direction"
-msgstr ""
+msgstr "Kryptis"
 
 #: heksedit.rc:320
 #, c-format
 msgid "&Up"
-msgstr ""
+msgstr "A&ukštyn"
 
 #: heksedit.rc:321
 #, c-format
 msgid "&Down"
-msgstr ""
+msgstr "&Žemyn"
 
 #: heksedit.rc:322
 #, c-format
@@ -719,12 +719,12 @@ msgstr ""
 #: heksedit.rc:331
 #, c-format
 msgid "About Frhed"
-msgstr ""
+msgstr "Apie „Frhed“"
 
 #: heksedit.rc:335
 #, c-format
 msgid "Frhed - Free hex editor"
-msgstr ""
+msgstr "„Frhed“ - Free hex editor"
 
 #: heksedit.rc:338
 #, c-format
@@ -739,12 +739,12 @@ msgstr "Visos teisės saugomos."
 #: heksedit.rc:340
 #, c-format
 msgid "Contributors are listed in Contributors.txt."
-msgstr ""
+msgstr "Pagalbininkai išvardinti Contributors.txt faile."
 
 #: heksedit.rc:342
 #, c-format
 msgid "Open contributors list"
-msgstr ""
+msgstr "Atverti pagalbininkų sąrašą"
 
 #: heksedit.rc:343
 #, c-format
@@ -764,32 +764,32 @@ msgstr ""
 #: heksedit.rc:356
 #, c-format
 msgid "Start at offset:"
-msgstr ""
+msgstr "Poslinkio pradžia"
 
 #: heksedit.rc:358
 #, c-format
 msgid "End at offset:"
-msgstr ""
+msgstr "Poslinkio pabaiga"
 
 #: heksedit.rc:360
 #, c-format
 msgid "Export to"
-msgstr ""
+msgstr "Eksportuoti į"
 
 #: heksedit.rc:361
 #, c-format
 msgid "File"
-msgstr ""
+msgstr "Failas"
 
 #: heksedit.rc:362
 #, c-format
 msgid "Clipboard"
-msgstr ""
+msgstr "Mainų sritis"
 
 #: heksedit.rc:363
 #, c-format
 msgid "Type"
-msgstr ""
+msgstr "Tipas"
 
 #: heksedit.rc:364
 #, c-format
@@ -849,30 +849,30 @@ msgstr ""
 #: heksedit.rc:394
 #, c-format
 msgid "Paste with dialogue"
-msgstr ""
+msgstr "Įklijuoti su dialogu"
 
 #: heksedit.rc:397
 #, c-format
 msgid "Clipboard content (text):"
-msgstr ""
+msgstr "Mainų srities turinys (tekstas):"
 
 #: heksedit.rc:400
 #: heksedit.rc:662
 #, c-format
 msgid "Paste mode"
-msgstr ""
+msgstr "Įklijavimo režimas"
 
 #: heksedit.rc:401
 #: heksedit.rc:663
 #, c-format
 msgid "Overwrite"
-msgstr ""
+msgstr "Perrašyti"
 
 #: heksedit.rc:403
 #: heksedit.rc:664
 #, c-format
 msgid "Insert"
-msgstr ""
+msgstr "Įterpti"
 
 #: heksedit.rc:405
 #: heksedit.rc:665
@@ -1111,12 +1111,12 @@ msgstr ""
 #: heksedit.rc:602
 #, c-format
 msgid "Offset of first byte:"
-msgstr ""
+msgstr "Pirmo baito poslinkis"
 
 #: heksedit.rc:604
 #, c-format
 msgid "Offset of last byte:"
-msgstr ""
+msgstr "Paskutinio baito poslinkis"
 
 #: heksedit.rc:613
 #, c-format
@@ -1201,43 +1201,40 @@ msgstr ""
 
 #: heksedit.rc:674
 #, c-format
-msgid ""
-"- CF_TEXT was used by previous versions of Frhed\n"
-"- Those starting w CF_ are standard formats && others are registered/private ones\n"
-"- Some formats may have been synthesized from the original."
+msgid "- CF_TEXT was used by previous versions of Frhed\n- Those starting w CF_ are standard formats && others are registered/private ones\n- Some formats may have been synthesized from the original."
 msgstr ""
 
 #: heksedit.rc:682
 #, c-format
 msgid "Template"
-msgstr ""
+msgstr "Šablonas"
 
 #: heksedit.rc:685
 #, c-format
 msgid "Result of template application:"
-msgstr ""
+msgstr "Šablono taikymo rezultatas:"
 
 #: heksedit.rc:696
 #: heksedit.rc:715
 #: heksedit.rc:1005
 #, c-format
 msgid "Replace"
-msgstr ""
+msgstr "Keisti"
 
 #: heksedit.rc:699
 #, c-format
 msgid "Find what:"
-msgstr ""
+msgstr "Ko ieškoti?:"
 
 #: heksedit.rc:702
 #, c-format
 msgid "Find next"
-msgstr ""
+msgstr "Rasti kitą"
 
 #: heksedit.rc:703
 #, c-format
 msgid "Find previous"
-msgstr ""
+msgstr "Rasti praeitą"
 
 #: heksedit.rc:704
 #, c-format
@@ -1247,12 +1244,12 @@ msgstr ""
 #: heksedit.rc:706
 #, c-format
 msgid "Replace with:"
-msgstr ""
+msgstr "Keisti į:"
 
 #: heksedit.rc:708
 #, c-format
 msgid "Replace all..."
-msgstr ""
+msgstr "Keisti viską..."
 
 #: heksedit.rc:709
 #, c-format
@@ -1283,12 +1280,12 @@ msgstr ""
 #: heksedit.rc:1298
 #, c-format
 msgid "File:"
-msgstr ""
+msgstr "Failas:"
 
 #: heksedit.rc:728
 #, c-format
 msgid "&Browse..."
-msgstr ""
+msgstr "&Rasti..."
 
 #: heksedit.rc:729
 #, c-format
@@ -1384,44 +1381,44 @@ msgstr ""
 #: heksedit.rc:781
 #, c-format
 msgid "Encode / Decode Data"
-msgstr ""
+msgstr "Koduoti / Dekoduoti duomenis"
 
 #: heksedit.rc:784
 #, c-format
 msgid "Algorithms:"
-msgstr ""
+msgstr "Algoritmai:"
 
 #: heksedit.rc:787
 #, c-format
 msgid "Arguments:"
-msgstr ""
+msgstr "Argumentai:"
 
 #: heksedit.rc:789
 #, c-format
 msgid "Encode"
-msgstr ""
+msgstr "Koduoti"
 
 #: heksedit.rc:791
 #, c-format
 msgid "Decode"
-msgstr ""
+msgstr "Dekoduoti"
 
 #: heksedit.rc:800
 #, c-format
 msgid "Open Drive"
-msgstr ""
+msgstr "Atverti diską"
 
 #: heksedit.rc:804
 #, c-format
 msgid "NOTE: Frhed allows only reading the drive data. Changing and saving the drive data is not possible."
-msgstr ""
+msgstr "PASTABA: „Frhed“ leidžia tik skaityti disko duomenis. Disko duomenų keisti ir įrašyti negalima."
 
 #: heksedit.rc:805
 #: heksedit.rc:959
 #: heksedit.rc:989
 #, c-format
 msgid "Open"
-msgstr ""
+msgstr "Atverti"
 
 #: heksedit.rc:812
 #, c-format
@@ -1431,7 +1428,7 @@ msgstr ""
 #: heksedit.rc:815
 #, c-format
 msgid "Drive Information:"
-msgstr ""
+msgstr "Disko informacija:"
 
 #: heksedit.rc:817
 #, c-format
@@ -1481,7 +1478,7 @@ msgstr ""
 #: heksedit.rc:843
 #, c-format
 msgid "&Programs"
-msgstr ""
+msgstr "&Programos"
 
 #: heksedit.rc:845
 #, c-format
@@ -1526,7 +1523,7 @@ msgstr ""
 #: heksedit.rc:862
 #, c-format
 msgid "Operation:"
-msgstr ""
+msgstr "Operacija:"
 
 #: heksedit.rc:863
 #, c-format
@@ -1553,12 +1550,12 @@ msgstr ""
 #: heksedit.rc:870
 #, c-format
 msgid "Offset"
-msgstr ""
+msgstr "Poslinkis"
 
 #: heksedit.rc:871
 #, c-format
 msgid "Length"
-msgstr ""
+msgstr "Ilgis"
 
 #: heksedit.rc:872
 #, c-format
@@ -1573,12 +1570,12 @@ msgstr ""
 #: heksedit.rc:875
 #, c-format
 msgid "First byte offset"
-msgstr ""
+msgstr "Pirmo baito poslinkis"
 
 #: heksedit.rc:876
 #, c-format
 msgid "Last byte offset"
-msgstr ""
+msgstr "Paskutinio baito poslinkis"
 
 #: heksedit.rc:884
 #, c-format
@@ -1743,22 +1740,22 @@ msgstr ""
 #: heksedit.rc:1010
 #, c-format
 msgid "Goto next sector"
-msgstr ""
+msgstr "Pereiti į kitą sektorių"
 
 #: heksedit.rc:1011
 #, c-format
 msgid "Goto previous sector"
-msgstr ""
+msgstr "Pereiti į praeitą sektorių"
 
 #: heksedit.rc:1012
 #, c-format
 msgid "Goto first sector"
-msgstr ""
+msgstr "Pereiti į pirmą sektorių"
 
 #: heksedit.rc:1013
 #, c-format
 msgid "Goto last sector"
-msgstr ""
+msgstr "Pereiti į paskutinį sektorių"
 
 #: heksedit.rc:1019
 #, c-format
@@ -1778,7 +1775,7 @@ msgstr ""
 #: heksedit.rc:1022
 #, c-format
 msgid "All Files (*.*)|*.*|"
-msgstr ""
+msgstr "Visi failai (*.*)|*.*|"
 
 #: heksedit.rc:1023
 #, c-format
@@ -1814,11 +1811,7 @@ msgstr ""
 
 #: heksedit.rc:1031
 #, c-format
-msgid ""
-"You are trying to open a link file.\n"
-"Click on Yes if you want to open the file linked to,\n"
-"or click on No if you want to open the link file itself.\n"
-"Choose Cancel if you want to abort opening."
+msgid "You are trying to open a link file.\nClick on Yes if you want to open the file linked to,\nor click on No if you want to open the link file itself.\nChoose Cancel if you want to abort opening."
 msgstr ""
 
 #: heksedit.rc:1037
@@ -1868,9 +1861,7 @@ msgstr ""
 
 #: heksedit.rc:1051
 #, c-format
-msgid ""
-"Could not backup file!\n"
-"Backup aborted, Save continuing."
+msgid "Could not backup file!\nBackup aborted, Save continuing."
 msgstr ""
 
 #: heksedit.rc:1052
@@ -1900,10 +1891,7 @@ msgstr ""
 
 #: heksedit.rc:1057
 #, c-format
-msgid ""
-"Help file\n"
-"%s\n"
-"not found!"
+msgid "Help file\n%s\nnot found!"
 msgstr ""
 
 #: heksedit.rc:1058
@@ -1943,9 +1931,7 @@ msgstr ""
 
 #: heksedit.rc:1065
 #, c-format
-msgid ""
-"Could not get text from the file.\n"
-"Cannot continue!"
+msgid "Could not get text from the file.\nCannot continue!"
 msgstr ""
 
 #: heksedit.rc:1071
@@ -1975,10 +1961,7 @@ msgstr ""
 
 #: heksedit.rc:1081
 #, c-format
-msgid ""
-"File\n"
-"%s\n"
-"not found!"
+msgid "File\n%s\nnot found!"
 msgstr ""
 
 #: heksedit.rc:1087
@@ -2029,7 +2012,7 @@ msgstr ""
 #: heksedit.rc:1106
 #, c-format
 msgid "Offset: 0x%zx = %zd"
-msgstr ""
+msgstr "Poslinkis: 0x%zx = %zd"
 
 #: heksedit.rc:1107
 #, c-format
@@ -2079,9 +2062,7 @@ msgstr ""
 
 #: heksedit.rc:1126
 #, c-format
-msgid ""
-"\n"
-"Do you want the above output to be copied to the clipboard?\n"
+msgid "\nDo you want the above output to be copied to the clipboard?\n"
 msgstr ""
 
 #: heksedit.rc:1127
@@ -2091,17 +2072,12 @@ msgstr ""
 
 #: heksedit.rc:1128
 #, c-format
-msgid ""
-"Could not get text from the clipboard.\n"
-"Cannot continue!"
+msgid "Could not get text from the clipboard.\nCannot continue!"
 msgstr ""
 
 #: heksedit.rc:1129
 #, c-format
-msgid ""
-"There is text on the clipboard.\n"
-"Do you want to import from\n"
-"the clipboard instead of a file?"
+msgid "There is text on the clipboard.\nDo you want to import from\nthe clipboard instead of a file?"
 msgstr ""
 
 #: heksedit.rc:1135
@@ -2316,9 +2292,7 @@ msgstr ""
 
 #: heksedit.rc:1223
 #, c-format
-msgid ""
-"Existing links to old versions of Frhed will be updated to this version.\n"
-"Are you sure you want to continue?"
+msgid "Existing links to old versions of Frhed will be updated to this version.\nAre you sure you want to continue?"
 msgstr ""
 
 #: heksedit.rc:1224
@@ -2413,55 +2387,37 @@ msgstr ""
 
 #: heksedit.rc:1257
 #, c-format
-msgid ""
-"Not enough memory to import data.\n"
-"Cannot continue!\n"
-"Do you want to keep what has been found so far?"
+msgid "Not enough memory to import data.\nCannot continue!\nDo you want to keep what has been found so far?"
 msgstr ""
 
 #: heksedit.rc:1258
 #, c-format
-msgid ""
-"The first offset found was 0x%llx, which is greater than zero.\n"
-"Do you want to insert %lld null bytes at the start of the data?"
+msgid "The first offset found was 0x%llx, which is greater than zero.\nDo you want to insert %lld null bytes at the start of the data?"
 msgstr ""
 
 #: heksedit.rc:1259
 #, c-format
-msgid ""
-"Invalid offset found.\n"
-"Ignore further invalid offsets?"
+msgid "Invalid offset found.\nIgnore further invalid offsets?"
 msgstr ""
 
 #: heksedit.rc:1260
 #, c-format
-msgid ""
-"Character data does not agree with hex data.\n"
-"Ignore further mismatched data?\n"
-"NB: Hex data will be used when ignoring."
+msgid "Character data does not agree with hex data.\nIgnore further mismatched data?\nNB: Hex data will be used when ignoring."
 msgstr ""
 
 #: heksedit.rc:1261
 #, c-format
-msgid ""
-"Illegal character in hex data.\n"
-"Cannot continue!\n"
-"Do you want to keep what has been found so far?"
+msgid "Illegal character in hex data.\nCannot continue!\nDo you want to keep what has been found so far?"
 msgstr ""
 
 #: heksedit.rc:1262
 #, c-format
-msgid ""
-"Unexpected end of data found.\n"
-"Cannot continue!\n"
-"Do you want to keep what has been found so far?"
+msgid "Unexpected end of data found.\nCannot continue!\nDo you want to keep what has been found so far?"
 msgstr ""
 
 #: heksedit.rc:1263
 #, c-format
-msgid ""
-"Does this data have the same format as the Frhed display?\n"
-"This data contains "
+msgid "Does this data have the same format as the Frhed display?\nThis data contains "
 msgstr ""
 
 #: heksedit.rc:1264
@@ -2512,22 +2468,22 @@ msgstr ""
 #: heksedit.rc:1283
 #, c-format
 msgid "Selected: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
-msgstr ""
+msgstr "Pažymėta: Poslinkis %zd=0x%zx to %zd=0x%zx (%zd baitų)"
 
 #: heksedit.rc:1284
 #, c-format
 msgid "Offset %zd=0x%zx"
-msgstr ""
+msgstr "Poslinkis %zd=0x%zx"
 
 #: heksedit.rc:1285
 #, c-format
 msgid "Bits"
-msgstr ""
+msgstr "Bitų"
 
 #: heksedit.rc:1286
 #, c-format
 msgid "Unsigned"
-msgstr ""
+msgstr "Nepasirašyta"
 
 #: heksedit.rc:1288
 #, c-format
@@ -2542,17 +2498,17 @@ msgstr ""
 #: heksedit.rc:1291
 #, c-format
 msgid "Signed"
-msgstr ""
+msgstr "Pasirašyta"
 
 #: heksedit.rc:1292
 #, c-format
 msgid "Size"
-msgstr ""
+msgstr "Dydis"
 
 #: heksedit.rc:1299
 #, c-format
 msgid "Template file:"
-msgstr ""
+msgstr "Šablono failas:"
 
 #: heksedit.rc:1300
 #, c-format
@@ -2619,27 +2575,27 @@ msgstr ""
 #: heksedit.rc:1319
 #, c-format
 msgid "-> Length of template = %zu bytes."
-msgstr ""
+msgstr "-> Šablono ilgis = %zu baitų."
 
 #: heksedit.rc:1320
 #, c-format
 msgid "Template files (*.tpl)\0*.tpl\0\0"
-msgstr ""
+msgstr "Šablono failai (*.tpl)\0*.tpl\0\0"
 
 #: heksedit.rc:1321
 #, c-format
 msgid "Choose template file"
-msgstr ""
+msgstr "Pasirinkite šablono failą"
 
 #: heksedit.rc:1322
 #, c-format
 msgid "Could not open template file %s."
-msgstr ""
+msgstr "Nepavyko atverti šablono failo %s."
 
 #: heksedit.rc:1323
 #, c-format
 msgid "Could not load template from file %s."
-msgstr ""
+msgstr "Nepavyko įkelti šablono iš failo %s."
 
 #: heksedit.rc:1329
 #, c-format
@@ -2658,9 +2614,7 @@ msgstr ""
 
 #: heksedit.rc:1340
 #, c-format
-msgid ""
-"Float size value:\n"
-"%g\n"
+msgid "Float size value:\n%g\n"
 msgstr ""
 
 #: heksedit.rc:1341
@@ -2670,17 +2624,12 @@ msgstr ""
 
 #: heksedit.rc:1342
 #, c-format
-msgid ""
-"\n"
-"Double size value:\n"
-"%g\n"
+msgid "\nDouble size value:\n%g\n"
 msgstr ""
 
 #: heksedit.rc:1343
 #, c-format
-msgid ""
-"\n"
-"Not enough space for double size value.\n"
+msgid "\nNot enough space for double size value.\n"
 msgstr ""
 
 #: heksedit.rc:1344
@@ -2690,24 +2639,17 @@ msgstr ""
 
 #: heksedit.rc:1345
 #, c-format
-msgid ""
-"\n"
-"Partially opened at offset 0x%zx = %zd.\n"
-"Number of bytes read: %zd = %zd kilobytes.\n"
+msgid "\nPartially opened at offset 0x%zx = %zd.\nNumber of bytes read: %zd = %zd kilobytes.\n"
 msgstr ""
 
 #: heksedit.rc:1346
 #, c-format
-msgid ""
-"\n"
-"File size: %zu bytes = %zu kilobytes.\n"
+msgid "\nFile size: %zu bytes = %zu kilobytes.\n"
 msgstr ""
 
 #: heksedit.rc:1347
 #, c-format
-msgid ""
-"\n"
-"Number of hexdump lines: %zu.\n"
+msgid "\nNumber of hexdump lines: %zu.\n"
 msgstr ""
 
 #: heksedit.rc:1348
