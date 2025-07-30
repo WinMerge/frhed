@@ -37,6 +37,9 @@ Localization:
 * Slovenian
   Jadran Rudec <***@***.***>
 
+* Lithuanian
+  Dalius Guzauskas (aka Tichij) <tichij AT mail DOT com>
+
 Other contributors (heksedit versions):
 Jochen Tucht (@jtuc in history, 2017)
 Jochen Neubeck (admin@jochen in history, 2013)
