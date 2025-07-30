@@ -1,4 +1,5 @@
-﻿# Released under the "GNU General Public License"
+﻿# This file is part of Frhed <http://frhed.sourceforge.net/>
+# Released under the "GNU General Public License"
 #
 # Translators:
 # * Dalius Guzauskas (aka Tichij) <tichij AT mail DOT com>

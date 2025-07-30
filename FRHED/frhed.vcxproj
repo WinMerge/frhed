@@ -442,7 +442,9 @@
     <po Include="..\Translations\Frhed\de.po" />
     <po Include="..\Translations\Frhed\fr.po" />
     <po Include="..\Translations\Frhed\gl.po" />
+    <po Include="..\Translations\Frhed\it.po" />
     <po Include="..\Translations\Frhed\ja.po" />
+    <po Include="..\Translations\Frhed\lt.po" />
     <po Include="..\Translations\Frhed\nl.po" />
     <po Include="..\Translations\Frhed\pl.po" />
     <po Include="..\Translations\Frhed\ru.po" />

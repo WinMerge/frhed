@@ -93,6 +93,12 @@
     <po Include="..\Translations\Frhed\ta.po">
       <Filter>Translation Files</Filter>
     </po>
+    <po Include="..\Translations\Frhed\it.po">
+      <Filter>Translation Files</Filter>
+    </po>
+    <po Include="..\Translations\Frhed\lt.po">
+      <Filter>Translation Files</Filter>
+    </po>
   </ItemGroup>
   <ItemGroup>
     <docs Include="..\Docs\Users\ChangeLog.txt">
