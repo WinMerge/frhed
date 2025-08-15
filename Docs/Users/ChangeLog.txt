@@ -4,6 +4,11 @@ to Subversion revision numbers (rXXXXX).
 
 For changes in version 1.1 beta 1 and earlier, see the History.txt file.
 
+Frhed 0.10904.2017.18 (2025-08-16)
+  Added Italian translation
+  Added Lithuanian translation
+  Internal: Added set_theme_callback interface
+
 Frhed 0.10904.2017.17 (2025-07-22)
   Update Tamil translation
 
