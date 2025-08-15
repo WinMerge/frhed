@@ -20,7 +20,8 @@ msgstr ""
 "X-Poedit-Basepath: ../../FRHED\n"
 "X-Generator: Poedit 3.6\n"
 
-#: heksedit.rc:514 heksedit.rc:530
+#: heksedit.rc:514
+#: heksedit.rc:530
 #, c-format
 msgid "2"
 msgstr "2"
@@ -30,7 +31,8 @@ msgstr "2"
 msgid "3"
 msgstr "3"
 
-#: heksedit.rc:512 heksedit.rc:529
+#: heksedit.rc:512
+#: heksedit.rc:529
 #, c-format
 msgid "4"
 msgstr "4"
@@ -50,7 +52,8 @@ msgstr "6"
 msgid "7"
 msgstr "7"
 
-#: heksedit.rc:508 heksedit.rc:528
+#: heksedit.rc:508
+#: heksedit.rc:528
 #, c-format
 msgid "8"
 msgstr "8"
@@ -166,7 +169,8 @@ msgstr "Apri &unità..."
 msgid "&Close drive"
 msgstr "&Chiudi unità"
 
-#: heksedit.rc:47 heksedit.rc:190
+#: heksedit.rc:47
+#: heksedit.rc:190
 #, c-format
 msgid "Goto &First Sector"
 msgstr "Via al &primo settore"
@@ -181,12 +185,14 @@ msgstr "Vai al prossi&mo settore\tCtrl+Maiusc+PagGiù"
 msgid "Goto &Previous Sector\tCtrl+Shift+PgUp"
 msgstr "Vai al &prossimo settore\tCtrl+Maiusc+PagSu"
 
-#: heksedit.rc:51 heksedit.rc:193
+#: heksedit.rc:51
+#: heksedit.rc:193
 #, c-format
 msgid "Goto &Last Sector"
 msgstr "Vai all'u&ltimo settore"
 
-#: heksedit.rc:53 heksedit.rc:195
+#: heksedit.rc:53
+#: heksedit.rc:195
 #, c-format
 msgid "Goto &Sector #..."
 msgstr "Via al &settore #..."
@@ -206,17 +212,20 @@ msgstr "Ann&ulla azione\tCtr+Z"
 msgid "&Redo\tCtrl+Y"
 msgstr "&Ripeti azione\tCtrl+Y"
 
-#: heksedit.rc:60 heksedit.rc:177
+#: heksedit.rc:60
+#: heksedit.rc:177
 #, c-format
 msgid "Cu&t...\tCtrl+X"
 msgstr "&Taglia...\tCtrl+X"
 
-#: heksedit.rc:61 heksedit.rc:178
+#: heksedit.rc:61
+#: heksedit.rc:178
 #, c-format
 msgid "&Copy...\tCtrl+C"
 msgstr "&Copia...\tCtrl+C"
 
-#: heksedit.rc:62 heksedit.rc:179
+#: heksedit.rc:62
+#: heksedit.rc:179
 #, c-format
 msgid "&Paste...\tCtrl+V"
 msgstr "&Incolla...\tCtrl+Y"
@@ -241,7 +250,8 @@ msgstr "Inverti byte…\tCtrl+Alt+R"
 msgid "&Append...\tCtrl+P"
 msgstr "&Appendi...\tCtrl+P"
 
-#: heksedit.rc:67 heksedit.rc:180
+#: heksedit.rc:67
+#: heksedit.rc:180
 #, c-format
 msgid "&Delete\tDel"
 msgstr "&Elimina\tCanc"
@@ -281,7 +291,8 @@ msgstr "Modo sola lettura\tAlt+R"
 msgid "&Find and Replace"
 msgstr "Tro&va e sostituisci"
 
-#: heksedit.rc:79 heksedit.rc:182
+#: heksedit.rc:79
+#: heksedit.rc:182
 #, c-format
 msgid "&Find...\tCtrl+F"
 msgstr "&Trova...\tCtrl+F"
@@ -301,7 +312,8 @@ msgstr "Trova su&ccessivo\tF3"
 msgid "Find &previous\tShift+F3"
 msgstr "Trova &precedente\tMaiusc+F3"
 
-#: heksedit.rc:84 heksedit.rc:186
+#: heksedit.rc:84
+#: heksedit.rc:186
 #, c-format
 msgid "&Go To...\tCtrl+G"
 msgstr "&Vai a...\tCtrl+G"
@@ -596,30 +608,75 @@ msgstr "Inizia con \"+\" o \"-\" (meno) per il salto relativo."
 msgid "Prefix offset with \"x\" to indicate hex notation."
 msgstr "Prefisso offset con \"X\" per indicare la notazione esadecimale."
 
-#: heksedit.rc:306 heksedit.rc:347 heksedit.rc:367 heksedit.rc:387
-#: heksedit.rc:412 heksedit.rc:430 heksedit.rc:448 heksedit.rc:486
-#: heksedit.rc:498 heksedit.rc:533 heksedit.rc:549 heksedit.rc:563
-#: heksedit.rc:577 heksedit.rc:593 heksedit.rc:606 heksedit.rc:652
-#: heksedit.rc:675 heksedit.rc:689 heksedit.rc:750 heksedit.rc:772
-#: heksedit.rc:793 heksedit.rc:819 heksedit.rc:877 heksedit.rc:898
-#: heksedit.rc:946 heksedit.rc:977
+#: heksedit.rc:306
+#: heksedit.rc:347
+#: heksedit.rc:367
+#: heksedit.rc:387
+#: heksedit.rc:412
+#: heksedit.rc:430
+#: heksedit.rc:448
+#: heksedit.rc:486
+#: heksedit.rc:498
+#: heksedit.rc:533
+#: heksedit.rc:549
+#: heksedit.rc:563
+#: heksedit.rc:577
+#: heksedit.rc:593
+#: heksedit.rc:606
+#: heksedit.rc:652
+#: heksedit.rc:675
+#: heksedit.rc:689
+#: heksedit.rc:750
+#: heksedit.rc:772
+#: heksedit.rc:793
+#: heksedit.rc:819
+#: heksedit.rc:877
+#: heksedit.rc:898
+#: heksedit.rc:946
+#: heksedit.rc:977
 #, c-format
 msgid "OK"
 msgstr "OK"
 
-#: heksedit.rc:307 heksedit.rc:325 heksedit.rc:368 heksedit.rc:388
-#: heksedit.rc:413 heksedit.rc:431 heksedit.rc:449 heksedit.rc:487
-#: heksedit.rc:499 heksedit.rc:534 heksedit.rc:550 heksedit.rc:564
-#: heksedit.rc:578 heksedit.rc:594 heksedit.rc:607 heksedit.rc:622
-#: heksedit.rc:634 heksedit.rc:653 heksedit.rc:676 heksedit.rc:690
-#: heksedit.rc:716 heksedit.rc:751 heksedit.rc:773 heksedit.rc:794
-#: heksedit.rc:806 heksedit.rc:820 heksedit.rc:878 heksedit.rc:899
-#: heksedit.rc:947 heksedit.rc:960 heksedit.rc:978 heksedit.rc:1332
+#: heksedit.rc:307
+#: heksedit.rc:325
+#: heksedit.rc:368
+#: heksedit.rc:388
+#: heksedit.rc:413
+#: heksedit.rc:431
+#: heksedit.rc:449
+#: heksedit.rc:487
+#: heksedit.rc:499
+#: heksedit.rc:534
+#: heksedit.rc:550
+#: heksedit.rc:564
+#: heksedit.rc:578
+#: heksedit.rc:594
+#: heksedit.rc:607
+#: heksedit.rc:622
+#: heksedit.rc:634
+#: heksedit.rc:653
+#: heksedit.rc:676
+#: heksedit.rc:690
+#: heksedit.rc:716
+#: heksedit.rc:751
+#: heksedit.rc:773
+#: heksedit.rc:794
+#: heksedit.rc:806
+#: heksedit.rc:820
+#: heksedit.rc:878
+#: heksedit.rc:899
+#: heksedit.rc:947
+#: heksedit.rc:960
+#: heksedit.rc:978
+#: heksedit.rc:1332
 #, c-format
 msgid "Cancel"
 msgstr "Annulla"
 
-#: heksedit.rc:313 heksedit.rc:324 heksedit.rc:996
+#: heksedit.rc:313
+#: heksedit.rc:324
+#: heksedit.rc:996
 #, c-format
 msgid "Find"
 msgstr "Trova"
@@ -799,27 +856,32 @@ msgstr ""
 msgid "Clipboard content (text):"
 msgstr "Contenuto appunti (testo):"
 
-#: heksedit.rc:400 heksedit.rc:662
+#: heksedit.rc:400
+#: heksedit.rc:662
 #, c-format
 msgid "Paste mode"
 msgstr ""
 
-#: heksedit.rc:401 heksedit.rc:663
+#: heksedit.rc:401
+#: heksedit.rc:663
 #, c-format
 msgid "Overwrite"
 msgstr ""
 
-#: heksedit.rc:403 heksedit.rc:664
+#: heksedit.rc:403
+#: heksedit.rc:664
 #, c-format
 msgid "Insert"
 msgstr ""
 
-#: heksedit.rc:405 heksedit.rc:665
+#: heksedit.rc:405
+#: heksedit.rc:665
 #, c-format
 msgid "Paste data how many times:"
 msgstr ""
 
-#: heksedit.rc:407 heksedit.rc:669
+#: heksedit.rc:407
+#: heksedit.rc:669
 #, c-format
 msgid "Paste coded binary values as text"
 msgstr ""
@@ -829,7 +891,8 @@ msgstr ""
 msgid "Skip how many bytes between inserts/overwrites"
 msgstr ""
 
-#: heksedit.rc:419 heksedit.rc:1000
+#: heksedit.rc:419
+#: heksedit.rc:1000
 #, c-format
 msgid "Cut"
 msgstr "Taglia"
@@ -854,7 +917,10 @@ msgstr "Taglia fino a incluso offset:"
 msgid "Number of bytes to cut:"
 msgstr ""
 
-#: heksedit.rc:437 heksedit.rc:865 heksedit.rc:896 heksedit.rc:997
+#: heksedit.rc:437
+#: heksedit.rc:865
+#: heksedit.rc:896
+#: heksedit.rc:997
 #: heksedit.rc:1331
 #, c-format
 msgid "Copy"
@@ -965,12 +1031,14 @@ msgstr "Set caratteri"
 msgid "Choose character set"
 msgstr "Scegli set caratteri"
 
-#: heksedit.rc:544 heksedit.rc:1024
+#: heksedit.rc:544
+#: heksedit.rc:1024
 #, c-format
 msgid "ANSI"
 msgstr "ANSI"
 
-#: heksedit.rc:546 heksedit.rc:1025
+#: heksedit.rc:546
+#: heksedit.rc:1025
 #, c-format
 msgid "OEM"
 msgstr "OEM"
@@ -1110,7 +1178,8 @@ msgstr ""
 msgid "&Display offsets relative to start of file (or start of loaded block)"
 msgstr "Visualizza offset relativi all'inizio &del file (o inizio del blocco caricato)"
 
-#: heksedit.rc:659 heksedit.rc:998
+#: heksedit.rc:659
+#: heksedit.rc:998
 #, c-format
 msgid "Paste"
 msgstr ""
@@ -1151,7 +1220,9 @@ msgstr ""
 msgid "Result of template application:"
 msgstr ""
 
-#: heksedit.rc:696 heksedit.rc:715 heksedit.rc:1005
+#: heksedit.rc:696
+#: heksedit.rc:715
+#: heksedit.rc:1005
 #, c-format
 msgid "Replace"
 msgstr ""
@@ -1211,7 +1282,8 @@ msgstr "Riempi selezione"
 msgid "Fill from:"
 msgstr "Riempi da:"
 
-#: heksedit.rc:726 heksedit.rc:1298
+#: heksedit.rc:726
+#: heksedit.rc:1298
 #, c-format
 msgid "File:"
 msgstr "File:"
@@ -1246,7 +1318,8 @@ msgstr "Fine:"
 msgid "Size:"
 msgstr ""
 
-#: heksedit.rc:738 heksedit.rc:920
+#: heksedit.rc:738
+#: heksedit.rc:920
 #, c-format
 msgid "Input"
 msgstr ""
@@ -1346,7 +1419,9 @@ msgstr ""
 msgid "NOTE: Frhed allows only reading the drive data. Changing and saving the drive data is not possible."
 msgstr ""
 
-#: heksedit.rc:805 heksedit.rc:959 heksedit.rc:989
+#: heksedit.rc:805
+#: heksedit.rc:959
+#: heksedit.rc:989
 #, c-format
 msgid "Open"
 msgstr ""
@@ -1461,7 +1536,9 @@ msgstr ""
 msgid "Start with (-) for negative length or movement backwards. Prefix with x for hex notation."
 msgstr ""
 
-#: heksedit.rc:864 heksedit.rc:894 heksedit.rc:1330
+#: heksedit.rc:864
+#: heksedit.rc:894
+#: heksedit.rc:1330
 #, c-format
 msgid "Move"
 msgstr ""
@@ -1726,12 +1803,14 @@ msgstr ""
 msgid "INS"
 msgstr ""
 
-#: heksedit.rc:1029 heksedit.rc:1290
+#: heksedit.rc:1029
+#: heksedit.rc:1290
 #, c-format
 msgid "L"
 msgstr ""
 
-#: heksedit.rc:1030 heksedit.rc:1287
+#: heksedit.rc:1030
+#: heksedit.rc:1287
 #, c-format
 msgid "B"
 msgstr "B"
@@ -2002,7 +2081,8 @@ msgstr "Impossibile accedere agli appunti."
 msgid "Cannot lock clipboard."
 msgstr "Impossibile bloccare gli appunti."
 
-#: heksedit.rc:1125 heksedit.rc:1136
+#: heksedit.rc:1125
+#: heksedit.rc:1136
 #, c-format
 msgid "Not enough memory for copying."
 msgstr ""
@@ -2505,7 +2585,9 @@ msgstr "Applica all'offset:"
 msgid "= %d (signed) = %u (unsigned) = 0x%x = '%c'"
 msgstr "= %d (firmati) = %u (non firmati) = 0x%x = '%c'"
 
-#: heksedit.rc:1302 heksedit.rc:1305 heksedit.rc:1307
+#: heksedit.rc:1302
+#: heksedit.rc:1305
+#: heksedit.rc:1307
 #, c-format
 msgid "= %d (signed) = %u (unsigned) = 0x%x"
 msgstr "= %d (firmati) = %u (non firmati) = 0x%x"
@@ -2562,7 +2644,7 @@ msgstr "-> Dimensione modello = %zu byte."
 
 #: heksedit.rc:1320
 #, c-format
-msgid "Template files (*.tpl)\\0*.tpl\\0\\0"
+msgid "Template files (*.tpl)\0*.tpl\0\0"
 msgstr ""
 
 #: heksedit.rc:1321
@@ -2715,3 +2797,4 @@ msgstr "Impossibile copiare dump esadecimale negli appunti."
 #, c-format
 msgid "Hex Dump files(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
 msgstr ""
+
