@@ -87,6 +87,8 @@ TCHAR HexEditorWindow::TexteditorName[MAX_PATH] = _T("NOTEPAD.EXE");
 size_t iMovePos;
 OPTYP iMoveOpTyp;
 
+HexEditorWindow::ApplyThemeCallback HexEditorWindow::s_themeCallback;
+
 /**
  * @brief Constructor.
  */
@@ -6721,6 +6723,12 @@ void HexEditorWindow::clear_undorecords()
 		m_pSharedUndoRecords->clear(this);
 	m_undoStack.clear();
 	iFileChanged = FALSE;
+}
+
+
+void STDMETHODCALLTYPE HexEditorWindow::set_theme_callback(ApplyThemeCallback callback)
+{
+	s_themeCallback = callback;
 }
 
 IHexEditorWindow::SharedUndoRecords *HexEditorWindow::share_undorecords(SharedUndoRecords *p)

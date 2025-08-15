@@ -325,6 +325,7 @@ public:
 	void set_caret_pos();
 	void print_text(HSurface *pdc, int x, int y, TCHAR *pch, int cch);
 	virtual HRESULT STDMETHODCALLTYPE ResolveIt(LPCTSTR lpszLinkFile, LPTSTR lpszPath);
+	virtual void STDMETHODCALLTYPE set_theme_callback(ApplyThemeCallback callback);
 	static void OnHelp(HWindow *);
 
 	static void LoadStringTable();
@@ -337,6 +338,7 @@ public:
 	HToolBar *pwndToolBar; /**< Handle to main window's toolbar. */
 	HStatusBar *pwndStatusBar; /**< Handle to main window's statusbar. */
 	HACCEL hAccel; /**< Handle to accelerator keys list. */
+	static ApplyThemeCallback s_themeCallback;
 protected:
 //Pabs inserted
 	int bMakeBackups; /**< Backup the file when saving. */
@@ -420,6 +422,8 @@ class dialog : public T
 		{
 			SetWindowLongPtr(hWnd, DWLP_USER, lParam);
 			TranslateDialog(hWnd);
+			if (HexEditorWindow::s_themeCallback)
+				HexEditorWindow::s_themeCallback(hWnd, IHexEditorWindow::WINDOW_DIALOG);
 		}
 		return ((T *)GetWindowLongPtr(hWnd, DWLP_USER))->DlgProc(
 			reinterpret_cast<HWindow *>(hWnd), uMsg, wParam, lParam);
