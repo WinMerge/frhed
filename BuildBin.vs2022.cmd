@@ -26,7 +26,7 @@ goto :eof
 :BuildBin
 
 del /s Build\%1\Release\FRHED\*.exe
-MSBuild FRHED.vs2022.sln /t:rebuild /p:Configuration=Release /p:Platform="%1" || pause
+MSBuild FRHED.sln /t:rebuild /p:Configuration=Release /p:Platform="%1" || pause
 
 if exist "%SIGNBAT_PATH%" (
   call "%SIGNBAT_PATH%" Build\%1\Release\FRHED\frhed.exe
