@@ -1,0 +1,2690 @@
+# This file is part of Frhed <http://frhed.sourceforge.net/>
+# Released under the "GNU General Public License"
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Frhed\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
+"POT-Creation-Date: 2025-08-15 09:26+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: 昇 <love80312@gmail.com>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../FRHED\n"
+"X-Generator: Poedit 3.7\n"
+
+#: heksedit.rc:514 heksedit.rc:530
+#, c-format
+msgid "2"
+msgstr "2"
+
+#: heksedit.rc:513
+#, c-format
+msgid "3"
+msgstr "3"
+
+#: heksedit.rc:512 heksedit.rc:529
+#, c-format
+msgid "4"
+msgstr "4"
+
+#: heksedit.rc:511
+#, c-format
+msgid "5"
+msgstr "5"
+
+#: heksedit.rc:510
+#, c-format
+msgid "6"
+msgstr "6"
+
+#: heksedit.rc:509
+#, c-format
+msgid "7"
+msgstr "7"
+
+#: heksedit.rc:508 heksedit.rc:528
+#, c-format
+msgid "8"
+msgstr "8"
+
+#: heksedit.rc:527
+#, c-format
+msgid "16"
+msgstr "16"
+
+#: heksedit.rc:526
+#, c-format
+msgid "32"
+msgstr "32"
+
+#: heksedit.rc:525
+#, c-format
+msgid "64"
+msgstr "64"
+
+#: heksedit.rc:524
+#, c-format
+msgid "128"
+msgstr "128"
+
+#. LANGUAGE, SUBLANGUAGE
+#: heksedit.rc:5
+#, c-format
+msgid "LANG_ENGLISH, SUBLANG_ENGLISH_US"
+msgstr "LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL"
+
+#: heksedit.rc:12
+#, c-format
+msgid "&File"
+msgstr "檔案(&F)"
+
+#: heksedit.rc:14
+#, c-format
+msgid "&New\tCtrl+N"
+msgstr "新增(&N)\tCtrl+N"
+
+#: heksedit.rc:15
+#, c-format
+msgid "&Open...\tCtrl+O"
+msgstr "開啟(&O)...\tCtrl+O"
+
+#: heksedit.rc:16
+#, c-format
+msgid "Open pa&rtially...\tAlt+P"
+msgstr "部分開啟(&R)...\tAlt+P"
+
+#: heksedit.rc:18
+#, c-format
+msgid "&Save\tCtrl+S"
+msgstr "儲存(&S)\tCtrl+S"
+
+#: heksedit.rc:19
+#, c-format
+msgid "Save &As...\tCtrl+J"
+msgstr "另存新檔(&A)...\tCtrl+J"
+
+#: heksedit.rc:20
+#, c-format
+msgid "Save selec&tion as...\tCtrl+Shift+O"
+msgstr "儲存選取範圍為(&T)...\tCtrl+Shift+O"
+
+#: heksedit.rc:22
+#, c-format
+msgid "Re&vert\tCtrl+Shift+R"
+msgstr "還原(&V)\tCtrl+Shift+R"
+
+#: heksedit.rc:23
+#, c-format
+msgid "&Insert file...\tCtrl+Shift+I"
+msgstr "插入檔案(&I)...\tCtrl+Shift+I"
+
+#: heksedit.rc:24
+#, c-format
+msgid "&Delete file...\tCtrl+Shift+D"
+msgstr "刪除檔案(&D)...\tCtrl+Shift+D"
+
+#: heksedit.rc:25
+#, c-format
+msgid "Close File\tCtrl+Shift+X"
+msgstr "關閉檔案\tCtrl+Shift+X"
+
+#: heksedit.rc:27
+#, c-format
+msgid "&Export as hexdump..."
+msgstr "匯出為十六進位傾印(&E)..."
+
+#: heksedit.rc:28
+#, c-format
+msgid "I&mport from hexdump...\tCtrl+Shift+H"
+msgstr "從十六進位傾印匯入(&M)...\tCtrl+Shift+H"
+
+#: heksedit.rc:40
+#, c-format
+msgid "E&xit\tAlt+F4"
+msgstr "結束(&X)\tAlt+F4"
+
+#: heksedit.rc:42
+#, c-format
+msgid "&Disk"
+msgstr "磁碟(&D)"
+
+#: heksedit.rc:44
+#, c-format
+msgid "&Open drive..."
+msgstr "開啟磁碟機(&O)..."
+
+#: heksedit.rc:45
+#, c-format
+msgid "&Close drive"
+msgstr "關閉磁碟機(&C)"
+
+#: heksedit.rc:47 heksedit.rc:190
+#, c-format
+msgid "Goto &First Sector"
+msgstr "前往第一個磁區(&F)"
+
+#: heksedit.rc:48
+#, c-format
+msgid "Goto &Next Sector\tCtrl+Shift+PgDn"
+msgstr "前往下一個磁區(&N)\tCtrl+Shift+PgDn"
+
+#: heksedit.rc:49
+#, c-format
+msgid "Goto &Previous Sector\tCtrl+Shift+PgUp"
+msgstr "前往上一個磁區(&P)\tCtrl+Shift+PgUp"
+
+#: heksedit.rc:51 heksedit.rc:193
+#, c-format
+msgid "Goto &Last Sector"
+msgstr "前往最後一個磁區(&L)"
+
+#: heksedit.rc:53 heksedit.rc:195
+#, c-format
+msgid "Goto &Sector #..."
+msgstr "前往磁區 #(&S)..."
+
+#: heksedit.rc:55
+#, c-format
+msgid "&Edit"
+msgstr "編輯(&E)"
+
+#: heksedit.rc:57
+#, c-format
+msgid "&Undo\tCtrl+Z"
+msgstr "復原(&U)\tCtrl+Z"
+
+#: heksedit.rc:58
+#, c-format
+msgid "&Redo\tCtrl+Y"
+msgstr "重做(&R)\tCtrl+Y"
+
+#: heksedit.rc:60 heksedit.rc:177
+#, c-format
+msgid "Cu&t...\tCtrl+X"
+msgstr "剪下(&T)...\tCtrl+X"
+
+#: heksedit.rc:61 heksedit.rc:178
+#, c-format
+msgid "&Copy...\tCtrl+C"
+msgstr "複製(&C)...\tCtrl+C"
+
+#: heksedit.rc:62 heksedit.rc:179
+#, c-format
+msgid "&Paste...\tCtrl+V"
+msgstr "貼上(&P)...\tCtrl+V"
+
+#: heksedit.rc:63
+#, c-format
+msgid "Paste &with dialog...\tCtrl+Shift+V"
+msgstr "以對話框貼上(&W)...\tCtrl+Shift+V"
+
+#: heksedit.rc:64
+#, c-format
+msgid "&Move/Copy bytes...\tCtrl+Alt+M"
+msgstr "移動/複製位元組(&M)...\tCtrl+Alt+M"
+
+#: heksedit.rc:65
+#, c-format
+msgid "Reverse bytes...\tCtrl+Alt+R"
+msgstr "反轉位元組...\tCtrl+Alt+R"
+
+#: heksedit.rc:66
+#, c-format
+msgid "&Append...\tCtrl+P"
+msgstr "附加(&A)...\tCtrl+P"
+
+#: heksedit.rc:67 heksedit.rc:180
+#, c-format
+msgid "&Delete\tDel"
+msgstr "刪除(&D)\tDel"
+
+#: heksedit.rc:68
+#, c-format
+msgid "&Select all\tCtrl+A"
+msgstr "全選(&S)\tCtrl+A"
+
+#: heksedit.rc:69
+#, c-format
+msgid "Select &block...\tCtrl+E"
+msgstr "選取區塊(&B)...\tCtrl+E"
+
+#: heksedit.rc:70
+#, c-format
+msgid "&Fill selection...\tCtrl+Shift+F"
+msgstr "填充選取範圍(&F)...\tCtrl+Shift+F"
+
+#: heksedit.rc:72
+#, c-format
+msgid "Toggle h&ex/character editing\tTAB"
+msgstr "切換十六進位/字元編輯(&E)\tTAB"
+
+#: heksedit.rc:73
+#, c-format
+msgid "Toggle keyboard I&nsert/Overwrite mode\tIns"
+msgstr "切換鍵盤插入/覆寫模式(&N)\tIns"
+
+#: heksedit.rc:75
+#, c-format
+msgid "Read-only mode\tAlt+R"
+msgstr "唯讀模式\tAlt+R"
+
+#: heksedit.rc:77
+#, c-format
+msgid "&Find and Replace"
+msgstr "尋找與取代(&F)"
+
+#: heksedit.rc:79 heksedit.rc:182
+#, c-format
+msgid "&Find...\tCtrl+F"
+msgstr "尋找(&F)...\tCtrl+F"
+
+#: heksedit.rc:80
+#, c-format
+msgid "&Replace...\tCtrl+H"
+msgstr "取代(&R)...\tCtrl+H"
+
+#: heksedit.rc:81
+#, c-format
+msgid "Find &next\tF3"
+msgstr "尋找下一個(&N)\tF3"
+
+#: heksedit.rc:82
+#, c-format
+msgid "Find &previous\tShift+F3"
+msgstr "尋找上一個(&P)\tShift+F3"
+
+#: heksedit.rc:84 heksedit.rc:186
+#, c-format
+msgid "&Go To...\tCtrl+G"
+msgstr "前往(&G)...\tCtrl+G"
+
+#: heksedit.rc:86
+#, c-format
+msgid "Enter decimal &value...\tCtrl+D"
+msgstr "輸入十進位值(&V)...\tCtrl+D"
+
+#: heksedit.rc:88
+#, c-format
+msgid "Man&ipulate bits...\tCtrl+B"
+msgstr "操作位元(&I)...\tCtrl+B"
+
+#: heksedit.rc:89
+#, c-format
+msgid "C&ompare from current offset...\tCtrl+M"
+msgstr "從目前位移處比較(&O)...\tCtrl+M"
+
+#: heksedit.rc:91
+#, c-format
+msgid "Get f&loating point value...\tCtrl+L"
+msgstr "取得浮點數值(&L)...\tCtrl+L"
+
+#: heksedit.rc:92
+#, c-format
+msgid "File properties...\tAlt+Enter"
+msgstr "檔案屬性...\tAlt+Enter"
+
+#: heksedit.rc:93
+#, c-format
+msgid "Appl&y template...\tAlt+T"
+msgstr "套用範本(&Y)...\tAlt+T"
+
+#: heksedit.rc:94
+#, c-format
+msgid "Open in text editor\tF5"
+msgstr "在文字編輯器中開啟\tF5"
+
+#: heksedit.rc:96
+#, c-format
+msgid "&View"
+msgstr "檢視(&V)"
+
+#: heksedit.rc:98
+#, c-format
+msgid "Scroll &left\tCtrl+Arrow Left"
+msgstr "向左捲動(&L)\tCtrl+方向鍵左"
+
+#: heksedit.rc:99
+#, c-format
+msgid "Scroll &right\tCtrl+Arrow Right"
+msgstr "向右捲動(&R)\tCtrl+方向鍵右"
+
+#: heksedit.rc:100
+#, c-format
+msgid "Scroll &up\tCtrl+Arrow Up"
+msgstr "向上捲動(&U)\tCtrl+方向鍵上"
+
+#: heksedit.rc:101
+#, c-format
+msgid "Scroll &down\tCtrl+Arrow Down"
+msgstr "向下捲動(&D)\tCtrl+方向鍵下"
+
+#: heksedit.rc:102
+#, c-format
+msgid "Scroll up a page\tCtrl+Page Up"
+msgstr "向上捲動一頁\tCtrl+Page Up"
+
+#: heksedit.rc:103
+#, c-format
+msgid "Scroll down a page\tCtrl+Page Down"
+msgstr "向下捲動一頁\tCtrl+Page Down"
+
+#: heksedit.rc:105
+#, c-format
+msgid "Zoom in\tCtrl++"
+msgstr "放大\tCtrl++"
+
+#: heksedit.rc:106
+#, c-format
+msgid "Zoom out\tCtrl+-"
+msgstr "縮小\tCtrl+-"
+
+#: heksedit.rc:107
+#, c-format
+msgid "Zoom normal\tCtrl+*"
+msgstr "正常縮放\tCtrl+*"
+
+#: heksedit.rc:109
+#, c-format
+msgid "&Options"
+msgstr "選項(&O)"
+
+#: heksedit.rc:111
+#, c-format
+msgid "&View settings...\tCtrl+I"
+msgstr "檢視設定(&V)...\tCtrl+I"
+
+#: heksedit.rc:112
+#, c-format
+msgid "&Color settings"
+msgstr "色彩設定(&C)"
+
+#: heksedit.rc:114
+#, c-format
+msgid "&Text color...\tCtrl+T"
+msgstr "文字色彩(&T)...\tCtrl+T"
+
+#: heksedit.rc:115
+#, c-format
+msgid "&Background color...\tCtrl+K"
+msgstr "背景色彩(&B)...\tCtrl+K"
+
+#: heksedit.rc:116
+#, c-format
+msgid "Separator color...\tCtrl+Q"
+msgstr "分隔線色彩...\tCtrl+Q"
+
+#: heksedit.rc:117
+#, c-format
+msgid "Selection text color...\tCtrl+Shift+T"
+msgstr "選取文字色彩...\tCtrl+Shift+T"
+
+#: heksedit.rc:119
+#, c-format
+msgid "Selection background color...\tCtrl+Shift+K"
+msgstr "選取背景色彩...\tCtrl+Shift+K"
+
+#: heksedit.rc:121
+#, c-format
+msgid "Bookmark color...\tCtrl+Shift+B"
+msgstr "書籤色彩...\tCtrl+Shift+B"
+
+#: heksedit.rc:123
+#, c-format
+msgid "Reset colors to standard...\tCtrl+Shift+S"
+msgstr "重設為標準色彩...\tCtrl+Shift+S"
+
+#: heksedit.rc:125
+#, c-format
+msgid "&Adopt OS colour scheme...\tCtrl+Shift+A"
+msgstr "採用作業系統配色方案(&A)...\tCtrl+Shift+A"
+
+#: heksedit.rc:128
+#, c-format
+msgid "C&haracter set...\tCtrl+R"
+msgstr "字元集(&H)...\tCtrl+R"
+
+#: heksedit.rc:129
+#, c-format
+msgid "B&inary mode...\tCtrl+Shift+Y"
+msgstr "二進位模式(&I)...\tCtrl+Shift+Y"
+
+#: heksedit.rc:130
+#, c-format
+msgid "&OLE Drag-drop...\tCtrl+Alt+O"
+msgstr "OLE 拖放(&O)...\tCtrl+Alt+O"
+
+#: heksedit.rc:131
+#, c-format
+msgid "Make backups\tCtrl+Shift+M"
+msgstr "建立備份\tCtrl+Shift+M"
+
+#: heksedit.rc:133
+#, c-format
+msgid "&Registry"
+msgstr "登錄檔(&R)"
+
+#: heksedit.rc:135
+#, c-format
+msgid "In &all context menu"
+msgstr "在所有內容功能表中(&A)"
+
+#: heksedit.rc:136
+#, c-format
+msgid "In &unknown context menu"
+msgstr "在未知內容功能表中(&U)"
+
+#: heksedit.rc:137
+#, c-format
+msgid "Is &default in unknown context"
+msgstr "在未知內容中為預設值(&D)"
+
+#: heksedit.rc:138
+#, c-format
+msgid "&Save ini when required"
+msgstr "需要時儲存 ini(&S)"
+
+#: heksedit.rc:139
+#, c-format
+msgid "Change &instance..."
+msgstr "變更執行個體(&I)..."
+
+#: heksedit.rc:140
+#, c-format
+msgid "S&hortcuts to Frhed..."
+msgstr "Frhed 捷徑(&H)..."
+
+#: heksedit.rc:142
+#, c-format
+msgid "&Bookmarks"
+msgstr "書籤(&B)"
+
+#: heksedit.rc:144
+#, c-format
+msgid "&Add bookmark...\tCtrl+W"
+msgstr "新增書籤(&A)...\tCtrl+W"
+
+#: heksedit.rc:145
+#, c-format
+msgid "&Remove bookmark...\tAlt+W"
+msgstr "移除書籤(&R)...\tAlt+W"
+
+#: heksedit.rc:146
+#, c-format
+msgid "&Clear all bookmarks\tCtrl+Shift+W"
+msgstr "清除所有書籤(&C)\tCtrl+Shift+W"
+
+#: heksedit.rc:158
+#, c-format
+msgid "&Misc"
+msgstr "其他(&M)"
+
+#: heksedit.rc:160
+#, c-format
+msgid "Goto DLL e&xport names..."
+msgstr "前往 DLL 匯出名稱(&X)..."
+
+#: heksedit.rc:161
+#, c-format
+msgid "Goto DLL import names..."
+msgstr "前往 DLL 匯入名稱..."
+
+#: heksedit.rc:163
+#, c-format
+msgid "Encode / Decode..."
+msgstr "編碼/解碼..."
+
+#: heksedit.rc:165
+#, c-format
+msgid "&Help"
+msgstr "說明(&H)"
+
+#: heksedit.rc:167
+#, c-format
+msgid "&Help topics...\tF1"
+msgstr "說明主題(&H)...\tF1"
+
+#: heksedit.rc:169
+#, c-format
+msgid "&About Frhed..."
+msgstr "關於 Frhed(&A)..."
+
+#: heksedit.rc:183
+#, c-format
+msgid "Replace...\tCtrl+H"
+msgstr "替換...Ctrl+H"
+
+#: heksedit.rc:184
+#, c-format
+msgid "Find next\tF3"
+msgstr "尋找下一個\tF3"
+
+#: heksedit.rc:185
+#, c-format
+msgid "Find previous\tShift+F3"
+msgstr "尋找上一個\tShift+F3"
+
+#: heksedit.rc:191
+#, c-format
+msgid "Goto &Next Sector"
+msgstr "轉到下一個磁區(&N)"
+
+#: heksedit.rc:192
+#, c-format
+msgid "Goto &Previous Sector"
+msgstr "轉到上一個磁區(&P)"
+
+#: heksedit.rc:298
+#, c-format
+msgid "Go to Offset"
+msgstr "前往位移"
+
+#: heksedit.rc:301
+#, c-format
+msgid "Start with \"+\" or \"-\" (minus) for relative jump."
+msgstr "以「+」或「-」（減號）開頭表示相對跳躍。"
+
+#: heksedit.rc:303
+#, c-format
+msgid "Prefix offset with \"x\" to indicate hex notation."
+msgstr "在位移前加上「x」表示十六進位記法。"
+
+#: heksedit.rc:306 heksedit.rc:347 heksedit.rc:367 heksedit.rc:387
+#: heksedit.rc:412 heksedit.rc:430 heksedit.rc:448 heksedit.rc:486
+#: heksedit.rc:498 heksedit.rc:533 heksedit.rc:549 heksedit.rc:563
+#: heksedit.rc:577 heksedit.rc:593 heksedit.rc:606 heksedit.rc:652
+#: heksedit.rc:675 heksedit.rc:689 heksedit.rc:750 heksedit.rc:772
+#: heksedit.rc:793 heksedit.rc:819 heksedit.rc:877 heksedit.rc:898
+#: heksedit.rc:946 heksedit.rc:977
+#, c-format
+msgid "OK"
+msgstr "確定"
+
+#: heksedit.rc:307 heksedit.rc:325 heksedit.rc:368 heksedit.rc:388
+#: heksedit.rc:413 heksedit.rc:431 heksedit.rc:449 heksedit.rc:487
+#: heksedit.rc:499 heksedit.rc:534 heksedit.rc:550 heksedit.rc:564
+#: heksedit.rc:578 heksedit.rc:594 heksedit.rc:607 heksedit.rc:622
+#: heksedit.rc:634 heksedit.rc:653 heksedit.rc:676 heksedit.rc:690
+#: heksedit.rc:716 heksedit.rc:751 heksedit.rc:773 heksedit.rc:794
+#: heksedit.rc:806 heksedit.rc:820 heksedit.rc:878 heksedit.rc:899
+#: heksedit.rc:947 heksedit.rc:960 heksedit.rc:978 heksedit.rc:1332
+#, c-format
+msgid "Cancel"
+msgstr "取消"
+
+#: heksedit.rc:313 heksedit.rc:324 heksedit.rc:996
+#, c-format
+msgid "Find"
+msgstr "尋找"
+
+#: heksedit.rc:316
+#, c-format
+msgid "&Find what:"
+msgstr "尋找目標(&F)："
+
+#: heksedit.rc:318
+#, c-format
+msgid "Please refer to the online help's Using the Special Syntax section for searching for binary values."
+msgstr "搜尋二進位值請參閱線上說明的「使用特殊語法」章節。"
+
+#: heksedit.rc:319
+#, c-format
+msgid "Direction"
+msgstr "方向"
+
+#: heksedit.rc:320
+#, c-format
+msgid "&Up"
+msgstr "向上(&U)"
+
+#: heksedit.rc:321
+#, c-format
+msgid "&Down"
+msgstr "向下(&D)"
+
+#: heksedit.rc:322
+#, c-format
+msgid "Match &case"
+msgstr "區分大小寫(&C)"
+
+#: heksedit.rc:323
+#, c-format
+msgid "U&nicode"
+msgstr "Unicode(&N)"
+
+#: heksedit.rc:331
+#, c-format
+msgid "About Frhed"
+msgstr "關於 Frhed"
+
+#: heksedit.rc:335
+#, c-format
+msgid "Frhed - Free hex editor"
+msgstr "Frhed - 免費十六進位編輯器"
+
+#: heksedit.rc:338
+#, c-format
+msgid "(c) Raihan Kibria 2000"
+msgstr "(c) Raihan Kibria 2000"
+
+#: heksedit.rc:339
+#, c-format
+msgid "All rights reserved."
+msgstr "版權所有。"
+
+#: heksedit.rc:340
+#, c-format
+msgid "Contributors are listed in Contributors.txt."
+msgstr "貢獻者列表請見 Contributors.txt。"
+
+#: heksedit.rc:342
+#, c-format
+msgid "Open contributors list"
+msgstr "開啟貢獻者列表"
+
+#: heksedit.rc:343
+#, c-format
+msgid "Homepage"
+msgstr "首頁"
+
+#: heksedit.rc:345
+#, c-format
+msgid "Open Frhed's homepage in browser"
+msgstr "在瀏覽器中開啟 Frhed 首頁"
+
+#: heksedit.rc:353
+#, c-format
+msgid "Export Hexdump"
+msgstr "匯出十六進位傾印"
+
+#: heksedit.rc:356
+#, c-format
+msgid "Start at offset:"
+msgstr "起始位移："
+
+#: heksedit.rc:358
+#, c-format
+msgid "End at offset:"
+msgstr "結束位移："
+
+#: heksedit.rc:360
+#, c-format
+msgid "Export to"
+msgstr "匯出至"
+
+#: heksedit.rc:361
+#, c-format
+msgid "File"
+msgstr "檔案"
+
+#: heksedit.rc:362
+#, c-format
+msgid "Clipboard"
+msgstr "剪貼簿"
+
+#: heksedit.rc:363
+#, c-format
+msgid "Type"
+msgstr "類型"
+
+#: heksedit.rc:364
+#, c-format
+msgid "Frhed display as text"
+msgstr "Frhed 顯示為文字"
+
+#: heksedit.rc:365
+#, c-format
+msgid "Just hex digits on a line"
+msgstr "僅一行十六進位數字"
+
+#: heksedit.rc:366
+#, c-format
+msgid "Frhed display as RTF"
+msgstr "Frhed 顯示為 RTF"
+
+#: heksedit.rc:374
+#, c-format
+msgid "Enter decimal value"
+msgstr "輸入十進位值"
+
+#: heksedit.rc:377
+#, c-format
+msgid "Enter decimal value:"
+msgstr "輸入十進位值："
+
+#: heksedit.rc:379
+#, c-format
+msgid "At offset:"
+msgstr "於位移："
+
+#: heksedit.rc:381
+#, c-format
+msgid "Number of times:"
+msgstr "次數："
+
+#: heksedit.rc:383
+#, c-format
+msgid "Size of Value:"
+msgstr "值的大小："
+
+#: heksedit.rc:384
+#, c-format
+msgid "Byte (8 bit)"
+msgstr "位元組（8 位元）"
+
+#: heksedit.rc:385
+#, c-format
+msgid "Word (16 bit)"
+msgstr "字組（16 位元）"
+
+#: heksedit.rc:386
+#, c-format
+msgid "Double word (32 bit)"
+msgstr "雙字組（32 位元）"
+
+#: heksedit.rc:394
+#, c-format
+msgid "Paste with dialogue"
+msgstr "以對話框貼上"
+
+#: heksedit.rc:397
+#, c-format
+msgid "Clipboard content (text):"
+msgstr "剪貼簿內容（文字）："
+
+#: heksedit.rc:400 heksedit.rc:662
+#, c-format
+msgid "Paste mode"
+msgstr "貼上模式"
+
+#: heksedit.rc:401 heksedit.rc:663
+#, c-format
+msgid "Overwrite"
+msgstr "覆寫"
+
+#: heksedit.rc:403 heksedit.rc:664
+#, c-format
+msgid "Insert"
+msgstr "插入"
+
+#: heksedit.rc:405 heksedit.rc:665
+#, c-format
+msgid "Paste data how many times:"
+msgstr "貼上資料次數："
+
+#: heksedit.rc:407 heksedit.rc:669
+#, c-format
+msgid "Paste coded binary values as text"
+msgstr "以文字貼上編碼的二進位值"
+
+#: heksedit.rc:409
+#, c-format
+msgid "Skip how many bytes between inserts/overwrites"
+msgstr "插入/覆寫之間跳過多少位元組"
+
+#: heksedit.rc:419 heksedit.rc:1000
+#, c-format
+msgid "Cut"
+msgstr "剪下"
+
+#: heksedit.rc:422
+#, c-format
+msgid "Start cutting at offset:"
+msgstr "開始剪下的位移："
+
+#: heksedit.rc:424
+#, c-format
+msgid "Cut how many bytes"
+msgstr "剪下多少位元組"
+
+#: heksedit.rc:425
+#, c-format
+msgid "Cut up to and including offset:"
+msgstr "剪下至包含位移："
+
+#: heksedit.rc:427
+#, c-format
+msgid "Number of bytes to cut:"
+msgstr "要剪下的位元組數："
+
+#: heksedit.rc:437 heksedit.rc:865 heksedit.rc:896 heksedit.rc:997
+#: heksedit.rc:1331
+#, c-format
+msgid "Copy"
+msgstr "複製"
+
+#: heksedit.rc:440
+#, c-format
+msgid "Start copying at offset:"
+msgstr "開始複製的位移："
+
+#: heksedit.rc:442
+#, c-format
+msgid "Copy how many bytes"
+msgstr "複製多少位元組"
+
+#: heksedit.rc:443
+#, c-format
+msgid "Copy up to and including offset:"
+msgstr "複製至包含位移："
+
+#: heksedit.rc:445
+#, c-format
+msgid "Number of bytes to copy:"
+msgstr "要複製的位元組數："
+
+#: heksedit.rc:455
+#, c-format
+msgid "View Settings"
+msgstr "檢視設定"
+
+#: heksedit.rc:458
+#, c-format
+msgid "Number of bytes to display per line:"
+msgstr "每行顯示的位元組數："
+
+#: heksedit.rc:461
+#, c-format
+msgid "Automatically adjust number of bytes per line (uncheck this if you want Frhed to use your own choice for bytes per line)"
+msgstr "自動調整每行位元組數（若要 Frhed 使用您自訂的每行位元組數，請取消勾選）"
+
+#: heksedit.rc:464
+#, c-format
+msgid "Display length of offset in how many characters:"
+msgstr "位移顯示長度的字元數："
+
+#: heksedit.rc:467
+#, c-format
+msgid "Adjust offset length to that of the max offset"
+msgstr "將位移長度調整為最大位移的長度"
+
+#: heksedit.rc:470
+#, c-format
+msgid "Display values at caret position as:"
+msgstr "游標位置的值顯示為："
+
+#: heksedit.rc:472
+#, c-format
+msgid "unsigned"
+msgstr "無符號"
+
+#: heksedit.rc:474
+#, c-format
+msgid "signed"
+msgstr "有符號"
+
+#: heksedit.rc:476
+#, c-format
+msgid "Set read-only mode on opening files"
+msgstr "開啟檔案時設為唯讀模式"
+
+#: heksedit.rc:479
+#, c-format
+msgid "Path and filename of the text editor to call:"
+msgstr "要呼叫的文字編輯器路徑和檔名："
+
+#: heksedit.rc:482
+#, c-format
+msgid "Browse..."
+msgstr "瀏覽..."
+
+#: heksedit.rc:483
+#, c-format
+msgid "Language:"
+msgstr "語言："
+
+#: heksedit.rc:493
+#, c-format
+msgid "Append"
+msgstr "附加"
+
+#: heksedit.rc:496
+#, c-format
+msgid "Bytes to append to the end of the file:"
+msgstr "附加到檔案結尾的位元組："
+
+#: heksedit.rc:504
+#, c-format
+msgid "Manipulate Bits"
+msgstr "操作位元"
+
+#: heksedit.rc:540
+#, c-format
+msgid "Character Set"
+msgstr "字元集"
+
+#: heksedit.rc:543
+#, c-format
+msgid "Choose character set"
+msgstr "選擇字元集"
+
+#: heksedit.rc:544 heksedit.rc:1024
+#, c-format
+msgid "ANSI"
+msgstr "ANSI"
+
+#: heksedit.rc:546 heksedit.rc:1025
+#, c-format
+msgid "OEM"
+msgstr "OEM"
+
+#: heksedit.rc:547
+#, c-format
+msgid "Font size in points:"
+msgstr "字型大小（點）："
+
+#: heksedit.rc:556
+#, c-format
+msgid "Choose area of difference to display"
+msgstr "選擇要顯示的差異區域"
+
+#: heksedit.rc:559
+#, c-format
+msgid "file_sizes"
+msgstr "檔案大小"
+
+#: heksedit.rc:560
+#, c-format
+msgid "number_of_diffs"
+msgstr "差異數量"
+
+#: heksedit.rc:565
+#, c-format
+msgid "Copy above list"
+msgstr "複製上方列表"
+
+#: heksedit.rc:571
+#, c-format
+msgid "Binary Mode"
+msgstr "二進位模式"
+
+#: heksedit.rc:574
+#, c-format
+msgid "Choose binary mode"
+msgstr "選擇二進位模式"
+
+#: heksedit.rc:575
+#, c-format
+msgid "Little-endian (Intel)"
+msgstr "小端序（Intel）"
+
+#: heksedit.rc:576
+#, c-format
+msgid "Big-endian (Motorola)"
+msgstr "大端序（Motorola）"
+
+#: heksedit.rc:584
+#, c-format
+msgid "Select Block"
+msgstr "選取區塊"
+
+#: heksedit.rc:587
+#, c-format
+msgid "Start of selection (prefix x for hex):"
+msgstr "選取起點（加 x 前綴表示十六進位）："
+
+#: heksedit.rc:590
+#, c-format
+msgid "End of selection (prefix x for hex):"
+msgstr "選取終點（加 x 前綴表示十六進位）："
+
+#: heksedit.rc:599
+#, c-format
+msgid "Reverse Bytes"
+msgstr "反轉位元組"
+
+#: heksedit.rc:602
+#, c-format
+msgid "Offset of first byte:"
+msgstr "第一個位元組的位移："
+
+#: heksedit.rc:604
+#, c-format
+msgid "Offset of last byte:"
+msgstr "最後一個位元組的位移："
+
+#: heksedit.rc:613
+#, c-format
+msgid "Add Bookmark"
+msgstr "新增書籤"
+
+#: heksedit.rc:616
+#, c-format
+msgid "Offset (prefix x for hex):"
+msgstr "位移（加 x 前綴表示十六進位）："
+
+#: heksedit.rc:619
+#, c-format
+msgid "Name:"
+msgstr "名稱："
+
+#: heksedit.rc:621
+#, c-format
+msgid "Add"
+msgstr "新增"
+
+#: heksedit.rc:628
+#, c-format
+msgid "Remove Bookmark"
+msgstr "移除書籤"
+
+#: heksedit.rc:633
+#, c-format
+msgid "Remove"
+msgstr "移除"
+
+#: heksedit.rc:640
+#, c-format
+msgid "Open partially"
+msgstr "部分開啟"
+
+#: heksedit.rc:643
+#, c-format
+msgid "Start opening partially"
+msgstr "開始部分開啟"
+
+#: heksedit.rc:644
+#, c-format
+msgid "&At offset from the beginning of file (prefix x for hex):"
+msgstr "從檔案開頭的位移處(&A)（加 x 前綴表示十六進位）："
+
+#: heksedit.rc:646
+#, c-format
+msgid "&From end of file"
+msgstr "從檔案結尾(&F)"
+
+#: heksedit.rc:648
+#, c-format
+msgid "&How many bytes:"
+msgstr "多少位元組(&H)："
+
+#: heksedit.rc:650
+#, c-format
+msgid "&Display offsets relative to start of file (or start of loaded block)"
+msgstr "顯示相對於檔案開頭（或已載入區塊開頭）的位移(&D)"
+
+#: heksedit.rc:659 heksedit.rc:998
+#, c-format
+msgid "Paste"
+msgstr "貼上"
+
+#: heksedit.rc:667
+#, c-format
+msgid "Bytes to skip between inserts/overwrites:"
+msgstr "插入/覆寫之間要跳過的位元組："
+
+#: heksedit.rc:671
+#, c-format
+msgid "Clipboard format to use:"
+msgstr "要使用的剪貼簿格式："
+
+#: heksedit.rc:673
+#, c-format
+msgid "Refresh"
+msgstr "重新整理"
+
+#: heksedit.rc:674
+#, c-format
+msgid ""
+"- CF_TEXT was used by previous versions of Frhed\n"
+"- Those starting w CF_ are standard formats && others are registered/private "
+"ones\n"
+"- Some formats may have been synthesized from the original."
+msgstr ""
+"- CF_TEXT 由舊版 Frhed 使用\n"
+"- 以 CF_ 開頭的為標準格式，其他為已註冊/私有格式\n"
+"- 某些格式可能由原始格式合成而來。"
+
+#: heksedit.rc:682
+#, c-format
+msgid "Template"
+msgstr "範本"
+
+#: heksedit.rc:685
+#, c-format
+msgid "Result of template application:"
+msgstr "範本套用結果："
+
+#: heksedit.rc:696 heksedit.rc:715 heksedit.rc:1005
+#, c-format
+msgid "Replace"
+msgstr "取代"
+
+#: heksedit.rc:699
+#, c-format
+msgid "Find what:"
+msgstr "尋找目標："
+
+#: heksedit.rc:702
+#, c-format
+msgid "Find next"
+msgstr "尋找下一個"
+
+#: heksedit.rc:703
+#, c-format
+msgid "Find previous"
+msgstr "尋找上一個"
+
+#: heksedit.rc:704
+#, c-format
+msgid "Match case"
+msgstr "區分大小寫"
+
+#: heksedit.rc:706
+#, c-format
+msgid "Replace with:"
+msgstr "取代為："
+
+#: heksedit.rc:708
+#, c-format
+msgid "Replace all..."
+msgstr "全部取代..."
+
+#: heksedit.rc:709
+#, c-format
+msgid "... following occurrences"
+msgstr "... 後續出現處"
+
+#: heksedit.rc:711
+#, c-format
+msgid "... previous occurrences"
+msgstr "... 先前出現處"
+
+#: heksedit.rc:713
+#, c-format
+msgid "Use special syntax"
+msgstr "使用特殊語法"
+
+#: heksedit.rc:721
+#, c-format
+msgid "Fill Selection"
+msgstr "填充選取範圍"
+
+#: heksedit.rc:724
+#, c-format
+msgid "Fill from:"
+msgstr "填充來源："
+
+#: heksedit.rc:726 heksedit.rc:1298
+#, c-format
+msgid "File:"
+msgstr "檔案："
+
+#: heksedit.rc:728
+#, c-format
+msgid "&Browse..."
+msgstr "瀏覽(&B)..."
+
+#: heksedit.rc:729
+#, c-format
+msgid "Hex:"
+msgstr "十六進位："
+
+#: heksedit.rc:731
+#, c-format
+msgid "Selection"
+msgstr "選取範圍"
+
+#: heksedit.rc:732
+#, c-format
+msgid "Start:"
+msgstr "起始："
+
+#: heksedit.rc:734
+#, c-format
+msgid "End:"
+msgstr "結束："
+
+#: heksedit.rc:736
+#, c-format
+msgid "Size:"
+msgstr "大小："
+
+#: heksedit.rc:738 heksedit.rc:920
+#, c-format
+msgid "Input"
+msgstr "輸入"
+
+#: heksedit.rc:739
+#, c-format
+msgid "Size of input:"
+msgstr "輸入大小："
+
+#: heksedit.rc:741
+#, c-format
+msgid "# Times input fits:"
+msgstr "輸入適合次數："
+
+#: heksedit.rc:743
+#, c-format
+msgid "Remainder:"
+msgstr "餘數："
+
+#: heksedit.rc:745
+#, c-format
+msgid "Assignment operator"
+msgstr "指派運算子"
+
+#: heksedit.rc:746
+#, c-format
+msgid "Assign (=)"
+msgstr "指派（=）"
+
+#: heksedit.rc:747
+#, c-format
+msgid "OR (|=)"
+msgstr "OR（|=）"
+
+#: heksedit.rc:748
+#, c-format
+msgid "AND (&&=)"
+msgstr "AND（&&=）"
+
+#: heksedit.rc:749
+#, c-format
+msgid "XOR (^=)"
+msgstr "XOR（^=）"
+
+#: heksedit.rc:757
+#, c-format
+msgid "Change Instance"
+msgstr "變更執行個體"
+
+#: heksedit.rc:760
+#, c-format
+msgid "Load the following instance data:"
+msgstr "載入下列執行個體資料："
+
+#: heksedit.rc:766
+#, c-format
+msgid "and save (when quiting) to this instance data:"
+msgstr "並儲存（結束時）至此執行個體資料："
+
+#: heksedit.rc:774
+#, c-format
+msgid ""
+"Remember that if any instance of Frhed is running on the same instance data "
+"as this one it will overwrite the data of this one if it exits last.  "
+"Unless, that is, that the option to save ini data to the registry on exit is "
+"disabled)"
+msgstr ""
+"請記住，如果有任何 Frhed 執行個體使用相同的執行個體資料，最後結束的將覆寫此執"
+"行個體的資料。除非結束時儲存 ini 資料至登錄檔的選項已停用）"
+
+#: heksedit.rc:781
+#, c-format
+msgid "Encode / Decode Data"
+msgstr "編碼/解碼資料"
+
+#: heksedit.rc:784
+#, c-format
+msgid "Algorithms:"
+msgstr "演算法："
+
+#: heksedit.rc:787
+#, c-format
+msgid "Arguments:"
+msgstr "參數："
+
+#: heksedit.rc:789
+#, c-format
+msgid "Encode"
+msgstr "編碼"
+
+#: heksedit.rc:791
+#, c-format
+msgid "Decode"
+msgstr "解碼"
+
+#: heksedit.rc:800
+#, c-format
+msgid "Open Drive"
+msgstr "開啟磁碟機"
+
+#: heksedit.rc:804
+#, c-format
+msgid "NOTE: Frhed allows only reading the drive data. Changing and saving the drive data is not possible."
+msgstr "注意：Frhed 僅允許讀取磁碟機資料。無法變更和儲存磁碟機資料。"
+
+#: heksedit.rc:805
+#: heksedit.rc:959
+#: heksedit.rc:989
+#, c-format
+msgid "Open"
+msgstr "開啟"
+
+#: heksedit.rc:812
+#, c-format
+msgid "Go to Track"
+msgstr "前往磁軌"
+
+#: heksedit.rc:815
+#, c-format
+msgid "Drive Information:"
+msgstr "磁碟機資訊："
+
+#: heksedit.rc:817
+#, c-format
+msgid "&Go to track:"
+msgstr "前往磁軌(&G)："
+
+#: heksedit.rc:826
+#, c-format
+msgid "Shortcuts"
+msgstr "捷徑"
+
+#: heksedit.rc:829
+#, c-format
+msgid "Paths of shortcuts to Frhed:"
+msgstr "Frhed 捷徑的路徑："
+
+#: heksedit.rc:830
+#, c-format
+msgid "Links to Frhed"
+msgstr "Frhed 的連結"
+
+#: heksedit.rc:833
+#, c-format
+msgid "&Find links to any Frhed.exe, fix them and list them here."
+msgstr "尋找所有 Frhed.exe 的連結、修復並在此列出(&F)。"
+
+#: heksedit.rc:836
+#, c-format
+msgid "Create link in/on:"
+msgstr "建立連結於："
+
+#: heksedit.rc:837
+#, c-format
+msgid "&Desktop"
+msgstr "桌面(&D)"
+
+#: heksedit.rc:839
+#, c-format
+msgid "S&tart Menu"
+msgstr "開始功能表(&T)"
+
+#: heksedit.rc:841
+#, c-format
+msgid "&Send To"
+msgstr "傳送到(&S)"
+
+#: heksedit.rc:843
+#, c-format
+msgid "&Programs"
+msgstr "程式集(&P)"
+
+#: heksedit.rc:845
+#, c-format
+msgid "Link management:"
+msgstr "連結管理："
+
+#: heksedit.rc:846
+#, c-format
+msgid "<< &Add..."
+msgstr "<< 新增(&A)..."
+
+#: heksedit.rc:847
+#, c-format
+msgid "&Update list"
+msgstr "更新列表(&U)"
+
+#: heksedit.rc:849
+#, c-format
+msgid ">> &Delete"
+msgstr ">> 刪除(&D)"
+
+#: heksedit.rc:850
+#, c-format
+msgid "&Move"
+msgstr "移動(&M)"
+
+#: heksedit.rc:852
+#, c-format
+msgid "&Reload"
+msgstr "重新載入(&R)"
+
+#: heksedit.rc:853
+#, c-format
+msgid "&Close"
+msgstr "關閉(&C)"
+
+#: heksedit.rc:859
+#, c-format
+msgid "Move/Copy bytes"
+msgstr "移動/複製位元組"
+
+#: heksedit.rc:862
+#, c-format
+msgid "Operation:"
+msgstr "操作："
+
+#: heksedit.rc:863
+#, c-format
+msgid "Start with (-) for negative length or movement backwards. Prefix with x for hex notation."
+msgstr "以（-）開頭表示負長度或向後移動。加 x 前綴表示十六進位記法。"
+
+#: heksedit.rc:864 heksedit.rc:894 heksedit.rc:1330
+#, c-format
+msgid "Move"
+msgstr "移動"
+
+#: heksedit.rc:866
+#, c-format
+msgid "Begin of the block:"
+msgstr "區塊開頭："
+
+#: heksedit.rc:868
+#, c-format
+msgid "End of the block:"
+msgstr "區塊結尾："
+
+#: heksedit.rc:870
+#, c-format
+msgid "Offset"
+msgstr "位移"
+
+#: heksedit.rc:871
+#, c-format
+msgid "Length"
+msgstr "長度"
+
+#: heksedit.rc:872
+#, c-format
+msgid "Target:"
+msgstr "目標："
+
+#: heksedit.rc:874
+#, c-format
+msgid "Bytes forward"
+msgstr "向前位元組"
+
+#: heksedit.rc:875
+#, c-format
+msgid "First byte offset"
+msgstr "第一個位元組位移"
+
+#: heksedit.rc:876
+#, c-format
+msgid "Last byte offset"
+msgstr "最後一個位元組位移"
+
+#: heksedit.rc:884
+#, c-format
+msgid "Drag-drop"
+msgstr "拖放"
+
+#: heksedit.rc:887
+#, c-format
+msgid "Clipboard format[s] to use:"
+msgstr "要使用的剪貼簿格式："
+
+#: heksedit.rc:891
+#, c-format
+msgid "Up"
+msgstr "向上"
+
+#: heksedit.rc:892
+#, c-format
+msgid "Down"
+msgstr "向下"
+
+#: heksedit.rc:893
+#, c-format
+msgid "Data:"
+msgstr "資料："
+
+#: heksedit.rc:905
+#, c-format
+msgid "OLE Drag-drop options"
+msgstr "OLE 拖放選項"
+
+#: heksedit.rc:908
+#, c-format
+msgid "General"
+msgstr "一般"
+
+#: heksedit.rc:909
+#, c-format
+msgid "Enable drop input"
+msgstr "啟用放置輸入"
+
+#: heksedit.rc:911
+#, c-format
+msgid "Enable drag output"
+msgstr "啟用拖曳輸出"
+
+#: heksedit.rc:913
+#, c-format
+msgid "Enable scroll-delaying for drag-drop"
+msgstr "啟用拖放的捲動延遲"
+
+#: heksedit.rc:915
+#, c-format
+msgid "Enable scroll-delaying for selecting"
+msgstr "啟用選取的捲動延遲"
+
+#: heksedit.rc:917
+#, c-format
+msgid "Always give the opportunity to change between move and copy after a drop."
+msgstr "放置後總是提供在移動和複製之間變更的機會。"
+
+#: heksedit.rc:921
+#, c-format
+msgid "CF_HDROP opens the files dropped."
+msgstr "CF_HDROP 開啟放置的檔案。"
+
+#: heksedit.rc:923
+#, c-format
+msgid "Drop \"BinaryData\" if present"
+msgstr "如存在則放置「BinaryData」"
+
+#: heksedit.rc:926
+#, c-format
+msgid "Drop CF_TEXT if present"
+msgstr "如存在則放置 CF_TEXT"
+
+#: heksedit.rc:929
+#, c-format
+msgid "Output"
+msgstr "輸出"
+
+#: heksedit.rc:930
+#, c-format
+msgid "Drag \"BinaryData\""
+msgstr "拖曳「BinaryData」"
+
+#: heksedit.rc:933
+#, c-format
+msgid "Drag CF_TEXT as:"
+msgstr "拖曳 CF_TEXT 為："
+
+#: heksedit.rc:936
+#, c-format
+msgid "Hexdump"
+msgstr "十六進位傾印"
+
+#: heksedit.rc:938
+#, c-format
+msgid "Special syntax (<bh:ff>...)"
+msgstr "特殊語法（<bh:ff>...）"
+
+#: heksedit.rc:940
+#, c-format
+msgid "display (else digits)"
+msgstr "顯示（否則為數字）"
+
+#: heksedit.rc:943
+#, c-format
+msgid "Drag \"Rich Text Format\" (as hexdump)"
+msgstr "拖曳「Rich Text Format」（作為十六進位傾印）"
+
+#: heksedit.rc:953
+#, c-format
+msgid "Multiple files dropped"
+msgstr "放置了多個檔案"
+
+#: heksedit.rc:956
+#, c-format
+msgid "Select the file to open:"
+msgstr "選擇要開啟的檔案："
+
+#: heksedit.rc:966
+#, c-format
+msgid "Delete"
+msgstr "刪除"
+
+#: heksedit.rc:969
+#, c-format
+msgid "Start deleting at offset:"
+msgstr "開始刪除的位移："
+
+#: heksedit.rc:971
+#, c-format
+msgid "Delete how many bytes"
+msgstr "刪除多少位元組"
+
+#: heksedit.rc:972
+#, c-format
+msgid "Delete up to and including offset:"
+msgstr "刪除至包含位移："
+
+#: heksedit.rc:974
+#, c-format
+msgid "Number of bytes to delete:"
+msgstr "要刪除的位元組數："
+
+#: heksedit.rc:990
+#, c-format
+msgid "New"
+msgstr "新增"
+
+#: heksedit.rc:995
+#, c-format
+msgid "Save"
+msgstr "儲存"
+
+#: heksedit.rc:999
+#, c-format
+msgid "Help"
+msgstr "說明"
+
+#: heksedit.rc:1010
+#, c-format
+msgid "Goto next sector"
+msgstr "前往下一個磁區"
+
+#: heksedit.rc:1011
+#, c-format
+msgid "Goto previous sector"
+msgstr "前往上一個磁區"
+
+#: heksedit.rc:1012
+#, c-format
+msgid "Goto first sector"
+msgstr "前往第一個磁區"
+
+#: heksedit.rc:1013
+#, c-format
+msgid "Goto last sector"
+msgstr "前往最後一個磁區"
+
+#: heksedit.rc:1019
+#, c-format
+msgid "Frhed"
+msgstr "Frhed"
+
+#: heksedit.rc:1020
+#, c-format
+msgid "Version %u.%u.%u"
+msgstr "版本 %u.%u.%u"
+
+#: heksedit.rc:1021
+#, c-format
+msgid "%d) 0x%zx=%zu to 0x%zx=%zu (%zu bytes)"
+msgstr "%d) 0x%zx=%zu 至 0x%zx=%zu（%zu 位元組）"
+
+#: heksedit.rc:1022
+#, c-format
+msgid "All Files (*.*)|*.*|"
+msgstr "所有檔案 (*.*)|*.*|"
+
+#: heksedit.rc:1023
+#, c-format
+msgid "Untitled"
+msgstr "未命名"
+
+#: heksedit.rc:1026
+#, c-format
+msgid "READ"
+msgstr "讀取"
+
+#: heksedit.rc:1027
+#, c-format
+msgid "OVR"
+msgstr "覆寫"
+
+#: heksedit.rc:1028
+#, c-format
+msgid "INS"
+msgstr "插入"
+
+#: heksedit.rc:1029 heksedit.rc:1290
+#, c-format
+msgid "L"
+msgstr "L"
+
+#: heksedit.rc:1030 heksedit.rc:1287
+#, c-format
+msgid "B"
+msgstr "B"
+
+#: heksedit.rc:1031
+#, c-format
+msgid "You are trying to open a link file.\nClick on Yes if you want to open the file linked to,\nor click on No if you want to open the link file itself.\nChoose Cancel if you want to abort opening."
+msgstr ""
+"您正嘗試開啟一個連結檔案。\n"
+"如果要開啟連結指向的檔案，請按「是」，\n"
+"如果要開啟連結檔案本身，請按「否」。\n"
+"如果要中止開啟，請選擇「取消」。"
+
+#: heksedit.rc:1037
+#, c-format
+msgid "Start offset not recognized."
+msgstr "無法識別起始位移。"
+
+#: heksedit.rc:1038
+#, c-format
+msgid "End offset not recognized."
+msgstr "無法識別結束位移。"
+
+#: heksedit.rc:1039
+#, c-format
+msgid "Offset not recognized."
+msgstr "無法識別位移。"
+
+#: heksedit.rc:1045
+#, c-format
+msgid "Error while reading from file."
+msgstr "從檔案讀取時發生錯誤。"
+
+#: heksedit.rc:1046
+#, c-format
+msgid "Not enough memory."
+msgstr "記憶體不足。"
+
+#: heksedit.rc:1047
+#, c-format
+msgid "Number of bytes not recognized."
+msgstr "無法識別位元組數。"
+
+#: heksedit.rc:1048
+#, c-format
+msgid "Error opening file."
+msgstr "開啟檔案時發生錯誤。"
+
+#: heksedit.rc:1049
+#, c-format
+msgid "Not enough memory to load file."
+msgstr "記憶體不足，無法載入檔案。"
+
+#: heksedit.rc:1050
+#, c-format
+msgid "Could not save the file."
+msgstr "無法儲存檔案。"
+
+#: heksedit.rc:1051
+#, c-format
+msgid "Could not backup file!\nBackup aborted, Save continuing."
+msgstr ""
+"無法備份檔案！\n"
+"備份已中止，繼續儲存。"
+
+#: heksedit.rc:1052
+#, c-format
+msgid "Could not save partially opened file."
+msgstr "無法儲存部分開啟的檔案。"
+
+#: heksedit.rc:1053
+#, c-format
+msgid "Could not move data in the file."
+msgstr "無法移動檔案中的資料。"
+
+#: heksedit.rc:1054
+#, c-format
+msgid "Could not resize the file."
+msgstr "無法調整檔案大小。"
+
+#: heksedit.rc:1055
+#, c-format
+msgid "Could not seek in file."
+msgstr "無法在檔案中搜尋。"
+
+#: heksedit.rc:1056
+#, c-format
+msgid "Could not write data to file."
+msgstr "無法將資料寫入檔案。"
+
+#: heksedit.rc:1057
+#, c-format
+msgid "Help file\n%s\nnot found!"
+msgstr "說明檔案\n%s\n找不到！"
+
+#: heksedit.rc:1058
+#, c-format
+msgid "Error code 0x%x occurred while opening file %s."
+msgstr "顯示錯誤代碼 0x%x 於開啟 %s 檔案時。"
+
+#: heksedit.rc:1059
+#, c-format
+msgid "Could not save preferences to registry."
+msgstr "無法將偏好設定儲存至登錄檔。"
+
+#: heksedit.rc:1060
+#, c-format
+msgid "File is empty."
+msgstr "檔案是空的。"
+
+#: heksedit.rc:1061
+#, c-format
+msgid "An error occurred when calling the text editor."
+msgstr "呼叫文字編輯器時發生錯誤。"
+
+#: heksedit.rc:1062
+#, c-format
+msgid "Could not insert data."
+msgstr "無法插入資料。"
+
+#: heksedit.rc:1063
+#, c-format
+msgid "Error checking file size"
+msgstr "檢查檔案大小時發生錯誤"
+
+#: heksedit.rc:1064
+#, c-format
+msgid "No data present. Cannot continue!"
+msgstr "沒有資料存在。無法繼續！"
+
+#: heksedit.rc:1065
+#, c-format
+msgid "Could not get text from the file.\nCannot continue!"
+msgstr ""
+"無法從檔案取得文字。\n"
+"無法繼續！"
+
+#: heksedit.rc:1071
+#, c-format
+msgid "KB"
+msgstr "KB"
+
+#: heksedit.rc:1072
+#, c-format
+msgid "MB"
+msgstr "MB"
+
+#: heksedit.rc:1073
+#, c-format
+msgid "GB"
+msgstr "GB"
+
+#: heksedit.rc:1074
+#, c-format
+msgid "TB"
+msgstr "TB"
+
+#: heksedit.rc:1080
+#, c-format
+msgid "Could not open the browser."
+msgstr "無法開啟瀏覽器。"
+
+#: heksedit.rc:1081
+#, c-format
+msgid "File\n%s\nnot found!"
+msgstr "找不到 %s 檔案！"
+
+#: heksedit.rc:1087
+#, c-format
+msgid "Can not set bookmark at that position."
+msgstr "無法在該位置設定書籤。"
+
+#: heksedit.rc:1088
+#, c-format
+msgid "There already is a bookmark on that position."
+msgstr "該位置已經有書籤。"
+
+#: heksedit.rc:1089
+#, c-format
+msgid "Can not set bookmark in empty file."
+msgstr "無法在空白檔案中設定書籤。"
+
+#: heksedit.rc:1090
+#, c-format
+msgid "Can not set any more bookmarks."
+msgstr "無法設定更多書籤。"
+
+#: heksedit.rc:1091
+#, c-format
+msgid "Bookmark points to invalid position."
+msgstr "書籤指向無效的位置。"
+
+#: heksedit.rc:1092
+#, c-format
+msgid "No bookmarks to remove."
+msgstr "沒有要移除的書籤。"
+
+#: heksedit.rc:1093
+#, c-format
+msgid "Remove all bookmarks?"
+msgstr "移除所有書籤？"
+
+#: heksedit.rc:1099
+#, c-format
+msgid "Number of bytes to append not recognized."
+msgstr "無法識別要附加的位元組數。"
+
+#: heksedit.rc:1100
+#, c-format
+msgid "Not enough memory for appending."
+msgstr "記憶體不足，無法附加。"
+
+#: heksedit.rc:1106
+#, c-format
+msgid "Offset: 0x%zx = %zd"
+msgstr "位移：0x%zx = %zd"
+
+#: heksedit.rc:1107
+#, c-format
+msgid "Value: 0x%02x, %d signed, %u unsigned."
+msgstr "值：0x%02x，%d 有符號，%u 無符號。"
+
+#: heksedit.rc:1113
+#, c-format
+msgid "Choose file to compare with"
+msgstr "選擇要比較的檔案"
+
+#: heksedit.rc:1114
+#, c-format
+msgid "Error while opening file."
+msgstr "開啟檔案時發生錯誤。"
+
+#: heksedit.rc:1115
+#, c-format
+msgid "%d areas of difference found."
+msgstr "找到 %d 個差異區域。"
+
+#: heksedit.rc:1116
+#, c-format
+msgid "Remaining loaded data size: %lld, size of file on disk: %lld."
+msgstr "剩餘已載入資料大小：%lld，磁碟上的檔案大小：%lld。"
+
+#: heksedit.rc:1117
+#, c-format
+msgid "Data matches exactly."
+msgstr "資料完全相符。"
+
+#: heksedit.rc:1123
+#, c-format
+msgid "Cannot get access to clipboard."
+msgstr "無法存取剪貼簿。"
+
+#: heksedit.rc:1124
+#, c-format
+msgid "Cannot lock clipboard."
+msgstr "無法鎖定剪貼簿。"
+
+#: heksedit.rc:1125 heksedit.rc:1136
+#, c-format
+msgid "Not enough memory for copying."
+msgstr "記憶體不足，無法複製。"
+
+#: heksedit.rc:1126
+#, c-format
+msgid "\nDo you want the above output to be copied to the clipboard?\n"
+msgstr "\n您是否要將上述輸出複製到剪貼簿？\n"
+
+#: heksedit.rc:1127
+#, c-format
+msgid "You need to select a clipboard format to use."
+msgstr "您需要選擇要使用的剪貼簿格式。"
+
+#: heksedit.rc:1128
+#, c-format
+msgid "Could not get text from the clipboard.\nCannot continue!"
+msgstr ""
+"無法從剪貼簿取得文字。\n"
+"無法繼續！"
+
+#: heksedit.rc:1129
+#, c-format
+msgid ""
+"There is text on the clipboard.\n"
+"Do you want to import from\n"
+"the clipboard instead of a file?"
+msgstr ""
+"剪貼簿上有文字。\n"
+"您是否要從剪貼簿匯入\n"
+"而非從檔案匯入？"
+
+#: heksedit.rc:1135
+#, c-format
+msgid "Can't copy more bytes than are present."
+msgstr "無法複製超過現有的位元組。"
+
+#: heksedit.rc:1142
+#, c-format
+msgid "Can't cut more bytes than are present."
+msgstr "無法剪下超過現有的位元組。"
+
+#: heksedit.rc:1143
+#, c-format
+msgid "Not enough memory for cutting to clipboard."
+msgstr "記憶體不足，無法剪下到剪貼簿。"
+
+#: heksedit.rc:1144
+#, c-format
+msgid "Could not cut the data."
+msgstr "無法剪下資料。"
+
+#: heksedit.rc:1150
+#, c-format
+msgid "Can't delete more bytes than are present."
+msgstr "無法刪除超過現有的位元組。"
+
+#: heksedit.rc:1151
+#, c-format
+msgid "Could not delete data."
+msgstr "無法刪除資料。"
+
+#: heksedit.rc:1157
+#, c-format
+msgid "Decimal value not recognized."
+msgstr "無法識別十進位值。"
+
+#: heksedit.rc:1158
+#, c-format
+msgid "Number of times not recognized."
+msgstr "無法識別次數。"
+
+#: heksedit.rc:1159
+#, c-format
+msgid "Invalid start offset."
+msgstr "起始位移無效。"
+
+#: heksedit.rc:1160
+#, c-format
+msgid "Not enough space for writing decimal values."
+msgstr "空間不足，無法寫入十進位值。"
+
+#: heksedit.rc:1166
+#, c-format
+msgid "Number of times to paste must be at least 1."
+msgstr "貼上次數必須至少為 1。"
+
+#: heksedit.rc:1167
+#, c-format
+msgid "Tried to paste zero-length array."
+msgstr "嘗試貼上零長度陣列。"
+
+#: heksedit.rc:1168
+#, c-format
+msgid "Not enough memory for inserting."
+msgstr "記憶體不足，無法插入。"
+
+#: heksedit.rc:1169
+#, c-format
+msgid "Not enough space for overwriting."
+msgstr "空間不足，無法覆寫。"
+
+#: heksedit.rc:1175
+#, c-format
+msgid "Can't fill a selection with a file of zero size."
+msgstr "無法用零大小的檔案填充選取範圍。"
+
+#: heksedit.rc:1176
+#, c-format
+msgid "Can't fill a selection with a string of zero size."
+msgstr "無法用零大小的字串填充選取範圍。"
+
+#: heksedit.rc:1177
+#, c-format
+msgid "Too many bytes to fill with or some other error."
+msgstr "要填充的位元組過多或發生其他錯誤。"
+
+#: heksedit.rc:1183
+#, c-format
+msgid "You have chosen an offset but it is negative, which is invalid."
+msgstr "您選擇的位移為負數，這是無效的。"
+
+#: heksedit.rc:1184
+#, c-format
+msgid "The target value is invalid."
+msgstr "目標值無效。"
+
+#: heksedit.rc:1185
+#, c-format
+msgid "Cannot move/copy a block of zero length."
+msgstr "無法移動/複製零長度的區塊。"
+
+#: heksedit.rc:1186
+#, c-format
+msgid "The chosen block extends into non-existent data."
+msgstr "所選區塊延伸至不存在的資料。"
+
+#: heksedit.rc:1187
+#, c-format
+msgid "The block was not moved!"
+msgstr "區塊未被移動！"
+
+#: heksedit.rc:1188
+#, c-format
+msgid "Cannot move/copy the block outside the data."
+msgstr "無法將區塊移動/複製到資料外。"
+
+#: heksedit.rc:1194
+#, c-format
+msgid "&Size of file: %lld bytes. Load how many bytes:"
+msgstr "檔案大小(&S)：%lld 位元組。載入多少位元組："
+
+#: heksedit.rc:1195
+#, c-format
+msgid "Cannot open more than 2 GB of data."
+msgstr "無法開啟超過 2 GB 的資料。"
+
+#: heksedit.rc:1196
+#, c-format
+msgid "Specified number of bytes to load greater than file size."
+msgstr "指定載入的位元組數大於檔案大小。"
+
+#: heksedit.rc:1197
+#, c-format
+msgid "Too many bytes to load."
+msgstr "要載入的位元組過多。"
+
+#: heksedit.rc:1203
+#, c-format
+msgid "Cannot reverse single byte."
+msgstr "無法反轉單一位元組。"
+
+#: heksedit.rc:1204
+#, c-format
+msgid "The chosen block extends into non-existent data. The offsets will be shifted to correct positions."
+msgstr "所選區塊延伸至不存在的資料。位移將被移至正確位置。"
+
+#: heksedit.rc:1210
+#, c-format
+msgid "Link names are \"Frhed.lnk\""
+msgstr "連結名稱為「Frhed.lnk」"
+
+#: heksedit.rc:1211
+#, c-format
+msgid "This folder already contains a file called \"Frhed.lnk\""
+msgstr "此資料夾已包含名為「Frhed.lnk」的檔案"
+
+#: heksedit.rc:1212
+#, c-format
+msgid "\"Frhed.lnk\" can be added to this folder."
+msgstr "「Frhed.lnk」可以新增到此資料夾。"
+
+#: heksedit.rc:1213
+#, c-format
+msgid "\"Frhed.lnk\" cannot be added to this folder."
+msgstr "「Frhed.lnk」無法新增到此資料夾。"
+
+#: heksedit.rc:1214
+#, c-format
+msgid "Frhed can start searching here."
+msgstr "Frhed 可以從這裡開始搜尋。"
+
+#: heksedit.rc:1215
+#, c-format
+msgid "Frhed cannot start the search from here."
+msgstr "Frhed 無法從這裡開始搜尋。"
+
+#: heksedit.rc:1216
+#, c-format
+msgid "Could not save shortcut entries."
+msgstr "無法儲存捷徑項目。"
+
+#: heksedit.rc:1217
+#, c-format
+msgid "Cannot move more than 1 link at a time."
+msgstr "一次無法移動超過 1 個連結。"
+
+#: heksedit.rc:1218
+#, c-format
+msgid "No link selected to move."
+msgstr "沒有選擇要移動的連結。"
+
+#: heksedit.rc:1219
+#, c-format
+msgid "Couldn't find the selected item."
+msgstr "找不到所選項目。"
+
+#: heksedit.rc:1220
+#, c-format
+msgid "Place a link to Frhed in..."
+msgstr "將 Frhed 的連結放置於..."
+
+#: heksedit.rc:1221
+#, c-format
+msgid "Move the link to Frhed to..."
+msgstr "將 Frhed 的連結移動到..."
+
+#: heksedit.rc:1222
+#, c-format
+msgid "There is already a link in that folder."
+msgstr "該資料夾中已經有連結。"
+
+#: heksedit.rc:1223
+#, c-format
+msgid ""
+"Existing links to old versions of Frhed will be updated to this version.\n"
+"Are you sure you want to continue?"
+msgstr ""
+"指向舊版 Frhed 的現有連結將更新為此版本。\n"
+"您確定要繼續嗎？"
+
+#: heksedit.rc:1224
+#, c-format
+msgid "Pick a folder to start searching in."
+msgstr "選擇要開始搜尋的資料夾。"
+
+#: heksedit.rc:1225
+#, c-format
+msgid "No links selected to delete."
+msgstr "沒有選擇要刪除的連結。"
+
+#: heksedit.rc:1231
+#, c-format
+msgid "Selection too large."
+msgstr "選取範圍過大。"
+
+#: heksedit.rc:1232
+#, c-format
+msgid "Could not find data."
+msgstr "找不到資料。"
+
+#: heksedit.rc:1233
+#, c-format
+msgid "Findstring is zero bytes long."
+msgstr "尋找字串長度為零位元組。"
+
+#: heksedit.rc:1234
+#, c-format
+msgid "Could not find any more occurrences."
+msgstr "找不到更多出現處。"
+
+#: heksedit.rc:1235
+#, c-format
+msgid "String to find not specified."
+msgstr "未指定要尋找的字串。"
+
+#: heksedit.rc:1241
+#, c-format
+msgid "You need to have Administrator privileges for getting list of drives."
+msgstr "您需要系統管理員權限才能取得磁碟機列表。"
+
+#: heksedit.rc:1242
+#, c-format
+msgid "Unable to open drive."
+msgstr "無法開啟磁碟機。"
+
+#: heksedit.rc:1243
+#, c-format
+msgid "Cylinders"
+msgstr "磁柱"
+
+#: heksedit.rc:1244
+#, c-format
+msgid "Sectors"
+msgstr "磁區"
+
+#: heksedit.rc:1245
+#, c-format
+msgid "Tracks per cylinder"
+msgstr "每磁柱磁軌數"
+
+#: heksedit.rc:1246
+#, c-format
+msgid "Sectors per track"
+msgstr "每磁軌磁區數"
+
+#: heksedit.rc:1247
+#, c-format
+msgid "Bytes per sector"
+msgstr "每磁區位元組數"
+
+#: heksedit.rc:1248
+#, c-format
+msgid "Total size in bytes"
+msgstr "總大小（位元組）"
+
+#: heksedit.rc:1249
+#, c-format
+msgid "%s:Sector %I64d"
+msgstr "%s：磁區 %I64d"
+
+#: heksedit.rc:1250
+#, c-format
+msgid "Drive %d, Partition %d (%s)"
+msgstr "磁碟機 %d，磁碟分割 %d（%s）"
+
+#: heksedit.rc:1251
+#, c-format
+msgid "Drive %d (%s)"
+msgstr "磁碟機 %d（%s）"
+
+#: heksedit.rc:1257
+#, c-format
+msgid "Not enough memory to import data.\nCannot continue!\nDo you want to keep what has been found so far?"
+msgstr ""
+"記憶體不足，無法匯入資料。\n"
+"無法繼續！\n"
+"您是否要保留目前找到的內容？"
+
+#: heksedit.rc:1258
+#, c-format
+msgid ""
+"The first offset found was 0x%llx, which is greater than zero.\n"
+"Do you want to insert %lld null bytes at the start of the data?"
+msgstr ""
+"找到的第一個位移為 0x%llx，大於零。\n"
+"您是否要在資料開頭插入 %lld 個空位元組？"
+
+#: heksedit.rc:1259
+#, c-format
+msgid ""
+"Invalid offset found.\n"
+"Ignore further invalid offsets?"
+msgstr ""
+"找到無效的位移。\n"
+"忽略後續無效的位移？"
+
+#: heksedit.rc:1260
+#, c-format
+msgid ""
+"Character data does not agree with hex data.\n"
+"Ignore further mismatched data?\n"
+"NB: Hex data will be used when ignoring."
+msgstr ""
+"字元資料與十六進位資料不符。\n"
+"忽略後續不符的資料？\n"
+"注意：忽略時將使用十六進位資料。"
+
+#: heksedit.rc:1261
+#, c-format
+msgid ""
+"Illegal character in hex data.\n"
+"Cannot continue!\n"
+"Do you want to keep what has been found so far?"
+msgstr ""
+"十六進位資料中有非法字元。\n"
+"無法繼續！\n"
+"您是否要保留目前找到的內容？"
+
+#: heksedit.rc:1262
+#, c-format
+msgid ""
+"Unexpected end of data found.\n"
+"Cannot continue!\n"
+"Do you want to keep what has been found so far?"
+msgstr ""
+"找到意外的資料結尾。\n"
+"無法繼續！\n"
+"您是否要保留目前找到的內容？"
+
+#: heksedit.rc:1263
+#, c-format
+msgid ""
+"Does this data have the same format as the Frhed display?\n"
+"This data contains "
+msgstr ""
+"此資料是否與 Frhed 顯示格式相同？\n"
+"此資料包含 "
+
+#: heksedit.rc:1264
+#, c-format
+msgid "characters other than whitespace and hexdigits (like Frhed display)."
+msgstr "空白字元和十六進位數字以外的字元（如 Frhed 顯示）。"
+
+#: heksedit.rc:1265
+#, c-format
+msgid "only whitespace and hexdigits (unlike Frhed display)."
+msgstr "僅空白字元和十六進位數字（不同於 Frhed 顯示）。"
+
+#: heksedit.rc:1271
+#, c-format
+msgid "Data to replace must be selected."
+msgstr "必須選擇要取代的資料。"
+
+#: heksedit.rc:1272
+#, c-format
+msgid "Could not delete selected data."
+msgstr "無法刪除所選資料。"
+
+#: heksedit.rc:1273
+#, c-format
+msgid "Replacing failed."
+msgstr "取代失敗。"
+
+#: heksedit.rc:1274
+#, c-format
+msgid "Could not translate text to binary."
+msgstr "無法將文字轉換為二進位。"
+
+#: heksedit.rc:1275
+#, c-format
+msgid "To-replace and replace-with data are same."
+msgstr "要取代的資料和取代後的資料相同。"
+
+#: heksedit.rc:1276
+#, c-format
+msgid "%d occurrences replaced."
+msgstr "已取代 %d 個出現處。"
+
+#: heksedit.rc:1277
+#, c-format
+msgid "Could not use selection as replace target."
+msgstr "無法將選取範圍作為取代目標。"
+
+#: heksedit.rc:1283
+#, c-format
+msgid "Selected: Offset %zd=0x%zx to %zd=0x%zx (%zd byte(s))"
+msgstr "已選擇：位移 %zd=0x%zx 至 %zd=0x%zx（%zd 位元組）"
+
+#: heksedit.rc:1284
+#, c-format
+msgid "Offset %zd=0x%zx"
+msgstr "位移 %zd=0x%zx"
+
+#: heksedit.rc:1285
+#, c-format
+msgid "Bits"
+msgstr "位元"
+
+#: heksedit.rc:1286
+#, c-format
+msgid "Unsigned"
+msgstr "無符號"
+
+#: heksedit.rc:1288
+#, c-format
+msgid "END"
+msgstr "結束"
+
+#: heksedit.rc:1289
+#, c-format
+msgid "W"
+msgstr "W"
+
+#: heksedit.rc:1291
+#, c-format
+msgid "Signed"
+msgstr "有符號"
+
+#: heksedit.rc:1292
+#, c-format
+msgid "Size"
+msgstr "大小"
+
+#: heksedit.rc:1299
+#, c-format
+msgid "Template file:"
+msgstr "範本檔案："
+
+#: heksedit.rc:1300
+#, c-format
+msgid "Applied at offset:"
+msgstr "套用於位移："
+
+#: heksedit.rc:1301
+#, c-format
+msgid "= %d (signed) = %u (unsigned) = 0x%x = '%c'"
+msgstr "= %d（有符號）= %u（無符號）= 0x%x = '%c'"
+
+#: heksedit.rc:1302 heksedit.rc:1305 heksedit.rc:1307
+#, c-format
+msgid "= %d (signed) = %u (unsigned) = 0x%x"
+msgstr "= %d（有符號）= %u（無符號）= 0x%x"
+
+#: heksedit.rc:1303
+#, c-format
+msgid "ERROR: not enough space for byte-size data."
+msgstr "錯誤：位元組大小資料的空間不足。"
+
+#: heksedit.rc:1304
+#, c-format
+msgid "ERROR: missing variable name."
+msgstr "錯誤：缺少變數名稱。"
+
+#: heksedit.rc:1306
+#, c-format
+msgid "ERROR: not enough space for WORD-size data."
+msgstr "錯誤：WORD 大小資料的空間不足。"
+
+#: heksedit.rc:1308
+#, c-format
+msgid "ERROR: not enough space for DWORD-size data."
+msgstr "錯誤：DWORD 大小資料的空間不足。"
+
+#: heksedit.rc:1309
+#, c-format
+msgid "= %f = 0x%x"
+msgstr "= %f = 0x%x"
+
+#: heksedit.rc:1310
+#, c-format
+msgid "ERROR: not enough space for float-size data."
+msgstr "錯誤：浮點數大小資料的空間不足。"
+
+#: heksedit.rc:1311
+#, c-format
+msgid "= %g"
+msgstr "= %g"
+
+#: heksedit.rc:1312
+#, c-format
+msgid "ERROR: not enough space for double-size data."
+msgstr "錯誤：雙精度大小資料的空間不足。"
+
+#: heksedit.rc:1313
+#, c-format
+msgid "ERROR: Unknown variable type:"
+msgstr "錯誤：未知的變數類型："
+
+#: heksedit.rc:1319
+#, c-format
+msgid "-> Length of template = %zu bytes."
+msgstr "-> 範本長度 = %zu 位元組。"
+
+#: heksedit.rc:1320
+#, c-format
+msgid "Template files (*.tpl)\0*.tpl\0\0"
+msgstr "範本檔案 (*.tpl)\\0*.tpl\\0\\0"
+
+#: heksedit.rc:1321
+#, c-format
+msgid "Choose template file"
+msgstr "選擇範本檔案"
+
+#: heksedit.rc:1322
+#, c-format
+msgid "Could not open template file %s."
+msgstr "無法開啟範本檔案 %s。"
+
+#: heksedit.rc:1323
+#, c-format
+msgid "Could not load template from file %s."
+msgstr "無法從檔案 %s 載入範本。"
+
+#: heksedit.rc:1329
+#, c-format
+msgid "Select an item to move."
+msgstr "選擇要移動的項目。"
+
+#: heksedit.rc:1333
+#, c-format
+msgid "No data to insert"
+msgstr "沒有要插入的資料"
+
+#: heksedit.rc:1334
+#, c-format
+msgid "TYMED_ISTORAGE is not supported for drag-drop."
+msgstr "拖放不支援 TYMED_ISTORAGE。"
+
+#: heksedit.rc:1340
+#, c-format
+msgid "Float size value:\n%g\n"
+msgstr "浮點數大小值：\n%g\n"
+
+#: heksedit.rc:1341
+#, c-format
+msgid "Not enough space for float size value.\n"
+msgstr "浮點數大小值的空間不足。\n"
+
+#: heksedit.rc:1342
+#, c-format
+msgid "\nDouble size value:\n%g\n"
+msgstr "\n雙精度大小值：\n%g\n"
+
+#: heksedit.rc:1343
+#, c-format
+msgid "\nNot enough space for double size value.\n"
+msgstr "\n雙精度大小值的空間不足。\n"
+
+#: heksedit.rc:1344
+#, c-format
+msgid "File name and path: "
+msgstr "檔案名稱和路徑："
+
+#: heksedit.rc:1345
+#, c-format
+msgid "\nPartially opened at offset 0x%zx = %zd.\nNumber of bytes read: %zd = %zd kilobytes.\n"
+msgstr "\n在位移 0x%zx = %zd 處部分開啟。\n讀取的位元組數：%zd = %zd KB。\n"
+
+#: heksedit.rc:1346
+#, c-format
+msgid "\nFile size: %zu bytes = %zu kilobytes.\n"
+msgstr "\n檔案大小：%zu 位元組 = %zu KB。\n"
+
+#: heksedit.rc:1347
+#, c-format
+msgid "\nNumber of hexdump lines: %zu.\n"
+msgstr "\n十六進位傾印行數：%zu。\n"
+
+#: heksedit.rc:1348
+#, c-format
+msgid "This file could not be accessed and will be removed from the MRU list."
+msgstr "無法存取此檔案，將從最近使用清單中移除。"
+
+#: heksedit.rc:1349
+#, c-format
+msgid "Really reset colors to default values?"
+msgstr "確定要將色彩重設為預設值？"
+
+#: heksedit.rc:1350
+#, c-format
+msgid "Are you sure you want to delete this file?"
+msgstr "您確定要刪除此檔案嗎？"
+
+#: heksedit.rc:1351
+#, c-format
+msgid "Could not delete file."
+msgstr "無法刪除檔案。"
+
+#: heksedit.rc:1352
+#, c-format
+msgid "Really adopt the operating system colour scheme?"
+msgstr "確定要採用作業系統配色方案？"
+
+#: heksedit.rc:1358
+#, c-format
+msgid "Do you want to save your changes?"
+msgstr "您要儲存變更嗎？"
+
+#: heksedit.rc:1364
+#, c-format
+msgid "Hexdump saved."
+msgstr "十六進位傾印已儲存。"
+
+#: heksedit.rc:1365
+#, c-format
+msgid "Could not save Hexdump."
+msgstr "無法儲存十六進位傾印。"
+
+#: heksedit.rc:1366
+#, c-format
+msgid "Not enough memory for copying hexdump to clipboard."
+msgstr "記憶體不足，無法將十六進位傾印複製到剪貼簿。"
+
+#: heksedit.rc:1367
+#, c-format
+msgid "Could not copy hexdump to clipboard."
+msgstr "無法將十六進位傾印複製到剪貼簿。"
+
+#: heksedit.rc:1368
+#, c-format
+msgid "Hex Dump files(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
+msgstr "十六進位傾印檔案(*.txt,*.hex)|*.txt;*.hex|所有檔案 (*.*)|*.*|"
