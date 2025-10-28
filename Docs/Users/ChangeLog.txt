@@ -4,6 +4,9 @@ to Subversion revision numbers (rXXXXX).
 
 For changes in version 1.1 beta 1 and earlier, see the History.txt file.
 
+Frhed 0.10904.2017.21 (2025-10-29)
+  Added Traditional Chinese translation (zh_TW.po)
+
 Frhed 0.10904.2017.20 (2025-10-26)
   Update Italian translation
 
