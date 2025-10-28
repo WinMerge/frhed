@@ -1,4 +1,4 @@
-# This file is part of Frhed <http://frhed.sourceforge.net/>
+﻿# This file is part of Frhed <http://frhed.sourceforge.net/>
 # Released under the "GNU General Public License"
 #
 msgid ""
@@ -16,7 +16,8 @@ msgstr ""
 "X-Poedit-Basepath: ../../FRHED\n"
 "X-Generator: Poedit 3.7\n"
 
-#: heksedit.rc:514 heksedit.rc:530
+#: heksedit.rc:514
+#: heksedit.rc:530
 #, c-format
 msgid "2"
 msgstr "2"
@@ -26,7 +27,8 @@ msgstr "2"
 msgid "3"
 msgstr "3"
 
-#: heksedit.rc:512 heksedit.rc:529
+#: heksedit.rc:512
+#: heksedit.rc:529
 #, c-format
 msgid "4"
 msgstr "4"
@@ -46,7 +48,8 @@ msgstr "6"
 msgid "7"
 msgstr "7"
 
-#: heksedit.rc:508 heksedit.rc:528
+#: heksedit.rc:508
+#: heksedit.rc:528
 #, c-format
 msgid "8"
 msgstr "8"
@@ -162,7 +165,8 @@ msgstr "開啟磁碟機(&O)..."
 msgid "&Close drive"
 msgstr "關閉磁碟機(&C)"
 
-#: heksedit.rc:47 heksedit.rc:190
+#: heksedit.rc:47
+#: heksedit.rc:190
 #, c-format
 msgid "Goto &First Sector"
 msgstr "前往第一個磁區(&F)"
@@ -177,12 +181,14 @@ msgstr "前往下一個磁區(&N)\tCtrl+Shift+PgDn"
 msgid "Goto &Previous Sector\tCtrl+Shift+PgUp"
 msgstr "前往上一個磁區(&P)\tCtrl+Shift+PgUp"
 
-#: heksedit.rc:51 heksedit.rc:193
+#: heksedit.rc:51
+#: heksedit.rc:193
 #, c-format
 msgid "Goto &Last Sector"
 msgstr "前往最後一個磁區(&L)"
 
-#: heksedit.rc:53 heksedit.rc:195
+#: heksedit.rc:53
+#: heksedit.rc:195
 #, c-format
 msgid "Goto &Sector #..."
 msgstr "前往磁區 #(&S)..."
@@ -202,17 +208,20 @@ msgstr "復原(&U)\tCtrl+Z"
 msgid "&Redo\tCtrl+Y"
 msgstr "重做(&R)\tCtrl+Y"
 
-#: heksedit.rc:60 heksedit.rc:177
+#: heksedit.rc:60
+#: heksedit.rc:177
 #, c-format
 msgid "Cu&t...\tCtrl+X"
 msgstr "剪下(&T)...\tCtrl+X"
 
-#: heksedit.rc:61 heksedit.rc:178
+#: heksedit.rc:61
+#: heksedit.rc:178
 #, c-format
 msgid "&Copy...\tCtrl+C"
 msgstr "複製(&C)...\tCtrl+C"
 
-#: heksedit.rc:62 heksedit.rc:179
+#: heksedit.rc:62
+#: heksedit.rc:179
 #, c-format
 msgid "&Paste...\tCtrl+V"
 msgstr "貼上(&P)...\tCtrl+V"
@@ -237,7 +246,8 @@ msgstr "反轉位元組...\tCtrl+Alt+R"
 msgid "&Append...\tCtrl+P"
 msgstr "附加(&A)...\tCtrl+P"
 
-#: heksedit.rc:67 heksedit.rc:180
+#: heksedit.rc:67
+#: heksedit.rc:180
 #, c-format
 msgid "&Delete\tDel"
 msgstr "刪除(&D)\tDel"
@@ -277,7 +287,8 @@ msgstr "唯讀模式\tAlt+R"
 msgid "&Find and Replace"
 msgstr "尋找與取代(&F)"
 
-#: heksedit.rc:79 heksedit.rc:182
+#: heksedit.rc:79
+#: heksedit.rc:182
 #, c-format
 msgid "&Find...\tCtrl+F"
 msgstr "尋找(&F)...\tCtrl+F"
@@ -297,7 +308,8 @@ msgstr "尋找下一個(&N)\tF3"
 msgid "Find &previous\tShift+F3"
 msgstr "尋找上一個(&P)\tShift+F3"
 
-#: heksedit.rc:84 heksedit.rc:186
+#: heksedit.rc:84
+#: heksedit.rc:186
 #, c-format
 msgid "&Go To...\tCtrl+G"
 msgstr "前往(&G)...\tCtrl+G"
@@ -592,30 +604,75 @@ msgstr "以「+」或「-」（減號）開頭表示相對跳躍。"
 msgid "Prefix offset with \"x\" to indicate hex notation."
 msgstr "在位移前加上「x」表示十六進位記法。"
 
-#: heksedit.rc:306 heksedit.rc:347 heksedit.rc:367 heksedit.rc:387
-#: heksedit.rc:412 heksedit.rc:430 heksedit.rc:448 heksedit.rc:486
-#: heksedit.rc:498 heksedit.rc:533 heksedit.rc:549 heksedit.rc:563
-#: heksedit.rc:577 heksedit.rc:593 heksedit.rc:606 heksedit.rc:652
-#: heksedit.rc:675 heksedit.rc:689 heksedit.rc:750 heksedit.rc:772
-#: heksedit.rc:793 heksedit.rc:819 heksedit.rc:877 heksedit.rc:898
-#: heksedit.rc:946 heksedit.rc:977
+#: heksedit.rc:306
+#: heksedit.rc:347
+#: heksedit.rc:367
+#: heksedit.rc:387
+#: heksedit.rc:412
+#: heksedit.rc:430
+#: heksedit.rc:448
+#: heksedit.rc:486
+#: heksedit.rc:498
+#: heksedit.rc:533
+#: heksedit.rc:549
+#: heksedit.rc:563
+#: heksedit.rc:577
+#: heksedit.rc:593
+#: heksedit.rc:606
+#: heksedit.rc:652
+#: heksedit.rc:675
+#: heksedit.rc:689
+#: heksedit.rc:750
+#: heksedit.rc:772
+#: heksedit.rc:793
+#: heksedit.rc:819
+#: heksedit.rc:877
+#: heksedit.rc:898
+#: heksedit.rc:946
+#: heksedit.rc:977
 #, c-format
 msgid "OK"
 msgstr "確定"
 
-#: heksedit.rc:307 heksedit.rc:325 heksedit.rc:368 heksedit.rc:388
-#: heksedit.rc:413 heksedit.rc:431 heksedit.rc:449 heksedit.rc:487
-#: heksedit.rc:499 heksedit.rc:534 heksedit.rc:550 heksedit.rc:564
-#: heksedit.rc:578 heksedit.rc:594 heksedit.rc:607 heksedit.rc:622
-#: heksedit.rc:634 heksedit.rc:653 heksedit.rc:676 heksedit.rc:690
-#: heksedit.rc:716 heksedit.rc:751 heksedit.rc:773 heksedit.rc:794
-#: heksedit.rc:806 heksedit.rc:820 heksedit.rc:878 heksedit.rc:899
-#: heksedit.rc:947 heksedit.rc:960 heksedit.rc:978 heksedit.rc:1332
+#: heksedit.rc:307
+#: heksedit.rc:325
+#: heksedit.rc:368
+#: heksedit.rc:388
+#: heksedit.rc:413
+#: heksedit.rc:431
+#: heksedit.rc:449
+#: heksedit.rc:487
+#: heksedit.rc:499
+#: heksedit.rc:534
+#: heksedit.rc:550
+#: heksedit.rc:564
+#: heksedit.rc:578
+#: heksedit.rc:594
+#: heksedit.rc:607
+#: heksedit.rc:622
+#: heksedit.rc:634
+#: heksedit.rc:653
+#: heksedit.rc:676
+#: heksedit.rc:690
+#: heksedit.rc:716
+#: heksedit.rc:751
+#: heksedit.rc:773
+#: heksedit.rc:794
+#: heksedit.rc:806
+#: heksedit.rc:820
+#: heksedit.rc:878
+#: heksedit.rc:899
+#: heksedit.rc:947
+#: heksedit.rc:960
+#: heksedit.rc:978
+#: heksedit.rc:1332
 #, c-format
 msgid "Cancel"
 msgstr "取消"
 
-#: heksedit.rc:313 heksedit.rc:324 heksedit.rc:996
+#: heksedit.rc:313
+#: heksedit.rc:324
+#: heksedit.rc:996
 #, c-format
 msgid "Find"
 msgstr "尋找"
@@ -795,27 +852,32 @@ msgstr "以對話框貼上"
 msgid "Clipboard content (text):"
 msgstr "剪貼簿內容（文字）："
 
-#: heksedit.rc:400 heksedit.rc:662
+#: heksedit.rc:400
+#: heksedit.rc:662
 #, c-format
 msgid "Paste mode"
 msgstr "貼上模式"
 
-#: heksedit.rc:401 heksedit.rc:663
+#: heksedit.rc:401
+#: heksedit.rc:663
 #, c-format
 msgid "Overwrite"
 msgstr "覆寫"
 
-#: heksedit.rc:403 heksedit.rc:664
+#: heksedit.rc:403
+#: heksedit.rc:664
 #, c-format
 msgid "Insert"
 msgstr "插入"
 
-#: heksedit.rc:405 heksedit.rc:665
+#: heksedit.rc:405
+#: heksedit.rc:665
 #, c-format
 msgid "Paste data how many times:"
 msgstr "貼上資料次數："
 
-#: heksedit.rc:407 heksedit.rc:669
+#: heksedit.rc:407
+#: heksedit.rc:669
 #, c-format
 msgid "Paste coded binary values as text"
 msgstr "以文字貼上編碼的二進位值"
@@ -825,7 +887,8 @@ msgstr "以文字貼上編碼的二進位值"
 msgid "Skip how many bytes between inserts/overwrites"
 msgstr "插入/覆寫之間跳過多少位元組"
 
-#: heksedit.rc:419 heksedit.rc:1000
+#: heksedit.rc:419
+#: heksedit.rc:1000
 #, c-format
 msgid "Cut"
 msgstr "剪下"
@@ -850,7 +913,10 @@ msgstr "剪下至包含位移："
 msgid "Number of bytes to cut:"
 msgstr "要剪下的位元組數："
 
-#: heksedit.rc:437 heksedit.rc:865 heksedit.rc:896 heksedit.rc:997
+#: heksedit.rc:437
+#: heksedit.rc:865
+#: heksedit.rc:896
+#: heksedit.rc:997
 #: heksedit.rc:1331
 #, c-format
 msgid "Copy"
@@ -961,12 +1027,14 @@ msgstr "字元集"
 msgid "Choose character set"
 msgstr "選擇字元集"
 
-#: heksedit.rc:544 heksedit.rc:1024
+#: heksedit.rc:544
+#: heksedit.rc:1024
 #, c-format
 msgid "ANSI"
 msgstr "ANSI"
 
-#: heksedit.rc:546 heksedit.rc:1025
+#: heksedit.rc:546
+#: heksedit.rc:1025
 #, c-format
 msgid "OEM"
 msgstr "OEM"
@@ -1106,7 +1174,8 @@ msgstr "多少位元組(&H)："
 msgid "&Display offsets relative to start of file (or start of loaded block)"
 msgstr "顯示相對於檔案開頭（或已載入區塊開頭）的位移(&D)"
 
-#: heksedit.rc:659 heksedit.rc:998
+#: heksedit.rc:659
+#: heksedit.rc:998
 #, c-format
 msgid "Paste"
 msgstr "貼上"
@@ -1148,7 +1217,9 @@ msgstr "範本"
 msgid "Result of template application:"
 msgstr "範本套用結果："
 
-#: heksedit.rc:696 heksedit.rc:715 heksedit.rc:1005
+#: heksedit.rc:696
+#: heksedit.rc:715
+#: heksedit.rc:1005
 #, c-format
 msgid "Replace"
 msgstr "取代"
@@ -1208,7 +1279,8 @@ msgstr "填充選取範圍"
 msgid "Fill from:"
 msgstr "填充來源："
 
-#: heksedit.rc:726 heksedit.rc:1298
+#: heksedit.rc:726
+#: heksedit.rc:1298
 #, c-format
 msgid "File:"
 msgstr "檔案："
@@ -1243,7 +1315,8 @@ msgstr "結束："
 msgid "Size:"
 msgstr "大小："
 
-#: heksedit.rc:738 heksedit.rc:920
+#: heksedit.rc:738
+#: heksedit.rc:920
 #, c-format
 msgid "Input"
 msgstr "輸入"
@@ -1466,7 +1539,9 @@ msgstr "操作："
 msgid "Start with (-) for negative length or movement backwards. Prefix with x for hex notation."
 msgstr "以（-）開頭表示負長度或向後移動。加 x 前綴表示十六進位記法。"
 
-#: heksedit.rc:864 heksedit.rc:894 heksedit.rc:1330
+#: heksedit.rc:864
+#: heksedit.rc:894
+#: heksedit.rc:1330
 #, c-format
 msgid "Move"
 msgstr "移動"
@@ -1731,12 +1806,14 @@ msgstr "覆寫"
 msgid "INS"
 msgstr "插入"
 
-#: heksedit.rc:1029 heksedit.rc:1290
+#: heksedit.rc:1029
+#: heksedit.rc:1290
 #, c-format
 msgid "L"
 msgstr "L"
 
-#: heksedit.rc:1030 heksedit.rc:1287
+#: heksedit.rc:1030
+#: heksedit.rc:1287
 #, c-format
 msgid "B"
 msgstr "B"
@@ -1994,7 +2071,8 @@ msgstr "無法存取剪貼簿。"
 msgid "Cannot lock clipboard."
 msgstr "無法鎖定剪貼簿。"
 
-#: heksedit.rc:1125 heksedit.rc:1136
+#: heksedit.rc:1125
+#: heksedit.rc:1136
 #, c-format
 msgid "Not enough memory for copying."
 msgstr "記憶體不足，無法複製。"
@@ -2504,7 +2582,9 @@ msgstr "套用於位移："
 msgid "= %d (signed) = %u (unsigned) = 0x%x = '%c'"
 msgstr "= %d（有符號）= %u（無符號）= 0x%x = '%c'"
 
-#: heksedit.rc:1302 heksedit.rc:1305 heksedit.rc:1307
+#: heksedit.rc:1302
+#: heksedit.rc:1305
+#: heksedit.rc:1307
 #, c-format
 msgid "= %d (signed) = %u (unsigned) = 0x%x"
 msgstr "= %d（有符號）= %u（無符號）= 0x%x"
@@ -2688,3 +2768,4 @@ msgstr "無法將十六進位傾印複製到剪貼簿。"
 #, c-format
 msgid "Hex Dump files(*.txt,*.hex)|*.txt;*.hex|All Files (*.*)|*.*|"
 msgstr "十六進位傾印檔案(*.txt,*.hex)|*.txt;*.hex|所有檔案 (*.*)|*.*|"
+
