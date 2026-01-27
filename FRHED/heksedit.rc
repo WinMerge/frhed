@@ -934,7 +934,7 @@ BEGIN
                     BS_AUTOCHECKBOX | BS_LEFT | BS_VCENTER | WS_GROUP | 
                     WS_TABSTOP,165,65,155,10
     CONTROL         "Hexdump",IDC_TEXT_HEXDUMP,"Button",BS_AUTORADIOBUTTON | 
-                    BS_LEFT | BS_VCENTER | WS_GROUP,175,75,155,10
+                    BS_LEFT | BS_VCENTER | WS_GROUP,175,75,50,10
     CONTROL         "Special syntax (<bh:ff>...)",IDC_TEXT_SPECIAL,"Button",
                     BS_AUTORADIOBUTTON | BS_LEFT | BS_VCENTER,175,85,95,10
     CONTROL         "display (else digits)",IDC_TEXT_DISPLAY,"Button",
