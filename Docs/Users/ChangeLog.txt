@@ -4,6 +4,9 @@ to Subversion revision numbers (rXXXXX).
 
 For changes in version 1.1 beta 1 and earlier, see the History.txt file.
 
+Frhed 0.10904.2017.22 (2026-03-11)
+  BugFix: Appearing/disapering control. OLE settings (#27)
+
 Frhed 0.10904.2017.21 (2025-10-29)
   Added Traditional Chinese translation (zh_TW.po)
 
