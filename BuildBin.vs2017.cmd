@@ -4,10 +4,10 @@ del /s BuildTmp\*.res
 
 setlocal
 for /f "usebackq tokens=*" %%i in (`"%programfiles(x86)%\microsoft visual studio\installer\vswhere.exe" -version [15.0^,16.0^) -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath`) do (
-  set InstallDir=%%i
+  set "InstallDir=%%i"
 )
 if exist "%InstallDir%\Common7\Tools\vsdevcmd.bat" (
-  call "%InstallDir%\Common7\Tools\vsdevcmd.bat
+  call "%InstallDir%\Common7\Tools\vsdevcmd.bat"
 )
 
 if "%1" == "" (
@@ -26,7 +26,7 @@ goto :eof
 :BuildBin
 
 del /s Build\%1\Release\FRHED\*.exe
-MSBuild FRHED.vs2017.sln /t:rebuild /p:Configuration=Release /p:Platform="%1" || pause
+msbuild FRHED.vs2017.sln /t:rebuild /p:Configuration=Release /p:Platform="%1" || pause
 
 if exist "%SIGNBAT_PATH%" (
   call "%SIGNBAT_PATH%" Build\%1\Release\FRHED\frhed.exe
